@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "stage",
+    "status",
+    "run_id",
+    "top_candidate_count",
+    "build_ready_count",
+    "research_more_count",
+    "skip_count",
+    "next_step",
+    "candidates",
+    "redaction_checks"
+  ],
+  "properties": {
+    "stage": { "type": "string", "enum": ["TARGETED_RESEARCH_BATCH"] },
+    "status": { "type": "string", "enum": ["passed", "failed"] },
+    "run_id": { "type": "string" },
+    "source_run_id": { "type": ["string", "null"] },
+    "top_candidate_count": { "type": "integer" },
+    "build_ready_count": { "type": "integer" },
+    "research_more_count": { "type": "integer" },
+    "skip_count": { "type": "integer" },
+    "no_build_reason": { "type": ["string", "null"] },
+    "next_step": { "type": "string" },
+    "candidates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "candidate_id",
+          "candidate_name",
+          "original_rank",
+          "original_build_recommendation",
+          "original_score",
+          "original_blockers",
+          "targeted_research_questions",
+          "additional_evidence_collected",
+          "evidence_gaps",
+          "wedge_hypotheses",
+          "portfolio_overlap_analysis",
+          "testability_analysis",
+          "compliance_analysis",
+          "updated_score_breakdown",
+          "build_ready_criteria",
+          "final_recommendation",
+          "final_decision_rationale",
+          "next_step"
+        ]
+      }
+    },
+    "redaction_checks": { "type": "object" }
+  }
+}

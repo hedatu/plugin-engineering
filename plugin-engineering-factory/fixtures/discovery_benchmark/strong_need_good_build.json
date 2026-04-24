@@ -1,0 +1,52 @@
+{
+  "case_id": "strong_need_good_build",
+  "expected_build_recommendation": "build",
+  "notes": "Low-permission, narrow tab export wedge with repeated multi-source pain.",
+  "candidate": {
+    "candidate_id": "bench-tab-build",
+    "name": "Current Window CSV Export",
+    "category": "Productivity",
+    "users": 42000,
+    "rating": 4.1,
+    "reviews": 260,
+    "updated": "2026-04-10",
+    "website_url": "https://fixtures.local/current-window-csv",
+    "support_url": "https://fixtures.local/support/current-window-csv",
+    "wedge_family": "tab_csv_window_export",
+    "signals": ["tabs", "csv", "current window", "export"],
+    "portfolio_overlap_score": 12,
+    "permission_risk_score": 24,
+    "single_purpose_fit_score": 88,
+    "testability_score": 92,
+    "maintenance_risk_score": 28
+  },
+  "evidence": [
+    {
+      "source_type": "support",
+      "source_url": "https://fixtures.local/support/current-window-csv/ticket-1",
+      "captured_at": "2026-04-12T10:00:00Z",
+      "topic": "current window only",
+      "quote": "I only want the current window, not my whole session.",
+      "issue_type": "missing_feature",
+      "sentiment": "negative"
+    },
+    {
+      "source_type": "github",
+      "source_url": "https://fixtures.local/github/current-window-csv/issues/4",
+      "captured_at": "2026-04-11T10:00:00Z",
+      "topic": "export confirmation missing",
+      "quote": "Users think export failed because nothing confirms the download.",
+      "issue_type": "ux_friction",
+      "sentiment": "negative"
+    },
+    {
+      "source_type": "store",
+      "source_url": "https://fixtures.local/store/current-window-csv/review-1",
+      "captured_at": "2026-04-08T10:00:00Z",
+      "topic": "too many session tabs",
+      "quote": "Please stop exporting every tab. I only need the current window.",
+      "issue_type": "ux_friction",
+      "sentiment": "negative"
+    }
+  ]
+}

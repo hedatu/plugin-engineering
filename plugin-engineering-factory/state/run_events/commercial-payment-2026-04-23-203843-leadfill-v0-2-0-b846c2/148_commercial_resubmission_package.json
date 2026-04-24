@@ -1,0 +1,39 @@
+{
+  "stage": "COMMERCIAL_RESUBMISSION_PACKAGE",
+  "status": "pending",
+  "run_id": "commercial-payment-2026-04-23-203843-leadfill-v0-2-0-b846c2",
+  "product_name": "LeadFill One Profile",
+  "package_version": "0.2.0",
+  "current_run_id": "commercial-payment-2026-04-23-203843-leadfill-v0-2-0-b846c2",
+  "store_listing_release_package_path": "state/run_events/commercial-payment-2026-04-23-203843-leadfill-v0-2-0-b846c2/120_store_listing_release_package",
+  "premium_assets_path": "state/run_events/commercial-payment-2026-04-23-203843-leadfill-v0-2-0-b846c2/80_remotion_assets",
+  "payment_integration_status": "verified_test_mode",
+  "test_mode_status": "verified_test_mode",
+  "visual_review_status": "pending",
+  "monetization_disclosure_status": "passed",
+  "privacy_disclosure_status": "passed",
+  "multilingual_site_status": "generated",
+  "supported_locales": [
+    "en",
+    "zh-cn",
+    "ja",
+    "es"
+  ],
+  "production_payment_strategy_clear": true,
+  "re_review_readiness": false,
+  "blockers": [
+    "human_visual_review_pending",
+    "production_payment_not_verified",
+    "user_public_launch_approval_missing"
+  ],
+  "next_step": "complete_human_visual_review",
+  "redaction_checks": {
+    "sanitized_response_bodies": true,
+    "checked_secret_value_count": 1,
+    "secret_values_present_in_artifact": false,
+    "authorization_header_pattern_present": false,
+    "key_material_pattern_present": false,
+    "secret_marker_pattern_present": false,
+    "redaction_guard_triggered": false
+  }
+}

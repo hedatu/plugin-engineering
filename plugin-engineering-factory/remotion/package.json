@@ -1,0 +1,28 @@
+{
+  "name": "chrome-extension-premium-packaging-remotion",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "remotion:compositions": "remotion compositions src/index.ts",
+    "remotion:still": "remotion render src/index.ts StoreScreenshot out/store-screenshot.png",
+    "remotion:render": "remotion render src/index.ts ShortDemoVideo out/demo.mp4",
+    "remotion:versions": "remotion versions",
+    "render:stills:script": "node scripts/render-stills.mjs",
+    "stills": "npm run remotion:still",
+    "video": "npm run remotion:render"
+  },
+  "dependencies": {
+    "@remotion/bundler": "4.0.230",
+    "@remotion/cli": "4.0.230",
+    "@remotion/player": "4.0.230",
+    "@remotion/renderer": "4.0.230",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "remotion": "4.0.230"
+  },
+  "devDependencies": {
+    "@types/react": "18.2.79",
+    "@types/react-dom": "18.2.25",
+    "typescript": "5.4.5"
+  }
+}

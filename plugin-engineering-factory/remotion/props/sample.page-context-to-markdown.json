@@ -1,0 +1,18 @@
+{
+  "product_name": "Page Context to Markdown",
+  "tagline": "Copy page context into a clean Markdown block.",
+  "palette": {
+    "primary": "#163C67",
+    "secondary": "#A9D5EA",
+    "accent": "#18A48C",
+    "background": "#F4F7FB",
+    "text": "#142133"
+  },
+  "storyboard": [
+    {
+      "title": "Copy page context as Markdown",
+      "overlay_headline": "One click copies the page context you need.",
+      "overlay_subcopy": "URL, title, timestamp, browser details, and a repro template."
+    }
+  ]
+}

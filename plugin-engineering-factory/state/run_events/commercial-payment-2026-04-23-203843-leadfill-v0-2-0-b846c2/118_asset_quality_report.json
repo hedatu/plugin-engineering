@@ -1,0 +1,139 @@
+{
+  "stage": "ASSET_QA",
+  "status": "passed",
+  "run_id": "commercial-payment-2026-04-23-203843-leadfill-v0-2-0-b846c2",
+  "render_status": "passed",
+  "assets_checked": [
+    {
+      "file": "state/run_events/commercial-payment-2026-04-23-203843-leadfill-v0-2-0-b846c2/80_remotion_assets/screenshots/screenshot_1_1280x800.png",
+      "required": true,
+      "exists": true,
+      "expected_dimensions": "1280x800",
+      "actual_dimensions": "1280x800",
+      "dimensions_ok": true,
+      "overlay_density": "low",
+      "brand_palette_applied": true,
+      "forbidden_claims_present": false,
+      "promo_not_raw_screenshot": null
+    },
+    {
+      "file": "state/run_events/commercial-payment-2026-04-23-203843-leadfill-v0-2-0-b846c2/80_remotion_assets/screenshots/screenshot_2_1280x800.png",
+      "required": true,
+      "exists": true,
+      "expected_dimensions": "1280x800",
+      "actual_dimensions": "1280x800",
+      "dimensions_ok": true,
+      "overlay_density": "medium",
+      "brand_palette_applied": true,
+      "forbidden_claims_present": false,
+      "promo_not_raw_screenshot": null
+    },
+    {
+      "file": "state/run_events/commercial-payment-2026-04-23-203843-leadfill-v0-2-0-b846c2/80_remotion_assets/screenshots/screenshot_3_1280x800.png",
+      "required": true,
+      "exists": true,
+      "expected_dimensions": "1280x800",
+      "actual_dimensions": "1280x800",
+      "dimensions_ok": true,
+      "overlay_density": "low",
+      "brand_palette_applied": true,
+      "forbidden_claims_present": false,
+      "promo_not_raw_screenshot": null
+    },
+    {
+      "file": "state/run_events/commercial-payment-2026-04-23-203843-leadfill-v0-2-0-b846c2/80_remotion_assets/screenshots/screenshot_4_1280x800.png",
+      "required": true,
+      "exists": true,
+      "expected_dimensions": "1280x800",
+      "actual_dimensions": "1280x800",
+      "dimensions_ok": true,
+      "overlay_density": "low",
+      "brand_palette_applied": true,
+      "forbidden_claims_present": false,
+      "promo_not_raw_screenshot": null
+    },
+    {
+      "file": "state/run_events/commercial-payment-2026-04-23-203843-leadfill-v0-2-0-b846c2/80_remotion_assets/screenshots/screenshot_5_1280x800.png",
+      "required": true,
+      "exists": true,
+      "expected_dimensions": "1280x800",
+      "actual_dimensions": "1280x800",
+      "dimensions_ok": true,
+      "overlay_density": "medium",
+      "brand_palette_applied": true,
+      "forbidden_claims_present": false,
+      "promo_not_raw_screenshot": null
+    },
+    {
+      "file": "state/run_events/commercial-payment-2026-04-23-203843-leadfill-v0-2-0-b846c2/80_remotion_assets/promo/small_promo_440x280.png",
+      "required": true,
+      "exists": true,
+      "expected_dimensions": "440x280",
+      "actual_dimensions": "440x280",
+      "dimensions_ok": true,
+      "overlay_density": "medium",
+      "brand_palette_applied": true,
+      "forbidden_claims_present": false,
+      "promo_not_raw_screenshot": true
+    },
+    {
+      "file": "state/run_events/commercial-payment-2026-04-23-203843-leadfill-v0-2-0-b846c2/80_remotion_assets/promo/marquee_1400x560.png",
+      "required": false,
+      "exists": true,
+      "expected_dimensions": "1400x560",
+      "actual_dimensions": "1400x560",
+      "dimensions_ok": true,
+      "overlay_density": "medium",
+      "brand_palette_applied": true,
+      "forbidden_claims_present": false,
+      "promo_not_raw_screenshot": true
+    },
+    {
+      "file": "state/run_events/commercial-payment-2026-04-23-203843-leadfill-v0-2-0-b846c2/80_remotion_assets/landing/hero_1600x900.png",
+      "required": true,
+      "exists": true,
+      "expected_dimensions": "1600x900",
+      "actual_dimensions": "1600x900",
+      "dimensions_ok": true,
+      "overlay_density": "medium",
+      "brand_palette_applied": true,
+      "forbidden_claims_present": false,
+      "promo_not_raw_screenshot": null
+    },
+    {
+      "file": "state/run_events/commercial-payment-2026-04-23-203843-leadfill-v0-2-0-b846c2/80_remotion_assets/landing/pricing_1600x900.png",
+      "required": true,
+      "exists": true,
+      "expected_dimensions": "1600x900",
+      "actual_dimensions": "1600x900",
+      "dimensions_ok": true,
+      "overlay_density": "low",
+      "brand_palette_applied": true,
+      "forbidden_claims_present": false,
+      "promo_not_raw_screenshot": null
+    }
+  ],
+  "passed_checks": [
+    "real_ui_traceability",
+    "asset_dimensions",
+    "overlay_text_not_too_dense",
+    "brand_colors_consistent",
+    "no_forbidden_claims",
+    "promo_tile_not_raw_screenshot",
+    "render_report_present"
+  ],
+  "warnings": [],
+  "blockers": [],
+  "real_ui_traceability_passed": true,
+  "dimension_validation_passed": true,
+  "next_step": "Premium listing assets are ready for the listing quality gate.",
+  "redaction_checks": {
+    "sanitized_response_bodies": true,
+    "checked_secret_value_count": 1,
+    "secret_values_present_in_artifact": false,
+    "authorization_header_pattern_present": false,
+    "key_material_pattern_present": false,
+    "secret_marker_pattern_present": false,
+    "redaction_guard_triggered": false
+  }
+}

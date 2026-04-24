@@ -1,0 +1,29 @@
+{
+  "type": "object",
+  "required": [
+    "generated_at",
+    "provider",
+    "smtp_host_redacted",
+    "smtp_sender",
+    "send_otp_status",
+    "email_delivered",
+    "verify_otp_status",
+    "session_created",
+    "old_server_relay_dependency_removed",
+    "blocker",
+    "next_step"
+  ],
+  "properties": {
+    "generated_at": { "type": "string", "minLength": 1 },
+    "provider": { "type": ["string", "null"] },
+    "smtp_host_redacted": { "type": ["string", "null"] },
+    "smtp_sender": { "type": ["string", "null"] },
+    "send_otp_status": { "type": "string", "minLength": 1 },
+    "email_delivered": { "type": "boolean" },
+    "verify_otp_status": { "type": "string", "minLength": 1 },
+    "session_created": { "type": "boolean" },
+    "old_server_relay_dependency_removed": { "type": "boolean" },
+    "blocker": { "type": ["string", "null"] },
+    "next_step": { "type": "string", "minLength": 1 }
+  }
+}

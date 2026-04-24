@@ -1,0 +1,86 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "stage",
+    "status",
+    "checked_at",
+    "total_watches",
+    "checked_count",
+    "skipped_count",
+    "live_checked_count",
+    "preserved_state_count",
+    "changed_count",
+    "pending_count",
+    "approved_count",
+    "rejected_count",
+    "cancelled_count",
+    "failures",
+    "next_actions"
+  ],
+  "properties": {
+    "stage": {
+      "type": "string",
+      "enum": ["REVIEW_WATCH_SUMMARY"]
+    },
+    "status": {
+      "type": "string",
+      "enum": ["passed", "passed_with_failures"]
+    },
+    "checked_at": {
+      "type": "string"
+    },
+    "total_watches": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "checked_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "skipped_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "live_checked_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "preserved_state_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "changed_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "pending_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "approved_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "rejected_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "cancelled_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "failures": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "next_actions": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    }
+  }
+}

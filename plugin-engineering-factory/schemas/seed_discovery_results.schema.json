@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "stage",
+    "status",
+    "run_id",
+    "total_queries",
+    "seeds_reviewed",
+    "live_unavailable",
+    "seed_results",
+    "total_candidates_found",
+    "deduped_candidates",
+    "build_ready_count",
+    "research_more_count",
+    "skip_count",
+    "next_step",
+    "redaction_checks"
+  ],
+  "properties": {
+    "stage": { "type": "string", "enum": ["SEED_DISCOVERY_RESULTS"] },
+    "status": { "type": "string", "enum": ["passed", "skipped", "failed"] },
+    "run_id": { "type": "string" },
+    "total_queries": { "type": "integer" },
+    "seeds_reviewed": { "type": "array", "items": { "type": "string" } },
+    "live_unavailable": { "type": "boolean" },
+    "seed_results": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "seed_id",
+          "queries_run",
+          "candidates_found",
+          "candidates_after_dedup"
+        ]
+      }
+    },
+    "total_candidates_found": { "type": "integer" },
+    "deduped_candidates": { "type": "integer" },
+    "build_ready_count": { "type": "integer" },
+    "research_more_count": { "type": "integer" },
+    "skip_count": { "type": "integer" },
+    "next_step": { "type": "string" },
+    "redaction_checks": { "type": "object" }
+  }
+}

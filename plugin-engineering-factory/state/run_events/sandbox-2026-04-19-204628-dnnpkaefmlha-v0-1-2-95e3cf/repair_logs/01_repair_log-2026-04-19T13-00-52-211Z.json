@@ -1,0 +1,13 @@
+{
+  "stage": "REPAIR_RUN",
+  "generated_at": "2026-04-19T13:00:52.211Z",
+  "attempt": {
+    "started_at": "2026-04-19T13:00:52.210Z",
+    "stage": "BROWSER_SMOKE_AND_CAPTURE",
+    "from_stage": "BROWSER_SMOKE_AND_CAPTURE",
+    "status": "failed",
+    "cleaned_paths": [],
+    "completed_at": "2026-04-19T13:00:52.211Z",
+    "failure_reason": "sandbox_validation repairs are restricted to REVIEW_STATUS, MONITOR_POST_RELEASE, and CLOSE_RUN."
+  }
+}

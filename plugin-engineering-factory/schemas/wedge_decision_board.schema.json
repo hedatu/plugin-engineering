@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "stage",
+    "status",
+    "run_id",
+    "top_candidates_reviewed",
+    "build_ready_candidates",
+    "research_more_candidates",
+    "skipped_candidates",
+    "recommended_human_review_candidates",
+    "redaction_checks"
+  ],
+  "properties": {
+    "stage": { "type": "string", "enum": ["WEDGE_DECISION_BOARD"] },
+    "status": { "type": "string", "enum": ["passed", "failed"] },
+    "run_id": { "type": "string" },
+    "top_candidates_reviewed": { "type": "integer" },
+    "build_ready_candidates": { "type": "array", "items": { "type": "object" } },
+    "research_more_candidates": { "type": "array", "items": { "type": "object" } },
+    "skipped_candidates": { "type": "array", "items": { "type": "object" } },
+    "highest_confidence_candidate": { "type": ["object", "null"] },
+    "lowest_overlap_candidate": { "type": ["object", "null"] },
+    "best_testability_candidate": { "type": ["object", "null"] },
+    "highest_compliance_risk_candidate": { "type": ["object", "null"] },
+    "recommended_human_review_candidates": { "type": "array", "items": { "type": "object" } },
+    "no_build_reason_if_none": { "type": ["string", "null"] },
+    "redaction_checks": { "type": "object" }
+  }
+}

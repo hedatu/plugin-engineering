@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "stage",
+    "status",
+    "generated_at",
+    "source_mode",
+    "candidate_count",
+    "total_evidence_count",
+    "evidence_by_candidate"
+  ],
+  "properties": {
+    "stage": { "type": "string", "enum": ["ENRICH_FEEDBACK"] },
+    "status": { "type": "string", "enum": ["passed", "failed"] },
+    "generated_at": { "type": "string" },
+    "source_mode": { "type": "string" },
+    "candidate_count": { "type": "integer" },
+    "total_evidence_count": { "type": "integer" },
+    "evidence_by_candidate": { "type": "object" }
+  }
+}

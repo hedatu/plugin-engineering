@@ -1,0 +1,43 @@
+{
+  "stage": "SITE_VISUAL_CONSISTENCY_REPORT",
+  "status": "passed",
+  "run_id": "commercial-payment-2026-04-23-203843-leadfill-v0-2-0-b846c2",
+  "product_key": "leadfill-one-profile",
+  "reviewed_at": "2026-04-23T13:07:47.626Z",
+  "review_method": "static_generated_site_review",
+  "overall_score": 96,
+  "product_page_quality_score": 96,
+  "checkout_page_quality_score": 96,
+  "design_system_status": "passed",
+  "checks": {
+    "shared_css_generated": true,
+    "design_system_generated": true,
+    "product_page_passed": true,
+    "checkout_pages_passed": true,
+    "premium_packaging_aligned": true,
+    "store_assets_present": true,
+    "remotion_asset_path_present": true,
+    "payment_truthfulness_preserved": true,
+    "no_upload_publish_side_effects": true
+  },
+  "blockers": [],
+  "warnings": [
+    "human_visual_review_still_required_before_public_launch",
+    "production_payment_not_verified"
+  ],
+  "web_quality_gate": {
+    "passed": true,
+    "minimum_score": 90,
+    "actual_score": 96
+  },
+  "next_step": "human_visual_review",
+  "redaction_checks": {
+    "sanitized_response_bodies": true,
+    "checked_secret_value_count": 1,
+    "secret_values_present_in_artifact": false,
+    "authorization_header_pattern_present": false,
+    "key_material_pattern_present": false,
+    "secret_marker_pattern_present": false,
+    "redaction_guard_triggered": false
+  }
+}

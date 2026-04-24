@@ -1,0 +1,52 @@
+﻿[
+    {
+        "name":  "01-home",
+        "status":  200,
+        "file":  "D:\\code\\ai插件优化工作流\\docs\\leadfill-round3-actual-render-2026-04-24\\01-home.png"
+    },
+    {
+        "name":  "02-product-route",
+        "status":  200,
+        "file":  "D:\\code\\ai插件优化工作流\\docs\\leadfill-round3-actual-render-2026-04-24\\02-product-route.png"
+    },
+    {
+        "name":  "03-pricing",
+        "status":  200,
+        "file":  "D:\\code\\ai插件优化工作流\\docs\\leadfill-round3-actual-render-2026-04-24\\03-pricing.png"
+    },
+    {
+        "name":  "04-account",
+        "status":  200,
+        "file":  "D:\\code\\ai插件优化工作流\\docs\\leadfill-round3-actual-render-2026-04-24\\04-account.png"
+    },
+    {
+        "name":  "05-login",
+        "status":  200,
+        "file":  "D:\\code\\ai插件优化工作流\\docs\\leadfill-round3-actual-render-2026-04-24\\05-login.png"
+    },
+    {
+        "name":  "06-success",
+        "status":  200,
+        "file":  "D:\\code\\ai插件优化工作流\\docs\\leadfill-round3-actual-render-2026-04-24\\06-success.png"
+    },
+    {
+        "name":  "07-cancel",
+        "status":  200,
+        "file":  "D:\\code\\ai插件优化工作流\\docs\\leadfill-round3-actual-render-2026-04-24\\07-cancel.png"
+    },
+    {
+        "name":  "08-privacy",
+        "status":  200,
+        "file":  "D:\\code\\ai插件优化工作流\\docs\\leadfill-round3-actual-render-2026-04-24\\08-privacy.png"
+    },
+    {
+        "name":  "09-refund",
+        "status":  200,
+        "file":  "D:\\code\\ai插件优化工作流\\docs\\leadfill-round3-actual-render-2026-04-24\\09-refund.png"
+    },
+    {
+        "name":  "10-terms",
+        "status":  200,
+        "file":  "D:\\code\\ai插件优化工作流\\docs\\leadfill-round3-actual-render-2026-04-24\\10-terms.png"
+    }
+]

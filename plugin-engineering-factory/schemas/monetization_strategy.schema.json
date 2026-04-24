@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "stage",
+    "status",
+    "run_id",
+    "product_id",
+    "product_name",
+    "pricing_model",
+    "free_limit",
+    "price_label",
+    "upgrade_url_placeholder",
+    "license_activation_model",
+    "entitlement_model",
+    "free_features",
+    "pro_features",
+    "paid_disclosure_copy",
+    "risk_notes",
+    "next_step",
+    "redaction_checks"
+  ],
+  "properties": {
+    "stage": {
+      "type": "string",
+      "enum": ["MONETIZATION_STRATEGY"]
+    },
+    "status": {
+      "type": "string",
+      "enum": ["passed", "failed"]
+    },
+    "run_id": { "type": "string" },
+    "product_id": { "type": "string" },
+    "product_name": { "type": "string" },
+    "pricing_model": { "type": "string" },
+    "free_limit": {
+      "type": "object",
+      "required": ["amount", "unit", "scope"],
+      "properties": {
+        "amount": { "type": "integer", "minimum": 0 },
+        "unit": { "type": "string" },
+        "scope": { "type": "string" }
+      }
+    },
+    "price_label": { "type": "string" },
+    "upgrade_url_placeholder": { "type": "string" },
+    "license_activation_model": { "type": "string" },
+    "entitlement_model": { "type": "string" },
+    "free_features": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "pro_features": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "paid_disclosure_copy": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "risk_notes": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "next_step": { "type": "string" },
+    "redaction_checks": { "type": "object" }
+  }
+}

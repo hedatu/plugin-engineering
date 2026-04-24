@@ -1,0 +1,52 @@
+{
+  "stage": "REVIEW_STATUS",
+  "status": "skipped",
+  "run_id": "sandbox-2026-04-19-145131-dnnpkaefmlha-1acd61",
+  "publisher_id": "7462c8f7-9c1a-48ed-9249-894c0317bd46",
+  "item_id": "dnnpkaefmlhacigijccbhemgaenjbcpk",
+  "checked_at": "2026-04-19T06:51:50.858Z",
+  "previous_publish_execution_state": {
+    "execution_mode": null,
+    "publish_validation_phase": null,
+    "publish_response_state": null,
+    "publish_response_ok": null,
+    "publish_executed": false
+  },
+  "current_dashboard_state": null,
+  "submitted_revision_status": null,
+  "published_revision_status": null,
+  "latest_upload_status": null,
+  "review_action": "not_applicable",
+  "review_submission_verified": false,
+  "review_cancelled_manually": false,
+  "is_pending_review": false,
+  "is_draft": false,
+  "is_approved": false,
+  "is_rejected": false,
+  "dashboard_action_required": false,
+  "next_step": "review_status_not_applicable_for_this_run",
+  "raw_response_summary": {
+    "http_status": null,
+    "body_keys": [],
+    "response_body_summary": null,
+    "response_headers_summary": null
+  },
+  "network_mode": "direct",
+  "proxy_configured": false,
+  "proxy_source": null,
+  "proxy_url_redacted": null,
+  "failure_phase": null,
+  "failure_reason": null,
+  "diagnostic_hint": null,
+  "credential_type": "unconfigured",
+  "token_source": "none",
+  "redaction_checks": {
+    "sanitized_response_bodies": true,
+    "checked_secret_value_count": 0,
+    "secret_values_present_in_artifact": false,
+    "authorization_header_pattern_present": false,
+    "key_material_pattern_present": false,
+    "secret_marker_pattern_present": false,
+    "redaction_guard_triggered": false
+  }
+}

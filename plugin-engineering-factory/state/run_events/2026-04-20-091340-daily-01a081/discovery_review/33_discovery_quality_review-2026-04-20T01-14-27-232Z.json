@@ -1,0 +1,65 @@
+{
+  "stage": "DISCOVERY_QUALITY_REVIEW",
+  "status": "passed",
+  "run_id": "2026-04-20-091340-daily-01a081",
+  "candidate_count": 6,
+  "selected_candidate": {
+    "candidate_id": "cand-tab-001",
+    "name": "Window Tabs Exporter",
+    "wedge_family": "tab_csv_window_export",
+    "source_mode": "fixture",
+    "total_score": 74.07,
+    "confidence_score": 75.72
+  },
+  "evidence_quality_score": 72.96,
+  "pain_cluster_quality_score": 100,
+  "opportunity_score_confidence": 75.72,
+  "portfolio_overlap_risk": 36,
+  "compliance_risk": 24.22,
+  "feasibility_confidence": 83,
+  "user_need_clarity": 69.95,
+  "build_recommendation": "research_more",
+  "biggest_uncertainties": [
+    "single_purpose_gate: wedge remains too broad or supported by weak pain clusters",
+    "product_acceptance_forecast_gate: product acceptance forecast is weak because pain coverage is thin or too generic",
+    "capability gap: pain description is too generic to map directly into a single-purpose wedge",
+    "privacy concern: cluster lacks repeated independent evidence",
+    "workflow friction: pain description is too generic to map directly into a single-purpose wedge",
+    "reliability break: pain description is too generic to map directly into a single-purpose wedge",
+    "Portfolio overlap remains meaningful for this wedge family."
+  ],
+  "missing_evidence": [
+    "No Reddit or practitioner forum evidence yet.",
+    "Discovery still depends on fixture-mode evidence, so freshness is capped.",
+    "At least one top pain cluster is still weak or overly generic."
+  ],
+  "recommended_next_queries": [
+    "site:chromewebstore.google.com form filler one profile visible fields review",
+    "site:reddit.com recruiter intake form autofill local-only chrome extension",
+    "site:chromewebstore.google.com current window tab export csv pinned tabs review",
+    "site:github.com browser tab export extension issue current window csv",
+    "site:chromewebstore.google.com gmail snippet quick insert compose review",
+    "site:reddit.com canned reply chrome extension keyboard shortcut pain",
+    "site:chromewebstore.google.com small saas browser extension copy paste workflow review",
+    "site:github.com browser extension one-click data cleanup issue",
+    "site:chromewebstore.google.com browser workflow friction local-only productivity review",
+    "site:chromewebstore.google.com developer utility chrome extension local-only review"
+  ],
+  "decision_rationale": [
+    "4 clusters and 5 evidence items support the wedge",
+    "evidence_quality=72.96, testability=84.71, compliance=75.78",
+    "portfolio_overlap_penalty=36, maintenance_risk=34",
+    "shortlist_confidence=84.2",
+    "Score gap to runner-up is 0.57.",
+    "build_gate=no_go"
+  ],
+  "redaction_checks": {
+    "sanitized_response_bodies": true,
+    "checked_secret_value_count": 0,
+    "secret_values_present_in_artifact": false,
+    "authorization_header_pattern_present": false,
+    "key_material_pattern_present": false,
+    "secret_marker_pattern_present": false,
+    "redaction_guard_triggered": false
+  }
+}

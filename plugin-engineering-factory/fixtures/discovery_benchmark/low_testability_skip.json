@@ -1,0 +1,43 @@
+{
+  "case_id": "low_testability_skip",
+  "expected_build_recommendation": "skip",
+  "notes": "Low testability should fail the discovery gate.",
+  "candidate": {
+    "candidate_id": "bench-low-testability-skip",
+    "name": "Multi-App Workflow Wizard",
+    "category": "Productivity",
+    "users": 29000,
+    "rating": 4.0,
+    "reviews": 240,
+    "updated": "2026-04-05",
+    "website_url": "https://fixtures.local/multi-app-workflow-wizard",
+    "support_url": "https://fixtures.local/support/multi-app-workflow-wizard",
+    "wedge_family": "unsupported_research_only",
+    "signals": ["workflow", "wizard", "multi app"],
+    "portfolio_overlap_score": 20,
+    "permission_risk_score": 54,
+    "single_purpose_fit_score": 36,
+    "testability_score": 24,
+    "maintenance_risk_score": 72
+  },
+  "evidence": [
+    {
+      "source_type": "support",
+      "source_url": "https://fixtures.local/support/multi-app-workflow-wizard/ticket-1",
+      "captured_at": "2026-04-06T10:00:00Z",
+      "topic": "too many steps",
+      "quote": "This tries to automate too much across too many apps.",
+      "issue_type": "ux_friction",
+      "sentiment": "negative"
+    },
+    {
+      "source_type": "forum_post",
+      "source_url": "https://fixtures.local/forum/multi-app-workflow-wizard/post-1",
+      "captured_at": "2026-04-04T10:00:00Z",
+      "topic": "hard to reproduce",
+      "quote": "The workflow changes from app to app, so I cannot trust it.",
+      "issue_type": "stability",
+      "sentiment": "negative"
+    }
+  ]
+}

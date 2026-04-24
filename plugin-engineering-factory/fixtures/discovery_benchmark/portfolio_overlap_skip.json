@@ -1,0 +1,42 @@
+{
+  "case_id": "portfolio_overlap_skip",
+  "expected_build_recommendation": "skip",
+  "notes": "High overlap with the existing form-fill lane should skip.",
+  "candidate": {
+    "candidate_id": "bench-overlap-skip",
+    "name": "LeadFill Clone Lite",
+    "category": "Workflow & Planning",
+    "users": 36000,
+    "rating": 4.0,
+    "reviews": 320,
+    "updated": "2026-04-10",
+    "website_url": "https://fixtures.local/leadfill-clone-lite",
+    "support_url": "https://fixtures.local/support/leadfill-clone-lite",
+    "wedge_family": "single_profile_form_fill",
+    "signals": ["forms", "lead", "fill", "single profile"],
+    "portfolio_overlap_score": 72,
+    "permission_risk_score": 40,
+    "single_purpose_fit_score": 82,
+    "testability_score": 85
+  },
+  "evidence": [
+    {
+      "source_type": "support",
+      "source_url": "https://fixtures.local/support/leadfill-clone-lite/ticket-1",
+      "captured_at": "2026-04-11T10:00:00Z",
+      "topic": "one reusable profile",
+      "quote": "I just want one reusable local profile.",
+      "issue_type": "missing_feature",
+      "sentiment": "negative"
+    },
+    {
+      "source_type": "store",
+      "source_url": "https://fixtures.local/store/leadfill-clone-lite/review-1",
+      "captured_at": "2026-04-09T10:00:00Z",
+      "topic": "fills visible fields only",
+      "quote": "Please fill visible fields only.",
+      "issue_type": "ux_friction",
+      "sentiment": "negative"
+    }
+  ]
+}

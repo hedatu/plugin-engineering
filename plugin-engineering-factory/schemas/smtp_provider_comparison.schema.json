@@ -1,0 +1,47 @@
+{
+  "type": "object",
+  "required": [
+    "generated_at",
+    "recommended_provider",
+    "providers"
+  ],
+  "properties": {
+    "generated_at": { "type": "string", "minLength": 1 },
+    "recommended_provider": { "type": "string", "minLength": 1 },
+    "recommended_reason": { "type": "string", "minLength": 1 },
+    "providers": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "setup_time",
+          "cost",
+          "deliverability",
+          "china_accessibility",
+          "global_accessibility",
+          "domain_verification_requirement",
+          "smtp_compatibility",
+          "official_sources"
+        ],
+        "properties": {
+          "name": { "type": "string", "minLength": 1 },
+          "setup_time": { "type": "string", "minLength": 1 },
+          "cost": { "type": "string", "minLength": 1 },
+          "deliverability": { "type": "string", "minLength": 1 },
+          "china_accessibility": { "type": "string", "minLength": 1 },
+          "global_accessibility": { "type": "string", "minLength": 1 },
+          "domain_verification_requirement": { "type": "string", "minLength": 1 },
+          "smtp_compatibility": { "type": "string", "minLength": 1 },
+          "notes": { "type": "string" },
+          "official_sources": {
+            "type": "array",
+            "minItems": 1,
+            "items": { "type": "string", "minLength": 1 }
+          }
+        }
+      }
+    }
+  }
+}

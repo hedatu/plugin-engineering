@@ -1,0 +1,92 @@
+{
+  "stage": "STORE_ASSET_SPEC",
+  "status": "passed",
+  "run_id": "commercial-payment-2026-04-23-202254-leadfill-v0-2-0-7faeaf",
+  "product_name": "LeadFill One Profile",
+  "store_icon_128x128": {
+    "source_existing": "runs/commercial-payment-2026-04-23-202254-leadfill-v0-2-0-7faeaf/70_listing_assets/icon128.png",
+    "dimensions": "128x128",
+    "rule": "Keep icon simple and recognizable. Do not embed full UI screenshots."
+  },
+  "screenshots": [
+    {
+      "screenshot_id": "screenshot-1",
+      "expected_file": "80_remotion_assets/screenshots/screenshot_1_1280x800.png",
+      "dimensions": "1280x800",
+      "purpose": "Core Value",
+      "source_real_screenshot": "runs/commercial-payment-2026-04-23-202254-leadfill-v0-2-0-7faeaf/70_listing_assets/screenshot_1.png"
+    },
+    {
+      "screenshot_id": "screenshot-2",
+      "expected_file": "80_remotion_assets/screenshots/screenshot_2_1280x800.png",
+      "dimensions": "1280x800",
+      "purpose": "Real Workflow",
+      "source_real_screenshot": "runs/commercial-payment-2026-04-23-202254-leadfill-v0-2-0-7faeaf/70_listing_assets/screenshot_2.png"
+    },
+    {
+      "screenshot_id": "screenshot-3",
+      "expected_file": "80_remotion_assets/screenshots/screenshot_3_1280x800.png",
+      "dimensions": "1280x800",
+      "purpose": "Clean Result",
+      "source_real_screenshot": "runs/commercial-payment-2026-04-23-202254-leadfill-v0-2-0-7faeaf/70_listing_assets/screenshot_3.png"
+    },
+    {
+      "screenshot_id": "screenshot-4",
+      "expected_file": "80_remotion_assets/screenshots/screenshot_4_1280x800.png",
+      "dimensions": "1280x800",
+      "purpose": "Smart Safeguards",
+      "source_real_screenshot": "runs/commercial-payment-2026-04-23-202254-leadfill-v0-2-0-7faeaf/70_listing_assets/screenshot_1.png"
+    },
+    {
+      "screenshot_id": "screenshot-5",
+      "expected_file": "80_remotion_assets/screenshots/screenshot_5_1280x800.png",
+      "dimensions": "1280x800",
+      "purpose": "Local Trust",
+      "source_real_screenshot": "runs/commercial-payment-2026-04-23-202254-leadfill-v0-2-0-7faeaf/70_listing_assets/screenshot_1.png"
+    }
+  ],
+  "small_promo_440x280": {
+    "expected_file": "80_remotion_assets/promo/small_promo_440x280.png",
+    "dimensions": "440x280",
+    "rule": "Must be branded and concise. Must not be only a raw screenshot."
+  },
+  "marquee_1400x560": {
+    "expected_file": "80_remotion_assets/promo/marquee_1400x560.png",
+    "dimensions": "1400x560",
+    "optional": true
+  },
+  "youtube_promo_video_url": "https://example.com/coming-soon",
+  "landing_page_hero": {
+    "expected_file": "80_remotion_assets/landing/hero_1600x900.png",
+    "dimensions": "1600x900",
+    "rule": "Use the same brand system as the store listing."
+  },
+  "pricing_image": {
+    "expected_file": "80_remotion_assets/landing/pricing_1600x900.png",
+    "dimensions": "1600x900",
+    "required_when_monetized": true
+  },
+  "support_page_visuals": [
+    {
+      "expected_file": "landing/<product_slug>/assets/screenshot_3.png",
+      "purpose": "Explain the core result on the support page."
+    }
+  ],
+  "rules": [
+    "Chrome Web Store screenshots must show the real user experience.",
+    "Each screenshot should answer a single user question.",
+    "Promo tiles should stay branded and restrained.",
+    "Do not use fake rankings, competitor names, or false endorsements.",
+    "If the product is monetized, listing copy and visuals must disclose free versus Pro honestly."
+  ],
+  "next_step": "Render the premium stills or keep publish blocked until the asset pack exists.",
+  "redaction_checks": {
+    "sanitized_response_bodies": true,
+    "checked_secret_value_count": 1,
+    "secret_values_present_in_artifact": false,
+    "authorization_header_pattern_present": false,
+    "key_material_pattern_present": false,
+    "secret_marker_pattern_present": false,
+    "redaction_guard_triggered": false
+  }
+}

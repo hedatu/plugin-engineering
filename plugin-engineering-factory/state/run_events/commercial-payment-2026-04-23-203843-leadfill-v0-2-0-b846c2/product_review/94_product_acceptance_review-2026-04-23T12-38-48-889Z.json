@@ -1,0 +1,54 @@
+{
+  "stage": "PRODUCT_ACCEPTANCE_REVIEW",
+  "status": "passed",
+  "run_id": "commercial-payment-2026-04-23-203843-leadfill-v0-2-0-b846c2",
+  "archetype": "single_profile_form_fill",
+  "wedge": "LeadFill One Profile",
+  "target_user": "Sales reps, recruiters, and operators repeatedly entering the same contact details into web forms.",
+  "promised_value": "Save one local profile and fill visible lead form fields on the current page in one click.",
+  "actual_core_flow": "Popup saves one local profile and the browser smoke fixture verified 7 visible fields filled on a controlled lead-form page.",
+  "acceptance_status": "passed",
+  "ux_review": {
+    "status": "clear_but_basic",
+    "notes": "The popup now explains local-only storage, default overwrite behavior, and gives visible feedback for both successful fills and no-match cases."
+  },
+  "functionality_review": {
+    "status": "core_flow_proven",
+    "notes": "The smoke suite now covers empty, partially filled, readonly or disabled, select, no-match, overwrite-default-false, and popup-feedback scenarios with 100 coverage."
+  },
+  "monetization_review": {
+    "status": "commercial_flow_scoped_and_proven",
+    "notes": "The HWH pay-site flow covers email OTP, source=chrome_extension checkout, webhook-derived entitlement refresh, free quota, Pro consume-usage, and public-only extension config in test mode."
+  },
+  "listing_truthfulness_review": {
+    "status": "truthful_and_scoped",
+    "notes": "The listing now matches the verified support envelope and discloses the commercial placeholder flow truthfully."
+  },
+  "permissions_review": {
+    "status": "minimal",
+    "notes": "The current permission set is narrow and aligned with the brief: storage, activeTab, and scripting only."
+  },
+  "privacy_review": {
+    "status": "aligned_with_promise",
+    "notes": "No remote sync path is present in popup code, which matches the local-only privacy story."
+  },
+  "screenshot_review": {
+    "status": "real_and_truthful",
+    "notes": "The screenshots remain validation-oriented, but they now represent real supported behavior instead of overselling unsupported fields."
+  },
+  "biggest_risks": [
+    "Field descriptor matching still depends on heuristic label and placeholder matching."
+  ],
+  "required_fixes": [],
+  "recommended_decision": "ready_for_reupload_after_manual_review_cancel",
+  "next_step": "prepare_new_sandbox_revision_for_upload_after_manual_review_cancel",
+  "redaction_checks": {
+    "sanitized_response_bodies": true,
+    "checked_secret_value_count": 1,
+    "secret_values_present_in_artifact": false,
+    "authorization_header_pattern_present": false,
+    "key_material_pattern_present": false,
+    "secret_marker_pattern_present": false,
+    "redaction_guard_triggered": false
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "stage",
+    "status",
+    "run_id",
+    "selected",
+    "build_recommendation",
+    "reason",
+    "confidence_score",
+    "evidence_quality_score",
+    "testability_score",
+    "portfolio_overlap_score",
+    "blockers",
+    "next_step",
+    "redaction_checks"
+  ],
+  "properties": {
+    "stage": {
+      "type": "string",
+      "enum": ["NEXT_BUILD_CANDIDATE_SELECTION"]
+    },
+    "status": {
+      "type": "string",
+      "enum": ["passed", "failed"]
+    },
+    "run_id": { "type": "string" },
+    "selected": { "type": "boolean" },
+    "candidate_id": { "type": ["string", "null"] },
+    "candidate_name": { "type": ["string", "null"] },
+    "selected_wedge": { "type": ["string", "null"] },
+    "build_recommendation": {
+      "type": "string",
+      "enum": ["build", "research_more", "skip"]
+    },
+    "reason": { "type": "string" },
+    "confidence_score": { "type": "number" },
+    "evidence_quality_score": { "type": "number" },
+    "testability_score": { "type": "number" },
+    "portfolio_overlap_score": { "type": "number" },
+    "blockers": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "next_step": { "type": "string" },
+    "redaction_checks": { "type": "object" }
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "project": "LeadFill One Profile",
+  "generated_at": "2026-04-24T00:00:00+08:00",
+  "mode": "single_product_commercial_launch",
+  "scope_rule": "Only keep items that can materially block LeadFill launch.",
+  "active_backlog": [
+    {
+      "priority": 1,
+      "id": "human_visual_review_pending",
+      "category": "launch_gate",
+      "status": "open",
+      "why_it_blocks_launch": "Manual visual truthfulness and premium-feel review is still required before public launch preparation can continue."
+    },
+    {
+      "priority": 2,
+      "id": "pricing_legal_copy_final_polish",
+      "category": "website",
+      "status": "open",
+      "why_it_blocks_launch": "Pricing, refund, privacy, and terms copy must be final before commercial resubmission and live payment review."
+    },
+    {
+      "priority": 3,
+      "id": "production_payment_live_config_defined",
+      "category": "billing_core",
+      "status": "open",
+      "why_it_blocks_launch": "Production payment cannot be verified until the live checkout, callback, and webhook configuration is fully defined."
+    },
+    {
+      "priority": 4,
+      "id": "live_waffo_product_price_mapping_verified",
+      "category": "billing_core",
+      "status": "open",
+      "why_it_blocks_launch": "The live SKU mapping must be correct before any public commercial launch."
+    },
+    {
+      "priority": 5,
+      "id": "live_webhook_verification_completed",
+      "category": "billing_core",
+      "status": "open",
+      "why_it_blocks_launch": "Webhook verification is the source of truth for entitlement and must be proven in live mode."
+    },
+    {
+      "priority": 6,
+      "id": "live_refund_revoke_behavior_verified",
+      "category": "billing_core",
+      "status": "open",
+      "why_it_blocks_launch": "Paid access cannot be considered commercially ready until refund and revoke behavior is understood and verified."
+    },
+    {
+      "priority": 7,
+      "id": "support_email_finalized_for_launch",
+      "category": "operations",
+      "status": "open",
+      "why_it_blocks_launch": "The support contact path must be final for billing, restore, and launch support."
+    },
+    {
+      "priority": 8,
+      "id": "payment_disclosure_final_review",
+      "category": "compliance",
+      "status": "open",
+      "why_it_blocks_launch": "Commercial copy and disclosures must stay truthful before re-review."
+    },
+    {
+      "priority": 9,
+      "id": "commercial_resubmission_package_finalized",
+      "category": "release_ops",
+      "status": "open",
+      "why_it_blocks_launch": "Chrome resubmission cannot be prepared cleanly until the final package is frozen."
+    },
+    {
+      "priority": 10,
+      "id": "user_public_launch_approval_missing",
+      "category": "human_gate",
+      "status": "open",
+      "why_it_blocks_launch": "Public commercial launch still requires explicit user approval."
+    }
+  ],
+  "explicitly_not_in_scope": [
+    "discovery",
+    "new_builder_work",
+    "google_login",
+    "smtp_automation_platform",
+    "second_plugin",
+    "automatic_chrome_upload",
+    "automatic_chrome_publish",
+    "general_factory_platform_expansion"
+  ],
+  "current_known_non_backlog_risks": [
+    {
+      "id": "low_memory_server",
+      "status": "accepted_temporary_risk",
+      "note": "Important operational risk, but not currently the top launch blocker under the reset plan."
+    }
+  ]
+}

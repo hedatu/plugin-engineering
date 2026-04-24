@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "stage",
+    "status",
+    "run_id",
+    "current_staged_run_id",
+    "current_staged_version",
+    "target_commercial_version",
+    "recommended_option",
+    "options",
+    "why",
+    "requires_re_review",
+    "no_auto_cancel",
+    "no_auto_publish",
+    "next_step",
+    "redaction_checks"
+  ],
+  "properties": {
+    "stage": {
+      "type": "string",
+      "enum": ["COMMERCIAL_PUBLISH_STRATEGY"]
+    },
+    "status": {
+      "type": "string",
+      "enum": ["passed", "failed"]
+    },
+    "run_id": { "type": "string" },
+    "current_staged_run_id": { "type": "string" },
+    "current_staged_version": { "type": "string" },
+    "target_commercial_version": { "type": "string" },
+    "recommended_option": {
+      "type": "string",
+      "enum": ["publish_current_staged", "submit_commercial_revision", "hold_staged_and_market_test"]
+    },
+    "options": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["option_id", "title", "summary", "pros", "cons"],
+        "properties": {
+          "option_id": { "type": "string" },
+          "title": { "type": "string" },
+          "summary": { "type": "string" },
+          "pros": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "cons": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        }
+      }
+    },
+    "why": { "type": "string" },
+    "requires_re_review": { "type": "boolean" },
+    "no_auto_cancel": { "type": "boolean" },
+    "no_auto_publish": { "type": "boolean" },
+    "next_step": { "type": "string" },
+    "redaction_checks": { "type": "object" }
+  }
+}

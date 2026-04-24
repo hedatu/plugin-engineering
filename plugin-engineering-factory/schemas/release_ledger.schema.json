@@ -1,0 +1,121 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "stage",
+    "status",
+    "generated_at",
+    "entries"
+  ],
+  "properties": {
+    "stage": {
+      "type": "string",
+      "enum": ["RELEASE_LEDGER"]
+    },
+    "status": {
+      "type": "string"
+    },
+    "generated_at": {
+      "type": "string"
+    },
+    "entries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "ledger_entry_id",
+          "run_id",
+          "item_id",
+          "publisher_id",
+          "item_name",
+          "package_sha256",
+          "manifest_version",
+          "action_type",
+          "action_source",
+          "action_status",
+          "occurred_at",
+          "evidence_artifacts",
+          "evidence_hashes",
+          "chrome_webstore_response_summary",
+          "dashboard_manual_note",
+          "approved_by",
+          "approval_artifact",
+          "redaction_checks",
+          "production_write",
+          "sandbox_only"
+        ],
+          "properties": {
+            "ledger_entry_id": { "type": "string" },
+            "run_id": { "type": ["string", "null"] },
+            "source_run_id": { "type": ["string", "null"] },
+            "sandbox_run_id": { "type": ["string", "null"] },
+            "source_sandbox_run_id": { "type": ["string", "null"] },
+            "new_sandbox_run_id": { "type": ["string", "null"] },
+            "item_id": { "type": ["string", "null"] },
+            "publisher_id": { "type": ["string", "null"] },
+            "item_name": { "type": ["string", "null"] },
+            "package_sha256": { "type": "string" },
+            "manifest_version": { "type": ["string", "null"] },
+            "current_sandbox_item_version": { "type": ["string", "null"] },
+            "upload_response_crx_version": { "type": ["string", "null"] },
+            "uploaded_crx_version": { "type": ["string", "null"] },
+            "published_crx_version": { "type": ["string", "null"] },
+            "upload_state": { "type": ["string", "null"] },
+            "version_consistency_check": { "type": ["object", "null"] },
+            "previous_manifest_version": { "type": ["string", "null"] },
+            "target_manifest_version": { "type": ["string", "null"] },
+            "old_package_sha256": { "type": "string" },
+            "new_package_sha256": { "type": "string" },
+            "action_type": {
+              "type": "string",
+              "enum": [
+                "fetch_status",
+                "promote_to_sandbox_validation",
+                "sandbox_prepare_upload_revision",
+                "sandbox_prepare_product_revision",
+                "sandbox_prepare_commercial_release_revision",
+                "sandbox_upload_approval",
+                "sandbox_publish_approval",
+                "sandbox_upload",
+                "sandbox_upload_artifact_correction",
+                "sandbox_publish_optional",
+                "review_pending",
+                "manual_cancel_review",
+                "review_approved",
+                "review_approved_staged",
+                "review_rejected",
+                "review_repair_plan_created"
+              ]
+            },
+            "action_source": {
+              "type": "string",
+              "enum": ["api", "dashboard_manual", "cli", "ci"]
+            },
+            "action_status": { "type": "string" },
+            "occurred_at": { "type": "string" },
+            "evidence_artifacts": {
+              "type": "array",
+              "items": { "type": "string" }
+            },
+            "evidence_hashes": { "type": "object" },
+            "chrome_webstore_response_summary": { "type": ["object", "null"] },
+            "dashboard_manual_note": { "type": ["string", "null"] },
+            "approved_by": { "type": ["string", "null"] },
+            "approval_artifact": { "type": ["string", "null"] },
+            "corrects_ledger_entry_id": { "type": ["string", "null"] },
+            "corrected_fields": {
+              "type": "array",
+              "items": { "type": "string" }
+            },
+            "reason": { "type": ["string", "null"] },
+            "redaction_checks": { "type": "object" },
+            "production_write": { "type": "boolean" },
+            "sandbox_only": { "type": "boolean" },
+            "evidence_quality": { "type": ["string", "null"] },
+            "original_artifact_available": { "type": ["boolean", "null"] },
+            "recovery_reason": { "type": ["string", "null"] }
+        }
+      }
+    }
+  }
+}

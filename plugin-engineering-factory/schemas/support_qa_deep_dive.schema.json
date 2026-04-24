@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "stage",
+    "status",
+    "run_id",
+    "candidate_count",
+    "build_ready_count",
+    "research_more_count",
+    "skip_count",
+    "backlog_waiting_count",
+    "next_step",
+    "candidates",
+    "redaction_checks"
+  ],
+  "properties": {
+    "stage": { "type": "string", "enum": ["SUPPORT_QA_HANDOFF_DEEP_DIVE"] },
+    "status": { "type": "string", "enum": ["passed", "failed"] },
+    "run_id": { "type": "string" },
+    "source_run_id": { "type": ["string", "null"] },
+    "focus_seed": { "type": "string" },
+    "candidate_count": { "type": "integer" },
+    "build_ready_count": { "type": "integer" },
+    "research_more_count": { "type": "integer" },
+    "skip_count": { "type": "integer" },
+    "backlog_waiting_count": { "type": "integer" },
+    "next_step": { "type": "string" },
+    "candidates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "candidate_id",
+          "candidate_name",
+          "source_url",
+          "observed_position_in_seed",
+          "current_build_recommendation",
+          "current_score_breakdown",
+          "evidence_summary",
+          "pain_signals",
+          "support_or_review_evidence",
+          "wedge_hypotheses",
+          "overlap_analysis",
+          "compliance_analysis",
+          "permission_risk_analysis",
+          "testability_analysis",
+          "builder_fit_analysis",
+          "final_recommendation",
+          "final_reason",
+          "next_step"
+        ]
+      }
+    },
+    "redaction_checks": { "type": "object" }
+  }
+}

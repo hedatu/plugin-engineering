@@ -1,0 +1,20 @@
+{
+    "prepared_at":  "2026-04-22T20:04:45.2593738+08:00",
+    "server_id":  "singapore",
+    "hostname":  "do-mini-sgp1-01",
+    "role":  "backup_or_staging",
+    "deploy_user_status":  "created",
+    "directories_prepared":  [
+                                 "/opt/commercial-extension-factory",
+                                 "/opt/commercial-extension-factory/backups",
+                                 "/opt/commercial-extension-factory/staging",
+                                 "/opt/commercial-extension-factory/logs",
+                                 "/opt/commercial-extension-factory/incoming"
+                             ],
+    "rsync_available":  true,
+    "production_services_started":  false,
+    "blockers":  [
+
+                 ],
+    "next_step":  "receive replicated backup archives or staging payloads only; do not run production hwh or publish services"
+}

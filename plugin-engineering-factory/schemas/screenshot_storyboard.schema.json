@@ -1,0 +1,90 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "stage",
+    "status",
+    "run_id",
+    "product_name",
+    "storyboard"
+  ],
+  "properties": {
+    "stage": {
+      "type": "string",
+      "enum": ["SCREENSHOT_STORYBOARD"]
+    },
+    "status": {
+      "type": "string",
+      "enum": ["passed", "skipped", "failed"]
+    },
+    "run_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "product_name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "storyboard": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "screenshot_id",
+          "title",
+          "user_question_answered",
+          "source_real_screenshot",
+          "overlay_headline",
+          "overlay_subcopy",
+          "feature_shown",
+          "trust_signal",
+          "expected_file",
+          "chrome_store_compliance_notes"
+        ],
+        "properties": {
+          "screenshot_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1
+          },
+          "user_question_answered": {
+            "type": "string",
+            "minLength": 1
+          },
+          "source_real_screenshot": {
+            "type": "string",
+            "minLength": 1
+          },
+          "overlay_headline": {
+            "type": "string",
+            "minLength": 1
+          },
+          "overlay_subcopy": {
+            "type": "string",
+            "minLength": 1
+          },
+          "feature_shown": {
+            "type": "string",
+            "minLength": 1
+          },
+          "trust_signal": {
+            "type": "string",
+            "minLength": 1
+          },
+          "expected_file": {
+            "type": "string",
+            "minLength": 1
+          },
+          "chrome_store_compliance_notes": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    }
+  }
+}

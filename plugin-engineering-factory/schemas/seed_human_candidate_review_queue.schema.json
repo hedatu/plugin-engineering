@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "stage",
+    "status",
+    "run_id",
+    "no_build_today",
+    "queue_count",
+    "entries",
+    "redaction_checks"
+  ],
+  "properties": {
+    "stage": { "type": "string", "enum": ["SEED_HUMAN_CANDIDATE_REVIEW_QUEUE"] },
+    "status": { "type": "string", "enum": ["passed", "failed"] },
+    "run_id": { "type": "string" },
+    "no_build_today": { "type": "boolean" },
+    "queue_count": { "type": "integer" },
+    "entries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "candidate_id",
+          "candidate_name",
+          "seed_id",
+          "proposed_wedge",
+          "why_build",
+          "why_not_build",
+          "evidence_summary",
+          "overlap_risk",
+          "testability_summary",
+          "compliance_summary",
+          "builder_fit",
+          "recommended_decision"
+        ]
+      }
+    },
+    "redaction_checks": { "type": "object" }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "stage",
+    "status",
+    "candidate_count",
+    "current_builders",
+    "candidates",
+    "next_step",
+    "redaction_checks"
+  ],
+  "properties": {
+    "stage": { "type": "string", "enum": ["BUILDER_FIT_MAP"] },
+    "status": { "type": "string", "enum": ["passed", "failed"] },
+    "candidate_count": { "type": "integer" },
+    "current_builders": { "type": "array", "items": { "type": "string" } },
+    "candidates": { "type": "array", "items": { "type": "object" } },
+    "future_builder_summary": { "type": "array", "items": { "type": "object" } },
+    "next_step": { "type": "string" },
+    "redaction_checks": { "type": "object" }
+  }
+}

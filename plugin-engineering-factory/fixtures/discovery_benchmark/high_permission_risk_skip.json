@@ -1,0 +1,42 @@
+{
+  "case_id": "high_permission_risk_skip",
+  "expected_build_recommendation": "skip",
+  "notes": "Permission and compliance risk should force skip.",
+  "candidate": {
+    "candidate_id": "bench-permission-skip",
+    "name": "Inbox AI Commander",
+    "category": "Productivity",
+    "users": 52000,
+    "rating": 4.1,
+    "reviews": 410,
+    "updated": "2026-04-08",
+    "website_url": "https://fixtures.local/inbox-ai-commander",
+    "support_url": "https://fixtures.local/support/inbox-ai-commander",
+    "wedge_family": "gmail_snippet",
+    "signals": ["gmail", "ai", "inbox", "assistant"],
+    "portfolio_overlap_score": 16,
+    "permission_risk_score": 92,
+    "single_purpose_fit_score": 58,
+    "testability_score": 68
+  },
+  "evidence": [
+    {
+      "source_type": "support",
+      "source_url": "https://fixtures.local/support/inbox-ai-commander/ticket-1",
+      "captured_at": "2026-04-10T10:00:00Z",
+      "topic": "too much inbox access",
+      "quote": "I only need quick snippets, not full inbox access.",
+      "issue_type": "privacy_concern",
+      "sentiment": "negative"
+    },
+    {
+      "source_type": "github",
+      "source_url": "https://fixtures.local/github/inbox-ai-commander/issues/2",
+      "captured_at": "2026-04-09T10:00:00Z",
+      "topic": "permission trust",
+      "quote": "Users are uncomfortable with mailbox-wide access.",
+      "issue_type": "privacy_concern",
+      "sentiment": "negative"
+    }
+  ]
+}

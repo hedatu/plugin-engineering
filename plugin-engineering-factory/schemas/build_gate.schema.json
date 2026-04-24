@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "stage",
+    "status",
+    "decision",
+    "go_no_go",
+    "generated_at",
+    "gate_results",
+    "blockers",
+    "warnings",
+    "required_followup_research",
+    "recommended_archetype",
+    "expected_test_matrix",
+    "product_acceptance_risks",
+    "decision_rationale"
+  ],
+  "properties": {
+    "stage": { "type": "string", "enum": ["BUILD_GATE"] },
+    "status": { "type": "string", "enum": ["passed", "failed"] },
+    "decision": { "type": "string", "enum": ["go", "no_go"] },
+    "go_no_go": { "type": "string", "enum": ["go", "no_go"] },
+    "generated_at": { "type": "string" },
+    "selected_candidate_id": { "type": ["string", "null"] },
+    "gate_results": { "type": "object" },
+    "blockers": { "type": "array", "items": { "type": "string" } },
+    "warnings": { "type": "array", "items": { "type": "string" } },
+    "required_followup_research": { "type": "array", "items": { "type": "string" } },
+    "recommended_archetype": { "type": ["string", "null"] },
+    "expected_test_matrix": { "type": "array", "items": { "type": "string" } },
+    "product_acceptance_risks": { "type": "array", "items": { "type": "string" } },
+    "cluster_count": { "type": "integer" },
+    "decision_rationale": { "type": "array", "items": { "type": "string" } }
+  }
+}

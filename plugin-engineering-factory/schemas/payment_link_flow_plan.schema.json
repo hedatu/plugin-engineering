@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["stage", "status", "candidate_name", "wedge_name", "recommended_checkout_provider", "checkout_url_placeholder", "redaction_checks"],
+  "properties": {
+    "stage": { "type": "string", "enum": ["PAYMENT_LINK_FLOW_PLAN"] },
+    "status": { "type": "string", "enum": ["passed", "failed"] },
+    "candidate_name": { "type": "string" },
+    "wedge_name": { "type": "string" },
+    "recommended_checkout_provider": { "type": "string" },
+    "checkout_url_placeholder": { "type": "string" },
+    "redaction_checks": { "type": "object" }
+  }
+}

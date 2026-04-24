@@ -1,0 +1,219 @@
+{
+    "generated_at":  "2026-04-22T20:06:03.8835207+08:00",
+    "source_server":  {
+                          "alias":  "bwg-166",
+                          "hostname":  "neon-drum-2.localdomain",
+                          "ip_redacted":  "45.62.xxx.xxx"
+                      },
+    "local_backup_path":  "D:/code/ai插件优化工作流/migration/backups/old_server/20260422-195340",
+    "california_backup_path":  "/opt/commercial-extension-factory/backups/old_server/20260422-195340",
+    "copied_to_california":  true,
+    "copied_to_singapore":  false,
+    "artifacts":  [
+                      {
+                          "relative_path":  "local/generated/index.html",
+                          "size_bytes":  8295,
+                          "sha256":  "FCFCA9C5697CA1B6BB4E1DFBDB9016787DB77C9DC54134B2A8F753C44F137F8B"
+                      },
+                      {
+                          "relative_path":  "local/generated/leadfill-one-profile.index.html",
+                          "size_bytes":  11922,
+                          "sha256":  "D37F1474A9D70A61391D20EE3D0C16A8B046C5E6C7825C2C40D787F90F9C78DD"
+                      },
+                      {
+                          "relative_path":  "local/generated/leadfill-one-profile.pricing.html",
+                          "size_bytes":  2919,
+                          "sha256":  "3C0ED5AD21E90407FCB3DAA1068F26CB4A03A8E332B2D5D87637A101567ECC1D"
+                      },
+                      {
+                          "relative_path":  "local/generated/products.json",
+                          "size_bytes":  2843,
+                          "sha256":  "D29F45E408ED9C2F0A0853712EC6A3844DFEC451CDFBDC2D55886BF8E30EFA5A"
+                      },
+                      {
+                          "relative_path":  "local/state/opportunity_backlog.json",
+                          "size_bytes":  356947,
+                          "sha256":  "B786B32DABDEBAF56E7612CB6C809514A46B1512EA777B8E0D3DA38AB07A07F8"
+                      },
+                      {
+                          "relative_path":  "local/state/product_catalog.json",
+                          "size_bytes":  3341,
+                          "sha256":  "10F666ECB810C97A2E243DE6F8663814B773084F5FF00E8116B005A6D3622A13"
+                      },
+                      {
+                          "relative_path":  "local/state/release_ledger.json",
+                          "size_bytes":  116162,
+                          "sha256":  "18F1069FBEDE2EA6C643E66736ABB55A3AC4E800A6AF9577081F2FA88FB3A92A"
+                      },
+                      {
+                          "relative_path":  "remote/config/docker-compose.nginx.bwg.yml",
+                          "size_bytes":  1015,
+                          "sha256":  "8A07D0DA13000DF2CCF5E9E354500FCAD599789C654596357F2E297AD25BA5D5"
+                      },
+                      {
+                          "relative_path":  "remote/config/docker-compose.yml",
+                          "size_bytes":  23387,
+                          "sha256":  "A193AB0979F57A3FE135C9261BF68411E943B871681244E125E03247BAE7460F"
+                      },
+                      {
+                          "relative_path":  "remote/config/old_server_inventory.redacted.json",
+                          "size_bytes":  2598,
+                          "sha256":  "51A1443DF05FC26377C8CFD5EC17BDE1E7415EF9D609C978CA771CCAD9623881"
+                      },
+                      {
+                          "relative_path":  "remote/db/pre_membership_migration_20260422002810.dump",
+                          "size_bytes":  330286,
+                          "sha256":  "244C2DC7764676B25C891A3DC9C677533ABEB7754D9D93A73EFC3C5F20FDA854"
+                      },
+                      {
+                          "relative_path":  "remote/db/pre_waffo_product_id_update_20260422062827.dump",
+                          "size_bytes":  394431,
+                          "sha256":  "FD7BCE1B93638B4D1D7CB31CE040884B3A5B67E34C4DD3F9DFA3168D06942A52"
+                      },
+                      {
+                          "relative_path":  "remote/functions/functions-/create-checkout-session/deno.json",
+                          "size_bytes":  78,
+                          "sha256":  "7B24AC6C69EDF32C105366BAF8FA46D399B094BB84A9A6A06E153949EC4F7905"
+                      },
+                      {
+                          "relative_path":  "remote/functions/functions-/create-checkout-session/index.ts",
+                          "size_bytes":  5037,
+                          "sha256":  "3A84A41C103E02FD51E5711BA1E79EAB134954F1C8F8AC20D67652F7F4385F6F"
+                      },
+                      {
+                          "relative_path":  "remote/functions/volumes-functions/_shared/cors.ts",
+                          "size_bytes":  1279,
+                          "sha256":  "EBFC67F68B8795CD0294BD8DEC87F3DED681FD9B65A957D9135B52928F488414"
+                      },
+                      {
+                          "relative_path":  "remote/functions/volumes-functions/_shared/env.ts",
+                          "size_bytes":  2382,
+                          "sha256":  "EBDAFFD19AC353F0ACCCD1FA4513BE743168D77D8ACEC4963150B219F444AD45"
+                      },
+                      {
+                          "relative_path":  "remote/functions/volumes-functions/_shared/supabase.ts",
+                          "size_bytes":  927,
+                          "sha256":  "EBBAC64278F13A8806EB360F1410E1070CBB69B077830A8217D1CD1500D16724"
+                      },
+                      {
+                          "relative_path":  "remote/functions/volumes-functions/_shared/waffo.ts",
+                          "size_bytes":  8638,
+                          "sha256":  "F5C993B3225B483B7A08A091F5C1FAD0F9A0CBE3547F998D62A3C53080014678"
+                      },
+                      {
+                          "relative_path":  "remote/functions/volumes-functions/_shared/waffo_sdk.ts",
+                          "size_bytes":  2254,
+                          "sha256":  "20E9F769FB901E27214EF3D1BF0D3FDB4D5649AE5FB8EF1E2BBB9DCC08DD604E"
+                      },
+                      {
+                          "relative_path":  "remote/functions/volumes-functions/_shared/waffo_verify.ts",
+                          "size_bytes":  1979,
+                          "sha256":  "BF985F7BC87C182CE4060CAA7D2E86093123C08A841C2DC97F938BDCDEA117B0"
+                      },
+                      {
+                          "relative_path":  "remote/functions/volumes-functions/consume-usage/index.ts",
+                          "size_bytes":  2041,
+                          "sha256":  "7E80A177C05BD1A39543FBCFE1E1E12EC336D69EC95D1E0015FAD37C9830851C"
+                      },
+                      {
+                          "relative_path":  "remote/functions/volumes-functions/create-checkout-session/deno.json",
+                          "size_bytes":  78,
+                          "sha256":  "7B24AC6C69EDF32C105366BAF8FA46D399B094BB84A9A6A06E153949EC4F7905"
+                      },
+                      {
+                          "relative_path":  "remote/functions/volumes-functions/create-checkout-session/index.ts",
+                          "size_bytes":  5033,
+                          "sha256":  "5A78D3C025C64193C9BDD1E68FE144BDDD5118E3E316E9E3D901B23DF7EEF927"
+                      },
+                      {
+                          "relative_path":  "remote/functions/volumes-functions/get-entitlement/index.ts",
+                          "size_bytes":  3800,
+                          "sha256":  "D544A65BF27F7AB0E6AFA14EE2663B0962B6DBB947C4511A5AD8E8A3DCDFE9D5"
+                      },
+                      {
+                          "relative_path":  "remote/functions/volumes-functions/register-installation/index.ts",
+                          "size_bytes":  2764,
+                          "sha256":  "D6F184F45E127EEEC38A886F1A667333B2A4ABA132D44B6A59C1F42CCDF2AA1D"
+                      },
+                      {
+                          "relative_path":  "remote/functions/volumes-functions/waffo-webhook/deno.json",
+                          "size_bytes":  78,
+                          "sha256":  "7B24AC6C69EDF32C105366BAF8FA46D399B094BB84A9A6A06E153949EC4F7905"
+                      },
+                      {
+                          "relative_path":  "remote/functions/volumes-functions/waffo-webhook/index.ts",
+                          "size_bytes":  18117,
+                          "sha256":  "61260720FE5BEE2086351E2B62653CBAA6389A42ABC41DB7161565FFF6869C89"
+                      },
+                      {
+                          "relative_path":  "remote/nginx/hwh.915500.xyz",
+                          "size_bytes":  968,
+                          "sha256":  "6E45AC027D9D046DCC9C55D6A684A348C43F134654ECF7AB4F487B4CF40DF57E"
+                      },
+                      {
+                          "relative_path":  "remote/nginx/hwh-api.915500.xyz",
+                          "size_bytes":  1261,
+                          "sha256":  "3D737FAB344E671A67E14360217F430C40F0287B2064F2D75F50746F75DF0478"
+                      },
+                      {
+                          "relative_path":  "remote/nginx/pay.915500.xyz",
+                          "size_bytes":  980,
+                          "sha256":  "11FEC5328024B880FAED3FC01181E26A3169413FB3C20195C20311835EF5B988"
+                      },
+                      {
+                          "relative_path":  "remote/nginx/pay-api.915500.xyz",
+                          "size_bytes":  1063,
+                          "sha256":  "17201243E692C6431E85C7052EDBC4A4430751D8982198674F944E826C5A2E54"
+                      },
+                      {
+                          "relative_path":  "remote/systemd/leadfill-smtp-bridge.service",
+                          "size_bytes":  257,
+                          "sha256":  "AD0924B030BA62470C7572BF1787E0F431F9914D992B3DD109CADE22AB1324D4"
+                      },
+                      {
+                          "relative_path":  "remote/web/pay.915500.xyz/assets/index-BqdWCD3z.js",
+                          "size_bytes":  492574,
+                          "sha256":  "DCB7BFAA3E84D7B78CA62FF6E33F678A0CDA886927EFD156908B146E95B97529"
+                      },
+                      {
+                          "relative_path":  "remote/web/pay.915500.xyz/assets/index-CQ1-3YmV.css",
+                          "size_bytes":  3589,
+                          "sha256":  "5787945FE0FFC4220C2767C6B3F0A2FC5CEBAEB1771D28C2241F1FC251CF8E2C"
+                      },
+                      {
+                          "relative_path":  "remote/web/pay.915500.xyz/assets/index-CqcG-bUx.js",
+                          "size_bytes":  493575,
+                          "sha256":  "97ED599F2F8952E2065C13FD4A169EED425A3A700E91C5A2C87B5DCF17A90B83"
+                      },
+                      {
+                          "relative_path":  "remote/web/pay.915500.xyz/assets/index-Dc93fj6U.css",
+                          "size_bytes":  2381,
+                          "sha256":  "0DB2086A24F406520954EBBBBC311E8370FD1D6EB93A027A84808E73AFD16AC5"
+                      },
+                      {
+                          "relative_path":  "remote/web/pay.915500.xyz/assets/index-DG3qr00e.js",
+                          "size_bytes":  493755,
+                          "sha256":  "D60DB924F3BDF049B9058356635175A600D47A8080415029F05C85C555A90D61"
+                      },
+                      {
+                          "relative_path":  "remote/web/pay.915500.xyz/assets/index-Q-1W4dfK.js",
+                          "size_bytes":  499157,
+                          "sha256":  "7EC99BEE48C6B8B35D8223BB3193ABCCD604CBEEB3A67E083A4260199AA20917"
+                      },
+                      {
+                          "relative_path":  "remote/web/pay.915500.xyz/assets/index-utqyd3me.js",
+                          "size_bytes":  493717,
+                          "sha256":  "E48791CDEB2B903EC83F9BE9E42C98AA252B9311277B622AE912FB00D0A36E34"
+                      },
+                      {
+                          "relative_path":  "remote/web/pay.915500.xyz/assets/index-XnBmta_q.js",
+                          "size_bytes":  498532,
+                          "sha256":  "43CAD78C06448CB6CFD9B526AA61A356EEE73FA26BB8ABABE22FCCB3FAE92CB5"
+                      },
+                      {
+                          "relative_path":  "remote/web/pay.915500.xyz/index.html",
+                          "size_bytes":  408,
+                          "sha256":  "8111213A03FC6B90675FA1A24008F33CDFC4FE732E9825A81B91449DEC6E1BC8"
+                      }
+                  ]
+}

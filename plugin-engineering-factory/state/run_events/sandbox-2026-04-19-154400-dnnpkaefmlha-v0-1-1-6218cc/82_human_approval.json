@@ -1,0 +1,37 @@
+{
+  "stage": "HUMAN_APPROVAL_GATE",
+  "approval_id": "approval-sandbox_publish-1776591682931-8835c2",
+  "run_id": "sandbox-2026-04-19-154400-dnnpkaefmlha-v0-1-1-6218cc",
+  "requested_action": "sandbox_publish",
+  "action_scope": "sandbox",
+  "item_id": "dnnpkaefmlhacigijccbhemgaenjbcpk",
+  "publisher_id": "7462c8f7-9c1a-48ed-9249-894c0317bd46",
+  "package_sha256": "b86a5114a52056acb11e685f243125f4de34abcd15fb8d37f48c066574719a8d",
+  "manifest_version": "0.1.1",
+  "approval_status": "approved",
+  "approved_by": "TMT2",
+  "approved_at": "2026-04-19T09:41:22.930Z",
+  "approval_source": "local_cli",
+  "approval_notes": "Approve sandbox publish_optional for uploaded package v0.1.1; sandbox only",
+  "expires_at": "2026-04-20T09:41:22.930Z",
+  "approval_mode": "write_allowed",
+  "note_policy_blocked": false,
+  "write_authorized": true,
+  "safety_summary": {
+    "production_write_disabled": true,
+    "sandbox_item_only": true,
+    "requested_action": "sandbox_publish",
+    "approval_mode": "write_allowed"
+  },
+  "blockers": [],
+  "next_step": "sandbox_publish approved for write execution; a separate explicit write command is still required",
+  "redaction_checks": {
+    "sanitized_response_bodies": true,
+    "checked_secret_value_count": 0,
+    "secret_values_present_in_artifact": false,
+    "authorization_header_pattern_present": false,
+    "key_material_pattern_present": false,
+    "secret_marker_pattern_present": false,
+    "redaction_guard_triggered": false
+  }
+}

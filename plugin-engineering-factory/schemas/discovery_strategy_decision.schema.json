@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "reviewed_at",
+    "reviewer",
+    "source_run_id",
+    "decision",
+    "note",
+    "selected_manual_seed_ids",
+    "selected_builder_roadmap_items",
+    "paused_categories",
+    "approved_threshold_changes",
+    "next_step",
+    "redaction_checks"
+  ],
+  "properties": {
+    "decision": {
+      "type": "string",
+      "enum": [
+        "manual_vertical_seed",
+        "continue_strategy_v2",
+        "prioritize_builder",
+        "pause_category",
+        "adjust_thresholds"
+      ]
+    },
+    "selected_manual_seed_ids": { "type": "array", "items": { "type": "string" } },
+    "selected_builder_roadmap_items": { "type": "array", "items": { "type": "string" } },
+    "paused_categories": { "type": "array", "items": { "type": "string" } },
+    "approved_threshold_changes": { "type": "array", "items": { "type": "string" } },
+    "redaction_checks": { "type": "object" }
+  }
+}

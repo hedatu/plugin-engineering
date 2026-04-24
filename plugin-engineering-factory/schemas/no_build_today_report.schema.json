@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "stage",
+    "status",
+    "date",
+    "runs_considered",
+    "candidates_seen",
+    "build_ready_count",
+    "research_more_count",
+    "skipped_count",
+    "backlog_waiting_count",
+    "top_failure_reasons",
+    "what_to_change_next",
+    "recommended_human_action",
+    "next_discovery_plan",
+    "next_step",
+    "redaction_checks"
+  ],
+  "properties": {
+    "stage": { "type": "string", "enum": ["NO_BUILD_TODAY_REPORT"] },
+    "status": { "type": "string", "enum": ["passed", "failed"] },
+    "runs_considered": { "type": "array", "items": { "type": "string" } },
+    "top_failure_reasons": { "type": "array", "items": { "type": "string" } },
+    "next_step": { "type": "string" },
+    "redaction_checks": { "type": "object" }
+  }
+}

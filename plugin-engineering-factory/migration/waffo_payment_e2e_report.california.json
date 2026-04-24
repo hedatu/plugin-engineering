@@ -1,0 +1,22 @@
+{
+  "generated_at": "2026-04-22T21:14:46.1861567+08:00",
+  "server_id": "california",
+  "checkout_session_created": true,
+  "session_id": "cs_23d95ec9-103b-3059-b460-56c970690527",
+  "local_order_id": "ord_1776863029773_c07ef4dc",
+  "waffo_test_payment_completed": false,
+  "webhook_received": false,
+  "webhook_signature_verified": false,
+  "processed_webhook_delta": 0,
+  "webhook_event_delta": 0,
+  "order_status": "not_created",
+  "payment_status": "not_created",
+  "entitlement_status": "free_only_not_paid",
+  "get_entitlement_active": false,
+  "consume_usage_pro_passed": false,
+  "blockers": [
+    "staging_dns_not_configured_for_ca_pay_api",
+    "waffo_webhook_target_not_verified_for_california",
+    "test_payment_completion_skipped_to_avoid_writing_results_into_the_wrong_environment"
+  ]
+}

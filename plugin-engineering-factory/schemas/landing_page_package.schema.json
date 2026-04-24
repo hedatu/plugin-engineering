@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "stage",
+    "status",
+    "run_id",
+    "product_name",
+    "product_slug",
+    "output_dir",
+    "generated_files",
+    "asset_manifest",
+    "hero_asset_status",
+    "pricing_asset_status",
+    "support_email_placeholder",
+    "next_step"
+  ],
+  "properties": {
+    "stage": {
+      "type": "string",
+      "enum": ["LANDING_PAGE_PACKAGE"]
+    },
+    "status": {
+      "type": "string",
+      "enum": ["passed", "skipped", "failed"]
+    },
+    "run_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "product_name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "product_slug": {
+      "type": "string",
+      "minLength": 1
+    },
+    "output_dir": {
+      "type": "string",
+      "minLength": 1
+    },
+    "generated_files": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    },
+    "asset_manifest": {
+      "type": "object"
+    },
+    "hero_asset_status": {
+      "type": "string",
+      "minLength": 1
+    },
+    "pricing_asset_status": {
+      "type": "string",
+      "minLength": 1
+    },
+    "support_email_placeholder": {
+      "type": "string",
+      "minLength": 1
+    },
+    "next_step": {
+      "type": "string",
+      "minLength": 1
+    }
+  }
+}

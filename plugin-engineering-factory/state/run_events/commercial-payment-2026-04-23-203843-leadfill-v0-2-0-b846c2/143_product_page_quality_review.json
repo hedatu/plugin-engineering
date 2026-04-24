@@ -1,0 +1,44 @@
+{
+  "stage": "PRODUCT_PAGE_QUALITY_REVIEW",
+  "status": "passed",
+  "run_id": "commercial-payment-2026-04-23-203843-leadfill-v0-2-0-b846c2",
+  "product_key": "leadfill-one-profile",
+  "reviewed_at": "2026-04-24T04:33:09.863Z",
+  "review_method": "static_generated_page_review",
+  "page": "generated/plugin-pages/leadfill-one-profile/index.html (paired with product.html)",
+  "page_quality_score": 96,
+  "checks": {
+    "hero_names_product": true,
+    "value_prop_above_fold": true,
+    "primary_cta_present": true,
+    "secondary_cta_present": true,
+    "chrome_cta_present": true,
+    "price_visible": true,
+    "free_tier_visible": true,
+    "trust_notes_visible": true,
+    "product_first_positioning_present": true,
+    "core_benefits_present": true,
+    "how_it_works_present": true,
+    "real_screenshot_proof_present": true,
+    "feature_breakdown_present": true,
+    "pricing_section_present": true,
+    "faq_present": true,
+    "footer_legal_demoted": true,
+    "no_legacy_key_copy": true
+  },
+  "blockers": [],
+  "warnings": [
+    "production_payment_not_verified_copy_still_lives_outside_the_homepage_hero"
+  ],
+  "recommended_fixes": [],
+  "next_step": "human_visual_review",
+  "redaction_checks": {
+    "sanitized_response_bodies": true,
+    "checked_secret_value_count": 1,
+    "secret_values_present_in_artifact": false,
+    "authorization_header_pattern_present": false,
+    "key_material_pattern_present": false,
+    "secret_marker_pattern_present": false,
+    "redaction_guard_triggered": false
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "generated_at": "2026-04-23T09:09:06.921Z",
+  "provider": "resend",
+  "environment": "california_staging_ca_hwh",
+  "domain": "notify.915500.xyz",
+  "sender": "no-reply@notify.915500.xyz",
+  "resend_domain_exists": true,
+  "resend_domain_created_this_run": false,
+  "resend_domain_status": "verified",
+  "resend_domain_verified": true,
+  "resend_poll_elapsed_seconds": 129,
+  "cloudflare_zone_name": "915500.xyz",
+  "cloudflare_records_upserted": [
+    {
+      "action": "deleted_duplicate_suffix_record",
+      "name": "send.notify.notify.915500.xyz",
+      "type": "MX"
+    },
+    {
+      "action": "deleted_duplicate_suffix_record",
+      "name": "resend._domainkey.notify.notify.915500.xyz",
+      "type": "TXT"
+    },
+    {
+      "action": "deleted_duplicate_suffix_record",
+      "name": "send.notify.notify.915500.xyz",
+      "type": "TXT"
+    },
+    {
+      "action": "created",
+      "name": "resend._domainkey.notify.915500.xyz",
+      "type": "TXT"
+    },
+    {
+      "action": "created",
+      "name": "send.notify.915500.xyz",
+      "type": "MX"
+    },
+    {
+      "action": "created",
+      "name": "send.notify.915500.xyz",
+      "type": "TXT"
+    }
+  ],
+  "cloudflare_records_upserted_count": 3,
+  "dmarc_present": false,
+  "public_dns_verified_via_resolvers": [
+    "1.1.1.1",
+    "8.8.8.8"
+  ],
+  "public_dns_records_visible": {
+    "send_notify_txt": true,
+    "send_notify_mx": true,
+    "resend_dkim_txt": true,
+    "dmarc_txt": false
+  },
+  "dmarc_suggested_record": {
+    "type": "TXT",
+    "name": "_dmarc.notify.915500.xyz",
+    "value": "v=DMARC1; p=none; rua=mailto:dmarc@notify.915500.xyz"
+  },
+  "smtp_parameters_expected": {
+    "host": "smtp.resend.com",
+    "port": 2587,
+    "user": "resend",
+    "sender": "no-reply@notify.915500.xyz"
+  },
+  "blockers": [],
+  "warnings": [
+    "dmarc_record_not_detected"
+  ],
+  "notes": [
+    "Resend domain verification succeeded for notify.915500.xyz.",
+    "Cloudflare records initially created under notify.notify.915500.xyz were deleted and recreated under notify.915500.xyz.",
+    "DigitalOcean blocked smtp.resend.com ports 465, 587, and 25; California Auth now uses reachable Resend alternate port 2587."
+  ]
+}

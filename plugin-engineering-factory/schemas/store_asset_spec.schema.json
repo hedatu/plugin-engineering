@@ -1,0 +1,80 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "stage",
+    "status",
+    "run_id",
+    "product_name",
+    "store_icon_128x128",
+    "screenshots",
+    "small_promo_440x280",
+    "marquee_1400x560",
+    "youtube_promo_video_url",
+    "landing_page_hero",
+    "pricing_image",
+    "support_page_visuals",
+    "rules",
+    "next_step"
+  ],
+  "properties": {
+    "stage": {
+      "type": "string",
+      "enum": ["STORE_ASSET_SPEC"]
+    },
+    "status": {
+      "type": "string",
+      "enum": ["passed", "skipped", "failed"]
+    },
+    "run_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "product_name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "store_icon_128x128": {
+      "type": "object"
+    },
+    "screenshots": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object"
+      }
+    },
+    "small_promo_440x280": {
+      "type": "object"
+    },
+    "marquee_1400x560": {
+      "type": "object"
+    },
+    "youtube_promo_video_url": {
+      "type": "string"
+    },
+    "landing_page_hero": {
+      "type": "object"
+    },
+    "pricing_image": {
+      "type": "object"
+    },
+    "support_page_visuals": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "rules": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    },
+    "next_step": {
+      "type": "string",
+      "minLength": 1
+    }
+  }
+}

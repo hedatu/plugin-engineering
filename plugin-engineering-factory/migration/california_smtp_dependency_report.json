@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-04-23T17:17:11.3052390+08:00",
+  "smtp_provider": "resend",
+  "smtp_host": "smtp.resend.com",
+  "smtp_port": 2587,
+  "smtp_sender": "no-reply@notify.915500.xyz",
+  "depends_on_old_server_relay": false,
+  "old_server_relay_ip_redacted": "45.62.xxx.xxx",
+  "otp_will_break_if_old_server_expires": false,
+  "production_ready": false,
+  "verified_on_california_staging": true,
+  "verification": {
+    "send_otp_http_status": 200,
+    "email_delivered": true,
+    "verify_otp_http_status": 200,
+    "session_created": true,
+    "get_entitlement_verified": true,
+    "register_installation_verified": true,
+    "consume_usage_free_verified": true,
+    "quota_exceeded_verified": true
+  },
+  "recommended_action": "Keep Resend SMTP on California staging and add DMARC for _dmarc.notify.915500.xyz before or shortly after cutover for deliverability.",
+  "migration_deadline": "SMTP relay dependency has been removed; formal DNS cutover still requires user approval."
+}

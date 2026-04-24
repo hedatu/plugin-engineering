@@ -1,0 +1,224 @@
+{
+  "generated_at": "2026-04-18T10:05:00Z",
+  "evidence_by_candidate": {
+    "cand-tab-001": [
+      {
+        "source_type": "support",
+        "url": "https://fixtures.local/support/window-tabs-exporter/ticket-100",
+        "captured_at": "2026-04-11T09:00:00Z",
+        "issue_type": "missing_feature",
+        "topic": "current-window-only export",
+        "quote": "I only need the current window, not my whole session.",
+        "sentiment": "negative"
+      },
+      {
+        "source_type": "github",
+        "url": "https://fixtures.local/github/window-tabs-exporter/issues/14",
+        "captured_at": "2026-04-09T14:30:00Z",
+        "issue_type": "ux_friction",
+        "topic": "too many columns",
+        "quote": "The CSV is noisy and requires manual cleanup before I can share it.",
+        "sentiment": "negative"
+      },
+      {
+        "source_type": "support",
+        "url": "https://fixtures.local/support/window-tabs-exporter/ticket-121",
+        "captured_at": "2026-04-07T08:15:00Z",
+        "issue_type": "stability",
+        "topic": "download silently fails",
+        "quote": "Nothing happens when I click export after Chrome updates.",
+        "sentiment": "negative"
+      },
+      {
+        "source_type": "store",
+        "url": "https://fixtures.local/chrome-store/window-tabs-exporter/reviews#360",
+        "captured_at": "2026-04-05T08:15:00Z",
+        "issue_type": "missing_feature",
+        "topic": "filename customization",
+        "quote": "Please let me name the file and save only pinned tabs.",
+        "sentiment": "negative"
+      },
+      {
+        "source_type": "support",
+        "url": "https://fixtures.local/support/window-tabs-exporter/ticket-140",
+        "captured_at": "2026-04-03T11:50:00Z",
+        "issue_type": "privacy_concern",
+        "topic": "all-tabs access feels too broad",
+        "quote": "I don't want an exporter that grabs every tab unless I ask.",
+        "sentiment": "negative"
+      }
+    ],
+    "cand-form-001": [
+      {
+        "source_type": "support",
+        "url": "https://fixtures.local/support/lead-form-helper/ticket-200",
+        "captured_at": "2026-04-12T09:00:00Z",
+        "issue_type": "missing_feature",
+        "topic": "save one reusable profile",
+        "quote": "I keep typing the same lead details into every intake form.",
+        "sentiment": "negative"
+      },
+      {
+        "source_type": "github",
+        "url": "https://fixtures.local/github/lead-form-helper/issues/8",
+        "captured_at": "2026-04-10T13:00:00Z",
+        "issue_type": "ux_friction",
+        "topic": "too many templates",
+        "quote": "The app is overkill. I just need one simple profile and one click fill.",
+        "sentiment": "negative"
+      },
+      {
+        "source_type": "support",
+        "url": "https://fixtures.local/support/lead-form-helper/ticket-220",
+        "captured_at": "2026-04-08T13:00:00Z",
+        "issue_type": "stability",
+        "topic": "misses common fields",
+        "quote": "It skips phone and company fields on many sites.",
+        "sentiment": "negative"
+      },
+      {
+        "source_type": "faq",
+        "url": "https://fixtures.local/help/lead-form-helper/forms",
+        "captured_at": "2026-04-07T13:00:00Z",
+        "issue_type": "privacy_concern",
+        "topic": "cloud sync not wanted",
+        "quote": "I don't want my customer notes synced to a server just to fill a form.",
+        "sentiment": "negative"
+      },
+      {
+        "source_type": "store",
+        "url": "https://fixtures.local/chrome-store/lead-form-helper/reviews#295",
+        "captured_at": "2026-04-03T13:00:00Z",
+        "issue_type": "ux_friction",
+        "topic": "manual copy-paste still required",
+        "quote": "It opens a huge dashboard instead of just filling the page I am on.",
+        "sentiment": "negative"
+      }
+    ],
+    "cand-mail-001": [
+      {
+        "source_type": "support",
+        "url": "https://fixtures.local/support/snippet-mail-lite/ticket-301",
+        "captured_at": "2026-04-11T09:00:00Z",
+        "issue_type": "missing_feature",
+        "topic": "quick insert on compose",
+        "quote": "I need two clicks from compose, not a full side panel.",
+        "sentiment": "negative"
+      },
+      {
+        "source_type": "github",
+        "url": "https://fixtures.local/github/snippet-mail-lite/issues/19",
+        "captured_at": "2026-04-06T09:00:00Z",
+        "issue_type": "ux_friction",
+        "topic": "search is slow",
+        "quote": "Too much UI around a task that should just insert a snippet quickly.",
+        "sentiment": "negative"
+      },
+      {
+        "source_type": "support",
+        "url": "https://fixtures.local/support/snippet-mail-lite/ticket-330",
+        "captured_at": "2026-04-02T09:00:00Z",
+        "issue_type": "privacy_concern",
+        "topic": "mail content access",
+        "quote": "The extension asks for more mailbox access than I am comfortable with.",
+        "sentiment": "negative"
+      }
+    ],
+    "cand-dev-001": [
+      {
+        "source_type": "support",
+        "url": "https://fixtures.local/support/api-call-draft-saver/ticket-401",
+        "captured_at": "2026-04-12T09:00:00Z",
+        "issue_type": "ux_friction",
+        "topic": "too many steps",
+        "quote": "Saving one request draft should not require a settings page.",
+        "sentiment": "negative"
+      }
+    ],
+    "cand-doc-001": [
+      {
+        "source_type": "support",
+        "url": "https://fixtures.local/support/document-quick-translate/ticket-501",
+        "captured_at": "2026-04-12T09:00:00Z",
+        "issue_type": "privacy_concern",
+        "topic": "document upload risk",
+        "quote": "I am not comfortable sending docs to a remote server just for translation.",
+        "sentiment": "negative"
+      }
+    ],
+    "cand-tab-002": [
+      {
+        "source_type": "support",
+        "url": "https://fixtures.local/support/session-csv-notes/ticket-601",
+        "captured_at": "2026-04-12T09:00:00Z",
+        "issue_type": "missing_feature",
+        "topic": "window export only",
+        "quote": "I only want the current window and an optional notes column.",
+        "sentiment": "negative"
+      },
+      {
+        "source_type": "faq",
+        "url": "https://fixtures.local/help/session-csv-notes/export",
+        "captured_at": "2026-04-11T09:00:00Z",
+        "issue_type": "stability",
+        "topic": "no success state",
+        "quote": "People think export is broken because there is no confirmation.",
+        "sentiment": "negative"
+      }
+    ],
+    "cand-form-002": [
+      {
+        "source_type": "support",
+        "url": "https://fixtures.local/support/quick-intake-form-paste/ticket-701",
+        "captured_at": "2026-04-12T09:00:00Z",
+        "issue_type": "missing_feature",
+        "topic": "remember single profile locally",
+        "quote": "I want local profile storage without account signup.",
+        "sentiment": "negative"
+      },
+      {
+        "source_type": "support",
+        "url": "https://fixtures.local/support/quick-intake-form-paste/ticket-702",
+        "captured_at": "2026-04-10T09:00:00Z",
+        "issue_type": "ux_friction",
+        "topic": "fill visible fields only",
+        "quote": "It fills hidden CRM inputs and breaks forms.",
+        "sentiment": "negative"
+      }
+    ],
+    "cand-mail-002": [
+      {
+        "source_type": "support",
+        "url": "https://fixtures.local/support/inbox-reply-templates-mini/ticket-801",
+        "captured_at": "2026-04-12T09:00:00Z",
+        "issue_type": "ux_friction",
+        "topic": "keyboard flow",
+        "quote": "I want snippets to feel like keyboard shortcuts, not a dashboard.",
+        "sentiment": "negative"
+      }
+    ],
+    "cand-dev-002": [
+      {
+        "source_type": "support",
+        "url": "https://fixtures.local/support/clipboard-schema-helper/ticket-901",
+        "captured_at": "2026-04-12T09:00:00Z",
+        "issue_type": "missing_feature",
+        "topic": "one-click copy schema",
+        "quote": "I want one click, not a multi-step rules engine.",
+        "sentiment": "negative"
+      }
+    ],
+    "cand-prod-001": [
+      {
+        "source_type": "support",
+        "url": "https://fixtures.local/support/meeting-notes-export-pad/ticket-1001",
+        "captured_at": "2026-04-12T09:00:00Z",
+        "issue_type": "ux_friction",
+        "topic": "export format clutter",
+        "quote": "The output includes too much extra metadata.",
+        "sentiment": "negative"
+      }
+    ]
+  }
+}
+

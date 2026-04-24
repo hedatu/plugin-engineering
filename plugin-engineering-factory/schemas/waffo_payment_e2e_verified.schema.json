@@ -1,0 +1,40 @@
+{
+  "type": "object",
+  "required": [
+    "generated_at",
+    "environment",
+    "checkout_session_created",
+    "paid_order_webhook_received",
+    "webhook_signature_verified",
+    "localOrderId_matched",
+    "orders_written",
+    "payments_written",
+    "entitlement_active_from_webhook",
+    "get_entitlement_active",
+    "consume_usage_pro_passed",
+    "source",
+    "remaining_followup"
+  ],
+  "properties": {
+    "generated_at": { "type": "string", "minLength": 1 },
+    "environment": { "type": "string", "minLength": 1 },
+    "checkout_session_created": { "type": "boolean" },
+    "paid_order_webhook_received": { "type": "boolean" },
+    "webhook_signature_verified": { "type": "boolean" },
+    "localOrderId_matched": { "type": "boolean" },
+    "orders_written": { "type": "boolean" },
+    "payments_written": { "type": "boolean" },
+    "entitlement_active_from_webhook": { "type": "boolean" },
+    "get_entitlement_active": { "type": "boolean" },
+    "consume_usage_pro_passed": { "type": "boolean" },
+    "source": { "type": "string", "minLength": 1 },
+    "remaining_followup": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "notes": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 }
+    }
+  }
+}

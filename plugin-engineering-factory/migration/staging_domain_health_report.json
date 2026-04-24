@@ -1,0 +1,13 @@
+﻿{
+    "generated_at":  "2026-04-23T09:01:00.4145167+08:00",
+    "ca_hwh_dns_ok":  true,
+    "ca_hwh_api_dns_ok":  true,
+    "ca_hwh_https_ok":  true,
+    "ca_hwh_api_https_ok":  true,
+    "frontend_health":  "200 OK from https://ca-hwh.915500.xyz",
+    "api_health":  "401 Unauthorized from /auth/v1/settings without apikey, gateway reachable",
+    "webhook_endpoint_reachable":  true,
+    "blockers":  [
+
+                 ]
+}

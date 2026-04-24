@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LeadFill One Profile Pricing</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="site-shell">
+    <header class="topbar">
+      <a class="brand" href="index.html">LeadFill One</a>
+      <nav class="topnav">
+        <a href="../index.html">All Products</a>
+        <a href="index.html">Detail Page</a>
+      </nav>
+    </header>
+    <section class="hero compact-hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Pricing</p>
+        <h1>$19 lifetime</h1>
+        <p class="lede">Single-product commercial access for one focused local workflow.</p>
+        <div class="badge-row">
+          <span class="pill">10 free fills</span>
+          <span class="pill">Single plugin lifetime</span>
+          <span class="pill">product_key_pending</span>
+        </div>
+      </div>
+      <div class="hero-media">
+        <img src="assets/landing/pricing_1600x900.png" alt="LeadFill One Profile pricing image">
+      </div>
+    </section>
+
+    <section class="section pricing-section">
+      <div class="plan-grid">
+        <article class="plan-card">
+          <p class="plan-label">Free</p>
+          <h2>10 free fills</h2>
+          <ul><li>1 local profile</li><li>Local-only storage</li><li>Visible-field fill from the popup</li><li>No cloud sync</li></ul>
+        </article>
+        <article class="plan-card plan-card-pro">
+          <p class="plan-label">Pro Lifetime</p>
+          <h2>$19 lifetime</h2>
+          <ul><li>Unlimited fills</li><li>Save, edit, and delete the profile</li><li>Advanced field support</li><li>Lifetime access to the current major version</li></ul>
+          <a class="button disabled" href="#checkout-pending" aria-disabled="true">Buy Lifetime</a>
+          <p class="plan-footnote">Buy is disabled until HWH product key, lifetime plan, SMTP, checkout, and webhook verification are ready.</p>
+        </article>
+        <article class="plan-card future-card">
+          <p class="plan-label">Future</p>
+          <h2>Universal Pass</h2>
+          <p>Supported by the catalog model, but not enabled for LeadFill yet.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section split">
+      <div class="card prose-block">
+        <h3>Checkout behavior</h3>
+        <p>External payment only. The extension must never process cards or hold private payment secrets.</p>
+        <p>Membership unlocks only after HWH or Waffo webhook processing updates the entitlement record.</p>
+      </div>
+      <div class="card prose-block">
+        <h3>Current readiness</h3>
+        <p>Checkout mode: disabled</p>
+        <p>Payment config status: product_key_pending</p>
+        <p>Legacy test-only product key stays out of production: not in use</p>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

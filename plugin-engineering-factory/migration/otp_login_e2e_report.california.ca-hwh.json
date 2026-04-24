@@ -1,0 +1,20 @@
+﻿{
+    "generated_at":  "2026-04-23T09:01:00.4145167+08:00",
+    "send_otp_http_status":  200,
+    "email_delivered":  true,
+    "magic_link_hosts":  [
+                             "ca-hwh.915500.xyz",
+                             "ca-hwh-api.915500.xyz"
+                         ],
+    "redirect_to_weiwang":  false,
+    "verify_otp_passed":  true,
+    "session_created":  true,
+    "user_id_present":  true,
+    "get_entitlement_passed":  true,
+    "register_installation_passed":  true,
+    "consume_usage_free_passed":  true,
+    "quota_exceeded_status":  true,
+    "blockers":  [
+
+                 ]
+}

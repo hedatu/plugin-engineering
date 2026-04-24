@@ -1,0 +1,40 @@
+{
+  "stage": "SANDBOX_PREFLIGHT",
+  "status": "failed",
+  "run_id": "sandbox-2026-04-19-154400-dnnpkaefmlha-v0-1-1-6218cc",
+  "run_type": "sandbox_validation",
+  "source_run_id": "sandbox-2026-04-19-145131-dnnpkaefmlha-1acd61",
+  "item_id": "dnnpkaefmlhacigijccbhemgaenjbcpk",
+  "publisher_id": "7462c8f7-9c1a-48ed-9249-894c0317bd46",
+  "package_sha256": "b86a5114a52056acb11e685f243125f4de34abcd15fb8d37f48c066574719a8d",
+  "manifest_version": "0.1.1",
+  "current_sandbox_item_version": "0.1.0",
+  "version_uploadable": true,
+  "immutable_run_verified": true,
+  "promotion_plan_verified": false,
+  "listing_package_verified": true,
+  "browser_smoke_verified": true,
+  "screenshot_manifest_verified": true,
+  "policy_gate_verified": true,
+  "write_approval_present": false,
+  "write_approval_valid": false,
+  "latest_approval_package_sha256": null,
+  "current_package_sha256": "b86a5114a52056acb11e685f243125f4de34abcd15fb8d37f48c066574719a8d",
+  "approval_matches_current_package": false,
+  "latest_upload_blocker": "write_approval_required",
+  "upload_allowed": false,
+  "publish_allowed": false,
+  "next_step": "write_approval_required_before_sandbox_upload",
+  "blockers": [
+    "promotion_plan_missing_or_not_in_ledger"
+  ],
+  "redaction_checks": {
+    "sanitized_response_bodies": true,
+    "checked_secret_value_count": 0,
+    "secret_values_present_in_artifact": false,
+    "authorization_header_pattern_present": false,
+    "key_material_pattern_present": false,
+    "secret_marker_pattern_present": false,
+    "redaction_guard_triggered": false
+  }
+}

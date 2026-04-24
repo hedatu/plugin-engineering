@@ -1,0 +1,119 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "stage",
+    "status",
+    "generated_at",
+    "watches"
+  ],
+  "properties": {
+    "stage": {
+      "type": "string",
+      "enum": ["ACTIVE_REVIEW_WATCH_REGISTRY"]
+    },
+    "status": {
+      "type": "string"
+    },
+    "generated_at": {
+      "type": "string"
+    },
+    "watches": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "watch_id",
+          "run_id",
+          "item_id",
+          "publisher_id",
+          "manifest_version",
+          "uploaded_crx_version",
+          "submitted_at",
+          "latest_review_state",
+          "latest_checked_at",
+          "check_count",
+          "consecutive_failures",
+          "status_source",
+          "next_check_after",
+          "enabled",
+          "terminal",
+          "terminal_reason",
+          "next_step",
+          "pending_duration_hours",
+          "pending_duration_days",
+          "review_age_bucket",
+          "escalation_recommended"
+        ],
+        "properties": {
+          "watch_id": {
+            "type": "string"
+          },
+          "run_id": {
+            "type": "string"
+          },
+          "item_id": {
+            "type": ["string", "null"]
+          },
+          "publisher_id": {
+            "type": ["string", "null"]
+          },
+          "manifest_version": {
+            "type": ["string", "null"]
+          },
+          "uploaded_crx_version": {
+            "type": ["string", "null"]
+          },
+          "submitted_at": {
+            "type": ["string", "null"]
+          },
+          "latest_review_state": {
+            "type": ["string", "null"]
+          },
+          "latest_checked_at": {
+            "type": ["string", "null"]
+          },
+          "check_count": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "consecutive_failures": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "status_source": {
+            "type": ["string", "null"]
+          },
+          "next_check_after": {
+            "type": ["string", "null"]
+          },
+          "enabled": {
+            "type": "boolean"
+          },
+          "terminal": {
+            "type": "boolean"
+          },
+          "terminal_reason": {
+            "type": ["string", "null"]
+          },
+          "next_step": {
+            "type": "string"
+          },
+          "pending_duration_hours": {
+            "type": ["number", "null"]
+          },
+          "pending_duration_days": {
+            "type": ["number", "null"]
+          },
+          "review_age_bucket": {
+            "type": ["string", "null"],
+            "enum": [null, "lt_24h", "day_1_to_3", "day_4_to_14", "day_15_to_21", "over_21_days"]
+          },
+          "escalation_recommended": {
+            "type": "boolean"
+          }
+        }
+      }
+    }
+  }
+}

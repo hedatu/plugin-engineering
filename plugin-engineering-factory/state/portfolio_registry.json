@@ -1,0 +1,1102 @@
+{
+  "stage": "PORTFOLIO_REGISTRY",
+  "status": "passed",
+  "generated_at": "2026-04-23T12:38:48.936Z",
+  "last_updated_run_id": "commercial-payment-2026-04-23-203843-leadfill-v0-2-0-b846c2",
+  "active_wedge_families": [
+    "tab_csv_window_export",
+    "single_profile_form_fill"
+  ],
+  "blocked_candidate_ids": [],
+  "items": [
+    {
+      "item_id": "draft:2026-04-18-daily-tab-001",
+      "run_id": "2026-04-18-daily-tab-001",
+      "created_at": "2026-04-19T05:34:42.644Z",
+      "archetype": "tab_csv_window_export",
+      "wedge": "QuickTab CSV",
+      "target_user": "Operators, recruiters, researchers, and coordinators who frequently share current-window tab sets.",
+      "permissions": [
+        "tabs",
+        "downloads"
+      ],
+      "host_permissions": [],
+      "publish_intent": "draft_only",
+      "publish_state": "draft_only",
+      "latest_review_state": null,
+      "latest_health_status": "monitoring_disabled",
+      "known_issues": [
+        "Replace draft promo tiles with final store-ready creative before public release.",
+        "Public release disabled by task configuration.",
+        "enable monitoring inputs before post-release health tracking"
+      ],
+      "overlap_tags": [
+        "tabs",
+        "csv",
+        "window",
+        "export",
+        "tab_csv_window_export"
+      ],
+      "family": "tab_csv_window_export",
+      "screenshots_manifest_hash": "9acc249d5e9d7c4625f9f90bb9d0170d2a063390a342e2d687bcfe472694c629",
+      "package_sha256": "8f2d486a15dc10d94476d75dcb287021614da5d10c0c82d9adb346cb9ba24b6e",
+      "manifest_version": null,
+      "learning_updates": {
+        "stage": "MONITOR_POST_RELEASE",
+        "status": "skipped",
+        "run_id": "2026-04-18-daily-tab-001",
+        "item_id": null,
+        "release_health_summary": "monitoring_disabled",
+        "blacklist_updates": [],
+        "overlap_updates": [],
+        "archetype_priors": {},
+        "scoring_weight_suggestions": [],
+        "reviewer_notes": [
+          "enable monitoring inputs before post-release health tracking"
+        ],
+        "should_pause_similar_builds": false,
+        "should_prioritize_followup": false,
+        "generated_at": "2026-04-19T05:39:10.326Z",
+        "publisher_id": null,
+        "portfolio_registry_path": "D:\\code\\ai插件优化工作流\\state\\portfolio_registry.json",
+        "failure_reason": null
+      }
+    },
+    {
+      "item_id": "draft:2026-04-18-daily-001",
+      "run_id": "2026-04-18-daily-001",
+      "created_at": "2026-04-19T05:34:53.496Z",
+      "archetype": "single_profile_form_fill",
+      "wedge": "LeadFill One Profile",
+      "target_user": "Sales reps, recruiters, and operators repeatedly entering the same contact details into web forms.",
+      "permissions": [
+        "storage",
+        "activeTab",
+        "scripting"
+      ],
+      "host_permissions": [],
+      "publish_intent": "draft_only",
+      "publish_state": "draft_only",
+      "latest_review_state": null,
+      "latest_health_status": "monitoring_disabled",
+      "known_issues": [
+        "Replace draft promo tiles with final store-ready creative before public release.",
+        "Public release disabled by task configuration.",
+        "enable monitoring inputs before post-release health tracking"
+      ],
+      "overlap_tags": [
+        "forms",
+        "crm",
+        "lead",
+        "fill",
+        "single_profile_form_fill"
+      ],
+      "family": "single_profile_form_fill",
+      "screenshots_manifest_hash": "b51ecb5e102fa09a26191503b93460d756b52c9741a69fc9ebc3092400f529ee",
+      "package_sha256": "3d85116a3ab8c55b12281fcd3dc067a09ec6bc713ffeba5cfa7c56b9e48a3d0a",
+      "manifest_version": null,
+      "learning_updates": {
+        "stage": "MONITOR_POST_RELEASE",
+        "status": "skipped",
+        "run_id": "2026-04-18-daily-001",
+        "item_id": null,
+        "release_health_summary": "monitoring_disabled",
+        "blacklist_updates": [],
+        "overlap_updates": [],
+        "archetype_priors": {},
+        "scoring_weight_suggestions": [],
+        "reviewer_notes": [
+          "enable monitoring inputs before post-release health tracking"
+        ],
+        "should_pause_similar_builds": false,
+        "should_prioritize_followup": false,
+        "generated_at": "2026-04-19T05:40:02.405Z",
+        "publisher_id": null,
+        "portfolio_registry_path": "D:\\code\\ai插件优化工作流\\state\\portfolio_registry.json",
+        "failure_reason": null
+      }
+    },
+    {
+      "registry_entry_id": "registry-915991da0727",
+      "item_id": "draft:2026-04-19-141004-2026-04-18-daily-tab-001-c8bbef",
+      "run_id": "2026-04-19-141004-2026-04-18-daily-tab-001-c8bbef",
+      "created_at": "2026-04-19T06:10:06.624Z",
+      "archetype": "tab_csv_window_export",
+      "wedge": "QuickTab CSV",
+      "target_user": "Operators, recruiters, researchers, and coordinators who frequently share current-window tab sets.",
+      "permissions": [
+        "tabs",
+        "downloads"
+      ],
+      "host_permissions": [],
+      "publish_intent": "draft_only",
+      "publish_state": "draft_only",
+      "latest_review_state": null,
+      "latest_health_status": "monitoring_disabled",
+      "known_issues": [
+        "Replace draft promo tiles with final store-ready creative before public release.",
+        "Public release disabled by task configuration.",
+        "enable monitoring inputs before post-release health tracking"
+      ],
+      "overlap_tags": [
+        "tabs",
+        "csv",
+        "window",
+        "export",
+        "tab_csv_window_export"
+      ],
+      "family": "tab_csv_window_export",
+      "screenshots_manifest_hash": "5d67e5062597f34d5ac9860565c586f9fe4597a4f5e1f0eb5a67a688846b9428",
+      "package_sha256": "94117362abe08636c6a708b17b2284939088d904a9af24b972ba3f5a5c5520e4",
+      "manifest_version": null,
+      "ledger_entry_ids": [],
+      "learning_updates": {
+        "stage": "MONITOR_POST_RELEASE",
+        "status": "skipped",
+        "run_id": "2026-04-19-141004-2026-04-18-daily-tab-001-c8bbef",
+        "item_id": null,
+        "release_health_summary": "monitoring_disabled",
+        "blacklist_updates": [],
+        "overlap_updates": [],
+        "archetype_priors": {},
+        "scoring_weight_suggestions": [],
+        "reviewer_notes": [
+          "enable monitoring inputs before post-release health tracking"
+        ],
+        "should_pause_similar_builds": false,
+        "should_prioritize_followup": false,
+        "generated_at": "2026-04-19T06:10:06.619Z",
+        "publisher_id": null,
+        "portfolio_registry_path": "D:\\code\\ai插件优化工作流\\state\\portfolio_registry.json",
+        "failure_reason": null
+      }
+    },
+    {
+      "registry_entry_id": "registry-efc4e189f568",
+      "item_id": "draft:2026-04-19-141004-2026-04-18-daily-001-96748b",
+      "run_id": "2026-04-19-141004-2026-04-18-daily-001-96748b",
+      "created_at": "2026-04-19T06:10:06.931Z",
+      "archetype": "single_profile_form_fill",
+      "wedge": "LeadFill One Profile",
+      "target_user": "Sales reps, recruiters, and operators repeatedly entering the same contact details into web forms.",
+      "permissions": [
+        "storage",
+        "activeTab",
+        "scripting"
+      ],
+      "host_permissions": [],
+      "publish_intent": "draft_only",
+      "publish_state": "draft_only",
+      "latest_review_state": null,
+      "latest_health_status": "monitoring_disabled",
+      "known_issues": [
+        "Replace draft promo tiles with final store-ready creative before public release.",
+        "Public release disabled by task configuration.",
+        "enable monitoring inputs before post-release health tracking"
+      ],
+      "overlap_tags": [
+        "forms",
+        "crm",
+        "lead",
+        "fill",
+        "single_profile_form_fill"
+      ],
+      "family": "single_profile_form_fill",
+      "screenshots_manifest_hash": "f1d3685c3da0ad85c58ec37c3d1c470513b3637fdd8f347aa228510db2cd6a82",
+      "package_sha256": "0f6cb992438ab43cf18f645b70e0c23189a37b3f855d600664e3627397fc7246",
+      "manifest_version": null,
+      "ledger_entry_ids": [],
+      "learning_updates": {
+        "stage": "MONITOR_POST_RELEASE",
+        "status": "skipped",
+        "run_id": "2026-04-19-141004-2026-04-18-daily-001-96748b",
+        "item_id": null,
+        "release_health_summary": "monitoring_disabled",
+        "blacklist_updates": [],
+        "overlap_updates": [],
+        "archetype_priors": {},
+        "scoring_weight_suggestions": [],
+        "reviewer_notes": [
+          "enable monitoring inputs before post-release health tracking"
+        ],
+        "should_pause_similar_builds": false,
+        "should_prioritize_followup": false,
+        "generated_at": "2026-04-19T06:10:06.927Z",
+        "publisher_id": null,
+        "portfolio_registry_path": "D:\\code\\ai插件优化工作流\\state\\portfolio_registry.json",
+        "failure_reason": null
+      }
+    },
+    {
+      "registry_entry_id": "registry-2ce599ed9cba",
+      "item_id": "draft:2026-04-19-141030-dailytask-tab-export-da41b6",
+      "run_id": "2026-04-19-141030-dailytask-tab-export-da41b6",
+      "created_at": "2026-04-19T06:10:33.058Z",
+      "archetype": "tab_csv_window_export",
+      "wedge": "QuickTab CSV",
+      "target_user": "Operators, recruiters, researchers, and coordinators who frequently share current-window tab sets.",
+      "permissions": [
+        "tabs",
+        "downloads"
+      ],
+      "host_permissions": [],
+      "publish_intent": "draft_only",
+      "publish_state": "draft_only",
+      "latest_review_state": null,
+      "latest_health_status": "monitoring_disabled",
+      "known_issues": [
+        "Replace draft promo tiles with final store-ready creative before public release.",
+        "Public release disabled by task configuration.",
+        "enable monitoring inputs before post-release health tracking"
+      ],
+      "overlap_tags": [
+        "tabs",
+        "csv",
+        "window",
+        "export",
+        "tab_csv_window_export"
+      ],
+      "family": "tab_csv_window_export",
+      "screenshots_manifest_hash": "84f76241799e71504fd4aa1f892a35b1b671d041d6f7a55ef9ca50a6cfbb685a",
+      "package_sha256": "0faf792bf5a3d4de4933b1c8e96a39070d9e11e2aac953af062aa18ee8ad680a",
+      "manifest_version": null,
+      "ledger_entry_ids": [],
+      "learning_updates": {
+        "stage": "MONITOR_POST_RELEASE",
+        "status": "skipped",
+        "run_id": "2026-04-19-141030-dailytask-tab-export-da41b6",
+        "item_id": null,
+        "release_health_summary": "monitoring_disabled",
+        "blacklist_updates": [],
+        "overlap_updates": [],
+        "archetype_priors": {},
+        "scoring_weight_suggestions": [],
+        "reviewer_notes": [
+          "enable monitoring inputs before post-release health tracking"
+        ],
+        "should_pause_similar_builds": false,
+        "should_prioritize_followup": false,
+        "generated_at": "2026-04-19T06:10:33.055Z",
+        "publisher_id": null,
+        "portfolio_registry_path": "D:\\code\\ai插件优化工作流\\state\\portfolio_registry.json",
+        "failure_reason": null
+      }
+    },
+    {
+      "registry_entry_id": "registry-ba43eeb48d50",
+      "item_id": "draft:2026-04-19-141030-daily-58bdb5",
+      "run_id": "2026-04-19-141030-daily-58bdb5",
+      "created_at": "2026-04-19T06:10:33.329Z",
+      "archetype": "single_profile_form_fill",
+      "wedge": "LeadFill One Profile",
+      "target_user": "Sales reps, recruiters, and operators repeatedly entering the same contact details into web forms.",
+      "permissions": [
+        "storage",
+        "activeTab",
+        "scripting"
+      ],
+      "host_permissions": [],
+      "publish_intent": "draft_only",
+      "publish_state": "draft_only",
+      "latest_review_state": null,
+      "latest_health_status": "monitoring_disabled",
+      "known_issues": [
+        "Replace draft promo tiles with final store-ready creative before public release.",
+        "Public release disabled by task configuration.",
+        "enable monitoring inputs before post-release health tracking"
+      ],
+      "overlap_tags": [
+        "forms",
+        "crm",
+        "lead",
+        "fill",
+        "single_profile_form_fill"
+      ],
+      "family": "single_profile_form_fill",
+      "screenshots_manifest_hash": "5d35b798bae8bf3faa114dc6200a37a1344610e70248b2e50f0553f468f84284",
+      "package_sha256": "32d763542440e86d8acf01e5563b543678e742195eaced9d39edb972eb9245e1",
+      "manifest_version": null,
+      "ledger_entry_ids": [],
+      "learning_updates": {
+        "stage": "MONITOR_POST_RELEASE",
+        "status": "skipped",
+        "run_id": "2026-04-19-141030-daily-58bdb5",
+        "item_id": null,
+        "release_health_summary": "monitoring_disabled",
+        "blacklist_updates": [],
+        "overlap_updates": [],
+        "archetype_priors": {},
+        "scoring_weight_suggestions": [],
+        "reviewer_notes": [
+          "enable monitoring inputs before post-release health tracking"
+        ],
+        "should_pause_similar_builds": false,
+        "should_prioritize_followup": false,
+        "generated_at": "2026-04-19T06:10:33.325Z",
+        "publisher_id": null,
+        "portfolio_registry_path": "D:\\code\\ai插件优化工作流\\state\\portfolio_registry.json",
+        "failure_reason": null
+      }
+    },
+    {
+      "registry_entry_id": "registry-c7663da4c691",
+      "item_id": "draft:2026-04-19-141030-daily-58bdb5-repair-141207-edc3a9",
+      "run_id": "2026-04-19-141030-daily-58bdb5-repair-141207-edc3a9",
+      "created_at": "2026-04-19T06:12:07.963Z",
+      "archetype": "single_profile_form_fill",
+      "wedge": "LeadFill One Profile",
+      "target_user": "Sales reps, recruiters, and operators repeatedly entering the same contact details into web forms.",
+      "permissions": [
+        "storage",
+        "activeTab",
+        "scripting"
+      ],
+      "host_permissions": [],
+      "publish_intent": "draft_only",
+      "publish_state": "draft_only",
+      "latest_review_state": null,
+      "latest_health_status": "monitoring_disabled",
+      "known_issues": [
+        "Replace draft promo tiles with final store-ready creative before public release.",
+        "Public release disabled by task configuration.",
+        "enable monitoring inputs before post-release health tracking"
+      ],
+      "overlap_tags": [
+        "forms",
+        "crm",
+        "lead",
+        "fill",
+        "single_profile_form_fill"
+      ],
+      "family": "single_profile_form_fill",
+      "screenshots_manifest_hash": "5d35b798bae8bf3faa114dc6200a37a1344610e70248b2e50f0553f468f84284",
+      "package_sha256": "32d763542440e86d8acf01e5563b543678e742195eaced9d39edb972eb9245e1",
+      "manifest_version": null,
+      "ledger_entry_ids": [],
+      "learning_updates": {
+        "stage": "MONITOR_POST_RELEASE",
+        "status": "skipped",
+        "run_id": "2026-04-19-141030-daily-58bdb5",
+        "item_id": null,
+        "release_health_summary": "monitoring_disabled",
+        "blacklist_updates": [],
+        "overlap_updates": [],
+        "archetype_priors": {},
+        "scoring_weight_suggestions": [],
+        "reviewer_notes": [
+          "enable monitoring inputs before post-release health tracking"
+        ],
+        "should_pause_similar_builds": false,
+        "should_prioritize_followup": false,
+        "generated_at": "2026-04-19T06:10:33.325Z",
+        "publisher_id": null,
+        "portfolio_registry_path": "D:\\code\\ai插件优化工作流\\state\\portfolio_registry.json",
+        "failure_reason": null
+      }
+    },
+    {
+      "registry_entry_id": "registry-270c618c92af",
+      "item_id": "draft:2026-04-19-145118-dailytask-tab-export-a16f30",
+      "run_id": "2026-04-19-145118-dailytask-tab-export-a16f30",
+      "source_run_id": null,
+      "run_type": "daily",
+      "created_at": "2026-04-19T06:51:20.968Z",
+      "archetype": "tab_csv_window_export",
+      "wedge": "QuickTab CSV",
+      "target_user": "Operators, recruiters, researchers, and coordinators who frequently share current-window tab sets.",
+      "permissions": [
+        "tabs",
+        "downloads"
+      ],
+      "host_permissions": [],
+      "publish_intent": "draft_only",
+      "publish_state": "draft_only",
+      "latest_review_state": null,
+      "latest_health_status": "monitoring_disabled",
+      "known_issues": [
+        "Replace draft promo tiles with final store-ready creative before public release.",
+        "Public release disabled by task configuration.",
+        "enable monitoring inputs before post-release health tracking"
+      ],
+      "overlap_tags": [
+        "tabs",
+        "csv",
+        "window",
+        "export",
+        "tab_csv_window_export"
+      ],
+      "family": "tab_csv_window_export",
+      "screenshots_manifest_hash": "89713b4414d0b94f8be4d15a1ff742b50fb7adb7a5d01e40b4d5c2d062698279",
+      "package_sha256": "9bdf7cfe3487b8c5d0ce3af84f6a4dbcec0382b214e481f54606850a5f906b0d",
+      "manifest_version": null,
+      "ledger_entry_ids": [],
+      "learning_updates": {
+        "stage": "MONITOR_POST_RELEASE",
+        "status": "skipped",
+        "run_id": "2026-04-19-145118-dailytask-tab-export-a16f30",
+        "item_id": null,
+        "release_health_summary": "monitoring_disabled",
+        "blacklist_updates": [],
+        "overlap_updates": [],
+        "archetype_priors": {},
+        "scoring_weight_suggestions": [],
+        "reviewer_notes": [
+          "enable monitoring inputs before post-release health tracking"
+        ],
+        "should_pause_similar_builds": false,
+        "should_prioritize_followup": false,
+        "generated_at": "2026-04-19T06:51:20.962Z",
+        "publisher_id": null,
+        "portfolio_registry_path": "D:\\code\\ai插件优化工作流\\state\\portfolio_registry.json",
+        "failure_reason": null
+      }
+    },
+    {
+      "registry_entry_id": "registry-e8ff64083a72",
+      "item_id": "draft:2026-04-19-145118-daily-4df0e2",
+      "run_id": "2026-04-19-145118-daily-4df0e2",
+      "source_run_id": null,
+      "run_type": "daily",
+      "created_at": "2026-04-19T06:51:21.608Z",
+      "archetype": "single_profile_form_fill",
+      "wedge": "LeadFill One Profile",
+      "target_user": "Sales reps, recruiters, and operators repeatedly entering the same contact details into web forms.",
+      "permissions": [
+        "storage",
+        "activeTab",
+        "scripting"
+      ],
+      "host_permissions": [],
+      "publish_intent": "draft_only",
+      "publish_state": "draft_only",
+      "latest_review_state": null,
+      "latest_health_status": "monitoring_disabled",
+      "known_issues": [
+        "Replace draft promo tiles with final store-ready creative before public release.",
+        "Public release disabled by task configuration.",
+        "enable monitoring inputs before post-release health tracking"
+      ],
+      "overlap_tags": [
+        "forms",
+        "crm",
+        "lead",
+        "fill",
+        "single_profile_form_fill"
+      ],
+      "family": "single_profile_form_fill",
+      "screenshots_manifest_hash": "745f435eaa9293abff05279d0d90a0cb6b5b2c067ef7da195bcf7a4de2f6f5e9",
+      "package_sha256": "448daa21629907ff19335455fe90b63c140496fa478bad96986e38b2d85bdc6b",
+      "manifest_version": null,
+      "ledger_entry_ids": [],
+      "learning_updates": {
+        "stage": "MONITOR_POST_RELEASE",
+        "status": "skipped",
+        "run_id": "2026-04-19-145118-daily-4df0e2",
+        "item_id": null,
+        "release_health_summary": "monitoring_disabled",
+        "blacklist_updates": [],
+        "overlap_updates": [],
+        "archetype_priors": {},
+        "scoring_weight_suggestions": [],
+        "reviewer_notes": [
+          "enable monitoring inputs before post-release health tracking"
+        ],
+        "should_pause_similar_builds": false,
+        "should_prioritize_followup": false,
+        "generated_at": "2026-04-19T06:51:21.605Z",
+        "publisher_id": null,
+        "portfolio_registry_path": "D:\\code\\ai插件优化工作流\\state\\portfolio_registry.json",
+        "failure_reason": null
+      }
+    },
+    {
+      "registry_entry_id": "registry-077722b30223",
+      "item_id": "dnnpkaefmlhacigijccbhemgaenjbcpk",
+      "run_id": "sandbox-2026-04-19-154400-dnnpkaefmlha-v0-1-1-6218cc",
+      "source_run_id": "sandbox-2026-04-19-145131-dnnpkaefmlha-1acd61",
+      "run_type": "sandbox_validation",
+      "created_at": "2026-04-19T06:51:31.781Z",
+      "archetype": "single_profile_form_fill",
+      "wedge": "LeadFill One Profile",
+      "target_user": "Sales reps, recruiters, and operators repeatedly entering the same contact details into web forms.",
+      "permissions": [
+        "storage",
+        "activeTab",
+        "scripting"
+      ],
+      "host_permissions": [],
+      "publish_intent": "draft_only",
+      "publish_state": "draft_only",
+      "latest_review_state": null,
+      "latest_health_status": "unobserved",
+      "known_issues": [
+        "Replace draft promo tiles with final store-ready creative before public release.",
+        "Public release disabled by task configuration.",
+        "support select field matching and filling",
+        "handle readonly fields safely",
+        "handle partially filled forms with explicit overwrite policy",
+        "handle no matching fields with clear user feedback",
+        "add profile save/edit/delete behavior or explicitly scope MVP to save-only",
+        "improve popup status messaging",
+        "document local-only storage behavior"
+      ],
+      "overlap_tags": [
+        "forms",
+        "crm",
+        "lead",
+        "fill",
+        "single_profile_form_fill"
+      ],
+      "family": "single_profile_form_fill",
+      "screenshots_manifest_hash": "745f435eaa9293abff05279d0d90a0cb6b5b2c067ef7da195bcf7a4de2f6f5e9",
+      "package_sha256": "b86a5114a52056acb11e685f243125f4de34abcd15fb8d37f48c066574719a8d",
+      "manifest_version": "0.1.1",
+      "ledger_entry_ids": [
+        "ledger-sandbox_prepare_upload_revision-1776584640831-4b64a0"
+      ],
+      "learning_updates": {
+        "release_health_summary": "not_collected",
+        "blacklist_updates": [],
+        "overlap_updates": [],
+        "archetype_priors": {},
+        "scoring_weight_suggestions": [],
+        "reviewer_notes": [],
+        "should_pause_similar_builds": false,
+        "should_prioritize_followup": false
+      },
+      "known_product_risks": [
+        "Current fill logic skips select fields, which weakens real-world lead form usefulness.",
+        "Functional coverage is narrow and still anchored to one happy-path fixture.",
+        "Field descriptor matching is heuristic and only proven on a single controlled form.",
+        "Current screenshots are real but still look like validation assets rather than persuasive user-facing proof."
+      ],
+      "product_acceptance_status": "revise",
+      "revision_required": true,
+      "blocked_from_publish_until_acceptance_passed": true,
+      "revision_resolved": false,
+      "next_product_step": "create_product_revision_run_and_rerun_build_qa_smoke"
+    },
+    {
+      "registry_entry_id": "registry-6303b48c77aa",
+      "item_id": "draft:2026-04-19-145118-daily-4df0e2-repair-145150-cfba73",
+      "run_id": "2026-04-19-145118-daily-4df0e2-repair-145150-cfba73",
+      "source_run_id": null,
+      "run_type": "daily",
+      "created_at": "2026-04-19T06:51:50.939Z",
+      "archetype": "single_profile_form_fill",
+      "wedge": "LeadFill One Profile",
+      "target_user": "Sales reps, recruiters, and operators repeatedly entering the same contact details into web forms.",
+      "permissions": [
+        "storage",
+        "activeTab",
+        "scripting"
+      ],
+      "host_permissions": [],
+      "publish_intent": "draft_only",
+      "publish_state": "draft_only",
+      "latest_review_state": null,
+      "latest_health_status": "monitoring_disabled",
+      "known_issues": [
+        "Replace draft promo tiles with final store-ready creative before public release.",
+        "Public release disabled by task configuration.",
+        "enable monitoring inputs before post-release health tracking"
+      ],
+      "overlap_tags": [
+        "forms",
+        "crm",
+        "lead",
+        "fill",
+        "single_profile_form_fill"
+      ],
+      "family": "single_profile_form_fill",
+      "screenshots_manifest_hash": "745f435eaa9293abff05279d0d90a0cb6b5b2c067ef7da195bcf7a4de2f6f5e9",
+      "package_sha256": "448daa21629907ff19335455fe90b63c140496fa478bad96986e38b2d85bdc6b",
+      "manifest_version": null,
+      "ledger_entry_ids": [],
+      "learning_updates": {
+        "stage": "MONITOR_POST_RELEASE",
+        "status": "skipped",
+        "run_id": "2026-04-19-145118-daily-4df0e2",
+        "item_id": null,
+        "release_health_summary": "monitoring_disabled",
+        "blacklist_updates": [],
+        "overlap_updates": [],
+        "archetype_priors": {},
+        "scoring_weight_suggestions": [],
+        "reviewer_notes": [
+          "enable monitoring inputs before post-release health tracking"
+        ],
+        "should_pause_similar_builds": false,
+        "should_prioritize_followup": false,
+        "generated_at": "2026-04-19T06:51:21.605Z",
+        "publisher_id": null,
+        "portfolio_registry_path": "D:\\code\\ai插件优化工作流\\state\\portfolio_registry.json",
+        "failure_reason": null
+      }
+    },
+    {
+      "registry_entry_id": "registry-afa06655417b",
+      "item_id": "dnnpkaefmlhacigijccbhemgaenjbcpk",
+      "run_id": "sandbox-2026-04-19-215222-dnnpkaefmlha-v0-1-2-c64a39",
+      "source_run_id": "sandbox-2026-04-19-154400-dnnpkaefmlha-v0-1-1-6218cc",
+      "run_type": "sandbox_validation",
+      "created_at": "2026-04-19T13:52:27.152Z",
+      "archetype": "single_profile_form_fill",
+      "wedge": "LeadFill One Profile",
+      "target_user": "Sales reps, recruiters, and operators repeatedly entering the same contact details into web forms.",
+      "permissions": [
+        "storage",
+        "activeTab",
+        "scripting"
+      ],
+      "host_permissions": [],
+      "publish_intent": "draft_only",
+      "publish_state": "draft_only",
+      "latest_review_state": null,
+      "latest_health_status": "unobserved",
+      "known_issues": [
+        "Replace draft promo tiles with final store-ready creative before public release.",
+        "Public release disabled by task configuration."
+      ],
+      "known_product_risks": [
+        "Field descriptor matching still depends on heuristic label and placeholder matching."
+      ],
+      "product_acceptance_status": "passed",
+      "revision_required": false,
+      "blocked_from_publish_until_acceptance_passed": false,
+      "revision_resolved": true,
+      "next_product_step": "prepare_new_sandbox_revision_for_upload_after_manual_review_cancel",
+      "overlap_tags": [
+        "forms",
+        "crm",
+        "lead",
+        "fill",
+        "single_profile_form_fill"
+      ],
+      "family": "single_profile_form_fill",
+      "screenshots_manifest_hash": "ee03530c9c694124c6f02170aaa7a636e4a989800fd3dba8f4eb0f631e8d96a0",
+      "package_sha256": "6f28eb50de2150356a4fcdbadff25e33876ca03ff04f665bccb419c7069cc53f",
+      "manifest_version": "0.1.2",
+      "ledger_entry_ids": [],
+      "learning_updates": {
+        "release_health_summary": "not_collected",
+        "blacklist_updates": [],
+        "overlap_updates": [],
+        "archetype_priors": {},
+        "scoring_weight_suggestions": [],
+        "reviewer_notes": [],
+        "should_pause_similar_builds": false,
+        "should_prioritize_followup": false
+      }
+    },
+    {
+      "registry_entry_id": "registry-af560c045740",
+      "item_id": "draft:2026-04-20-091340-daily-01a081",
+      "run_id": "2026-04-20-091340-daily-01a081",
+      "source_run_id": null,
+      "run_type": "daily",
+      "created_at": "2026-04-20T01:13:41.138Z",
+      "archetype": "tab_csv_window_export",
+      "wedge": "Window Tabs Exporter",
+      "target_user": null,
+      "permissions": [],
+      "host_permissions": [],
+      "publish_intent": null,
+      "publish_state": "unknown",
+      "latest_review_state": null,
+      "latest_health_status": "unobserved",
+      "known_issues": [],
+      "known_product_risks": [],
+      "product_acceptance_status": "not_reviewed",
+      "revision_required": false,
+      "blocked_from_publish_until_acceptance_passed": false,
+      "revision_resolved": false,
+      "next_product_step": null,
+      "overlap_tags": [
+        "tabs",
+        "csv",
+        "window",
+        "export",
+        "tab_csv_window_export"
+      ],
+      "family": "tab_csv_window_export",
+      "screenshots_manifest_hash": "",
+      "package_sha256": "",
+      "manifest_version": null,
+      "ledger_entry_ids": [],
+      "learning_updates": {
+        "release_health_summary": "not_collected",
+        "blacklist_updates": [],
+        "overlap_updates": [],
+        "archetype_priors": {},
+        "scoring_weight_suggestions": [],
+        "reviewer_notes": [],
+        "should_pause_similar_builds": false,
+        "should_prioritize_followup": false
+      }
+    },
+    {
+      "registry_entry_id": "registry-89136f3a5157",
+      "item_id": "draft:2026-04-20-140518-daily-f74fb3",
+      "run_id": "2026-04-20-140518-daily-f74fb3",
+      "source_run_id": null,
+      "run_type": "daily",
+      "created_at": "2026-04-20T06:05:18.325Z",
+      "archetype": "tab_csv_window_export",
+      "wedge": "Window Tabs Exporter",
+      "target_user": null,
+      "permissions": [],
+      "host_permissions": [],
+      "publish_intent": null,
+      "publish_state": "unknown",
+      "latest_review_state": null,
+      "latest_health_status": "unobserved",
+      "known_issues": [],
+      "known_product_risks": [],
+      "product_acceptance_status": "not_reviewed",
+      "revision_required": false,
+      "blocked_from_publish_until_acceptance_passed": false,
+      "revision_resolved": false,
+      "next_product_step": null,
+      "overlap_tags": [
+        "tabs",
+        "csv",
+        "window",
+        "export",
+        "tab_csv_window_export"
+      ],
+      "family": "tab_csv_window_export",
+      "screenshots_manifest_hash": "",
+      "package_sha256": "",
+      "manifest_version": null,
+      "ledger_entry_ids": [],
+      "learning_updates": {
+        "release_health_summary": "not_collected",
+        "blacklist_updates": [],
+        "overlap_updates": [],
+        "archetype_priors": {},
+        "scoring_weight_suggestions": [],
+        "reviewer_notes": [],
+        "should_pause_similar_builds": false,
+        "should_prioritize_followup": false
+      }
+    },
+    {
+      "registry_entry_id": "registry-de8f06ba1c73",
+      "item_id": "dnnpkaefmlhacigijccbhemgaenjbcpk",
+      "run_id": "commercial-2026-04-21-195332-dnnpkaefmlha-v0-2-0-73d443",
+      "source_run_id": "sandbox-2026-04-19-215222-dnnpkaefmlha-v0-1-2-c64a39",
+      "run_type": "sandbox_validation",
+      "created_at": "2026-04-21T11:53:36.771Z",
+      "archetype": "single_profile_form_fill",
+      "wedge": "LeadFill One Profile",
+      "target_user": "Sales reps, recruiters, and operators repeatedly entering the same contact details into web forms.",
+      "permissions": [
+        "storage",
+        "activeTab",
+        "scripting"
+      ],
+      "host_permissions": [],
+      "publish_intent": "draft_only",
+      "publish_state": "draft_only",
+      "latest_review_state": null,
+      "latest_health_status": "unobserved",
+      "known_issues": [
+        "Replace draft promo tiles with final store-ready creative before public release.",
+        "Public release disabled by task configuration."
+      ],
+      "known_product_risks": [],
+      "product_acceptance_status": "not_reviewed",
+      "revision_required": false,
+      "blocked_from_publish_until_acceptance_passed": false,
+      "revision_resolved": false,
+      "next_product_step": null,
+      "overlap_tags": [
+        "forms",
+        "crm",
+        "lead",
+        "fill",
+        "single_profile_form_fill"
+      ],
+      "family": "single_profile_form_fill",
+      "screenshots_manifest_hash": "776ece81589852da5436ca73fa7f86168881bf05381ed93ee134626c01d12f42",
+      "package_sha256": "7d3bec9e3f8ae55e2a5be33ed0358bbaa5ce3adeb77e5390dc7b239cb2032fa8",
+      "manifest_version": "0.2.0",
+      "ledger_entry_ids": [],
+      "learning_updates": {
+        "release_health_summary": "not_collected",
+        "blacklist_updates": [],
+        "overlap_updates": [],
+        "archetype_priors": {},
+        "scoring_weight_suggestions": [],
+        "reviewer_notes": [],
+        "should_pause_similar_builds": false,
+        "should_prioritize_followup": false
+      }
+    },
+    {
+      "registry_entry_id": "registry-f1b97365eff3",
+      "item_id": "dnnpkaefmlhacigijccbhemgaenjbcpk",
+      "run_id": "commercial-2026-04-21-195643-dnnpkaefmlha-v0-2-0-7836c9",
+      "source_run_id": "sandbox-2026-04-19-215222-dnnpkaefmlha-v0-1-2-c64a39",
+      "run_type": "sandbox_validation",
+      "created_at": "2026-04-21T11:56:48.396Z",
+      "archetype": "single_profile_form_fill",
+      "wedge": "LeadFill One Profile",
+      "target_user": "Sales reps, recruiters, and operators repeatedly entering the same contact details into web forms.",
+      "permissions": [
+        "storage",
+        "activeTab",
+        "scripting"
+      ],
+      "host_permissions": [],
+      "publish_intent": "draft_only",
+      "publish_state": "draft_only",
+      "latest_review_state": null,
+      "latest_health_status": "unobserved",
+      "known_issues": [
+        "Replace draft promo tiles with final store-ready creative before public release.",
+        "Public release disabled by task configuration."
+      ],
+      "known_product_risks": [],
+      "product_acceptance_status": "not_reviewed",
+      "revision_required": false,
+      "blocked_from_publish_until_acceptance_passed": false,
+      "revision_resolved": false,
+      "next_product_step": null,
+      "overlap_tags": [
+        "forms",
+        "crm",
+        "lead",
+        "fill",
+        "single_profile_form_fill"
+      ],
+      "family": "single_profile_form_fill",
+      "screenshots_manifest_hash": "d4f03f8059eb95a1c742d5002ee60caf61d92adab899c891f75ad3a99e6f0e90",
+      "package_sha256": "ee7758a8b921cfcf28e757bd8d4a22ca478d12a04da21de48fe5c2c883c420da",
+      "manifest_version": "0.2.0",
+      "ledger_entry_ids": [],
+      "learning_updates": {
+        "release_health_summary": "not_collected",
+        "blacklist_updates": [],
+        "overlap_updates": [],
+        "archetype_priors": {},
+        "scoring_weight_suggestions": [],
+        "reviewer_notes": [],
+        "should_pause_similar_builds": false,
+        "should_prioritize_followup": false
+      }
+    },
+    {
+      "registry_entry_id": "registry-24d66b7e1a24",
+      "item_id": "dnnpkaefmlhacigijccbhemgaenjbcpk",
+      "run_id": "commercial-payment-2026-04-23-202254-leadfill-v0-2-0-7faeaf",
+      "source_run_id": "commercial-2026-04-21-195643-dnnpkaefmlha-v0-2-0-7836c9",
+      "run_type": "sandbox_validation",
+      "created_at": "2026-04-23T12:22:59.760Z",
+      "archetype": "single_profile_form_fill",
+      "wedge": "LeadFill One Profile",
+      "target_user": "Sales reps, recruiters, and operators repeatedly entering the same contact details into web forms.",
+      "permissions": [
+        "storage",
+        "activeTab",
+        "scripting"
+      ],
+      "host_permissions": [],
+      "publish_intent": "draft_only",
+      "publish_state": "draft_only",
+      "latest_review_state": null,
+      "latest_health_status": "unobserved",
+      "known_issues": [
+        "Replace draft promo tiles with final store-ready creative before public release.",
+        "Public release disabled by task configuration."
+      ],
+      "known_product_risks": [],
+      "product_acceptance_status": "not_reviewed",
+      "revision_required": false,
+      "blocked_from_publish_until_acceptance_passed": false,
+      "revision_resolved": false,
+      "next_product_step": null,
+      "overlap_tags": [
+        "forms",
+        "crm",
+        "lead",
+        "fill",
+        "single_profile_form_fill"
+      ],
+      "family": "single_profile_form_fill",
+      "screenshots_manifest_hash": "065113945959ec6fbbcc3ef7f7502a47f9b3db7e361eea731c8bb4175cfd1032",
+      "package_sha256": "8b8db0bb7de9223a7940279bb0676b5cc5b3b33f241c1db98dfc7a3436903980",
+      "manifest_version": "0.2.0",
+      "ledger_entry_ids": [],
+      "learning_updates": {
+        "release_health_summary": "not_collected",
+        "blacklist_updates": [],
+        "overlap_updates": [],
+        "archetype_priors": {},
+        "scoring_weight_suggestions": [],
+        "reviewer_notes": [],
+        "should_pause_similar_builds": false,
+        "should_prioritize_followup": false
+      }
+    },
+    {
+      "registry_entry_id": "registry-6f2bf9671655",
+      "item_id": "dnnpkaefmlhacigijccbhemgaenjbcpk",
+      "run_id": "commercial-payment-2026-04-23-203843-leadfill-v0-2-0-b846c2",
+      "source_run_id": "commercial-2026-04-21-195643-dnnpkaefmlha-v0-2-0-7836c9",
+      "run_type": "sandbox_validation",
+      "created_at": "2026-04-23T12:38:48.900Z",
+      "archetype": "single_profile_form_fill",
+      "wedge": "LeadFill One Profile",
+      "target_user": "Sales reps, recruiters, and operators repeatedly entering the same contact details into web forms.",
+      "permissions": [
+        "storage",
+        "activeTab",
+        "scripting"
+      ],
+      "host_permissions": [],
+      "publish_intent": "draft_only",
+      "publish_state": "draft_only",
+      "latest_review_state": null,
+      "latest_health_status": "unobserved",
+      "known_issues": [
+        "Replace draft promo tiles with final store-ready creative before public release.",
+        "Public release disabled by task configuration."
+      ],
+      "known_product_risks": [],
+      "product_acceptance_status": "not_reviewed",
+      "revision_required": false,
+      "blocked_from_publish_until_acceptance_passed": false,
+      "revision_resolved": false,
+      "next_product_step": null,
+      "overlap_tags": [
+        "forms",
+        "crm",
+        "lead",
+        "fill",
+        "single_profile_form_fill"
+      ],
+      "family": "single_profile_form_fill",
+      "screenshots_manifest_hash": "eacfe51d931e67a3eedfa7d4f06ac8d7a7f4896bdd5eccc4fa97b8c00901c1e4",
+      "package_sha256": "8e83283f6ed857f026b7bae9c0e0de7baff0f25e36e3673912a9134b76ec7fbb",
+      "manifest_version": "0.2.0",
+      "ledger_entry_ids": [],
+      "learning_updates": {
+        "release_health_summary": "not_collected",
+        "blacklist_updates": [],
+        "overlap_updates": [],
+        "archetype_priors": {},
+        "scoring_weight_suggestions": [],
+        "reviewer_notes": [],
+        "should_pause_similar_builds": false,
+        "should_prioritize_followup": false
+      }
+    }
+  ],
+  "blacklist_updates": [],
+  "known_bad_patterns": [
+    {
+      "recorded_at": "2026-04-20T06:05:01.678Z",
+      "pattern_type": "portfolio_overlap_skip",
+      "run_id": "2026-04-20-091340-daily-01a081",
+      "candidate_id": "cand-tab-001",
+      "family": "tab_csv_window_export",
+      "selected_wedge_hypothesis": "Export only the current Chrome window to a clean, share-ready CSV in one click.",
+      "overlap_score": 74,
+      "reason": "The refined wedge is clear enough to build, but it is too similar to the existing tab_csv_window_export portfolio.",
+      "recommended_action": "Skip this candidate and continue discovery for a more differentiated wedge."
+    },
+    {
+      "recorded_at": "2026-04-20T06:05:18.321Z",
+      "pattern_type": "portfolio_overlap_skip",
+      "run_id": "2026-04-20-140518-daily-f74fb3",
+      "candidate_id": "cand-tab-001",
+      "family": "tab_csv_window_export",
+      "selected_wedge_hypothesis": "Export only the current Chrome window to a clean, share-ready CSV in one click.",
+      "overlap_score": 74,
+      "reason": "The refined wedge is clear enough to build, but it is too similar to the existing tab_csv_window_export portfolio.",
+      "recommended_action": "Skip this candidate and continue discovery for a more differentiated wedge."
+    }
+  ],
+  "product_revision_history": [
+    {
+      "recorded_at": "2026-04-19T12:24:12.122Z",
+      "event_type": "product_revision_plan_created",
+      "source_run_id": "sandbox-2026-04-19-154400-dnnpkaefmlha-v0-1-1-6218cc",
+      "source_daily_run_id": "2026-04-19-145118-daily-4df0e2",
+      "source_acceptance_status": "revise",
+      "source_package_sha256": "b86a5114a52056acb11e685f243125f4de34abcd15fb8d37f48c066574719a8d",
+      "artifact_path": "state/run_events/sandbox-2026-04-19-154400-dnnpkaefmlha-v0-1-1-6218cc/97_product_revision_plan.json"
+    },
+    {
+      "recorded_at": "2026-04-19T13:52:27.223Z",
+      "event_type": "product_revision_run_created",
+      "source_run_id": "sandbox-2026-04-19-154400-dnnpkaefmlha-v0-1-1-6218cc",
+      "new_run_id": "sandbox-2026-04-19-215222-dnnpkaefmlha-v0-1-2-c64a39",
+      "source_package_sha256": "b86a5114a52056acb11e685f243125f4de34abcd15fb8d37f48c066574719a8d",
+      "new_package_sha256": "6f28eb50de2150356a4fcdbadff25e33876ca03ff04f665bccb419c7069cc53f",
+      "previous_manifest_version": "0.1.1",
+      "target_manifest_version": "0.1.2",
+      "acceptance_status": "revise"
+    },
+    {
+      "recorded_at": "2026-04-21T11:53:36.881Z",
+      "event_type": "commercial_release_revision_created",
+      "source_run_id": "sandbox-2026-04-19-215222-dnnpkaefmlha-v0-1-2-c64a39",
+      "new_run_id": "commercial-2026-04-21-195332-dnnpkaefmlha-v0-2-0-73d443",
+      "source_package_sha256": "6f28eb50de2150356a4fcdbadff25e33876ca03ff04f665bccb419c7069cc53f",
+      "new_package_sha256": "7d3bec9e3f8ae55e2a5be33ed0358bbaa5ce3adeb77e5390dc7b239cb2032fa8",
+      "previous_manifest_version": "0.1.2",
+      "target_manifest_version": "0.2.0",
+      "acceptance_status": "passed"
+    },
+    {
+      "recorded_at": "2026-04-21T11:56:48.455Z",
+      "event_type": "commercial_release_revision_created",
+      "source_run_id": "sandbox-2026-04-19-215222-dnnpkaefmlha-v0-1-2-c64a39",
+      "new_run_id": "commercial-2026-04-21-195643-dnnpkaefmlha-v0-2-0-7836c9",
+      "source_package_sha256": "6f28eb50de2150356a4fcdbadff25e33876ca03ff04f665bccb419c7069cc53f",
+      "new_package_sha256": "ee7758a8b921cfcf28e757bd8d4a22ca478d12a04da21de48fe5c2c883c420da",
+      "previous_manifest_version": "0.1.2",
+      "target_manifest_version": "0.2.0",
+      "acceptance_status": "passed"
+    },
+    {
+      "recorded_at": "2026-04-23T12:22:59.877Z",
+      "event_type": "payment_configured_commercial_candidate_created",
+      "source_run_id": "commercial-2026-04-21-195643-dnnpkaefmlha-v0-2-0-7836c9",
+      "new_run_id": "commercial-payment-2026-04-23-202254-leadfill-v0-2-0-7faeaf",
+      "source_package_sha256": "ee7758a8b921cfcf28e757bd8d4a22ca478d12a04da21de48fe5c2c883c420da",
+      "new_package_sha256": "8b8db0bb7de9223a7940279bb0676b5cc5b3b33f241c1db98dfc7a3436903980",
+      "previous_manifest_version": "0.2.0",
+      "target_manifest_version": "0.2.0",
+      "acceptance_status": "revise"
+    },
+    {
+      "recorded_at": "2026-04-23T12:38:48.936Z",
+      "event_type": "payment_configured_commercial_candidate_created",
+      "source_run_id": "commercial-2026-04-21-195643-dnnpkaefmlha-v0-2-0-7836c9",
+      "new_run_id": "commercial-payment-2026-04-23-203843-leadfill-v0-2-0-b846c2",
+      "source_package_sha256": "ee7758a8b921cfcf28e757bd8d4a22ca478d12a04da21de48fe5c2c883c420da",
+      "new_package_sha256": "8e83283f6ed857f026b7bae9c0e0de7baff0f25e36e3673912a9134b76ec7fbb",
+      "previous_manifest_version": "0.2.0",
+      "target_manifest_version": "0.2.0",
+      "acceptance_status": "passed"
+    }
+  ],
+  "overlap_updates": [],
+  "archetype_priors": {
+    "tab_csv_window_export": {
+      "score_multiplier": 1,
+      "item_count": 6,
+      "last_updated_at": "2026-04-23T12:38:48.901Z"
+    },
+    "single_profile_form_fill": {
+      "score_multiplier": 1,
+      "item_count": 12,
+      "last_updated_at": "2026-04-23T12:38:48.901Z"
+    }
+  },
+  "scoring_weight_suggestions": []
+}

@@ -1,0 +1,77 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "stage",
+    "status",
+    "run_id",
+    "reviewed_at",
+    "reviewer",
+    "decision",
+    "note",
+    "screenshot_feedback",
+    "promo_feedback",
+    "landing_feedback",
+    "pricing_feedback",
+    "brand_feedback",
+    "trust_feedback",
+    "misleading_claims_found",
+    "required_changes",
+    "would_publish_with_these_assets",
+    "next_step",
+    "redaction_checks"
+  ],
+  "properties": {
+    "stage": {
+      "type": "string",
+      "enum": ["HUMAN_VISUAL_REVIEW"]
+    },
+    "status": {
+      "type": "string",
+      "enum": ["passed", "failed"]
+    },
+    "run_id": { "type": "string" },
+    "reviewed_at": { "type": "string" },
+    "reviewer": { "type": "string" },
+    "decision": {
+      "type": "string",
+      "enum": ["passed", "revise", "blocked"]
+    },
+    "note": { "type": "string" },
+    "screenshot_feedback": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "promo_feedback": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "landing_feedback": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "pricing_feedback": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "brand_feedback": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "trust_feedback": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "misleading_claims_found": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "required_changes": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "would_publish_with_these_assets": { "type": "boolean" },
+    "next_step": { "type": "string" },
+    "redaction_checks": { "type": "object" }
+  }
+}

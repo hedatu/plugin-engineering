@@ -1,257 +1,91 @@
-﻿# Plugin Membership Platform
+# 插件工程 / Plugin Engineering
 
-Cloudflare Pages frontend + Supabase backend + Waffo Pancake payment + Chrome Extension membership system.
+This private repository now acts as a consolidated archive for the current LeadFill One Profile commercial launch work and the broader Chrome extension engineering workflow that produced it.
 
-## Current Status
+Current mainline:
 
-This repository is now in the Waffo Pancake Test SDK integration stage.
+- LeadFill One Profile is the only active product launch track.
+- External checkout plus webhook-driven entitlement remains the payment model.
+- Email OTP remains the auth model.
+- No Chrome upload or publish automation is being used as the active launch path.
 
-Implemented in code:
+## Repo Structure
 
-- `create-checkout-session` is server-side only and requires Supabase user JWT.
-- `create-checkout-session` now uses `@waffo/pancake-ts` authenticated checkout.
-- `waffo-webhook` now verifies signatures with the official Waffo SDK.
-- `/checkout/success` only polls `get-entitlement`.
-- Membership activation is still webhook-driven only.
-- `orders`, `payments`, `entitlements`, and `processed_webhooks` remain the core billing tables.
+### 1. LeadFill product stack at repo root
 
-Not yet verified in reality:
+The root directories hold the concrete product implementation and payment-site stack:
 
-- Real Waffo test checkout creation.
-- Real Waffo test webhook delivery.
-- Real payment success -> entitlement activation.
+- `apps/` web app source
+- `extensions/` Chrome extension source
+- `packages/` shared packages
+- `supabase/` schema, migrations, edge functions, and config
+- `docs/` LeadFill and HWH integration docs
+- root `*.json` and `*.md` reports for payment, SMTP, OTP, entitlement, and migration work
 
-## Known Waffo Test Values
+This is the codebase for the current single-product commercial launch path.
 
-These values are not secrets and are already reflected in code and docs:
+### 2. `plugin-engineering-factory/`
 
-- `merchantId = MER_1rr8qw61O6jzcPhj4J00c9`
-- `environment = test`
-- `onetime productId = PROD_1LTEolO39KqxFSQLCXeAgR`
-- `productType = onetime`
-- `currency = USD`
-- `successUrl = https://hwh.915500.xyz/checkout/success`
-- `cancelUrl = https://hwh.915500.xyz/checkout/cancel`
+This directory is a merged snapshot of the Chrome Extension Opportunity Factory repository, including:
 
-Still missing or pending confirmation:
+- factory PRD and execution rules
+- scripts, schemas, source, templates, fixtures, and config
+- discovery, packaging, monetization, and launch-support docs
+- state snapshots, release ledger, backlog, and review-watch artifacts
+- run artifacts for the commercial LeadFill candidate and related workflow history
+- Remotion asset-generation source
 
-- Final Waffo Dashboard webhook registration after the remote function is deployed.
-- Whether Waffo Dashboard test webhook events are enabled.
-- Subscription product ID and pricing objects for `pro_monthly`.
-- Real test webhook payload samples.
-- Local private key is already placed at `supabase/WAFFO_PRIVATE_KEY.txt`, but it must not be committed or printed.
+This is preserved here so the product implementation and the factory-side planning, packaging, and release evidence live in one private repository.
 
-Current remote Supabase finding:
+### 3. `supplemental_docs/`
 
-- The plugin membership system should use its own API domain: `https://hwh-api.915500.xyz`.
-- The intended Waffo webhook URL is `https://hwh-api.915500.xyz/functions/v1/waffo-webhook`.
-- Host-level Nginx reverse proxy and HTTPS for `hwh-api.915500.xyz` are live on `45.62.105.166`.
-- `https://hwh-api.915500.xyz/auth/v1/health` now reaches Kong and returns `401 No API key found` when called without credentials.
-- `https://hwh-api.915500.xyz/functions/v1/waffo-webhook` now reaches the deployed Edge Function and returns `405` on `GET`.
+This directory contains screenshots, visual review captures, redesign evidence, and project reports collected during the LeadFill website and launch work.
 
-## Repo Layout
+## Current Focus
 
-```text
-apps/web                    React frontend
-extensions/main-extension   Chrome MV3 extension
-packages/extension-sdk      Shared types and extension SDK
-supabase/config.toml        Supabase local config and function JWT policy
-supabase/schema.sql         Schema snapshot
-supabase/seed.sql           Seed data
-supabase/migrations         Safe database migrations
-supabase/functions          Edge Functions
-docs                        Decisions, runbooks, env matrix, deployment checklist
-```
+The project has been reset from broad factory expansion to a narrower execution track:
 
-## Environment Variables
+- build and polish one commercial candidate
+- complete human visual review
+- prepare production payment readiness
+- prepare commercial resubmission materials
+- keep launch metrics and release gates explicit
 
-Copy `.env.example` to a local env file as needed. Do not commit real secrets.
+The reset plan and backlog are included under:
 
-Public runtime variables:
+- `plugin-engineering-factory/docs/leadfill_project_reset_plan_2026-04-24.md`
+- `plugin-engineering-factory/state/leadfill_launch_backlog_2026-04-24.json`
 
-- `PUBLIC_SUPABASE_URL`
-- `PUBLIC_SUPABASE_ANON_KEY`
-- `SUPABASE_URL`
-- `SUPABASE_ANON_KEY`
-- `SITE_URL=https://hwh.915500.xyz`
-- `PRODUCT_KEY=leadfill-one-profile`
-- `CHROME_EXTENSION_ID`
-
-Supabase Secrets only:
-
-- `SUPABASE_SERVICE_ROLE_KEY`
-- `WAFFO_MERCHANT_ID`
-- `WAFFO_PRIVATE_KEY`
-- `WAFFO_PRIVATE_KEY_BASE64`
-- `WAFFO_ENVIRONMENT=test`
-- `WAFFO_ONETIME_PRODUCT_ID`
-- `WAFFO_WEBHOOK_PUBLIC_KEY_TEST`
-- `WAFFO_WEBHOOK_PUBLIC_KEY_PROD`
-- `WAFFO_CHECKOUT_SUCCESS_URL=https://hwh.915500.xyz/checkout/success`
-- `WAFFO_CHECKOUT_CANCEL_URL=https://hwh.915500.xyz/checkout/cancel`
-- `ALLOWED_ORIGINS=https://hwh.915500.xyz,https://pay.915500.xyz,chrome-extension://<your-extension-id>`
+## Naming
 
-Important:
-
-- Never expose `SUPABASE_SERVICE_ROLE_KEY` to the frontend.
-- Never expose `WAFFO_PRIVATE_KEY` or `WAFFO_PRIVATE_KEY_BASE64` to the frontend or extension.
-- The Chrome extension must not contain Waffo merchant secrets.
+The repository is now organized under the broader concept of `插件工程 / Plugin Engineering` rather than only the earlier LeadFill payment-site package name.
 
-## Local Development
+The reason is structural:
 
-Install dependencies:
+- LeadFill is the active launch product
+- the factory workflow, packaging system, release gates, and audit history are still important project assets
+- both need to live together in a coherent private engineering archive
 
-```bash
-npm install
-```
-
-Run the web app:
+## Secret Handling
 
-```bash
-npm run dev:web
-```
+This repository is intentionally packaged without local secret files.
 
-Build the extension:
+Excluded or redacted items include:
 
-```bash
-npm run build:extension
-```
+- local env secrets
+- service-role keys
+- Waffo private credentials
+- SMTP secrets
+- Git metadata from the original source repos
+- dependency folders such as `node_modules/`
 
-Run workspace typecheck and build:
+## Recommended Entry Points
 
-```bash
-npm run typecheck
-npm run build
-```
+If you are orienting yourself quickly, start here:
 
-Supabase helper scripts:
-
-```bash
-npm run supabase:start
-npm run supabase:functions:serve
-```
-
-Do not use `npm run supabase:db:reset` against a linked remote project.
-
-## Waffo Checkout Flow
-
-`create-checkout-session` currently works like this:
-
-1. Require authenticated Supabase user.
-2. Read the selected plan from `public.plans`.
-3. Read `waffo_product_id_*`, `waffo_product_type_*`, and local currency from that plan row.
-4. Create a local `checkout_sessions` record first.
-5. Call `client.checkout.authenticated.create()` from `@waffo/pancake-ts`.
-6. Return only:
-   - `checkoutUrl`
-   - `sessionId`
-   - `localOrderId`
-
-Notes:
-
-- Buyer identity passed to Waffo is the current Supabase `user.id`.
-- Buyer email is pre-filled from the current Supabase user email when available.
-- Metadata includes:
-  - `userId`
-  - `productKey`
-  - `planKey`
-  - `localOrderId`
-  - `source`
-  - `localCheckoutSessionId`
-  - `installationId`
-  - `environment`
-- The SDK checkout API exposes `successUrl`.
-- `cancelUrl` is kept in local metadata and docs, but is not sent to the SDK because the official SDK type surface does not currently expose a `cancelUrl` parameter.
-
-## Waffo Webhook Flow
-
-`waffo-webhook` currently works like this:
-
-1. Read `request.text()` first.
-2. Read `x-waffo-signature`.
-3. Parse raw JSON only after the raw string has been captured.
-4. Resolve mode from payload (`test` or `prod`).
-5. Verify the raw body with the official SDK and the mode-specific public key.
-6. Return `401` on verification failure.
-7. Deduplicate using the SDK delivery record ID `event.id`.
-8. Process billing updates into:
-   - `orders`
-   - `payments`
-   - `subscriptions`
-   - `entitlements`
-
-Event handling:
-
-- `order.completed`: one-time / lifetime entitlement activation
-- `subscription.activated`: reserved and implemented for subscription activation
-- `subscription.payment_succeeded`: reserved and implemented for subscription renewals
-- `refund.succeeded`: reserved and implemented for revoke / downgrade logic
-
-Success page behavior:
-
-- `/checkout/success` does not activate membership.
-- It only polls `get-entitlement`.
-- Webhook remains the only source of truth for paid entitlement activation.
-
-## Database Notes
-
-Current Waffo-related plan mapping fields:
-
-- `waffo_product_id_test`
-- `waffo_product_id_prod`
-- `waffo_product_type_test`
-- `waffo_product_type_prod`
-- `waffo_plan_id_test`
-- `waffo_plan_id_prod`
-- `waffo_price_id_test`
-- `waffo_price_id_prod`
-
-Local seed now maps:
-
-- `leadfill-one-profile / free` -> `10` lifetime fills
-- `leadfill-one-profile / lifetime` -> `$19` one-time unlock
-- `chatgpt2obsidian` -> retained as `legacy_test_only`
-
-## Supabase Deployment
-
-See the detailed checklist here:
-
-- [env-matrix.md](/D:/code/鏀粯缃戠珯璁捐妯″潡/plugin-membership-supabase-waffo-design/docs/env-matrix.md)
-- [supabase-deploy-checklist.md](/D:/code/鏀粯缃戠珯璁捐妯″潡/plugin-membership-supabase-waffo-design/docs/supabase-deploy-checklist.md)
-- [waffo-test-runbook.md](/D:/code/鏀粯缃戠珯璁捐妯″潡/plugin-membership-supabase-waffo-design/docs/waffo-test-runbook.md)
-- [waffo-payload-mapping.md](/D:/code/鏀粯缃戠珯璁捐妯″潡/plugin-membership-supabase-waffo-design/docs/waffo-payload-mapping.md)
-
-High-level safe rollout:
-
-```bash
-ssh bwg-166
-cd /opt/supabase-project
-# apply the repo migration/function deployment flow without remote db reset
-```
-
-## Manual Configuration Still Needed
-
-- Fill real Supabase Secrets.
-- Fill remote `plans` rows for any non-test or subscription products.
-- Configure `https://hwh-api.915500.xyz/functions/v1/waffo-webhook` in Waffo Dashboard.
-- Enable Waffo test webhook events if not already enabled.
-- Confirm how Waffo wants cancel behavior configured when using the current SDK checkout API.
-
-## Verification Status
-
-Verified in this turn:
-
-- SDK package shape inspected from npm package contents.
-- Official webhook dedupe guidance confirmed from SDK webhook guide.
-- Host Nginx reverse proxy for `hwh-api.915500.xyz` is live.
-- Remote `waffo-webhook` target path is `/functions/v1/waffo-webhook`.
-- `hwh.915500.xyz` and `hwh-api.915500.xyz` both resolve to `45.62.105.166`.
-- Current upstream `/functions/v1/waffo-webhook` probe returns `405 METHOD_NOT_ALLOWED` on `GET` and is ready for signed webhook tests.
-
-Unverified in this turn:
-
-- Real checkout session creation against Waffo test environment.
-- Real webhook delivery from Waffo.
-- Real end-to-end payment success.
-
-
+1. `PACKAGE_CONTENTS.md`
+2. `PLUGIN_ENGINEERING_INDEX.md`
+3. `docs/leadfill_hwh_integration_handoff.md`
+4. `plugin-engineering-factory/README.md`
+5. `plugin-engineering-factory/AGENTS.md`
+6. `plugin-engineering-factory/codex_chrome_extension_factory_prd_zh.md`

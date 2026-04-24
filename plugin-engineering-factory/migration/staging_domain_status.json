@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-04-22T21:14:46.1861567+08:00",
+  "strategy": "staging_subdomains",
+  "recommended_domains": [
+    {
+      "host": "ca-pay.915500.xyz",
+      "type": "A",
+      "target_ip": "134.199.226.198",
+      "dns_present": false
+    },
+    {
+      "host": "ca-pay-api.915500.xyz",
+      "type": "A",
+      "target_ip": "134.199.226.198",
+      "dns_present": false
+    }
+  ],
+  "automatic_dns_change_performed": false,
+  "local_hosts_override_possible_for_frontend_only": true,
+  "waffo_webhook_requires_public_https": true,
+  "blockers": [
+    "staging_dns_not_configured"
+  ]
+}

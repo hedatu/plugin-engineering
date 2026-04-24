@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["stage", "status", "candidate_id", "candidate_name", "pricing_model", "suggested_price", "free_limit", "payment_provider_options", "redaction_checks"],
+  "properties": {
+    "stage": { "type": "string", "enum": ["PRICING_EXPERIMENT_PLAN"] },
+    "status": { "type": "string", "enum": ["passed", "failed"] },
+    "candidate_id": { "type": "string" },
+    "candidate_name": { "type": "string" },
+    "pricing_model": { "type": "string" },
+    "suggested_price": { "type": "string" },
+    "free_limit": { "type": "string" },
+    "payment_provider_options": { "type": "array", "items": { "type": "string" } },
+    "redaction_checks": { "type": "object" }
+  }
+}

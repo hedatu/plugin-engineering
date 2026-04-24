@@ -1,0 +1,49 @@
+{
+    "checked_at":  "2026-04-22T20:04:45.2593738+08:00",
+    "server_id":  "california",
+    "hostname":  "do-mini-sfo3-01",
+    "uptime":  "up 22 hours",
+    "disk_root":  {
+                      "size":  "24G",
+                      "used":  "9.1G",
+                      "available":  "15G",
+                      "use_percent":  "40%"
+                  },
+    "memory":  {
+                   "total_mb":  961,
+                   "used_mb":  534,
+                   "free_mb":  97,
+                   "available_mb":  427
+               },
+    "swap":  {
+                 "size":  "2G",
+                 "used":  "197.4M"
+             },
+    "cpu_count":  1,
+    "docker_containers":  [
+                              "supabase-kong|kong/kong:3.9.1|0.0.0.0:8000-\u003e8000/tcp",
+                              "supabase-auth|supabase/gotrue:v2.186.0",
+                              "supabase-rest|postgrest/postgrest:v14.8",
+                              "supabase-db|supabase/postgres:15.8.1.085|0.0.0.0:5432-\u003e5432/tcp"
+                          ],
+    "versions":  {
+                     "docker":  "29.1.3",
+                     "docker_compose":  "2.40.3",
+                     "node":  "v18.19.1",
+                     "npm":  "9.2.0",
+                     "caddy":  "2.6.2"
+                 },
+    "caddy_active":  true,
+    "firewall_active":  true,
+    "listening_ports":  [
+                            "22",
+                            "80",
+                            "5432",
+                            "8000"
+                        ],
+    "warnings":  [
+                     "low_memory_server",
+                     "public_5432_mapping_detected_on_california",
+                     "public_8000_mapping_detected_on_california"
+                 ]
+}

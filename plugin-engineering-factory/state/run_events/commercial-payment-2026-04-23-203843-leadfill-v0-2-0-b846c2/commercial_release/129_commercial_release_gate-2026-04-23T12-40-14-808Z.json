@@ -1,0 +1,43 @@
+{
+  "stage": "COMMERCIAL_RELEASE_GATE",
+  "status": "failed",
+  "run_id": "commercial-payment-2026-04-23-203843-leadfill-v0-2-0-b846c2",
+  "version": "0.2.0",
+  "product_acceptance_passed": true,
+  "functional_test_coverage_score": 100,
+  "monetization_enabled": true,
+  "payment_flow_safe": true,
+  "license_flow_defined": true,
+  "monetization_security_scan_passed": true,
+  "premium_packaging_passed": true,
+  "asset_qa_passed": true,
+  "listing_quality_passed": true,
+  "store_release_package_passed": true,
+  "human_visual_review_required": true,
+  "dashboard_listing_sync_required": true,
+  "production_payment_status": "not_verified",
+  "user_public_launch_approval_present": false,
+  "blockers": [
+    "human_visual_review_pending",
+    "production_payment_not_verified",
+    "user_public_launch_approval_missing"
+  ],
+  "allowed_next_actions": [
+    "run_monetization_security_scan",
+    "run_premium_packaging",
+    "run_assets_qa",
+    "run_listing_quality_gate",
+    "run_store_release_package",
+    "record_human_visual_review"
+  ],
+  "recommended_next_step": "record_human_visual_review",
+  "redaction_checks": {
+    "sanitized_response_bodies": true,
+    "checked_secret_value_count": 1,
+    "secret_values_present_in_artifact": false,
+    "authorization_header_pattern_present": false,
+    "key_material_pattern_present": false,
+    "secret_marker_pattern_present": false,
+    "redaction_guard_triggered": false
+  }
+}

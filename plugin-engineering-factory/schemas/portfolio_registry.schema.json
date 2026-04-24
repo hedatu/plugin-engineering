@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "stage",
+    "status",
+    "generated_at",
+    "last_updated_run_id",
+    "active_wedge_families",
+    "blocked_candidate_ids",
+    "items",
+    "blacklist_updates",
+    "known_bad_patterns",
+    "overlap_updates",
+    "archetype_priors",
+    "scoring_weight_suggestions"
+  ],
+  "properties": {
+    "stage": {
+      "type": "string",
+      "enum": ["PORTFOLIO_REGISTRY"]
+    },
+    "status": {
+      "type": "string"
+    },
+    "generated_at": {
+      "type": "string"
+    },
+    "last_updated_run_id": {
+      "type": ["string", "null"]
+    },
+    "active_wedge_families": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "blocked_candidate_ids": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "items": {
+      "type": "array",
+      "items": { "type": "object" }
+    },
+    "blacklist_updates": {
+      "type": "array",
+      "items": { "type": "object" }
+    },
+    "known_bad_patterns": {
+      "type": "array",
+      "items": { "type": "object" }
+    },
+    "product_revision_history": {
+      "type": "array",
+      "items": { "type": "object" }
+    },
+    "overlap_updates": {
+      "type": "array",
+      "items": { "type": "object" }
+    },
+    "archetype_priors": {
+      "type": "object"
+    },
+    "scoring_weight_suggestions": {
+      "type": "array",
+      "items": { "type": "object" }
+    }
+  }
+}

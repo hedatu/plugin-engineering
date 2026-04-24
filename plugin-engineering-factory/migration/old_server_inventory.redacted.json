@@ -1,0 +1,80 @@
+{
+  "generated_at": "2026-04-22T19:30:00+08:00",
+  "phase": "planning_only",
+  "old_server": {
+    "server_alias": "bwg-166",
+    "hostname": "neon-drum-2.localdomain",
+    "ip_redacted": "45.62.xxx.xxx",
+    "access_mode": "read_only_ssh_verified",
+    "runtime": {
+      "supabase_project_root": "/opt/supabase-project",
+      "web_roots": [
+        "/var/www/pay.915500.xyz",
+        "/var/www/pay-api.915500.xyz",
+        "/var/www/hwh.915500.xyz",
+        "/var/www/hwh-api.915500.xyz"
+      ],
+      "nginx_sites_root": "/etc/nginx/sites-available",
+      "systemd_units": [
+        "/etc/systemd/system/leadfill-smtp-bridge.service"
+      ],
+      "containers": [
+        "supabase-analytics",
+        "supabase-auth",
+        "supabase-db",
+        "supabase-edge-functions",
+        "supabase-kong",
+        "supabase-pooler",
+        "supabase-rest",
+        "supabase-studio"
+      ]
+    },
+    "database_tables_verified": [
+      "auth.audit_log_entries",
+      "auth.identities",
+      "auth.mfa_factors",
+      "auth.refresh_tokens",
+      "auth.sessions",
+      "auth.users",
+      "public.checkout_sessions",
+      "public.entitlements",
+      "public.installations",
+      "public.orders",
+      "public.payments",
+      "public.plans",
+      "public.processed_webhooks",
+      "public.products",
+      "public.usage_counters",
+      "public.webhook_events"
+    ],
+    "auth_and_mail": {
+      "site_url": "https://pay.915500.xyz",
+      "api_external_url": "https://pay-api.915500.xyz",
+      "gotrue_site_url": "https://pay.915500.xyz",
+      "gotrue_uri_allow_list": [
+        "https://pay.915500.xyz/*",
+        "https://hwh.915500.xyz/*",
+        "chrome-extension://*/*"
+      ],
+      "gotrue_mailer_external_hosts": [
+        "pay.915500.xyz",
+        "pay-api.915500.xyz",
+        "hwh.915500.xyz",
+        "hwh-api.915500.xyz"
+      ],
+      "smtp_host_redacted_type": "private_bridge_ip",
+      "smtp_port": 2500,
+      "smtp_sender": "support@915500.xyz",
+      "historical_issue": "supabase-mail:2500 was unresolved inside the auth container",
+      "current_old_env_otp_status": "verified_on_old_server"
+    }
+  },
+  "notes": [
+    "This is a redacted inventory only. It intentionally excludes secrets, private keys, passwords, and unredacted IPs.",
+    "Old environment OTP is currently working after the SMTP bridge fix, but migration still needs a clean California deployment and re-verification."
+  ],
+  "blockers": [
+    "No off-host backup copy has been created in this planning phase yet.",
+    "Final old server expiry date still needs to be recorded."
+  ]
+}

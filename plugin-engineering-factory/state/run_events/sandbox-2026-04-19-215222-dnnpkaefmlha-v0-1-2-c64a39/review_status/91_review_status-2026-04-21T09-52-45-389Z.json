@@ -1,0 +1,100 @@
+{
+  "stage": "REVIEW_STATUS",
+  "status": "passed",
+  "run_id": "sandbox-2026-04-19-215222-dnnpkaefmlha-v0-1-2-c64a39",
+  "run_type": "sandbox_validation",
+  "publisher_id": "7462c8f7-9c1a-48ed-9249-894c0317bd46",
+  "item_id": "dnnpkaefmlhacigijccbhemgaenjbcpk",
+  "checked_at": "2026-04-21T09:52:45.386Z",
+  "status_source": "live_fetch_status",
+  "credentials_present": true,
+  "fetch_status_attempted": true,
+  "fetch_status_succeeded": true,
+  "previous_publish_execution_state": {
+    "execution_mode": "sandbox_validate",
+    "publish_validation_phase": "publish_optional",
+    "publish_response_state": "PENDING_REVIEW",
+    "publish_response_ok": true,
+    "publish_executed": true
+  },
+  "current_dashboard_state": "STAGED",
+  "submitted_revision_status": "STAGED",
+  "published_revision_status": null,
+  "latest_upload_status": "SUCCEEDED",
+  "uploaded_crx_version": "0.1.2",
+  "manifest_version": "0.1.2",
+  "review_state": "STAGED",
+  "review_result": "observed",
+  "review_action": "state_observed",
+  "review_submission_verified": true,
+  "review_cancelled_manually": false,
+  "manual_action_recorded": false,
+  "dashboard_state_confirmed": false,
+  "dashboard_state_unconfirmed": false,
+  "is_pending_review": false,
+  "is_draft": false,
+  "is_approved": false,
+  "is_rejected": false,
+  "is_cancelled": false,
+  "dashboard_action_required": false,
+  "next_step": "inspect dashboard submission state before any further action",
+  "raw_response_summary": {
+    "http_status": 200,
+    "body_keys": [
+      "itemId",
+      "name",
+      "publicKey",
+      "submittedItemRevisionStatus"
+    ],
+    "response_body_summary": {
+      "kind": "object",
+      "body_keys": [
+        "itemId",
+        "name",
+        "publicKey",
+        "submittedItemRevisionStatus"
+      ],
+      "preview": "{\"name\":\"publishers/7462c8f7-9c1a-48ed-9249-894c0317bd46/items/dnnpkaefmlhacigijccbhemgaenjbcpk\",\"itemId\":\"dnnpkaefmlhacigijccbhemgaenjbcpk\",\"publicKey\":\"-----BEGIN PUBLIC KEY-----\\nMIIBIjANBgkqhkiG9w"
+    },
+    "response_headers_summary": {
+      "header_names": [
+        "alt-svc",
+        "content-length",
+        "content-type",
+        "date",
+        "server",
+        "vary",
+        "x-content-type-options",
+        "x-frame-options",
+        "x-xss-protection"
+      ],
+      "sampled": {
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "content-length": "808",
+        "content-type": "application/json; charset=UTF-8",
+        "date": "Tue, 21 Apr 2026 09:52:45 GMT",
+        "server": "ESF",
+        "vary": "Origin, X-Origin, Referer",
+        "x-content-type-options": "nosniff"
+      }
+    }
+  },
+  "network_mode": "proxy",
+  "proxy_configured": true,
+  "proxy_source": "CWS_HTTPS_PROXY",
+  "proxy_url_redacted": "http://127.0.0.1:10110",
+  "failure_phase": null,
+  "failure_reason": null,
+  "diagnostic_hint": null,
+  "credential_type": "service_account",
+  "token_source": "google_application_credentials",
+  "redaction_checks": {
+    "sanitized_response_bodies": true,
+    "checked_secret_value_count": 1,
+    "secret_values_present_in_artifact": false,
+    "authorization_header_pattern_present": false,
+    "key_material_pattern_present": false,
+    "secret_marker_pattern_present": false,
+    "redaction_guard_triggered": false
+  }
+}

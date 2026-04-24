@@ -1,0 +1,28 @@
+{
+  "stage": "PUBLISH_SANDBOX_CI_DRY_CHECK",
+  "status": "passed",
+  "run_id": "sandbox-2026-04-19-215222-dnnpkaefmlha-v0-1-2-c64a39",
+  "action": "sandbox_upload",
+  "run_type_verified": true,
+  "promotion_plan_verified": true,
+  "approval_found": true,
+  "approval_mode": "write_allowed",
+  "approval_write_authorized": true,
+  "package_hash_match": true,
+  "sandbox_item_match": true,
+  "upload_verified": false,
+  "publish_allowed": false,
+  "production_write": false,
+  "would_execute": true,
+  "blocked_reason": null,
+  "next_step": "write_authorized_for_sandbox_upload",
+  "redaction_checks": {
+    "sanitized_response_bodies": true,
+    "checked_secret_value_count": 0,
+    "secret_values_present_in_artifact": false,
+    "authorization_header_pattern_present": false,
+    "key_material_pattern_present": false,
+    "secret_marker_pattern_present": false,
+    "redaction_guard_triggered": false
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "stage": "PRODUCT_CATALOG_V2",
+  "status": "passed",
+  "generated_at": "2026-04-22T08:08:33.209Z",
+  "last_updated_at": "2026-04-24T04:33:09.850Z",
+  "last_updated_by_command": "site:generate-plugin-page",
+  "products": [
+    {
+      "productKey": "leadfill-one-profile",
+      "slug": "leadfill-one-profile",
+      "name": "LeadFill One Profile",
+      "shortName": "LeadFill One",
+      "tagline": "Save once. Fill cleanly.",
+      "oneSentenceValue": "Save one local profile and fill visible lead form fields on the current page in one click.",
+      "category": "Workflow And Form Filling",
+      "targetUser": "Sales reps, recruiters, and operators repeatedly entering the same contact details into web forms.",
+      "version": "0.2.0",
+      "chromeExtensionId": "dnnpkaefmlhacigijccbhemgaenjbcpk",
+      "chromeWebStoreItemId": "dnnpkaefmlhacigijccbhemgaenjbcpk",
+      "chromeWebStoreUrl": "https://chromewebstore.google.com/detail/dnnpkaefmlhacigijccbhemgaenjbcpk",
+      "status": "generated",
+      "siteUrl": "https://pay.915500.xyz",
+      "detailPagePath": "generated/plugin-pages/leadfill-one-profile/index.html",
+      "pricingPagePath": "generated/plugin-pages/leadfill-one-profile/pricing.html",
+      "installUrl": "https://chromewebstore.google.com/detail/dnnpkaefmlhacigijccbhemgaenjbcpk",
+      "supportUrl": "generated/plugin-pages/leadfill-one-profile/account.html",
+      "privacyUrl": "generated/plugin-pages/leadfill-one-profile/privacy.html",
+      "changelogUrl": "generated/plugin-pages/leadfill-one-profile/product.html",
+      "docsUrl": "generated/plugin-pages/leadfill-one-profile/product.html",
+      "paymentProvider": "hwh_waffo",
+      "productKeyOnPaySite": "leadfill-one-profile",
+      "planKeys": [
+        "lifetime"
+      ],
+      "defaultPlanKey": "lifetime",
+      "priceLabel": "$19 lifetime",
+      "freeLimit": 10,
+      "proFeatures": [
+        "Unlimited fills",
+        "Save, edit, and delete one local profile",
+        "Advanced field support for text, email, phone, textarea, and select",
+        "Lifetime access to the current major version"
+      ],
+      "freeFeatures": [
+        "10 free fills",
+        "1 local profile",
+        "Local-only storage",
+        "No cloud sync"
+      ],
+      "featureKeys": [
+        "leadfill_fill_action"
+      ],
+      "checkoutMode": "test",
+      "entitlementStatus": "verified_from_payment_test_mode",
+      "paymentConfigStatus": "test_mode_verified",
+      "listingAssetsPath": "state/run_events/commercial-payment-2026-04-23-203843-leadfill-v0-2-0-b846c2/120_store_listing_release_package/assets",
+      "remotionAssetsPath": "state/run_events/commercial-payment-2026-04-23-203843-leadfill-v0-2-0-b846c2/80_remotion_assets",
+      "marketTestStatus": "preview_ready",
+      "releaseRunId": "commercial-payment-2026-04-23-203843-leadfill-v0-2-0-b846c2",
+      "legacyTestOnlyProductKey": "chatgpt2obsidian",
+      "usingLegacyTestOnlyProductKey": false,
+      "supportEmail": "support@915500.xyz",
+      "smtpStatus": "verified_independent",
+      "otpStatus": "verified",
+      "checkoutStatus": "verified",
+      "webhookStatus": "verified",
+      "consumeUsageStatus": "verified_free_quota_pro",
+      "paymentE2EStatus": "verified_test_mode",
+      "hwhHandoffImportedAt": "2026-04-23T12:38:43.162Z",
+      "productionPaymentStatus": "not_verified",
+      "currentPrimaryEnvironment": "california",
+      "sourceChromeExtensionStatus": "verified"
+    }
+  ]
+}

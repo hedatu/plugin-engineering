@@ -1,0 +1,49 @@
+name: Factory Regression
+
+on:
+  push:
+  workflow_dispatch:
+
+concurrency:
+  group: chrome-extension-factory-${{ github.workflow }}-${{ inputs.run_id || github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  regression:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - id: ids
+        shell: bash
+        run: |
+          echo "smoke_run=smoke-$(date -u +%Y-%m-%d-%H%M%S)-${GITHUB_RUN_ID}" >> "$GITHUB_OUTPUT"
+          echo "tab_run=regression-tab-$(date -u +%Y-%m-%d-%H%M%S)-${GITHUB_RUN_ID}" >> "$GITHUB_OUTPUT"
+          echo "daily_run=regression-daily-$(date -u +%Y-%m-%d-%H%M%S)-${GITHUB_RUN_ID}" >> "$GITHUB_OUTPUT"
+          echo "nogo_run=regression-nogo-$(date -u +%Y-%m-%d-%H%M%S)-${GITHUB_RUN_ID}" >> "$GITHUB_OUTPUT"
+      - run: xvfb-run -a npm run smoke -- --run-id ${{ steps.ids.outputs.smoke_run }}
+      - run: xvfb-run -a npm run daily:tab -- --run-id ${{ steps.ids.outputs.tab_run }}
+      - run: xvfb-run -a npm run daily -- --run-id ${{ steps.ids.outputs.daily_run }}
+      - run: npm run daily:no-go -- --run-id ${{ steps.ids.outputs.nogo_run }}
+      - run: xvfb-run -a npm run repair:from-run -- --run runs/${{ steps.ids.outputs.tab_run }} --from BROWSER_SMOKE_AND_CAPTURE --repair-immutable-copy
+      - run: npm run repair:from-run -- --run runs/${{ steps.ids.outputs.daily_run }} --from EXECUTE_PUBLISH_PLAN --repair-immutable-copy
+      - shell: bash
+        run: |
+          cat > regression-summary.json <<'JSON'
+          {
+            "tab_run": "${{ steps.ids.outputs.tab_run }}",
+            "daily_run": "${{ steps.ids.outputs.daily_run }}",
+            "nogo_run": "${{ steps.ids.outputs.nogo_run }}"
+          }
+          JSON
+      - uses: actions/upload-artifact@v4
+        with:
+          name: factory-regression-close-run
+          path: |
+            runs/*/99_close_run.json
+            regression-summary.json

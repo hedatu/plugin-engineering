@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "stage",
+    "status",
+    "generated_at",
+    "total_cases",
+    "passed_cases",
+    "failed_cases",
+    "precision_estimate",
+    "false_positive_cases",
+    "false_negative_cases",
+    "scoring_drift",
+    "recommended_threshold_changes"
+  ],
+  "properties": {
+    "stage": { "type": "string", "enum": ["DISCOVERY_BENCHMARK"] },
+    "status": { "type": "string", "enum": ["passed", "failed"] },
+    "generated_at": { "type": "string" },
+    "total_cases": { "type": "integer" },
+    "passed_cases": { "type": "integer" },
+    "failed_cases": { "type": "integer" },
+    "precision_estimate": { "type": "number" },
+    "false_positive_cases": { "type": "array", "items": { "type": "object" } },
+    "false_negative_cases": { "type": "array", "items": { "type": "object" } },
+    "scoring_drift": { "type": "array", "items": { "type": "object" } },
+    "recommended_threshold_changes": { "type": "array", "items": { "type": "string" } }
+  }
+}

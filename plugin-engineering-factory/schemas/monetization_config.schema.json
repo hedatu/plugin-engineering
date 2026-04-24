@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "product_id",
+    "product_name",
+    "extension_id",
+    "pricing_model",
+    "free_limit",
+    "price_label",
+    "upgrade_url",
+    "license_verify_url",
+    "license_activate_url",
+    "support_email",
+    "pro_features",
+    "free_features",
+    "local_only_claim",
+    "payment_provider",
+    "checkout_mode",
+    "entitlement_cache_ttl_hours",
+    "offline_grace_hours",
+    "privacy_disclosure_required"
+  ],
+  "properties": {
+    "product_id": { "type": "string", "minLength": 1 },
+    "product_name": { "type": "string", "minLength": 1 },
+    "extension_id": { "type": "string", "minLength": 1 },
+    "pricing_model": { "type": "string", "minLength": 1 },
+    "free_limit": {
+      "type": "object",
+      "required": ["amount", "unit", "scope"],
+      "properties": {
+        "amount": { "type": "integer", "minimum": 0 },
+        "unit": { "type": "string", "minLength": 1 },
+        "scope": { "type": "string", "minLength": 1 }
+      }
+    },
+    "price_label": { "type": "string", "minLength": 1 },
+    "upgrade_url": { "type": "string", "minLength": 1 },
+    "license_verify_url": { "type": "string", "minLength": 1 },
+    "license_activate_url": { "type": "string", "minLength": 1 },
+    "support_email": { "type": "string", "minLength": 1 },
+    "pro_features": { "type": "array", "items": { "type": "string" } },
+    "free_features": { "type": "array", "items": { "type": "string" } },
+    "local_only_claim": { "type": "boolean" },
+    "payment_provider": {
+      "type": "string",
+      "enum": [
+        "stripe_payment_link",
+        "stripe_checkout",
+        "lemon_squeezy",
+        "extensionpay",
+        "manual_license",
+        "pay_site_supabase_waffo"
+      ]
+    },
+    "checkout_mode": {
+      "type": "string",
+      "enum": ["disabled", "test", "live"]
+    },
+    "entitlement_cache_ttl_hours": { "type": "integer", "minimum": 0 },
+    "offline_grace_hours": { "type": "integer", "minimum": 0 },
+    "privacy_disclosure_required": { "type": "boolean" }
+  }
+}

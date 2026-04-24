@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "stage",
+    "generated_at",
+    "package_dir",
+    "file_count",
+    "self_hash_strategy",
+    "files"
+  ],
+  "properties": {
+    "stage": {
+      "type": "string",
+      "enum": ["STORE_LISTING_RELEASE_PACKAGE_V2"]
+    },
+    "generated_at": { "type": "string" },
+    "package_dir": { "type": "string" },
+    "file_count": { "type": "integer" },
+    "self_hash_strategy": { "type": "string" },
+    "files": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["relative_path", "sha256", "size_bytes", "category"],
+        "properties": {
+          "relative_path": { "type": "string" },
+          "sha256": { "type": "string" },
+          "size_bytes": { "type": "integer" },
+          "category": { "type": "string" }
+        }
+      }
+    }
+  }
+}

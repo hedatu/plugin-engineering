@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["stage", "status", "candidate_count", "entries", "next_step", "redaction_checks"],
+  "properties": {
+    "stage": { "type": "string", "enum": ["MONEY_FIRST_BUILD_GATE"] },
+    "status": { "type": "string", "enum": ["passed", "failed"] },
+    "candidate_count": { "type": "integer" },
+    "entries": { "type": "array", "items": { "type": "object" } },
+    "next_step": { "type": "string" },
+    "redaction_checks": { "type": "object" }
+  }
+}

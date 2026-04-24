@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "stage",
+    "status",
+    "reviewed_at",
+    "builders",
+    "redaction_checks"
+  ],
+  "properties": {
+    "stage": { "type": "string", "enum": ["BUILDER_ROADMAP_EVALUATION"] },
+    "status": { "type": "string", "enum": ["passed", "failed"] },
+    "builders": { "type": "array", "items": { "type": "object" } },
+    "redaction_checks": { "type": "object" }
+  }
+}

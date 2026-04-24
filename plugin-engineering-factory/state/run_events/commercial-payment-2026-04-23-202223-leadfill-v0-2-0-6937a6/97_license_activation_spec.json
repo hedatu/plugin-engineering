@@ -1,0 +1,21 @@
+{
+  "stage": "LICENSE_ACTIVATION_SPEC",
+  "status": "passed",
+  "candidate_name": "LeadFill One Profile",
+  "wedge_name": "Save one local profile and fill visible lead form fields on the current page in one click.",
+  "storage_fields": [
+    "membership.installationId",
+    "membership.session",
+    "membership.entitlement.<productKey>",
+    "membership.usage.<productKey>.<featureKey>"
+  ],
+  "redaction_checks": {
+    "sanitized_response_bodies": true,
+    "checked_secret_value_count": 1,
+    "secret_values_present_in_artifact": false,
+    "authorization_header_pattern_present": false,
+    "key_material_pattern_present": false,
+    "secret_marker_pattern_present": false,
+    "redaction_guard_triggered": false
+  }
+}

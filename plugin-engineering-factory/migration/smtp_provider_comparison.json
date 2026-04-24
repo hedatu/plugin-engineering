@@ -1,0 +1,94 @@
+{
+  "generated_at": "2026-04-23T15:54:46.4411578+08:00",
+  "recommended_provider": "resend",
+  "recommended_reason": "Resend is the current cutover choice for California HWH Auth because the user selected it, notify.915500.xyz is verified in Resend, and California OTP E2E now passes on smtp.resend.com port 2587 without the old SMTP relay. DMARC is still recommended for deliverability.",
+  "providers": [
+    {
+      "name": "Postmark",
+      "setup_time": "fast",
+      "cost": "Basic starts at $15/month for 10,000 emails, with $1.80 per 1,000 extra emails; Pro starts at $16.50/month.",
+      "deliverability": "High for transactional email; Postmark separates transactional and broadcast streams and emphasizes deliverability.",
+      "china_accessibility": "Manual mainland operator test still required. Inference: dashboard access can vary by local network, but California SMTP delivery path is standard.",
+      "global_accessibility": "strong",
+      "domain_verification_requirement": "Requires a verified sender signature or verified sending domain; domain verification is recommended.",
+      "smtp_compatibility": "strong: smtp.postmarkapp.com on ports 25, 2525, or 587; SMTP token or server token supported.",
+      "notes": "Best balance for a low-volume commercial auth stack that mainly sends OTP and magic-link traffic.",
+      "official_sources": [
+        "https://postmarkapp.com/pricing",
+        "https://postmarkapp.com/support/article/811-what-are-the-smtp-details-api-tokens-i-should-be-using",
+        "https://postmarkapp.com/support/article/1008-what-are-the-account-and-server-api-tokens",
+        "https://postmarkapp.com/support/article/integrating-postmark-with-supabase-via-smtp",
+        "https://postmarkapp.com/support/article/1046-how-do-i-verify-a-domain",
+        "https://supabase.com/docs/guides/auth/auth-smtp"
+      ]
+    },
+    {
+      "name": "Resend",
+      "setup_time": "fast",
+      "cost": "Free plan includes 100 emails/day; paid plans include SMTP relay and custom domains, with overage pricing described in Resend pricing and changelog docs.",
+      "deliverability": "Good developer-focused option, but SMTP diagnostics are thinner because Resend notes it does not currently expose SMTP server logs.",
+      "china_accessibility": "Manual mainland operator test still required. Inference: likely usable from California, but dashboard reachability from mainland is not guaranteed.",
+      "global_accessibility": "strong",
+      "domain_verification_requirement": "Requires a verified domain before SMTP sending.",
+      "smtp_compatibility": "strong: smtp.resend.com with ports 25, 465, 587, 2465, or 2587; username is resend and password is an API key.",
+      "notes": "Chosen provider for the current California SMTP cutover. notify.915500.xyz is verified and California OTP E2E passes on Resend alternate SMTP port 2587 because standard SMTP ports are blocked from the droplet.",
+      "official_sources": [
+        "https://resend.com/pricing",
+        "https://resend.com/changelog/pay-as-you-go-pricing",
+        "https://resend.com/docs/send-with-smtp",
+        "https://resend.com/docs/dashboard/domains/introduction",
+        "https://supabase.com/docs/guides/auth/auth-smtp"
+      ]
+    },
+    {
+      "name": "Mailgun",
+      "setup_time": "medium",
+      "cost": "Basic starts at $15/month for 10,000 emails; Foundation starts at $35/month for 50,000 emails.",
+      "deliverability": "Strong feature set and regional hosting options, but heavier platform surface area than HWH currently needs.",
+      "china_accessibility": "Manual mainland operator test still required. Inference: California server sending should be fine, but operator-side dashboard access varies by network.",
+      "global_accessibility": "strong",
+      "domain_verification_requirement": "Production use requires a verified custom domain.",
+      "smtp_compatibility": "strong: smtp.mailgun.org with domain-specific SMTP credentials.",
+      "notes": "Viable if broader email tooling or EU/US data-region controls become important.",
+      "official_sources": [
+        "https://www.mailgun.com/pricing/",
+        "https://documentation.mailgun.com/docs/mailgun/user-manual/domains/domains-verify",
+        "https://documentation.mailgun.com/docs/mailgun/user-manual/smtp-protocol/smtp-relay",
+        "https://supabase.com/docs/guides/auth/auth-smtp"
+      ]
+    },
+    {
+      "name": "SendGrid",
+      "setup_time": "medium",
+      "cost": "Pricing is volume-based with a free trial; SMTP and API are available across Email API plans.",
+      "deliverability": "Mature platform, but operational setup is more involved and domain authentication needs extra care.",
+      "china_accessibility": "Manual mainland operator test still required. Inference: no provider-side guarantee for operator console reachability from mainland networks.",
+      "global_accessibility": "strong",
+      "domain_verification_requirement": "Domain authentication is recommended for deliverability and needed for reliable sending.",
+      "smtp_compatibility": "strong: SMTP is supported across Email API plans.",
+      "notes": "Usable, but the current cutover path is Resend rather than SendGrid.",
+      "official_sources": [
+        "https://sendgrid.com/en-us/pricing",
+        "https://support.sendgrid.com/hc/en-us/articles/17404397687323-Twilio-SendGrid-Support-Deliverability-Guide",
+        "https://supabase.com/docs/guides/auth/auth-smtp"
+      ]
+    },
+    {
+      "name": "Amazon SES",
+      "setup_time": "slow",
+      "cost": "Pay-as-you-go and usually the cheapest at scale, but it adds IAM, regional SMTP credentials, identity verification, and sandbox-lift steps.",
+      "deliverability": "Strong when configured well, but more operationally complex than the current HWH staging need.",
+      "china_accessibility": "Manual mainland operator test still required. Inference: AWS console reachability and account operations depend on the operator network.",
+      "global_accessibility": "strong",
+      "domain_verification_requirement": "Requires verified identities; in SES sandbox you also must verify recipient addresses.",
+      "smtp_compatibility": "strong after setup: SMTP credentials are region-specific and separate from normal AWS credentials.",
+      "notes": "Best cost option later if volume grows, but not the fastest blocker-removal path now.",
+      "official_sources": [
+        "https://aws.amazon.com/ses/pricing/",
+        "https://docs.aws.amazon.com/ses/latest/dg/verify-addresses-and-domains.html",
+        "https://docs.aws.amazon.com/ses/latest/dg/smtp-credentials.html",
+        "https://supabase.com/docs/guides/auth/auth-smtp"
+      ]
+    }
+  ]
+}

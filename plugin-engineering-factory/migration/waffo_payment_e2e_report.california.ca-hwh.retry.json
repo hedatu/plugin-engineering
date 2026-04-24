@@ -1,0 +1,28 @@
+{
+  "generated_at": "2026-04-23T11:10:34.7509922+08:00",
+  "retry_executed": true,
+  "dashboard_target_manually_confirmed": false,
+  "dashboard_target_effectively_verified_by_paid_event": true,
+  "checkout_session_created": true,
+  "session_id": "cs_6566cb90-062e-0f9d-7863-39203265e517",
+  "local_order_id": "ord_1776912964691_ddb727d5",
+  "waffo_test_payment_completed": true,
+  "webhook_received": true,
+  "webhook_signature_verified": true,
+  "event_type": "order.completed",
+  "event_id": "PAY_0adLohkJYNiExote8KDSWQ",
+  "processed_webhook_delta": 1,
+  "webhook_event_delta": 1,
+  "order_status": "completed",
+  "payment_status": "completed",
+  "entitlement_status": "active",
+  "get_entitlement_active": true,
+  "consume_usage_pro_passed": true,
+  "final_status": "verified",
+  "blocker": null,
+  "notes": [
+    "A real LeadFill paid order.completed event reached California staging at ca-hwh-api, not just the generic verification ping.",
+    "The webhook signature verified successfully and wrote orders, payments, and a purchase-derived active entitlement.",
+    "Source=chrome_extension still requires a real plugin-client follow-up and remains tracked separately."
+  ]
+}

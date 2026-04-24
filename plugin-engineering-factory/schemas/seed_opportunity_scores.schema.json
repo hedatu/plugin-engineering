@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "stage",
+    "status",
+    "run_id",
+    "total_ranked_candidates",
+    "build_ready_count",
+    "research_more_count",
+    "skip_count",
+    "ranked_opportunities",
+    "next_step",
+    "redaction_checks"
+  ],
+  "properties": {
+    "stage": { "type": "string", "enum": ["SEED_OPPORTUNITY_SCORES"] },
+    "status": { "type": "string", "enum": ["passed", "failed"] },
+    "run_id": { "type": "string" },
+    "total_ranked_candidates": { "type": "integer" },
+    "build_ready_count": { "type": "integer" },
+    "research_more_count": { "type": "integer" },
+    "skip_count": { "type": "integer" },
+    "ranked_opportunities": { "type": "array", "items": { "type": "object" } },
+    "next_step": { "type": "string" },
+    "redaction_checks": { "type": "object" }
+  }
+}

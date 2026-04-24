@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "stage",
+    "status",
+    "source_run_id",
+    "query_count",
+    "search_seeds",
+    "next_step",
+    "redaction_checks"
+  ],
+  "properties": {
+    "stage": { "type": "string", "enum": ["LOW_OVERLAP_SEARCH_MAP"] },
+    "status": { "type": "string", "enum": ["passed", "failed"] },
+    "source_run_id": { "type": "string" },
+    "query_count": { "type": "integer", "minimum": 30 },
+    "search_seeds": { "type": "array", "minItems": 30, "items": { "type": "object" } },
+    "next_step": { "type": "string" },
+    "redaction_checks": { "type": "object" }
+  }
+}

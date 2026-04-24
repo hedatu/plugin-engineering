@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "product_name_working",
+    "wedge_family",
+    "single_purpose_statement",
+    "target_user",
+    "trigger_moment",
+    "core_workflow",
+    "must_have_features",
+    "non_goals",
+    "permission_budget",
+    "data_handling_summary",
+    "ui_surface",
+    "success_criteria",
+    "positioning",
+    "screenshot_angles",
+    "listing_summary_seed"
+  ]
+}
+

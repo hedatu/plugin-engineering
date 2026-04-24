@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["stage", "status", "top_money_first_opportunities", "next_human_decision", "redaction_checks"],
+  "properties": {
+    "stage": { "type": "string", "enum": ["MONEY_FIRST_OPS_REPORT"] },
+    "status": { "type": "string", "enum": ["passed", "failed"] },
+    "top_money_first_opportunities": { "type": "array", "items": { "type": "object" } },
+    "next_human_decision": { "type": "string" },
+    "redaction_checks": { "type": "object" }
+  }
+}

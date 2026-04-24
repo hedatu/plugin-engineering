@@ -1,0 +1,32 @@
+{
+  "stage": "SANDBOX_PREFLIGHT",
+  "status": "passed",
+  "run_id": "sandbox-2026-04-19-145131-dnnpkaefmlha-1acd61",
+  "run_type": "sandbox_validation",
+  "source_run_id": "2026-04-19-145118-daily-4df0e2",
+  "item_id": "dnnpkaefmlhacigijccbhemgaenjbcpk",
+  "publisher_id": "7462c8f7-9c1a-48ed-9249-894c0317bd46",
+  "package_sha256": "448daa21629907ff19335455fe90b63c140496fa478bad96986e38b2d85bdc6b",
+  "manifest_version": "0.1.0",
+  "immutable_run_verified": true,
+  "promotion_plan_verified": true,
+  "listing_package_verified": true,
+  "browser_smoke_verified": true,
+  "screenshot_manifest_verified": true,
+  "policy_gate_verified": true,
+  "write_approval_present": false,
+  "write_approval_valid": false,
+  "upload_allowed": false,
+  "publish_allowed": false,
+  "next_step": "write_approval_required_before_sandbox_upload",
+  "blockers": [],
+  "redaction_checks": {
+    "sanitized_response_bodies": true,
+    "checked_secret_value_count": 0,
+    "secret_values_present_in_artifact": false,
+    "authorization_header_pattern_present": false,
+    "key_material_pattern_present": false,
+    "secret_marker_pattern_present": false,
+    "redaction_guard_triggered": false
+  }
+}

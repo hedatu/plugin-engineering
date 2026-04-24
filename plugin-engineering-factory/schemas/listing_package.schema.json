@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "stage",
+    "status",
+    "publish_intent",
+    "candidate_id",
+    "package_dir",
+    "package_zip",
+    "included_files"
+  ],
+  "properties": {
+    "stage": {
+      "type": "string",
+      "enum": ["PREPARE_LISTING_PACKAGE"]
+    },
+    "status": {
+      "type": "string",
+      "enum": ["passed", "skipped"]
+    },
+    "publish_intent": {
+      "type": "string",
+      "enum": ["archive_no_publish", "draft_only", "publish_ready"]
+    },
+    "candidate_id": {
+      "type": ["string", "null"]
+    },
+    "package_dir": {
+      "type": "string",
+      "minLength": 1
+    },
+    "package_zip": {
+      "type": "string"
+    },
+    "included_files": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

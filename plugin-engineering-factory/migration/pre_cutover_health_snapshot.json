@@ -1,0 +1,83 @@
+{
+  "captured_at": "2026-04-23T19:47:00+08:00",
+  "snapshot_scope": "cutover_followup_pre_report",
+  "note": "This follow-up started after the DNS cutover had already been executed. The canonical pre-DNS snapshot remains migration/pre_cutover_dns_snapshot.json captured at 2026-04-23T18:44:25.4428947+08:00. No old-server service was stopped and no old-server data was deleted in this follow-up.",
+  "california": {
+    "server": "do-mini-sfo3-01",
+    "ip": "134.199.226.198",
+    "role": "primary_factory_server",
+    "caddy_status": "active",
+    "caddy_config_valid": true,
+    "pay_site_https_status": 200,
+    "pay_api_root_status": 401,
+    "pay_api_webhook_get_status": 405,
+    "ca_hwh_https_status": 200,
+    "ca_hwh_api_webhook_get_status": 405,
+    "auth_container_status": "running_healthy",
+    "kong_container_status": "running_healthy",
+    "functions_container_status": "running",
+    "db_container_status": "running_healthy",
+    "public_port_reachability": {
+      "22": true,
+      "443": true,
+      "5432": false,
+      "8000": false
+    },
+    "firewall": {
+      "ufw_active": true,
+      "default_incoming": "deny",
+      "allowed_tcp_ports": [
+        22,
+        80,
+        443
+      ]
+    },
+    "memory": {
+      "ram_total_mb": 961,
+      "ram_available_mb": 382,
+      "swap_total_mb": 2047,
+      "swap_used_mb": 243,
+      "low_memory_server": true,
+      "risk_status": "user_accepted_temporary_risk"
+    }
+  },
+  "old_server": {
+    "server_alias": "bwg-166",
+    "ip_redacted": "45.62.xxx.xxx",
+    "last_inventory_source": "migration/backups/old_server/20260422-195340/remote/config/old_server_inventory.redacted.json",
+    "last_inventory_generated_at": "2026-04-22T19:30:00+08:00",
+    "current_health_rechecked_this_followup": false,
+    "services_stopped": false,
+    "data_deleted": false,
+    "note": "The old server was not modified during this cutover follow-up."
+  },
+  "handoff_status": {
+    "path": "D:/code/支付网站设计模块/plugin-membership-supabase-waffo-design/docs/leadfill_hwh_integration_handoff.json",
+    "current_primary_environment": "california",
+    "smtp_status": "verified_independent",
+    "otp_status": "verified",
+    "checkout_status": "verified",
+    "webhook_status": "verified",
+    "entitlement_status": "verified_from_payment",
+    "consume_usage_status": "verified_free_quota_pro",
+    "source_chrome_extension_status": "verified",
+    "production_payment_status": "not_verified"
+  },
+  "dns_cutover_gate_status": {
+    "path": "migration/dns_cutover_gate.json",
+    "status": "cutover_completed_with_accepted_risk",
+    "cutover_completed": true,
+    "blockers": [],
+    "accepted_risks": [
+      "low_memory_server"
+    ]
+  },
+  "safety": {
+    "chrome_upload_executed": false,
+    "chrome_publish_executed": false,
+    "production_payment_executed": false,
+    "production_payment_enabled": false,
+    "secrets_printed": false,
+    "secrets_written_to_repo": false
+  }
+}

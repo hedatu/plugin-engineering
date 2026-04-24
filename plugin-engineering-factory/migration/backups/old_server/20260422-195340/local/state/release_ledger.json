@@ -1,0 +1,2883 @@
+{
+  "stage": "RELEASE_LEDGER",
+  "status": "passed",
+  "generated_at": "2026-04-21T11:56:48.452Z",
+  "entries": [
+    {
+      "ledger_entry_id": "ledger-sandbox_publish_optional-1776579056350-6d3c4c",
+      "run_id": "recovered-2026-04-19-sandbox-publish-optional-dnnpka",
+      "item_id": "dnnpkaefmlhacigijccbhemgaenjbcpk",
+      "publisher_id": "7462c8f7-9c1a-48ed-9249-894c0317bd46",
+      "item_name": null,
+      "package_sha256": "",
+      "manifest_version": null,
+      "action_type": "sandbox_publish_optional",
+      "action_source": "api",
+      "action_status": "PENDING_REVIEW",
+      "occurred_at": "2026-04-19T06:10:56.346Z",
+      "evidence_artifacts": [],
+      "evidence_hashes": {},
+      "chrome_webstore_response_summary": null,
+      "dashboard_manual_note": "Recovered manual record for sandbox publish_optional that was overwritten by fixed run id before immutability was implemented",
+      "approved_by": null,
+      "approval_artifact": null,
+      "production_write": false,
+      "sandbox_only": true,
+      "evidence_quality": "manual_reconstructed",
+      "original_artifact_available": false,
+      "recovery_reason": "fixed_run_id_overwrite",
+      "redaction_checks": {
+        "sanitized_response_bodies": true,
+        "checked_secret_value_count": 0,
+        "secret_values_present_in_artifact": false,
+        "authorization_header_pattern_present": false,
+        "key_material_pattern_present": false,
+        "secret_marker_pattern_present": false,
+        "redaction_guard_triggered": false
+      }
+    },
+    {
+      "ledger_entry_id": "ledger-manual_cancel_review-1776579056477-7ef4ef",
+      "run_id": "recovered-2026-04-19-sandbox-publish-optional-dnnpka",
+      "item_id": "dnnpkaefmlhacigijccbhemgaenjbcpk",
+      "publisher_id": "7462c8f7-9c1a-48ed-9249-894c0317bd46",
+      "item_name": null,
+      "package_sha256": "",
+      "manifest_version": null,
+      "action_type": "manual_cancel_review",
+      "action_source": "dashboard_manual",
+      "action_status": "observed",
+      "occurred_at": "2026-04-19T06:10:56.477Z",
+      "evidence_artifacts": [],
+      "evidence_hashes": {},
+      "chrome_webstore_response_summary": null,
+      "dashboard_manual_note": "User cancelled Chrome Web Store review from dashboard",
+      "approved_by": null,
+      "approval_artifact": null,
+      "production_write": false,
+      "sandbox_only": true,
+      "evidence_quality": "manual_record",
+      "original_artifact_available": true,
+      "recovery_reason": null,
+      "redaction_checks": {
+        "sanitized_response_bodies": true,
+        "checked_secret_value_count": 0,
+        "secret_values_present_in_artifact": false,
+        "authorization_header_pattern_present": false,
+        "key_material_pattern_present": false,
+        "secret_marker_pattern_present": false,
+        "redaction_guard_triggered": false
+      }
+    },
+    {
+      "ledger_entry_id": "ledger-manual_cancel_review-1776579114275-8c2881",
+      "run_id": "recovered-2026-04-19-sandbox-publish-optional-dnnpka",
+      "item_id": "dnnpkaefmlhacigijccbhemgaenjbcpk",
+      "publisher_id": "7462c8f7-9c1a-48ed-9249-894c0317bd46",
+      "item_name": null,
+      "package_sha256": "",
+      "manifest_version": null,
+      "action_type": "manual_cancel_review",
+      "action_source": "dashboard_manual",
+      "action_status": "observed",
+      "occurred_at": "2026-04-19T06:11:54.273Z",
+      "evidence_artifacts": [],
+      "evidence_hashes": {},
+      "chrome_webstore_response_summary": null,
+      "dashboard_manual_note": "User cancelled Chrome Web Store review from dashboard",
+      "approved_by": null,
+      "approval_artifact": null,
+      "production_write": false,
+      "sandbox_only": true,
+      "evidence_quality": "manual_record",
+      "original_artifact_available": true,
+      "recovery_reason": null,
+      "redaction_checks": {
+        "sanitized_response_bodies": true,
+        "checked_secret_value_count": 0,
+        "secret_values_present_in_artifact": false,
+        "authorization_header_pattern_present": false,
+        "key_material_pattern_present": false,
+        "secret_marker_pattern_present": false,
+        "redaction_guard_triggered": false
+      }
+    },
+    {
+      "ledger_entry_id": "ledger-manual_cancel_review-1776579186214-7ff2fb",
+      "run_id": "recovered-2026-04-19-sandbox-publish-optional-dnnpka",
+      "item_id": "dnnpkaefmlhacigijccbhemgaenjbcpk",
+      "publisher_id": "7462c8f7-9c1a-48ed-9249-894c0317bd46",
+      "item_name": null,
+      "package_sha256": "",
+      "manifest_version": null,
+      "action_type": "manual_cancel_review",
+      "action_source": "dashboard_manual",
+      "action_status": "observed",
+      "occurred_at": "2026-04-19T06:13:06.213Z",
+      "evidence_artifacts": [],
+      "evidence_hashes": {},
+      "chrome_webstore_response_summary": null,
+      "dashboard_manual_note": "User cancelled Chrome Web Store review from dashboard",
+      "approved_by": null,
+      "approval_artifact": null,
+      "production_write": false,
+      "sandbox_only": true,
+      "evidence_quality": "manual_reconstructed",
+      "original_artifact_available": false,
+      "recovery_reason": "fixed_run_id_overwrite",
+      "redaction_checks": {
+        "sanitized_response_bodies": true,
+        "checked_secret_value_count": 0,
+        "secret_values_present_in_artifact": false,
+        "authorization_header_pattern_present": false,
+        "key_material_pattern_present": false,
+        "secret_marker_pattern_present": false,
+        "redaction_guard_triggered": false
+      }
+    },
+    {
+      "ledger_entry_id": "ledger-promote_to_sandbox_validation-1776581491776-a7ca3c",
+      "run_id": "sandbox-2026-04-19-145131-dnnpkaefmlha-1acd61",
+      "source_run_id": "2026-04-19-145118-daily-4df0e2",
+      "sandbox_run_id": "sandbox-2026-04-19-145131-dnnpkaefmlha-1acd61",
+      "item_id": "dnnpkaefmlhacigijccbhemgaenjbcpk",
+      "publisher_id": "7462c8f7-9c1a-48ed-9249-894c0317bd46",
+      "item_name": "Lead Form Helper",
+      "package_sha256": "448daa21629907ff19335455fe90b63c140496fa478bad96986e38b2d85bdc6b",
+      "manifest_version": "0.1.0",
+      "action_type": "promote_to_sandbox_validation",
+      "action_source": "cli",
+      "action_status": "passed",
+      "occurred_at": "2026-04-19T06:51:31.736Z",
+      "evidence_artifacts": [
+        "runs/sandbox-2026-04-19-145131-dnnpkaefmlha-1acd61/83_sandbox_validation_plan.json"
+      ],
+      "evidence_hashes": {
+        "runs/sandbox-2026-04-19-145131-dnnpkaefmlha-1acd61/83_sandbox_validation_plan.json": "deb1c47cb89d3da917637437758a0c16d47194772aa1e8963afd78a620cae1d3"
+      },
+      "chrome_webstore_response_summary": null,
+      "dashboard_manual_note": null,
+      "approved_by": null,
+      "approval_artifact": null,
+      "production_write": false,
+      "sandbox_only": true,
+      "evidence_quality": "direct_artifact",
+      "original_artifact_available": true,
+      "recovery_reason": null,
+      "redaction_checks": {
+        "sanitized_response_bodies": true,
+        "checked_secret_value_count": 0,
+        "secret_values_present_in_artifact": false,
+        "authorization_header_pattern_present": false,
+        "key_material_pattern_present": false,
+        "secret_marker_pattern_present": false,
+        "redaction_guard_triggered": false
+      }
+    },
+    {
+      "ledger_entry_id": "ledger-sandbox_upload_approval-1776581509783-c7ebbe",
+      "run_id": "sandbox-2026-04-19-145131-dnnpkaefmlha-1acd61",
+      "source_run_id": "2026-04-19-145118-daily-4df0e2",
+      "sandbox_run_id": "sandbox-2026-04-19-145131-dnnpkaefmlha-1acd61",
+      "item_id": "dnnpkaefmlhacigijccbhemgaenjbcpk",
+      "publisher_id": "7462c8f7-9c1a-48ed-9249-894c0317bd46",
+      "item_name": null,
+      "package_sha256": "448daa21629907ff19335455fe90b63c140496fa478bad96986e38b2d85bdc6b",
+      "manifest_version": "0.1.0",
+      "action_type": "sandbox_upload_approval",
+      "action_source": "cli",
+      "action_status": "approved",
+      "occurred_at": "2026-04-19T06:51:49.781Z",
+      "evidence_artifacts": [
+        "state/run_events/sandbox-2026-04-19-145131-dnnpkaefmlha-1acd61/82_human_approval.json"
+      ],
+      "evidence_hashes": {
+        "state/run_events/sandbox-2026-04-19-145131-dnnpkaefmlha-1acd61/82_human_approval.json": "d67eb98072c33ec857694e4ba1667660940093fcd11c1565e741f8c8c0588298"
+      },
+      "chrome_webstore_response_summary": null,
+      "dashboard_manual_note": null,
+      "approved_by": "TMT2",
+      "approval_artifact": "state/run_events/sandbox-2026-04-19-145131-dnnpkaefmlha-1acd61/82_human_approval.json",
+      "production_write": false,
+      "sandbox_only": true,
+      "evidence_quality": "direct_artifact",
+      "original_artifact_available": true,
+      "recovery_reason": null,
+      "redaction_checks": {
+        "sanitized_response_bodies": true,
+        "checked_secret_value_count": 0,
+        "secret_values_present_in_artifact": false,
+        "authorization_header_pattern_present": false,
+        "key_material_pattern_present": false,
+        "secret_marker_pattern_present": false,
+        "redaction_guard_triggered": false
+      }
+    },
+    {
+      "ledger_entry_id": "ledger-fetch_status-1776582601315-901e9c",
+      "run_id": "sandbox-2026-04-19-145131-dnnpkaefmlha-1acd61",
+      "source_run_id": null,
+      "sandbox_run_id": null,
+      "item_id": "dnnpkaefmlhacigijccbhemgaenjbcpk",
+      "publisher_id": "7462c8f7-9c1a-48ed-9249-894c0317bd46",
+      "item_name": "Lead Form Helper",
+      "package_sha256": "448daa21629907ff19335455fe90b63c140496fa478bad96986e38b2d85bdc6b",
+      "manifest_version": null,
+      "action_type": "fetch_status",
+      "action_source": "cli",
+      "action_status": "passed",
+      "occurred_at": "2026-04-19T07:10:01.313Z",
+      "evidence_artifacts": [
+        "state/run_events/sandbox-2026-04-19-145131-dnnpkaefmlha-1acd61/90_publish_execution.json"
+      ],
+      "evidence_hashes": {
+        "state/run_events/sandbox-2026-04-19-145131-dnnpkaefmlha-1acd61/90_publish_execution.json": "2951ed26a6b141824bd0d424186353296fee5339653685a8f55b11d4bf018511"
+      },
+      "chrome_webstore_response_summary": {
+        "executed": true,
+        "ok": true,
+        "status_code": 200,
+        "http_status": 200,
+        "skipped": false,
+        "body_keys": [
+          "itemId",
+          "name",
+          "publicKey",
+          "submittedItemRevisionStatus"
+        ],
+        "response_body_summary": {
+          "kind": "object",
+          "body_keys": [
+            "itemId",
+            "name",
+            "publicKey",
+            "submittedItemRevisionStatus"
+          ],
+          "preview": "{\"name\":\"publishers/7462c8f7-9c1a-48ed-9249-894c0317bd46/items/dnnpkaefmlhacigijccbhemgaenjbcpk\",\"itemId\":\"dnnpkaefmlhacigijccbhemgaenjbcpk\",\"publicKey\":\"-----BEGIN PUBLIC KEY-----\\nMIIBIjANBgkqhkiG9w"
+        },
+        "response_headers_summary": {
+          "header_names": [
+            "alt-svc",
+            "content-length",
+            "content-type",
+            "date",
+            "server",
+            "vary",
+            "x-content-type-options",
+            "x-frame-options",
+            "x-xss-protection"
+          ],
+          "sampled": {
+            "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+            "content-length": "811",
+            "content-type": "application/json; charset=UTF-8",
+            "date": "Sun, 19 Apr 2026 07:10:01 GMT",
+            "server": "ESF",
+            "vary": "Origin, X-Origin, Referer",
+            "x-content-type-options": "nosniff"
+          }
+        },
+        "error_details": null
+      },
+      "dashboard_manual_note": null,
+      "approved_by": null,
+      "approval_artifact": "state/run_events/sandbox-2026-04-19-145131-dnnpkaefmlha-1acd61/82_human_approval.json",
+      "production_write": false,
+      "sandbox_only": true,
+      "evidence_quality": "direct_artifact",
+      "original_artifact_available": true,
+      "recovery_reason": null,
+      "redaction_checks": {
+        "sanitized_response_bodies": true,
+        "checked_secret_value_count": 1,
+        "secret_values_present_in_artifact": false,
+        "authorization_header_pattern_present": false,
+        "key_material_pattern_present": false,
+        "secret_marker_pattern_present": false,
+        "redaction_guard_triggered": false
+      }
+    },
+    {
+      "ledger_entry_id": "ledger-fetch_status-1776582699342-cf9b71",
+      "run_id": "sandbox-2026-04-19-145131-dnnpkaefmlha-1acd61",
+      "source_run_id": null,
+      "sandbox_run_id": null,
+      "item_id": "dnnpkaefmlhacigijccbhemgaenjbcpk",
+      "publisher_id": "7462c8f7-9c1a-48ed-9249-894c0317bd46",
+      "item_name": "Lead Form Helper",
+      "package_sha256": "448daa21629907ff19335455fe90b63c140496fa478bad96986e38b2d85bdc6b",
+      "manifest_version": null,
+      "action_type": "fetch_status",
+      "action_source": "cli",
+      "action_status": "passed",
+      "occurred_at": "2026-04-19T07:11:39.340Z",
+      "evidence_artifacts": [
+        "state/run_events/sandbox-2026-04-19-145131-dnnpkaefmlha-1acd61/90_publish_execution.json"
+      ],
+      "evidence_hashes": {
+        "state/run_events/sandbox-2026-04-19-145131-dnnpkaefmlha-1acd61/90_publish_execution.json": "34ea4ed40919bcb87bdf90262be237f039734984604634877df8332b0292e7d1"
+      },
+      "chrome_webstore_response_summary": {
+        "executed": true,
+        "ok": true,
+        "status_code": 200,
+        "http_status": 200,
+        "skipped": false,
+        "body_keys": [
+          "itemId",
+          "name",
+          "publicKey",
+          "submittedItemRevisionStatus"
+        ],
+        "response_body_summary": {
+          "kind": "object",
+          "body_keys": [
+            "itemId",
+            "name",
+            "publicKey",
+            "submittedItemRevisionStatus"
+          ],
+          "preview": "{\"name\":\"publishers/7462c8f7-9c1a-48ed-9249-894c0317bd46/items/dnnpkaefmlhacigijccbhemgaenjbcpk\",\"itemId\":\"dnnpkaefmlhacigijccbhemgaenjbcpk\",\"publicKey\":\"-----BEGIN PUBLIC KEY-----\\nMIIBIjANBgkqhkiG9w"
+        },
+        "response_headers_summary": {
+          "header_names": [
+            "alt-svc",
+            "content-length",
+            "content-type",
+            "date",
+            "server",
+            "vary",
+            "x-content-type-options",
+            "x-frame-options",
+            "x-xss-protection"
+          ],
+          "sampled": {
+            "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+            "content-length": "811",
+            "content-type": "application/json; charset=UTF-8",
+            "date": "Sun, 19 Apr 2026 07:11:39 GMT",
+            "server": "ESF",
+            "vary": "Origin, X-Origin, Referer",
+            "x-content-type-options": "nosniff"
+          }
+        },
+        "error_details": null
+      },
+      "dashboard_manual_note": null,
+      "approved_by": null,
+      "approval_artifact": "state/run_events/sandbox-2026-04-19-145131-dnnpkaefmlha-1acd61/82_human_approval.json",
+      "production_write": false,
+      "sandbox_only": true,
+      "evidence_quality": "direct_artifact",
+      "original_artifact_available": true,
+      "recovery_reason": null,
+      "redaction_checks": {
+        "sanitized_response_bodies": true,
+        "checked_secret_value_count": 1,
+        "secret_values_present_in_artifact": false,
+        "authorization_header_pattern_present": false,
+        "key_material_pattern_present": false,
+        "secret_marker_pattern_present": false,
+        "redaction_guard_triggered": false
+      }
+    },
+    {
+      "ledger_entry_id": "ledger-sandbox_upload_approval-1776583354833-6ea382",
+      "run_id": "sandbox-2026-04-19-145131-dnnpkaefmlha-1acd61",
+      "source_run_id": "2026-04-19-145118-daily-4df0e2",
+      "sandbox_run_id": "sandbox-2026-04-19-145131-dnnpkaefmlha-1acd61",
+      "item_id": "dnnpkaefmlhacigijccbhemgaenjbcpk",
+      "publisher_id": "7462c8f7-9c1a-48ed-9249-894c0317bd46",
+      "item_name": null,
+      "package_sha256": "448daa21629907ff19335455fe90b63c140496fa478bad96986e38b2d85bdc6b",
+      "manifest_version": "0.1.0",
+      "action_type": "sandbox_upload_approval",
+      "action_source": "cli",
+      "action_status": "approved_write_allowed",
+      "occurred_at": "2026-04-19T07:22:34.830Z",
+      "evidence_artifacts": [
+        "state/run_events/sandbox-2026-04-19-145131-dnnpkaefmlha-1acd61/82_human_approval.json"
+      ],
+      "evidence_hashes": {
+        "state/run_events/sandbox-2026-04-19-145131-dnnpkaefmlha-1acd61/82_human_approval.json": "a31496706006567c720e6d29833ce4a234383f1aff112508dc2c5781d002624f"
+      },
+      "chrome_webstore_response_summary": null,
+      "dashboard_manual_note": null,
+      "approved_by": "TMT2",
+      "approval_artifact": "state/run_events/sandbox-2026-04-19-145131-dnnpkaefmlha-1acd61/82_human_approval.json",
+      "production_write": false,
+      "sandbox_only": true,
+      "evidence_quality": "direct_artifact",
+      "original_artifact_available": true,
+      "recovery_reason": null,
+      "redaction_checks": {
+        "sanitized_response_bodies": true,
+        "checked_secret_value_count": 0,
+        "secret_values_present_in_artifact": false,
+        "authorization_header_pattern_present": false,
+        "key_material_pattern_present": false,
+        "secret_marker_pattern_present": false,
+        "redaction_guard_triggered": false
+      }
+    },
+    {
+      "ledger_entry_id": "ledger-fetch_status-1776583374764-c50450",
+      "run_id": "sandbox-2026-04-19-145131-dnnpkaefmlha-1acd61",
+      "source_run_id": null,
+      "sandbox_run_id": null,
+      "item_id": "dnnpkaefmlhacigijccbhemgaenjbcpk",
+      "publisher_id": "7462c8f7-9c1a-48ed-9249-894c0317bd46",
+      "item_name": "Lead Form Helper",
+      "package_sha256": "448daa21629907ff19335455fe90b63c140496fa478bad96986e38b2d85bdc6b",
+      "manifest_version": "0.1.0",
+      "action_type": "fetch_status",
+      "action_source": "cli",
+      "action_status": "passed",
+      "occurred_at": "2026-04-19T07:22:54.761Z",
+      "evidence_artifacts": [
+        "state/run_events/sandbox-2026-04-19-145131-dnnpkaefmlha-1acd61/90_publish_execution.json"
+      ],
+      "evidence_hashes": {
+        "state/run_events/sandbox-2026-04-19-145131-dnnpkaefmlha-1acd61/90_publish_execution.json": "11f3ab3e174846d29e6194704200fdbef5b66233ec888525887be224dad6e959"
+      },
+      "chrome_webstore_response_summary": {
+        "executed": true,
+        "ok": true,
+        "status_code": 200,
+        "http_status": 200,
+        "skipped": false,
+        "body_keys": [
+          "itemId",
+          "name",
+          "publicKey",
+          "submittedItemRevisionStatus"
+        ],
+        "response_body_summary": {
+          "kind": "object",
+          "body_keys": [
+            "itemId",
+            "name",
+            "publicKey",
+            "submittedItemRevisionStatus"
+          ],
+          "preview": "{\"name\":\"publishers/7462c8f7-9c1a-48ed-9249-894c0317bd46/items/dnnpkaefmlhacigijccbhemgaenjbcpk\",\"itemId\":\"dnnpkaefmlhacigijccbhemgaenjbcpk\",\"publicKey\":\"-----BEGIN PUBLIC KEY-----\\nMIIBIjANBgkqhkiG9w"
+        },
+        "response_headers_summary": {
+          "header_names": [
+            "alt-svc",
+            "content-length",
+            "content-type",
+            "date",
+            "server",
+            "vary",
+            "x-content-type-options",
+            "x-frame-options",
+            "x-xss-protection"
+          ],
+          "sampled": {
+            "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+            "content-length": "811",
+            "content-type": "application/json; charset=UTF-8",
+            "date": "Sun, 19 Apr 2026 07:22:54 GMT",
+            "server": "ESF",
+            "vary": "Origin, X-Origin, Referer",
+            "x-content-type-options": "nosniff"
+          }
+        },
+        "error_details": null
+      },
+      "dashboard_manual_note": null,
+      "approved_by": null,
+      "approval_artifact": "state/run_events/sandbox-2026-04-19-145131-dnnpkaefmlha-1acd61/82_human_approval.json",
+      "production_write": false,
+      "sandbox_only": true,
+      "evidence_quality": "direct_artifact",
+      "original_artifact_available": true,
+      "recovery_reason": null,
+      "redaction_checks": {
+        "sanitized_response_bodies": true,
+        "checked_secret_value_count": 1,
+        "secret_values_present_in_artifact": false,
+        "authorization_header_pattern_present": false,
+        "key_material_pattern_present": false,
+        "secret_marker_pattern_present": false,
+        "redaction_guard_triggered": false
+      }
+    },
+    {
+      "ledger_entry_id": "ledger-fetch_status-1776583391250-5c2a42",
+      "run_id": "sandbox-2026-04-19-145131-dnnpkaefmlha-1acd61",
+      "source_run_id": null,
+      "sandbox_run_id": null,
+      "item_id": "dnnpkaefmlhacigijccbhemgaenjbcpk",
+      "publisher_id": "7462c8f7-9c1a-48ed-9249-894c0317bd46",
+      "item_name": "Lead Form Helper",
+      "package_sha256": "448daa21629907ff19335455fe90b63c140496fa478bad96986e38b2d85bdc6b",
+      "manifest_version": null,
+      "action_type": "fetch_status",
+      "action_source": "cli",
+      "action_status": "passed",
+      "occurred_at": "2026-04-19T07:23:11.248Z",
+      "evidence_artifacts": [
+        "state/run_events/sandbox-2026-04-19-145131-dnnpkaefmlha-1acd61/90_publish_execution.json"
+      ],
+      "evidence_hashes": {
+        "state/run_events/sandbox-2026-04-19-145131-dnnpkaefmlha-1acd61/90_publish_execution.json": "ade4bac3142cddef6aa9e1fc21a02aff8db9f06cc7e9aa0e7ee465fdee698bf7"
+      },
+      "chrome_webstore_response_summary": {
+        "executed": true,
+        "ok": true,
+        "status_code": 200,
+        "http_status": 200,
+        "skipped": false,
+        "body_keys": [
+          "itemId",
+          "name",
+          "publicKey",
+          "submittedItemRevisionStatus"
+        ],
+        "response_body_summary": {
+          "kind": "object",
+          "body_keys": [
+            "itemId",
+            "name",
+            "publicKey",
+            "submittedItemRevisionStatus"
+          ],
+          "preview": "{\"name\":\"publishers/7462c8f7-9c1a-48ed-9249-894c0317bd46/items/dnnpkaefmlhacigijccbhemgaenjbcpk\",\"itemId\":\"dnnpkaefmlhacigijccbhemgaenjbcpk\",\"publicKey\":\"-----BEGIN PUBLIC KEY-----\\nMIIBIjANBgkqhkiG9w"
+        },
+        "response_headers_summary": {
+          "header_names": [
+            "alt-svc",
+            "content-length",
+            "content-type",
+            "date",
+            "server",
+            "vary",
+            "x-content-type-options",
+            "x-frame-options",
+            "x-xss-protection"
+          ],
+          "sampled": {
+            "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+            "content-length": "811",
+            "content-type": "application/json; charset=UTF-8",
+            "date": "Sun, 19 Apr 2026 07:23:10 GMT",
+            "server": "ESF",
+            "vary": "Origin, X-Origin, Referer",
+            "x-content-type-options": "nosniff"
+          }
+        },
+        "error_details": null
+      },
+      "dashboard_manual_note": null,
+      "approved_by": null,
+      "approval_artifact": "state/run_events/sandbox-2026-04-19-145131-dnnpkaefmlha-1acd61/82_human_approval.json",
+      "production_write": false,
+      "sandbox_only": true,
+      "evidence_quality": "direct_artifact",
+      "original_artifact_available": true,
+      "recovery_reason": null,
+      "redaction_checks": {
+        "sanitized_response_bodies": true,
+        "checked_secret_value_count": 1,
+        "secret_values_present_in_artifact": false,
+        "authorization_header_pattern_present": false,
+        "key_material_pattern_present": false,
+        "secret_marker_pattern_present": false,
+        "redaction_guard_triggered": false
+      }
+    },
+    {
+      "ledger_entry_id": "ledger-sandbox_prepare_upload_revision-1776584640831-4b64a0",
+      "run_id": "sandbox-2026-04-19-154400-dnnpkaefmlha-v0-1-1-6218cc",
+      "source_run_id": "2026-04-19-145118-daily-4df0e2",
+      "sandbox_run_id": "sandbox-2026-04-19-154400-dnnpkaefmlha-v0-1-1-6218cc",
+      "source_sandbox_run_id": "sandbox-2026-04-19-145131-dnnpkaefmlha-1acd61",
+      "new_sandbox_run_id": "sandbox-2026-04-19-154400-dnnpkaefmlha-v0-1-1-6218cc",
+      "item_id": "dnnpkaefmlhacigijccbhemgaenjbcpk",
+      "publisher_id": "7462c8f7-9c1a-48ed-9249-894c0317bd46",
+      "item_name": "Lead Form Helper",
+      "package_sha256": "b86a5114a52056acb11e685f243125f4de34abcd15fb8d37f48c066574719a8d",
+      "manifest_version": "0.1.1",
+      "previous_manifest_version": "0.1.0",
+      "target_manifest_version": "0.1.1",
+      "old_package_sha256": "448daa21629907ff19335455fe90b63c140496fa478bad96986e38b2d85bdc6b",
+      "new_package_sha256": "b86a5114a52056acb11e685f243125f4de34abcd15fb8d37f48c066574719a8d",
+      "action_type": "sandbox_prepare_upload_revision",
+      "action_source": "cli",
+      "action_status": "passed",
+      "occurred_at": "2026-04-19T07:44:00.829Z",
+      "evidence_artifacts": [
+        "runs/sandbox-2026-04-19-154400-dnnpkaefmlha-v0-1-1-6218cc/83_sandbox_validation_plan.json",
+        "runs/sandbox-2026-04-19-154400-dnnpkaefmlha-v0-1-1-6218cc/86_sandbox_upload_revision.json"
+      ],
+      "evidence_hashes": {
+        "runs/sandbox-2026-04-19-154400-dnnpkaefmlha-v0-1-1-6218cc/83_sandbox_validation_plan.json": "169abe655fe0141e2dbc92a8d9a7f7f1169225f6e2ccd0be623ac6b2cf034aba",
+        "runs/sandbox-2026-04-19-154400-dnnpkaefmlha-v0-1-1-6218cc/86_sandbox_upload_revision.json": "77f5218567e3de44cdbdd199d80c2e1a3b8578b87af7721c3feea142a348839f"
+      },
+      "chrome_webstore_response_summary": null,
+      "dashboard_manual_note": null,
+      "approved_by": null,
+      "approval_artifact": null,
+      "production_write": false,
+      "sandbox_only": true,
+      "evidence_quality": "direct_artifact",
+      "original_artifact_available": true,
+      "recovery_reason": null,
+      "redaction_checks": {
+        "sanitized_response_bodies": true,
+        "checked_secret_value_count": 0,
+        "secret_values_present_in_artifact": false,
+        "authorization_header_pattern_present": false,
+        "key_material_pattern_present": false,
+        "secret_marker_pattern_present": false,
+        "redaction_guard_triggered": false
+      }
+    },
+    {
+      "ledger_entry_id": "ledger-sandbox_upload_approval-1776584939293-34e06b",
+      "run_id": "sandbox-2026-04-19-154400-dnnpkaefmlha-v0-1-1-6218cc",
+      "source_run_id": "sandbox-2026-04-19-145131-dnnpkaefmlha-1acd61",
+      "sandbox_run_id": "sandbox-2026-04-19-154400-dnnpkaefmlha-v0-1-1-6218cc",
+      "source_sandbox_run_id": null,
+      "new_sandbox_run_id": null,
+      "item_id": "dnnpkaefmlhacigijccbhemgaenjbcpk",
+      "publisher_id": "7462c8f7-9c1a-48ed-9249-894c0317bd46",
+      "item_name": null,
+      "package_sha256": "b86a5114a52056acb11e685f243125f4de34abcd15fb8d37f48c066574719a8d",
+      "manifest_version": "0.1.1",
+      "previous_manifest_version": null,
+      "target_manifest_version": null,
+      "old_package_sha256": "",
+      "new_package_sha256": "",
+      "action_type": "sandbox_upload_approval",
+      "action_source": "cli",
+      "action_status": "approved_write_allowed",
+      "occurred_at": "2026-04-19T07:48:59.275Z",
+      "evidence_artifacts": [
+        "state/run_events/sandbox-2026-04-19-154400-dnnpkaefmlha-v0-1-1-6218cc/82_human_approval.json"
+      ],
+      "evidence_hashes": {
+        "state/run_events/sandbox-2026-04-19-154400-dnnpkaefmlha-v0-1-1-6218cc/82_human_approval.json": "0bf5591bef8ac763de9b82fdabd49dc5d1e1798e28dc2c3176de1322566d6f71"
+      },
+      "chrome_webstore_response_summary": null,
+      "dashboard_manual_note": null,
+      "approved_by": "TMT2",
+      "approval_artifact": "state/run_events/sandbox-2026-04-19-154400-dnnpkaefmlha-v0-1-1-6218cc/82_human_approval.json",
+      "production_write": false,
+      "sandbox_only": true,
+      "evidence_quality": "direct_artifact",
+      "original_artifact_available": true,
+      "recovery_reason": null,
+      "redaction_checks": {
+        "sanitized_response_bodies": true,
+        "checked_secret_value_count": 0,
+        "secret_values_present_in_artifact": false,
+        "authorization_header_pattern_present": false,
+        "key_material_pattern_present": false,
+        "secret_marker_pattern_present": false,
+        "redaction_guard_triggered": false
+      }
+    },
+    {
+      "ledger_entry_id": "ledger-fetch_status-1776585132646-e3769c",
+      "run_id": "sandbox-2026-04-19-154400-dnnpkaefmlha-v0-1-1-6218cc",
+      "source_run_id": null,
+      "sandbox_run_id": null,
+      "source_sandbox_run_id": null,
+      "new_sandbox_run_id": null,
+      "item_id": "dnnpkaefmlhacigijccbhemgaenjbcpk",
+      "publisher_id": "7462c8f7-9c1a-48ed-9249-894c0317bd46",
+      "item_name": "Lead Form Helper",
+      "package_sha256": "b86a5114a52056acb11e685f243125f4de34abcd15fb8d37f48c066574719a8d",
+      "manifest_version": "0.1.1",
+      "previous_manifest_version": null,
+      "target_manifest_version": null,
+      "old_package_sha256": "",
+      "new_package_sha256": "",
+      "action_type": "fetch_status",
+      "action_source": "cli",
+      "action_status": "passed",
+      "occurred_at": "2026-04-19T07:52:12.643Z",
+      "evidence_artifacts": [
+        "state/run_events/sandbox-2026-04-19-154400-dnnpkaefmlha-v0-1-1-6218cc/90_publish_execution.json"
+      ],
+      "evidence_hashes": {
+        "state/run_events/sandbox-2026-04-19-154400-dnnpkaefmlha-v0-1-1-6218cc/90_publish_execution.json": "c771739b8826e1c41fdea1d71ff98628fca97d168676abf17879cb599b3fa14a"
+      },
+      "chrome_webstore_response_summary": {
+        "executed": true,
+        "ok": true,
+        "status_code": 200,
+        "http_status": 200,
+        "skipped": false,
+        "body_keys": [
+          "itemId",
+          "name",
+          "publicKey",
+          "submittedItemRevisionStatus"
+        ],
+        "response_body_summary": {
+          "kind": "object",
+          "body_keys": [
+            "itemId",
+            "name",
+            "publicKey",
+            "submittedItemRevisionStatus"
+          ],
+          "preview": "{\"name\":\"publishers/7462c8f7-9c1a-48ed-9249-894c0317bd46/items/dnnpkaefmlhacigijccbhemgaenjbcpk\",\"itemId\":\"dnnpkaefmlhacigijccbhemgaenjbcpk\",\"publicKey\":\"-----BEGIN PUBLIC KEY-----\\nMIIBIjANBgkqhkiG9w"
+        },
+        "response_headers_summary": {
+          "header_names": [
+            "alt-svc",
+            "content-length",
+            "content-type",
+            "date",
+            "server",
+            "vary",
+            "x-content-type-options",
+            "x-frame-options",
+            "x-xss-protection"
+          ],
+          "sampled": {
+            "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+            "content-length": "811",
+            "content-type": "application/json; charset=UTF-8",
+            "date": "Sun, 19 Apr 2026 07:52:08 GMT",
+            "server": "ESF",
+            "vary": "Origin, X-Origin, Referer",
+            "x-content-type-options": "nosniff"
+          }
+        },
+        "error_details": null
+      },
+      "dashboard_manual_note": null,
+      "approved_by": null,
+      "approval_artifact": "state/run_events/sandbox-2026-04-19-154400-dnnpkaefmlha-v0-1-1-6218cc/82_human_approval.json",
+      "production_write": false,
+      "sandbox_only": true,
+      "evidence_quality": "direct_artifact",
+      "original_artifact_available": true,
+      "recovery_reason": null,
+      "redaction_checks": {
+        "sanitized_response_bodies": true,
+        "checked_secret_value_count": 1,
+        "secret_values_present_in_artifact": false,
+        "authorization_header_pattern_present": false,
+        "key_material_pattern_present": false,
+        "secret_marker_pattern_present": false,
+        "redaction_guard_triggered": false
+      }
+    },
+    {
+      "ledger_entry_id": "ledger-sandbox_upload-1776585132650-d09621",
+      "run_id": "sandbox-2026-04-19-154400-dnnpkaefmlha-v0-1-1-6218cc",
+      "source_run_id": null,
+      "sandbox_run_id": null,
+      "source_sandbox_run_id": null,
+      "new_sandbox_run_id": null,
+      "item_id": "dnnpkaefmlhacigijccbhemgaenjbcpk",
+      "publisher_id": "7462c8f7-9c1a-48ed-9249-894c0317bd46",
+      "item_name": "Lead Form Helper",
+      "package_sha256": "b86a5114a52056acb11e685f243125f4de34abcd15fb8d37f48c066574719a8d",
+      "manifest_version": "0.1.1",
+      "previous_manifest_version": null,
+      "target_manifest_version": null,
+      "old_package_sha256": "",
+      "new_package_sha256": "",
+      "action_type": "sandbox_upload",
+      "action_source": "cli",
+      "action_status": "passed",
+      "occurred_at": "2026-04-19T07:52:12.648Z",
+      "evidence_artifacts": [
+        "state/run_events/sandbox-2026-04-19-154400-dnnpkaefmlha-v0-1-1-6218cc/90_publish_execution.json"
+      ],
+      "evidence_hashes": {
+        "state/run_events/sandbox-2026-04-19-154400-dnnpkaefmlha-v0-1-1-6218cc/90_publish_execution.json": "c771739b8826e1c41fdea1d71ff98628fca97d168676abf17879cb599b3fa14a"
+      },
+      "chrome_webstore_response_summary": {
+        "executed": true,
+        "ok": true,
+        "status_code": 200,
+        "http_status": 200,
+        "skipped": false,
+        "body_keys": [
+          "crxVersion",
+          "itemId",
+          "name",
+          "uploadState"
+        ],
+        "response_body_summary": {
+          "kind": "object",
+          "body_keys": [
+            "crxVersion",
+            "itemId",
+            "name",
+            "uploadState"
+          ],
+          "preview": "{\"name\":\"publishers/7462c8f7-9c1a-48ed-9249-894c0317bd46/items/dnnpkaefmlhacigijccbhemgaenjbcpk\",\"itemId\":\"dnnpkaefmlhacigijccbhemgaenjbcpk\",\"crxVersion\":\"0.1.1\",\"uploadState\":\"SUCCEEDED\"}"
+        },
+        "response_headers_summary": {
+          "header_names": [
+            "alt-svc",
+            "content-length",
+            "content-type",
+            "date",
+            "server",
+            "vary",
+            "x-guploader-uploadid"
+          ],
+          "sampled": {
+            "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+            "content-length": "206",
+            "content-type": "application/json; charset=UTF-8",
+            "date": "Sun, 19 Apr 2026 07:52:11 GMT",
+            "server": "UploadServer",
+            "vary": "Origin, X-Origin, Referer",
+            "x-guploader-uploadid": "AMNfjG0wfJoFmWjUz0du9PdZuO8ReFm68ILDy_FskvzF52q3RYoGl56GZCu4oeqDAo365PMSUWRigQg"
+          }
+        },
+        "error_details": null,
+        "upload_state": "SUCCEEDED",
+        "crx_version": "0.1.1"
+      },
+      "dashboard_manual_note": null,
+      "approved_by": null,
+      "approval_artifact": "state/run_events/sandbox-2026-04-19-154400-dnnpkaefmlha-v0-1-1-6218cc/82_human_approval.json",
+      "production_write": false,
+      "sandbox_only": true,
+      "evidence_quality": "direct_artifact",
+      "original_artifact_available": true,
+      "recovery_reason": null,
+      "redaction_checks": {
+        "sanitized_response_bodies": true,
+        "checked_secret_value_count": 1,
+        "secret_values_present_in_artifact": false,
+        "authorization_header_pattern_present": false,
+        "key_material_pattern_present": false,
+        "secret_marker_pattern_present": false,
+        "redaction_guard_triggered": false
+      }
+    },
+    {
+      "ledger_entry_id": "ledger-fetch_status-1776585146904-9c7665",
+      "run_id": "sandbox-2026-04-19-154400-dnnpkaefmlha-v0-1-1-6218cc",
+      "source_run_id": null,
+      "sandbox_run_id": null,
+      "source_sandbox_run_id": null,
+      "new_sandbox_run_id": null,
+      "item_id": "dnnpkaefmlhacigijccbhemgaenjbcpk",
+      "publisher_id": "7462c8f7-9c1a-48ed-9249-894c0317bd46",
+      "item_name": "Lead Form Helper",
+      "package_sha256": "b86a5114a52056acb11e685f243125f4de34abcd15fb8d37f48c066574719a8d",
+      "manifest_version": null,
+      "previous_manifest_version": null,
+      "target_manifest_version": null,
+      "old_package_sha256": "",
+      "new_package_sha256": "",
+      "action_type": "fetch_status",
+      "action_source": "cli",
+      "action_status": "passed",
+      "occurred_at": "2026-04-19T07:52:26.902Z",
+      "evidence_artifacts": [
+        "state/run_events/sandbox-2026-04-19-154400-dnnpkaefmlha-v0-1-1-6218cc/90_publish_execution.json"
+      ],
+      "evidence_hashes": {
+        "state/run_events/sandbox-2026-04-19-154400-dnnpkaefmlha-v0-1-1-6218cc/90_publish_execution.json": "729a3ca7767f7f54e4c89d3fd58ed3b6572e50d26fb00266aea25979d79584e3"
+      },
+      "chrome_webstore_response_summary": {
+        "executed": true,
+        "ok": true,
+        "status_code": 200,
+        "http_status": 200,
+        "skipped": false,
+        "body_keys": [
+          "itemId",
+          "name",
+          "publicKey",
+          "submittedItemRevisionStatus"
+        ],
+        "response_body_summary": {
+          "kind": "object",
+          "body_keys": [
+            "itemId",
+            "name",
+            "publicKey",
+            "submittedItemRevisionStatus"
+          ],
+          "preview": "{\"name\":\"publishers/7462c8f7-9c1a-48ed-9249-894c0317bd46/items/dnnpkaefmlhacigijccbhemgaenjbcpk\",\"itemId\":\"dnnpkaefmlhacigijccbhemgaenjbcpk\",\"publicKey\":\"-----BEGIN PUBLIC KEY-----\\nMIIBIjANBgkqhkiG9w"
+        },
+        "response_headers_summary": {
+          "header_names": [
+            "alt-svc",
+            "content-length",
+            "content-type",
+            "date",
+            "server",
+            "vary",
+            "x-content-type-options",
+            "x-frame-options",
+            "x-xss-protection"
+          ],
+          "sampled": {
+            "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+            "content-length": "811",
+            "content-type": "application/json; charset=UTF-8",
+            "date": "Sun, 19 Apr 2026 07:52:26 GMT",
+            "server": "ESF",
+            "vary": "Origin, X-Origin, Referer",
+            "x-content-type-options": "nosniff"
+          }
+        },
+        "error_details": null
+      },
+      "dashboard_manual_note": null,
+      "approved_by": null,
+      "approval_artifact": "state/run_events/sandbox-2026-04-19-154400-dnnpkaefmlha-v0-1-1-6218cc/82_human_approval.json",
+      "production_write": false,
+      "sandbox_only": true,
+      "evidence_quality": "direct_artifact",
+      "original_artifact_available": true,
+      "recovery_reason": null,
+      "redaction_checks": {
+        "sanitized_response_bodies": true,
+        "checked_secret_value_count": 1,
+        "secret_values_present_in_artifact": false,
+        "authorization_header_pattern_present": false,
+        "key_material_pattern_present": false,
+        "secret_marker_pattern_present": false,
+        "redaction_guard_triggered": false
+      }
+    },
+    {
+      "ledger_entry_id": "ledger-sandbox_upload_artifact_correction-1776587196187-3f641d",
+      "run_id": "sandbox-2026-04-19-154400-dnnpkaefmlha-v0-1-1-6218cc",
+      "source_run_id": null,
+      "sandbox_run_id": "sandbox-2026-04-19-154400-dnnpkaefmlha-v0-1-1-6218cc",
+      "source_sandbox_run_id": null,
+      "new_sandbox_run_id": null,
+      "item_id": "dnnpkaefmlhacigijccbhemgaenjbcpk",
+      "publisher_id": "7462c8f7-9c1a-48ed-9249-894c0317bd46",
+      "item_name": null,
+      "package_sha256": "b86a5114a52056acb11e685f243125f4de34abcd15fb8d37f48c066574719a8d",
+      "manifest_version": "0.1.1",
+      "current_sandbox_item_version": "0.1.0",
+      "upload_response_crx_version": "0.1.1",
+      "uploaded_crx_version": "0.1.1",
+      "published_crx_version": null,
+      "upload_state": "SUCCEEDED",
+      "version_consistency_check": {
+        "performed": true,
+        "upload_state": "SUCCEEDED",
+        "manifest_version": "0.1.1",
+        "upload_response_crx_version": "0.1.1",
+        "passed": true,
+        "failure_reason": null
+      },
+      "previous_manifest_version": null,
+      "target_manifest_version": null,
+      "old_package_sha256": "",
+      "new_package_sha256": "",
+      "action_type": "sandbox_upload_artifact_correction",
+      "action_source": "cli",
+      "action_status": "passed",
+      "occurred_at": "2026-04-19T08:26:36.188Z",
+      "evidence_artifacts": [
+        "state/run_events/sandbox-2026-04-19-154400-dnnpkaefmlha-v0-1-1-6218cc/90_publish_execution.json",
+        "state/run_events/sandbox-2026-04-19-154400-dnnpkaefmlha-v0-1-1-6218cc/publish_execution/90_publish_execution-correction-2026-04-19T08-26-36-181Z.json",
+        "state/run_events/sandbox-2026-04-19-154400-dnnpkaefmlha-v0-1-1-6218cc/publish_execution/90_publish_execution-2026-04-19T07-52-12-640Z.json"
+      ],
+      "evidence_hashes": {},
+      "chrome_webstore_response_summary": null,
+      "dashboard_manual_note": null,
+      "approved_by": null,
+      "approval_artifact": "state/run_events/sandbox-2026-04-19-154400-dnnpkaefmlha-v0-1-1-6218cc/82_human_approval.json",
+      "corrects_ledger_entry_id": "ledger-sandbox_upload-1776585132650-d09621",
+      "corrected_fields": [
+        "crx_version",
+        "uploaded_crx_version",
+        "upload_response_crx_version"
+      ],
+      "reason": "crx_version_field_normalization",
+      "production_write": false,
+      "sandbox_only": true,
+      "evidence_quality": "direct_artifact",
+      "original_artifact_available": true,
+      "recovery_reason": null,
+      "redaction_checks": {
+        "sanitized_response_bodies": true,
+        "checked_secret_value_count": 0,
+        "secret_values_present_in_artifact": false,
+        "authorization_header_pattern_present": false,
+        "key_material_pattern_present": false,
+        "secret_marker_pattern_present": false,
+        "redaction_guard_triggered": false
+      }
+    },
+    {
+      "ledger_entry_id": "ledger-sandbox_publish_approval-1776591682938-3ff57f",
+      "run_id": "sandbox-2026-04-19-154400-dnnpkaefmlha-v0-1-1-6218cc",
+      "source_run_id": "sandbox-2026-04-19-145131-dnnpkaefmlha-1acd61",
+      "sandbox_run_id": "sandbox-2026-04-19-154400-dnnpkaefmlha-v0-1-1-6218cc",
+      "source_sandbox_run_id": null,
+      "new_sandbox_run_id": null,
+      "item_id": "dnnpkaefmlhacigijccbhemgaenjbcpk",
+      "publisher_id": "7462c8f7-9c1a-48ed-9249-894c0317bd46",
+      "item_name": null,
+      "package_sha256": "b86a5114a52056acb11e685f243125f4de34abcd15fb8d37f48c066574719a8d",
+      "manifest_version": "0.1.1",
+      "current_sandbox_item_version": null,
+      "upload_response_crx_version": null,
+      "uploaded_crx_version": null,
+      "published_crx_version": null,
+      "upload_state": null,
+      "version_consistency_check": null,
+      "previous_manifest_version": null,
+      "target_manifest_version": null,
+      "old_package_sha256": "",
+      "new_package_sha256": "",
+      "action_type": "sandbox_publish_approval",
+      "action_source": "cli",
+      "action_status": "approved_write_allowed",
+      "occurred_at": "2026-04-19T09:41:22.935Z",
+      "evidence_artifacts": [
+        "state/run_events/sandbox-2026-04-19-154400-dnnpkaefmlha-v0-1-1-6218cc/82_human_approval.json"
+      ],
+      "evidence_hashes": {
+        "state/run_events/sandbox-2026-04-19-154400-dnnpkaefmlha-v0-1-1-6218cc/82_human_approval.json": "efbe7781bccbcec68fa0e87fb187ecb3782f0ce47cc080f5710f7ac656a3c4ff"
+      },
+      "chrome_webstore_response_summary": null,
+      "dashboard_manual_note": null,
+      "approved_by": "TMT2",
+      "approval_artifact": "state/run_events/sandbox-2026-04-19-154400-dnnpkaefmlha-v0-1-1-6218cc/82_human_approval.json",
+      "corrects_ledger_entry_id": null,
+      "corrected_fields": [],
+      "reason": null,
+      "production_write": false,
+      "sandbox_only": true,
+      "evidence_quality": "direct_artifact",
+      "original_artifact_available": true,
+      "recovery_reason": null,
+      "redaction_checks": {
+        "sanitized_response_bodies": true,
+        "checked_secret_value_count": 0,
+        "secret_values_present_in_artifact": false,
+        "authorization_header_pattern_present": false,
+        "key_material_pattern_present": false,
+        "secret_marker_pattern_present": false,
+        "redaction_guard_triggered": false
+      }
+    },
+    {
+      "ledger_entry_id": "ledger-fetch_status-1776591696088-f34d26",
+      "run_id": "sandbox-2026-04-19-154400-dnnpkaefmlha-v0-1-1-6218cc",
+      "source_run_id": null,
+      "sandbox_run_id": null,
+      "source_sandbox_run_id": null,
+      "new_sandbox_run_id": null,
+      "item_id": "dnnpkaefmlhacigijccbhemgaenjbcpk",
+      "publisher_id": "7462c8f7-9c1a-48ed-9249-894c0317bd46",
+      "item_name": "Lead Form Helper",
+      "package_sha256": "b86a5114a52056acb11e685f243125f4de34abcd15fb8d37f48c066574719a8d",
+      "manifest_version": "0.1.1",
+      "current_sandbox_item_version": null,
+      "upload_response_crx_version": null,
+      "uploaded_crx_version": null,
+      "published_crx_version": null,
+      "upload_state": null,
+      "version_consistency_check": null,
+      "previous_manifest_version": null,
+      "target_manifest_version": null,
+      "old_package_sha256": "",
+      "new_package_sha256": "",
+      "action_type": "fetch_status",
+      "action_source": "cli",
+      "action_status": "passed",
+      "occurred_at": "2026-04-19T09:41:36.086Z",
+      "evidence_artifacts": [
+        "state/run_events/sandbox-2026-04-19-154400-dnnpkaefmlha-v0-1-1-6218cc/90_publish_execution.json"
+      ],
+      "evidence_hashes": {
+        "state/run_events/sandbox-2026-04-19-154400-dnnpkaefmlha-v0-1-1-6218cc/90_publish_execution.json": "59c69af7016b80b8c2f9c0233dc7e3672a109e3b3582c86491859aa999a7d782"
+      },
+      "chrome_webstore_response_summary": {
+        "executed": true,
+        "ok": true,
+        "status_code": 200,
+        "http_status": 200,
+        "skipped": false,
+        "body_keys": [
+          "itemId",
+          "name",
+          "publicKey",
+          "submittedItemRevisionStatus"
+        ],
+        "response_body_summary": {
+          "kind": "object",
+          "body_keys": [
+            "itemId",
+            "name",
+            "publicKey",
+            "submittedItemRevisionStatus"
+          ],
+          "preview": "{\"name\":\"publishers/7462c8f7-9c1a-48ed-9249-894c0317bd46/items/dnnpkaefmlhacigijccbhemgaenjbcpk\",\"itemId\":\"dnnpkaefmlhacigijccbhemgaenjbcpk\",\"publicKey\":\"-----BEGIN PUBLIC KEY-----\\nMIIBIjANBgkqhkiG9w"
+        },
+        "response_headers_summary": {
+          "header_names": [
+            "alt-svc",
+            "content-length",
+            "content-type",
+            "date",
+            "server",
+            "vary",
+            "x-content-type-options",
+            "x-frame-options",
+            "x-xss-protection"
+          ],
+          "sampled": {
+            "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+            "content-length": "811",
+            "content-type": "application/json; charset=UTF-8",
+            "date": "Sun, 19 Apr 2026 09:41:34 GMT",
+            "server": "ESF",
+            "vary": "Origin, X-Origin, Referer",
+            "x-content-type-options": "nosniff"
+          }
+        },
+        "error_details": null
+      },
+      "dashboard_manual_note": null,
+      "approved_by": null,
+      "approval_artifact": "state/run_events/sandbox-2026-04-19-154400-dnnpkaefmlha-v0-1-1-6218cc/82_human_approval.json",
+      "corrects_ledger_entry_id": null,
+      "corrected_fields": [],
+      "reason": null,
+      "production_write": false,
+      "sandbox_only": true,
+      "evidence_quality": "direct_artifact",
+      "original_artifact_available": true,
+      "recovery_reason": null,
+      "redaction_checks": {
+        "sanitized_response_bodies": true,
+        "checked_secret_value_count": 1,
+        "secret_values_present_in_artifact": false,
+        "authorization_header_pattern_present": false,
+        "key_material_pattern_present": false,
+        "secret_marker_pattern_present": false,
+        "redaction_guard_triggered": false
+      }
+    },
+    {
+      "ledger_entry_id": "ledger-fetch_status-1776591842463-0fb6bc",
+      "run_id": "sandbox-2026-04-19-154400-dnnpkaefmlha-v0-1-1-6218cc",
+      "source_run_id": null,
+      "sandbox_run_id": null,
+      "source_sandbox_run_id": null,
+      "new_sandbox_run_id": null,
+      "item_id": "dnnpkaefmlhacigijccbhemgaenjbcpk",
+      "publisher_id": "7462c8f7-9c1a-48ed-9249-894c0317bd46",
+      "item_name": "Lead Form Helper",
+      "package_sha256": "b86a5114a52056acb11e685f243125f4de34abcd15fb8d37f48c066574719a8d",
+      "manifest_version": "0.1.1",
+      "current_sandbox_item_version": null,
+      "upload_response_crx_version": null,
+      "uploaded_crx_version": null,
+      "published_crx_version": null,
+      "upload_state": null,
+      "version_consistency_check": null,
+      "previous_manifest_version": null,
+      "target_manifest_version": null,
+      "old_package_sha256": "",
+      "new_package_sha256": "",
+      "action_type": "fetch_status",
+      "action_source": "cli",
+      "action_status": "passed",
+      "occurred_at": "2026-04-19T09:44:02.460Z",
+      "evidence_artifacts": [
+        "state/run_events/sandbox-2026-04-19-154400-dnnpkaefmlha-v0-1-1-6218cc/90_publish_execution.json"
+      ],
+      "evidence_hashes": {
+        "state/run_events/sandbox-2026-04-19-154400-dnnpkaefmlha-v0-1-1-6218cc/90_publish_execution.json": "29467ffb60f0d0c755075ca0e0bbb7e0522b8e3a4d760a001eb0e0424f56bbd9"
+      },
+      "chrome_webstore_response_summary": {
+        "executed": true,
+        "ok": true,
+        "status_code": 200,
+        "http_status": 200,
+        "skipped": false,
+        "body_keys": [
+          "itemId",
+          "name",
+          "publicKey",
+          "submittedItemRevisionStatus"
+        ],
+        "response_body_summary": {
+          "kind": "object",
+          "body_keys": [
+            "itemId",
+            "name",
+            "publicKey",
+            "submittedItemRevisionStatus"
+          ],
+          "preview": "{\"name\":\"publishers/7462c8f7-9c1a-48ed-9249-894c0317bd46/items/dnnpkaefmlhacigijccbhemgaenjbcpk\",\"itemId\":\"dnnpkaefmlhacigijccbhemgaenjbcpk\",\"publicKey\":\"-----BEGIN PUBLIC KEY-----\\nMIIBIjANBgkqhkiG9w"
+        },
+        "response_headers_summary": {
+          "header_names": [
+            "alt-svc",
+            "content-length",
+            "content-type",
+            "date",
+            "server",
+            "vary",
+            "x-content-type-options",
+            "x-frame-options",
+            "x-xss-protection"
+          ],
+          "sampled": {
+            "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+            "content-length": "811",
+            "content-type": "application/json; charset=UTF-8",
+            "date": "Sun, 19 Apr 2026 09:43:54 GMT",
+            "server": "ESF",
+            "vary": "Origin, X-Origin, Referer",
+            "x-content-type-options": "nosniff"
+          }
+        },
+        "error_details": null
+      },
+      "dashboard_manual_note": null,
+      "approved_by": null,
+      "approval_artifact": "state/run_events/sandbox-2026-04-19-154400-dnnpkaefmlha-v0-1-1-6218cc/82_human_approval.json",
+      "corrects_ledger_entry_id": null,
+      "corrected_fields": [],
+      "reason": null,
+      "production_write": false,
+      "sandbox_only": true,
+      "evidence_quality": "direct_artifact",
+      "original_artifact_available": true,
+      "recovery_reason": null,
+      "redaction_checks": {
+        "sanitized_response_bodies": true,
+        "checked_secret_value_count": 1,
+        "secret_values_present_in_artifact": false,
+        "authorization_header_pattern_present": false,
+        "key_material_pattern_present": false,
+        "secret_marker_pattern_present": false,
+        "redaction_guard_triggered": false
+      }
+    },
+    {
+      "ledger_entry_id": "ledger-sandbox_publish_optional-1776591842468-a454e4",
+      "run_id": "sandbox-2026-04-19-154400-dnnpkaefmlha-v0-1-1-6218cc",
+      "source_run_id": null,
+      "sandbox_run_id": null,
+      "source_sandbox_run_id": null,
+      "new_sandbox_run_id": null,
+      "item_id": "dnnpkaefmlhacigijccbhemgaenjbcpk",
+      "publisher_id": "7462c8f7-9c1a-48ed-9249-894c0317bd46",
+      "item_name": "Lead Form Helper",
+      "package_sha256": "b86a5114a52056acb11e685f243125f4de34abcd15fb8d37f48c066574719a8d",
+      "manifest_version": "0.1.1",
+      "current_sandbox_item_version": null,
+      "upload_response_crx_version": null,
+      "uploaded_crx_version": null,
+      "published_crx_version": null,
+      "upload_state": null,
+      "version_consistency_check": null,
+      "previous_manifest_version": null,
+      "target_manifest_version": null,
+      "old_package_sha256": "",
+      "new_package_sha256": "",
+      "action_type": "sandbox_publish_optional",
+      "action_source": "cli",
+      "action_status": "passed",
+      "occurred_at": "2026-04-19T09:44:02.467Z",
+      "evidence_artifacts": [
+        "state/run_events/sandbox-2026-04-19-154400-dnnpkaefmlha-v0-1-1-6218cc/90_publish_execution.json"
+      ],
+      "evidence_hashes": {
+        "state/run_events/sandbox-2026-04-19-154400-dnnpkaefmlha-v0-1-1-6218cc/90_publish_execution.json": "29467ffb60f0d0c755075ca0e0bbb7e0522b8e3a4d760a001eb0e0424f56bbd9"
+      },
+      "chrome_webstore_response_summary": {
+        "executed": true,
+        "ok": true,
+        "status_code": 200,
+        "http_status": 200,
+        "skipped": false,
+        "body_keys": [
+          "itemId",
+          "name",
+          "state"
+        ],
+        "response_body_summary": {
+          "kind": "object",
+          "body_keys": [
+            "itemId",
+            "name",
+            "state"
+          ],
+          "preview": "{\"name\":\"publishers/7462c8f7-9c1a-48ed-9249-894c0317bd46/items/dnnpkaefmlhacigijccbhemgaenjbcpk\",\"itemId\":\"dnnpkaefmlhacigijccbhemgaenjbcpk\",\"state\":\"PENDING_REVIEW\"}"
+        },
+        "response_headers_summary": {
+          "header_names": [
+            "alt-svc",
+            "content-length",
+            "content-type",
+            "date",
+            "server",
+            "vary",
+            "x-content-type-options",
+            "x-frame-options",
+            "x-xss-protection"
+          ],
+          "sampled": {
+            "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+            "content-length": "180",
+            "content-type": "application/json; charset=UTF-8",
+            "date": "Sun, 19 Apr 2026 09:44:02 GMT",
+            "server": "ESF",
+            "vary": "Origin, X-Origin, Referer",
+            "x-content-type-options": "nosniff"
+          }
+        },
+        "error_details": null
+      },
+      "dashboard_manual_note": null,
+      "approved_by": null,
+      "approval_artifact": "state/run_events/sandbox-2026-04-19-154400-dnnpkaefmlha-v0-1-1-6218cc/82_human_approval.json",
+      "corrects_ledger_entry_id": null,
+      "corrected_fields": [],
+      "reason": null,
+      "production_write": false,
+      "sandbox_only": true,
+      "evidence_quality": "direct_artifact",
+      "original_artifact_available": true,
+      "recovery_reason": null,
+      "redaction_checks": {
+        "sanitized_response_bodies": true,
+        "checked_secret_value_count": 1,
+        "secret_values_present_in_artifact": false,
+        "authorization_header_pattern_present": false,
+        "key_material_pattern_present": false,
+        "secret_marker_pattern_present": false,
+        "redaction_guard_triggered": false
+      }
+    },
+    {
+      "ledger_entry_id": "ledger-review_pending-1776591842472-7f0062",
+      "run_id": "sandbox-2026-04-19-154400-dnnpkaefmlha-v0-1-1-6218cc",
+      "source_run_id": null,
+      "sandbox_run_id": null,
+      "source_sandbox_run_id": null,
+      "new_sandbox_run_id": null,
+      "item_id": "dnnpkaefmlhacigijccbhemgaenjbcpk",
+      "publisher_id": "7462c8f7-9c1a-48ed-9249-894c0317bd46",
+      "item_name": "Lead Form Helper",
+      "package_sha256": "b86a5114a52056acb11e685f243125f4de34abcd15fb8d37f48c066574719a8d",
+      "manifest_version": "0.1.1",
+      "current_sandbox_item_version": null,
+      "upload_response_crx_version": null,
+      "uploaded_crx_version": null,
+      "published_crx_version": null,
+      "upload_state": null,
+      "version_consistency_check": null,
+      "previous_manifest_version": null,
+      "target_manifest_version": null,
+      "old_package_sha256": "",
+      "new_package_sha256": "",
+      "action_type": "review_pending",
+      "action_source": "cli",
+      "action_status": "observed",
+      "occurred_at": "2026-04-19T09:44:02.470Z",
+      "evidence_artifacts": [
+        "state/run_events/sandbox-2026-04-19-154400-dnnpkaefmlha-v0-1-1-6218cc/90_publish_execution.json"
+      ],
+      "evidence_hashes": {
+        "state/run_events/sandbox-2026-04-19-154400-dnnpkaefmlha-v0-1-1-6218cc/90_publish_execution.json": "29467ffb60f0d0c755075ca0e0bbb7e0522b8e3a4d760a001eb0e0424f56bbd9"
+      },
+      "chrome_webstore_response_summary": {
+        "executed": true,
+        "ok": true,
+        "status_code": 200,
+        "http_status": 200,
+        "skipped": false,
+        "body_keys": [
+          "itemId",
+          "name",
+          "state"
+        ],
+        "response_body_summary": {
+          "kind": "object",
+          "body_keys": [
+            "itemId",
+            "name",
+            "state"
+          ],
+          "preview": "{\"name\":\"publishers/7462c8f7-9c1a-48ed-9249-894c0317bd46/items/dnnpkaefmlhacigijccbhemgaenjbcpk\",\"itemId\":\"dnnpkaefmlhacigijccbhemgaenjbcpk\",\"state\":\"PENDING_REVIEW\"}"
+        },
+        "response_headers_summary": {
+          "header_names": [
+            "alt-svc",
+            "content-length",
+            "content-type",
+            "date",
+            "server",
+            "vary",
+            "x-content-type-options",
+            "x-frame-options",
+            "x-xss-protection"
+          ],
+          "sampled": {
+            "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+            "content-length": "180",
+            "content-type": "application/json; charset=UTF-8",
+            "date": "Sun, 19 Apr 2026 09:44:02 GMT",
+            "server": "ESF",
+            "vary": "Origin, X-Origin, Referer",
+            "x-content-type-options": "nosniff"
+          }
+        },
+        "error_details": null
+      },
+      "dashboard_manual_note": null,
+      "approved_by": null,
+      "approval_artifact": "state/run_events/sandbox-2026-04-19-154400-dnnpkaefmlha-v0-1-1-6218cc/82_human_approval.json",
+      "corrects_ledger_entry_id": null,
+      "corrected_fields": [],
+      "reason": null,
+      "production_write": false,
+      "sandbox_only": true,
+      "evidence_quality": "direct_artifact",
+      "original_artifact_available": true,
+      "recovery_reason": null,
+      "redaction_checks": {
+        "sanitized_response_bodies": true,
+        "checked_secret_value_count": 1,
+        "secret_values_present_in_artifact": false,
+        "authorization_header_pattern_present": false,
+        "key_material_pattern_present": false,
+        "secret_marker_pattern_present": false,
+        "redaction_guard_triggered": false
+      }
+    },
+    {
+      "ledger_entry_id": "ledger-review_pending-1776591852965-f3eae2",
+      "run_id": "sandbox-2026-04-19-154400-dnnpkaefmlha-v0-1-1-6218cc",
+      "source_run_id": null,
+      "sandbox_run_id": null,
+      "source_sandbox_run_id": null,
+      "new_sandbox_run_id": null,
+      "item_id": "dnnpkaefmlhacigijccbhemgaenjbcpk",
+      "publisher_id": "7462c8f7-9c1a-48ed-9249-894c0317bd46",
+      "item_name": null,
+      "package_sha256": "",
+      "manifest_version": null,
+      "current_sandbox_item_version": null,
+      "upload_response_crx_version": null,
+      "uploaded_crx_version": null,
+      "published_crx_version": null,
+      "upload_state": null,
+      "version_consistency_check": null,
+      "previous_manifest_version": null,
+      "target_manifest_version": null,
+      "old_package_sha256": "",
+      "new_package_sha256": "",
+      "action_type": "review_pending",
+      "action_source": "api",
+      "action_status": "PENDING_REVIEW",
+      "occurred_at": "2026-04-19T09:44:12.962Z",
+      "evidence_artifacts": [
+        "state/run_events/sandbox-2026-04-19-154400-dnnpkaefmlha-v0-1-1-6218cc/91_review_status.json"
+      ],
+      "evidence_hashes": {
+        "state/run_events/sandbox-2026-04-19-154400-dnnpkaefmlha-v0-1-1-6218cc/91_review_status.json": "95f3a723926c54556dfc432ef12d98c5a0e2e3c4a766a678ad89c8e3bb6e82ee"
+      },
+      "chrome_webstore_response_summary": {
+        "http_status": 200,
+        "body_keys": [
+          "itemId",
+          "name",
+          "publicKey",
+          "submittedItemRevisionStatus"
+        ],
+        "response_body_summary": {
+          "kind": "object",
+          "body_keys": [
+            "itemId",
+            "name",
+            "publicKey",
+            "submittedItemRevisionStatus"
+          ],
+          "preview": "{\"name\":\"publishers/7462c8f7-9c1a-48ed-9249-894c0317bd46/items/dnnpkaefmlhacigijccbhemgaenjbcpk\",\"itemId\":\"dnnpkaefmlhacigijccbhemgaenjbcpk\",\"publicKey\":\"-----BEGIN PUBLIC KEY-----\\nMIIBIjANBgkqhkiG9w"
+        },
+        "response_headers_summary": {
+          "header_names": [
+            "alt-svc",
+            "content-length",
+            "content-type",
+            "date",
+            "server",
+            "vary",
+            "x-content-type-options",
+            "x-frame-options",
+            "x-xss-protection"
+          ],
+          "sampled": {
+            "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+            "content-length": "816",
+            "content-type": "application/json; charset=UTF-8",
+            "date": "Sun, 19 Apr 2026 09:44:12 GMT",
+            "server": "ESF",
+            "vary": "Origin, X-Origin, Referer",
+            "x-content-type-options": "nosniff"
+          }
+        }
+      },
+      "dashboard_manual_note": null,
+      "approved_by": null,
+      "approval_artifact": null,
+      "corrects_ledger_entry_id": null,
+      "corrected_fields": [],
+      "reason": null,
+      "production_write": false,
+      "sandbox_only": true,
+      "evidence_quality": "direct_artifact",
+      "original_artifact_available": true,
+      "recovery_reason": null,
+      "redaction_checks": {
+        "sanitized_response_bodies": true,
+        "checked_secret_value_count": 1,
+        "secret_values_present_in_artifact": false,
+        "authorization_header_pattern_present": false,
+        "key_material_pattern_present": false,
+        "secret_marker_pattern_present": false,
+        "redaction_guard_triggered": false
+      }
+    },
+    {
+      "ledger_entry_id": "ledger-manual_cancel_review-1776638247431-4bb2f5",
+      "run_id": "sandbox-2026-04-19-154400-dnnpkaefmlha-v0-1-1-6218cc",
+      "source_run_id": null,
+      "sandbox_run_id": null,
+      "source_sandbox_run_id": null,
+      "new_sandbox_run_id": null,
+      "item_id": "dnnpkaefmlhacigijccbhemgaenjbcpk",
+      "publisher_id": "7462c8f7-9c1a-48ed-9249-894c0317bd46",
+      "item_name": null,
+      "package_sha256": "b86a5114a52056acb11e685f243125f4de34abcd15fb8d37f48c066574719a8d",
+      "manifest_version": "0.1.1",
+      "current_sandbox_item_version": null,
+      "upload_response_crx_version": null,
+      "uploaded_crx_version": "0.1.1",
+      "published_crx_version": null,
+      "upload_state": null,
+      "version_consistency_check": null,
+      "previous_manifest_version": null,
+      "target_manifest_version": null,
+      "old_package_sha256": "",
+      "new_package_sha256": "",
+      "action_type": "manual_cancel_review",
+      "action_source": "dashboard_manual",
+      "action_status": "recorded_unconfirmed",
+      "occurred_at": "2026-04-19T22:37:27.428Z",
+      "evidence_artifacts": [
+        "state/run_events/sandbox-2026-04-19-154400-dnnpkaefmlha-v0-1-1-6218cc/91_review_status.json",
+        "state/run_events/sandbox-2026-04-19-154400-dnnpkaefmlha-v0-1-1-6218cc/review_status/91_review_status-manual-cancel-2026-04-19T22-37-27-426Z.json"
+      ],
+      "evidence_hashes": {
+        "state/run_events/sandbox-2026-04-19-154400-dnnpkaefmlha-v0-1-1-6218cc/91_review_status.json": "5f43acd6aa71c7dd1850ba4dd37e474d0dab9d7fee4c5ee513d7c8e1fe0c7806",
+        "state/run_events/sandbox-2026-04-19-154400-dnnpkaefmlha-v0-1-1-6218cc/review_status/91_review_status-manual-cancel-2026-04-19T22-37-27-426Z.json": "5f43acd6aa71c7dd1850ba4dd37e474d0dab9d7fee4c5ee513d7c8e1fe0c7806"
+      },
+      "chrome_webstore_response_summary": {
+        "http_status": null,
+        "body_keys": [],
+        "response_body_summary": null,
+        "response_headers_summary": null
+      },
+      "dashboard_manual_note": "User manually cancelled 0.1.1 pending review because product acceptance returned revise; 0.1.2 revision has passed acceptance and will replace it.",
+      "approved_by": null,
+      "approval_artifact": null,
+      "corrects_ledger_entry_id": null,
+      "corrected_fields": [],
+      "reason": null,
+      "production_write": false,
+      "sandbox_only": true,
+      "evidence_quality": "direct_artifact",
+      "original_artifact_available": true,
+      "recovery_reason": null,
+      "redaction_checks": {
+        "sanitized_response_bodies": true,
+        "checked_secret_value_count": 0,
+        "secret_values_present_in_artifact": false,
+        "authorization_header_pattern_present": false,
+        "key_material_pattern_present": false,
+        "secret_marker_pattern_present": false,
+        "redaction_guard_triggered": false
+      }
+    },
+    {
+      "ledger_entry_id": "ledger-sandbox_upload_approval-1776638296028-2dcde0",
+      "run_id": "sandbox-2026-04-19-215222-dnnpkaefmlha-v0-1-2-c64a39",
+      "source_run_id": "sandbox-2026-04-19-154400-dnnpkaefmlha-v0-1-1-6218cc",
+      "sandbox_run_id": "sandbox-2026-04-19-215222-dnnpkaefmlha-v0-1-2-c64a39",
+      "source_sandbox_run_id": null,
+      "new_sandbox_run_id": null,
+      "item_id": "dnnpkaefmlhacigijccbhemgaenjbcpk",
+      "publisher_id": "7462c8f7-9c1a-48ed-9249-894c0317bd46",
+      "item_name": null,
+      "package_sha256": "6f28eb50de2150356a4fcdbadff25e33876ca03ff04f665bccb419c7069cc53f",
+      "manifest_version": "0.1.2",
+      "current_sandbox_item_version": null,
+      "upload_response_crx_version": null,
+      "uploaded_crx_version": null,
+      "published_crx_version": null,
+      "upload_state": null,
+      "version_consistency_check": null,
+      "previous_manifest_version": null,
+      "target_manifest_version": null,
+      "old_package_sha256": "",
+      "new_package_sha256": "",
+      "action_type": "sandbox_upload_approval",
+      "action_source": "cli",
+      "action_status": "approved_write_allowed",
+      "occurred_at": "2026-04-19T22:38:16.026Z",
+      "evidence_artifacts": [
+        "state/run_events/sandbox-2026-04-19-215222-dnnpkaefmlha-v0-1-2-c64a39/82_human_approval.json"
+      ],
+      "evidence_hashes": {
+        "state/run_events/sandbox-2026-04-19-215222-dnnpkaefmlha-v0-1-2-c64a39/82_human_approval.json": "d31b042f133437db56c1d961004b9745834c0b46617a09333145311ea230e6f5"
+      },
+      "chrome_webstore_response_summary": null,
+      "dashboard_manual_note": null,
+      "approved_by": "TMT2",
+      "approval_artifact": "state/run_events/sandbox-2026-04-19-215222-dnnpkaefmlha-v0-1-2-c64a39/82_human_approval.json",
+      "corrects_ledger_entry_id": null,
+      "corrected_fields": [],
+      "reason": null,
+      "production_write": false,
+      "sandbox_only": true,
+      "evidence_quality": "direct_artifact",
+      "original_artifact_available": true,
+      "recovery_reason": null,
+      "redaction_checks": {
+        "sanitized_response_bodies": true,
+        "checked_secret_value_count": 0,
+        "secret_values_present_in_artifact": false,
+        "authorization_header_pattern_present": false,
+        "key_material_pattern_present": false,
+        "secret_marker_pattern_present": false,
+        "redaction_guard_triggered": false
+      }
+    },
+    {
+      "ledger_entry_id": "ledger-sandbox_prepare_product_revision-1776638732203-0d97db",
+      "run_id": "sandbox-2026-04-19-215222-dnnpkaefmlha-v0-1-2-c64a39",
+      "source_run_id": "2026-04-19-145118-daily-4df0e2",
+      "sandbox_run_id": "sandbox-2026-04-19-215222-dnnpkaefmlha-v0-1-2-c64a39",
+      "source_sandbox_run_id": "sandbox-2026-04-19-154400-dnnpkaefmlha-v0-1-1-6218cc",
+      "new_sandbox_run_id": "sandbox-2026-04-19-215222-dnnpkaefmlha-v0-1-2-c64a39",
+      "item_id": "dnnpkaefmlhacigijccbhemgaenjbcpk",
+      "publisher_id": "7462c8f7-9c1a-48ed-9249-894c0317bd46",
+      "item_name": "Lead Form Helper",
+      "package_sha256": "6f28eb50de2150356a4fcdbadff25e33876ca03ff04f665bccb419c7069cc53f",
+      "manifest_version": "0.1.2",
+      "current_sandbox_item_version": "0.1.0",
+      "upload_response_crx_version": null,
+      "uploaded_crx_version": null,
+      "published_crx_version": null,
+      "upload_state": null,
+      "version_consistency_check": null,
+      "previous_manifest_version": "0.1.1",
+      "target_manifest_version": "0.1.2",
+      "old_package_sha256": "b86a5114a52056acb11e685f243125f4de34abcd15fb8d37f48c066574719a8d",
+      "new_package_sha256": "6f28eb50de2150356a4fcdbadff25e33876ca03ff04f665bccb419c7069cc53f",
+      "action_type": "sandbox_prepare_product_revision",
+      "action_source": "cli",
+      "action_status": "passed",
+      "occurred_at": "2026-04-19T13:52:22.451Z",
+      "evidence_artifacts": [
+        "runs/sandbox-2026-04-19-215222-dnnpkaefmlha-v0-1-2-c64a39/83_sandbox_validation_plan.json",
+        "state/run_events/sandbox-2026-04-19-215222-dnnpkaefmlha-v0-1-2-c64a39/62_functional_test_matrix.json",
+        "state/run_events/sandbox-2026-04-19-215222-dnnpkaefmlha-v0-1-2-c64a39/94_product_acceptance_review.json"
+      ],
+      "evidence_hashes": {},
+      "chrome_webstore_response_summary": null,
+      "dashboard_manual_note": null,
+      "approved_by": null,
+      "approval_artifact": null,
+      "corrects_ledger_entry_id": null,
+      "corrected_fields": [],
+      "reason": null,
+      "production_write": false,
+      "sandbox_only": true,
+      "evidence_quality": "direct_artifact",
+      "original_artifact_available": true,
+      "recovery_reason": null,
+      "redaction_checks": {
+        "sanitized_response_bodies": true,
+        "checked_secret_value_count": 0,
+        "secret_values_present_in_artifact": false,
+        "authorization_header_pattern_present": false,
+        "key_material_pattern_present": false,
+        "secret_marker_pattern_present": false,
+        "redaction_guard_triggered": false
+      }
+    },
+    {
+      "ledger_entry_id": "ledger-fetch_status-1776638902116-6698c2",
+      "run_id": "sandbox-2026-04-19-215222-dnnpkaefmlha-v0-1-2-c64a39",
+      "source_run_id": null,
+      "sandbox_run_id": null,
+      "source_sandbox_run_id": null,
+      "new_sandbox_run_id": null,
+      "item_id": "dnnpkaefmlhacigijccbhemgaenjbcpk",
+      "publisher_id": "7462c8f7-9c1a-48ed-9249-894c0317bd46",
+      "item_name": "Lead Form Helper",
+      "package_sha256": "6f28eb50de2150356a4fcdbadff25e33876ca03ff04f665bccb419c7069cc53f",
+      "manifest_version": "0.1.2",
+      "current_sandbox_item_version": null,
+      "upload_response_crx_version": null,
+      "uploaded_crx_version": null,
+      "published_crx_version": null,
+      "upload_state": null,
+      "version_consistency_check": null,
+      "previous_manifest_version": null,
+      "target_manifest_version": null,
+      "old_package_sha256": "",
+      "new_package_sha256": "",
+      "action_type": "fetch_status",
+      "action_source": "cli",
+      "action_status": "passed",
+      "occurred_at": "2026-04-19T22:48:22.113Z",
+      "evidence_artifacts": [
+        "state/run_events/sandbox-2026-04-19-215222-dnnpkaefmlha-v0-1-2-c64a39/90_publish_execution.json"
+      ],
+      "evidence_hashes": {
+        "state/run_events/sandbox-2026-04-19-215222-dnnpkaefmlha-v0-1-2-c64a39/90_publish_execution.json": "7517be6aa8c33d19f0642b191ae88db8b773f6da30933a086985b5b7c4fea2a4"
+      },
+      "chrome_webstore_response_summary": {
+        "executed": true,
+        "ok": true,
+        "status_code": 200,
+        "http_status": 200,
+        "skipped": false,
+        "body_keys": [
+          "itemId",
+          "name",
+          "publicKey",
+          "submittedItemRevisionStatus"
+        ],
+        "response_body_summary": {
+          "kind": "object",
+          "body_keys": [
+            "itemId",
+            "name",
+            "publicKey",
+            "submittedItemRevisionStatus"
+          ],
+          "preview": "{\"name\":\"publishers/7462c8f7-9c1a-48ed-9249-894c0317bd46/items/dnnpkaefmlhacigijccbhemgaenjbcpk\",\"itemId\":\"dnnpkaefmlhacigijccbhemgaenjbcpk\",\"publicKey\":\"-----BEGIN PUBLIC KEY-----\\nMIIBIjANBgkqhkiG9w"
+        },
+        "response_headers_summary": {
+          "header_names": [
+            "alt-svc",
+            "content-length",
+            "content-type",
+            "date",
+            "server",
+            "vary",
+            "x-content-type-options",
+            "x-frame-options",
+            "x-xss-protection"
+          ],
+          "sampled": {
+            "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+            "content-length": "811",
+            "content-type": "application/json; charset=UTF-8",
+            "date": "Sun, 19 Apr 2026 22:48:18 GMT",
+            "server": "ESF",
+            "vary": "Origin, X-Origin, Referer",
+            "x-content-type-options": "nosniff"
+          }
+        },
+        "error_details": null
+      },
+      "dashboard_manual_note": null,
+      "approved_by": null,
+      "approval_artifact": "state/run_events/sandbox-2026-04-19-215222-dnnpkaefmlha-v0-1-2-c64a39/82_human_approval.json",
+      "corrects_ledger_entry_id": null,
+      "corrected_fields": [],
+      "reason": null,
+      "production_write": false,
+      "sandbox_only": true,
+      "evidence_quality": "direct_artifact",
+      "original_artifact_available": true,
+      "recovery_reason": null,
+      "redaction_checks": {
+        "sanitized_response_bodies": true,
+        "checked_secret_value_count": 1,
+        "secret_values_present_in_artifact": false,
+        "authorization_header_pattern_present": false,
+        "key_material_pattern_present": false,
+        "secret_marker_pattern_present": false,
+        "redaction_guard_triggered": false
+      }
+    },
+    {
+      "ledger_entry_id": "ledger-sandbox_upload-1776638902121-c472cc",
+      "run_id": "sandbox-2026-04-19-215222-dnnpkaefmlha-v0-1-2-c64a39",
+      "source_run_id": null,
+      "sandbox_run_id": null,
+      "source_sandbox_run_id": null,
+      "new_sandbox_run_id": null,
+      "item_id": "dnnpkaefmlhacigijccbhemgaenjbcpk",
+      "publisher_id": "7462c8f7-9c1a-48ed-9249-894c0317bd46",
+      "item_name": "Lead Form Helper",
+      "package_sha256": "6f28eb50de2150356a4fcdbadff25e33876ca03ff04f665bccb419c7069cc53f",
+      "manifest_version": "0.1.2",
+      "current_sandbox_item_version": "0.1.1",
+      "upload_response_crx_version": "0.1.2",
+      "uploaded_crx_version": "0.1.2",
+      "published_crx_version": null,
+      "upload_state": "SUCCEEDED",
+      "version_consistency_check": {
+        "performed": true,
+        "upload_state": "SUCCEEDED",
+        "manifest_version": "0.1.2",
+        "upload_response_crx_version": "0.1.2",
+        "passed": true,
+        "failure_reason": null
+      },
+      "previous_manifest_version": null,
+      "target_manifest_version": null,
+      "old_package_sha256": "",
+      "new_package_sha256": "",
+      "action_type": "sandbox_upload",
+      "action_source": "cli",
+      "action_status": "passed",
+      "occurred_at": "2026-04-19T22:48:22.120Z",
+      "evidence_artifacts": [
+        "state/run_events/sandbox-2026-04-19-215222-dnnpkaefmlha-v0-1-2-c64a39/90_publish_execution.json"
+      ],
+      "evidence_hashes": {
+        "state/run_events/sandbox-2026-04-19-215222-dnnpkaefmlha-v0-1-2-c64a39/90_publish_execution.json": "7517be6aa8c33d19f0642b191ae88db8b773f6da30933a086985b5b7c4fea2a4"
+      },
+      "chrome_webstore_response_summary": {
+        "executed": true,
+        "ok": true,
+        "status_code": 200,
+        "http_status": 200,
+        "skipped": false,
+        "body_keys": [
+          "crxVersion",
+          "itemId",
+          "name",
+          "uploadState"
+        ],
+        "response_body_summary": {
+          "kind": "object",
+          "body_keys": [
+            "crxVersion",
+            "itemId",
+            "name",
+            "uploadState"
+          ],
+          "preview": "{\"name\":\"publishers/7462c8f7-9c1a-48ed-9249-894c0317bd46/items/dnnpkaefmlhacigijccbhemgaenjbcpk\",\"itemId\":\"dnnpkaefmlhacigijccbhemgaenjbcpk\",\"crxVersion\":\"0.1.2\",\"uploadState\":\"SUCCEEDED\"}"
+        },
+        "response_headers_summary": {
+          "header_names": [
+            "alt-svc",
+            "content-length",
+            "content-type",
+            "date",
+            "server",
+            "vary",
+            "x-guploader-uploadid"
+          ],
+          "sampled": {
+            "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+            "content-length": "206",
+            "content-type": "application/json; charset=UTF-8",
+            "date": "Sun, 19 Apr 2026 22:48:21 GMT",
+            "server": "UploadServer",
+            "vary": "Origin, X-Origin, Referer",
+            "x-guploader-uploadid": "AMNfjG2tjOy3PdSc1rlpacp1DJWAfalZCog9HB69HPE_zuiVoXhH2jHx2ZfM9ebP7kFdzbh--fNA10A"
+          }
+        },
+        "error_details": null,
+        "upload_state": "SUCCEEDED",
+        "crxVersion": "0.1.2",
+        "crx_version": "0.1.2"
+      },
+      "dashboard_manual_note": null,
+      "approved_by": null,
+      "approval_artifact": "state/run_events/sandbox-2026-04-19-215222-dnnpkaefmlha-v0-1-2-c64a39/82_human_approval.json",
+      "corrects_ledger_entry_id": null,
+      "corrected_fields": [],
+      "reason": null,
+      "production_write": false,
+      "sandbox_only": true,
+      "evidence_quality": "direct_artifact",
+      "original_artifact_available": true,
+      "recovery_reason": null,
+      "redaction_checks": {
+        "sanitized_response_bodies": true,
+        "checked_secret_value_count": 1,
+        "secret_values_present_in_artifact": false,
+        "authorization_header_pattern_present": false,
+        "key_material_pattern_present": false,
+        "secret_marker_pattern_present": false,
+        "redaction_guard_triggered": false
+      }
+    },
+    {
+      "ledger_entry_id": "ledger-fetch_status-1776638917199-fa02fc",
+      "run_id": "sandbox-2026-04-19-215222-dnnpkaefmlha-v0-1-2-c64a39",
+      "source_run_id": null,
+      "sandbox_run_id": null,
+      "source_sandbox_run_id": null,
+      "new_sandbox_run_id": null,
+      "item_id": "dnnpkaefmlhacigijccbhemgaenjbcpk",
+      "publisher_id": "7462c8f7-9c1a-48ed-9249-894c0317bd46",
+      "item_name": "Lead Form Helper",
+      "package_sha256": "6f28eb50de2150356a4fcdbadff25e33876ca03ff04f665bccb419c7069cc53f",
+      "manifest_version": "0.1.2",
+      "current_sandbox_item_version": null,
+      "upload_response_crx_version": null,
+      "uploaded_crx_version": null,
+      "published_crx_version": null,
+      "upload_state": null,
+      "version_consistency_check": null,
+      "previous_manifest_version": null,
+      "target_manifest_version": null,
+      "old_package_sha256": "",
+      "new_package_sha256": "",
+      "action_type": "fetch_status",
+      "action_source": "cli",
+      "action_status": "passed",
+      "occurred_at": "2026-04-19T22:48:37.197Z",
+      "evidence_artifacts": [
+        "state/run_events/sandbox-2026-04-19-215222-dnnpkaefmlha-v0-1-2-c64a39/90_publish_execution.json"
+      ],
+      "evidence_hashes": {
+        "state/run_events/sandbox-2026-04-19-215222-dnnpkaefmlha-v0-1-2-c64a39/90_publish_execution.json": "b5450e10b3dccd279681d0773693055a743c0329ba216adf151ffdfd126d4348"
+      },
+      "chrome_webstore_response_summary": {
+        "executed": true,
+        "ok": true,
+        "status_code": 200,
+        "http_status": 200,
+        "skipped": false,
+        "body_keys": [
+          "itemId",
+          "name",
+          "publicKey",
+          "submittedItemRevisionStatus"
+        ],
+        "response_body_summary": {
+          "kind": "object",
+          "body_keys": [
+            "itemId",
+            "name",
+            "publicKey",
+            "submittedItemRevisionStatus"
+          ],
+          "preview": "{\"name\":\"publishers/7462c8f7-9c1a-48ed-9249-894c0317bd46/items/dnnpkaefmlhacigijccbhemgaenjbcpk\",\"itemId\":\"dnnpkaefmlhacigijccbhemgaenjbcpk\",\"publicKey\":\"-----BEGIN PUBLIC KEY-----\\nMIIBIjANBgkqhkiG9w"
+        },
+        "response_headers_summary": {
+          "header_names": [
+            "alt-svc",
+            "content-length",
+            "content-type",
+            "date",
+            "server",
+            "vary",
+            "x-content-type-options",
+            "x-frame-options",
+            "x-xss-protection"
+          ],
+          "sampled": {
+            "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+            "content-length": "811",
+            "content-type": "application/json; charset=UTF-8",
+            "date": "Sun, 19 Apr 2026 22:48:37 GMT",
+            "server": "ESF",
+            "vary": "Origin, X-Origin, Referer",
+            "x-content-type-options": "nosniff"
+          }
+        },
+        "error_details": null
+      },
+      "dashboard_manual_note": null,
+      "approved_by": null,
+      "approval_artifact": "state/run_events/sandbox-2026-04-19-215222-dnnpkaefmlha-v0-1-2-c64a39/82_human_approval.json",
+      "corrects_ledger_entry_id": null,
+      "corrected_fields": [],
+      "reason": null,
+      "production_write": false,
+      "sandbox_only": true,
+      "evidence_quality": "direct_artifact",
+      "original_artifact_available": true,
+      "recovery_reason": null,
+      "redaction_checks": {
+        "sanitized_response_bodies": true,
+        "checked_secret_value_count": 1,
+        "secret_values_present_in_artifact": false,
+        "authorization_header_pattern_present": false,
+        "key_material_pattern_present": false,
+        "secret_marker_pattern_present": false,
+        "redaction_guard_triggered": false
+      }
+    },
+    {
+      "ledger_entry_id": "ledger-fetch_status-1776639827064-7eae32",
+      "run_id": "sandbox-2026-04-19-215222-dnnpkaefmlha-v0-1-2-c64a39",
+      "source_run_id": null,
+      "sandbox_run_id": null,
+      "source_sandbox_run_id": null,
+      "new_sandbox_run_id": null,
+      "item_id": "dnnpkaefmlhacigijccbhemgaenjbcpk",
+      "publisher_id": "7462c8f7-9c1a-48ed-9249-894c0317bd46",
+      "item_name": "Lead Form Helper",
+      "package_sha256": "6f28eb50de2150356a4fcdbadff25e33876ca03ff04f665bccb419c7069cc53f",
+      "manifest_version": "0.1.2",
+      "current_sandbox_item_version": null,
+      "upload_response_crx_version": null,
+      "uploaded_crx_version": null,
+      "published_crx_version": null,
+      "upload_state": null,
+      "version_consistency_check": null,
+      "previous_manifest_version": null,
+      "target_manifest_version": null,
+      "old_package_sha256": "",
+      "new_package_sha256": "",
+      "action_type": "fetch_status",
+      "action_source": "cli",
+      "action_status": "passed",
+      "occurred_at": "2026-04-19T23:03:47.062Z",
+      "evidence_artifacts": [
+        "state/run_events/sandbox-2026-04-19-215222-dnnpkaefmlha-v0-1-2-c64a39/90_publish_execution.json"
+      ],
+      "evidence_hashes": {
+        "state/run_events/sandbox-2026-04-19-215222-dnnpkaefmlha-v0-1-2-c64a39/90_publish_execution.json": "eb8a69a2548f9a8e1633df918fbfa9b6d9f691fb1340591270064d7aa37ff52b"
+      },
+      "chrome_webstore_response_summary": {
+        "executed": true,
+        "ok": true,
+        "status_code": 200,
+        "http_status": 200,
+        "skipped": false,
+        "body_keys": [
+          "itemId",
+          "name",
+          "publicKey",
+          "submittedItemRevisionStatus"
+        ],
+        "response_body_summary": {
+          "kind": "object",
+          "body_keys": [
+            "itemId",
+            "name",
+            "publicKey",
+            "submittedItemRevisionStatus"
+          ],
+          "preview": "{\"name\":\"publishers/7462c8f7-9c1a-48ed-9249-894c0317bd46/items/dnnpkaefmlhacigijccbhemgaenjbcpk\",\"itemId\":\"dnnpkaefmlhacigijccbhemgaenjbcpk\",\"publicKey\":\"-----BEGIN PUBLIC KEY-----\\nMIIBIjANBgkqhkiG9w"
+        },
+        "response_headers_summary": {
+          "header_names": [
+            "alt-svc",
+            "content-length",
+            "content-type",
+            "date",
+            "server",
+            "vary",
+            "x-content-type-options",
+            "x-frame-options",
+            "x-xss-protection"
+          ],
+          "sampled": {
+            "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+            "content-length": "811",
+            "content-type": "application/json; charset=UTF-8",
+            "date": "Sun, 19 Apr 2026 23:03:46 GMT",
+            "server": "ESF",
+            "vary": "Origin, X-Origin, Referer",
+            "x-content-type-options": "nosniff"
+          }
+        },
+        "error_details": null
+      },
+      "dashboard_manual_note": null,
+      "approved_by": null,
+      "approval_artifact": "state/run_events/sandbox-2026-04-19-215222-dnnpkaefmlha-v0-1-2-c64a39/82_human_approval.json",
+      "corrects_ledger_entry_id": null,
+      "corrected_fields": [],
+      "reason": null,
+      "production_write": false,
+      "sandbox_only": true,
+      "evidence_quality": "direct_artifact",
+      "original_artifact_available": true,
+      "recovery_reason": null,
+      "redaction_checks": {
+        "sanitized_response_bodies": true,
+        "checked_secret_value_count": 1,
+        "secret_values_present_in_artifact": false,
+        "authorization_header_pattern_present": false,
+        "key_material_pattern_present": false,
+        "secret_marker_pattern_present": false,
+        "redaction_guard_triggered": false
+      }
+    },
+    {
+      "ledger_entry_id": "ledger-sandbox_publish_approval-1776639842292-73abc1",
+      "run_id": "sandbox-2026-04-19-215222-dnnpkaefmlha-v0-1-2-c64a39",
+      "source_run_id": "sandbox-2026-04-19-154400-dnnpkaefmlha-v0-1-1-6218cc",
+      "sandbox_run_id": "sandbox-2026-04-19-215222-dnnpkaefmlha-v0-1-2-c64a39",
+      "source_sandbox_run_id": null,
+      "new_sandbox_run_id": null,
+      "item_id": "dnnpkaefmlhacigijccbhemgaenjbcpk",
+      "publisher_id": "7462c8f7-9c1a-48ed-9249-894c0317bd46",
+      "item_name": null,
+      "package_sha256": "6f28eb50de2150356a4fcdbadff25e33876ca03ff04f665bccb419c7069cc53f",
+      "manifest_version": "0.1.2",
+      "current_sandbox_item_version": null,
+      "upload_response_crx_version": null,
+      "uploaded_crx_version": null,
+      "published_crx_version": null,
+      "upload_state": null,
+      "version_consistency_check": null,
+      "previous_manifest_version": null,
+      "target_manifest_version": null,
+      "old_package_sha256": "",
+      "new_package_sha256": "",
+      "action_type": "sandbox_publish_approval",
+      "action_source": "cli",
+      "action_status": "approved_write_allowed",
+      "occurred_at": "2026-04-19T23:04:02.288Z",
+      "evidence_artifacts": [
+        "state/run_events/sandbox-2026-04-19-215222-dnnpkaefmlha-v0-1-2-c64a39/82_human_approval.json"
+      ],
+      "evidence_hashes": {
+        "state/run_events/sandbox-2026-04-19-215222-dnnpkaefmlha-v0-1-2-c64a39/82_human_approval.json": "43c858a36e50e7c39e502ba9aa3b80ad20a644332e5d6f91564d3aa0922d8567"
+      },
+      "chrome_webstore_response_summary": null,
+      "dashboard_manual_note": null,
+      "approved_by": "TMT2",
+      "approval_artifact": "state/run_events/sandbox-2026-04-19-215222-dnnpkaefmlha-v0-1-2-c64a39/82_human_approval.json",
+      "corrects_ledger_entry_id": null,
+      "corrected_fields": [],
+      "reason": null,
+      "production_write": false,
+      "sandbox_only": true,
+      "evidence_quality": "direct_artifact",
+      "original_artifact_available": true,
+      "recovery_reason": null,
+      "redaction_checks": {
+        "sanitized_response_bodies": true,
+        "checked_secret_value_count": 0,
+        "secret_values_present_in_artifact": false,
+        "authorization_header_pattern_present": false,
+        "key_material_pattern_present": false,
+        "secret_marker_pattern_present": false,
+        "redaction_guard_triggered": false
+      }
+    },
+    {
+      "ledger_entry_id": "ledger-fetch_status-1776639880036-7bd6e8",
+      "run_id": "sandbox-2026-04-19-215222-dnnpkaefmlha-v0-1-2-c64a39",
+      "source_run_id": null,
+      "sandbox_run_id": null,
+      "source_sandbox_run_id": null,
+      "new_sandbox_run_id": null,
+      "item_id": "dnnpkaefmlhacigijccbhemgaenjbcpk",
+      "publisher_id": "7462c8f7-9c1a-48ed-9249-894c0317bd46",
+      "item_name": "Lead Form Helper",
+      "package_sha256": "6f28eb50de2150356a4fcdbadff25e33876ca03ff04f665bccb419c7069cc53f",
+      "manifest_version": "0.1.2",
+      "current_sandbox_item_version": null,
+      "upload_response_crx_version": null,
+      "uploaded_crx_version": null,
+      "published_crx_version": null,
+      "upload_state": null,
+      "version_consistency_check": null,
+      "previous_manifest_version": null,
+      "target_manifest_version": null,
+      "old_package_sha256": "",
+      "new_package_sha256": "",
+      "action_type": "fetch_status",
+      "action_source": "cli",
+      "action_status": "passed",
+      "occurred_at": "2026-04-19T23:04:40.032Z",
+      "evidence_artifacts": [
+        "state/run_events/sandbox-2026-04-19-215222-dnnpkaefmlha-v0-1-2-c64a39/90_publish_execution.json"
+      ],
+      "evidence_hashes": {
+        "state/run_events/sandbox-2026-04-19-215222-dnnpkaefmlha-v0-1-2-c64a39/90_publish_execution.json": "93195581509af5eea54a1b93f422beab366697368a260afc6d3d90a1157af5ef"
+      },
+      "chrome_webstore_response_summary": {
+        "executed": true,
+        "ok": true,
+        "status_code": 200,
+        "http_status": 200,
+        "skipped": false,
+        "body_keys": [
+          "itemId",
+          "name",
+          "publicKey",
+          "submittedItemRevisionStatus"
+        ],
+        "response_body_summary": {
+          "kind": "object",
+          "body_keys": [
+            "itemId",
+            "name",
+            "publicKey",
+            "submittedItemRevisionStatus"
+          ],
+          "preview": "{\"name\":\"publishers/7462c8f7-9c1a-48ed-9249-894c0317bd46/items/dnnpkaefmlhacigijccbhemgaenjbcpk\",\"itemId\":\"dnnpkaefmlhacigijccbhemgaenjbcpk\",\"publicKey\":\"-----BEGIN PUBLIC KEY-----\\nMIIBIjANBgkqhkiG9w"
+        },
+        "response_headers_summary": {
+          "header_names": [
+            "alt-svc",
+            "content-length",
+            "content-type",
+            "date",
+            "server",
+            "vary",
+            "x-content-type-options",
+            "x-frame-options",
+            "x-xss-protection"
+          ],
+          "sampled": {
+            "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+            "content-length": "811",
+            "content-type": "application/json; charset=UTF-8",
+            "date": "Sun, 19 Apr 2026 23:04:31 GMT",
+            "server": "ESF",
+            "vary": "Origin, X-Origin, Referer",
+            "x-content-type-options": "nosniff"
+          }
+        },
+        "error_details": null
+      },
+      "dashboard_manual_note": null,
+      "approved_by": null,
+      "approval_artifact": "state/run_events/sandbox-2026-04-19-215222-dnnpkaefmlha-v0-1-2-c64a39/82_human_approval.json",
+      "corrects_ledger_entry_id": null,
+      "corrected_fields": [],
+      "reason": null,
+      "production_write": false,
+      "sandbox_only": true,
+      "evidence_quality": "direct_artifact",
+      "original_artifact_available": true,
+      "recovery_reason": null,
+      "redaction_checks": {
+        "sanitized_response_bodies": true,
+        "checked_secret_value_count": 1,
+        "secret_values_present_in_artifact": false,
+        "authorization_header_pattern_present": false,
+        "key_material_pattern_present": false,
+        "secret_marker_pattern_present": false,
+        "redaction_guard_triggered": false
+      }
+    },
+    {
+      "ledger_entry_id": "ledger-sandbox_publish_optional-1776639880042-9e6450",
+      "run_id": "sandbox-2026-04-19-215222-dnnpkaefmlha-v0-1-2-c64a39",
+      "source_run_id": null,
+      "sandbox_run_id": null,
+      "source_sandbox_run_id": null,
+      "new_sandbox_run_id": null,
+      "item_id": "dnnpkaefmlhacigijccbhemgaenjbcpk",
+      "publisher_id": "7462c8f7-9c1a-48ed-9249-894c0317bd46",
+      "item_name": "Lead Form Helper",
+      "package_sha256": "6f28eb50de2150356a4fcdbadff25e33876ca03ff04f665bccb419c7069cc53f",
+      "manifest_version": "0.1.2",
+      "current_sandbox_item_version": "0.1.1",
+      "upload_response_crx_version": "0.1.2",
+      "uploaded_crx_version": "0.1.2",
+      "published_crx_version": null,
+      "upload_state": "SUCCEEDED",
+      "version_consistency_check": {
+        "performed": true,
+        "upload_state": "SUCCEEDED",
+        "manifest_version": "0.1.2",
+        "upload_response_crx_version": "0.1.2",
+        "passed": true,
+        "failure_reason": null
+      },
+      "previous_manifest_version": null,
+      "target_manifest_version": null,
+      "old_package_sha256": "",
+      "new_package_sha256": "",
+      "action_type": "sandbox_publish_optional",
+      "action_source": "cli",
+      "action_status": "passed",
+      "occurred_at": "2026-04-19T23:04:40.041Z",
+      "evidence_artifacts": [
+        "state/run_events/sandbox-2026-04-19-215222-dnnpkaefmlha-v0-1-2-c64a39/90_publish_execution.json"
+      ],
+      "evidence_hashes": {
+        "state/run_events/sandbox-2026-04-19-215222-dnnpkaefmlha-v0-1-2-c64a39/90_publish_execution.json": "93195581509af5eea54a1b93f422beab366697368a260afc6d3d90a1157af5ef"
+      },
+      "chrome_webstore_response_summary": {
+        "executed": true,
+        "ok": true,
+        "status_code": 200,
+        "http_status": 200,
+        "skipped": false,
+        "body_keys": [
+          "itemId",
+          "name",
+          "state"
+        ],
+        "response_body_summary": {
+          "kind": "object",
+          "body_keys": [
+            "itemId",
+            "name",
+            "state"
+          ],
+          "preview": "{\"name\":\"publishers/7462c8f7-9c1a-48ed-9249-894c0317bd46/items/dnnpkaefmlhacigijccbhemgaenjbcpk\",\"itemId\":\"dnnpkaefmlhacigijccbhemgaenjbcpk\",\"state\":\"PENDING_REVIEW\"}"
+        },
+        "response_headers_summary": {
+          "header_names": [
+            "alt-svc",
+            "content-length",
+            "content-type",
+            "date",
+            "server",
+            "vary",
+            "x-content-type-options",
+            "x-frame-options",
+            "x-xss-protection"
+          ],
+          "sampled": {
+            "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+            "content-length": "180",
+            "content-type": "application/json; charset=UTF-8",
+            "date": "Sun, 19 Apr 2026 23:04:39 GMT",
+            "server": "ESF",
+            "vary": "Origin, X-Origin, Referer",
+            "x-content-type-options": "nosniff"
+          }
+        },
+        "error_details": null
+      },
+      "dashboard_manual_note": null,
+      "approved_by": null,
+      "approval_artifact": "state/run_events/sandbox-2026-04-19-215222-dnnpkaefmlha-v0-1-2-c64a39/82_human_approval.json",
+      "corrects_ledger_entry_id": null,
+      "corrected_fields": [],
+      "reason": null,
+      "production_write": false,
+      "sandbox_only": true,
+      "evidence_quality": "direct_artifact",
+      "original_artifact_available": true,
+      "recovery_reason": null,
+      "redaction_checks": {
+        "sanitized_response_bodies": true,
+        "checked_secret_value_count": 1,
+        "secret_values_present_in_artifact": false,
+        "authorization_header_pattern_present": false,
+        "key_material_pattern_present": false,
+        "secret_marker_pattern_present": false,
+        "redaction_guard_triggered": false
+      }
+    },
+    {
+      "ledger_entry_id": "ledger-review_pending-1776639880048-73a1a4",
+      "run_id": "sandbox-2026-04-19-215222-dnnpkaefmlha-v0-1-2-c64a39",
+      "source_run_id": null,
+      "sandbox_run_id": null,
+      "source_sandbox_run_id": null,
+      "new_sandbox_run_id": null,
+      "item_id": "dnnpkaefmlhacigijccbhemgaenjbcpk",
+      "publisher_id": "7462c8f7-9c1a-48ed-9249-894c0317bd46",
+      "item_name": "Lead Form Helper",
+      "package_sha256": "6f28eb50de2150356a4fcdbadff25e33876ca03ff04f665bccb419c7069cc53f",
+      "manifest_version": "0.1.2",
+      "current_sandbox_item_version": "0.1.1",
+      "upload_response_crx_version": "0.1.2",
+      "uploaded_crx_version": "0.1.2",
+      "published_crx_version": null,
+      "upload_state": "SUCCEEDED",
+      "version_consistency_check": {
+        "performed": true,
+        "upload_state": "SUCCEEDED",
+        "manifest_version": "0.1.2",
+        "upload_response_crx_version": "0.1.2",
+        "passed": true,
+        "failure_reason": null
+      },
+      "previous_manifest_version": null,
+      "target_manifest_version": null,
+      "old_package_sha256": "",
+      "new_package_sha256": "",
+      "action_type": "review_pending",
+      "action_source": "cli",
+      "action_status": "observed",
+      "occurred_at": "2026-04-19T23:04:40.046Z",
+      "evidence_artifacts": [
+        "state/run_events/sandbox-2026-04-19-215222-dnnpkaefmlha-v0-1-2-c64a39/90_publish_execution.json"
+      ],
+      "evidence_hashes": {
+        "state/run_events/sandbox-2026-04-19-215222-dnnpkaefmlha-v0-1-2-c64a39/90_publish_execution.json": "93195581509af5eea54a1b93f422beab366697368a260afc6d3d90a1157af5ef"
+      },
+      "chrome_webstore_response_summary": {
+        "executed": true,
+        "ok": true,
+        "status_code": 200,
+        "http_status": 200,
+        "skipped": false,
+        "body_keys": [
+          "itemId",
+          "name",
+          "state"
+        ],
+        "response_body_summary": {
+          "kind": "object",
+          "body_keys": [
+            "itemId",
+            "name",
+            "state"
+          ],
+          "preview": "{\"name\":\"publishers/7462c8f7-9c1a-48ed-9249-894c0317bd46/items/dnnpkaefmlhacigijccbhemgaenjbcpk\",\"itemId\":\"dnnpkaefmlhacigijccbhemgaenjbcpk\",\"state\":\"PENDING_REVIEW\"}"
+        },
+        "response_headers_summary": {
+          "header_names": [
+            "alt-svc",
+            "content-length",
+            "content-type",
+            "date",
+            "server",
+            "vary",
+            "x-content-type-options",
+            "x-frame-options",
+            "x-xss-protection"
+          ],
+          "sampled": {
+            "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+            "content-length": "180",
+            "content-type": "application/json; charset=UTF-8",
+            "date": "Sun, 19 Apr 2026 23:04:39 GMT",
+            "server": "ESF",
+            "vary": "Origin, X-Origin, Referer",
+            "x-content-type-options": "nosniff"
+          }
+        },
+        "error_details": null
+      },
+      "dashboard_manual_note": null,
+      "approved_by": null,
+      "approval_artifact": "state/run_events/sandbox-2026-04-19-215222-dnnpkaefmlha-v0-1-2-c64a39/82_human_approval.json",
+      "corrects_ledger_entry_id": null,
+      "corrected_fields": [],
+      "reason": null,
+      "production_write": false,
+      "sandbox_only": true,
+      "evidence_quality": "direct_artifact",
+      "original_artifact_available": true,
+      "recovery_reason": null,
+      "redaction_checks": {
+        "sanitized_response_bodies": true,
+        "checked_secret_value_count": 1,
+        "secret_values_present_in_artifact": false,
+        "authorization_header_pattern_present": false,
+        "key_material_pattern_present": false,
+        "secret_marker_pattern_present": false,
+        "redaction_guard_triggered": false
+      }
+    },
+    {
+      "ledger_entry_id": "ledger-review_pending-1776639899357-a41232",
+      "run_id": "sandbox-2026-04-19-215222-dnnpkaefmlha-v0-1-2-c64a39",
+      "source_run_id": null,
+      "sandbox_run_id": null,
+      "source_sandbox_run_id": null,
+      "new_sandbox_run_id": null,
+      "item_id": "dnnpkaefmlhacigijccbhemgaenjbcpk",
+      "publisher_id": "7462c8f7-9c1a-48ed-9249-894c0317bd46",
+      "item_name": null,
+      "package_sha256": "6f28eb50de2150356a4fcdbadff25e33876ca03ff04f665bccb419c7069cc53f",
+      "manifest_version": "0.1.2",
+      "current_sandbox_item_version": null,
+      "upload_response_crx_version": null,
+      "uploaded_crx_version": "0.1.2",
+      "published_crx_version": null,
+      "upload_state": null,
+      "version_consistency_check": null,
+      "previous_manifest_version": null,
+      "target_manifest_version": null,
+      "old_package_sha256": "",
+      "new_package_sha256": "",
+      "action_type": "review_pending",
+      "action_source": "api",
+      "action_status": "PENDING_REVIEW",
+      "occurred_at": "2026-04-19T23:04:59.354Z",
+      "evidence_artifacts": [
+        "state/run_events/sandbox-2026-04-19-215222-dnnpkaefmlha-v0-1-2-c64a39/91_review_status.json"
+      ],
+      "evidence_hashes": {
+        "state/run_events/sandbox-2026-04-19-215222-dnnpkaefmlha-v0-1-2-c64a39/91_review_status.json": "c573b2e07101abfed0c6c2a6850d95eff86735da0a1b8093f18481b40aa222b7"
+      },
+      "chrome_webstore_response_summary": {
+        "http_status": 200,
+        "body_keys": [
+          "itemId",
+          "name",
+          "publicKey",
+          "submittedItemRevisionStatus"
+        ],
+        "response_body_summary": {
+          "kind": "object",
+          "body_keys": [
+            "itemId",
+            "name",
+            "publicKey",
+            "submittedItemRevisionStatus"
+          ],
+          "preview": "{\"name\":\"publishers/7462c8f7-9c1a-48ed-9249-894c0317bd46/items/dnnpkaefmlhacigijccbhemgaenjbcpk\",\"itemId\":\"dnnpkaefmlhacigijccbhemgaenjbcpk\",\"publicKey\":\"-----BEGIN PUBLIC KEY-----\\nMIIBIjANBgkqhkiG9w"
+        },
+        "response_headers_summary": {
+          "header_names": [
+            "alt-svc",
+            "content-length",
+            "content-type",
+            "date",
+            "server",
+            "vary",
+            "x-content-type-options",
+            "x-frame-options",
+            "x-xss-protection"
+          ],
+          "sampled": {
+            "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+            "content-length": "816",
+            "content-type": "application/json; charset=UTF-8",
+            "date": "Sun, 19 Apr 2026 23:04:59 GMT",
+            "server": "ESF",
+            "vary": "Origin, X-Origin, Referer",
+            "x-content-type-options": "nosniff"
+          }
+        }
+      },
+      "dashboard_manual_note": null,
+      "approved_by": null,
+      "approval_artifact": null,
+      "corrects_ledger_entry_id": null,
+      "corrected_fields": [],
+      "reason": null,
+      "production_write": false,
+      "sandbox_only": true,
+      "evidence_quality": "direct_artifact",
+      "original_artifact_available": true,
+      "recovery_reason": null,
+      "redaction_checks": {
+        "sanitized_response_bodies": true,
+        "checked_secret_value_count": 1,
+        "secret_values_present_in_artifact": false,
+        "authorization_header_pattern_present": false,
+        "key_material_pattern_present": false,
+        "secret_marker_pattern_present": false,
+        "redaction_guard_triggered": false
+      }
+    },
+    {
+      "ledger_entry_id": "ledger-review_approved-1776765407174-751096",
+      "run_id": "sandbox-2026-04-19-215222-dnnpkaefmlha-v0-1-2-c64a39",
+      "source_run_id": null,
+      "sandbox_run_id": null,
+      "source_sandbox_run_id": null,
+      "new_sandbox_run_id": null,
+      "item_id": "dnnpkaefmlhacigijccbhemgaenjbcpk",
+      "publisher_id": "7462c8f7-9c1a-48ed-9249-894c0317bd46",
+      "item_name": null,
+      "package_sha256": "6f28eb50de2150356a4fcdbadff25e33876ca03ff04f665bccb419c7069cc53f",
+      "manifest_version": "0.1.2",
+      "current_sandbox_item_version": null,
+      "upload_response_crx_version": null,
+      "uploaded_crx_version": "0.1.2",
+      "published_crx_version": null,
+      "upload_state": null,
+      "version_consistency_check": null,
+      "previous_manifest_version": null,
+      "target_manifest_version": null,
+      "old_package_sha256": "",
+      "new_package_sha256": "",
+      "action_type": "review_approved",
+      "action_source": "api",
+      "action_status": "STAGED",
+      "occurred_at": "2026-04-21T09:56:47.169Z",
+      "evidence_artifacts": [
+        "state/run_events/sandbox-2026-04-19-215222-dnnpkaefmlha-v0-1-2-c64a39/91_review_status.json"
+      ],
+      "evidence_hashes": {
+        "state/run_events/sandbox-2026-04-19-215222-dnnpkaefmlha-v0-1-2-c64a39/91_review_status.json": "7ee347a1de275af0559b7aec0e4f74ac01ec7327966a83a5efab3c71a8afc13d"
+      },
+      "chrome_webstore_response_summary": {
+        "http_status": 200,
+        "body_keys": [
+          "itemId",
+          "name",
+          "publicKey",
+          "submittedItemRevisionStatus"
+        ],
+        "response_body_summary": {
+          "kind": "object",
+          "body_keys": [
+            "itemId",
+            "name",
+            "publicKey",
+            "submittedItemRevisionStatus"
+          ],
+          "preview": "{\"name\":\"publishers/7462c8f7-9c1a-48ed-9249-894c0317bd46/items/dnnpkaefmlhacigijccbhemgaenjbcpk\",\"itemId\":\"dnnpkaefmlhacigijccbhemgaenjbcpk\",\"publicKey\":\"-----BEGIN PUBLIC KEY-----\\nMIIBIjANBgkqhkiG9w"
+        },
+        "response_headers_summary": {
+          "header_names": [
+            "alt-svc",
+            "content-length",
+            "content-type",
+            "date",
+            "server",
+            "vary",
+            "x-content-type-options",
+            "x-frame-options",
+            "x-xss-protection"
+          ],
+          "sampled": {
+            "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+            "content-length": "808",
+            "content-type": "application/json; charset=UTF-8",
+            "date": "Tue, 21 Apr 2026 09:56:47 GMT",
+            "server": "ESF",
+            "vary": "Origin, X-Origin, Referer",
+            "x-content-type-options": "nosniff"
+          }
+        }
+      },
+      "dashboard_manual_note": null,
+      "approved_by": null,
+      "approval_artifact": null,
+      "corrects_ledger_entry_id": null,
+      "corrected_fields": [],
+      "reason": null,
+      "production_write": false,
+      "sandbox_only": true,
+      "evidence_quality": "direct_artifact",
+      "original_artifact_available": true,
+      "recovery_reason": null,
+      "redaction_checks": {
+        "sanitized_response_bodies": true,
+        "checked_secret_value_count": 1,
+        "secret_values_present_in_artifact": false,
+        "authorization_header_pattern_present": false,
+        "key_material_pattern_present": false,
+        "secret_marker_pattern_present": false,
+        "redaction_guard_triggered": false
+      }
+    },
+    {
+      "ledger_entry_id": "ledger-review_approved_staged-1776766709614-88f310",
+      "run_id": "sandbox-2026-04-19-215222-dnnpkaefmlha-v0-1-2-c64a39",
+      "source_run_id": null,
+      "sandbox_run_id": null,
+      "source_sandbox_run_id": null,
+      "new_sandbox_run_id": null,
+      "item_id": "dnnpkaefmlhacigijccbhemgaenjbcpk",
+      "publisher_id": "7462c8f7-9c1a-48ed-9249-894c0317bd46",
+      "item_name": null,
+      "package_sha256": "6f28eb50de2150356a4fcdbadff25e33876ca03ff04f665bccb419c7069cc53f",
+      "manifest_version": "0.1.2",
+      "current_sandbox_item_version": null,
+      "upload_response_crx_version": null,
+      "uploaded_crx_version": "0.1.2",
+      "published_crx_version": null,
+      "upload_state": null,
+      "version_consistency_check": null,
+      "previous_manifest_version": null,
+      "target_manifest_version": null,
+      "old_package_sha256": "",
+      "new_package_sha256": "",
+      "action_type": "review_approved_staged",
+      "action_source": "api",
+      "action_status": "STAGED",
+      "occurred_at": "2026-04-21T10:18:29.612Z",
+      "evidence_artifacts": [
+        "state/run_events/sandbox-2026-04-19-215222-dnnpkaefmlha-v0-1-2-c64a39/91_review_status.json"
+      ],
+      "evidence_hashes": {
+        "state/run_events/sandbox-2026-04-19-215222-dnnpkaefmlha-v0-1-2-c64a39/91_review_status.json": "2b791bf54af7daad4eb886c1f7f0f460ff18e17d1ce01565d21b47184e2109ca"
+      },
+      "chrome_webstore_response_summary": {
+        "http_status": 200,
+        "body_keys": [
+          "itemId",
+          "name",
+          "publicKey",
+          "submittedItemRevisionStatus"
+        ],
+        "response_body_summary": {
+          "kind": "object",
+          "body_keys": [
+            "itemId",
+            "name",
+            "publicKey",
+            "submittedItemRevisionStatus"
+          ],
+          "preview": "{\"name\":\"publishers/7462c8f7-9c1a-48ed-9249-894c0317bd46/items/dnnpkaefmlhacigijccbhemgaenjbcpk\",\"itemId\":\"dnnpkaefmlhacigijccbhemgaenjbcpk\",\"publicKey\":\"-----BEGIN PUBLIC KEY-----\\nMIIBIjANBgkqhkiG9w"
+        },
+        "response_headers_summary": {
+          "header_names": [
+            "alt-svc",
+            "content-length",
+            "content-type",
+            "date",
+            "server",
+            "vary",
+            "x-content-type-options",
+            "x-frame-options",
+            "x-xss-protection"
+          ],
+          "sampled": {
+            "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+            "content-length": "808",
+            "content-type": "application/json; charset=UTF-8",
+            "date": "Tue, 21 Apr 2026 10:18:29 GMT",
+            "server": "ESF",
+            "vary": "Origin, X-Origin, Referer",
+            "x-content-type-options": "nosniff"
+          }
+        }
+      },
+      "dashboard_manual_note": null,
+      "approved_by": null,
+      "approval_artifact": null,
+      "corrects_ledger_entry_id": null,
+      "corrected_fields": [],
+      "reason": null,
+      "production_write": false,
+      "sandbox_only": true,
+      "evidence_quality": "direct_artifact",
+      "original_artifact_available": true,
+      "recovery_reason": null,
+      "redaction_checks": {
+        "sanitized_response_bodies": true,
+        "checked_secret_value_count": 1,
+        "secret_values_present_in_artifact": false,
+        "authorization_header_pattern_present": false,
+        "key_material_pattern_present": false,
+        "secret_marker_pattern_present": false,
+        "redaction_guard_triggered": false
+      }
+    },
+    {
+      "ledger_entry_id": "ledger-sandbox_prepare_commercial_release_revision-1776772416877-4a0edc",
+      "run_id": "commercial-2026-04-21-195332-dnnpkaefmlha-v0-2-0-73d443",
+      "source_run_id": "2026-04-19-145118-daily-4df0e2",
+      "sandbox_run_id": "commercial-2026-04-21-195332-dnnpkaefmlha-v0-2-0-73d443",
+      "source_sandbox_run_id": "sandbox-2026-04-19-215222-dnnpkaefmlha-v0-1-2-c64a39",
+      "new_sandbox_run_id": "commercial-2026-04-21-195332-dnnpkaefmlha-v0-2-0-73d443",
+      "item_id": "dnnpkaefmlhacigijccbhemgaenjbcpk",
+      "publisher_id": "7462c8f7-9c1a-48ed-9249-894c0317bd46",
+      "item_name": "LeadFill One Profile",
+      "package_sha256": "7d3bec9e3f8ae55e2a5be33ed0358bbaa5ce3adeb77e5390dc7b239cb2032fa8",
+      "manifest_version": "0.2.0",
+      "current_sandbox_item_version": "0.1.0",
+      "upload_response_crx_version": null,
+      "uploaded_crx_version": null,
+      "published_crx_version": null,
+      "upload_state": null,
+      "version_consistency_check": null,
+      "previous_manifest_version": "0.1.2",
+      "target_manifest_version": "0.2.0",
+      "old_package_sha256": "",
+      "new_package_sha256": "7d3bec9e3f8ae55e2a5be33ed0358bbaa5ce3adeb77e5390dc7b239cb2032fa8",
+      "action_type": "sandbox_prepare_commercial_release_revision",
+      "action_source": "cli",
+      "action_status": "passed",
+      "occurred_at": "2026-04-21T11:53:32.074Z",
+      "evidence_artifacts": [
+        "runs/commercial-2026-04-21-195332-dnnpkaefmlha-v0-2-0-73d443/83_sandbox_validation_plan.json",
+        "state/run_events/commercial-2026-04-21-195332-dnnpkaefmlha-v0-2-0-73d443/62_functional_test_matrix.json",
+        "state/run_events/commercial-2026-04-21-195332-dnnpkaefmlha-v0-2-0-73d443/94_product_acceptance_review.json"
+      ],
+      "evidence_hashes": {},
+      "chrome_webstore_response_summary": null,
+      "dashboard_manual_note": null,
+      "approved_by": null,
+      "approval_artifact": null,
+      "corrects_ledger_entry_id": null,
+      "corrected_fields": [],
+      "reason": null,
+      "production_write": false,
+      "sandbox_only": true,
+      "evidence_quality": "direct_artifact",
+      "original_artifact_available": true,
+      "recovery_reason": null,
+      "redaction_checks": {
+        "sanitized_response_bodies": true,
+        "checked_secret_value_count": 0,
+        "secret_values_present_in_artifact": false,
+        "authorization_header_pattern_present": false,
+        "key_material_pattern_present": false,
+        "secret_marker_pattern_present": false,
+        "redaction_guard_triggered": false
+      }
+    },
+    {
+      "ledger_entry_id": "ledger-sandbox_prepare_commercial_release_revision-1776772608452-753e59",
+      "run_id": "commercial-2026-04-21-195643-dnnpkaefmlha-v0-2-0-7836c9",
+      "source_run_id": "2026-04-19-145118-daily-4df0e2",
+      "sandbox_run_id": "commercial-2026-04-21-195643-dnnpkaefmlha-v0-2-0-7836c9",
+      "source_sandbox_run_id": "sandbox-2026-04-19-215222-dnnpkaefmlha-v0-1-2-c64a39",
+      "new_sandbox_run_id": "commercial-2026-04-21-195643-dnnpkaefmlha-v0-2-0-7836c9",
+      "item_id": "dnnpkaefmlhacigijccbhemgaenjbcpk",
+      "publisher_id": "7462c8f7-9c1a-48ed-9249-894c0317bd46",
+      "item_name": "LeadFill One Profile",
+      "package_sha256": "ee7758a8b921cfcf28e757bd8d4a22ca478d12a04da21de48fe5c2c883c420da",
+      "manifest_version": "0.2.0",
+      "current_sandbox_item_version": "0.1.0",
+      "upload_response_crx_version": null,
+      "uploaded_crx_version": null,
+      "published_crx_version": null,
+      "upload_state": null,
+      "version_consistency_check": null,
+      "previous_manifest_version": "0.1.2",
+      "target_manifest_version": "0.2.0",
+      "old_package_sha256": "",
+      "new_package_sha256": "ee7758a8b921cfcf28e757bd8d4a22ca478d12a04da21de48fe5c2c883c420da",
+      "action_type": "sandbox_prepare_commercial_release_revision",
+      "action_source": "cli",
+      "action_status": "passed",
+      "occurred_at": "2026-04-21T11:56:43.647Z",
+      "evidence_artifacts": [
+        "runs/commercial-2026-04-21-195643-dnnpkaefmlha-v0-2-0-7836c9/83_sandbox_validation_plan.json",
+        "state/run_events/commercial-2026-04-21-195643-dnnpkaefmlha-v0-2-0-7836c9/62_functional_test_matrix.json",
+        "state/run_events/commercial-2026-04-21-195643-dnnpkaefmlha-v0-2-0-7836c9/94_product_acceptance_review.json"
+      ],
+      "evidence_hashes": {},
+      "chrome_webstore_response_summary": null,
+      "dashboard_manual_note": null,
+      "approved_by": null,
+      "approval_artifact": null,
+      "corrects_ledger_entry_id": null,
+      "corrected_fields": [],
+      "reason": null,
+      "production_write": false,
+      "sandbox_only": true,
+      "evidence_quality": "direct_artifact",
+      "original_artifact_available": true,
+      "recovery_reason": null,
+      "redaction_checks": {
+        "sanitized_response_bodies": true,
+        "checked_secret_value_count": 0,
+        "secret_values_present_in_artifact": false,
+        "authorization_header_pattern_present": false,
+        "key_material_pattern_present": false,
+        "secret_marker_pattern_present": false,
+        "redaction_guard_triggered": false
+      }
+    }
+  ]
+}

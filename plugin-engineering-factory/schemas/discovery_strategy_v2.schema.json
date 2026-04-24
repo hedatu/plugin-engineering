@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "stage",
+    "status",
+    "source_run_id",
+    "no_build_today_reason",
+    "discovery_failure_modes",
+    "repeated_candidate_patterns",
+    "high_overlap_patterns",
+    "high_compliance_risk_patterns",
+    "builder_gap_patterns",
+    "weak_evidence_patterns",
+    "low_wedge_clarity_patterns",
+    "recommended_search_space_shift",
+    "recommended_query_families",
+    "excluded_query_patterns",
+    "preferred_builder_fit_targets",
+    "next_discovery_plan",
+    "next_step",
+    "redaction_checks"
+  ],
+  "properties": {
+    "stage": { "type": "string", "enum": ["DISCOVERY_STRATEGY_V2"] },
+    "status": { "type": "string", "enum": ["passed", "failed"] },
+    "source_run_id": { "type": "string" },
+    "no_build_today_reason": { "type": "string" },
+    "discovery_failure_modes": { "type": "array", "items": { "type": "object" } },
+    "next_step": { "type": "string" },
+    "redaction_checks": { "type": "object" }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "stage",
+    "status",
+    "sources",
+    "redaction_checks"
+  ],
+  "properties": {
+    "stage": { "type": "string", "enum": ["SOURCE_PRIORITY_MODEL"] },
+    "status": { "type": "string", "enum": ["passed", "failed"] },
+    "sources": { "type": "array", "minItems": 8, "items": { "type": "object" } },
+    "redaction_checks": { "type": "object" }
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "stage",
+    "status",
+    "run_id",
+    "product_name",
+    "landing_page_path",
+    "hero_image",
+    "pricing_image",
+    "fake_door_experiment_path",
+    "payment_link_placeholder",
+    "upgrade_copy",
+    "suggested_channels",
+    "first_7_day_metrics",
+    "first_14_day_metrics",
+    "success_thresholds",
+    "kill_thresholds",
+    "next_step",
+    "redaction_checks"
+  ],
+  "properties": {
+    "stage": {
+      "type": "string",
+      "enum": ["MARKET_TEST_ASSET_PACKAGE"]
+    },
+    "status": {
+      "type": "string",
+      "enum": ["passed", "failed"]
+    },
+    "run_id": { "type": "string" },
+    "product_name": { "type": "string" },
+    "landing_page_path": { "type": "string" },
+    "hero_image": { "type": ["string", "null"] },
+    "pricing_image": { "type": ["string", "null"] },
+    "fake_door_experiment_path": { "type": ["string", "null"] },
+    "payment_link_placeholder": { "type": "string" },
+    "upgrade_copy": { "type": "string" },
+    "suggested_channels": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "first_7_day_metrics": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "first_14_day_metrics": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "success_thresholds": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "kill_thresholds": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "next_step": { "type": "string" },
+    "redaction_checks": { "type": "object" }
+  }
+}

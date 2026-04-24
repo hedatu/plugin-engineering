@@ -1,0 +1,16 @@
+{
+  "status": "free",
+  "plan": "free",
+  "product_id": "page-context-to-markdown",
+  "license_id": null,
+  "features": [],
+  "free_limit": {
+    "amount": 10,
+    "unit": "actions",
+    "scope": "lifetime"
+  },
+  "usage_remaining": 7,
+  "expires_at": null,
+  "verified_at": "2026-04-21T00:00:00.000Z",
+  "message": "Free plan active."
+}

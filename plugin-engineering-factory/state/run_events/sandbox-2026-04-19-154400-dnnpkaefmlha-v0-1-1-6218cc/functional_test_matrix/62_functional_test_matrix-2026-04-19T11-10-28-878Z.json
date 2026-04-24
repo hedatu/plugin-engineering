@@ -1,0 +1,160 @@
+{
+  "stage": "FUNCTIONAL_TEST_MATRIX",
+  "status": "passed",
+  "run_id": "sandbox-2026-04-19-154400-dnnpkaefmlha-v0-1-1-6218cc",
+  "archetype": "single_profile_form_fill",
+  "wedge": "LeadFill One Profile",
+  "tests": [
+    {
+      "test_name": "empty form",
+      "automated_or_manual": "manual",
+      "current_status": "missing",
+      "evidence_artifact": "runs/sandbox-2026-04-19-154400-dnnpkaefmlha-v0-1-1-6218cc/61_browser_smoke.json",
+      "risk_if_missing": "Users can trigger fill with an empty profile and get no meaningful guidance.",
+      "recommended_next_action": "Add a smoke variant that attempts fill with an empty profile and checks the status message."
+    },
+    {
+      "test_name": "partially filled form",
+      "automated_or_manual": "manual",
+      "current_status": "missing",
+      "evidence_artifact": "runs/sandbox-2026-04-19-154400-dnnpkaefmlha-v0-1-1-6218cc/61_browser_smoke.json",
+      "risk_if_missing": "Real pages often mix pre-filled and empty values; overwrite behavior is unknown.",
+      "recommended_next_action": "Add a form fixture where some values already exist and assert non-destructive behavior."
+    },
+    {
+      "test_name": "readonly field",
+      "automated_or_manual": "manual",
+      "current_status": "missing",
+      "evidence_artifact": "runs/sandbox-2026-04-19-154400-dnnpkaefmlha-v0-1-1-6218cc/workspace/dist/popup.js",
+      "risk_if_missing": "Readonly or locked CRM fields can throw errors or misleadingly report success.",
+      "recommended_next_action": "Add readonly inputs to the browser smoke fixture and assert they are skipped safely."
+    },
+    {
+      "test_name": "textarea",
+      "automated_or_manual": "manual",
+      "current_status": "partial",
+      "evidence_artifact": "runs/sandbox-2026-04-19-154400-dnnpkaefmlha-v0-1-1-6218cc/workspace/dist/popup.js",
+      "risk_if_missing": "Long-form notes fields may not map cleanly even though textarea is queried.",
+      "recommended_next_action": "Add textarea coverage to the happy-path smoke fixture."
+    },
+    {
+      "test_name": "select",
+      "automated_or_manual": "manual",
+      "current_status": "unsupported",
+      "evidence_artifact": "runs/sandbox-2026-04-19-154400-dnnpkaefmlha-v0-1-1-6218cc/workspace/dist/popup.js",
+      "risk_if_missing": "Many lead forms use selects for country, industry, or source; current package likely cannot fill them.",
+      "recommended_next_action": "Implement select matching or narrow the listing promise before tester rollout."
+    },
+    {
+      "test_name": "email field",
+      "automated_or_manual": "automated",
+      "current_status": "passed",
+      "evidence_artifact": "runs/sandbox-2026-04-19-154400-dnnpkaefmlha-v0-1-1-6218cc/61_browser_smoke.json",
+      "risk_if_missing": "Core contact data could fail silently.",
+      "recommended_next_action": "Keep the current browser smoke assertion."
+    },
+    {
+      "test_name": "phone field",
+      "automated_or_manual": "automated",
+      "current_status": "passed",
+      "evidence_artifact": "runs/sandbox-2026-04-19-154400-dnnpkaefmlha-v0-1-1-6218cc/61_browser_smoke.json",
+      "risk_if_missing": "Phone is explicitly mentioned in demand evidence and currently only verified on one fixture.",
+      "recommended_next_action": "Keep the current browser smoke assertion and add alternate label variants."
+    },
+    {
+      "test_name": "name field",
+      "automated_or_manual": "automated",
+      "current_status": "passed",
+      "evidence_artifact": "runs/sandbox-2026-04-19-154400-dnnpkaefmlha-v0-1-1-6218cc/61_browser_smoke.json",
+      "risk_if_missing": "First/last name mapping is central to the wedge value proposition.",
+      "recommended_next_action": "Keep the current browser smoke assertion."
+    },
+    {
+      "test_name": "no matching fields",
+      "automated_or_manual": "manual",
+      "current_status": "missing",
+      "evidence_artifact": "runs/sandbox-2026-04-19-154400-dnnpkaefmlha-v0-1-1-6218cc/workspace/dist/popup.js",
+      "risk_if_missing": "The extension may report success while doing nothing useful on unsupported forms.",
+      "recommended_next_action": "Add a negative fixture with no matching descriptors and assert a clear zero-fill status."
+    },
+    {
+      "test_name": "activeTab permission path",
+      "automated_or_manual": "automated",
+      "current_status": "passed",
+      "evidence_artifact": "runs/sandbox-2026-04-19-154400-dnnpkaefmlha-v0-1-1-6218cc/61_browser_smoke.json",
+      "risk_if_missing": "Extension action invocation is the only authorized fill trigger path.",
+      "recommended_next_action": "Retain the current smoke coverage."
+    },
+    {
+      "test_name": "local storage only",
+      "automated_or_manual": "automated",
+      "current_status": "passed",
+      "evidence_artifact": "runs/sandbox-2026-04-19-154400-dnnpkaefmlha-v0-1-1-6218cc/workspace/dist/popup.js",
+      "risk_if_missing": "Any remote storage regression would break the privacy promise and review positioning.",
+      "recommended_next_action": "Keep a static test that forbids network calls in popup code."
+    },
+    {
+      "test_name": "popup error display",
+      "automated_or_manual": "manual",
+      "current_status": "partial",
+      "evidence_artifact": "runs/sandbox-2026-04-19-154400-dnnpkaefmlha-v0-1-1-6218cc/workspace/dist/popup.js",
+      "risk_if_missing": "Failures become opaque and users cannot tell whether anything happened.",
+      "recommended_next_action": "Automate a blocked-tab or missing-tab case and assert the visible error string."
+    },
+    {
+      "test_name": "profile save / edit / delete",
+      "automated_or_manual": "manual",
+      "current_status": "missing",
+      "evidence_artifact": "runs/sandbox-2026-04-19-154400-dnnpkaefmlha-v0-1-1-6218cc/workspace/dist/popup.html",
+      "risk_if_missing": "Without delete/reset, users cannot recover from bad saved data cleanly.",
+      "recommended_next_action": "Add explicit edit/delete/reset UX or narrow the supported workflow in copy."
+    },
+    {
+      "test_name": "field overwrite behavior",
+      "automated_or_manual": "manual",
+      "current_status": "missing",
+      "evidence_artifact": "runs/sandbox-2026-04-19-154400-dnnpkaefmlha-v0-1-1-6218cc/workspace/dist/popup.js",
+      "risk_if_missing": "Current fill path always writes values and could clobber operator edits.",
+      "recommended_next_action": "Add overwrite rules and a fixture that asserts whether existing values are preserved."
+    },
+    {
+      "test_name": "visual feedback after fill",
+      "automated_or_manual": "manual",
+      "current_status": "partial",
+      "evidence_artifact": "runs/sandbox-2026-04-19-154400-dnnpkaefmlha-v0-1-1-6218cc/70_screenshot_manifest.json",
+      "risk_if_missing": "Users may not trust the action if the popup does not confirm what happened clearly.",
+      "recommended_next_action": "Capture a post-fill popup screenshot or toast state that confirms fill count."
+    }
+  ],
+  "test_coverage_score": 43.33,
+  "missing_tests": [
+    "empty form",
+    "partially filled form",
+    "readonly field",
+    "select",
+    "no matching fields",
+    "profile save / edit / delete",
+    "field overwrite behavior"
+  ],
+  "release_blockers": [
+    "select field support or truthful scope reduction",
+    "readonly/locked field handling",
+    "no matching fields feedback",
+    "field overwrite behavior",
+    "profile delete or reset path"
+  ],
+  "recommended_next_tests": [
+    "Add a negative browser smoke fixture with no matching fields and explicit error assertions.",
+    "Add a mixed fixture covering readonly inputs, select controls, and partially filled fields.",
+    "Decide overwrite semantics and add an automated regression for them."
+  ],
+  "redaction_checks": {
+    "sanitized_response_bodies": true,
+    "checked_secret_value_count": 0,
+    "secret_values_present_in_artifact": false,
+    "authorization_header_pattern_present": false,
+    "key_material_pattern_present": false,
+    "secret_marker_pattern_present": false,
+    "redaction_guard_triggered": false
+  }
+}

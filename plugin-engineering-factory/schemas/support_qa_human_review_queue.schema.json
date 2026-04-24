@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "stage",
+    "status",
+    "run_id",
+    "no_build_today",
+    "queue_count",
+    "entries",
+    "next_step",
+    "redaction_checks"
+  ],
+  "properties": {
+    "stage": { "type": "string", "enum": ["SUPPORT_QA_HUMAN_REVIEW_QUEUE"] },
+    "status": { "type": "string", "enum": ["passed", "failed"] },
+    "run_id": { "type": "string" },
+    "no_build_today": { "type": "boolean" },
+    "queue_count": { "type": "integer" },
+    "entries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "candidate_name",
+          "proposed_wedge",
+          "why_build",
+          "why_not_build",
+          "evidence_summary",
+          "overlap_risk",
+          "permission_risk",
+          "testability_summary",
+          "builder_fit",
+          "estimated_build_cost",
+          "recommended_decision",
+          "human_question"
+        ]
+      }
+    },
+    "next_step": { "type": "string" },
+    "redaction_checks": { "type": "object" }
+  }
+}

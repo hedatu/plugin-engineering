@@ -1,0 +1,85 @@
+{
+    "bootstrap_started_at":  "2026-04-22T19:48:00+08:00",
+    "bootstrap_completed_at":  "2026-04-22T20:04:45.2593738+08:00",
+    "directories_created":  [
+                                "/opt/commercial-extension-factory",
+                                "/opt/commercial-extension-factory/apps",
+                                "/opt/commercial-extension-factory/apps/factory",
+                                "/opt/commercial-extension-factory/apps/hwh",
+                                "/opt/commercial-extension-factory/apps/plugin-site",
+                                "/opt/commercial-extension-factory/packages",
+                                "/opt/commercial-extension-factory/state",
+                                "/opt/commercial-extension-factory/runs",
+                                "/opt/commercial-extension-factory/generated",
+                                "/opt/commercial-extension-factory/logs",
+                                "/opt/commercial-extension-factory/backups",
+                                "/opt/commercial-extension-factory/secrets"
+                            ],
+    "deploy_user_status":  {
+                               "user":  "deploy",
+                               "status":  "created",
+                               "groups":  [
+                                              "deploy",
+                                              "docker"
+                                          ],
+                               "authorized_keys_copied_from_root":  true,
+                               "sudo_policy":  "not_granted_by_default"
+                           },
+    "installed_versions":  {
+                               "git":  "present",
+                               "curl":  "present",
+                               "unzip":  "present",
+                               "node":  "v18.19.1",
+                               "npm":  "9.2.0",
+                               "pnpm":  "not_installed_optional",
+                               "docker":  "Docker version 29.1.3, build 29.1.3-0ubuntu3~24.04.1",
+                               "docker_compose":  "Docker Compose version 2.40.3+ds1-0ubuntu1~24.04.1",
+                               "caddy":  "2.6.2",
+                               "nginx":  "not_installed"
+                           },
+    "docker_status":  {
+                          "available":  true,
+                          "existing_containers":  [
+                                                      "supabase-kong|kong/kong:3.9.1|Up 22 hours (healthy)|0.0.0.0:8000-\u003e8000/tcp",
+                                                      "supabase-auth|supabase/gotrue:v2.186.0|Up 22 hours (healthy)",
+                                                      "supabase-rest|postgrest/postgrest:v14.8|Up 22 hours",
+                                                      "supabase-db|supabase/postgres:15.8.1.085|Up 22 hours (healthy)|0.0.0.0:5432-\u003e5432/tcp"
+                                                  ]
+                      },
+    "reverse_proxy_status":  {
+                                 "selected":  "caddy",
+                                 "installed":  true,
+                                 "service_active":  true,
+                                 "production_domains_bound":  false
+                             },
+    "firewall_status":  {
+                            "ufw_active":  true,
+                            "allowed_inbound":  [
+                                                    "22/tcp",
+                                                    "80/tcp",
+                                                    "443/tcp"
+                                                ],
+                            "database_public_port_detected":  5432,
+                            "internal_gateway_public_port_detected":  8000,
+                            "note":  "UFW is active, but pre-existing Docker published ports 5432 and 8000 require separate hardening or container reconfiguration before staging or cutover."
+                        },
+    "system_resources":  {
+                             "ram_mb_total":  961,
+                             "cpu_count":  1,
+                             "disk_root_available_gb":  15
+                         },
+    "memory_warning":  "low_memory_server",
+    "swap_status":  {
+                        "present":  true,
+                        "size":  "2G",
+                        "used":  "197.4M"
+                    },
+    "blockers":  [
+                     "existing_supabase_containers_present_on_california",
+                     "public_5432_mapping_detected_on_california",
+                     "public_8000_mapping_detected_on_california",
+                     "hwh_not_deployed_to_california",
+                     "dns_cutover_not_allowed_in_this_phase"
+                 ],
+    "next_step":  "await_user_approval_for_hwh_staging_deploy"
+}

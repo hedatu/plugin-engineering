@@ -1,0 +1,108 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "stage",
+    "status",
+    "checked_at",
+    "active_watch_count",
+    "active_watches",
+    "latest_watch_summary_exists",
+    "latest_review_status_sidecars",
+    "github_workflow_file_exists",
+    "github_workflow_has_schedule",
+    "github_workflow_schedule",
+    "expected_next_check_utc",
+    "local_credentials_present",
+    "proxy_configured",
+    "can_live_fetch_status",
+    "last_live_fetch_at",
+    "last_status_source",
+    "stale_watch_detected",
+    "stale_threshold_hours",
+    "diagnostic_findings",
+    "required_fixes"
+  ],
+  "properties": {
+    "stage": {
+      "type": "string",
+      "enum": ["REVIEW_WATCH_DIAGNOSTICS"]
+    },
+    "status": {
+      "type": "string",
+      "enum": ["passed", "warning", "failed"]
+    },
+    "checked_at": {
+      "type": "string"
+    },
+    "active_watch_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "active_watches": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "latest_watch_summary_exists": {
+      "type": "boolean"
+    },
+    "latest_review_status_sidecars": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "github_workflow_file_exists": {
+      "type": "boolean"
+    },
+    "github_workflow_has_schedule": {
+      "type": "boolean"
+    },
+    "github_workflow_schedule": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "expected_next_check_utc": {
+      "type": ["string", "null"]
+    },
+    "local_credentials_present": {
+      "type": "boolean"
+    },
+    "proxy_configured": {
+      "type": "boolean"
+    },
+    "can_live_fetch_status": {
+      "type": "boolean"
+    },
+    "last_live_fetch_at": {
+      "type": ["string", "null"]
+    },
+    "last_status_source": {
+      "type": ["string", "null"],
+      "enum": [null, "live_fetch_status", "preserved_last_known_state"]
+    },
+    "stale_watch_detected": {
+      "type": "boolean"
+    },
+    "stale_threshold_hours": {
+      "type": "number",
+      "minimum": 0
+    },
+    "diagnostic_findings": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "required_fixes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

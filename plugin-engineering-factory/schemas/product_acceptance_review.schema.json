@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "stage",
+    "status",
+    "run_id",
+    "archetype",
+    "wedge",
+    "target_user",
+    "promised_value",
+    "actual_core_flow",
+    "acceptance_status",
+    "ux_review",
+    "functionality_review",
+    "listing_truthfulness_review",
+    "permissions_review",
+    "privacy_review",
+    "screenshot_review",
+    "biggest_risks",
+    "required_fixes",
+    "recommended_decision",
+    "next_step",
+    "redaction_checks"
+  ],
+  "properties": {
+    "stage": {
+      "type": "string",
+      "enum": ["PRODUCT_ACCEPTANCE_REVIEW"]
+    },
+    "status": {
+      "type": "string",
+      "enum": ["passed", "failed"]
+    },
+    "run_id": { "type": "string" },
+    "archetype": { "type": "string" },
+    "wedge": { "type": "string" },
+    "target_user": { "type": "string" },
+    "promised_value": { "type": "string" },
+    "actual_core_flow": { "type": "string" },
+    "acceptance_status": {
+      "type": "string",
+      "enum": ["passed", "revise", "blocked", "kill"]
+    },
+    "ux_review": { "type": ["object", "string"] },
+    "functionality_review": { "type": ["object", "string"] },
+    "listing_truthfulness_review": { "type": ["object", "string"] },
+    "permissions_review": { "type": ["object", "string"] },
+    "privacy_review": { "type": ["object", "string"] },
+    "screenshot_review": { "type": ["object", "string"] },
+    "biggest_risks": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "required_fixes": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "recommended_decision": { "type": "string" },
+    "next_step": { "type": "string" },
+    "redaction_checks": { "type": "object" }
+  }
+}

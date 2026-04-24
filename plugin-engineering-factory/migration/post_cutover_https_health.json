@@ -1,0 +1,76 @@
+{
+  "generated_at": "2026-04-23T19:47:00+08:00",
+  "target_ip": "134.199.226.198",
+  "dns": {
+    "pay_915500_xyz": {
+      "expected_ip": "134.199.226.198",
+      "resolver_1_1_1_1_ip": "134.199.226.198",
+      "resolver_8_8_8_8_ip": "134.199.226.198",
+      "ttl_seconds": 300,
+      "ok": true
+    },
+    "pay_api_915500_xyz": {
+      "expected_ip": "134.199.226.198",
+      "resolver_1_1_1_1_ip": "134.199.226.198",
+      "resolver_8_8_8_8_ip": "134.199.226.198",
+      "ttl_seconds": 300,
+      "ok": true
+    }
+  },
+  "https": {
+    "pay_915500_xyz": {
+      "url": "https://pay.915500.xyz/",
+      "http_status": 200,
+      "tls_verify_result": 0,
+      "ok": true
+    },
+    "pay_api_915500_xyz_root": {
+      "url": "https://pay-api.915500.xyz/",
+      "http_status": 401,
+      "tls_verify_result": 0,
+      "reachable": true,
+      "ok": true
+    },
+    "pay_api_915500_xyz_webhook_get": {
+      "url": "https://pay-api.915500.xyz/functions/v1/waffo-webhook",
+      "http_status": 405,
+      "tls_verify_result": 0,
+      "route_online": true,
+      "ok": true
+    },
+    "pay_api_915500_xyz_unsigned_post": {
+      "url": "https://pay-api.915500.xyz/functions/v1/waffo-webhook",
+      "http_status": 401,
+      "expected_response": "INVALID_SIGNATURE",
+      "route_reaches_function": true,
+      "ok": true
+    },
+    "ca_hwh_915500_xyz": {
+      "url": "https://ca-hwh.915500.xyz/",
+      "http_status": 200,
+      "tls_verify_result": 0,
+      "staging_alias_retained": true,
+      "ok": true
+    },
+    "ca_hwh_api_915500_xyz_webhook_get": {
+      "url": "https://ca-hwh-api.915500.xyz/functions/v1/waffo-webhook",
+      "http_status": 405,
+      "tls_verify_result": 0,
+      "staging_alias_retained": true,
+      "ok": true
+    }
+  },
+  "caddy": {
+    "service_active": true,
+    "config_valid": true,
+    "pay_certificate_obtained": true,
+    "pay_api_certificate_obtained": true,
+    "staging_aliases_retained": true
+  },
+  "public_port_reachability": {
+    "5432": false,
+    "8000": false,
+    "note": "Docker still shows host-published mappings, but external TCP probes failed and UFW allows only 22/80/443."
+  },
+  "blockers": []
+}

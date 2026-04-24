@@ -1,0 +1,71 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "stage",
+    "status",
+    "run_id",
+    "action",
+    "requested_action",
+    "run_type_verified",
+    "promotion_plan_verified",
+    "approval_found",
+    "approval_mode",
+    "approval_write_authorized",
+    "package_hash_match",
+    "sandbox_item_match",
+    "upload_verified",
+    "manifest_version",
+    "uploaded_crx_version",
+    "product_acceptance_status",
+    "functional_test_coverage_score",
+    "current_dashboard_state",
+    "submitted_revision_status",
+    "pre_publish_status_observed",
+    "pre_publish_state_clear",
+    "publish_allowed",
+    "production_write",
+    "would_execute",
+    "blocked_reason",
+    "next_step",
+    "redaction_checks"
+  ],
+  "properties": {
+    "stage": {
+      "type": "string",
+      "enum": ["PUBLISH_SANDBOX_CI_DRY_CHECK"]
+    },
+    "status": {
+      "type": "string",
+      "enum": ["passed", "failed"]
+    },
+    "run_id": { "type": "string" },
+    "action": { "type": "string" },
+    "requested_action": { "type": ["string", "null"] },
+    "run_type_verified": { "type": "boolean" },
+    "promotion_plan_verified": { "type": "boolean" },
+    "approval_found": { "type": "boolean" },
+    "approval_mode": {
+      "type": "string",
+      "enum": ["test_artifact_only", "write_allowed"]
+    },
+    "approval_write_authorized": { "type": "boolean" },
+    "package_hash_match": { "type": "boolean" },
+    "sandbox_item_match": { "type": "boolean" },
+    "upload_verified": { "type": "boolean" },
+    "manifest_version": { "type": ["string", "null"] },
+    "uploaded_crx_version": { "type": ["string", "null"] },
+    "product_acceptance_status": { "type": ["string", "null"] },
+    "functional_test_coverage_score": { "type": ["number", "null"] },
+    "current_dashboard_state": { "type": ["string", "null"] },
+    "submitted_revision_status": { "type": ["string", "null"] },
+    "pre_publish_status_observed": { "type": "boolean" },
+    "pre_publish_state_clear": { "type": "boolean" },
+    "publish_allowed": { "type": "boolean" },
+    "production_write": { "type": "boolean" },
+    "would_execute": { "type": "boolean" },
+    "blocked_reason": { "type": ["string", "null"] },
+    "next_step": { "type": "string" },
+    "redaction_checks": { "type": "object" }
+  }
+}

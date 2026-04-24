@@ -1,0 +1,90 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "stage",
+    "status",
+    "run_id",
+    "item_id",
+    "source_type",
+    "metrics_window",
+    "installs",
+    "uninstalls",
+    "impressions",
+    "conversion_rate",
+    "uninstall_rate",
+    "reviews_summary",
+    "support_summary",
+    "health_status",
+    "failure_reason",
+    "next_step",
+    "generated_at",
+    "publisher_id",
+    "publish_execution_path",
+    "portfolio_registry_path"
+  ],
+  "properties": {
+    "stage": {
+      "type": "string",
+      "enum": ["MONITOR_POST_RELEASE"]
+    },
+    "status": {
+      "type": "string",
+      "enum": ["passed", "failed", "skipped"]
+    },
+    "run_id": {
+      "type": "string"
+    },
+    "item_id": {
+      "type": ["string", "null"]
+    },
+    "source_type": {
+      "type": "string"
+    },
+    "metrics_window": {
+      "type": "string"
+    },
+    "installs": {
+      "type": ["integer", "null"]
+    },
+    "uninstalls": {
+      "type": ["integer", "null"]
+    },
+    "impressions": {
+      "type": ["integer", "null"]
+    },
+    "conversion_rate": {
+      "type": ["number", "null"]
+    },
+    "uninstall_rate": {
+      "type": ["number", "null"]
+    },
+    "reviews_summary": {
+      "type": "object"
+    },
+    "support_summary": {
+      "type": "object"
+    },
+    "health_status": {
+      "type": "string"
+    },
+    "failure_reason": {
+      "type": ["string", "null"]
+    },
+    "next_step": {
+      "type": "string"
+    },
+    "generated_at": {
+      "type": "string"
+    },
+    "publisher_id": {
+      "type": ["string", "null"]
+    },
+    "publish_execution_path": {
+      "type": "string"
+    },
+    "portfolio_registry_path": {
+      "type": "string"
+    }
+  }
+}

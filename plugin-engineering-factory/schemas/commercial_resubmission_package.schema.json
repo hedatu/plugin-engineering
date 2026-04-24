@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "stage",
+    "status",
+    "run_id",
+    "product_name",
+    "package_version",
+    "current_run_id",
+    "store_listing_release_package_path",
+    "payment_integration_status",
+    "test_mode_status",
+    "visual_review_status",
+    "monetization_disclosure_status",
+    "privacy_disclosure_status",
+    "multilingual_site_status",
+    "supported_locales",
+    "production_payment_strategy_clear",
+    "re_review_readiness",
+    "blockers",
+    "next_step",
+    "redaction_checks"
+  ],
+  "properties": {
+    "stage": {
+      "type": "string",
+      "enum": ["COMMERCIAL_RESUBMISSION_PACKAGE"]
+    },
+    "status": {
+      "type": "string",
+      "enum": ["passed", "pending", "failed"]
+    },
+    "run_id": { "type": "string", "minLength": 1 },
+    "product_name": { "type": "string", "minLength": 1 },
+    "package_version": { "type": "string", "minLength": 1 },
+    "current_run_id": { "type": "string", "minLength": 1 },
+    "store_listing_release_package_path": { "type": ["string", "null"] },
+    "premium_assets_path": { "type": ["string", "null"] },
+    "payment_integration_status": { "type": "string", "minLength": 1 },
+    "test_mode_status": { "type": "string", "minLength": 1 },
+    "visual_review_status": { "type": "string", "minLength": 1 },
+    "monetization_disclosure_status": { "type": "string", "minLength": 1 },
+    "privacy_disclosure_status": { "type": "string", "minLength": 1 },
+    "multilingual_site_status": { "type": "string", "minLength": 1 },
+    "supported_locales": {
+      "type": "array",
+      "items": {
+        "oneOf": [
+          { "type": "string" },
+          {
+            "type": "object",
+            "required": ["code", "label", "html_lang"],
+            "properties": {
+              "code": { "type": "string" },
+              "label": { "type": "string" },
+              "html_lang": { "type": "string" }
+            }
+          }
+        ]
+      }
+    },
+    "production_payment_strategy_clear": { "type": "boolean" },
+    "re_review_readiness": { "type": "boolean" },
+    "blockers": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "next_step": { "type": "string", "minLength": 1 },
+    "redaction_checks": { "type": "object" }
+  }
+}

@@ -1,0 +1,13 @@
+[Unit]
+Description=LeadFill SMTP Bridge
+After=network.target postfix.service
+Requires=postfix.service
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /usr/local/bin/leadfill-smtp-bridge.py
+Restart=always
+RestartSec=2
+
+[Install]
+WantedBy=multi-user.target

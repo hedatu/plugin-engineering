@@ -1,0 +1,121 @@
+{
+  "stage": "MONETIZATION_TEST_MATRIX",
+  "status": "planned",
+  "run_id": "commercial-2026-04-21-195332-dnnpkaefmlha-v0-2-0-73d443",
+  "candidate_name": "LeadFill One Profile",
+  "archetype": "single_profile_form_fill",
+  "tests": [
+    {
+      "id": "free_usage_available",
+      "name": "free usage available",
+      "current_status": "planned",
+      "why_it_matters": "The user must be able to try the core value before the paywall.",
+      "evidence_artifact": "workspace/dist/popup.js",
+      "recommended_next_action": "Use browser smoke to confirm the first free action succeeds."
+    },
+    {
+      "id": "free_usage_counter_decreases",
+      "name": "free usage counter decreases",
+      "current_status": "planned",
+      "why_it_matters": "The free meter must show what the user has left before the paywall appears.",
+      "evidence_artifact": "workspace/dist/popup.html",
+      "recommended_next_action": "Consume one free action and confirm the remaining count updates."
+    },
+    {
+      "id": "free_limit_reached",
+      "name": "free limit reached",
+      "current_status": "planned",
+      "why_it_matters": "The popup must block only after the configured free limit is exhausted.",
+      "evidence_artifact": "workspace/dist/monetization/upgradeFlow.js",
+      "recommended_next_action": "Run repeated core actions and confirm the paywall appears at the right threshold."
+    },
+    {
+      "id": "upgrade_url_external_tab",
+      "name": "upgrade URL opens external tab",
+      "current_status": "planned",
+      "why_it_matters": "The extension must not host card entry or embed provider secrets.",
+      "evidence_artifact": "workspace/dist/monetization/upgradeFlow.js",
+      "recommended_next_action": "Browser smoke should verify the placeholder checkout URL opens."
+    },
+    {
+      "id": "no_secret_in_bundle",
+      "name": "no secret in extension bundle",
+      "current_status": "planned",
+      "why_it_matters": "Provider secrets must never ship in the extension.",
+      "evidence_artifact": null,
+      "recommended_next_action": "Run monetization:security-scan on the run before any upload."
+    },
+    {
+      "id": "license_input_ui",
+      "name": "license input UI works",
+      "current_status": "planned",
+      "why_it_matters": "The user must be able to activate or restore access without editing config files.",
+      "evidence_artifact": "workspace/dist/monetization/licensePage.html",
+      "recommended_next_action": "Open the extension license page and verify input, activate, and restore actions."
+    },
+    {
+      "id": "license_page_opens",
+      "name": "license page opens",
+      "current_status": "planned",
+      "why_it_matters": "The popup must expose both initial activation and restore or verify paths clearly.",
+      "evidence_artifact": "workspace/dist/popup.html",
+      "recommended_next_action": "Click both popup license buttons and confirm the license page opens."
+    },
+    {
+      "id": "mock_active_entitlement_unlocks_pro",
+      "name": "mock active entitlement unlocks Pro",
+      "current_status": "planned",
+      "why_it_matters": "Test mode needs a safe way to verify paid unlock behavior without a real payment backend.",
+      "evidence_artifact": "workspace/dist/monetization/upgradeFlow.js",
+      "recommended_next_action": "Use the test hook to set a mock active entitlement and confirm the usage cap is bypassed."
+    },
+    {
+      "id": "invalid_license_error",
+      "name": "invalid license shows error",
+      "current_status": "planned",
+      "why_it_matters": "The user must see clear invalid, expired, or revoked states.",
+      "evidence_artifact": "workspace/dist/monetization/licensePage.js",
+      "recommended_next_action": "Exercise invalid and revoked fixture responses from the payment system."
+    },
+    {
+      "id": "offline_grace_behavior",
+      "name": "offline grace behavior",
+      "current_status": "planned",
+      "why_it_matters": "The paid experience should survive short outages without trusting storage forever.",
+      "evidence_artifact": "workspace/dist/monetization/licenseClient.js",
+      "recommended_next_action": "Verify cached active entitlements degrade only after offline grace expires."
+    },
+    {
+      "id": "local_storage_fields_safe",
+      "name": "local storage fields safe",
+      "current_status": "planned",
+      "why_it_matters": "The extension should store masked or hashed license metadata only.",
+      "evidence_artifact": "workspace/dist/monetization/licenseClient.js",
+      "recommended_next_action": "Inspect chrome.storage.local during smoke and confirm no full provider secret or raw license vault is stored."
+    },
+    {
+      "id": "local_only_claim_visible",
+      "name": "local-only claim visible",
+      "current_status": "planned",
+      "why_it_matters": "The user must understand the local-only trust boundary before paying.",
+      "evidence_artifact": "workspace/dist/popup.html",
+      "recommended_next_action": "Verify the popup and privacy page keep the trust claim visible."
+    },
+    {
+      "id": "no_payment_secret_in_source_dist",
+      "name": "no payment secret in source or dist",
+      "current_status": "planned",
+      "why_it_matters": "Public or placeholder endpoints are allowed, but secrets are not.",
+      "evidence_artifact": null,
+      "recommended_next_action": "Run monetization:security-scan against the commercial run."
+    },
+    {
+      "id": "listing_paid_disclosure_present",
+      "name": "listing paid disclosure present",
+      "current_status": "planned",
+      "why_it_matters": "The store listing must truthfully disclose limits and paid unlocks.",
+      "evidence_artifact": null,
+      "recommended_next_action": "Verify listing copy mentions the free limit, paid features, and external payment page."
+    }
+  ]
+}

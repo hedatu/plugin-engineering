@@ -1,0 +1,42 @@
+{
+  "generated_at": "2026-04-23T13:56:21.4097204+08:00",
+  "server": "california",
+  "ram_total_mb": 961,
+  "ram_used_mb": 553,
+  "ram_available_mb": 407,
+  "swap_total_mb": 2048,
+  "swap_used_mb": 188,
+  "docker_top_consumers": [
+    {
+      "container": "supabase-edge-functions",
+      "memory_mib": 70.12
+    },
+    {
+      "container": "supabase-kong",
+      "memory_mib": 44.18
+    },
+    {
+      "container": "supabase-db",
+      "memory_mib": 36.57
+    },
+    {
+      "container": "supabase-rest",
+      "memory_mib": 11.96
+    },
+    {
+      "container": "supabase-auth",
+      "memory_mib": 8.66
+    }
+  ],
+  "overall_assessment": "staging_viable_but_low_headroom",
+  "recommended_action": "Keep California usable for staging, but treat 1GB as a production-risk floor. Prefer a 2GB or 4GB upgrade, or keep heavier factory jobs off-host until capacity is increased.",
+  "user_ack_low_memory_risk_required": true,
+  "blockers": [
+    "low_memory_server"
+  ],
+  "notes": [
+    "Swap is present and actively used, which helps staging survive but confirms memory pressure exists.",
+    "Review-watch is low-risk to keep on California, but the full commercial payment stack should not be called production-ready at 1GB without explicit acceptance.",
+    "If California stays at 1GB, formal cutover should require explicit user acknowledgement of the low-memory risk before DNS is changed."
+  ]
+}

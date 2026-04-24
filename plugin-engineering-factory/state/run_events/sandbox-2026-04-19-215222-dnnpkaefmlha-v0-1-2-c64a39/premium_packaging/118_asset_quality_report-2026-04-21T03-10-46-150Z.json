@@ -1,0 +1,109 @@
+{
+  "stage": "ASSET_QA",
+  "status": "failed",
+  "run_id": "sandbox-2026-04-19-215222-dnnpkaefmlha-v0-1-2-c64a39",
+  "render_status": "skipped",
+  "assets_checked": [
+    {
+      "file": "state/run_events/sandbox-2026-04-19-215222-dnnpkaefmlha-v0-1-2-c64a39/80_remotion_assets/screenshots/screenshot_1_1280x800.png",
+      "required": true,
+      "exists": false,
+      "expected_dimensions": "1280x800",
+      "actual_dimensions": null,
+      "dimensions_ok": false
+    },
+    {
+      "file": "state/run_events/sandbox-2026-04-19-215222-dnnpkaefmlha-v0-1-2-c64a39/80_remotion_assets/screenshots/screenshot_2_1280x800.png",
+      "required": true,
+      "exists": false,
+      "expected_dimensions": "1280x800",
+      "actual_dimensions": null,
+      "dimensions_ok": false
+    },
+    {
+      "file": "state/run_events/sandbox-2026-04-19-215222-dnnpkaefmlha-v0-1-2-c64a39/80_remotion_assets/screenshots/screenshot_3_1280x800.png",
+      "required": true,
+      "exists": false,
+      "expected_dimensions": "1280x800",
+      "actual_dimensions": null,
+      "dimensions_ok": false
+    },
+    {
+      "file": "state/run_events/sandbox-2026-04-19-215222-dnnpkaefmlha-v0-1-2-c64a39/80_remotion_assets/screenshots/screenshot_4_1280x800.png",
+      "required": true,
+      "exists": false,
+      "expected_dimensions": "1280x800",
+      "actual_dimensions": null,
+      "dimensions_ok": false
+    },
+    {
+      "file": "state/run_events/sandbox-2026-04-19-215222-dnnpkaefmlha-v0-1-2-c64a39/80_remotion_assets/screenshots/screenshot_5_1280x800.png",
+      "required": true,
+      "exists": false,
+      "expected_dimensions": "1280x800",
+      "actual_dimensions": null,
+      "dimensions_ok": false
+    },
+    {
+      "file": "state/run_events/sandbox-2026-04-19-215222-dnnpkaefmlha-v0-1-2-c64a39/80_remotion_assets/promo/small_promo_440x280.png",
+      "required": true,
+      "exists": false,
+      "expected_dimensions": "440x280",
+      "actual_dimensions": null,
+      "dimensions_ok": false
+    },
+    {
+      "file": "state/run_events/sandbox-2026-04-19-215222-dnnpkaefmlha-v0-1-2-c64a39/80_remotion_assets/promo/marquee_1400x560.png",
+      "required": false,
+      "exists": false,
+      "expected_dimensions": "1400x560",
+      "actual_dimensions": null,
+      "dimensions_ok": false
+    },
+    {
+      "file": "state/run_events/sandbox-2026-04-19-215222-dnnpkaefmlha-v0-1-2-c64a39/80_remotion_assets/landing/hero_1600x900.png",
+      "required": true,
+      "exists": false,
+      "expected_dimensions": "1600x900",
+      "actual_dimensions": null,
+      "dimensions_ok": false
+    },
+    {
+      "file": "state/run_events/sandbox-2026-04-19-215222-dnnpkaefmlha-v0-1-2-c64a39/80_remotion_assets/landing/pricing_1600x900.png",
+      "required": false,
+      "exists": false,
+      "expected_dimensions": "1600x900",
+      "actual_dimensions": null,
+      "dimensions_ok": false
+    }
+  ],
+  "passed_checks": [
+    "real_ui_traceability",
+    "render_report_present"
+  ],
+  "warnings": [
+    "Render skipped: missing Remotion setup"
+  ],
+  "blockers": [
+    "Missing required premium asset: screenshots/screenshot_1_1280x800.png",
+    "Missing required premium asset: screenshots/screenshot_2_1280x800.png",
+    "Missing required premium asset: screenshots/screenshot_3_1280x800.png",
+    "Missing required premium asset: screenshots/screenshot_4_1280x800.png",
+    "Missing required premium asset: screenshots/screenshot_5_1280x800.png",
+    "Missing required premium asset: promo/small_promo_440x280.png",
+    "Missing required premium asset: landing/hero_1600x900.png",
+    "Premium asset render did not complete: skipped."
+  ],
+  "real_ui_traceability_passed": true,
+  "dimension_validation_passed": false,
+  "next_step": "Install and configure Remotion, render the premium stills, then rerun asset QA.",
+  "redaction_checks": {
+    "sanitized_response_bodies": true,
+    "checked_secret_value_count": 0,
+    "secret_values_present_in_artifact": false,
+    "authorization_header_pattern_present": false,
+    "key_material_pattern_present": false,
+    "secret_marker_pattern_present": false,
+    "redaction_guard_triggered": false
+  }
+}

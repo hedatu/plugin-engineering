@@ -1,0 +1,20 @@
+{
+  "generated_at": "2026-04-23T14:37:25.1685899+08:00",
+  "environment": "california_staging_ca-hwh",
+  "checkout_session_created": true,
+  "paid_order_webhook_received": true,
+  "webhook_signature_verified": true,
+  "localOrderId_matched": true,
+  "orders_written": true,
+  "payments_written": true,
+  "entitlement_active_from_webhook": true,
+  "get_entitlement_active": true,
+  "consume_usage_pro_passed": true,
+  "source": "web_and_chrome_extension",
+  "remaining_followup": [],
+  "notes": [
+    "Verified sandbox event PAY_0adLohkJYNiExote8KDSWQ wrote a payment-derived active entitlement on California staging for the web flow.",
+    "Verified sandbox event PAY_6sb41fIctNMyeK7eBxwwnW completed the same webhook-driven payment flow for a real plugin-created source=chrome_extension checkout.",
+    "The paid entitlement was created by webhook processing, not by a manual override."
+  ]
+}

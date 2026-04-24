@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "stage",
+    "status",
+    "run_id",
+    "total_queries",
+    "total_candidates_found",
+    "deduped_candidates",
+    "live_unavailable",
+    "query_results",
+    "next_step",
+    "redaction_checks"
+  ],
+  "properties": {
+    "stage": { "type": "string", "enum": ["LIVE_QUEUE_ROUND2_RESULTS"] },
+    "status": { "type": "string", "enum": ["passed", "skipped", "failed"] },
+    "run_id": { "type": "string" },
+    "source_run_id": { "type": ["string", "null"] },
+    "total_queries": { "type": "integer" },
+    "total_candidates_found": { "type": "integer" },
+    "deduped_candidates": { "type": "integer" },
+    "live_unavailable": { "type": "boolean" },
+    "query_results": { "type": "array", "items": { "type": "object" } },
+    "next_step": { "type": "string" },
+    "redaction_checks": { "type": "object" }
+  }
+}

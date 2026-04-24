@@ -1,0 +1,87 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "stage",
+    "status",
+    "run_id",
+    "approval_status",
+    "approved_by",
+    "approved_at",
+    "note",
+    "approved_action",
+    "review_state",
+    "package_sha256",
+    "manifest_version",
+    "asset_package_status",
+    "human_visual_review_status",
+    "dashboard_listing_sync_status",
+    "risks_acknowledged",
+    "expires_at",
+    "next_step",
+    "redaction_checks"
+  ],
+  "properties": {
+    "stage": {
+      "type": "string",
+      "enum": ["FINAL_PUBLISH_APPROVAL"]
+    },
+    "status": {
+      "type": "string",
+      "enum": ["passed", "failed"]
+    },
+    "run_id": {
+      "type": "string"
+    },
+    "approval_status": {
+      "type": "string",
+      "enum": ["approved"]
+    },
+    "approved_by": {
+      "type": "string"
+    },
+    "approved_at": {
+      "type": "string"
+    },
+    "note": {
+      "type": "string"
+    },
+    "approved_action": {
+      "type": "string",
+      "enum": ["final_publish"]
+    },
+    "review_state": {
+      "type": "string"
+    },
+    "package_sha256": {
+      "type": "string"
+    },
+    "manifest_version": {
+      "type": ["string", "null"]
+    },
+    "asset_package_status": {
+      "type": "string"
+    },
+    "human_visual_review_status": {
+      "type": "string"
+    },
+    "dashboard_listing_sync_status": {
+      "type": "string"
+    },
+    "risks_acknowledged": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "expires_at": {
+      "type": ["string", "null"]
+    },
+    "next_step": {
+      "type": "string"
+    },
+    "redaction_checks": {
+      "type": "object"
+    }
+  }
+}

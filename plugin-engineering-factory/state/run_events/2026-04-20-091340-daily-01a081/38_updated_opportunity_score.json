@@ -1,0 +1,34 @@
+{
+  "stage": "UPDATED_OPPORTUNITY_SCORE",
+  "status": "passed",
+  "candidate_id": "cand-tab-001",
+  "selected_wedge_hypothesis": "Export only the current Chrome window to a clean, share-ready CSV in one click.",
+  "demand_score": 69.2,
+  "pain_score": 68.85,
+  "evidence_quality_score": 74.8,
+  "wedge_clarity_score": 87.8,
+  "feasibility_score": 84.8,
+  "testability_score": 89.15,
+  "compliance_score": 82,
+  "differentiation_score": 42,
+  "portfolio_overlap_penalty": 74,
+  "maintenance_risk_score": 31,
+  "confidence_score": 77.71,
+  "total_score": 75.73,
+  "build_recommendation": "skip",
+  "score_delta_from_original": 1.66,
+  "decision_rationale": [
+    "The research loop sharpened the wedge from generic tab export into a specific current-window CSV job.",
+    "Evidence quality and testability stayed strong, and wedge clarity improved materially.",
+    "That sharper wedge now overlaps too directly with the existing tab_csv_window_export portfolio, so the candidate should not build."
+  ],
+  "redaction_checks": {
+    "sanitized_response_bodies": true,
+    "checked_secret_value_count": 0,
+    "secret_values_present_in_artifact": false,
+    "authorization_header_pattern_present": false,
+    "key_material_pattern_present": false,
+    "secret_marker_pattern_present": false,
+    "redaction_guard_triggered": false
+  }
+}

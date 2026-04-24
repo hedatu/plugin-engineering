@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "stage",
+    "status",
+    "reviewed_runs",
+    "total_candidates_seen",
+    "build_ready_count",
+    "research_more_count",
+    "skipped_count",
+    "backlog_waiting_count",
+    "top_failure_modes",
+    "repeated_patterns",
+    "search_space_diagnosis",
+    "builder_gap_diagnosis",
+    "portfolio_overlap_diagnosis",
+    "evidence_source_diagnosis",
+    "recommended_strategy_options",
+    "recommended_primary_strategy",
+    "human_decision_required",
+    "next_step",
+    "redaction_checks"
+  ],
+  "properties": {
+    "stage": { "type": "string", "enum": ["DISCOVERY_STRATEGY_REVIEW"] },
+    "status": { "type": "string", "enum": ["passed", "failed"] },
+    "reviewed_runs": { "type": "array", "items": { "type": "string" } },
+    "recommended_strategy_options": { "type": "array", "items": { "type": "object" } },
+    "human_decision_required": { "type": "boolean" },
+    "next_step": { "type": "string" },
+    "redaction_checks": { "type": "object" }
+  }
+}

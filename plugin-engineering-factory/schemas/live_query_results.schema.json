@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "stage",
+    "status",
+    "run_id",
+    "total_queries",
+    "query_results",
+    "live_unavailable",
+    "next_step",
+    "redaction_checks"
+  ],
+  "properties": {
+    "stage": {
+      "type": "string",
+      "enum": ["LIVE_DISCOVERY_QUEUE"]
+    },
+    "status": {
+      "type": "string",
+      "enum": ["passed", "skipped", "failed"]
+    },
+    "run_id": { "type": "string" },
+    "source_run_id": { "type": ["string", "null"] },
+    "checked_at": { "type": ["string", "null"] },
+    "total_queries": { "type": "integer" },
+    "live_unavailable": { "type": "boolean" },
+    "query_results": {
+      "type": "array",
+      "items": { "type": "object" }
+    },
+    "next_step": { "type": "string" },
+    "redaction_checks": { "type": "object" }
+  }
+}

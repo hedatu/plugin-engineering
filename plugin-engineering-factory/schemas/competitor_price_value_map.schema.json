@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["stage", "status", "competitor_count", "competitors", "redaction_checks"],
+  "properties": {
+    "stage": { "type": "string", "enum": ["COMPETITOR_PRICE_VALUE_MAP"] },
+    "status": { "type": "string", "enum": ["passed", "failed"] },
+    "competitor_count": { "type": "integer" },
+    "competitors": { "type": "array", "items": { "type": "object" } },
+    "redaction_checks": { "type": "object" }
+  }
+}

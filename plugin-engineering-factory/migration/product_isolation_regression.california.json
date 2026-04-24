@@ -1,0 +1,31 @@
+{
+  "generated_at": "2026-04-22T21:14:46.1861567+08:00",
+  "server_id": "california",
+  "leadfill": {
+    "productKey": "leadfill-one-profile",
+    "product_exists": true,
+    "monetization_enabled": true,
+    "checkout_enabled": true,
+    "planKey": "lifetime",
+    "billingType": "onetime",
+    "price": "USD 19.00",
+    "free_quota": 10,
+    "featureKey": "leadfill_fill_action",
+    "chatgpt2obsidian_reused_as_primary": false
+  },
+  "chatgpt2obsidian": {
+    "present": true,
+    "status": "draft",
+    "is_public": false,
+    "lifecycle": "legacy_test_only",
+    "replacementProductKey": "leadfill-one-profile"
+  },
+  "weiwang": {
+    "present_in_paid_tables": false,
+    "checkout_enabled": false,
+    "monetization_enabled": false,
+    "free_only": true,
+    "note": "California staging has zero product or plan rows matching weiwang, so it cannot inherit LeadFill entitlement or lifetime pricing."
+  },
+  "regression_passed": true
+}

@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "siteUrl",
+    "publicSupabaseUrl",
+    "publicSupabaseAnonKey",
+    "productKey",
+    "planKey",
+    "chromeExtensionId",
+    "checkoutSuccessUrl",
+    "checkoutCancelUrl",
+    "checkoutMode",
+    "authMode",
+    "membershipProvider"
+  ],
+  "properties": {
+    "siteUrl": { "type": "string", "minLength": 1 },
+    "publicSupabaseUrl": { "type": "string", "minLength": 1 },
+    "publicSupabaseAnonKey": { "type": "string", "minLength": 1 },
+    "productKey": { "type": "string", "minLength": 1 },
+    "planKey": { "type": "string", "minLength": 1 },
+    "chromeExtensionId": { "type": "string", "minLength": 1 },
+    "checkoutSuccessUrl": { "type": "string", "minLength": 1 },
+    "checkoutCancelUrl": { "type": "string", "minLength": 1 },
+    "checkoutMode": { "type": "string", "enum": ["disabled", "test", "live"] },
+    "authMode": { "type": "string", "enum": ["email_otp"] },
+    "membershipProvider": { "type": "string", "enum": ["pay_site_supabase_waffo"] }
+  }
+}
+

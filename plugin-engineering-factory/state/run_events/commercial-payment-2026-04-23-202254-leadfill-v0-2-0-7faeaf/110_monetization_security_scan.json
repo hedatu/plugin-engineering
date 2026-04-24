@@ -1,0 +1,47 @@
+{
+  "stage": "MONETIZATION_SECURITY_SCAN",
+  "status": "passed",
+  "run_id": "commercial-payment-2026-04-23-202254-leadfill-v0-2-0-7faeaf",
+  "run_dir": "D:\\code\\ai插件优化工作流\\runs\\commercial-payment-2026-04-23-202254-leadfill-v0-2-0-7faeaf",
+  "scanned_paths": [
+    "runs/commercial-payment-2026-04-23-202254-leadfill-v0-2-0-7faeaf/workspace/dist/monetization_config.json",
+    "runs/commercial-payment-2026-04-23-202254-leadfill-v0-2-0-7faeaf/workspace/dist/background.js",
+    "runs/commercial-payment-2026-04-23-202254-leadfill-v0-2-0-7faeaf/workspace/dist/manifest.json",
+    "runs/commercial-payment-2026-04-23-202254-leadfill-v0-2-0-7faeaf/workspace/dist/monetization/authFlow.js",
+    "runs/commercial-payment-2026-04-23-202254-leadfill-v0-2-0-7faeaf/workspace/dist/monetization/checkoutFlow.js",
+    "runs/commercial-payment-2026-04-23-202254-leadfill-v0-2-0-7faeaf/workspace/dist/monetization/licenseClient.js",
+    "runs/commercial-payment-2026-04-23-202254-leadfill-v0-2-0-7faeaf/workspace/dist/monetization/licensePage.html",
+    "runs/commercial-payment-2026-04-23-202254-leadfill-v0-2-0-7faeaf/workspace/dist/monetization/licensePage.js",
+    "runs/commercial-payment-2026-04-23-202254-leadfill-v0-2-0-7faeaf/workspace/dist/monetization/membershipClient.js",
+    "runs/commercial-payment-2026-04-23-202254-leadfill-v0-2-0-7faeaf/workspace/dist/monetization/paySiteConfig.js",
+    "runs/commercial-payment-2026-04-23-202254-leadfill-v0-2-0-7faeaf/workspace/dist/monetization/paySiteRuntime.js",
+    "runs/commercial-payment-2026-04-23-202254-leadfill-v0-2-0-7faeaf/workspace/dist/monetization/paywallView.js",
+    "runs/commercial-payment-2026-04-23-202254-leadfill-v0-2-0-7faeaf/workspace/dist/monetization/upgradeFlow.js",
+    "runs/commercial-payment-2026-04-23-202254-leadfill-v0-2-0-7faeaf/workspace/dist/monetization/usageGate.js",
+    "runs/commercial-payment-2026-04-23-202254-leadfill-v0-2-0-7faeaf/workspace/dist/monetization/usageMeter.js",
+    "runs/commercial-payment-2026-04-23-202254-leadfill-v0-2-0-7faeaf/workspace/dist/pay_site_config.json",
+    "runs/commercial-payment-2026-04-23-202254-leadfill-v0-2-0-7faeaf/workspace/dist/popup.css",
+    "runs/commercial-payment-2026-04-23-202254-leadfill-v0-2-0-7faeaf/workspace/dist/popup.html",
+    "runs/commercial-payment-2026-04-23-202254-leadfill-v0-2-0-7faeaf/workspace/dist/popup.js",
+    "runs/commercial-payment-2026-04-23-202254-leadfill-v0-2-0-7faeaf/workspace/dist/privacy.html",
+    "runs/commercial-payment-2026-04-23-202254-leadfill-v0-2-0-7faeaf/workspace/dist/README.md"
+  ],
+  "patterns_checked": [
+    "stripe_secret_key",
+    "authorization_bearer",
+    "private_key",
+    "webhook_secret",
+    "lemon_squeezy_api_key",
+    "stripe_secret_phrase"
+  ],
+  "findings": [],
+  "checkout_mode": "test",
+  "human_approval_required_for_live": true,
+  "live_checkout_blocked_without_approval": false,
+  "bundle_scan_status": "passed",
+  "config_scan_status": "passed",
+  "notes": [
+    "runs/commercial-payment-2026-04-23-202254-leadfill-v0-2-0-7faeaf/workspace/dist/monetization/authFlow.js contains public auth token field names used by the background OTP/session runtime; no concrete secret value was detected.",
+    "runs/commercial-payment-2026-04-23-202254-leadfill-v0-2-0-7faeaf/workspace/dist/monetization/membershipClient.js contains public auth token field names used by the background OTP/session runtime; no concrete secret value was detected."
+  ]
+}

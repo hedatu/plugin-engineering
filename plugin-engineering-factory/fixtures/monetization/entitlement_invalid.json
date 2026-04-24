@@ -1,0 +1,16 @@
+{
+  "status": "invalid",
+  "plan": "free",
+  "product_id": "page-context-to-markdown",
+  "license_id": "lic_invalid_001",
+  "features": [],
+  "free_limit": {
+    "amount": 10,
+    "unit": "actions",
+    "scope": "lifetime"
+  },
+  "usage_remaining": 0,
+  "expires_at": null,
+  "verified_at": "2026-04-21T00:00:00.000Z",
+  "message": "The license key is invalid."
+}

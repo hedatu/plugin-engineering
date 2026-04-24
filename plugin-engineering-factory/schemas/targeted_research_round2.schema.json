@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "stage",
+    "status",
+    "run_id",
+    "reviewed_count",
+    "build_ready_count",
+    "skip_count",
+    "backlog_waiting_count",
+    "research_more_count",
+    "entries",
+    "redaction_checks"
+  ],
+  "properties": {
+    "stage": { "type": "string", "enum": ["TARGETED_RESEARCH_ROUND_2"] },
+    "status": { "type": "string", "enum": ["passed", "failed"] },
+    "run_id": { "type": "string" },
+    "reviewed_count": { "type": "integer" },
+    "build_ready_count": { "type": "integer" },
+    "skip_count": { "type": "integer" },
+    "backlog_waiting_count": { "type": "integer" },
+    "research_more_count": { "type": "integer", "enum": [0] },
+    "no_build_today": { "type": "boolean" },
+    "no_build_reason": { "type": ["string", "null"] },
+    "entries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "candidate_id",
+          "candidate_name",
+          "round1_recommendation",
+          "round1_gaps",
+          "round2_research_questions",
+          "round2_additional_evidence",
+          "evidence_delta",
+          "wedge_clarity_delta",
+          "overlap_delta",
+          "final_wedge",
+          "final_gate_result",
+          "final_decision",
+          "final_reason",
+          "next_step"
+        ],
+        "properties": {
+          "final_decision": {
+            "type": "string",
+            "enum": ["build_ready", "skip", "backlog_waiting_for_evidence"]
+          }
+        }
+      }
+    },
+    "redaction_checks": { "type": "object" }
+  }
+}

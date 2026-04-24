@@ -1,0 +1,30 @@
+{
+  "stage": "MONITOR_POST_RELEASE",
+  "status": "skipped",
+  "run_id": "sandbox-2026-04-19-145131-dnnpkaefmlha-1acd61",
+  "item_id": null,
+  "source_type": "disabled",
+  "metrics_window": "unconfigured",
+  "installs": null,
+  "uninstalls": null,
+  "impressions": null,
+  "conversion_rate": null,
+  "uninstall_rate": null,
+  "reviews_summary": {
+    "total_reviews": 0,
+    "negative_reviews": 0,
+    "top_topics": []
+  },
+  "support_summary": {
+    "total_tickets": 0,
+    "open_tickets": 0,
+    "top_topics": []
+  },
+  "health_status": "monitoring_disabled",
+  "failure_reason": null,
+  "next_step": "enable monitoring inputs before post-release health tracking",
+  "generated_at": "2026-04-19T06:51:50.863Z",
+  "publisher_id": null,
+  "publish_execution_path": "",
+  "portfolio_registry_path": "D:\\code\\ai插件优化工作流\\state\\portfolio_registry.json"
+}

@@ -1,0 +1,78 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "stage",
+    "status",
+    "run_id",
+    "item_id",
+    "release_health_summary",
+    "blacklist_updates",
+    "overlap_updates",
+    "archetype_priors",
+    "scoring_weight_suggestions",
+    "reviewer_notes",
+    "should_pause_similar_builds",
+    "should_prioritize_followup",
+    "generated_at",
+    "publisher_id",
+    "portfolio_registry_path",
+    "failure_reason"
+  ],
+  "properties": {
+    "stage": {
+      "type": "string",
+      "enum": ["MONITOR_POST_RELEASE"]
+    },
+    "status": {
+      "type": "string",
+      "enum": ["passed", "failed", "skipped"]
+    },
+    "run_id": {
+      "type": "string"
+    },
+    "item_id": {
+      "type": ["string", "null"]
+    },
+    "release_health_summary": {
+      "type": "string"
+    },
+    "blacklist_updates": {
+      "type": "array",
+      "items": { "type": "object" }
+    },
+    "overlap_updates": {
+      "type": "array",
+      "items": { "type": "object" }
+    },
+    "archetype_priors": {
+      "type": "object"
+    },
+    "scoring_weight_suggestions": {
+      "type": "array",
+      "items": { "type": "object" }
+    },
+    "reviewer_notes": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "should_pause_similar_builds": {
+      "type": "boolean"
+    },
+    "should_prioritize_followup": {
+      "type": "boolean"
+    },
+    "generated_at": {
+      "type": "string"
+    },
+    "publisher_id": {
+      "type": ["string", "null"]
+    },
+    "portfolio_registry_path": {
+      "type": "string"
+    },
+    "failure_reason": {
+      "type": ["string", "null"]
+    }
+  }
+}

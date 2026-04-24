@@ -1,0 +1,130 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "stage",
+    "status",
+    "gate_status",
+    "run_id",
+    "review_state",
+    "is_approved",
+    "is_staged",
+    "install_verification_status",
+    "product_acceptance_status",
+    "functional_test_coverage_score",
+    "premium_package_status",
+    "asset_qa_status",
+    "listing_quality_gate_status",
+    "human_visual_review_status",
+    "dashboard_listing_sync_status",
+    "monetization_strategy_status",
+    "payment_ready_status",
+    "market_test_readiness_status",
+    "current_review_may_not_include_latest_premium_assets",
+    "requires_dashboard_listing_sync",
+    "blockers",
+    "allowed_actions",
+    "recommended_next_action",
+    "redaction_checks"
+  ],
+  "properties": {
+    "stage": {
+      "type": "string",
+      "enum": ["FINAL_PUBLISH_DECISION_GATE"]
+    },
+    "status": {
+      "type": "string",
+      "enum": ["passed", "failed"]
+    },
+    "gate_status": {
+      "type": "string",
+      "enum": ["hold", "action_required", "ready_for_human_final_publish_approval"]
+    },
+    "run_id": {
+      "type": "string"
+    },
+    "review_state": {
+      "type": ["string", "null"]
+    },
+    "is_approved": {
+      "type": "boolean"
+    },
+    "is_staged": {
+      "type": "boolean"
+    },
+    "install_verification_status": {
+      "type": "string"
+    },
+    "product_acceptance_status": {
+      "type": "string"
+    },
+    "functional_test_coverage_score": {
+      "type": ["number", "null"]
+    },
+    "premium_package_status": {
+      "type": "string"
+    },
+    "asset_qa_status": {
+      "type": "string"
+    },
+    "listing_quality_gate_status": {
+      "type": "string"
+    },
+    "human_visual_review_status": {
+      "type": "string"
+    },
+    "dashboard_listing_sync_status": {
+      "type": "string"
+    },
+    "monetization_strategy_status": {
+      "type": "string"
+    },
+    "payment_ready_status": {
+      "type": "string"
+    },
+    "market_test_readiness_status": {
+      "type": "string"
+    },
+    "current_review_may_not_include_latest_premium_assets": {
+      "type": "boolean"
+    },
+    "requires_dashboard_listing_sync": {
+      "type": "boolean"
+    },
+    "blockers": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "allowed_actions": {
+      "type": "object",
+      "required": [
+        "record_install_verification",
+        "record_dashboard_listing_sync",
+        "final_publish",
+        "hold_staged"
+      ],
+      "properties": {
+        "record_install_verification": {
+          "type": "boolean"
+        },
+        "record_dashboard_listing_sync": {
+          "type": "boolean"
+        },
+        "final_publish": {
+          "type": "boolean"
+        },
+        "hold_staged": {
+          "type": "boolean"
+        }
+      }
+    },
+    "recommended_next_action": {
+      "type": "string"
+    },
+    "redaction_checks": {
+      "type": "object"
+    }
+  }
+}

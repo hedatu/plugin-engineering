@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "stage",
+    "status",
+    "run_id",
+    "archetype",
+    "wedge",
+    "tests",
+    "test_coverage_score",
+    "missing_tests",
+    "release_blockers",
+    "recommended_next_tests",
+    "redaction_checks"
+  ],
+  "properties": {
+    "stage": {
+      "type": "string",
+      "enum": ["FUNCTIONAL_TEST_MATRIX"]
+    },
+    "status": {
+      "type": "string",
+      "enum": ["passed", "failed"]
+    },
+    "run_id": {
+      "type": "string"
+    },
+    "archetype": {
+      "type": "string"
+    },
+    "wedge": {
+      "type": "string"
+    },
+    "tests": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "test_name",
+          "automated_or_manual",
+          "current_status",
+          "evidence_artifact",
+          "risk_if_missing",
+          "recommended_next_action"
+        ],
+        "properties": {
+          "test_name": { "type": "string" },
+          "automated_or_manual": { "type": "string" },
+          "current_status": { "type": "string" },
+          "evidence_artifact": { "type": "string" },
+          "risk_if_missing": { "type": "string" },
+          "recommended_next_action": { "type": "string" }
+        }
+      }
+    },
+    "test_coverage_score": {
+      "type": "number"
+    },
+    "missing_tests": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "release_blockers": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "recommended_next_tests": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "redaction_checks": {
+      "type": "object"
+    }
+  }
+}

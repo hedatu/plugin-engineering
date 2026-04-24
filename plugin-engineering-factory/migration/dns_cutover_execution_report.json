@@ -1,0 +1,42 @@
+{
+  "cutover_started_at": "2026-04-23T18:44:25.4428947+08:00",
+  "cutover_completed_at": "2026-04-23T19:08:10.8347952+08:00",
+  "revalidated_at": "2026-04-23T19:47:00+08:00",
+  "california_ip": "134.199.226.198",
+  "cloudflare_zone_name": "915500.xyz",
+  "pay_dns_before": {
+    "name": "pay.915500.xyz",
+    "type": "A",
+    "status": "missing"
+  },
+  "pay_dns_after": {
+    "name": "pay.915500.xyz",
+    "type": "A",
+    "content": "134.199.226.198",
+    "resolver_1_1_1_1": "134.199.226.198",
+    "resolver_8_8_8_8": "134.199.226.198",
+    "proxied": false
+  },
+  "pay_api_dns_before": {
+    "name": "pay-api.915500.xyz",
+    "type": "A",
+    "status": "missing"
+  },
+  "pay_api_dns_after": {
+    "name": "pay-api.915500.xyz",
+    "type": "A",
+    "content": "134.199.226.198",
+    "resolver_1_1_1_1": "134.199.226.198",
+    "resolver_8_8_8_8": "134.199.226.198",
+    "proxied": false
+  },
+  "ttl_before": null,
+  "ttl_after": 300,
+  "staging_aliases_retained": [
+    "ca-hwh.915500.xyz",
+    "ca-hwh-api.915500.xyz"
+  ],
+  "old_server_services_stopped": false,
+  "old_server_data_deleted": false,
+  "blockers": []
+}

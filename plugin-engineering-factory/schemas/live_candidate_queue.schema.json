@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "stage",
+    "status",
+    "run_id",
+    "source_run_id",
+    "total_queries",
+    "total_candidates_found",
+    "deduped_candidates",
+    "candidate_queue",
+    "rejected_candidates",
+    "queue_quality_score",
+    "next_step",
+    "redaction_checks"
+  ],
+  "properties": {
+    "stage": {
+      "type": "string",
+      "enum": ["LIVE_CANDIDATE_QUEUE"]
+    },
+    "status": {
+      "type": "string",
+      "enum": ["passed", "skipped", "failed"]
+    },
+    "run_id": { "type": "string" },
+    "source_run_id": { "type": ["string", "null"] },
+    "total_queries": { "type": "integer" },
+    "total_candidates_found": { "type": "integer" },
+    "deduped_candidates": { "type": "integer" },
+    "candidate_queue": {
+      "type": "array",
+      "items": { "type": "object" }
+    },
+    "rejected_candidates": {
+      "type": "array",
+      "items": { "type": "object" }
+    },
+    "queue_quality_score": { "type": "number" },
+    "next_step": { "type": "string" },
+    "redaction_checks": { "type": "object" }
+  }
+}

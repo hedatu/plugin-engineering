@@ -1,0 +1,98 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "stage",
+    "status",
+    "run_id",
+    "selected_candidate_id",
+    "better_sources",
+    "category_strategy",
+    "keyword_strategy",
+    "minimum_thresholds",
+    "negative_review_mining_strategy",
+    "support_site_strategy",
+    "github_issue_strategy",
+    "reddit_or_forum_strategy",
+    "recency_strategy",
+    "anti_copycat_policy",
+    "portfolio_differentiation_strategy",
+    "next_10_search_queries",
+    "next_step",
+    "redaction_checks"
+  ],
+  "properties": {
+    "stage": {
+      "type": "string",
+      "enum": ["DEMAND_DISCOVERY_IMPROVEMENT_PLAN"]
+    },
+    "status": {
+      "type": "string",
+      "enum": ["passed", "failed"]
+    },
+    "run_id": { "type": "string" },
+    "selected_candidate_id": { "type": "string" },
+    "better_sources": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "category_strategy": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "keyword_strategy": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "minimum_thresholds": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "negative_review_mining_strategy": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "support_site_strategy": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "github_issue_strategy": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "reddit_or_forum_strategy": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "recency_strategy": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "anti_copycat_policy": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "portfolio_differentiation_strategy": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "next_10_search_queries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "query",
+          "target_category",
+          "hypothesis",
+          "expected_user_pain",
+          "preferred_archetype",
+          "risk",
+          "why_now",
+          "exclude_if"
+        ]
+      }
+    },
+    "next_step": { "type": "string" },
+    "redaction_checks": { "type": "object" }
+  }
+}

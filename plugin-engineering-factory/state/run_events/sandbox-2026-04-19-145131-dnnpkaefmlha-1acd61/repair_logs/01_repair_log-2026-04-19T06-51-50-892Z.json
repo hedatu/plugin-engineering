@@ -1,0 +1,13 @@
+{
+  "stage": "REPAIR_RUN",
+  "generated_at": "2026-04-19T06:51:50.892Z",
+  "attempt": {
+    "started_at": "2026-04-19T06:51:50.856Z",
+    "stage": "REVIEW_STATUS",
+    "from_stage": "REVIEW_STATUS",
+    "status": "passed",
+    "cleaned_paths": [],
+    "completed_at": "2026-04-19T06:51:50.892Z",
+    "publish_intent": "draft_only"
+  }
+}

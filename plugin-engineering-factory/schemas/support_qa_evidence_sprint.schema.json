@@ -1,0 +1,85 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "stage",
+    "status",
+    "run_id",
+    "candidate_name",
+    "candidate_id",
+    "target_micro_wedge",
+    "evidence_questions",
+    "evidence_sources_attempted",
+    "evidence_collected",
+    "evidence_rejected",
+    "user_voice_summary",
+    "install_intent_signals",
+    "local_only_preference_signals",
+    "screenshot_or_upload_preference_signals",
+    "text_first_handoff_signals",
+    "updated_evidence_quality_score",
+    "updated_wedge_clarity_score",
+    "updated_portfolio_overlap_score",
+    "updated_testability_score",
+    "updated_compliance_risk",
+    "final_decision",
+    "final_reason",
+    "next_step",
+    "redaction_checks"
+  ],
+  "properties": {
+    "stage": { "type": "string", "enum": ["SUPPORT_QA_EVIDENCE_SPRINT"] },
+    "status": { "type": "string", "enum": ["passed", "failed", "skipped"] },
+    "run_id": { "type": "string" },
+    "candidate_name": { "type": "string" },
+    "candidate_id": { "type": "string" },
+    "target_micro_wedge": { "type": "string" },
+    "evidence_questions": {
+      "type": "array",
+      "items": { "type": "object" }
+    },
+    "evidence_sources_attempted": {
+      "type": "array",
+      "items": { "type": "object" }
+    },
+    "evidence_collected": {
+      "type": "array",
+      "items": { "type": "object" }
+    },
+    "evidence_rejected": {
+      "type": "array",
+      "items": { "type": "object" }
+    },
+    "user_voice_summary": {
+      "type": ["object", "string"]
+    },
+    "install_intent_signals": {
+      "type": "array",
+      "items": { "type": "object" }
+    },
+    "local_only_preference_signals": {
+      "type": "array",
+      "items": { "type": "object" }
+    },
+    "screenshot_or_upload_preference_signals": {
+      "type": "array",
+      "items": { "type": "object" }
+    },
+    "text_first_handoff_signals": {
+      "type": "array",
+      "items": { "type": "object" }
+    },
+    "updated_evidence_quality_score": { "type": "number" },
+    "updated_wedge_clarity_score": { "type": "number" },
+    "updated_portfolio_overlap_score": { "type": "number" },
+    "updated_testability_score": { "type": "number" },
+    "updated_compliance_risk": { "type": "string" },
+    "final_decision": {
+      "type": "string",
+      "enum": ["human_candidate_review_ready", "backlog_waiting_for_evidence", "skip"]
+    },
+    "final_reason": { "type": "string" },
+    "next_step": { "type": "string" },
+    "redaction_checks": { "type": "object" }
+  }
+}

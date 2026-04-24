@@ -1,0 +1,116 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "stage",
+    "status",
+    "run_id",
+    "product_key",
+    "checked_at",
+    "product_catalog_entry_exists",
+    "plugin_detail_page_generated",
+    "pricing_page_generated",
+    "hwh_product_config_ready",
+    "product_key_matches_extension",
+    "plan_key_configured",
+    "checkout_mode",
+    "smtp_status",
+    "checkout_status",
+    "webhook_status",
+    "entitlement_status",
+    "consume_usage_status",
+    "support_url_present",
+    "privacy_url_present",
+    "payment_copy_truthful",
+    "no_secret_in_site_config",
+    "no_secret_in_extension",
+    "release_allowed",
+    "blockers",
+    "next_step"
+  ],
+  "properties": {
+    "stage": {
+      "type": "string",
+      "enum": ["PLUGIN_SITE_PAYMENT_GATE"]
+    },
+    "status": {
+      "type": "string"
+    },
+    "run_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "product_key": {
+      "type": "string",
+      "minLength": 1
+    },
+    "checked_at": {
+      "type": "string"
+    },
+    "product_catalog_entry_exists": {
+      "type": "boolean"
+    },
+    "plugin_detail_page_generated": {
+      "type": "boolean"
+    },
+    "pricing_page_generated": {
+      "type": "boolean"
+    },
+    "hwh_product_config_ready": {
+      "type": "boolean"
+    },
+    "product_key_matches_extension": {
+      "type": "boolean"
+    },
+    "plan_key_configured": {
+      "type": "boolean"
+    },
+    "checkout_mode": {
+      "type": "string",
+      "enum": ["disabled", "test", "live"]
+    },
+    "smtp_status": {
+      "type": "string"
+    },
+    "checkout_status": {
+      "type": "string"
+    },
+    "webhook_status": {
+      "type": "string"
+    },
+    "entitlement_status": {
+      "type": "string"
+    },
+    "consume_usage_status": {
+      "type": "string"
+    },
+    "support_url_present": {
+      "type": "boolean"
+    },
+    "privacy_url_present": {
+      "type": "boolean"
+    },
+    "payment_copy_truthful": {
+      "type": "boolean"
+    },
+    "no_secret_in_site_config": {
+      "type": "boolean"
+    },
+    "no_secret_in_extension": {
+      "type": "boolean"
+    },
+    "release_allowed": {
+      "type": "boolean"
+    },
+    "blockers": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "next_step": {
+      "type": "string",
+      "minLength": 1
+    }
+  }
+}

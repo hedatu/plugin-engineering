@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "stage",
+    "status",
+    "reviewed_at",
+    "seed_count",
+    "seeds",
+    "redaction_checks"
+  ],
+  "properties": {
+    "stage": { "type": "string", "enum": ["MANUAL_SEED_PLAN"] },
+    "status": { "type": "string", "enum": ["passed", "failed"] },
+    "seed_count": { "type": "integer" },
+    "seeds": { "type": "array", "items": { "type": "object" } },
+    "redaction_checks": { "type": "object" }
+  }
+}

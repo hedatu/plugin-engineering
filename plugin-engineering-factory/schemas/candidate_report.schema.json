@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "stage",
+    "status",
+    "generated_at",
+    "source_mode",
+    "candidate_count",
+    "candidates",
+    "discarded"
+  ],
+  "properties": {
+    "stage": { "type": "string", "enum": ["DISCOVER_CANDIDATES"] },
+    "status": { "type": "string", "enum": ["passed", "failed"] },
+    "generated_at": { "type": "string" },
+    "source_mode": { "type": "string" },
+    "candidate_count": { "type": "integer" },
+    "total_candidates_seen": { "type": "integer" },
+    "total_fixture_candidates": { "type": "integer" },
+    "note": { "type": ["string", "null"] },
+    "failure_reason": { "type": ["string", "null"] },
+    "discarded": { "type": "array", "items": { "type": "object" } },
+    "candidates": { "type": "array", "items": { "type": "object" } }
+  }
+}

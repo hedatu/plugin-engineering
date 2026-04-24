@@ -1,0 +1,23 @@
+{
+  "generated_at": "2026-04-23T17:17:11.3052390+08:00",
+  "environment": "california_staging_ca_hwh",
+  "smtp_independent_verified": true,
+  "payment_e2e_verified": true,
+  "source_chrome_extension_verified": true,
+  "review_watch_verified": true,
+  "selected_smtp_provider": "resend",
+  "smtp_domain": "notify.915500.xyz",
+  "smtp_sender": "no-reply@notify.915500.xyz",
+  "smtp_port": 2587,
+  "low_memory_risk_status": "acknowledged_risk_allowed_when_user_approves",
+  "remaining_blockers": [
+    "low_memory_server",
+    "user_cutover_approval_missing"
+  ],
+  "smtp_notes": [
+    "notify.915500.xyz is verified in Resend.",
+    "California Auth uses smtp.resend.com on port 2587 because DigitalOcean blocked ports 465, 587, and 25.",
+    "DMARC for _dmarc.notify.915500.xyz is still recommended but not blocking SMTP independence."
+  ],
+  "next_step": "Only low_memory_server and user_cutover_approval_missing remain as DNS cutover blockers. Do not cut formal DNS until the user explicitly approves."
+}

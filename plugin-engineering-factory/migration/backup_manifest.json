@@ -1,0 +1,137 @@
+{
+  "generated_at": "2026-04-22T19:30:00+08:00",
+  "phase": "planning_only",
+  "backup_completed": false,
+  "source_server": {
+    "alias": "bwg-166",
+    "hostname": "neon-drum-2.localdomain",
+    "ip_redacted": "45.62.xxx.xxx",
+    "access_status": "read_only_verified"
+  },
+  "artifacts": [
+    {
+      "path": "/opt/supabase-project/backups/pre_membership_migration_20260422002810.dump",
+      "type": "database_dump",
+      "status": "available_on_old_server",
+      "sha256": "244c2dc7764676b25c891a3dc9c677533abeb7754d9d93a73efc3c5f20fda854"
+    },
+    {
+      "path": "/opt/supabase-project/backups/pre_waffo_product_id_update_20260422062827.dump",
+      "type": "database_dump",
+      "status": "available_on_old_server",
+      "sha256": "fd7bce1b93638b4d1d7cb31ce040884b3a5b67e34c4dd3f9dfa3168d06942a52"
+    },
+    {
+      "path": "/opt/supabase-project/docker-compose.yml",
+      "type": "infra_config",
+      "status": "hash_captured",
+      "sha256": "a193ab0979f57a3fe135c9261bf68411e943b871681244e125e03247bae7460f"
+    },
+    {
+      "path": "/opt/supabase-project/.env",
+      "type": "secret_env_redacted",
+      "status": "hash_captured_no_repo_copy",
+      "sha256": "6f7bc3ba33f4dd70f19adbbca17150850d7a3bf38799e4570f292826f903d323"
+    },
+    {
+      "path": "/opt/supabase-project/.env.functions",
+      "type": "secret_env_redacted",
+      "status": "hash_captured_no_repo_copy",
+      "sha256": "80f4bc1535e816fcdbab4500e1149565f75218460ed1273fd3cdbdc7fb834ccc"
+    },
+    {
+      "path": "/opt/supabase-project/docker-compose.nginx.bwg.yml",
+      "type": "infra_config",
+      "status": "hash_captured",
+      "sha256": "8a07d0da13000df2ccf5e9e354500fcad599789c654596357f2e297ad25ba5d5"
+    },
+    {
+      "path": "/etc/nginx/sites-available/pay.915500.xyz",
+      "type": "reverse_proxy_config",
+      "status": "hash_captured",
+      "sha256": "11fec5328024b880faed3fc01181e26a3169413fb3c20195c20311835ef5b988"
+    },
+    {
+      "path": "/etc/nginx/sites-available/pay-api.915500.xyz",
+      "type": "reverse_proxy_config",
+      "status": "hash_captured",
+      "sha256": "17201243e692c6431e85c7052edbc4a4430751d8982198674f944e826c5a2e54"
+    },
+    {
+      "path": "/etc/nginx/sites-available/hwh.915500.xyz",
+      "type": "reverse_proxy_config",
+      "status": "hash_captured",
+      "sha256": "6e45ac027d9d046dcc9c55d6a684a348c43f134654ecf7ab4f487b4cf40df57e"
+    },
+    {
+      "path": "/etc/nginx/sites-available/hwh-api.915500.xyz",
+      "type": "reverse_proxy_config",
+      "status": "hash_captured",
+      "sha256": "3d737fab344e671a67e14360217f430c40f0287b2064f2d75f50746f75df0478"
+    },
+    {
+      "path": "/etc/systemd/system/leadfill-smtp-bridge.service",
+      "type": "smtp_bridge_unit",
+      "status": "hash_captured",
+      "sha256": "ad0924b030ba62470c7572bf1787e0f431f9914d992b3dd109cade22ab1324d4"
+    },
+    {
+      "path": "/var/www/pay.915500.xyz/index.html",
+      "type": "pay_site_static_asset",
+      "status": "hash_captured",
+      "sha256": "8111213a03fc6b90675fa1a24008f33cdfc4fe732e9825a81b91449dec6e1bc8"
+    },
+    {
+      "path": "D:/code/ai插件优化工作流/state/product_catalog.json",
+      "type": "factory_state",
+      "status": "local_hash_captured",
+      "sha256": "10F666ECB810C97A2E243DE6F8663814B773084F5FF00E8116B005A6D3622A13"
+    },
+    {
+      "path": "D:/code/ai插件优化工作流/state/release_ledger.json",
+      "type": "factory_state",
+      "status": "local_hash_captured",
+      "sha256": "18F1069FBEDE2EA6C643E66736ABB55A3AC4E800A6AF9577081F2FA88FB3A92A"
+    },
+    {
+      "path": "D:/code/ai插件优化工作流/state/opportunity_backlog.json",
+      "type": "factory_state",
+      "status": "local_hash_captured",
+      "sha256": "B786B32DABDEBAF56E7612CB6C809514A46B1512EA777B8E0D3DA38AB07A07F8"
+    },
+    {
+      "path": "D:/code/ai插件优化工作流/generated/plugin-pages/leadfill-one-profile/index.html",
+      "type": "plugin_site_asset",
+      "status": "local_hash_captured",
+      "sha256": "D37F1474A9D70A61391D20EE3D0C16A8B046C5E6C7825C2C40D787F90F9C78DD"
+    },
+    {
+      "path": "D:/code/ai插件优化工作流/generated/plugin-pages/leadfill-one-profile/pricing.html",
+      "type": "plugin_site_asset",
+      "status": "local_hash_captured",
+      "sha256": "3C0ED5AD21E90407FCB3DAA1068F26CB4A03A8E332B2D5D87637A101567ECC1D"
+    },
+    {
+      "path": "D:/code/ai插件优化工作流/generated/plugin-pages/index.html",
+      "type": "plugin_site_asset",
+      "status": "local_hash_captured",
+      "sha256": "FCFCA9C5697CA1B6BB4E1DFBDB9016787DB77C9DC54134B2A8F753C44F137F8B"
+    },
+    {
+      "path": "D:/code/ai插件优化工作流/generated/plugin-pages/products.json",
+      "type": "plugin_site_asset",
+      "status": "local_hash_captured",
+      "sha256": "D29F45E408ED9C2F0A0853712EC6A3844DFEC451CDFBDC2D55886BF8E30EFA5A"
+    }
+  ],
+  "next_actions": [
+    "Copy verified old-server dumps to California protected storage.",
+    "Copy verified old-server dumps to Singapore backup storage.",
+    "Create a final pre-cutover dump during the approved migration window.",
+    "Capture hashes for any additional files created during bootstrap."
+  ],
+  "blockers": [
+    "No off-host copy has been created in this phase.",
+    "Final cutover-date backup window is not scheduled yet."
+  ]
+}

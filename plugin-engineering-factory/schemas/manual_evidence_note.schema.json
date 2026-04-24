@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "evidence_id",
+    "candidate_id",
+    "candidate_name",
+    "source",
+    "source_type",
+    "note",
+    "exact_user_words",
+    "supports_wedge",
+    "reliability_weight",
+    "limitations",
+    "recorded_at",
+    "reviewer",
+    "redaction_checks"
+  ],
+  "properties": {
+    "evidence_id": { "type": "string" },
+    "candidate_id": { "type": "string" },
+    "candidate_name": { "type": "string" },
+    "source": { "type": "string" },
+    "source_type": {
+      "type": "string",
+      "enum": [
+        "self_observation",
+        "user_interview",
+        "customer_support",
+        "forum_quote",
+        "product_review",
+        "internal_workflow",
+        "other"
+      ]
+    },
+    "note": { "type": "string" },
+    "exact_user_words": { "type": "string" },
+    "supports_wedge": { "type": "string" },
+    "reliability_weight": { "type": "number" },
+    "limitations": { "type": "string" },
+    "recorded_at": { "type": "string" },
+    "reviewer": { "type": "string" },
+    "redaction_checks": { "type": "object" }
+  }
+}

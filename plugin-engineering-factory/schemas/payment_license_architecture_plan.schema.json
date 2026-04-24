@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["stage", "status", "candidate_id", "candidate_name", "payment_provider_options", "recommended_provider_for_mvp", "license_key_flow", "no_secret_in_extension_rule", "redaction_checks"],
+  "properties": {
+    "stage": { "type": "string", "enum": ["PAYMENT_LICENSE_ARCHITECTURE_PLAN"] },
+    "status": { "type": "string", "enum": ["passed", "failed"] },
+    "candidate_id": { "type": "string" },
+    "candidate_name": { "type": "string" },
+    "payment_provider_options": { "type": "array", "items": { "type": "string" } },
+    "recommended_provider_for_mvp": { "type": "string" },
+    "license_key_flow": { "type": "array", "items": { "type": "string" } },
+    "no_secret_in_extension_rule": { "type": "boolean" },
+    "redaction_checks": { "type": "object" }
+  }
+}

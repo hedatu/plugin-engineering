@@ -1,0 +1,25 @@
+{
+  "reviewed_at": "2026-04-20T11:08:33.774Z",
+  "reviewer": "human",
+  "source_run_id": "2026-04-20-182240-discovery-strategy-review-7f1c7d",
+  "decision": "manual_vertical_seed",
+  "note": "Select support/QA handoff, SaaS admin cleanup, developer payload monitor",
+  "selected_manual_seed_ids": [
+    "seed-support-qa-handoff",
+    "seed-saas-admin-cleanup",
+    "seed-developer-payload"
+  ],
+  "selected_builder_roadmap_items": [],
+  "paused_categories": [],
+  "approved_threshold_changes": [],
+  "next_step": "create_next_task_from_strategy",
+  "redaction_checks": {
+    "sanitized_response_bodies": true,
+    "checked_secret_value_count": 0,
+    "secret_values_present_in_artifact": false,
+    "authorization_header_pattern_present": false,
+    "key_material_pattern_present": false,
+    "secret_marker_pattern_present": false,
+    "redaction_guard_triggered": false
+  }
+}

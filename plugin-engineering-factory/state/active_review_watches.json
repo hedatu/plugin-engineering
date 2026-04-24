@@ -1,0 +1,53 @@
+{
+  "stage": "ACTIVE_REVIEW_WATCH_REGISTRY",
+  "status": "passed",
+  "generated_at": "2026-04-23T10:56:58.681Z",
+  "watches": [
+    {
+      "watch_id": "watch-sandbox-2026-04-19-154400-dnnpkaefmlha-v0-1-1-6218cc",
+      "run_id": "sandbox-2026-04-19-154400-dnnpkaefmlha-v0-1-1-6218cc",
+      "item_id": "dnnpkaefmlhacigijccbhemgaenjbcpk",
+      "publisher_id": "7462c8f7-9c1a-48ed-9249-894c0317bd46",
+      "manifest_version": "0.1.1",
+      "uploaded_crx_version": "0.1.1",
+      "submitted_at": "2026-04-19T09:44:02.450Z",
+      "latest_review_state": "PENDING_REVIEW",
+      "latest_checked_at": "2026-04-23T10:56:58.307Z",
+      "check_count": 5,
+      "consecutive_failures": 5,
+      "status_source": "preserved_last_known_state",
+      "next_check_after": "2026-04-23T16:56:58.307Z",
+      "enabled": true,
+      "terminal": false,
+      "terminal_reason": null,
+      "next_step": "wait_for_review_or_manual_cancel",
+      "pending_duration_hours": 97.22,
+      "pending_duration_days": 4.05,
+      "review_age_bucket": "day_4_to_14",
+      "escalation_recommended": false
+    },
+    {
+      "watch_id": "watch-sandbox-2026-04-19-215222-dnnpkaefmlha-v0-1-2-c64a39",
+      "run_id": "sandbox-2026-04-19-215222-dnnpkaefmlha-v0-1-2-c64a39",
+      "item_id": "dnnpkaefmlhacigijccbhemgaenjbcpk",
+      "publisher_id": "7462c8f7-9c1a-48ed-9249-894c0317bd46",
+      "manifest_version": "0.1.2",
+      "uploaded_crx_version": "0.1.2",
+      "submitted_at": "2026-04-19T23:04:40.021Z",
+      "latest_review_state": "STAGED",
+      "latest_checked_at": "2026-04-21T10:18:29.566Z",
+      "check_count": 11,
+      "consecutive_failures": 0,
+      "status_source": "live_fetch_status",
+      "next_check_after": null,
+      "enabled": true,
+      "terminal": true,
+      "terminal_reason": "approved_staged",
+      "next_step": "prepare_manual_install_verification_or_final_publish_decision",
+      "pending_duration_hours": 35.23,
+      "pending_duration_days": 1.47,
+      "review_age_bucket": "day_1_to_3",
+      "escalation_recommended": false
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "stage",
+    "status",
+    "run_id",
+    "product_name",
+    "package_status",
+    "included_assets",
+    "included_copy_files",
+    "asset_hashes",
+    "screenshot_count",
+    "promo_assets_present",
+    "landing_assets_present",
+    "listing_quality_status",
+    "asset_qa_status",
+    "premium_feel_score",
+    "paid_disclosure_status",
+    "privacy_claim_consistency",
+    "human_visual_review_required",
+    "ready_for_dashboard_upload",
+    "blockers",
+    "next_step",
+    "redaction_checks"
+  ],
+  "properties": {
+    "stage": {
+      "type": "string",
+      "enum": ["STORE_LISTING_RELEASE_PACKAGE_V2"]
+    },
+    "status": {
+      "type": "string",
+      "enum": ["passed", "failed"]
+    },
+    "run_id": { "type": "string" },
+    "product_name": { "type": "string" },
+    "package_status": {
+      "type": "string",
+      "enum": ["passed", "blocked"]
+    },
+    "included_assets": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "included_copy_files": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "asset_hashes": { "type": "object" },
+    "screenshot_count": { "type": "integer" },
+    "promo_assets_present": { "type": "boolean" },
+    "landing_assets_present": { "type": "boolean" },
+    "listing_quality_status": { "type": "string" },
+    "asset_qa_status": { "type": "string" },
+    "premium_feel_score": { "type": "number" },
+    "paid_disclosure_status": { "type": "string" },
+    "privacy_claim_consistency": { "type": "boolean" },
+    "human_visual_review_required": { "type": "boolean" },
+    "ready_for_dashboard_upload": { "type": "boolean" },
+    "blockers": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "next_step": { "type": "string" },
+    "redaction_checks": { "type": "object" }
+  }
+}

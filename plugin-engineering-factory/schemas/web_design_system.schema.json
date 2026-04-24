@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "stage",
+    "status",
+    "run_id",
+    "product_key",
+    "generated_at",
+    "design_direction",
+    "typography",
+    "color_system",
+    "spacing_system",
+    "components",
+    "copy_rules",
+    "payment_safety_rules",
+    "asset_alignment",
+    "quality_targets",
+    "blockers"
+  ],
+  "properties": {
+    "stage": { "type": "string", "enum": ["PREMIUM_WEB_DESIGN_SYSTEM"] },
+    "status": { "type": "string", "enum": ["passed", "failed"] },
+    "run_id": { "type": "string", "minLength": 1 },
+    "product_key": { "type": "string", "minLength": 1 },
+    "generated_at": { "type": "string", "minLength": 1 },
+    "design_direction": { "type": "string", "minLength": 1 },
+    "typography": { "type": "object" },
+    "color_system": { "type": "object" },
+    "spacing_system": { "type": "object" },
+    "components": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+    "copy_rules": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+    "payment_safety_rules": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+    "asset_alignment": { "type": "object" },
+    "quality_targets": { "type": "object" },
+    "blockers": { "type": "array", "items": { "type": "string" } },
+    "redaction_checks": { "type": "object" }
+  }
+}

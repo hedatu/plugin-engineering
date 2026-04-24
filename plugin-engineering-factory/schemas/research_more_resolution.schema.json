@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "stage",
+    "status",
+    "run_id",
+    "candidate_id",
+    "candidate_name",
+    "original_build_recommendation",
+    "original_blockers",
+    "research_questions",
+    "targeted_evidence_plan",
+    "additional_evidence_collected",
+    "unresolved_uncertainties",
+    "wedge_hypotheses",
+    "selected_wedge_hypothesis",
+    "updated_pain_clusters",
+    "updated_score_breakdown",
+    "updated_gate_results",
+    "final_recommendation",
+    "final_decision_rationale",
+    "next_step",
+    "redaction_checks"
+  ],
+  "properties": {
+    "stage": { "type": "string", "enum": ["RESEARCH_MORE_RESOLUTION"] },
+    "status": { "type": "string", "enum": ["passed", "failed"] },
+    "run_id": { "type": "string" },
+    "candidate_id": { "type": "string" },
+    "candidate_name": { "type": ["string", "null"] },
+    "original_build_recommendation": { "type": "string" },
+    "original_blockers": { "type": "array", "items": { "type": "string" } },
+    "research_questions": { "type": "array", "items": { "type": "string" } },
+    "targeted_evidence_plan": { "type": "array", "items": { "type": "object" } },
+    "additional_evidence_collected": { "type": "array", "items": { "type": "object" } },
+    "unresolved_uncertainties": { "type": "array", "items": { "type": "string" } },
+    "wedge_hypotheses": { "type": "array", "items": { "type": "object" } },
+    "selected_wedge_hypothesis": { "type": "object" },
+    "updated_pain_clusters": { "type": "array", "items": { "type": "object" } },
+    "updated_score_breakdown": { "type": "object" },
+    "updated_gate_results": { "type": "object" },
+    "final_recommendation": {
+      "type": "string",
+      "enum": ["build", "skip", "still_research_more"]
+    },
+    "final_decision_rationale": { "type": "array", "items": { "type": "string" } },
+    "next_step": { "type": "string" },
+    "redaction_checks": { "type": "object" }
+  }
+}

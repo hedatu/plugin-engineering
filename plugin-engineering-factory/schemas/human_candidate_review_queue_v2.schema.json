@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "stage",
+    "status",
+    "run_id",
+    "queue_count",
+    "entries",
+    "redaction_checks"
+  ],
+  "properties": {
+    "stage": { "type": "string", "enum": ["HUMAN_CANDIDATE_REVIEW_QUEUE_V2"] },
+    "status": { "type": "string", "enum": ["passed", "failed"] },
+    "run_id": { "type": "string" },
+    "queue_count": { "type": "integer", "maximum": 5 },
+    "entries": {
+      "type": "array",
+      "maxItems": 5,
+      "items": {
+        "type": "object",
+        "required": [
+          "candidate_id",
+          "candidate_name",
+          "proposed_wedge",
+          "why_build",
+          "why_not_build",
+          "what_evidence_is_missing",
+          "what_human_should_decide"
+        ]
+      }
+    },
+    "redaction_checks": { "type": "object" }
+  }
+}
