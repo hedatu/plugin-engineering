@@ -1,33 +1,44 @@
 import { useEffect, useMemo, useState } from 'react'
-import { Link, useNavigate, useSearchParams } from 'react-router-dom'
+import { Link, Navigate, useParams, useSearchParams } from 'react-router-dom'
 import { useAuth } from '../auth/AuthProvider'
 import {
   formatPlanHeadline,
-  getDefaultProductPath,
   getFreePlan,
   getPaidPlan,
   getPlanBullets,
-  leadfillFallbackProduct,
 } from '../content/leadfill'
-import { createCheckoutSession } from '../lib/api'
+import {
+  buildCheckoutStartPath,
+  getDefaultPricingPath,
+  getProductCheckoutMode,
+  getProductPath,
+  leadfillFallbackProduct,
+} from '../content/productCatalog'
 import type { ProductWithPlans } from '../lib/catalog'
-import { getProductWithPlans } from '../lib/catalog'
-import { env } from '../lib/env'
+import { getProductWithPlansBySlug } from '../lib/catalog'
 
 export function PricingPage() {
-  const navigate = useNavigate()
+  const { slug } = useParams()
   const { user } = useAuth()
   const [params] = useSearchParams()
   const [product, setProduct] = useState<ProductWithPlans | null>(leadfillFallbackProduct)
-  const [error, setError] = useState<string | null>(null)
-  const [checkoutPlan, setCheckoutPlan] = useState<string | null>(null)
+  const [notFound, setNotFound] = useState(false)
 
-  const selectedProductKey = params.get('productKey') ?? env.productKey
+  const source = params.get('source') === 'chrome_extension' ? 'chrome_extension' : 'web'
+  const installationId = params.get('installationId')
+  const extensionId = params.get('extensionId')
 
   useEffect(() => {
     let active = true
 
-    void getProductWithPlans(selectedProductKey)
+    if (!slug) {
+      setNotFound(true)
+      return () => {
+        active = false
+      }
+    }
+
+    void getProductWithPlansBySlug(slug)
       .then((result) => {
         if (!active) {
           return
@@ -35,73 +46,70 @@ export function PricingPage() {
 
         if (result) {
           setProduct(result)
+          setNotFound(false)
           return
         }
 
-        setProduct(leadfillFallbackProduct)
+        if (slug === leadfillFallbackProduct.slug) {
+          setProduct(leadfillFallbackProduct)
+          setNotFound(false)
+          return
+        }
+
+        setNotFound(true)
       })
       .catch((fetchError) => {
         if (active) {
-          setProduct(leadfillFallbackProduct)
           console.warn(fetchError)
+          if (slug === leadfillFallbackProduct.slug) {
+            setProduct(leadfillFallbackProduct)
+            setNotFound(false)
+          } else {
+            setNotFound(true)
+          }
         }
       })
 
     return () => {
       active = false
     }
-  }, [selectedProductKey])
+  }, [slug])
 
   const freePlan = useMemo(() => getFreePlan(product), [product])
   const paidPlan = useMemo(() => getPaidPlan(product), [product])
-  const productPath = getDefaultProductPath()
+  const productPath = getProductPath(product)
+  const checkoutMode = getProductCheckoutMode(product)
 
-  async function handleCheckout(planKey: string) {
-    if (!user) {
-      navigate(`/login?next=${encodeURIComponent(`/pricing?productKey=${selectedProductKey}`)}&plan=${planKey}`)
-      return
-    }
+  if (!slug) {
+    return <Navigate to={getDefaultPricingPath()} replace />
+  }
 
-    setCheckoutPlan(planKey)
-    setError(null)
-
-    try {
-      const result = await createCheckoutSession({
-        productKey: selectedProductKey,
-        planKey,
-        source: 'web',
-      })
-      window.location.href = result.checkoutUrl
-    } catch (checkoutError) {
-      setError(checkoutError instanceof Error ? checkoutError.message : 'CREATE_CHECKOUT_FAILED')
-    } finally {
-      setCheckoutPlan(null)
-    }
+  if (notFound || !product) {
+    return <Navigate to="/products" replace />
   }
 
   return (
     <section className="page-grid">
       <div className="page-heading compact-heading">
         <p className="eyebrow">Pricing</p>
-        <h1>Two options. One product. No subscription.</h1>
+        <h1>Simple pricing for LeadFill One Profile</h1>
         <p className="muted">
-          Try LeadFill for free, then unlock unlimited usage with a single payment if it saves you
-          time.
+          Start with 10 free fills. Unlock lifetime access when LeadFill becomes part of your
+          workflow.
         </p>
         <div className="hero-meta">
           <span>10 free fills</span>
-          <span>{formatPlanHeadline(paidPlan)}</span>
+          <span>$19 one-time</span>
           <span>Local-only</span>
+          {checkoutMode === 'test' ? <span>Internal checkout mode: test</span> : null}
         </div>
       </div>
 
-      {error ? <div className="card error-card">{error}</div> : null}
-
       <div className="compare-grid">
-        <article className="card pricing-card pricing-card-soft">
+        <article className="soft-card pricing-card">
           <p className="plan-tag">Free</p>
-          <h2>{formatPlanHeadline(freePlan) === 'Free' ? '10 free fills' : formatPlanHeadline(freePlan)}</h2>
-          <p className="muted">A clean way to test the product before you pay.</p>
+          <h2>$0</h2>
+          <p className="muted">A small free tier to confirm the product is useful before you pay.</p>
           <ul className="compact-list">
             {getPlanBullets(freePlan).map((item) => (
               <li key={item}>{item}</li>
@@ -112,10 +120,10 @@ export function PricingPage() {
           </div>
         </article>
 
-        <article className="card pricing-card pricing-card-strong">
+        <article className="surface-card pricing-card pricing-card-strong">
           <p className="plan-tag">Lifetime Unlock</p>
           <h2>{formatPlanHeadline(paidPlan)}</h2>
-          <p className="muted">Unlimited fills with a one-time payment. No recurring bill.</p>
+          <p className="muted">Unlimited fills with one payment. No subscription and no recurring bill.</p>
           <ul className="compact-list">
             {getPlanBullets(paidPlan).map((item) => (
               <li key={item}>{item}</li>
@@ -123,38 +131,42 @@ export function PricingPage() {
           </ul>
           <div className="pricing-actions">
             {paidPlan ? (
-              <button
-                type="button"
+              <Link
                 className="button primary"
-                onClick={() => handleCheckout(paidPlan.plan_key)}
-                disabled={checkoutPlan === paidPlan.plan_key}
+                to={buildCheckoutStartPath({
+                  productKey: product.product_key,
+                  planKey: paidPlan.plan_key,
+                  source,
+                  installationId,
+                  extensionId,
+                })}
               >
-                {checkoutPlan === paidPlan.plan_key ? 'Creating checkout...' : 'Unlock Lifetime'}
-              </button>
+                {user ? 'Continue to secure checkout' : 'Sign in and continue'}
+              </Link>
             ) : null}
           </div>
         </article>
       </div>
 
       <div className="note-grid">
-        <section className="card note-card">
+        <section className="soft-card">
           <p className="eyebrow">How payment works</p>
-          <h2>Checkout stays outside the extension.</h2>
+          <h2>Checkout starts on the site, not inside the extension.</h2>
           <p className="muted">
-            Sign in with email OTP, open checkout from LeadFill, and complete payment on the hosted
-            payment page.
+            Sign in with email, start checkout from this pricing page, complete payment on the
+            hosted checkout page, then return to the extension or account page.
           </p>
         </section>
 
-        <section className="card note-card">
-          <p className="eyebrow">After you pay</p>
-          <h2>Refresh membership with the same email.</h2>
+        <section className="soft-card">
+          <p className="eyebrow">What happens after payment</p>
+          <h2>Membership appears after backend confirmation.</h2>
           <p className="muted">
-            Your account and extension read the refreshed membership after the backend verifies the
-            payment event and records the entitlement update.
+            Paid access is activated after backend confirmation. The success page does not unlock
+            Pro locally. Your account and extension both read refreshed entitlement instead.
           </p>
           <div className="action-row">
-            <Link className="button subtle" to="/account">Open account</Link>
+            <Link className="button subtle" to={`/account?productKey=${product.product_key}`}>Open account</Link>
             <Link className="button subtle" to="/login">Sign in</Link>
           </div>
         </section>

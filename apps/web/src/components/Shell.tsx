@@ -1,4 +1,5 @@
 import { Link, NavLink, Outlet, useLocation } from 'react-router-dom'
+import { getDefaultPricingPath } from '../content/productCatalog'
 import { env } from '../lib/env'
 
 export function Shell() {
@@ -8,12 +9,14 @@ export function Shell() {
     {
       to: '/',
       label: 'Product',
-      active: location.pathname === '/' || location.pathname.startsWith('/products/'),
+      active: location.pathname === '/' || location.pathname.startsWith('/products'),
     },
     {
-      to: '/pricing',
+      to: getDefaultPricingPath(),
       label: 'Pricing',
-      active: location.pathname.startsWith('/pricing') || location.pathname.startsWith('/checkout/'),
+      active: location.pathname.startsWith('/pricing')
+        || location.pathname.startsWith('/checkout/')
+        || location.pathname.includes('/pricing'),
     },
     {
       to: '/account',
@@ -29,7 +32,7 @@ export function Shell() {
           <span className="brand-mark">LF</span>
           <span className="brand-stack">
             <strong>LeadFill One Profile</strong>
-            <small>Local-only Chrome form filler</small>
+            <small>Local-first Chrome form filler</small>
           </span>
         </NavLink>
 
@@ -46,7 +49,7 @@ export function Shell() {
             ))}
           </nav>
 
-          <NavLink className="button primary header-cta" to="/pricing">
+          <NavLink className="button primary header-cta" to={getDefaultPricingPath()}>
             Unlock Lifetime
           </NavLink>
         </div>
@@ -60,7 +63,7 @@ export function Shell() {
         <div>
           <p className="eyebrow">LeadFill</p>
           <p className="footer-copy">
-            LeadFill One Profile is a local-only Chrome extension for repetitive lead forms.
+            LeadFill One Profile is a focused Chrome extension for repetitive lead forms.
           </p>
         </div>
 

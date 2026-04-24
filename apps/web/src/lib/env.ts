@@ -11,4 +11,6 @@ export const env = {
   supabaseAnonKey: import.meta.env.PUBLIC_SUPABASE_ANON_KEY ?? '',
   siteUrl: import.meta.env.SITE_URL ?? 'https://pay.915500.xyz',
   productKey: import.meta.env.PRODUCT_KEY ?? 'leadfill-one-profile',
+  productSlug: import.meta.env.PRODUCT_SLUG ?? 'leadfill-one-profile',
+  checkoutMode: import.meta.env.PUBLIC_CHECKOUT_MODE ?? import.meta.env.VITE_CHECKOUT_MODE ?? 'test',
 }

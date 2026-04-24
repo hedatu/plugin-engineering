@@ -11,6 +11,7 @@ type Body = {
   productKey: string
   planKey: string
   installationId?: string
+  extensionId?: string
   successUrl?: string
   cancelUrl?: string
   source?: 'web' | 'chrome_extension'
@@ -79,6 +80,7 @@ Deno.serve(async (req) => {
     source,
     localCheckoutSessionId: '',
     installationId: body.installationId || null,
+    extensionId: body.extensionId || null,
     environment: mode,
   }
 

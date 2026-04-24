@@ -1,22 +1,18 @@
 import type { PlanRecord, ProductRecord, ProductWithPlans } from '../lib/catalog'
-import { env } from '../lib/env'
+import { leadfillFallbackProduct } from './productCatalog'
 
 export const leadfillBenefits = [
   {
-    title: 'One-click form filling',
-    description: 'Save one clean profile and fill common lead-form fields in a single action.',
+    title: 'Fill faster',
+    description: 'Save one clean profile and reuse it instead of typing the same contact details again and again.',
   },
   {
-    title: 'Less repetitive typing',
-    description: 'Stop re-entering the same name, email, phone, company, and notes on every page.',
+    title: 'Stay local',
+    description: 'Saved profile data stays in the browser. No upload, no cloud sync, and no shared workspace.',
   },
   {
-    title: 'Local-only by default',
-    description: 'Profile data stays inside the extension. No upload. No cloud sync. No shared workspace.',
-  },
-  {
-    title: 'Upgrade only when it earns it',
-    description: 'Start with 10 free fills, then unlock unlimited usage with a single lifetime payment.',
+    title: 'Upgrade only when useful',
+    description: 'Start with 10 free fills, then pay once for unlimited usage only if LeadFill becomes part of your workflow.',
   },
 ] as const
 
@@ -42,7 +38,7 @@ export const leadfillSteps = [
 export const leadfillFeatureBreakdown = [
   {
     title: 'Common field support',
-    description: 'Works best with text, email, phone, textarea, and select inputs found on lead and contact forms.',
+    description: 'Fills common text, email, phone, textarea, and select fields found on lead and intake forms.',
   },
   {
     title: 'Safer default behavior',
@@ -58,10 +54,29 @@ export const leadfillFeatureBreakdown = [
   },
 ] as const
 
+export const leadfillAudience = [
+  'People who repeatedly fill lead, intake, or contact forms from one stable profile.',
+  'Solo operators who want a simple local workflow instead of a cloud-heavy system.',
+  'Users who want a small paid upgrade only after free usage proves useful.',
+] as const
+
+export const leadfillSupportBoundaries = [
+  'Save one local profile in the browser.',
+  'Fill common text, email, phone, textarea, and select fields.',
+  'Skip readonly and disabled fields.',
+  'Avoid overwriting existing values by default.',
+] as const
+
+export const leadfillLimits = [
+  'Not every custom form is guaranteed to match perfectly.',
+  'Saved profile data is not uploaded for cloud sync.',
+  'Paid access appears only after backend payment confirmation.',
+] as const
+
 export const leadfillFaqs = [
   {
     question: 'Does LeadFill upload my form data?',
-    answer: 'No. LeadFill is designed for local-only profile storage and does not sync your form content to a cloud account.',
+    answer: 'No. LeadFill is designed for local-only profile storage and does not sync your saved form profile to a cloud account.',
   },
   {
     question: 'Is the paid plan a subscription?',
@@ -73,7 +88,7 @@ export const leadfillFaqs = [
   },
   {
     question: 'How does payment activate membership?',
-    answer: 'Payment is confirmed on the backend, and membership becomes active only after the payment event is verified and written server-side.',
+    answer: 'Complete checkout with your email, then return to the extension or account page and refresh membership after backend confirmation.',
   },
   {
     question: 'Can I restore my purchase?',
@@ -83,74 +98,13 @@ export const leadfillFaqs = [
 
 export const leadfillTrustPoints = [
   '10 free fills',
-  '$19 lifetime unlock',
-  'Local-only storage',
+  '$19 lifetime',
+  'Local-only',
   'No upload',
   'No cloud sync',
 ] as const
 
-export const leadfillFallbackProduct: ProductWithPlans = {
-  id: 'leadfill-fallback',
-  product_key: env.productKey,
-  slug: 'leadfill-one-profile',
-  name: 'LeadFill One Profile',
-  description: 'Save one local profile and fill repetitive lead forms in one click.',
-  website_url: null,
-  chrome_extension_id: 'dnnpkaefmlhacigijccbhemgaenjbcpk',
-  metadata: {},
-  plans: [
-    {
-      id: 'leadfill-free',
-      product_id: 'leadfill-fallback',
-      plan_key: 'free',
-      name: 'Free',
-      description: '10 free fills with one saved profile.',
-      billing_type: 'free',
-      currency: 'USD',
-      amount: 0,
-      features: {
-        profile_edit: false,
-        saved_profile: true,
-        profile_delete: false,
-        leadfill_fill_action: true,
-        advanced_field_support: false,
-      },
-      max_installations: 1,
-      sort_order: 0,
-      products: {
-        id: 'leadfill-fallback',
-        product_key: env.productKey,
-        name: 'LeadFill One Profile',
-        slug: 'leadfill-one-profile',
-      },
-    },
-    {
-      id: 'leadfill-lifetime',
-      product_id: 'leadfill-fallback',
-      plan_key: 'lifetime',
-      name: 'Lifetime Unlock',
-      description: 'Unlimited LeadFill usage with a one-time payment.',
-      billing_type: 'lifetime',
-      currency: 'USD',
-      amount: 19,
-      features: {
-        profile_edit: true,
-        saved_profile: true,
-        profile_delete: true,
-        leadfill_fill_action: true,
-        advanced_field_support: true,
-      },
-      max_installations: 3,
-      sort_order: 1,
-      products: {
-        id: 'leadfill-fallback',
-        product_key: env.productKey,
-        name: 'LeadFill One Profile',
-        slug: 'leadfill-one-profile',
-      },
-    },
-  ],
-}
+export const leadfillSupportEmail = 'support@915500.xyz'
 
 export function getFreePlan(product?: ProductWithPlans | null) {
   return product?.plans.find((plan) => plan.billing_type === 'free') ?? null
@@ -256,8 +210,4 @@ export function getChromeStoreUrl(product?: Pick<ProductRecord, 'chrome_extensio
   }
 
   return null
-}
-
-export function getDefaultProductPath() {
-  return '/'
 }

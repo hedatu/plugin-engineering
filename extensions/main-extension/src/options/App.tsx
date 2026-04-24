@@ -1,13 +1,12 @@
 import { useEffect, useState } from 'react'
 import type {
-  CheckoutSessionResponse,
   EntitlementResponse,
   InstallationResponse,
   SessionSnapshot,
 } from '@membership/extension-sdk'
 import { getRemainingText } from '@membership/extension-sdk'
 import { config } from '../config'
-import { openPortal, sendRuntimeMessage } from '../shared/runtime'
+import { getProductPricingPortalPath, openPortal, sendRuntimeMessage } from '../shared/runtime'
 
 type AuthState = {
   session: SessionSnapshot | null
@@ -105,26 +104,6 @@ export function App() {
     setStatus(`Installation registered: ${response.data.currentInstallations}/${response.data.maxInstallations}`)
   }
 
-  async function createCheckout(planKey: string) {
-    await runAction(`checkout-${planKey}`, async () => {
-      const response = await sendRuntimeMessage<CheckoutSessionResponse>({
-        type: 'CREATE_CHECKOUT',
-        productKey: config.productKey,
-        planKey,
-        installationId: authState?.installationId,
-        successUrl: `${config.siteUrl}/checkout/success?productKey=${config.productKey}`,
-        cancelUrl: `${config.siteUrl}/checkout/cancel?productKey=${config.productKey}`,
-      })
-
-      if (!response.ok || !response.data) {
-        throw new Error(response.error)
-      }
-
-      window.open(response.data.checkoutUrl, '_blank', 'noopener,noreferrer')
-      setStatus(`Checkout created: ${planKey}`)
-    })
-  }
-
   async function signOut() {
     await runAction('sign-out', async () => {
       const response = await sendRuntimeMessage({ type: 'SIGN_OUT' })
@@ -196,18 +175,22 @@ export function App() {
           </button>
         </div>
 
-        <div className="button-row">
-          <button className="button subtle" type="button" onClick={() => void createCheckout('pro_monthly')} disabled={pending !== null}>
-            Upgrade Pro
-          </button>
-          <button className="button subtle" type="button" onClick={() => void createCheckout('lifetime')} disabled={pending !== null}>
-            Upgrade Lifetime
-          </button>
-        </div>
-
         <div className="action-line">
           <button className="button subtle" type="button" onClick={() => openPortal('/account')}>Open account</button>
-          <button className="button subtle" type="button" onClick={() => openPortal('/pricing')}>Open pricing</button>
+          <button
+            className="button subtle"
+            type="button"
+            onClick={() =>
+              openPortal(
+                getProductPricingPortalPath({
+                  installationId: authState?.installationId,
+                  extensionId: chrome.runtime.id || config.extensionId,
+                }),
+              )
+            }
+          >
+            Open pricing
+          </button>
           <button className="button subtle" type="button" onClick={() => void signOut()}>Sign out</button>
         </div>
 

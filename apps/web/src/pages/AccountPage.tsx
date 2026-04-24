@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Link, useSearchParams } from 'react-router-dom'
 import type { EntitlementResponse } from '@membership/extension-sdk'
+import { getDefaultPricingPath } from '../content/productCatalog'
 import { useAuth } from '../auth/AuthProvider'
 import { formatMoney } from '../content/leadfill'
 import { fetchEntitlement } from '../lib/api'
@@ -44,21 +45,20 @@ export function AccountPage() {
           <p className="eyebrow">Account</p>
           <h1>Sign in with email OTP.</h1>
           <p className="muted">
-            Use the same email you used for checkout to manage membership, orders, and usage.
+            Use the same email you used at checkout to manage membership, orders, and usage.
           </p>
         </div>
 
-        <div className="card auth-card">
+        <div className="soft-card auth-card">
           <h2>Email-only sign in</h2>
           <p className="muted">
-            LeadFill uses email OTP for account access. After payment, come back here or open the
-            extension and refresh membership.
+            Sign in, refresh membership, and manage the same product with the same checkout email.
           </p>
           <div className="action-row">
             <Link className="button primary" to={`/login?next=${encodeURIComponent(`/account?productKey=${selectedProductKey}`)}`}>
               Continue with email
             </Link>
-            <Link className="button subtle" to="/pricing">View pricing</Link>
+            <Link className="button subtle" to={getDefaultPricingPath()}>View pricing</Link>
           </div>
         </div>
       </section>
@@ -71,8 +71,8 @@ export function AccountPage() {
         <p className="eyebrow">Account</p>
         <h1>Membership, usage, and orders</h1>
         <p className="muted">
-          This is the operational page for LeadFill. Use it to refresh membership after checkout
-          and review your current account state.
+          Use the same email from checkout to refresh membership and review the current state of
+          your LeadFill access.
         </p>
       </div>
 
@@ -85,7 +85,7 @@ export function AccountPage() {
         >
           {refreshing ? 'Refreshing membership...' : 'Refresh membership'}
         </button>
-        <Link className="button subtle" to="/pricing">Open pricing</Link>
+        <Link className="button subtle" to={getDefaultPricingPath()}>Open pricing</Link>
         <button className="button subtle" type="button" onClick={() => signOut()}>
           Sign out
         </button>
@@ -94,9 +94,9 @@ export function AccountPage() {
       {error ? <div className="card error-card">{error}</div> : null}
 
       <div className="account-grid">
-        <section className="card account-card">
-          <p className="eyebrow">Membership</p>
-          <h2>{entitlement?.plan.planKey ?? 'Loading plan...'}</h2>
+        <section className="soft-card account-card">
+          <p className="eyebrow">Current access</p>
+          <h2>{entitlement?.plan.planKey ?? 'Loading membership...'}</h2>
           <ul className="compact-list">
             <li>Email: {user.email ?? '-'}</li>
             <li>Status: {entitlement?.entitlement.status ?? 'Loading'}</li>
@@ -106,9 +106,9 @@ export function AccountPage() {
           </ul>
         </section>
 
-        <section className="card account-card">
+        <section className="soft-card account-card">
           <p className="eyebrow">Usage</p>
-          <h2>Current allowance</h2>
+          <h2>Usage</h2>
           {entitlement?.usage?.length ? (
             <ul className="compact-list">
               {entitlement.usage.map((item) => (
@@ -119,14 +119,14 @@ export function AccountPage() {
             </ul>
           ) : (
             <p className="muted">
-              Usage details appear here after the API returns your current allowance.
+              Usage details appear here after the account reads your current allowance.
             </p>
           )}
         </section>
 
-        <section className="card account-card">
-          <p className="eyebrow">Orders</p>
-          <h2>Payment history</h2>
+        <section className="soft-card account-card">
+          <p className="eyebrow">Orders and payments</p>
+          <h2>Orders / payments</h2>
           {entitlement?.orders?.length ? (
             <ul className="compact-list">
               {entitlement.orders.map((order) => (

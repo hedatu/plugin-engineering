@@ -214,7 +214,10 @@ async function createCheckout(payload: Extract<ExtensionMessageRequest, { type: 
     productKey: payload.productKey,
     planKey: payload.planKey,
     installationId: payload.installationId ?? await ensureInstallationId(),
-    source: 'chrome_extension',
+    extensionId: payload.extensionId || chrome.runtime.id || config.extensionId,
+    successUrl: payload.successUrl,
+    cancelUrl: payload.cancelUrl,
+    source: payload.source ?? 'chrome_extension',
   })
 }
 

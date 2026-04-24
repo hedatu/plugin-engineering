@@ -46,6 +46,7 @@ export function createCheckoutSession(input: {
   productKey: string
   planKey: string
   installationId?: string
+  extensionId?: string
   successUrl?: string
   cancelUrl?: string
   source?: 'web' | 'chrome_extension'

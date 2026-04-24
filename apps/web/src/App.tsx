@@ -1,8 +1,10 @@
 import { createBrowserRouter, Navigate, RouterProvider } from 'react-router-dom'
 import { AuthProvider } from './auth/AuthProvider'
 import { Shell } from './components/Shell'
+import { getDefaultPricingPath } from './content/productCatalog'
 import { AccountPage } from './pages/AccountPage'
 import { CancelPage } from './pages/CancelPage'
+import { CheckoutStartPage } from './pages/CheckoutStartPage'
 import { HomePage } from './pages/HomePage'
 import { LoginPage } from './pages/LoginPage'
 import { LegacyAliasPage } from './pages/LegacyAliasPage'
@@ -13,7 +15,6 @@ import { PrivacyPage } from './pages/PrivacyPage'
 import { RefundPage } from './pages/RefundPage'
 import { SuccessPage } from './pages/SuccessPage'
 import { TermsPage } from './pages/TermsPage'
-import { env } from './lib/env'
 
 const router = createBrowserRouter([
   {
@@ -22,12 +23,12 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <HomePage /> },
       { path: 'products', element: <ProductsPage /> },
-      { path: 'products/:productKey', element: <ProductPage /> },
-      { path: 'pricing', element: <PricingPage /> },
-      { path: 'pay/pay-for-batch-chatgpt2obsidian', element: <Navigate to="/" replace /> },
-      { path: 'pay/pay-for-batch-chatgpt2obsidian.html', element: <Navigate to="/" replace /> },
+      { path: 'products/:slug', element: <ProductPage /> },
+      { path: 'products/:slug/pricing', element: <PricingPage /> },
+      { path: 'pricing', element: <Navigate to={getDefaultPricingPath()} replace /> },
       { path: 'login', element: <LoginPage /> },
       { path: 'account', element: <AccountPage /> },
+      { path: 'checkout/start', element: <CheckoutStartPage /> },
       { path: 'checkout/success', element: <SuccessPage /> },
       { path: 'checkout/cancel', element: <CancelPage /> },
       { path: 'privacy', element: <PrivacyPage /> },

@@ -1,3 +1,5 @@
+import { leadfillSupportEmail } from '../content/leadfill'
+
 export function PrivacyPage() {
   return (
     <section className="page-grid legal-page">
@@ -5,43 +7,52 @@ export function PrivacyPage() {
         <p className="eyebrow">Privacy</p>
         <h1>Privacy policy</h1>
         <p className="muted">
-          LeadFill is designed to keep profile data local to the browser while the backend handles
-          account, payment, entitlement, installation, and usage records.
+          LeadFill is designed to keep saved profile data local in the browser while the website
+          and backend operate account, payment, entitlement, installation, and usage records.
         </p>
       </div>
 
-      <article className="card legal-document">
+      <article className="legal-document">
         <section className="legal-section">
           <h2>Summary</h2>
           <p>
-            LeadFill is positioned as a local-only workflow tool. Saved profile data is intended to
-            stay in the extension and browser environment rather than being uploaded for cloud sync.
+            LeadFill One Profile is a local-only Chrome extension. Saved profile data stays in the
+            browser and is not uploaded for cloud sync.
           </p>
         </section>
 
         <section className="legal-section">
-          <h2>Data used for account and payments</h2>
+          <h2>Saved profile data</h2>
           <p>
-            To operate sign-in, entitlement, installation limits, order history, and usage records,
-            the service stores account and payment-related metadata that is necessary to run the
-            commercial product.
+            The profile values you save for filling forms are intended to remain local to the
+            extension and browser environment.
           </p>
         </section>
 
         <section className="legal-section">
-          <h2>What stays local</h2>
+          <h2>Website and backend records</h2>
           <p>
-            Profile values you save for form filling and the form content you apply with LeadFill
-            are intended to remain local to the extension unless a future feature explicitly says
-            otherwise.
+            The website and backend may store account records, payment records, entitlement
+            records, installation records, and usage records that are required to operate the
+            product and membership system.
           </p>
         </section>
 
         <section className="legal-section">
-          <h2>Payments and security</h2>
+          <h2>No cloud sync for saved profile data</h2>
+          <p>
+            LeadFill does not upload your saved profile data for cloud sync. If that changes in a
+            future product version, the public product pages and policy will need to state it
+            clearly.
+          </p>
+        </section>
+
+        <section className="legal-section">
+          <h2>Payments and support</h2>
           <p>
             Payment processing happens on a hosted checkout page. Frontend pages and the extension
-            do not contain merchant secrets or privileged backend keys.
+            do not contain merchant secrets or privileged backend keys. Privacy questions can be
+            sent to {leadfillSupportEmail}.
           </p>
         </section>
       </article>

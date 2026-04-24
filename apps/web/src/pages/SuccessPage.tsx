@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { Link, useSearchParams } from 'react-router-dom'
 import type { EntitlementResponse } from '@membership/extension-sdk'
+import { getDefaultProductPath } from '../content/productCatalog'
 import { fetchEntitlement } from '../lib/api'
 import { env } from '../lib/env'
 
@@ -63,26 +64,29 @@ export function SuccessPage() {
 
   return (
     <section className="page-grid narrow-page">
-      <div className="card status-card">
+      <div className="surface-card status-card status-minimal">
         <p className="eyebrow">Payment received</p>
-        <h1>Return to LeadFill and refresh membership.</h1>
+        <h1>Payment received</h1>
         <p className="muted">
-          Your payment is complete. Pro access appears after the backend verifies the payment and
-          updates your membership record.
+          Return to the extension or account page and refresh membership. Paid access appears after
+          backend confirmation.
         </p>
         <div className="status-banner">
           <strong>Status:</strong> {status}
         </div>
+        <p className="muted">
+          This page does not unlock Pro locally.
+        </p>
         <div className="action-row">
           <Link className="button primary" to={`/account?productKey=${productKey}`}>Open account</Link>
-          <Link className="button subtle" to="/">Back to product</Link>
+          <Link className="button subtle" to={getDefaultProductPath()}>Back to product</Link>
         </div>
       </div>
 
       {result ? (
-        <div className="card note-card">
-          <p className="eyebrow">Current account state</p>
-          <h2>Membership snapshot</h2>
+        <div className="soft-card">
+          <p className="eyebrow">Membership snapshot</p>
+          <h2>Current account state</h2>
           <ul className="compact-list">
             <li>Product: {result.product.productKey}</li>
             <li>Plan: {result.plan.planKey}</li>

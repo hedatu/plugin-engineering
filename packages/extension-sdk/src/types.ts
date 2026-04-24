@@ -100,7 +100,7 @@ export type ExtensionMessageRequest =
   | { type: 'SIGN_OUT' }
   | { type: 'REFRESH_ENTITLEMENT'; productKey: string }
   | { type: 'REGISTER_INSTALLATION'; productKey: string; installationId: string; extensionId?: string; browser?: string; version?: string }
-  | { type: 'CREATE_CHECKOUT'; productKey: string; planKey: string; installationId?: string; successUrl?: string; cancelUrl?: string }
+  | { type: 'CREATE_CHECKOUT'; productKey: string; planKey: string; installationId?: string; extensionId?: string; source?: 'web' | 'chrome_extension'; successUrl?: string; cancelUrl?: string }
   | { type: 'CONSUME_USAGE'; productKey: string; featureKey: string; amount?: number; installationId?: string }
 
 export type ExtensionMessageResponse<T = unknown> = {

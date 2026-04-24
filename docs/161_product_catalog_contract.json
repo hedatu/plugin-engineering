@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "mode": "single_product_mainline",
+  "activeProducts": [
+    {
+      "productKey": "leadfill-one-profile",
+      "slug": "leadfill-one-profile",
+      "name": "LeadFill One Profile",
+      "status": "active",
+      "defaultPlanKey": "lifetime",
+      "featureKey": "leadfill_fill_action",
+      "productPath": "/products/leadfill-one-profile",
+      "pricingPath": "/products/leadfill-one-profile/pricing",
+      "accountPath": "/account?productKey=leadfill-one-profile",
+      "checkoutStartPath": "/checkout/start",
+      "checkoutMode": "test",
+      "chromeWebStoreUrl": null,
+      "chromeWebStoreFallbackLabel": "Pending review"
+    }
+  ],
+  "rules": {
+    "homeMirrorsPrimaryProduct": true,
+    "oneProductOneDetailsPage": true,
+    "oneProductOnePricingPage": true,
+    "legacyChatgpt2ObsidianNotActive": true
+  }
+}

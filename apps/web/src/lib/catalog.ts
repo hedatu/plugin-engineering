@@ -1,4 +1,9 @@
 import { supabase } from './supabase'
+import {
+  fallbackPlanRecords,
+  fallbackProductRecords,
+  fallbackProductsWithPlans,
+} from '../content/productCatalog'
 
 export type ProductRecord = {
   id: string
@@ -36,38 +41,58 @@ export type ProductWithPlans = ProductRecord & {
 }
 
 export async function listProducts() {
-  const { data, error } = await supabase
-    .from('products')
-    .select('id,product_key,slug,name,description,website_url,chrome_extension_id,metadata')
-    .eq('status', 'active')
-    .order('created_at', { ascending: true })
+  try {
+    const { data, error } = await supabase
+      .from('products')
+      .select('id,product_key,slug,name,description,website_url,chrome_extension_id,metadata')
+      .eq('status', 'active')
+      .order('created_at', { ascending: true })
 
-  if (error) {
-    throw error
+    if (error) {
+      throw error
+    }
+
+    if (data?.length) {
+      return data as ProductRecord[]
+    }
+  } catch (error) {
+    console.warn(error)
   }
 
-  return (data ?? []) as ProductRecord[]
+  return fallbackProductRecords
 }
 
 export async function listPublicPlans(productKey?: string) {
-  let query = supabase
-    .from('plans')
-    .select('id,product_id,plan_key,name,description,billing_type,currency,amount,features,max_installations,sort_order,products!inner(id,product_key,name,slug)')
-    .eq('status', 'active')
-    .eq('is_public', true)
-    .order('sort_order', { ascending: true })
+  try {
+    let query = supabase
+      .from('plans')
+      .select('id,product_id,plan_key,name,description,billing_type,currency,amount,features,max_installations,sort_order,products!inner(id,product_key,name,slug)')
+      .eq('status', 'active')
+      .eq('is_public', true)
+      .order('sort_order', { ascending: true })
 
-  if (productKey) {
-    query = query.eq('products.product_key', productKey)
+    if (productKey) {
+      query = query.eq('products.product_key', productKey)
+    }
+
+    const { data, error } = await query
+
+    if (error) {
+      throw error
+    }
+
+    if (data?.length) {
+      return data as unknown as PlanRecord[]
+    }
+  } catch (error) {
+    console.warn(error)
   }
 
-  const { data, error } = await query
-
-  if (error) {
-    throw error
+  if (!productKey) {
+    return fallbackPlanRecords
   }
 
-  return (data ?? []) as unknown as PlanRecord[]
+  return fallbackPlanRecords.filter((plan) => plan.products?.product_key === productKey)
 }
 
 export async function listProductsWithPlans() {
@@ -89,6 +114,11 @@ export async function listProductsWithPlans() {
 export async function getProductWithPlans(productKey: string) {
   const products = await listProductsWithPlans()
   return products.find((product) => product.product_key === productKey) ?? null
+}
+
+export async function getProductWithPlansBySlug(slug: string) {
+  const products = await listProductsWithPlans()
+  return products.find((product) => product.slug === slug) ?? null
 }
 
 export function getFeaturedPaidPlan(product: ProductWithPlans) {

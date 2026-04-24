@@ -1,18 +1,20 @@
 import { Link, Navigate, useLocation } from 'react-router-dom'
-import { env } from '../lib/env'
+import { getDefaultPricingPath, getDefaultProductPath } from '../content/productCatalog'
 
 const localePrefixes = new Set(['en', 'es', 'ja', 'zh-cn'])
 
 const canonicalPaths = new Set([
   '/',
   '/products',
-  `/products/${env.productKey}`,
+  getDefaultProductPath(),
+  getDefaultPricingPath(),
   '/pricing',
   '/account',
   '/login',
   '/privacy',
   '/refund',
   '/terms',
+  '/checkout/start',
   '/checkout/success',
   '/checkout/cancel',
 ])
@@ -21,11 +23,11 @@ const directAliases: Record<string, string> = {
   '/account.html': '/account',
   '/checkout/cancel.html': '/checkout/cancel',
   '/checkout/success.html': '/checkout/success',
-  '/entitlement': `/account?productKey=${env.productKey}`,
-  '/entitlement.html': `/account?productKey=${env.productKey}`,
+  '/entitlement': '/account?productKey=leadfill-one-profile',
+  '/entitlement.html': '/account?productKey=leadfill-one-profile',
   '/pricing.html': '/pricing',
   '/privacy.html': '/privacy',
-  '/product.html': `/products/${env.productKey}`,
+  '/product.html': getDefaultProductPath(),
   '/refund.html': '/refund',
   '/terms.html': '/terms',
 }
@@ -72,8 +74,8 @@ function resolveLegacyRoute(pathname: string, search: string) {
     return mergeSearch(directTarget, search)
   }
 
-  if (withoutHtml === '/pay/pay-for-batch-chatgpt2obsidian') {
-    return mergeSearch(`/products/${env.productKey}`, search)
+  if (withoutHtml.startsWith('/pay/')) {
+    return mergeSearch(getDefaultProductPath(), search)
   }
 
   return null
@@ -97,8 +99,8 @@ export function LegacyAliasPage() {
           the current product-first site structure.
         </p>
         <div className="action-row">
-          <Link className="button primary" to="/">Open LeadFill product page</Link>
-          <Link className="button subtle" to="/pricing">Open pricing</Link>
+          <Link className="button primary" to={getDefaultProductPath()}>Open LeadFill product page</Link>
+          <Link className="button subtle" to={getDefaultPricingPath()}>Open pricing</Link>
         </div>
       </div>
     </section>

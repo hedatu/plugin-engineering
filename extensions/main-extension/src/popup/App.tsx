@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import type { ConsumeUsageResponse, EntitlementResponse, SessionSnapshot } from '@membership/extension-sdk'
 import { getRemainingText, getUsageErrorMessage, isFeatureEnabled } from '@membership/extension-sdk'
 import { config } from '../config'
-import { openPortal, sendRuntimeMessage } from '../shared/runtime'
+import { getProductPricingPortalPath, openPortal, sendRuntimeMessage } from '../shared/runtime'
 
 type AuthState = {
   session: SessionSnapshot | null
@@ -105,7 +105,18 @@ export function App() {
         </div>
 
         {!featureEnabled ? (
-          <button className="button full subtle" type="button" onClick={() => openPortal('/pricing')}>
+          <button
+            className="button full subtle"
+            type="button"
+            onClick={() =>
+              openPortal(
+                getProductPricingPortalPath({
+                  installationId: authState?.installationId,
+                  extensionId: chrome.runtime.id || config.extensionId,
+                }),
+              )
+            }
+          >
             Upgrade {featureKey}
           </button>
         ) : null}
