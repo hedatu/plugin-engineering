@@ -1,0 +1,37 @@
+{
+  "checked_at": "2026-04-22T08:44:20Z",
+  "product_key": "leadfill-one-profile",
+  "plan_key": "lifetime",
+  "billing_type": "onetime",
+  "price_usd": 19,
+  "checkout_status": "verified",
+  "checkout_session_id": "cs_c202a2d6-e7d8-bd11-297a-5b4fa45dfb6f",
+  "local_order_id": "ord_1776847341519_36fed160",
+  "checkout_session_db_status": "opened",
+  "checkout_source": "chrome_extension",
+  "checkout_mode": "test",
+  "checkout_url_origin": "https://pancake.waffo.ai",
+  "checkout_metadata_verified": true,
+  "checkout_metadata_fields": [
+    "userId",
+    "productKey",
+    "planKey",
+    "localOrderId",
+    "source",
+    "installationId",
+    "successUrl",
+    "cancelUrl",
+    "localCheckoutSessionId"
+  ],
+  "waffo_test_payment_status": "not_completed",
+  "webhook_status": "not_verified",
+  "processed_webhooks_count": 0,
+  "webhook_events_count": 0,
+  "orders_count": 0,
+  "payments_count": 0,
+  "payment_entitlement_written": false,
+  "blockers": [
+    "hosted_waffo_test_checkout_not_completed",
+    "no_order_completed_webhook_received_yet"
+  ]
+}

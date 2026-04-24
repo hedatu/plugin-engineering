@@ -1,0 +1,39 @@
+{
+  "checked_at": "2026-04-22T19:05:36.8297619+08:00",
+  "status": "passed",
+  "products": [
+    {
+      "productName": "LeadFill One Profile",
+      "productKey": "leadfill-one-profile",
+      "planKey": "lifetime",
+      "featureKey": "leadfill_fill_action",
+      "monetization_enabled": true,
+      "checkout_enabled": true,
+      "price": "USD 19.00"
+    },
+    {
+      "productName": "weiwang public welfare project",
+      "productKey": null,
+      "planKey": null,
+      "featureKey": null,
+      "monetization_enabled": false,
+      "checkout_enabled": false,
+      "price": null
+    },
+    {
+      "productName": "chatgpt2obsidian",
+      "productKey": "chatgpt2obsidian",
+      "planKey": "legacy test-only",
+      "featureKey": null,
+      "monetization_enabled": false,
+      "checkout_enabled": false,
+      "price": null
+    }
+  ],
+  "assertions": [
+    "LeadFill uses productKey leadfill-one-profile and lifetime paid entitlement.",
+    "weiwang remains free-only and is not mapped to LeadFill paid entitlement or checkout.",
+    "Legacy chatgpt2obsidian remains test-only and is not used for LeadFill."
+  ],
+  "blockers": []
+}

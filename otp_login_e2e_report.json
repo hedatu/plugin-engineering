@@ -1,0 +1,22 @@
+{
+  "checked_at": "2026-04-22T19:05:36.8297619+08:00",
+  "send_otp_http_status": 200,
+  "email_delivered": true,
+  "verify_otp_passed": true,
+  "session_created": true,
+  "user_id_present": true,
+  "user_id": "e6d96e16-8b2a-43df-ac9b-5569aa166c88",
+  "magic_link_subject": "Your Magic Link",
+  "magic_link_host": "https://pay-api.915500.xyz",
+  "installation_id": "ff962d84-5cc9-4da4-a28e-f92b1dcbb160",
+  "get_entitlement_passed": true,
+  "get_entitlement_plan_key": "free",
+  "get_entitlement_feature_enabled": true,
+  "register_installation_passed": true,
+  "register_installation_registered": true,
+  "register_installation_note": "Reused the already-registered installation id because max_installations=1 is enforced for this user/product pair.",
+  "consume_usage_free_passed": true,
+  "consume_usage_allowed": true,
+  "consume_usage_remaining": 8,
+  "blockers": []
+}

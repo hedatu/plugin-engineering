@@ -1,0 +1,5 @@
+{
+  "imports": {
+    "@waffo/pancake-ts": "npm:@waffo/pancake-ts@0.5.0"
+  }
+}

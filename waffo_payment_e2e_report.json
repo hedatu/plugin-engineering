@@ -1,0 +1,23 @@
+{
+  "checked_at": "2026-04-22T17:30:34.6723828+08:00",
+  "checkout_session_created": true,
+  "checkout_session_id": "cs_c202a2d6-e7d8-bd11-297a-5b4fa45dfb6f",
+  "local_order_id": "ord_1776847341519_36fed160",
+  "waffo_payment_completed": false,
+  "webhook_received": false,
+  "webhook_signature_verified": false,
+  "processed_webhook_count_delta": 0,
+  "webhook_event_count_delta": 0,
+  "order_status": null,
+  "payment_status": null,
+  "entitlement_status": "manual_entitlement_only",
+  "get_entitlement_active": false,
+  "consume_usage_pro_passed": true,
+  "consume_usage_pro_note": "Pro usage was verified only with a manual entitlement probe. Payment-derived Pro activation is still unverified.",
+  "blockers": [
+    "Hosted Waffo test checkout has not been completed yet.",
+    "No signed webhook has been received.",
+    "orders and payments remain empty for LeadFill.",
+    "Active entitlement has not been written by webhook."
+  ]
+}

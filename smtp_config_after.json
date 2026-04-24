@@ -1,0 +1,36 @@
+{
+  "checked_at": "2026-04-22T18:37:54.1380665+08:00",
+  "smtp_host": "172.18.0.1",
+  "smtp_port": 2500,
+  "smtp_host_is_placeholder": false,
+  "smtp_bridge_service": "leadfill-smtp-bridge",
+  "smtp_bridge_service_active": true,
+  "smtp_transport_path": "supabase-auth -> 172.18.0.1:2500 -> leadfill-smtp-bridge -> local postfix",
+  "smtp_host_resolves_from_auth_container": true,
+  "smtp_port_reachable_from_auth_container": true,
+  "smtp_sender": "support@915500.xyz",
+  "smtp_sender_name": "915500 Support",
+  "smtp_user_present": false,
+  "smtp_password_present": false,
+  "gotrue_site_url": "https://pay.915500.xyz",
+  "site_url": "https://pay.915500.xyz",
+  "api_external_url": "https://pay-api.915500.xyz",
+  "gotrue_uri_allow_list": [
+    "https://pay.915500.xyz/*",
+    "https://hwh.915500.xyz/*",
+    "chrome-extension://*/*"
+  ],
+  "gotrue_mailer_external_hosts": [
+    "pay.915500.xyz",
+    "pay-api.915500.xyz",
+    "hwh.915500.xyz",
+    "hwh-api.915500.xyz"
+  ],
+  "latest_send_otp_status": 200,
+  "latest_verify_otp_status": 200,
+  "email_delivery_verified": true,
+  "notes": [
+    "The previous direct postfix attempt on 172.18.0.1:25 failed because GoTrue tried TLS validation against an IP without a matching certificate SAN.",
+    "The final working path uses a local non-TLS SMTP bridge on port 2500 to avoid that TLS mismatch."
+  ]
+}

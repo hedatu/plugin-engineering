@@ -1,0 +1,37 @@
+{
+  "checked_at": "2026-04-22T18:37:54.1380665+08:00",
+  "status": "urls_cleaned_and_runtime_verified",
+  "before": {
+    "site_url": "https://weiwang.915500.xyz",
+    "api_external_url": "https://weiwang.915500.xyz",
+    "supabase_public_url": "https://weiwang.915500.xyz",
+    "gotrue_mailer_external_hosts_present": false,
+    "observed_otp_referer": "https://weiwang.915500.xyz"
+  },
+  "after": {
+    "site_url": "https://pay.915500.xyz",
+    "api_external_url": "https://pay-api.915500.xyz",
+    "supabase_public_url": "https://pay-api.915500.xyz",
+    "gotrue_site_url": "https://pay.915500.xyz",
+    "additional_redirect_urls": [
+      "https://pay.915500.xyz/*",
+      "https://hwh.915500.xyz/*",
+      "chrome-extension://*/*"
+    ],
+    "gotrue_mailer_external_hosts": [
+      "pay.915500.xyz",
+      "pay-api.915500.xyz",
+      "hwh.915500.xyz",
+      "hwh-api.915500.xyz"
+    ],
+    "observed_otp_referer": "https://pay.915500.xyz/login",
+    "observed_magic_link_host": "https://pay-api.915500.xyz"
+  },
+  "reverse_proxy": {
+    "pay_site_static_root": "/var/www/pay.915500.xyz",
+    "pay_api_proxy_target": "http://127.0.0.1:8000",
+    "legacy_hwh_site_still_enabled": true,
+    "legacy_hwh_api_still_enabled": true
+  },
+  "blockers": []
+}

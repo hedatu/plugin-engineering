@@ -1,0 +1,21 @@
+{
+  "checked_at": "2026-04-22T08:45:06Z",
+  "product_key": "leadfill-one-profile",
+  "payment_derived_entitlement_status": "not_verified",
+  "payment_derived_entitlement_reason": "No Waffo webhook, order, or payment rows were recorded for the LeadFill checkout session.",
+  "webhook_counts": {
+    "processed_webhooks": 0,
+    "webhook_events": 0,
+    "orders": 0,
+    "payments": 0
+  },
+  "manual_entitlement_probe": {
+    "source_type": "manual",
+    "status": "active",
+    "plan_key": "lifetime",
+    "billing_type": "onetime",
+    "consume_usage_allowed": true,
+    "remaining": -1,
+    "note": "Manual entitlement was inserted only to verify Pro gating logic. It is not proof of Waffo payment completion."
+  }
+}
