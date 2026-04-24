@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="820" viewBox="0 0 1280 820">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333" />
+    </marker>
+    <style>
+      .box { fill:#ffffff; stroke:#333; stroke-width:2; rx:14; }
+      .db { fill:#ffffff; stroke:#333; stroke-width:2; }
+      .title { font-family: Arial, 'Microsoft YaHei', sans-serif; font-size: 26px; font-weight: 700; fill:#111; }
+      .txt { font-family: Arial, 'Microsoft YaHei', sans-serif; font-size: 18px; fill:#111; }
+      .small { font-family: Arial, 'Microsoft YaHei', sans-serif; font-size: 14px; fill:#333; }
+      .line { stroke:#333; stroke-width:2.2; fill:none; marker-end:url(#arrow); }
+      .dash { stroke:#777; stroke-width:2; fill:none; stroke-dasharray:7 5; marker-end:url(#arrow); }
+    </style>
+  </defs>
+  <text x="40" y="48" class="title">Chrome 插件会员系统业务与数据流转</text>
+  <text x="40" y="76" class="small">网站前端放 Cloudflare Pages；后端和会员数据放 Supabase；支付由 Waffo Pancake 处理；插件 UI 随扩展包安装在浏览器本地。</text>
+  <rect x="40" y="120" width="170" height="80" class="box"/>
+  <text x="125" y="154" class="txt" text-anchor="middle">用户</text>
+  <text x="125" y="180" class="small" text-anchor="middle">安装/登录/购买/使用</text>
+  <rect x="290" y="90" width="250" height="125" class="box"/>
+  <text x="415" y="125" class="txt" text-anchor="middle">Chrome 插件</text>
+  <text x="415" y="153" class="small" text-anchor="middle">popup / options / background</text>
+  <text x="415" y="178" class="small" text-anchor="middle">运行在浏览器本地</text>
+  <text x="415" y="202" class="small" text-anchor="middle">chrome.storage 保存本地状态</text>
+  <rect x="290" y="275" width="250" height="125" class="box"/>
+  <text x="415" y="310" class="txt" text-anchor="middle">Cloudflare Pages</text>
+  <text x="415" y="338" class="small" text-anchor="middle">官网 / 定价页 / 登录页</text>
+  <text x="415" y="363" class="small" text-anchor="middle">用户中心 / success 页面</text>
+  <text x="415" y="388" class="small" text-anchor="middle">前端静态资源与路由</text>
+  <rect x="630" y="80" width="240" height="100" class="box"/>
+  <text x="750" y="120" class="txt" text-anchor="middle">Supabase Auth</text>
+  <text x="750" y="150" class="small" text-anchor="middle">Email OTP / Magic Link</text>
+  <rect x="630" y="230" width="240" height="130" class="box"/>
+  <text x="750" y="265" class="txt" text-anchor="middle">Supabase Edge Functions</text>
+  <text x="750" y="294" class="small" text-anchor="middle">create-checkout-session</text>
+  <text x="750" y="318" class="small" text-anchor="middle">get-entitlement / consume-usage</text>
+  <text x="750" y="342" class="small" text-anchor="middle">register-installation</text>
+  <ellipse cx="750" cy="500" rx="132" ry="58" class="db"/>
+  <text x="750" y="492" class="txt" text-anchor="middle">Supabase Postgres</text>
+  <text x="750" y="520" class="small" text-anchor="middle">用户 / 套餐 / 订单 / 权益 / 额度</text>
+  <rect x="965" y="230" width="240" height="130" class="box"/>
+  <text x="1085" y="268" class="txt" text-anchor="middle">Waffo Pancake</text>
+  <text x="1085" y="296" class="small" text-anchor="middle">托管结账页</text>
+  <text x="1085" y="320" class="small" text-anchor="middle">收款 / 税务 / MoR</text>
+  <text x="1085" y="344" class="small" text-anchor="middle">订单/订阅/退款事件</text>
+  <rect x="965" y="450" width="240" height="120" class="box"/>
+  <text x="1085" y="486" class="txt" text-anchor="middle">waffo-webhook</text>
+  <text x="1085" y="514" class="small" text-anchor="middle">验签 RSA-SHA256</text>
+  <text x="1085" y="538" class="small" text-anchor="middle">去重 / 入库 / 开通会员</text>
+  <rect x="585" y="640" width="150" height="70" class="box"/>
+  <text x="660" y="680" class="small" text-anchor="middle">entitlements</text>
+  <rect x="775" y="640" width="150" height="70" class="box"/>
+  <text x="850" y="680" class="small" text-anchor="middle">usage_counters</text>
+  <rect x="965" y="640" width="150" height="70" class="box"/>
+  <text x="1040" y="674" class="small" text-anchor="middle">orders / payments</text>
+  <text x="1040" y="696" class="small" text-anchor="middle">subscriptions</text>
+  <path d="M210 150 L290 150" class="line"/>
+  <path d="M210 180 C250 230 250 320 290 335" class="line"/>
+  <path d="M540 130 L630 130" class="line"/>
+  <path d="M540 155 C590 170 595 240 630 270" class="line"/>
+  <path d="M540 335 L630 300" class="line"/>
+  <path d="M750 360 L750 440" class="line"/>
+  <path d="M870 295 L965 295" class="line"/>
+  <path d="M965 330 C875 410 900 490 882 500" class="dash"/>
+  <path d="M1085 360 L1085 450" class="line"/>
+  <path d="M965 510 L882 505" class="line"/>
+  <path d="M700 558 L665 640" class="line"/>
+  <path d="M750 558 L850 640" class="line"/>
+  <path d="M830 550 C900 590 980 620 1040 640" class="line"/>
+  <text x="566" y="116" class="small" text-anchor="middle">登录</text>
+  <text x="585" y="242" class="small" text-anchor="middle">查权限/扣额度</text>
+  <text x="895" y="282" class="small" text-anchor="middle">创建支付会话</text>
+  <text x="1140" y="420" class="small" text-anchor="middle">Webhook</text>
+  <text x="880" y="487" class="small" text-anchor="middle">写订单/权益</text>
+</svg>

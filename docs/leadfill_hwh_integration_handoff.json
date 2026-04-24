@@ -1,0 +1,184 @@
+{
+  "generated_at": "2026-04-23T19:08:10.8347952+08:00",
+  "environment": "california_primary",
+  "current_primary_environment": "california",
+  "cutover_completed": true,
+  "product": {
+    "productKey": "leadfill-one-profile",
+    "productName": "LeadFill One Profile",
+    "planKey": "lifetime",
+    "featureKey": "leadfill_fill_action",
+    "priceLabel": "$19 lifetime",
+    "freeLimit": 10,
+    "billingType": "onetime"
+  },
+  "public_config": {
+    "SITE_URL": "https://pay.915500.xyz",
+    "PUBLIC_SUPABASE_URL": "https://pay-api.915500.xyz",
+    "PUBLIC_SUPABASE_ANON_KEY": "<inject from apps/web/.env.production.local or deployment env>",
+    "PRODUCT_KEY": "leadfill-one-profile",
+    "PLAN_KEY": "lifetime",
+    "FEATURE_KEY": "leadfill_fill_action",
+    "SUCCESS_URL": "https://pay.915500.xyz/checkout/success",
+    "CANCEL_URL": "https://pay.915500.xyz/checkout/cancel",
+    "CHECKOUT_MODE": "test",
+    "SUPPORT_EMAIL": "support@915500.xyz"
+  },
+  "extension_contract": {
+    "messageTypes": [
+      "GET_AUTH_STATE",
+      "SEND_OTP",
+      "VERIFY_OTP",
+      "SIGN_OUT",
+      "REFRESH_ENTITLEMENT",
+      "REGISTER_INSTALLATION",
+      "CREATE_CHECKOUT",
+      "CONSUME_USAGE"
+    ],
+    "clientNeedsOnlyPublicConfig": true,
+    "forbiddenInExtension": [
+      "SUPABASE_SERVICE_ROLE_KEY",
+      "WAFFO_PRIVATE_KEY",
+      "merchant secret",
+      "webhook secret"
+    ],
+    "notes": [
+      "Background or service worker stores session tokens and calls backend APIs.",
+      "Content scripts must not store access_token or refresh_token.",
+      "Webhook confirmation is the only source of truth for paid activation.",
+      "Do not treat successUrl as local proof of purchase.",
+      "A stale local California public anon key or stale cached Chrome debug profile can still cause false Unauthorized results during local extension tests."
+    ]
+  },
+  "status": {
+    "smtp_status": "verified_independent",
+    "otp_status": "verified",
+    "checkout_status": "verified",
+    "webhook_status": "verified",
+    "entitlement_status": "verified_from_payment",
+    "consume_usage_status": "verified_free_quota_pro",
+    "payment_e2e_status": "verified_test_mode",
+    "source_chrome_extension_status": "verified",
+    "production_payment_status": "not_verified"
+  },
+  "verified_evidence": {
+    "productConfigAudit": {
+      "leadfill_product_exists": true,
+      "leadfill_plan_exists": true,
+      "leadfill_price_usd": 19,
+      "leadfill_billing_type": "onetime",
+      "leadfill_website_url": "https://pay.915500.xyz/products/leadfill-one-profile",
+      "legacy_chatgpt2obsidian_is_draft_only": true,
+      "weiwang_present_in_commercial_hwh_db": false
+    },
+    "authRuntime": {
+      "site_url": "https://pay.915500.xyz",
+      "api_external_url": "https://pay-api.915500.xyz",
+      "supabase_public_url": "https://pay-api.915500.xyz",
+      "smtp_host": "smtp.resend.com",
+      "smtp_port": 2587,
+      "smtp_sender": "no-reply@notify.915500.xyz",
+      "smtp_relay_dependency": false,
+      "smtp_provider": "resend",
+      "resend_domain": "notify.915500.xyz",
+      "resend_domain_verified": true,
+      "send_otp_http_status": 200,
+      "verify_otp_http_status": 200,
+      "email_delivered": true,
+      "session_created": true,
+      "user_id_present": true,
+      "message_link_hosts": [
+        "pay.915500.xyz",
+        "pay-api.915500.xyz"
+      ],
+      "redirected_to_weiwang": false
+    },
+    "frontendRuntime": {
+      "served_asset": "index-CbkYMO4_.js",
+      "asset_embedded_public_anon_key_health": "auth_v1_settings_http_200",
+      "note": "After DNS cutover, the California frontend bundle was rebuilt for pay.915500.xyz / pay-api.915500.xyz with the current public anon key injected at build time. ca-hwh residue was not detected in the active production bundle."
+    },
+    "createCheckoutSession": {
+      "sessionId": "cs_6566cb90-062e-0f9d-7863-39203265e517",
+      "localOrderId": "ord_1776912964691_ddb727d5",
+      "source": "web",
+      "checkoutUrlOrigin": "https://pancake.waffo.ai"
+    },
+    "waffoTestPayment": {
+      "checkoutUiReachedPaymentSuccessful": true,
+      "paidEventId": "PAY_0adLohkJYNiExote8KDSWQ",
+      "webhookReceived": true,
+      "webhookSignatureVerified": true,
+      "paymentRowsWritten": true,
+      "entitlementWritten": true,
+      "orderStatus": "completed",
+      "paymentStatus": "completed"
+    },
+    "getEntitlement": {
+      "productKey": "leadfill-one-profile",
+      "planKey": "lifetime",
+      "entitlementStatus": "active",
+      "leadfillFillActionEnabled": true,
+      "remainingQuota": -1,
+      "latestOrderStatus": "completed"
+    },
+    "registerInstallation": {
+      "registered": true,
+      "activeInstallationCount": 1,
+      "latestVersion": "0.2.0"
+    },
+    "consumeUsage": {
+      "freeAllowedAttempts": 10,
+      "quotaExceededAttempt": 11,
+      "paidPlanAllowed": true,
+      "paidPlanKey": "lifetime",
+      "paidRemaining": -1
+    },
+    "webhookDiagnostics": {
+      "endpoint": "https://pay-api.915500.xyz/functions/v1/waffo-webhook",
+      "endpointReachable": true,
+      "getStatus": 405,
+      "unsignedPostStatus": 401,
+      "unsignedPostResponse": "INVALID_SIGNATURE",
+      "genericVerificationPingReceived": true,
+      "genericVerificationPingReceivedAt": "2026-04-23T01:26:21.889492+00:00",
+      "actualLeadFillPaidOrderWebhookObserved": true
+    },
+    "reviewWatch": {
+      "deployed": true,
+      "credentials_mode": "service_account_file",
+      "token_self_test": "passed",
+      "fetch_status": "passed",
+      "review_state": "STAGED",
+      "schedule": "every_6_hours_read_only",
+      "upload_publish_disabled": true
+    },
+    "sourceChromeExtension": {
+      "checkoutSessionId": "cs_bf992216-a5bf-470a-082a-ecf9f958c4ff",
+      "localOrderId": "ord_1776925753540_e2e09b44",
+      "checkoutSourceInDb": true,
+      "checkoutStatus": "completed",
+      "realPluginSendOtpStatus": "verified",
+      "realPluginVerifyOtpStatus": "verified",
+      "realPluginRegisterInstallationStatus": "verified",
+      "realPluginCreateCheckoutStatus": "verified",
+      "paidWebhookEventId": "PAY_6sb41fIctNMyeK7eBxwwnW",
+      "webhookReceived": true,
+      "webhookSignatureVerified": true,
+      "ordersWritten": true,
+      "paymentsWritten": true,
+      "entitlementBeforePayment": "free_active",
+      "entitlementAfterPayment": "lifetime_active",
+      "realPopupRefreshEntitlement": "active_lifetime",
+      "realPopupConsumeUsage": "allowed_unlimited",
+      "realPopupUiState": "plan_lifetime_status_active_pro_access_enabled",
+      "successUrlDidNotUnlockLocally": true,
+      "pluginClientUsed": "full_real_plugin_client"
+    }
+  },
+  "remaining_blockers": [
+    "California is still a 1GB low-memory server; the user accepts this as a temporary risk.",
+    "Production payment remains not verified and not enabled.",
+    "Chrome upload/publish remains disabled and was not executed."
+  ]
+}

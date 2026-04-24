@@ -1,0 +1,16 @@
+{
+  "checked_at": "2026-04-22T18:37:54.1380665+08:00",
+  "target_url": "https://pay-api.915500.xyz/auth/v1/otp",
+  "smtp_status": "verified",
+  "otp_status": "verified",
+  "send_otp_http_status": 200,
+  "send_otp_error": null,
+  "verify_otp_status": "verified",
+  "plugin_send_otp_status": "verified_via_auth_api",
+  "plugin_verify_otp_status": "verified_via_auth_api",
+  "auth_log_failure_reason_previous": "dial tcp: lookup supabase-mail on 127.0.0.11:53: server misbehaving",
+  "auth_log_mailer_host_warning_current": "kong host warning may still appear in auth logs for internal proxy traffic, but it no longer blocks OTP delivery or verification.",
+  "observed_auth_site_url": "https://pay.915500.xyz",
+  "observed_auth_api_external_url": "https://pay-api.915500.xyz",
+  "blockers": []
+}

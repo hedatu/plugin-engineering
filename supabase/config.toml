@@ -1,0 +1,53 @@
+project_id = "plugin-membership-waffo"
+
+[api]
+enabled = true
+port = 54321
+schemas = ["public", "storage", "graphql_public"]
+extra_search_path = ["public", "extensions"]
+max_rows = 1000
+
+[db]
+port = 54322
+shadow_port = 54320
+major_version = 17
+
+[db.seed]
+enabled = true
+sql_paths = ["./seed.sql"]
+
+[studio]
+enabled = true
+port = 54323
+
+[inbucket]
+enabled = true
+port = 54324
+
+[auth]
+enabled = true
+site_url = "http://localhost:5173"
+additional_redirect_urls = [
+  "http://localhost:5173",
+  "http://localhost:5173/*",
+  "chrome-extension://*/*"
+]
+jwt_expiry = 3600
+enable_signup = true
+enable_confirmations = false
+
+[functions.create-checkout-session]
+verify_jwt = true
+
+[functions.get-entitlement]
+verify_jwt = true
+
+[functions.consume-usage]
+verify_jwt = true
+
+[functions.register-installation]
+verify_jwt = true
+
+[functions.waffo-webhook]
+verify_jwt = false
+

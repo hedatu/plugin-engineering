@@ -1,0 +1,63 @@
+{
+  "checked_at": "2026-04-22T18:37:54.1380665+08:00",
+  "status": "passed",
+  "remote_catalog": [
+    {
+      "productKey": "leadfill-one-profile",
+      "planKeys": [
+        "free",
+        "lifetime"
+      ],
+      "monetization_enabled": true,
+      "checkout_enabled": true,
+      "price": "USD 19.00",
+      "featureKey": "leadfill_fill_action",
+      "status": "active",
+      "notes": [
+        "Remote products and plans verified in public.products and public.plans.",
+        "lifetime is an onetime plan."
+      ]
+    },
+    {
+      "productKey": "chatgpt2obsidian",
+      "planKeys": [
+        "free",
+        "pro_monthly",
+        "one_time_test",
+        "lifetime"
+      ],
+      "monetization_enabled": false,
+      "checkout_enabled": false,
+      "price": null,
+      "featureKey": null,
+      "status": "draft",
+      "notes": [
+        "Legacy test-only product retained for backward compatibility only.",
+        "All public plans are disabled and draft."
+      ]
+    }
+  ],
+  "project_separation_policy": [
+    {
+      "project": "LeadFill One Profile",
+      "productKey": "leadfill-one-profile",
+      "planKey": "lifetime",
+      "monetization_enabled": true,
+      "checkout_enabled": true,
+      "paid_entitlement_required": true
+    },
+    {
+      "project": "weiwang public welfare project",
+      "productKey": null,
+      "planKey": null,
+      "monetization_enabled": false,
+      "checkout_enabled": false,
+      "paid_entitlement_required": false,
+      "notes": [
+        "No weiwang billing product is configured in the current hwh payment catalog.",
+        "weiwang must remain free-only and outside LeadFill paid entitlements."
+      ]
+    }
+  ],
+  "blockers": []
+}

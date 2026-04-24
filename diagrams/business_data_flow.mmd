@@ -1,0 +1,23 @@
+flowchart LR
+  U[用户] --> EXT[Chrome 插件\npopup/options/content]
+  U --> WEB[Cloudflare Pages 网站\n官网/定价/账号/成功页]
+
+  EXT -->|登录/查权限/扣额度| SB_AUTH[Supabase Auth]
+  EXT -->|Edge Function API| SB_FN[Supabase Edge Functions]
+  WEB -->|登录/用户中心| SB_AUTH
+  WEB -->|创建支付/查会员| SB_FN
+
+  SB_FN --> DB[(Supabase Postgres)]
+  SB_FN --> STORAGE[Supabase Storage\n可选: 导出文件/头像]
+
+  SB_FN -->|服务端创建 checkout session| WAFFO[Waffo Pancake\n托管结账/MoR]
+  WAFFO -->|checkoutUrl| WEB
+  WEB -->|跳转支付| WAFFO
+  EXT -->|打开支付链接| WAFFO
+
+  WAFFO -->|Webhook: order/subscription/refund| WH[waffo-webhook Edge Function]
+  WH -->|验签/去重/入库/开通| DB
+
+  DB --> ENT[entitlements 权益]
+  DB --> USAGE[usage_counters 额度]
+  DB --> BILL[billing/order/payment 日志]

@@ -1,0 +1,43 @@
+{
+  "checked_at": "2026-04-22T19:05:36.8297619+08:00",
+  "historical_root_cause_confirmed": true,
+  "historical_error": "dial tcp: lookup supabase-mail on 127.0.0.11:53: server misbehaving",
+  "historical_root_cause": "Supabase Auth originally used placeholder SMTP config (supabase-mail:2500 with fake sender values), but no supabase-mail service existed on the Docker network, so SEND_OTP failed before a real SMTP session could start.",
+  "current_smtp_host": "172.18.0.1",
+  "current_smtp_port": 2500,
+  "supabase_mail_resolves_from_auth_container": false,
+  "supabase_mail_port_reachable_from_auth_container": false,
+  "current_smtp_path_live_verified": true,
+  "current_smtp_sender": "support@915500.xyz",
+  "current_smtp_user_present": false,
+  "current_smtp_password_present": false,
+  "site_url": "https://pay.915500.xyz",
+  "api_external_url": "https://pay-api.915500.xyz",
+  "gotrue_site_url": "https://pay.915500.xyz",
+  "gotrue_uri_allow_list": [
+    "https://pay.915500.xyz/*",
+    "https://hwh.915500.xyz/*",
+    "chrome-extension://*/*"
+  ],
+  "gotrue_mailer_external_hosts": [
+    "pay.915500.xyz",
+    "pay-api.915500.xyz",
+    "hwh.915500.xyz",
+    "hwh-api.915500.xyz"
+  ],
+  "magic_link_host": "pay-api.915500.xyz",
+  "pay_site_in_allow_list": true,
+  "pay_api_in_uri_allow_list": false,
+  "pay_api_in_mailer_external_hosts": true,
+  "weiwang_still_used_as_default_auth_domain": false,
+  "latest_send_otp_http_status": 200,
+  "latest_verify_otp_http_status": 200,
+  "email_delivery_verified": true,
+  "root_cause": "The real failure was not bad credentials alone; it was a nonexistent SMTP target. Once GoTrue stopped using supabase-mail:2500 and switched to a reachable local SMTP bridge at 172.18.0.1:2500, OTP delivery and VERIFY_OTP succeeded.",
+  "recommended_fix": "Keep the old environment on the repaired SMTP path for now, complete Waffo payment/webhook E2E there, and plan California migration later as a controlled rebuild instead of using SMTP as the trigger for immediate migration.",
+  "notes": [
+    "Current magic link emails are generated against pay-api.915500.xyz, not weiwang.915500.xyz.",
+    "pay-api.915500.xyz is not present in GOTRUE_URI_ALLOW_LIST, but it is present in GOTRUE_MAILER_EXTERNAL_HOSTS and is the correct API host for the magic link.",
+    "Auth logs still show a non-blocking x_forwarded_host=kong warning for internal proxy traffic."
+  ]
+}

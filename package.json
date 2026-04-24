@@ -1,0 +1,22 @@
+{
+  "name": "plugin-membership-supabase-waffo-design",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "extensions/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "npm run build --workspace @membership/extension-sdk && npm run build --workspace @membership/web && npm run build --workspace @membership/main-extension",
+    "build:sdk": "npm run build --workspace @membership/extension-sdk",
+    "build:web": "npm run build --workspace @membership/web",
+    "build:extension": "npm run build --workspace @membership/main-extension",
+    "dev:web": "npm run dev --workspace @membership/web",
+    "dev:extension": "npm run dev --workspace @membership/main-extension",
+    "typecheck": "npm run typecheck --workspace @membership/extension-sdk && npm run typecheck --workspace @membership/web && npm run typecheck --workspace @membership/main-extension",
+    "supabase:start": "npx supabase@latest start",
+    "supabase:db:reset": "npx supabase@latest db reset",
+    "supabase:functions:serve": "npx supabase@latest functions serve --env-file .env.local"
+  }
+}

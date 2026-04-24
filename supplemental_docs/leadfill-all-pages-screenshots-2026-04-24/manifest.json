@@ -1,0 +1,134 @@
+{
+  "captured_at": "2026-04-24T10:12:19.595Z",
+  "mode": "local_preview",
+  "baseUrl": "http://127.0.0.1:4173",
+  "count": 14,
+  "screenshots": [
+    {
+      "slug": "home",
+      "route": "/",
+      "url": "http://127.0.0.1:4173/",
+      "finalUrl": "http://127.0.0.1:4173/",
+      "status": 200,
+      "unexpectedApplicationError": false,
+      "file": "D:\\code\\ai插件优化工作流\\docs\\leadfill-all-pages-screenshots-2026-04-24\\home.png"
+    },
+    {
+      "slug": "products",
+      "route": "/products",
+      "url": "http://127.0.0.1:4173/products",
+      "finalUrl": "http://127.0.0.1:4173/products",
+      "status": 200,
+      "unexpectedApplicationError": false,
+      "file": "D:\\code\\ai插件优化工作流\\docs\\leadfill-all-pages-screenshots-2026-04-24\\products.png"
+    },
+    {
+      "slug": "product-leadfill",
+      "route": "/products/leadfill-one-profile",
+      "url": "http://127.0.0.1:4173/products/leadfill-one-profile",
+      "finalUrl": "http://127.0.0.1:4173/products/leadfill-one-profile",
+      "status": 200,
+      "unexpectedApplicationError": false,
+      "file": "D:\\code\\ai插件优化工作流\\docs\\leadfill-all-pages-screenshots-2026-04-24\\product-leadfill.png"
+    },
+    {
+      "slug": "pricing",
+      "route": "/pricing",
+      "url": "http://127.0.0.1:4173/pricing",
+      "finalUrl": "http://127.0.0.1:4173/pricing",
+      "status": 200,
+      "unexpectedApplicationError": false,
+      "file": "D:\\code\\ai插件优化工作流\\docs\\leadfill-all-pages-screenshots-2026-04-24\\pricing.png"
+    },
+    {
+      "slug": "account",
+      "route": "/account",
+      "url": "http://127.0.0.1:4173/account",
+      "finalUrl": "http://127.0.0.1:4173/account",
+      "status": 200,
+      "unexpectedApplicationError": false,
+      "file": "D:\\code\\ai插件优化工作流\\docs\\leadfill-all-pages-screenshots-2026-04-24\\account.png"
+    },
+    {
+      "slug": "login",
+      "route": "/login",
+      "url": "http://127.0.0.1:4173/login",
+      "finalUrl": "http://127.0.0.1:4173/login",
+      "status": 200,
+      "unexpectedApplicationError": false,
+      "file": "D:\\code\\ai插件优化工作流\\docs\\leadfill-all-pages-screenshots-2026-04-24\\login.png"
+    },
+    {
+      "slug": "privacy",
+      "route": "/privacy",
+      "url": "http://127.0.0.1:4173/privacy",
+      "finalUrl": "http://127.0.0.1:4173/privacy",
+      "status": 200,
+      "unexpectedApplicationError": false,
+      "file": "D:\\code\\ai插件优化工作流\\docs\\leadfill-all-pages-screenshots-2026-04-24\\privacy.png"
+    },
+    {
+      "slug": "refund",
+      "route": "/refund",
+      "url": "http://127.0.0.1:4173/refund",
+      "finalUrl": "http://127.0.0.1:4173/refund",
+      "status": 200,
+      "unexpectedApplicationError": false,
+      "file": "D:\\code\\ai插件优化工作流\\docs\\leadfill-all-pages-screenshots-2026-04-24\\refund.png"
+    },
+    {
+      "slug": "terms",
+      "route": "/terms",
+      "url": "http://127.0.0.1:4173/terms",
+      "finalUrl": "http://127.0.0.1:4173/terms",
+      "status": 200,
+      "unexpectedApplicationError": false,
+      "file": "D:\\code\\ai插件优化工作流\\docs\\leadfill-all-pages-screenshots-2026-04-24\\terms.png"
+    },
+    {
+      "slug": "checkout-success",
+      "route": "/checkout/success",
+      "url": "http://127.0.0.1:4173/checkout/success",
+      "finalUrl": "http://127.0.0.1:4173/checkout/success",
+      "status": 200,
+      "unexpectedApplicationError": false,
+      "file": "D:\\code\\ai插件优化工作流\\docs\\leadfill-all-pages-screenshots-2026-04-24\\checkout-success.png"
+    },
+    {
+      "slug": "checkout-cancel",
+      "route": "/checkout/cancel",
+      "url": "http://127.0.0.1:4173/checkout/cancel",
+      "finalUrl": "http://127.0.0.1:4173/checkout/cancel",
+      "status": 200,
+      "unexpectedApplicationError": false,
+      "file": "D:\\code\\ai插件优化工作流\\docs\\leadfill-all-pages-screenshots-2026-04-24\\checkout-cancel.png"
+    },
+    {
+      "slug": "compat-product-html",
+      "route": "/product.html",
+      "url": "http://127.0.0.1:4173/product.html",
+      "finalUrl": "http://127.0.0.1:4173/products/leadfill-one-profile",
+      "status": 200,
+      "unexpectedApplicationError": false,
+      "file": "D:\\code\\ai插件优化工作流\\docs\\leadfill-all-pages-screenshots-2026-04-24\\compat-product-html.png"
+    },
+    {
+      "slug": "compat-pricing-html",
+      "route": "/pricing.html",
+      "url": "http://127.0.0.1:4173/pricing.html",
+      "finalUrl": "http://127.0.0.1:4173/pricing",
+      "status": 200,
+      "unexpectedApplicationError": false,
+      "file": "D:\\code\\ai插件优化工作流\\docs\\leadfill-all-pages-screenshots-2026-04-24\\compat-pricing-html.png"
+    },
+    {
+      "slug": "compat-zh-cn-pricing-html",
+      "route": "/zh-cn/pricing.html",
+      "url": "http://127.0.0.1:4173/zh-cn/pricing.html",
+      "finalUrl": "http://127.0.0.1:4173/pricing",
+      "status": 200,
+      "unexpectedApplicationError": false,
+      "file": "D:\\code\\ai插件优化工作流\\docs\\leadfill-all-pages-screenshots-2026-04-24\\compat-zh-cn-pricing-html.png"
+    }
+  ]
+}
