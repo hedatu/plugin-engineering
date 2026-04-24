@@ -1,0 +1,57 @@
+{
+  "stage": "PRODUCT_ACCEPTANCE_REVIEW",
+  "status": "passed",
+  "run_id": "commercial-payment-2026-04-23-202254-leadfill-v0-2-0-7faeaf",
+  "archetype": "single_profile_form_fill",
+  "wedge": "LeadFill One Profile",
+  "target_user": "Sales reps, recruiters, and operators repeatedly entering the same contact details into web forms.",
+  "promised_value": "Save one local profile and fill visible lead form fields on the current page in one click.",
+  "actual_core_flow": "Popup saves one local profile and the browser smoke fixture verified 7 visible fields filled on a controlled lead-form page.",
+  "acceptance_status": "revise",
+  "ux_review": {
+    "status": "clear_but_basic",
+    "notes": "The popup now explains local-only storage, default overwrite behavior, and gives visible feedback for both successful fills and no-match cases."
+  },
+  "functionality_review": {
+    "status": "core_flow_proven",
+    "notes": "The smoke suite now covers empty, partially filled, readonly or disabled, select, no-match, overwrite-default-false, and popup-feedback scenarios with 78.95 coverage."
+  },
+  "monetization_review": {
+    "status": "commercial_flow_needs_more_proof",
+    "notes": "The commercial placeholder flow exists, but free-limit, upgrade, license, or offline-grace proof is still incomplete."
+  },
+  "listing_truthfulness_review": {
+    "status": "truthful_and_scoped",
+    "notes": "The listing now matches the verified support envelope and discloses the commercial placeholder flow truthfully."
+  },
+  "permissions_review": {
+    "status": "minimal",
+    "notes": "The current permission set is narrow and aligned with the brief: storage, activeTab, and scripting only."
+  },
+  "privacy_review": {
+    "status": "aligned_with_promise",
+    "notes": "No remote sync path is present in popup code, which matches the local-only privacy story."
+  },
+  "screenshot_review": {
+    "status": "real_and_truthful",
+    "notes": "The screenshots remain validation-oriented, but they now represent real supported behavior instead of overselling unsupported fields."
+  },
+  "biggest_risks": [
+    "Field descriptor matching still depends on heuristic label and placeholder matching.",
+    "Commercial monetization coverage is incomplete or missing key proof points."
+  ],
+  "required_fixes": [
+    "Complete the monetization matrix so free-limit, upgrade, invalid-license, and offline-grace behavior are all proven."
+  ],
+  "recommended_decision": "cancel_review_and_revise_before_tester_install",
+  "next_step": "manually_cancel_review_then_expand_functional_testing_and_repair",
+  "redaction_checks": {
+    "sanitized_response_bodies": true,
+    "checked_secret_value_count": 1,
+    "secret_values_present_in_artifact": false,
+    "authorization_header_pattern_present": false,
+    "key_material_pattern_present": false,
+    "secret_marker_pattern_present": false,
+    "redaction_guard_triggered": false
+  }
+}

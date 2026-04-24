@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>License Activation</title>
+    <style>
+      :root {
+        color-scheme: light;
+        font-family: "Segoe UI", sans-serif;
+      }
+
+      body {
+        margin: 0;
+        background: #f5f6f8;
+        color: #1d232f;
+      }
+
+      main {
+        max-width: 540px;
+        margin: 0 auto;
+        padding: 24px 20px 40px;
+      }
+
+      h1 {
+        margin: 0 0 10px;
+        font-size: 26px;
+      }
+
+      p {
+        line-height: 1.5;
+      }
+
+      label {
+        display: block;
+        margin: 18px 0 8px;
+        font-weight: 600;
+      }
+
+      input {
+        width: 100%;
+        box-sizing: border-box;
+        border: 1px solid #c7cfdd;
+        border-radius: 10px;
+        padding: 12px;
+        font: inherit;
+      }
+
+      .actions {
+        display: grid;
+        gap: 10px;
+        margin-top: 16px;
+      }
+
+      button {
+        border: 0;
+        border-radius: 10px;
+        padding: 12px 14px;
+        font: inherit;
+        cursor: pointer;
+      }
+
+      #activate-license {
+        background: #205493;
+        color: #fff;
+      }
+
+      #restore-license {
+        background: #dfe7f4;
+        color: #1d232f;
+      }
+
+      #status {
+        min-height: 24px;
+        margin-top: 16px;
+      }
+
+      .meta {
+        margin-top: 18px;
+        padding: 14px;
+        border-radius: 12px;
+        background: #fff;
+        border: 1px solid #e0e4ed;
+      }
+
+      .trust {
+        color: #516074;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1 id="product-name">License activation</h1>
+      <p id="price-copy">Unlock lifetime access through the external payment page, then paste the license key here.</p>
+      <label for="license-key">License key</label>
+      <input id="license-key" type="text" autocomplete="off" placeholder="Paste your license key" />
+      <div class="actions">
+        <button id="activate-license" type="button">Activate License</button>
+        <button id="verify-license" type="button">Verify License</button>
+        <button id="restore-license" type="button">Restore Purchase</button>
+        <button id="open-upgrade" type="button">Open Upgrade Page</button>
+      </div>
+      <p id="status" aria-live="polite">Verification requires a network request to the external license system.</p>
+      <section class="meta">
+        <p id="plan-status">Plan: Free</p>
+        <p id="usage-status">Free usage left: --</p>
+        <p id="privacy-note">Local-only. No upload. No cloud sync. The extension does not process card details.</p>
+        <p id="license-cache" class="trust">Lifetime access applies to the current major version. License verification requires a network request when the cache expires.</p>
+      </section>
+    </main>
+    <script type="module" src="./licensePage.js"></script>
+  </body>
+</html>

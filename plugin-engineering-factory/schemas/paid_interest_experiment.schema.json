@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["stage", "status", "experiment_id", "candidate_name", "wedge_name", "suggested_price", "paid_interest_score", "market_test_risk", "recommended_action", "redaction_checks"],
+  "properties": {
+    "stage": { "type": "string", "enum": ["PAID_INTEREST_EXPERIMENT"] },
+    "status": { "type": "string", "enum": ["passed", "failed"] },
+    "experiment_id": { "type": "string" },
+    "candidate_name": { "type": "string" },
+    "wedge_name": { "type": "string" },
+    "suggested_price": { "type": "string" },
+    "paid_interest_score": { "type": "number" },
+    "market_test_risk": { "type": "string" },
+    "recommended_action": { "type": "string" },
+    "redaction_checks": { "type": "object" }
+  }
+}

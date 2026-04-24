@@ -1,0 +1,6 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["publish_intent", "reason", "review_strategy", "next_manual_gate"]
+}
+

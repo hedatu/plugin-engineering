@@ -1,0 +1,69 @@
+{
+  "generated_at": "2026-04-23T19:08:10.8347952+08:00",
+  "server": "do-mini-sfo3-01",
+  "target_ip": "134.199.226.198",
+  "current_primary_environment": "california",
+  "production_domains_configured": true,
+  "site_url": "https://pay.915500.xyz",
+  "api_external_url": "https://pay-api.915500.xyz",
+  "public_supabase_url": "https://pay-api.915500.xyz",
+  "gotrue_site_url": "https://pay.915500.xyz",
+  "gotrue_uri_allow_list_required": [
+    "https://pay.915500.xyz",
+    "https://pay-api.915500.xyz",
+    "https://ca-hwh.915500.xyz",
+    "https://ca-hwh-api.915500.xyz"
+  ],
+  "staging_aliases_retained": true,
+  "staging_aliases": [
+    "https://ca-hwh.915500.xyz",
+    "https://ca-hwh-api.915500.xyz"
+  ],
+  "caddy": {
+    "frontend_hosts": [
+      "ca-hwh.915500.xyz",
+      "pay.915500.xyz"
+    ],
+    "api_hosts": [
+      "ca-hwh-api.915500.xyz",
+      "pay-api.915500.xyz"
+    ],
+    "frontend_root": "/opt/commercial-extension-factory/apps/hwh/dist",
+    "api_reverse_proxy_target": "127.0.0.1:8000",
+    "config_validated": true,
+    "service_active": true
+  },
+  "frontend_bundle": {
+    "deployed_asset": "index-CbkYMO4_.js",
+    "pay_api_url_present": true,
+    "ca_hwh_residue_present": false,
+    "public_anon_key_health": "auth_v1_settings_http_200",
+    "previous_dist_backup": "/opt/commercial-extension-factory/apps/hwh/dist.backup-20260423110632"
+  },
+  "waffo": {
+    "environment": "test",
+    "success_url": "https://pay.915500.xyz/checkout/success",
+    "cancel_url": "https://pay.915500.xyz/checkout/cancel",
+    "webhook_url": "https://pay-api.915500.xyz/functions/v1/waffo-webhook",
+    "dashboard_paid_delivery_to_pay_api": "not_retested_after_cutover",
+    "success_url_does_not_unlock_locally": true,
+    "entitlement_source_of_truth": "verified_waffo_webhook_only",
+    "production_payment_status": "not_verified"
+  },
+  "safety": {
+    "production_payment_enabled": false,
+    "chrome_upload_executed": false,
+    "chrome_publish_executed": false,
+    "old_server_services_stopped": false,
+    "old_server_data_deleted": false,
+    "secrets_written_to_repo": false,
+    "secrets_printed": false
+  },
+  "accepted_risks": [
+    "low_memory_server"
+  ],
+  "notes": [
+    "California is accepted by the user as the new primary environment with 1GB RAM plus 2GB swap as a temporary risk.",
+    "Production payment mode remains disabled; only test-mode checkout smoke was performed."
+  ]
+}

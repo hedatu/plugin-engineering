@@ -1,0 +1,89 @@
+{
+  "stage": "REFINED_PAIN_CLUSTERS",
+  "status": "passed",
+  "generated_at": "2026-04-20T06:04:59.515Z",
+  "run_id": "2026-04-20-091340-daily-01a081",
+  "candidate_id": "cand-tab-001",
+  "clusters": [
+    {
+      "cluster_id": "cand-tab-001-refined-current-window-scope",
+      "original_cluster_id": "cand-tab-001-capability_gap-1",
+      "refined_theme": "current-window-only export scope",
+      "specific_user_action": "export only the tabs in the active browser window",
+      "repeated_pain_count": 3,
+      "evidence_ids": [
+        "cand-tab-001-evidence-1",
+        "cand-tab-001-evidence-4",
+        "cand-tab-001-evidence-5"
+      ],
+      "source_diversity_score": 67,
+      "specificity_score": 88,
+      "fixability_score": 86,
+      "testability_score": 92,
+      "single_purpose_fit_score": 91,
+      "weak_cluster_reason": null,
+      "buildable_wedge_candidate": "current-window-clean-csv"
+    },
+    {
+      "cluster_id": "cand-tab-001-refined-share-ready-output",
+      "original_cluster_id": "cand-tab-001-workflow_friction-2",
+      "refined_theme": "share-ready CSV output",
+      "specific_user_action": "download a compact CSV that needs no manual cleanup before sharing",
+      "repeated_pain_count": 2,
+      "evidence_ids": [
+        "cand-tab-001-evidence-2",
+        "cand-tab-001-evidence-4"
+      ],
+      "source_diversity_score": 50,
+      "specificity_score": 84,
+      "fixability_score": 82,
+      "testability_score": 88,
+      "single_purpose_fit_score": 86,
+      "weak_cluster_reason": null,
+      "buildable_wedge_candidate": "current-window-clean-csv"
+    },
+    {
+      "cluster_id": "cand-tab-001-refined-success-feedback",
+      "original_cluster_id": "cand-tab-001-reliability_break-3",
+      "refined_theme": "explicit export confirmation",
+      "specific_user_action": "confirm that the current-window snapshot downloaded successfully",
+      "repeated_pain_count": 1,
+      "evidence_ids": [
+        "cand-tab-001-evidence-3"
+      ],
+      "source_diversity_score": 25,
+      "specificity_score": 74,
+      "fixability_score": 78,
+      "testability_score": 87,
+      "single_purpose_fit_score": 71,
+      "weak_cluster_reason": "Only one recent source mentions silent export failure or missing confirmation.",
+      "buildable_wedge_candidate": "confirmed-current-window-export"
+    },
+    {
+      "cluster_id": "cand-tab-001-refined-bounded-scope-trust",
+      "original_cluster_id": "cand-tab-001-privacy-4",
+      "refined_theme": "bounded scope permission trust",
+      "specific_user_action": "trust that export touches only the intended current window",
+      "repeated_pain_count": 1,
+      "evidence_ids": [
+        "cand-tab-001-evidence-5"
+      ],
+      "source_diversity_score": 25,
+      "specificity_score": 79,
+      "fixability_score": 80,
+      "testability_score": 85,
+      "single_purpose_fit_score": 78,
+      "weak_cluster_reason": "Permission-trust positioning still depends on a single strong complaint.",
+      "buildable_wedge_candidate": "privacy-bounded-current-window-export"
+    }
+  ],
+  "redaction_checks": {
+    "sanitized_response_bodies": true,
+    "checked_secret_value_count": 0,
+    "secret_values_present_in_artifact": false,
+    "authorization_header_pattern_present": false,
+    "key_material_pattern_present": false,
+    "secret_marker_pattern_present": false,
+    "redaction_guard_triggered": false
+  }
+}

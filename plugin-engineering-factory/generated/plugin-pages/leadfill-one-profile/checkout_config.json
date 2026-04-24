@@ -1,0 +1,38 @@
+{
+  "stage": "PLUGIN_CHECKOUT_CONFIG_PREVIEW",
+  "generated_at": "2026-04-24T04:33:09.798Z",
+  "productKey": "leadfill-one-profile",
+  "slug": "leadfill-one-profile",
+  "paymentProvider": "hwh_waffo",
+  "productKeyOnPaySite": "leadfill-one-profile",
+  "defaultPlanKey": "lifetime",
+  "configuredPlanKey": "lifetime",
+  "planKeys": [
+    "lifetime"
+  ],
+  "checkoutMode": "test",
+  "paymentConfigStatus": "test_mode_verified",
+  "siteUrl": "https://pay.915500.xyz",
+  "pluginDetailUrl": "https://pay.915500.xyz/plugins/leadfill-one-profile",
+  "pluginPricingUrl": "https://pay.915500.xyz/plugins/leadfill-one-profile/pricing",
+  "checkoutSuccessUrl": "https://pay.915500.xyz/checkout/success",
+  "checkoutCancelUrl": "https://pay.915500.xyz/checkout/cancel",
+  "installUrl": "https://chromewebstore.google.com/detail/dnnpkaefmlhacigijccbhemgaenjbcpk",
+  "supportUrl": "generated/plugin-pages/leadfill-one-profile/account.html",
+  "privacyUrl": "generated/plugin-pages/leadfill-one-profile/privacy.html",
+  "supportEmail": "support@915500.xyz",
+  "featureKey": "leadfill_fill_action",
+  "liveCheckoutReady": true,
+  "smtpStatus": "verified_independent",
+  "otpStatus": "verified",
+  "checkoutStatus": "verified",
+  "webhookStatus": "verified",
+  "entitlementStatus": "verified_from_payment",
+  "consumeUsageStatus": "verified_free_quota_pro",
+  "paymentE2EStatus": "verified_test_mode",
+  "notes": [
+    "No real payment is triggered from the generated plugin page preview.",
+    "Webhook-confirmed entitlement remains the only valid unlock source.",
+    "If product key or plan key is still pending, the buy CTA must stay disabled or test-only."
+  ]
+}

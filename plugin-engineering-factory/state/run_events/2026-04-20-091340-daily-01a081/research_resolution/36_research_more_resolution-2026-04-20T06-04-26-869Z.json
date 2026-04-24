@@ -1,0 +1,382 @@
+{
+  "stage": "RESEARCH_MORE_RESOLUTION",
+  "status": "passed",
+  "run_id": "2026-04-20-091340-daily-01a081",
+  "candidate_id": "cand-tab-001",
+  "candidate_name": "Window Tabs Exporter",
+  "original_build_recommendation": "research_more",
+  "original_blockers": [
+    "single_purpose_gate",
+    "product_acceptance_forecast_gate"
+  ],
+  "research_questions": [
+    "Do users actually want current-window export, or are they asking for cross-window or session backup?",
+    "Is the strongest pain about CSV cleanliness, session restore, sharing lists, backup, or support handoff?",
+    "Can the evidence support a much narrower single-purpose wedge instead of generic tab export?",
+    "Can the wedge be differentiated from the existing tab_csv_window_export portfolio?",
+    "Is there a deterministic happy path we can test without flaky external dependencies?",
+    "Would the user install a dedicated extension for this narrower export job?",
+    "Can the wedge stay within low-risk tabs, downloads, and storage permissions?",
+    "Is there a stronger alternative wedge elsewhere in discovery that should replace this candidate instead?"
+  ],
+  "targeted_evidence_plan": [
+    {
+      "source_to_query": "support_site",
+      "query": "current window only export complaints and scope confusion",
+      "expected_signal": "Repeated statements that whole-session export is too broad.",
+      "fallback_if_unavailable": "Use existing support tickets and store reviews as bounded evidence only.",
+      "reliability_weight": 0.88,
+      "recency_weight": 1
+    },
+    {
+      "source_to_query": "github_issue",
+      "query": "CSV cleanup and noisy column complaints",
+      "expected_signal": "Users want a clean, share-ready export rather than a raw backup dump.",
+      "fallback_if_unavailable": "Keep the output-format wedge in still_research_more.",
+      "reliability_weight": 0.92,
+      "recency_weight": 1
+    },
+    {
+      "source_to_query": "chrome_web_store_review",
+      "query": "pinned tabs, filename, and export-scope complaints",
+      "expected_signal": "Secondary requests that can confirm or weaken the narrow export hypothesis.",
+      "fallback_if_unavailable": "Do not treat store-only evidence as sufficient differentiation.",
+      "reliability_weight": 0.76,
+      "recency_weight": 1
+    },
+    {
+      "source_to_query": "forum_or_reddit",
+      "query": "support handoff or researcher workflow requiring tab snapshot export",
+      "expected_signal": "Independent corroboration for a dedicated install-worthy job.",
+      "fallback_if_unavailable": "Keep confidence capped and avoid upgrading a same-family build.",
+      "reliability_weight": 0.54,
+      "recency_weight": 0.88
+    },
+    {
+      "source_to_query": "tab/workflow export",
+      "query": "site:chromewebstore.google.com current window tab export csv pinned tabs review",
+      "expected_signal": "All-session export is too broad and noisy.",
+      "fallback_if_unavailable": "Record live_unavailable and keep the candidate in research_more or skip.",
+      "reliability_weight": 0.58,
+      "recency_weight": 0.82
+    },
+    {
+      "source_to_query": "tab/workflow export",
+      "query": "site:github.com browser tab export extension issue current window csv",
+      "expected_signal": "Noisy export columns and weak success feedback.",
+      "fallback_if_unavailable": "Record live_unavailable and keep the candidate in research_more or skip.",
+      "reliability_weight": 0.58,
+      "recency_weight": 0.82
+    },
+    {
+      "source_to_query": "data cleanup / copy-paste automation",
+      "query": "site:github.com browser extension one-click data cleanup issue",
+      "expected_signal": "Too many cleanup steps before data is shareable.",
+      "fallback_if_unavailable": "Record live_unavailable and keep the candidate in research_more or skip.",
+      "reliability_weight": 0.58,
+      "recency_weight": 0.82
+    },
+    {
+      "source_to_query": "browser workflow friction",
+      "query": "site:chromewebstore.google.com browser workflow friction local-only productivity review",
+      "expected_signal": "Heavy dashboards for tasks that should be single-click.",
+      "fallback_if_unavailable": "Record live_unavailable and keep the candidate in research_more or skip.",
+      "reliability_weight": 0.58,
+      "recency_weight": 0.82
+    }
+  ],
+  "additional_evidence_collected": [
+    {
+      "insight_id": "scope-current-window",
+      "summary": "The strongest repeated signal is about narrowing export scope to the current window instead of the full session.",
+      "supporting_evidence": [
+        "cand-tab-001-evidence-1",
+        "cand-tab-001-evidence-5"
+      ],
+      "confidence": "high"
+    },
+    {
+      "insight_id": "share-ready-output",
+      "summary": "Users complain about CSV noise because they want a share-ready handoff artifact, not a raw backup dump.",
+      "supporting_evidence": [
+        "cand-tab-001-evidence-2"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "insight_id": "secondary-filtering-needs",
+      "summary": "Pinned-tab and filename requests look like secondary refinements, not the primary install trigger.",
+      "supporting_evidence": [
+        "cand-tab-001-evidence-4"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "insight_id": "trust-and-feedback",
+      "summary": "Permission trust and clear success feedback matter, but they look more like acceptance requirements than the wedge itself.",
+      "supporting_evidence": [
+        "cand-tab-001-evidence-3",
+        "cand-tab-001-evidence-5"
+      ],
+      "confidence": "medium"
+    }
+  ],
+  "unresolved_uncertainties": [
+    "No Reddit or practitioner forum evidence yet.",
+    "Discovery still depends on fixture-mode evidence, so freshness is capped.",
+    "At least one top pain cluster is still weak or overly generic.",
+    "Discovery is still fixture-backed, so live corroboration is capped."
+  ],
+  "wedge_hypotheses": [
+    {
+      "wedge_id": "cand-tab-001-wedge-current-window-clean-csv",
+      "one_sentence_value": "Export only the current Chrome window to a clean, share-ready CSV in one click.",
+      "target_user": "Researchers, coordinators, and operators handing off a focused tab set.",
+      "trigger_moment": "When a user needs to share or archive only the tabs visible in the current window.",
+      "pain_addressed": [
+        "Full-session export is broader than the job to be done.",
+        "Current CSV output is noisy and requires manual cleanup before sharing.",
+        "Users do not trust exporters that appear to read every tab by default."
+      ],
+      "evidence_support": [
+        "cand-tab-001-evidence-1",
+        "cand-tab-001-evidence-5",
+        "cand-tab-001-evidence-2"
+      ],
+      "single_purpose_score": 89,
+      "testability_score": 91,
+      "permission_risk": 22,
+      "portfolio_overlap_risk": 82,
+      "expected_archetype": "tab_csv_window_export",
+      "happy_path_test": "Open two browser windows, export from the active one, verify only current-window rows and a clean CSV column set.",
+      "why_this_is_not_a_clone": "The scope is narrower and the output is cleaner, but the trigger moment and artifact are still very close to the existing QuickTab CSV portfolio.",
+      "build_recommendation": "skip"
+    },
+    {
+      "wedge_id": "cand-tab-001-wedge-pinned-tabs-csv",
+      "one_sentence_value": "Export only pinned tabs from the current window to a compact CSV for repeated research or ops handoff.",
+      "target_user": "Users who curate a pinned working set and repeatedly share that subset.",
+      "trigger_moment": "When only pinned tabs represent the durable working set worth exporting.",
+      "pain_addressed": [
+        "Users want a smaller working-set export.",
+        "They want filename control and less post-export cleanup."
+      ],
+      "evidence_support": [
+        "cand-tab-001-evidence-4",
+        "cand-tab-001-evidence-1",
+        "cand-tab-001-evidence-5"
+      ],
+      "single_purpose_score": 84,
+      "testability_score": 88,
+      "permission_risk": 22,
+      "portfolio_overlap_risk": 74,
+      "expected_archetype": "tab_csv_window_export",
+      "happy_path_test": "Pin a subset of tabs, export only pinned tabs from the current window, verify unpinned rows are excluded.",
+      "why_this_is_not_a_clone": "The output filter is narrower, but the evidence is still too thin to justify a separate install-worthy wedge.",
+      "build_recommendation": "still_research_more"
+    },
+    {
+      "wedge_id": "cand-tab-001-wedge-confirmed-current-window-export",
+      "one_sentence_value": "Create a privacy-bounded current-window export with explicit success feedback so users know the snapshot actually downloaded.",
+      "target_user": "Support and operations users who need a dependable handoff snapshot without ambiguity.",
+      "trigger_moment": "When a user must prove the current-window snapshot was captured and downloaded successfully.",
+      "pain_addressed": [
+        "Silent export failures make the tool feel broken.",
+        "Users want confidence that only the intended window was touched."
+      ],
+      "evidence_support": [
+        "cand-tab-001-evidence-3",
+        "cand-tab-001-evidence-1",
+        "cand-tab-001-evidence-5"
+      ],
+      "single_purpose_score": 81,
+      "testability_score": 86,
+      "permission_risk": 20,
+      "portfolio_overlap_risk": 68,
+      "expected_archetype": "tab_csv_window_export",
+      "happy_path_test": "Export current window and verify visible success feedback plus downloaded file presence.",
+      "why_this_is_not_a_clone": "The trust angle is somewhat sharper, but demand is not yet strong enough to prove a dedicated wedge.",
+      "build_recommendation": "still_research_more"
+    }
+  ],
+  "selected_wedge_hypothesis": {
+    "wedge_id": "cand-tab-001-wedge-current-window-clean-csv",
+    "one_sentence_value": "Export only the current Chrome window to a clean, share-ready CSV in one click.",
+    "target_user": "Researchers, coordinators, and operators handing off a focused tab set.",
+    "trigger_moment": "When a user needs to share or archive only the tabs visible in the current window.",
+    "pain_addressed": [
+      "Full-session export is broader than the job to be done.",
+      "Current CSV output is noisy and requires manual cleanup before sharing.",
+      "Users do not trust exporters that appear to read every tab by default."
+    ],
+    "evidence_support": [
+      "cand-tab-001-evidence-1",
+      "cand-tab-001-evidence-5",
+      "cand-tab-001-evidence-2"
+    ],
+    "single_purpose_score": 89,
+    "testability_score": 91,
+    "permission_risk": 22,
+    "portfolio_overlap_risk": 74,
+    "expected_archetype": "tab_csv_window_export",
+    "happy_path_test": "Open two browser windows, export from the active one, verify only current-window rows and a clean CSV column set.",
+    "why_this_is_not_a_clone": "The scope is narrower and the output is cleaner, but the trigger moment and artifact are still very close to the existing QuickTab CSV portfolio.",
+    "build_recommendation": "skip"
+  },
+  "updated_pain_clusters": [
+    {
+      "cluster_id": "cand-tab-001-refined-current-window-scope",
+      "original_cluster_id": "cand-tab-001-capability_gap-1",
+      "refined_theme": "current-window-only export scope",
+      "specific_user_action": "export only the tabs in the active browser window",
+      "repeated_pain_count": 3,
+      "evidence_ids": [
+        "cand-tab-001-evidence-1",
+        "cand-tab-001-evidence-4",
+        "cand-tab-001-evidence-5"
+      ],
+      "source_diversity_score": 67,
+      "specificity_score": 88,
+      "fixability_score": 86,
+      "testability_score": 92,
+      "single_purpose_fit_score": 91,
+      "weak_cluster_reason": null,
+      "buildable_wedge_candidate": "current-window-clean-csv"
+    },
+    {
+      "cluster_id": "cand-tab-001-refined-share-ready-output",
+      "original_cluster_id": "cand-tab-001-workflow_friction-2",
+      "refined_theme": "share-ready CSV output",
+      "specific_user_action": "download a compact CSV that needs no manual cleanup before sharing",
+      "repeated_pain_count": 2,
+      "evidence_ids": [
+        "cand-tab-001-evidence-2",
+        "cand-tab-001-evidence-4"
+      ],
+      "source_diversity_score": 50,
+      "specificity_score": 84,
+      "fixability_score": 82,
+      "testability_score": 88,
+      "single_purpose_fit_score": 86,
+      "weak_cluster_reason": null,
+      "buildable_wedge_candidate": "current-window-clean-csv"
+    },
+    {
+      "cluster_id": "cand-tab-001-refined-success-feedback",
+      "original_cluster_id": "cand-tab-001-reliability_break-3",
+      "refined_theme": "explicit export confirmation",
+      "specific_user_action": "confirm that the current-window snapshot downloaded successfully",
+      "repeated_pain_count": 1,
+      "evidence_ids": [
+        "cand-tab-001-evidence-3"
+      ],
+      "source_diversity_score": 25,
+      "specificity_score": 74,
+      "fixability_score": 78,
+      "testability_score": 87,
+      "single_purpose_fit_score": 71,
+      "weak_cluster_reason": "Only one recent source mentions silent export failure or missing confirmation.",
+      "buildable_wedge_candidate": "confirmed-current-window-export"
+    },
+    {
+      "cluster_id": "cand-tab-001-refined-bounded-scope-trust",
+      "original_cluster_id": "cand-tab-001-privacy-4",
+      "refined_theme": "bounded scope permission trust",
+      "specific_user_action": "trust that export touches only the intended current window",
+      "repeated_pain_count": 1,
+      "evidence_ids": [
+        "cand-tab-001-evidence-5"
+      ],
+      "source_diversity_score": 25,
+      "specificity_score": 79,
+      "fixability_score": 80,
+      "testability_score": 85,
+      "single_purpose_fit_score": 78,
+      "weak_cluster_reason": "Permission-trust positioning still depends on a single strong complaint.",
+      "buildable_wedge_candidate": "privacy-bounded-current-window-export"
+    }
+  ],
+  "updated_score_breakdown": {
+    "stage": "UPDATED_OPPORTUNITY_SCORE",
+    "status": "passed",
+    "candidate_id": "cand-tab-001",
+    "selected_wedge_hypothesis": "Export only the current Chrome window to a clean, share-ready CSV in one click.",
+    "demand_score": 69.2,
+    "pain_score": 68.85,
+    "evidence_quality_score": 74.8,
+    "wedge_clarity_score": 87.8,
+    "feasibility_score": 84.8,
+    "testability_score": 89.15,
+    "compliance_score": 82,
+    "differentiation_score": 42,
+    "portfolio_overlap_penalty": 74,
+    "maintenance_risk_score": 31,
+    "confidence_score": 77.71,
+    "total_score": 75.73,
+    "build_recommendation": "skip",
+    "score_delta_from_original": 1.66,
+    "decision_rationale": [
+      "The research loop sharpened the wedge from generic tab export into a specific current-window CSV job.",
+      "Evidence quality and testability stayed strong, and wedge clarity improved materially.",
+      "That sharper wedge now overlaps too directly with the existing tab_csv_window_export portfolio, so the candidate should not build."
+    ],
+    "redaction_checks": {
+      "sanitized_response_bodies": true,
+      "checked_secret_value_count": 0,
+      "secret_values_present_in_artifact": false,
+      "authorization_header_pattern_present": false,
+      "key_material_pattern_present": false,
+      "secret_marker_pattern_present": false,
+      "redaction_guard_triggered": false
+    }
+  },
+  "updated_gate_results": {
+    "evidence_quality_gate": {
+      "passed": true,
+      "reason": "evidence_quality_score=74.8",
+      "severity": "blocker"
+    },
+    "single_purpose_gate": {
+      "passed": true,
+      "reason": "wedge_clarity_score=87.8",
+      "severity": "blocker"
+    },
+    "testability_gate": {
+      "passed": true,
+      "reason": "testability_score=89.15",
+      "severity": "blocker"
+    },
+    "permissions_risk_gate": {
+      "passed": true,
+      "reason": "permission_risk=22, compliance_score=82",
+      "severity": "blocker"
+    },
+    "portfolio_overlap_gate": {
+      "passed": false,
+      "reason": "portfolio_overlap_score=74 exceeds 45",
+      "severity": "blocker"
+    },
+    "product_acceptance_forecast_gate": {
+      "passed": true,
+      "reason": "The narrowed wedge now maps to a deterministic, low-permission happy path.",
+      "severity": "blocker"
+    }
+  },
+  "final_recommendation": "still_research_more",
+  "final_decision_rationale": [
+    "The research loop sharpened the wedge from generic tab export into a specific current-window CSV job.",
+    "Evidence quality and testability stayed strong, and wedge clarity improved materially.",
+    "That sharper wedge now overlaps too directly with the existing tab_csv_window_export portfolio, so the candidate should not build.",
+    "The wedge is clearer, but still needs more differentiated evidence."
+  ],
+  "next_step": "continue_targeted_research_for_selected_candidate",
+  "redaction_checks": {
+    "sanitized_response_bodies": true,
+    "checked_secret_value_count": 0,
+    "secret_values_present_in_artifact": false,
+    "authorization_header_pattern_present": false,
+    "key_material_pattern_present": false,
+    "secret_marker_pattern_present": false,
+    "redaction_guard_triggered": false
+  }
+}

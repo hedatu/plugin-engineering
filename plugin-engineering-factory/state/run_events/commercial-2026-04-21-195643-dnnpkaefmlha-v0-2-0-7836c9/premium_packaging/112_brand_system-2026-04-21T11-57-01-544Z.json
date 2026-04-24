@@ -1,0 +1,55 @@
+{
+  "stage": "BRAND_SYSTEM_GENERATOR",
+  "status": "passed",
+  "product_name": "LeadFill One Profile",
+  "short_name": "LeadFill One",
+  "tagline": "Save once. Fill cleanly.",
+  "tone_of_voice": [
+    "clear",
+    "confident",
+    "restrained",
+    "specific",
+    "privacy-aware"
+  ],
+  "primary_color": "#17324D",
+  "secondary_color": "#B9D8E8",
+  "accent_color": "#13836F",
+  "background_color": "#EEF4F7",
+  "text_color": "#102233",
+  "typography_recommendation": {
+    "headline_family": "\"Segoe UI Variable Display\", \"Segoe UI\", \"Aptos Display\", sans-serif",
+    "body_family": "\"Segoe UI Variable Text\", \"Segoe UI\", \"Aptos\", sans-serif",
+    "display_style": "Tight sentence-case headlines, short supporting copy, and generous whitespace.",
+    "note": "Prefer system-safe Windows fonts and only add licensed brand fonts intentionally."
+  },
+  "icon_direction": "Simple geometric mark with no UI screenshot inside the icon.",
+  "layout_style": "Editorial product cards with soft contrast, generous margins, and restrained accent highlights.",
+  "illustration_style": "No mascot. Use soft gradients, subtle light falloff, and simple product framing only.",
+  "screenshot_annotation_style": "One short headline plus one supporting line in a quiet panel away from the product focus.",
+  "trust_badges_allowed": [
+    "Local-only",
+    "No login",
+    "Minimal permissions"
+  ],
+  "trust_badges_disallowed": [
+    "Number 1",
+    "Official",
+    "Featured by Google",
+    "Enterprise ready unless verified"
+  ],
+  "copy_style_rules": [
+    "Lead with the one job, not a category buzzword.",
+    "Prefer literal trust claims over vague productivity hype.",
+    "Avoid fake scarcity, fake urgency, or inflated promises.",
+    "Keep overlays short enough to preserve the screenshot as the primary proof."
+  ],
+  "redaction_checks": {
+    "sanitized_response_bodies": true,
+    "checked_secret_value_count": 0,
+    "secret_values_present_in_artifact": false,
+    "authorization_header_pattern_present": false,
+    "key_material_pattern_present": false,
+    "secret_marker_pattern_present": false,
+    "redaction_guard_triggered": false
+  }
+}

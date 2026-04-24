@@ -1,0 +1,160 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "stage",
+    "status",
+    "run_id",
+    "run_type",
+    "publisher_id",
+    "item_id",
+    "checked_at",
+    "status_source",
+    "credentials_present",
+    "fetch_status_attempted",
+    "fetch_status_succeeded",
+    "previous_publish_execution_state",
+    "current_dashboard_state",
+    "submitted_revision_status",
+    "published_revision_status",
+    "latest_upload_status",
+    "uploaded_crx_version",
+    "manifest_version",
+    "review_state",
+    "review_result",
+    "review_action",
+    "review_submission_verified",
+    "review_cancelled_manually",
+    "manual_action_recorded",
+    "dashboard_state_confirmed",
+    "dashboard_state_unconfirmed",
+    "is_pending_review",
+    "is_draft",
+    "is_approved",
+    "is_rejected",
+    "is_cancelled",
+    "dashboard_action_required",
+    "next_step",
+    "raw_response_summary",
+    "redaction_checks",
+    "failure_phase",
+    "failure_reason"
+  ],
+  "properties": {
+    "stage": {
+      "type": "string",
+      "enum": ["REVIEW_STATUS"]
+    },
+    "status": {
+      "type": "string",
+      "enum": ["passed", "failed", "skipped"]
+    },
+    "run_id": {
+      "type": "string"
+    },
+    "run_type": {
+      "type": "string"
+    },
+    "publisher_id": {
+      "type": ["string", "null"]
+    },
+    "item_id": {
+      "type": ["string", "null"]
+    },
+    "checked_at": {
+      "type": "string"
+    },
+    "status_source": {
+      "type": "string",
+      "enum": ["live_fetch_status", "preserved_last_known_state"]
+    },
+    "credentials_present": {
+      "type": "boolean"
+    },
+    "fetch_status_attempted": {
+      "type": "boolean"
+    },
+    "fetch_status_succeeded": {
+      "type": "boolean"
+    },
+    "previous_publish_execution_state": {
+      "type": "object"
+    },
+    "current_dashboard_state": {
+      "type": ["string", "null"]
+    },
+    "submitted_revision_status": {
+      "type": ["string", "null"]
+    },
+    "published_revision_status": {
+      "type": ["string", "null"]
+    },
+    "latest_upload_status": {
+      "type": ["string", "null"]
+    },
+    "uploaded_crx_version": {
+      "type": ["string", "null"]
+    },
+    "manifest_version": {
+      "type": ["string", "null"]
+    },
+    "review_state": {
+      "type": ["string", "null"]
+    },
+    "review_result": {
+      "type": "string"
+    },
+    "review_action": {
+      "type": "string"
+    },
+    "review_submission_verified": {
+      "type": "boolean"
+    },
+    "review_cancelled_manually": {
+      "type": "boolean"
+    },
+    "manual_action_recorded": {
+      "type": "boolean"
+    },
+    "dashboard_state_confirmed": {
+      "type": "boolean"
+    },
+    "dashboard_state_unconfirmed": {
+      "type": "boolean"
+    },
+    "is_pending_review": {
+      "type": "boolean"
+    },
+    "is_draft": {
+      "type": "boolean"
+    },
+    "is_approved": {
+      "type": "boolean"
+    },
+    "is_rejected": {
+      "type": "boolean"
+    },
+    "is_cancelled": {
+      "type": "boolean"
+    },
+    "dashboard_action_required": {
+      "type": "boolean"
+    },
+    "next_step": {
+      "type": "string"
+    },
+    "raw_response_summary": {
+      "type": "object"
+    },
+    "redaction_checks": {
+      "type": "object"
+    },
+    "failure_phase": {
+      "type": ["string", "null"],
+      "enum": [null, "env_preflight", "credentials_file_read", "token_exchange", "chrome_webstore_fetch_status", "network_preflight"]
+    },
+    "failure_reason": {
+      "type": ["string", "null"]
+    }
+  }
+}

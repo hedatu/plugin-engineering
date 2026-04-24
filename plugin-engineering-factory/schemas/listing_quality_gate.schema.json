@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "stage",
+    "status",
+    "run_id",
+    "passed",
+    "premium_feel_score",
+    "blockers",
+    "warnings",
+    "recommended_fixes",
+    "next_step"
+  ],
+  "properties": {
+    "stage": {
+      "type": "string",
+      "enum": ["LISTING_QUALITY_GATE"]
+    },
+    "status": {
+      "type": "string",
+      "enum": ["passed", "conditional_fail", "failed"]
+    },
+    "run_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "passed": {
+      "type": "boolean"
+    },
+    "premium_feel_score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "checks": {
+      "type": "object"
+    },
+    "blockers": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "warnings": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "recommended_fixes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "next_step": {
+      "type": "string",
+      "minLength": 1
+    }
+  }
+}

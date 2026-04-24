@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["stage", "status", "run_id", "candidate_name", "archetype", "tests"],
+  "properties": {
+    "stage": { "type": "string", "enum": ["MONETIZATION_TEST_MATRIX"] },
+    "status": { "type": "string", "enum": ["passed", "failed", "planned"] },
+    "run_id": { "type": "string", "minLength": 1 },
+    "candidate_name": { "type": "string", "minLength": 1 },
+    "archetype": { "type": "string", "minLength": 1 },
+    "tests": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "current_status", "why_it_matters"],
+        "properties": {
+          "id": { "type": "string", "minLength": 1 },
+          "name": { "type": "string", "minLength": 1 },
+          "current_status": { "type": "string", "minLength": 1 },
+          "why_it_matters": { "type": "string", "minLength": 1 },
+          "evidence_artifact": { "type": ["string", "null"] },
+          "recommended_next_action": { "type": "string" }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["stage", "status", "candidate_name", "wedge_name", "recommended_launch_type", "launch_channels", "success_thresholds", "kill_thresholds", "redaction_checks"],
+  "properties": {
+    "stage": { "type": "string", "enum": ["MARKET_TEST_LAUNCH_PLAN"] },
+    "status": { "type": "string", "enum": ["passed", "failed"] },
+    "candidate_name": { "type": "string" },
+    "wedge_name": { "type": "string" },
+    "recommended_launch_type": { "type": "string" },
+    "launch_channels": { "type": "array", "items": { "type": "string" } },
+    "success_thresholds": { "type": "array", "items": { "type": "string" } },
+    "kill_thresholds": { "type": "array", "items": { "type": "string" } },
+    "redaction_checks": { "type": "object" }
+  }
+}

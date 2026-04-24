@@ -1,0 +1,49 @@
+{
+  "stage": "MONETIZATION_STRATEGY",
+  "status": "passed",
+  "run_id": "commercial-2026-04-21-195643-dnnpkaefmlha-v0-2-0-7836c9",
+  "product_id": "leadfill-one-profile",
+  "product_name": "LeadFill One Profile",
+  "pricing_model": "free_trial_then_lifetime",
+  "free_limit": {
+    "amount": 10,
+    "unit": "fills",
+    "scope": "lifetime"
+  },
+  "price_label": "$19 lifetime",
+  "upgrade_url_placeholder": "https://payments.example.com/stripe-payment-link-placeholder/leadfill-one-profile",
+  "license_activation_model": "external payment page plus license key activation and verification",
+  "entitlement_model": "remote verification with local cache and offline grace fallback",
+  "free_features": [
+    "10 free fills",
+    "single local profile",
+    "local-only storage"
+  ],
+  "pro_features": [
+    "unlimited fills",
+    "license restore",
+    "lifetime access to the current major version"
+  ],
+  "paid_disclosure_copy": [
+    "Free plan includes 10 fills.",
+    "Unlock Lifetime - $19 lifetime.",
+    "Upgrade opens an external payment page outside the extension.",
+    "Paste the license key inside the extension to activate or restore Pro access.",
+    "The extension does not process cards and does not ship payment secrets."
+  ],
+  "risk_notes": [
+    "The current upgrade URL is a placeholder and not configured for live payments.",
+    "The current license endpoints are placeholders and must be replaced before real commercial collection.",
+    "Local-only, no-upload, and no-cloud-sync claims must remain true in the actual bundle."
+  ],
+  "next_step": "Run monetization:security-scan and keep listing disclosure truthful until real payment endpoints are configured.",
+  "redaction_checks": {
+    "sanitized_response_bodies": true,
+    "checked_secret_value_count": 0,
+    "secret_values_present_in_artifact": false,
+    "authorization_header_pattern_present": false,
+    "key_material_pattern_present": false,
+    "secret_marker_pattern_present": false,
+    "redaction_guard_triggered": false
+  }
+}

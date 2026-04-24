@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "stage",
+    "status",
+    "run_id",
+    "candidate_count",
+    "analyses",
+    "rejected_candidates",
+    "next_step",
+    "redaction_checks"
+  ],
+  "properties": {
+    "stage": {
+      "type": "string",
+      "enum": ["LOW_OVERLAP_FILTER"]
+    },
+    "status": {
+      "type": "string",
+      "enum": ["passed", "failed"]
+    },
+    "run_id": { "type": "string" },
+    "candidate_count": { "type": "integer" },
+    "analyses": {
+      "type": "array",
+      "items": { "type": "object" }
+    },
+    "rejected_candidates": {
+      "type": "array",
+      "items": { "type": "object" }
+    },
+    "next_step": { "type": "string" },
+    "redaction_checks": { "type": "object" }
+  }
+}

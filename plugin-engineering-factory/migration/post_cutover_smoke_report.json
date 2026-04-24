@@ -1,0 +1,111 @@
+{
+  "generated_at": "2026-04-23T19:47:00+08:00",
+  "status": "passed_with_accepted_risk",
+  "dns_cutover_executed": true,
+  "current_primary_environment": "california",
+  "target_ip": "134.199.226.198",
+  "production_domains": {
+    "pay.915500.xyz": {
+      "resolved_to_california": true,
+      "https_status": 200
+    },
+    "pay-api.915500.xyz": {
+      "resolved_to_california": true,
+      "root_status": 401,
+      "webhook_get_status": 405,
+      "unsigned_post_status": 401,
+      "unsigned_post_expected_invalid_signature": true
+    },
+    "ca-hwh.915500.xyz": {
+      "retained_as_staging_alias": true,
+      "https_status": 200
+    },
+    "ca-hwh-api.915500.xyz": {
+      "retained_as_staging_alias": true,
+      "webhook_get_status": 405
+    }
+  },
+  "frontend": {
+    "health_status": 200,
+    "deployed_asset": "index-CbkYMO4_.js",
+    "pay_api_public_config_present": true,
+    "ca_hwh_residue_present": false,
+    "public_anon_key_health": "auth_v1_settings_http_200"
+  },
+  "otp_auth": {
+    "provider": "resend",
+    "send_otp_status": "verified",
+    "send_otp_http_status": 200,
+    "email_delivered": true,
+    "email_link_hosts": [
+      "pay-api.915500.xyz",
+      "pay.915500.xyz"
+    ],
+    "redirected_to_weiwang": false,
+    "verify_otp_status": "verified",
+    "verify_otp_http_status": 200,
+    "session_created": true
+  },
+  "entitlement_installation_usage": {
+    "get_entitlement_status": "verified",
+    "register_installation_status": "verified",
+    "consume_usage_free_status": "verified",
+    "consume_usage_allowed_attempts": 10,
+    "quota_exceeded_status": "verified"
+  },
+  "checkout_smoke": {
+    "create_checkout_session_status": "verified",
+    "checkout_session_id": "cs_88633eed-c8b4-575b-65d9-d0d46e8d8bee",
+    "checkout_url_domain": "pancake.waffo.ai",
+    "checkout_mode": "test",
+    "success_url_expected": "https://pay.915500.xyz/checkout/success",
+    "cancel_url_expected": "https://pay.915500.xyz/checkout/cancel",
+    "production_payment_attempted": false,
+    "production_payment_status": "not_verified",
+    "paid_test_payment_after_cutover": "not_run_by_design"
+  },
+  "waffo_webhook": {
+    "route_online": true,
+    "get_status": 405,
+    "unsigned_post_status": 401,
+    "unsigned_post_response": "INVALID_SIGNATURE",
+    "paid_order_webhook_previous_california_test_mode_verified": true,
+    "entitlement_active_from_previous_test_webhook_verified": true
+  },
+  "review_watch": {
+    "california_runtime": true,
+    "registry_valid": true,
+    "read_only": true,
+    "live_fetch_status": "passed",
+    "review_state": "STAGED",
+    "credentials_doctor": "passed",
+    "token_self_test": "passed",
+    "schedule_enabled": true,
+    "schedule": "0 */6 * * *",
+    "upload_publish_disabled": true
+  },
+  "capacity": {
+    "ram_total_mb": 961,
+    "ram_available_mb": 382,
+    "swap_total_mb": 2047,
+    "swap_used_mb": 243,
+    "low_memory_server": true,
+    "risk_status": "user_accepted_temporary_risk"
+  },
+  "safety": {
+    "chrome_upload_executed": false,
+    "chrome_publish_executed": false,
+    "production_payment_executed": false,
+    "production_payment_enabled": false,
+    "success_url_unlocks_locally": false,
+    "secrets_printed": false,
+    "secrets_written_to_repo": false,
+    "old_server_services_stopped": false,
+    "old_server_data_deleted": false
+  },
+  "rollback_plan_ready": true,
+  "blockers": [],
+  "accepted_risks": [
+    "low_memory_server"
+  ]
+}

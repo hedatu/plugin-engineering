@@ -1,0 +1,21 @@
+﻿{
+    "generated_at":  "2026-04-23T09:01:00.4145167+08:00",
+    "checkout_session_created":  true,
+    "session_id":  "cs_b6dea70e-2015-3724-2e2c-da3ccab03295",
+    "local_order_id":  "ord_1776905544750_efa5c03b",
+    "waffo_test_payment_completed":  true,
+    "webhook_received":  false,
+    "webhook_signature_verified":  false,
+    "processed_webhook_delta":  0,
+    "webhook_event_delta":  0,
+    "order_status":  "not_created",
+    "payment_status":  "not_created",
+    "entitlement_status":  "not_written",
+    "get_entitlement_active":  false,
+    "consume_usage_pro_passed":  false,
+    "blockers":  [
+                     "Waffo sandbox checkout reached Payment Successful, but no webhook POST hit California.",
+                     "processed_webhooks, webhook_events, orders, payments, and entitlements all remained at 0.",
+                     "get-entitlement still returned planKey=free and consume-usage still returned QUOTA_EXCEEDED."
+                 ]
+}

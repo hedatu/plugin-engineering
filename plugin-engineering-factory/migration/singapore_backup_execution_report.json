@@ -1,0 +1,36 @@
+{
+  "generated_at": "2026-04-22T21:14:46.1861567+08:00",
+  "server_id": "singapore",
+  "backup_status": "completed",
+  "target_root": "/opt/commercial-extension-factory/backups/incoming/20260422-staging-sync",
+  "mode": "archive_plus_partial_extracted_copy",
+  "archive": {
+    "path": "/opt/commercial-extension-factory/backups/incoming/20260422-staging-sync/commercial-extension-factory-staging-sync-20260422.zip",
+    "sha256": "DBF90B6BB5E1B89C7D896F0561F7EC2D77393412DCC39C10190C00C66582DD0C",
+    "contains": [
+      "state/",
+      "generated/",
+      "runs/",
+      "migration/"
+    ]
+  },
+  "copied_files": [
+    {
+      "path": "/opt/commercial-extension-factory/backups/incoming/20260422-staging-sync/state/product_catalog.json",
+      "sha256": "10F666ECB810C97A2E243DE6F8663814B773084F5FF00E8116B005A6D3622A13"
+    },
+    {
+      "path": "/opt/commercial-extension-factory/backups/incoming/20260422-staging-sync/state/release_ledger.json",
+      "sha256": "18F1069FBEDE2EA6C643E66736ABB55A3AC4E800A6AF9577081F2FA88FB3A92A"
+    },
+    {
+      "path": "/opt/commercial-extension-factory/backups/incoming/20260422-staging-sync/state/opportunity_backlog.json",
+      "sha256": "B786B32DABDEBAF56E7612CB6C809514A46B1512EA777B8E0D3DA38AB07A07F8"
+    }
+  ],
+  "secrets_included": false,
+  "notes": [
+    "A partial extracted copy exists beside the full archive.",
+    "The full archive is the authoritative off-host backup for this turn."
+  ]
+}

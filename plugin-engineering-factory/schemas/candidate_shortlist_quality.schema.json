@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "stage",
+    "status",
+    "run_id",
+    "total_candidates_seen",
+    "candidates_after_basic_filters",
+    "candidates_after_policy_filters",
+    "candidates_after_portfolio_overlap_filters",
+    "category_distribution",
+    "rating_distribution",
+    "user_count_distribution",
+    "review_count_distribution",
+    "freshness_distribution",
+    "rejected_candidates_sample",
+    "shortlist_confidence",
+    "failure_reason"
+  ],
+  "properties": {
+    "stage": { "type": "string", "enum": ["CANDIDATE_SHORTLIST_QUALITY"] },
+    "status": { "type": "string", "enum": ["passed", "failed"] },
+    "run_id": { "type": "string" },
+    "total_candidates_seen": { "type": "integer" },
+    "candidates_after_basic_filters": { "type": "integer" },
+    "candidates_after_policy_filters": { "type": "integer" },
+    "candidates_after_portfolio_overlap_filters": { "type": "integer" },
+    "category_distribution": { "type": "object" },
+    "rating_distribution": { "type": "object" },
+    "user_count_distribution": { "type": "object" },
+    "review_count_distribution": { "type": "object" },
+    "freshness_distribution": { "type": "object" },
+    "rejected_candidates_sample": { "type": "array", "items": { "type": "object" } },
+    "shortlist_confidence": { "type": "number" },
+    "failure_reason": { "type": ["string", "null"] }
+  }
+}

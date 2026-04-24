@@ -1,0 +1,96 @@
+{
+  "captured_at": "2026-04-24T09:24:07.108Z",
+  "base_url": "https://pay.915500.xyz",
+  "route_mode": "live_spa_routes",
+  "count": 11,
+  "screenshots": [
+    {
+      "slug": "home",
+      "route": "/",
+      "url": "https://pay.915500.xyz/",
+      "status": 200,
+      "unexpectedApplicationError": false,
+      "file": "docs/site-screenshots-live-routes-2026-04-24/home.png"
+    },
+    {
+      "slug": "products",
+      "route": "/products",
+      "url": "https://pay.915500.xyz/products",
+      "status": 200,
+      "unexpectedApplicationError": false,
+      "file": "docs/site-screenshots-live-routes-2026-04-24/products.png"
+    },
+    {
+      "slug": "product-leadfill",
+      "route": "/products/leadfill-one-profile",
+      "url": "https://pay.915500.xyz/products/leadfill-one-profile",
+      "status": 200,
+      "unexpectedApplicationError": false,
+      "file": "docs/site-screenshots-live-routes-2026-04-24/product-leadfill.png"
+    },
+    {
+      "slug": "pricing",
+      "route": "/pricing",
+      "url": "https://pay.915500.xyz/pricing",
+      "status": 200,
+      "unexpectedApplicationError": false,
+      "file": "docs/site-screenshots-live-routes-2026-04-24/pricing.png"
+    },
+    {
+      "slug": "account",
+      "route": "/account",
+      "url": "https://pay.915500.xyz/account",
+      "status": 200,
+      "unexpectedApplicationError": false,
+      "file": "docs/site-screenshots-live-routes-2026-04-24/account.png"
+    },
+    {
+      "slug": "refund",
+      "route": "/refund",
+      "url": "https://pay.915500.xyz/refund",
+      "status": 200,
+      "unexpectedApplicationError": false,
+      "file": "docs/site-screenshots-live-routes-2026-04-24/refund.png"
+    },
+    {
+      "slug": "privacy",
+      "route": "/privacy",
+      "url": "https://pay.915500.xyz/privacy",
+      "status": 200,
+      "unexpectedApplicationError": false,
+      "file": "docs/site-screenshots-live-routes-2026-04-24/privacy.png"
+    },
+    {
+      "slug": "terms",
+      "route": "/terms",
+      "url": "https://pay.915500.xyz/terms",
+      "status": 200,
+      "unexpectedApplicationError": false,
+      "file": "docs/site-screenshots-live-routes-2026-04-24/terms.png"
+    },
+    {
+      "slug": "checkout-success",
+      "route": "/checkout/success",
+      "url": "https://pay.915500.xyz/checkout/success",
+      "status": 200,
+      "unexpectedApplicationError": false,
+      "file": "docs/site-screenshots-live-routes-2026-04-24/checkout-success.png"
+    },
+    {
+      "slug": "checkout-cancel",
+      "route": "/checkout/cancel",
+      "url": "https://pay.915500.xyz/checkout/cancel",
+      "status": 200,
+      "unexpectedApplicationError": false,
+      "file": "docs/site-screenshots-live-routes-2026-04-24/checkout-cancel.png"
+    },
+    {
+      "slug": "login",
+      "route": "/login",
+      "url": "https://pay.915500.xyz/login",
+      "status": 200,
+      "unexpectedApplicationError": false,
+      "file": "docs/site-screenshots-live-routes-2026-04-24/login.png"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "status": "active",
+  "plan": "lifetime",
+  "product_id": "page-context-to-markdown",
+  "license_id": "lic_active_001",
+  "features": [
+    "unlimited_usage",
+    "license_restore"
+  ],
+  "free_limit": {
+    "amount": 10,
+    "unit": "actions",
+    "scope": "lifetime"
+  },
+  "usage_remaining": null,
+  "expires_at": null,
+  "verified_at": "2026-04-21T00:00:00.000Z",
+  "message": "License is active."
+}

@@ -1,0 +1,72 @@
+﻿{
+    "generated_at":  "2026-04-23T09:01:00.4145167+08:00",
+    "active_runtime_domains":  {
+                                   "SITE_URL":  "https://ca-hwh.915500.xyz",
+                                   "API_EXTERNAL_URL":  "https://ca-hwh-api.915500.xyz",
+                                   "PUBLIC_SUPABASE_URL":  "https://ca-hwh-api.915500.xyz",
+                                   "GOTRUE_SITE_URL":  "https://ca-hwh.915500.xyz",
+                                   "SUCCESS_URL":  "https://ca-hwh.915500.xyz/checkout/success",
+                                   "CANCEL_URL":  "https://ca-hwh.915500.xyz/checkout/cancel",
+                                   "WEBHOOK_URL":  "https://ca-hwh-api.915500.xyz/functions/v1/waffo-webhook",
+                                   "URI_ALLOW_LIST":  [
+                                                          "https://ca-hwh.915500.xyz/*",
+                                                          "https://ca-hwh-api.915500.xyz/*",
+                                                          "https://pay.915500.xyz/*",
+                                                          "https://pay-api.915500.xyz/*",
+                                                          "chrome-extension://*/*"
+                                                      ]
+                               },
+    "active_runtime_residuals":  [
+
+                                 ],
+    "historical_residuals":  [
+                                 {
+                                     "path":  "D:\\code\\ai插件优化工作流\\migration\\hwh_california_staging_deploy_report.json",
+                                     "note":  "historical artifact from ca-pay stage"
+                                 },
+                                 {
+                                     "path":  "D:\\code\\ai插件优化工作流\\migration\\hwh_california_staging_deploy_report.md",
+                                     "note":  "historical artifact from ca-pay stage"
+                                 },
+                                 {
+                                     "path":  "D:\\code\\ai插件优化工作流\\migration\\hwh_california_staging_prep_report.json",
+                                     "note":  "historical artifact from ca-pay stage"
+                                 },
+                                 {
+                                     "path":  "D:\\code\\ai插件优化工作流\\migration\\product_catalog_seed_california.json",
+                                     "note":  "historical artifact from pre-rename stage"
+                                 },
+                                 {
+                                     "path":  "D:\\code\\ai插件优化工作流\\migration\\staging_domain_dns_instructions.md",
+                                     "note":  "historical planning doc from ca-pay stage"
+                                 },
+                                 {
+                                     "path":  "D:\\code\\ai插件优化工作流\\migration\\staging_domain_plan.md",
+                                     "note":  "historical planning doc from ca-pay stage"
+                                 },
+                                 {
+                                     "path":  "D:\\code\\ai插件优化工作流\\migration\\staging_domain_status.json",
+                                     "note":  "historical status file from ca-pay stage"
+                                 },
+                                 {
+                                     "path":  "D:\\code\\ai插件优化工作流\\migration\\waffo_payment_e2e_report.california.md",
+                                     "note":  "historical report from pre-rename stage"
+                                 },
+                                 {
+                                     "path":  "/opt/supabase-core/.env.bak.20260423003503",
+                                     "note":  "remote backup retained intentionally"
+                                 },
+                                 {
+                                     "path":  "/opt/supabase-core/.env.functions.bak.20260423003503",
+                                     "note":  "remote backup retained intentionally"
+                                 },
+                                 {
+                                     "path":  "/etc/caddy/Caddyfile.bak.20260423003503",
+                                     "note":  "remote backup retained intentionally"
+                                 }
+                             ],
+    "notes":  [
+                  "Active California runtime config no longer contains ca-pay or ca-pay-api.",
+                  "Only historical local artifacts and remote backup copies still mention the old staging hostnames."
+              ]
+}

@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["stage", "status", "candidate_id", "candidate_name", "landing_page_headline", "value_prop", "pricing_copy", "target_channels", "success_metrics", "fail_metrics", "decision_after_test", "redaction_checks"],
+  "properties": {
+    "stage": { "type": "string", "enum": ["FAKE_DOOR_TEST_PLAN"] },
+    "status": { "type": "string", "enum": ["passed", "failed"] },
+    "candidate_id": { "type": "string" },
+    "candidate_name": { "type": "string" },
+    "landing_page_headline": { "type": "string" },
+    "value_prop": { "type": "string" },
+    "pricing_copy": { "type": "string" },
+    "target_channels": { "type": "array", "items": { "type": ["string", "array"] } },
+    "success_metrics": { "type": "array", "items": { "type": "string" } },
+    "fail_metrics": { "type": "array", "items": { "type": "string" } },
+    "decision_after_test": { "type": "string" },
+    "redaction_checks": { "type": "object" }
+  }
+}

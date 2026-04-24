@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "stage",
+    "status",
+    "run_id",
+    "product_key",
+    "checked_at",
+    "human_visual_review_passed",
+    "product_acceptance_passed",
+    "functional_test_coverage_score",
+    "premium_packaging_passed",
+    "asset_qa_passed",
+    "listing_quality_gate_passed",
+    "site_payment_gate_passed",
+    "production_payment_verified",
+    "monetization_security_scan_passed",
+    "disclosure_checks_passed",
+    "user_public_launch_approval_present",
+    "public_launch_allowed",
+    "blockers",
+    "warnings",
+    "recommended_next_step",
+    "redaction_checks"
+  ],
+  "properties": {
+    "stage": {
+      "type": "string",
+      "enum": ["PUBLIC_LAUNCH_GATE"]
+    },
+    "status": {
+      "type": "string",
+      "enum": ["passed", "blocked", "failed"]
+    },
+    "run_id": { "type": "string", "minLength": 1 },
+    "product_key": { "type": "string", "minLength": 1 },
+    "checked_at": { "type": "string", "minLength": 1 },
+    "human_visual_review_passed": { "type": "boolean" },
+    "product_acceptance_passed": { "type": "boolean" },
+    "functional_test_coverage_score": { "type": ["number", "null"] },
+    "premium_packaging_passed": { "type": "boolean" },
+    "asset_qa_passed": { "type": "boolean" },
+    "listing_quality_gate_passed": { "type": "boolean" },
+    "site_payment_gate_passed": { "type": "boolean" },
+    "production_payment_verified": { "type": "boolean" },
+    "monetization_security_scan_passed": { "type": "boolean" },
+    "disclosure_checks_passed": { "type": "boolean" },
+    "user_public_launch_approval_present": { "type": "boolean" },
+    "public_launch_allowed": { "type": "boolean" },
+    "blockers": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "warnings": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "recommended_next_step": { "type": "string", "minLength": 1 },
+    "redaction_checks": { "type": "object" }
+  }
+}

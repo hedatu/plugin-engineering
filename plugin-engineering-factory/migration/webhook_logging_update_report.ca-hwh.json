@@ -1,0 +1,28 @@
+﻿{
+    "generated_at":  "2026-04-23T09:39:54.8791089+08:00",
+    "local_files_changed":  [
+                                "D:\\code\\支付网站设计模块\\plugin-membership-supabase-waffo-design\\supabase\\functions\\_shared\\waffo.ts",
+                                "D:\\code\\支付网站设计模块\\plugin-membership-supabase-waffo-design\\supabase\\functions\\waffo-webhook\\index.ts"
+                            ],
+    "remote_paths_updated":  [
+                                 "/opt/supabase-core/volumes/functions/_shared",
+                                 "/opt/supabase-core/volumes/functions/waffo-webhook"
+                             ],
+    "remote_backups_created":  [
+                                   "/opt/supabase-core/volumes/functions/_shared.bak.\u003ctimestamp\u003e",
+                                   "/opt/supabase-core/volumes/functions/waffo-webhook.bak.\u003ctimestamp\u003e"
+                               ],
+    "functions_restarted":  true,
+    "inbound_logging_enabled":  true,
+    "invalid_signature_logging_enabled":  true,
+    "buyer_identity_fallback_enabled":  true,
+    "webhook_verification_event_special_case_enabled":  true,
+    "unsigned_post_http_status":  401,
+    "unsigned_post_response":  "INVALID_SIGNATURE",
+    "inbound_log_observed":  true,
+    "rejected_log_observed":  true,
+    "blockers":  [
+                     "Actual paid LeadFill webhook delivery is still not confirmed.",
+                     "California OTP still depends on the old server SMTP relay and remains a cutover blocker."
+                 ]
+}

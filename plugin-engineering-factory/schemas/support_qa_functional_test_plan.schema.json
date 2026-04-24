@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "stage",
+    "status",
+    "run_id",
+    "candidate_id",
+    "candidate_name",
+    "proposed_wedge",
+    "happy_path",
+    "expected_functional_test_matrix",
+    "browser_smoke_plan",
+    "manual_product_acceptance_checklist",
+    "next_step",
+    "redaction_checks"
+  ],
+  "properties": {
+    "stage": { "type": "string", "enum": ["SUPPORT_QA_FUNCTIONAL_TEST_PLAN"] },
+    "status": { "type": "string", "enum": ["passed", "failed"] },
+    "run_id": { "type": "string" },
+    "candidate_id": { "type": "string" },
+    "candidate_name": { "type": "string" },
+    "proposed_wedge": { "type": "string" },
+    "happy_path": { "type": "string" },
+    "expected_functional_test_matrix": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "browser_smoke_plan": { "type": "string" },
+    "manual_product_acceptance_checklist": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "next_step": { "type": "string" },
+    "redaction_checks": { "type": "object" }
+  }
+}

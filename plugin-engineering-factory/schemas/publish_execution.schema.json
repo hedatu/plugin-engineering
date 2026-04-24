@@ -1,0 +1,494 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "stage",
+    "run_id",
+    "run_type",
+    "source_run_id",
+    "status",
+    "generated_at",
+    "candidate_id",
+    "publish_intent",
+    "execution_mode",
+    "publish_validation_phase",
+    "sandbox_fetch_status_verified",
+    "sandbox_upload_verified",
+    "current_dashboard_state",
+    "submitted_revision_status",
+    "published_revision_status",
+    "latest_upload_status",
+    "package_path",
+    "lane",
+    "dry_run",
+    "write_actions_performed",
+    "publisher_id",
+    "item_id",
+    "approval_id",
+    "approval_mode",
+    "approval_write_authorized",
+    "package_sha256",
+    "credential_type",
+    "credential_present",
+    "token_source",
+    "current_sandbox_item_version",
+    "manifest_version",
+    "upload_response_crx_version",
+    "uploaded_crx_version",
+    "published_crx_version",
+    "product_acceptance_status",
+    "functional_test_coverage_score",
+    "publish_request_attempted",
+    "upload_request_attempted",
+    "upload_state",
+    "crx_version",
+    "review_state",
+    "sandbox_publish_verified",
+    "version_consistency_check",
+    "pre_publish_asset_gate",
+    "failure_phase",
+    "diagnostic_hint",
+    "likely_cause",
+    "actionable_hint",
+    "retryable",
+    "network_probe_summary",
+    "network_mode",
+    "proxy_configured",
+    "proxy_source",
+    "proxy_url_redacted",
+    "oauth2_probe_via_proxy",
+    "cws_probe_via_proxy",
+    "api_calls_attempted",
+    "api_calls_skipped",
+    "credentials_preflight",
+    "fetch_status_response",
+    "upload_response",
+    "publish_response",
+    "fetch_status_response_summary",
+    "upload_response_summary",
+    "publish_response_summary",
+    "pre_upload_checks",
+    "post_upload_fetch_status_summary",
+    "retry_count",
+    "last_http_status",
+    "safety_checks",
+    "redaction_checks",
+    "package_hash",
+    "manual_new_item_handoff",
+    "existing_item_update_dry_run",
+    "failure_reason",
+    "next_step"
+  ],
+  "properties": {
+    "stage": {
+      "type": "string",
+      "enum": ["EXECUTE_PUBLISH_PLAN"]
+    },
+    "run_id": {
+      "type": "string"
+    },
+    "run_type": {
+      "type": ["string", "null"]
+    },
+    "source_run_id": {
+      "type": ["string", "null"]
+    },
+    "status": {
+      "type": "string",
+      "enum": ["passed", "failed", "skipped"]
+    },
+    "generated_at": {
+      "type": "string",
+      "minLength": 1
+    },
+    "candidate_id": {
+      "type": ["string", "null"]
+    },
+    "publish_intent": {
+      "type": "string",
+      "minLength": 1
+    },
+    "execution_mode": {
+      "type": "string",
+      "enum": ["planned", "sandbox_validate"]
+    },
+    "publish_validation_phase": {
+      "type": "string",
+      "enum": ["fetch_status_only", "upload_only", "publish_optional"]
+    },
+    "sandbox_fetch_status_verified": {
+      "type": "boolean"
+    },
+    "sandbox_upload_verified": {
+      "type": "boolean"
+    },
+    "current_dashboard_state": {
+      "type": ["string", "null"]
+    },
+    "submitted_revision_status": {
+      "type": ["string", "null"]
+    },
+    "published_revision_status": {
+      "type": ["string", "null"]
+    },
+    "latest_upload_status": {
+      "type": ["string", "null"]
+    },
+    "package_path": {
+      "type": "string"
+    },
+    "lane": {
+      "type": ["string", "null"],
+      "enum": [null, "manual_new_item_handoff", "existing_item_update_dry_run"]
+    },
+    "dry_run": {
+      "type": "boolean"
+    },
+    "write_actions_performed": {
+      "type": "boolean"
+    },
+    "publisher_id": {
+      "type": ["string", "null"]
+    },
+    "item_id": {
+      "type": ["string", "null"]
+    },
+    "approval_id": {
+      "type": ["string", "null"]
+    },
+    "approval_mode": {
+      "type": ["string", "null"],
+      "enum": [null, "test_artifact_only", "write_allowed"]
+    },
+    "approval_write_authorized": {
+      "type": "boolean"
+    },
+    "package_sha256": {
+      "type": "string"
+    },
+    "credential_type": {
+      "type": "string"
+    },
+    "credential_present": {
+      "type": "boolean"
+    },
+    "token_source": {
+      "type": "string"
+    },
+    "current_sandbox_item_version": {
+      "type": ["string", "null"]
+    },
+    "manifest_version": {
+      "type": ["string", "null"]
+    },
+    "upload_response_crx_version": {
+      "type": ["string", "null"]
+    },
+    "uploaded_crx_version": {
+      "type": ["string", "null"]
+    },
+    "published_crx_version": {
+      "type": ["string", "null"]
+    },
+    "product_acceptance_status": {
+      "type": ["string", "null"]
+    },
+    "functional_test_coverage_score": {
+      "type": ["number", "null"]
+    },
+    "publish_request_attempted": {
+      "type": "boolean"
+    },
+    "upload_request_attempted": {
+      "type": "boolean"
+    },
+    "upload_state": {
+      "type": ["string", "null"]
+    },
+    "crx_version": {
+      "type": ["string", "null"]
+    },
+    "review_state": {
+      "type": ["string", "null"]
+    },
+    "sandbox_publish_verified": {
+      "type": "boolean"
+    },
+    "version_consistency_check": {
+      "type": "object",
+      "required": [
+        "performed",
+        "upload_state",
+        "manifest_version",
+        "upload_response_crx_version",
+        "passed",
+        "failure_reason"
+      ],
+      "properties": {
+        "performed": { "type": "boolean" },
+        "upload_state": { "type": ["string", "null"] },
+        "manifest_version": { "type": ["string", "null"] },
+        "upload_response_crx_version": { "type": ["string", "null"] },
+        "passed": { "type": "boolean" },
+        "failure_reason": { "type": ["string", "null"] }
+      }
+    },
+    "pre_publish_asset_gate": {
+      "type": "object",
+      "required": [
+        "listing_quality_passed",
+        "asset_qa_passed",
+        "store_release_package_passed",
+        "premium_feel_score",
+        "human_visual_review_passed",
+        "paid_disclosure_passed",
+        "blockers"
+      ],
+      "properties": {
+        "listing_quality_passed": { "type": "boolean" },
+        "asset_qa_passed": { "type": "boolean" },
+        "store_release_package_passed": { "type": "boolean" },
+        "premium_feel_score": { "type": "number" },
+        "human_visual_review_required": { "type": "boolean" },
+        "human_visual_review_passed": { "type": "boolean" },
+        "paid_disclosure_passed": { "type": "boolean" },
+        "blockers": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "gate_passed": { "type": "boolean" }
+      }
+    },
+    "failure_phase": {
+      "type": ["string", "null"],
+      "enum": [null, "env_preflight", "credentials_file_read", "token_exchange", "chrome_webstore_fetch_status", "network_preflight", "pre_upload_check", "pre_publish_state_check", "pre_publish_asset_gate", "chrome_webstore_upload", "chrome_webstore_publish", "post_upload_consistency_check"]
+    },
+    "diagnostic_hint": {
+      "type": ["string", "null"]
+    },
+    "likely_cause": {
+      "type": ["string", "null"]
+    },
+    "actionable_hint": {
+      "type": ["string", "null"]
+    },
+    "retryable": {
+      "type": "boolean"
+    },
+    "network_probe_summary": {
+      "type": "object"
+    },
+    "network_mode": {
+      "type": "string"
+    },
+    "proxy_configured": {
+      "type": "boolean"
+    },
+    "proxy_source": {
+      "type": ["string", "null"]
+    },
+    "proxy_url_redacted": {
+      "type": ["string", "null"]
+    },
+    "oauth2_probe_via_proxy": {
+      "type": "boolean"
+    },
+    "cws_probe_via_proxy": {
+      "type": "boolean"
+    },
+    "api_calls_attempted": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "api_calls_skipped": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "credentials_preflight": {
+      "$ref": "#/$defs/credentials"
+    },
+    "fetch_status_response": {
+      "$ref": "#/$defs/api_response"
+    },
+    "upload_response": {
+      "$ref": "#/$defs/api_response"
+    },
+    "publish_response": {
+      "$ref": "#/$defs/api_response"
+    },
+    "fetch_status_response_summary": {
+      "$ref": "#/$defs/api_response_summary"
+    },
+    "upload_response_summary": {
+      "$ref": "#/$defs/api_response_summary"
+    },
+    "publish_response_summary": {
+      "$ref": "#/$defs/api_response_summary"
+    },
+    "pre_upload_checks": {
+      "type": ["object", "null"]
+    },
+    "post_upload_fetch_status_summary": {
+      "type": ["object", "null"]
+    },
+    "retry_count": {
+      "type": "integer"
+    },
+    "last_http_status": {
+      "type": ["integer", "null"]
+    },
+    "safety_checks": {
+      "type": "object",
+      "required": [
+        "execution_mode_is_sandbox_validate",
+        "sandbox_item_configured",
+        "item_matches_configured_sandbox",
+        "production_item_blocked",
+        "upload_guard_passed",
+        "publish_guard_passed",
+        "publish_validation_phase"
+      ]
+    },
+    "redaction_checks": {
+      "type": "object",
+      "required": [
+        "sanitized_response_bodies",
+        "checked_secret_value_count",
+        "secret_values_present_in_artifact",
+        "authorization_header_pattern_present",
+        "key_material_pattern_present",
+        "secret_marker_pattern_present",
+        "redaction_guard_triggered"
+      ]
+    },
+    "package_hash": {
+      "type": "object",
+      "required": ["algorithm", "value", "package_path", "package_size_bytes"],
+      "properties": {
+        "algorithm": { "type": "string" },
+        "value": { "type": "string" },
+        "package_path": { "type": "string" },
+        "package_size_bytes": { "type": "integer" }
+      }
+    },
+    "manual_new_item_handoff": {
+      "type": "object",
+      "required": ["status", "dashboard_path", "required_inputs", "notes"]
+    },
+    "existing_item_update_dry_run": {
+      "type": "object",
+      "required": [
+        "status",
+        "execution_mode",
+        "publisher_id",
+        "item_id",
+        "package_sha256",
+        "credentials_preflight",
+        "item_existence_check",
+        "fetch_status_response",
+        "upload_response",
+        "publish_response",
+        "publish_type_decision",
+        "failure_reason"
+      ],
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": ["passed", "failed", "skipped"]
+        },
+        "execution_mode": {
+          "type": "string",
+          "enum": ["planned", "sandbox_validate"]
+        },
+        "publisher_id": {
+          "type": ["string", "null"]
+        },
+        "item_id": {
+          "type": ["string", "null"]
+        },
+        "package_sha256": {
+          "type": "string"
+        },
+        "credentials_preflight": {
+          "$ref": "#/$defs/credentials"
+        },
+        "item_existence_check": {
+          "type": "object",
+          "required": ["status", "item_id", "source"]
+        },
+        "fetch_status_response": {
+          "$ref": "#/$defs/api_response"
+        },
+        "upload_response": {
+          "$ref": "#/$defs/api_response"
+        },
+        "publish_response": {
+          "$ref": "#/$defs/api_response"
+        },
+        "publish_type_decision": {
+          "type": "object",
+          "required": ["publish_type", "reason"]
+        },
+        "failure_reason": {
+          "type": ["string", "null"]
+        }
+      }
+    },
+    "failure_reason": {
+      "type": ["string", "null"]
+    },
+    "next_step": {
+      "type": "string"
+    }
+  },
+  "$defs": {
+    "credentials": {
+      "type": "object",
+      "required": ["status", "mode", "available", "missing"],
+      "properties": {
+        "status": { "type": "string" },
+        "mode": { "type": "string" },
+        "available": { "type": "array", "items": { "type": "string" } },
+        "missing": { "type": "array", "items": { "type": "string" } },
+        "validated": { "type": "boolean" },
+        "token_mode": { "type": "string" }
+      }
+    },
+    "api_response": {
+      "type": "object",
+      "required": ["executed", "method", "endpoint", "ok", "status_code", "body"],
+      "properties": {
+        "executed": { "type": "boolean" },
+        "method": { "type": "string" },
+        "endpoint": { "type": "string" },
+        "ok": { "type": ["boolean", "null"] },
+        "status_code": { "type": "integer" },
+        "http_status": { "type": ["integer", "null"] },
+        "body": {},
+        "response_body_summary": { "type": ["object", "null"] },
+        "response_headers_summary": { "type": ["object", "null"] },
+        "error_details": { "type": ["object", "null"] },
+        "package_path": { "type": "string" },
+        "package_sha256": { "type": "string" },
+        "publish_type": { "type": "string" },
+        "skipped": { "type": "boolean" },
+        "reason": { "type": "string" }
+      }
+    },
+    "api_response_summary": {
+      "type": "object",
+      "required": ["executed", "ok", "status_code", "skipped", "body_keys"],
+      "properties": {
+        "executed": { "type": "boolean" },
+        "ok": { "type": ["boolean", "null"] },
+        "status_code": { "type": "integer" },
+        "http_status": { "type": ["integer", "null"] },
+        "skipped": { "type": "boolean" },
+        "body_keys": { "type": "array", "items": { "type": "string" } },
+        "response_body_summary": { "type": ["object", "null"] },
+        "response_headers_summary": { "type": ["object", "null"] },
+        "error_details": { "type": ["object", "null"] }
+      }
+    }
+  }
+}

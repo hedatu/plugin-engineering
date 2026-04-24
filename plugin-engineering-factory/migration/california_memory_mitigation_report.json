@@ -1,0 +1,17 @@
+{
+  "generated_at": "2026-04-22T21:14:46.1861567+08:00",
+  "server_id": "california",
+  "memory_total_mb": 961,
+  "memory_used_mb": 585,
+  "memory_free_mb": 70,
+  "swap_present": true,
+  "swap_type": "file",
+  "swap_size_mb": 2047,
+  "swap_used_mb": 194,
+  "swappiness": 60,
+  "low_memory_warning": true,
+  "mitigation_status": "existing_swap_reused",
+  "staging_allowed": true,
+  "production_ready": false,
+  "recommended_next_action": "Upgrade California to at least 2GB RAM before production cutover, or keep the current staging-only scope."
+}

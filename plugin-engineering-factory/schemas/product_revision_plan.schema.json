@@ -1,0 +1,99 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "stage",
+    "status",
+    "run_id",
+    "source_acceptance_status",
+    "revision_reason",
+    "product_risks",
+    "required_functionality_fixes",
+    "required_test_fixes",
+    "required_ux_fixes",
+    "required_listing_fixes",
+    "affected_archetype",
+    "affected_builder",
+    "source_package_sha256",
+    "requires_new_build",
+    "requires_new_version_bump",
+    "requires_new_browser_smoke",
+    "requires_new_product_acceptance_review",
+    "requires_new_upload_approval",
+    "requires_new_publish_approval",
+    "next_step",
+    "redaction_checks"
+  ],
+  "properties": {
+    "stage": {
+      "type": "string",
+      "enum": ["PRODUCT_CREATE_REVISION_PLAN"]
+    },
+    "status": {
+      "type": "string",
+      "enum": ["passed", "failed"]
+    },
+    "run_id": {
+      "type": "string"
+    },
+    "source_acceptance_status": {
+      "type": "string"
+    },
+    "revision_reason": {
+      "type": "string"
+    },
+    "product_risks": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "required_functionality_fixes": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "required_test_fixes": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "required_ux_fixes": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "required_listing_fixes": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "affected_archetype": {
+      "type": ["string", "null"]
+    },
+    "affected_builder": {
+      "type": ["string", "null"]
+    },
+    "source_package_sha256": {
+      "type": "string"
+    },
+    "requires_new_build": {
+      "type": "boolean"
+    },
+    "requires_new_version_bump": {
+      "type": "boolean"
+    },
+    "requires_new_browser_smoke": {
+      "type": "boolean"
+    },
+    "requires_new_product_acceptance_review": {
+      "type": "boolean"
+    },
+    "requires_new_upload_approval": {
+      "type": "boolean"
+    },
+    "requires_new_publish_approval": {
+      "type": "boolean"
+    },
+    "next_step": {
+      "type": "string"
+    },
+    "redaction_checks": {
+      "type": "object"
+    }
+  }
+}

@@ -1,0 +1,134 @@
+{
+  "stage": "PREMIUM_PRODUCT_PACKAGING",
+  "status": "passed",
+  "run_id": "sandbox-2026-04-19-215222-dnnpkaefmlha-v0-1-2-c64a39",
+  "product_name": "LeadFill One Profile",
+  "product_category": "Workflow And Form Filling",
+  "wedge": "single_profile_form_fill",
+  "target_user": "Sales reps, recruiters, and operators repeatedly entering the same contact details into web forms.",
+  "one_sentence_value": "Save one local profile and fill visible lead form fields on the current page in one click.",
+  "pricing_positioning": "Current sandbox revision is free-only. Packaging should still look premium without inventing a paid tier.",
+  "trust_positioning": "Professional single-purpose utility with real browser-smoke proof, minimal permissions, and literal privacy copy.",
+  "local_only_claim": "Uses local Chrome storage and only acts on the active tab after a user click.",
+  "no_login_claim": "No account, login, or workspace setup is required for the core flow.",
+  "no_upload_claim": "Does not upload profile data or page content to a remote service.",
+  "pro_value_message": "Keep the product feeling paid-quality now, and reserve any free-versus-Pro message until monetization is enabled truthfully.",
+  "brand_personality": [
+    "clean",
+    "modern",
+    "professional",
+    "minimal",
+    "trustworthy"
+  ],
+  "visual_style": {
+    "palette": {
+      "primary": "#17324D",
+      "secondary": "#B9D8E8",
+      "accent": "#13836F",
+      "background": "#EEF4F7",
+      "text": "#102233"
+    },
+    "composition_direction": "Quiet premium SaaS presentation with editorial spacing, restrained overlays, and real UI as the proof layer.",
+    "screenshot_usage": "Always start from a real browser-smoke screenshot and add one concise message only."
+  },
+  "screenshot_storyboard": [
+    {
+      "screenshot_id": "screenshot-1",
+      "title": "Core Value",
+      "user_question_answered": "What does this extension do in one sentence?",
+      "source_real_screenshot": "D:\\code\\ai插件优化工作流\\runs\\sandbox-2026-04-19-215222-dnnpkaefmlha-v0-1-2-c64a39\\70_listing_assets\\screenshot_1.png",
+      "overlay_headline": "Save one local profile.",
+      "overlay_subcopy": "Keep first name, email, phone, country, and notes ready in the popup.",
+      "feature_shown": "Popup profile editor",
+      "trust_signal": "Local-only storage",
+      "expected_file": "screenshot_1_1280x800.png",
+      "chrome_store_compliance_notes": "Real popup UI only. Do not show unsupported sync or team features."
+    },
+    {
+      "screenshot_id": "screenshot-2",
+      "title": "Real Workflow",
+      "user_question_answered": "How fast is the core action?",
+      "source_real_screenshot": "D:\\code\\ai插件优化工作流\\runs\\sandbox-2026-04-19-215222-dnnpkaefmlha-v0-1-2-c64a39\\70_listing_assets\\screenshot_2.png",
+      "overlay_headline": "Fill the current page in one click.",
+      "overlay_subcopy": "Run it from the popup only when you are on a real lead form.",
+      "feature_shown": "One-click active-tab fill",
+      "trust_signal": "User-initiated action",
+      "expected_file": "screenshot_2_1280x800.png",
+      "chrome_store_compliance_notes": "Show a real form page and keep the claim to visible supported fields."
+    },
+    {
+      "screenshot_id": "screenshot-3",
+      "title": "Clean Result",
+      "user_question_answered": "What result should I expect after using it?",
+      "source_real_screenshot": "D:\\code\\ai插件优化工作流\\runs\\sandbox-2026-04-19-215222-dnnpkaefmlha-v0-1-2-c64a39\\70_listing_assets\\screenshot_3.png",
+      "overlay_headline": "Keep the filled result clean.",
+      "overlay_subcopy": "Text, email, phone, textarea, and select fields match the saved profile.",
+      "feature_shown": "Completed fill result",
+      "trust_signal": "Browser-smoke verified happy path",
+      "expected_file": "screenshot_3_1280x800.png",
+      "chrome_store_compliance_notes": "Must stay tied to the actual browser-smoke scenario."
+    },
+    {
+      "screenshot_id": "screenshot-4",
+      "title": "Smart Safeguards",
+      "user_question_answered": "What safeguards keep the fill action controlled?",
+      "source_real_screenshot": "D:\\code\\ai插件优化工作流\\runs\\sandbox-2026-04-19-215222-dnnpkaefmlha-v0-1-2-c64a39\\70_listing_assets\\screenshot_1.png",
+      "overlay_headline": "Respect what is already there.",
+      "overlay_subcopy": "Readonly and disabled fields are skipped. Existing values stay unchanged by default.",
+      "feature_shown": "Controlled fill safeguards",
+      "trust_signal": "No overwrite by default",
+      "expected_file": "screenshot_4_1280x800.png",
+      "chrome_store_compliance_notes": "Do not imply background automation or unsupported overwrite rules."
+    },
+    {
+      "screenshot_id": "screenshot-5",
+      "title": "Local Trust",
+      "user_question_answered": "Why is this safer than a broader workflow tool?",
+      "source_real_screenshot": "D:\\code\\ai插件优化工作流\\runs\\sandbox-2026-04-19-215222-dnnpkaefmlha-v0-1-2-c64a39\\70_listing_assets\\screenshot_1.png",
+      "overlay_headline": "Local-only. No account. No cloud sync.",
+      "overlay_subcopy": "Profile data stays in Chrome storage and runs only after a user click.",
+      "feature_shown": "Trust positioning",
+      "trust_signal": "No login. No upload.",
+      "expected_file": "screenshot_5_1280x800.png",
+      "chrome_store_compliance_notes": "Only use claims that match the real storage and network behavior."
+    }
+  ],
+  "promo_tile_concept": "A branded value card with one cropped real screenshot, generous whitespace, and a single product promise.",
+  "marquee_concept": "A wide premium layout that pairs the popup and filled-form result with calm trust language and no fake social proof.",
+  "landing_hero_concept": "A refined hero that frames save, fill, and trust as one continuous local-only workflow.",
+  "short_video_concept": "A 15-second flow from save, to fill, to clean result, ending on local-only and no-login trust copy.",
+  "store_listing_quality_goals": [
+    "Store screenshots stay traceable to browser-smoke captures.",
+    "Promo assets feel premium without pretending to be the app itself.",
+    "Privacy and permission claims match the actual bundle and QA evidence.",
+    "Any future paid tier is disclosed clearly in both listing and UI."
+  ],
+  "required_assets": [
+    "store_icon_128x128",
+    "screenshots_1280x800_up_to_5",
+    "small_promo_440x280",
+    "marquee_1400x560_optional",
+    "landing_hero_1600x900",
+    "pricing_image_1600x900",
+    "support_page_visuals",
+    "demo_video_15s_optional"
+  ],
+  "blocked_claims": [
+    "Number 1 extension",
+    "Official Google recommendation",
+    "Editor choice",
+    "Syncs everywhere",
+    "AI-powered if no AI exists",
+    "No upload if network verification would contradict the claim"
+  ],
+  "next_step": "Generate branded still assets from the storyboard and block publish until the premium asset quality gate passes.",
+  "redaction_checks": {
+    "sanitized_response_bodies": true,
+    "checked_secret_value_count": 0,
+    "secret_values_present_in_artifact": false,
+    "authorization_header_pattern_present": false,
+    "key_material_pattern_present": false,
+    "secret_marker_pattern_present": false,
+    "redaction_guard_triggered": false
+  }
+}

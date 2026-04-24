@@ -1,0 +1,101 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "stage",
+    "approval_id",
+    "run_id",
+    "requested_action",
+    "action_scope",
+    "item_id",
+    "publisher_id",
+    "package_sha256",
+    "manifest_version",
+    "approval_status",
+    "approval_mode",
+    "note_policy_blocked",
+    "write_authorized",
+    "approved_by",
+    "approved_at",
+    "approval_source",
+    "approval_notes",
+    "expires_at",
+    "safety_summary",
+    "blockers",
+    "next_step",
+    "redaction_checks"
+  ],
+  "properties": {
+    "stage": {
+      "type": "string",
+      "enum": ["HUMAN_APPROVAL_GATE"]
+    },
+    "approval_id": {
+      "type": "string"
+    },
+    "run_id": {
+      "type": "string"
+    },
+    "requested_action": {
+      "type": "string"
+    },
+    "action_scope": {
+      "type": "string",
+      "enum": ["none", "sandbox", "production"]
+    },
+    "item_id": {
+      "type": ["string", "null"]
+    },
+    "publisher_id": {
+      "type": ["string", "null"]
+    },
+    "package_sha256": {
+      "type": "string"
+    },
+    "manifest_version": {
+      "type": ["string", "null"]
+    },
+    "approval_status": {
+      "type": "string",
+      "enum": ["not_requested", "approved", "rejected", "expired"]
+    },
+    "approval_mode": {
+      "type": "string",
+      "enum": ["test_artifact_only", "write_allowed"]
+    },
+    "note_policy_blocked": {
+      "type": "boolean"
+    },
+    "write_authorized": {
+      "type": "boolean"
+    },
+    "approved_by": {
+      "type": "string"
+    },
+    "approved_at": {
+      "type": ["string", "null"]
+    },
+    "approval_source": {
+      "type": "string"
+    },
+    "approval_notes": {
+      "type": "string"
+    },
+    "expires_at": {
+      "type": ["string", "null"]
+    },
+    "safety_summary": {
+      "type": "object"
+    },
+    "blockers": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "next_step": {
+      "type": "string"
+    },
+    "redaction_checks": {
+      "type": "object"
+    }
+  }
+}

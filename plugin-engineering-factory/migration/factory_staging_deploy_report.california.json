@@ -1,0 +1,23 @@
+{
+  "generated_at": "2026-04-22T21:14:46.1861567+08:00",
+  "server_id": "california",
+  "deployment_mode": "artifact_sync_only",
+  "factory_state_synced": true,
+  "plugin_site_preview_synced": true,
+  "review_watch_enabled": false,
+  "catalog_viewer_data_present": true,
+  "synced_paths": [
+    "/opt/commercial-extension-factory/apps/factory/state/product_catalog.json",
+    "/opt/commercial-extension-factory/apps/factory/state/release_ledger.json",
+    "/opt/commercial-extension-factory/apps/factory/state/opportunity_backlog.json",
+    "/opt/commercial-extension-factory/apps/plugin-site/generated/plugin-pages",
+    "/opt/commercial-extension-factory/apps/factory/migration"
+  ],
+  "upload_enabled": false,
+  "publish_enabled": false,
+  "dns_cutover_enabled": false,
+  "notes": [
+    "This turn staged factory and plugin-site data only.",
+    "Automatic Chrome Web Store upload and publish remain disabled."
+  ]
+}

@@ -1,0 +1,167 @@
+{
+  "stage": "DEMAND_DISCOVERY_IMPROVEMENT_PLAN",
+  "status": "passed",
+  "run_id": "2026-04-20-091340-daily-01a081",
+  "selected_candidate_id": "cand-tab-001",
+  "better_sources": [
+    "Chrome Web Store review samples across recent time windows.",
+    "Support sites or help centers with reproducible complaint text.",
+    "GitHub issues only when the project is active and user-facing.",
+    "Reddit or forum corroboration for practitioner workflow pain."
+  ],
+  "category_strategy": [
+    "Bias toward low-permission, local-only productivity wedges.",
+    "Do not build same-family variants unless differentiation is explicit and testable.",
+    "Allow no-go days when evidence stays weak."
+  ],
+  "keyword_strategy": [
+    "Start from the user job, then add failure words such as skip, miss, overwrite, noisy, manual.",
+    "Prefer keywords that imply a narrow, testable happy path over broad category terms."
+  ],
+  "minimum_thresholds": [
+    "evidence_quality_score >= 60 before build",
+    "testability_score >= 60 before build",
+    "At least one non-store source before repeated same-family builds",
+    "At least three meaningful pain clusters before build"
+  ],
+  "negative_review_mining_strategy": [
+    "Mine 1-star to 3-star reviews for repeated verbs such as skip, overwrite, fail, noisy, manual.",
+    "Separate workflow friction from field coverage and privacy complaints."
+  ],
+  "support_site_strategy": [
+    "Prefer support pages with exact field or workflow failures.",
+    "Capture dated excerpts and URLs instead of paraphrasing."
+  ],
+  "github_issue_strategy": [
+    "Use GitHub issues as corroboration when they include reproducible steps.",
+    "Down-rank stale trackers older than 180 days."
+  ],
+  "reddit_or_forum_strategy": [
+    "Treat Reddit/forum evidence as corroboration, not the primary decision source.",
+    "Look for operator and recruiter communities where repetitive browser tasks are discussed."
+  ],
+  "recency_strategy": [
+    "Bias toward evidence from the last 90 days.",
+    "Require newer corroboration when all evidence is older than 180 days."
+  ],
+  "anti_copycat_policy": [
+    "Do not build just because a category is large.",
+    "Require a narrower user story or a lower-permission posture than existing tools."
+  ],
+  "portfolio_differentiation_strategy": [
+    "Treat portfolio overlap as a real penalty, not just a warning.",
+    "When overlap is high, research more or skip instead of forcing a build."
+  ],
+  "next_10_search_queries": [
+    {
+      "query": "site:chromewebstore.google.com form filler one profile visible fields review",
+      "target_category": "form automation",
+      "hypothesis": "Users still want a local-only one-profile form filler that avoids heavy dashboards.",
+      "expected_user_pain": "Missed fields, too many templates, overwrite anxiety.",
+      "preferred_archetype": "single_profile_form_fill",
+      "risk": "High portfolio overlap if the wedge is still generic.",
+      "why_now": "Recent acceptance work exposed a sharper quality bar for form-fill wedges.",
+      "exclude_if": "Evidence stays store-only or pain remains vague."
+    },
+    {
+      "query": "site:reddit.com recruiter intake form autofill local-only chrome extension",
+      "target_category": "form automation",
+      "hypothesis": "Recruiter intake forms are specific enough to justify a narrower form-fill wedge.",
+      "expected_user_pain": "Repeated contact entry across similar fields.",
+      "preferred_archetype": "single_profile_form_fill",
+      "risk": "Could still collapse into generic CRM autofill.",
+      "why_now": "The current form-fill archetype now has stronger test coverage.",
+      "exclude_if": "Support site and forum evidence disagree on the core flow."
+    },
+    {
+      "query": "site:chromewebstore.google.com current window tab export csv pinned tabs review",
+      "target_category": "tab/workflow export",
+      "hypothesis": "Current-window-only tab export remains a high-testability productivity wedge.",
+      "expected_user_pain": "All-session export is too broad and noisy.",
+      "preferred_archetype": "tab_csv_window_export",
+      "risk": "Low differentiation if the wedge is just minor UI polish.",
+      "why_now": "This family remains low-permission and highly testable.",
+      "exclude_if": "User pain is mostly about advanced enterprise features."
+    },
+    {
+      "query": "site:github.com browser tab export extension issue current window csv",
+      "target_category": "tab/workflow export",
+      "hypothesis": "GitHub issue evidence can confirm whether export complaints are reproducible and recent.",
+      "expected_user_pain": "Noisy export columns and weak success feedback.",
+      "preferred_archetype": "tab_csv_window_export",
+      "risk": "GitHub issues may reflect maintainer backlog instead of demand.",
+      "why_now": "Need stronger non-store corroboration before more same-family builds.",
+      "exclude_if": "Issue tracker is stale beyond 180 days."
+    },
+    {
+      "query": "site:chromewebstore.google.com gmail snippet quick insert compose review",
+      "target_category": "email snippet / template",
+      "hypothesis": "Users want a two-click snippet insert, not a heavy side panel.",
+      "expected_user_pain": "Slow search and too much UI for a simple compose action.",
+      "preferred_archetype": "gmail_snippet",
+      "risk": "Permission trust may dominate the complaints.",
+      "why_now": "Gmail snippets remain attractive only if the wedge stays lightweight.",
+      "exclude_if": "Required permissions imply mailbox-wide access."
+    },
+    {
+      "query": "site:reddit.com canned reply chrome extension keyboard shortcut pain",
+      "target_category": "email snippet / template",
+      "hypothesis": "Forum users may reveal a sharper keyboard-first compose wedge.",
+      "expected_user_pain": "Templates feel slow when they interrupt the compose flow.",
+      "preferred_archetype": "gmail_snippet",
+      "risk": "Forum anecdotes may be too thin without store corroboration.",
+      "why_now": "Need external evidence before greenlighting another compose helper.",
+      "exclude_if": "Pain cannot be converted into a deterministic happy path."
+    },
+    {
+      "query": "site:chromewebstore.google.com small saas browser extension copy paste workflow review",
+      "target_category": "small SaaS productivity gaps",
+      "hypothesis": "Operators still pay a tax on repetitive browser copy-paste flows.",
+      "expected_user_pain": "Manual cleanup, repeated entry, weak in-page feedback.",
+      "preferred_archetype": "single_profile_form_fill",
+      "risk": "May be too broad unless the target workflow narrows fast.",
+      "why_now": "The factory should widen beyond the current candidate families without raising permission risk.",
+      "exclude_if": "The wedge implies multi-page automation or background sync."
+    },
+    {
+      "query": "site:github.com browser extension one-click data cleanup issue",
+      "target_category": "data cleanup / copy-paste automation",
+      "hypothesis": "Developer and operator utilities can yield narrow, local-only wedges.",
+      "expected_user_pain": "Too many cleanup steps before data is shareable.",
+      "preferred_archetype": "tab_csv_window_export",
+      "risk": "Could drift into unsupported archetypes quickly.",
+      "why_now": "Need stronger low-permission alternatives to repeated form-fill work.",
+      "exclude_if": "The solution requires complex parsing across arbitrary sites."
+    },
+    {
+      "query": "site:chromewebstore.google.com browser workflow friction local-only productivity review",
+      "target_category": "browser workflow friction",
+      "hypothesis": "Some workflow wedges are attractive precisely because they stay local-only and shallow.",
+      "expected_user_pain": "Heavy dashboards for tasks that should be single-click.",
+      "preferred_archetype": "tab_csv_window_export",
+      "risk": "May overlap with existing lightweight utilities.",
+      "why_now": "Discovery should bias toward low-permission, auditable problems.",
+      "exclude_if": "The user need depends on cloud sync or collaboration."
+    },
+    {
+      "query": "site:chromewebstore.google.com developer utility chrome extension local-only review",
+      "target_category": "developer or operator utilities",
+      "hypothesis": "Small developer/operator tools can be differentiated by strict local-only behavior.",
+      "expected_user_pain": "Too much setup for a repeatable browser-side task.",
+      "preferred_archetype": "tab_csv_window_export",
+      "risk": "Could fail testability if the flow is tied to complex app state.",
+      "why_now": "Need discovery surface area beyond the current three archetypes while staying safe.",
+      "exclude_if": "The happy path cannot be validated in controlled fixtures."
+    }
+  ],
+  "next_step": "improve_discovery_inputs_before_next_build_attempt",
+  "redaction_checks": {
+    "sanitized_response_bodies": true,
+    "checked_secret_value_count": 0,
+    "secret_values_present_in_artifact": false,
+    "authorization_header_pattern_present": false,
+    "key_material_pattern_present": false,
+    "secret_marker_pattern_present": false,
+    "redaction_guard_triggered": false
+  }
+}

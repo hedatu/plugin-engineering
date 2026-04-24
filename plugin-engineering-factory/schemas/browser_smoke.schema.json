@@ -1,0 +1,187 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "stage",
+    "status",
+    "generated_at",
+    "build_generated_at",
+    "candidate_id",
+    "archetype",
+    "happy_path_verified",
+    "runtime",
+    "browser_driver",
+    "browser_version",
+    "extension_id",
+    "incompatibility_reason",
+    "scenarios",
+    "screenshot_manifest"
+  ],
+  "properties": {
+    "stage": {
+      "type": "string",
+      "enum": ["BROWSER_SMOKE_AND_CAPTURE"]
+    },
+    "status": {
+      "type": "string",
+      "enum": ["passed", "failed"]
+    },
+    "generated_at": {
+      "type": "string",
+      "minLength": 1
+    },
+    "build_generated_at": {
+      "type": "string"
+    },
+    "candidate_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "archetype": {
+      "type": "string",
+      "minLength": 1
+    },
+    "happy_path_verified": {
+      "type": "boolean"
+    },
+    "runtime": {
+      "type": ["string", "null"]
+    },
+    "trigger_surface": {
+      "type": ["string", "null"]
+    },
+    "trigger_method": {
+      "type": ["string", "null"]
+    },
+    "browser_driver": {
+      "type": ["string", "null"]
+    },
+    "browser_version": {
+      "type": ["string", "null"]
+    },
+    "popup_opened": {
+      "type": ["boolean", "null"]
+    },
+    "automation_result_received": {
+      "type": ["boolean", "null"]
+    },
+    "filled_count": {
+      "type": ["integer", "null"]
+    },
+    "skipped_count": {
+      "type": ["integer", "null"]
+    },
+    "readonly_skipped_count": {
+      "type": ["integer", "null"]
+    },
+    "select_filled_count": {
+      "type": ["integer", "null"]
+    },
+    "no_match_detected": {
+      "type": ["boolean", "null"]
+    },
+    "overwrite_prevented": {
+      "type": ["boolean", "null"]
+    },
+    "popup_feedback_verified": {
+      "type": ["boolean", "null"]
+    },
+    "scenario_results": {
+      "type": ["object", "null"],
+      "additionalProperties": {
+        "type": "string",
+        "enum": ["passed", "failed", "unsupported"]
+      }
+    },
+    "fill_executed_via": {
+      "type": ["string", "null"]
+    },
+    "active_tab_expected": {
+      "type": ["integer", "null"]
+    },
+    "browser": {
+      "type": ["object", "null"]
+    },
+    "extension_id": {
+      "type": ["string", "null"]
+    },
+    "extension_name": {
+      "type": "string"
+    },
+    "extension_path": {
+      "type": "string"
+    },
+    "scenarios": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "status", "verified"],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "status": {
+            "type": "string",
+            "enum": ["passed", "failed", "unsupported"]
+          },
+          "verified": {
+            "type": "boolean"
+          },
+          "trigger_surface": {
+            "type": "string"
+          },
+          "trigger_method": {
+            "type": "string"
+          },
+          "browser_driver": {
+            "type": "string"
+          },
+          "popup_opened": {
+            "type": "boolean"
+          },
+          "automation_result_received": {
+            "type": "boolean"
+          },
+          "filled_count": {
+            "type": ["integer", "null"]
+          },
+          "skipped_count": {
+            "type": ["integer", "null"]
+          },
+          "readonly_skipped_count": {
+            "type": ["integer", "null"]
+          },
+          "select_filled_count": {
+            "type": ["integer", "null"]
+          },
+          "matched_count": {
+            "type": ["integer", "null"]
+          },
+          "no_match_detected": {
+            "type": ["boolean", "null"]
+          },
+          "overwrite_prevented": {
+            "type": ["boolean", "null"]
+          },
+          "fill_executed_via": {
+            "type": "string"
+          },
+          "active_tab_expected": {
+            "type": "integer"
+          }
+        }
+      }
+    },
+    "screenshot_manifest": {
+      "type": "string",
+      "minLength": 1
+    },
+    "failure_reason": {
+      "type": "string"
+    },
+    "incompatibility_reason": {
+      "type": ["string", "null"]
+    }
+  }
+}

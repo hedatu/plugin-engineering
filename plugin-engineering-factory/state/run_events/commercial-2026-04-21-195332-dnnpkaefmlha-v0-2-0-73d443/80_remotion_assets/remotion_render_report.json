@@ -1,0 +1,233 @@
+{
+  "stage": "REMOTION_ASSET_GENERATION",
+  "status": "passed",
+  "generated_at": "2026-04-21T11:54:48.935Z",
+  "run_id": "commercial-2026-04-21-195332-dnnpkaefmlha-v0-2-0-73d443",
+  "engine": "remotion",
+  "dependency_status": "available",
+  "browser_status": "user-defined-path",
+  "props_file": "D:/code/ai插件优化工作流/state/run_events/commercial-2026-04-21-195332-dnnpkaefmlha-v0-2-0-73d443/80_remotion_assets/props/leadfill-one-profile.json",
+  "output_root": "D:/code/ai插件优化工作流/state/run_events/commercial-2026-04-21-195332-dnnpkaefmlha-v0-2-0-73d443/80_remotion_assets",
+  "stills": {
+    "requested": true,
+    "status": "passed",
+    "generated_files": [
+      "D:/code/ai插件优化工作流/state/run_events/commercial-2026-04-21-195332-dnnpkaefmlha-v0-2-0-73d443/80_remotion_assets/screenshots/screenshot_1_1280x800.png",
+      "D:/code/ai插件优化工作流/state/run_events/commercial-2026-04-21-195332-dnnpkaefmlha-v0-2-0-73d443/80_remotion_assets/screenshots/screenshot_2_1280x800.png",
+      "D:/code/ai插件优化工作流/state/run_events/commercial-2026-04-21-195332-dnnpkaefmlha-v0-2-0-73d443/80_remotion_assets/screenshots/screenshot_3_1280x800.png",
+      "D:/code/ai插件优化工作流/state/run_events/commercial-2026-04-21-195332-dnnpkaefmlha-v0-2-0-73d443/80_remotion_assets/screenshots/screenshot_4_1280x800.png",
+      "D:/code/ai插件优化工作流/state/run_events/commercial-2026-04-21-195332-dnnpkaefmlha-v0-2-0-73d443/80_remotion_assets/screenshots/screenshot_5_1280x800.png",
+      "D:/code/ai插件优化工作流/state/run_events/commercial-2026-04-21-195332-dnnpkaefmlha-v0-2-0-73d443/80_remotion_assets/promo/small_promo_440x280.png",
+      "D:/code/ai插件优化工作流/state/run_events/commercial-2026-04-21-195332-dnnpkaefmlha-v0-2-0-73d443/80_remotion_assets/promo/marquee_1400x560.png",
+      "D:/code/ai插件优化工作流/state/run_events/commercial-2026-04-21-195332-dnnpkaefmlha-v0-2-0-73d443/80_remotion_assets/landing/hero_1600x900.png",
+      "D:/code/ai插件优化工作流/state/run_events/commercial-2026-04-21-195332-dnnpkaefmlha-v0-2-0-73d443/80_remotion_assets/landing/pricing_1600x900.png"
+    ]
+  },
+  "video": {
+    "requested": false,
+    "status": "not_requested",
+    "generated_files": []
+  },
+  "assets": [
+    {
+      "asset_id": "store-screenshot-1",
+      "composition_id": "StoreScreenshot",
+      "output_path": "D:/code/ai插件优化工作流/state/run_events/commercial-2026-04-21-195332-dnnpkaefmlha-v0-2-0-73d443/80_remotion_assets/screenshots/screenshot_1_1280x800.png",
+      "relative_output_path": "screenshots/screenshot_1_1280x800.png",
+      "width": 1280,
+      "height": 800,
+      "status": "passed",
+      "visual_role": "store_screenshot",
+      "uses_real_ui": true,
+      "source_real_screenshots": [
+        "D:\\code\\ai插件优化工作流\\runs\\commercial-2026-04-21-195332-dnnpkaefmlha-v0-2-0-73d443\\70_listing_assets\\screenshot_1.png"
+      ],
+      "source_traceable": true,
+      "overlay_word_count": 16,
+      "overlay_density": "low",
+      "brand_palette_applied": true,
+      "forbidden_claims_present": false,
+      "promo_not_raw_screenshot": null
+    },
+    {
+      "asset_id": "store-screenshot-2",
+      "composition_id": "StoreScreenshot",
+      "output_path": "D:/code/ai插件优化工作流/state/run_events/commercial-2026-04-21-195332-dnnpkaefmlha-v0-2-0-73d443/80_remotion_assets/screenshots/screenshot_2_1280x800.png",
+      "relative_output_path": "screenshots/screenshot_2_1280x800.png",
+      "width": 1280,
+      "height": 800,
+      "status": "passed",
+      "visual_role": "store_screenshot",
+      "uses_real_ui": true,
+      "source_real_screenshots": [
+        "D:\\code\\ai插件优化工作流\\runs\\commercial-2026-04-21-195332-dnnpkaefmlha-v0-2-0-73d443\\70_listing_assets\\screenshot_2.png"
+      ],
+      "source_traceable": true,
+      "overlay_word_count": 21,
+      "overlay_density": "medium",
+      "brand_palette_applied": true,
+      "forbidden_claims_present": false,
+      "promo_not_raw_screenshot": null
+    },
+    {
+      "asset_id": "store-screenshot-3",
+      "composition_id": "StoreScreenshot",
+      "output_path": "D:/code/ai插件优化工作流/state/run_events/commercial-2026-04-21-195332-dnnpkaefmlha-v0-2-0-73d443/80_remotion_assets/screenshots/screenshot_3_1280x800.png",
+      "relative_output_path": "screenshots/screenshot_3_1280x800.png",
+      "width": 1280,
+      "height": 800,
+      "status": "passed",
+      "visual_role": "store_screenshot",
+      "uses_real_ui": true,
+      "source_real_screenshots": [
+        "D:\\code\\ai插件优化工作流\\runs\\commercial-2026-04-21-195332-dnnpkaefmlha-v0-2-0-73d443\\70_listing_assets\\screenshot_3.png"
+      ],
+      "source_traceable": true,
+      "overlay_word_count": 16,
+      "overlay_density": "low",
+      "brand_palette_applied": true,
+      "forbidden_claims_present": false,
+      "promo_not_raw_screenshot": null
+    },
+    {
+      "asset_id": "store-screenshot-4",
+      "composition_id": "StoreScreenshot",
+      "output_path": "D:/code/ai插件优化工作流/state/run_events/commercial-2026-04-21-195332-dnnpkaefmlha-v0-2-0-73d443/80_remotion_assets/screenshots/screenshot_4_1280x800.png",
+      "relative_output_path": "screenshots/screenshot_4_1280x800.png",
+      "width": 1280,
+      "height": 800,
+      "status": "passed",
+      "visual_role": "store_screenshot",
+      "uses_real_ui": true,
+      "source_real_screenshots": [
+        "D:\\code\\ai插件优化工作流\\runs\\commercial-2026-04-21-195332-dnnpkaefmlha-v0-2-0-73d443\\70_listing_assets\\screenshot_1.png"
+      ],
+      "source_traceable": true,
+      "overlay_word_count": 17,
+      "overlay_density": "low",
+      "brand_palette_applied": true,
+      "forbidden_claims_present": false,
+      "promo_not_raw_screenshot": null
+    },
+    {
+      "asset_id": "store-screenshot-5",
+      "composition_id": "StoreScreenshot",
+      "output_path": "D:/code/ai插件优化工作流/state/run_events/commercial-2026-04-21-195332-dnnpkaefmlha-v0-2-0-73d443/80_remotion_assets/screenshots/screenshot_5_1280x800.png",
+      "relative_output_path": "screenshots/screenshot_5_1280x800.png",
+      "width": 1280,
+      "height": 800,
+      "status": "passed",
+      "visual_role": "store_screenshot",
+      "uses_real_ui": true,
+      "source_real_screenshots": [
+        "D:\\code\\ai插件优化工作流\\runs\\commercial-2026-04-21-195332-dnnpkaefmlha-v0-2-0-73d443\\70_listing_assets\\screenshot_1.png"
+      ],
+      "source_traceable": true,
+      "overlay_word_count": 19,
+      "overlay_density": "medium",
+      "brand_palette_applied": true,
+      "forbidden_claims_present": false,
+      "promo_not_raw_screenshot": null
+    },
+    {
+      "asset_id": "small-promo",
+      "composition_id": "PromoTile440x280",
+      "output_path": "D:/code/ai插件优化工作流/state/run_events/commercial-2026-04-21-195332-dnnpkaefmlha-v0-2-0-73d443/80_remotion_assets/promo/small_promo_440x280.png",
+      "relative_output_path": "promo/small_promo_440x280.png",
+      "width": 440,
+      "height": 280,
+      "status": "passed",
+      "visual_role": "promo_tile",
+      "uses_real_ui": true,
+      "source_real_screenshots": [
+        "D:\\code\\ai插件优化工作流\\runs\\commercial-2026-04-21-195332-dnnpkaefmlha-v0-2-0-73d443\\70_listing_assets\\screenshot_1.png",
+        "D:\\code\\ai插件优化工作流\\runs\\commercial-2026-04-21-195332-dnnpkaefmlha-v0-2-0-73d443\\70_listing_assets\\screenshot_2.png",
+        "D:\\code\\ai插件优化工作流\\runs\\commercial-2026-04-21-195332-dnnpkaefmlha-v0-2-0-73d443\\70_listing_assets\\screenshot_3.png"
+      ],
+      "source_traceable": true,
+      "overlay_word_count": 21,
+      "overlay_density": "medium",
+      "brand_palette_applied": true,
+      "forbidden_claims_present": false,
+      "promo_not_raw_screenshot": true
+    },
+    {
+      "asset_id": "marquee",
+      "composition_id": "Marquee1400x560",
+      "output_path": "D:/code/ai插件优化工作流/state/run_events/commercial-2026-04-21-195332-dnnpkaefmlha-v0-2-0-73d443/80_remotion_assets/promo/marquee_1400x560.png",
+      "relative_output_path": "promo/marquee_1400x560.png",
+      "width": 1400,
+      "height": 560,
+      "status": "passed",
+      "visual_role": "promo_tile",
+      "uses_real_ui": true,
+      "source_real_screenshots": [
+        "D:\\code\\ai插件优化工作流\\runs\\commercial-2026-04-21-195332-dnnpkaefmlha-v0-2-0-73d443\\70_listing_assets\\screenshot_1.png",
+        "D:\\code\\ai插件优化工作流\\runs\\commercial-2026-04-21-195332-dnnpkaefmlha-v0-2-0-73d443\\70_listing_assets\\screenshot_2.png",
+        "D:\\code\\ai插件优化工作流\\runs\\commercial-2026-04-21-195332-dnnpkaefmlha-v0-2-0-73d443\\70_listing_assets\\screenshot_3.png"
+      ],
+      "source_traceable": true,
+      "overlay_word_count": 21,
+      "overlay_density": "medium",
+      "brand_palette_applied": true,
+      "forbidden_claims_present": false,
+      "promo_not_raw_screenshot": true
+    },
+    {
+      "asset_id": "landing-hero",
+      "composition_id": "LandingHero",
+      "output_path": "D:/code/ai插件优化工作流/state/run_events/commercial-2026-04-21-195332-dnnpkaefmlha-v0-2-0-73d443/80_remotion_assets/landing/hero_1600x900.png",
+      "relative_output_path": "landing/hero_1600x900.png",
+      "width": 1600,
+      "height": 900,
+      "status": "passed",
+      "visual_role": "landing_hero",
+      "uses_real_ui": true,
+      "source_real_screenshots": [
+        "D:\\code\\ai插件优化工作流\\runs\\commercial-2026-04-21-195332-dnnpkaefmlha-v0-2-0-73d443\\70_listing_assets\\screenshot_1.png",
+        "D:\\code\\ai插件优化工作流\\runs\\commercial-2026-04-21-195332-dnnpkaefmlha-v0-2-0-73d443\\70_listing_assets\\screenshot_2.png",
+        "D:\\code\\ai插件优化工作流\\runs\\commercial-2026-04-21-195332-dnnpkaefmlha-v0-2-0-73d443\\70_listing_assets\\screenshot_3.png"
+      ],
+      "source_traceable": true,
+      "overlay_word_count": 21,
+      "overlay_density": "medium",
+      "brand_palette_applied": true,
+      "forbidden_claims_present": false,
+      "promo_not_raw_screenshot": null
+    },
+    {
+      "asset_id": "pricing-hero",
+      "composition_id": "PricingHero",
+      "output_path": "D:/code/ai插件优化工作流/state/run_events/commercial-2026-04-21-195332-dnnpkaefmlha-v0-2-0-73d443/80_remotion_assets/landing/pricing_1600x900.png",
+      "relative_output_path": "landing/pricing_1600x900.png",
+      "width": 1600,
+      "height": 900,
+      "status": "passed",
+      "visual_role": "pricing_hero",
+      "uses_real_ui": true,
+      "source_real_screenshots": [
+        "D:\\code\\ai插件优化工作流\\runs\\commercial-2026-04-21-195332-dnnpkaefmlha-v0-2-0-73d443\\70_listing_assets\\screenshot_1.png",
+        "D:\\code\\ai插件优化工作流\\runs\\commercial-2026-04-21-195332-dnnpkaefmlha-v0-2-0-73d443\\70_listing_assets\\screenshot_2.png",
+        "D:\\code\\ai插件优化工作流\\runs\\commercial-2026-04-21-195332-dnnpkaefmlha-v0-2-0-73d443\\70_listing_assets\\screenshot_3.png"
+      ],
+      "source_traceable": true,
+      "overlay_word_count": 6,
+      "overlay_density": "low",
+      "brand_palette_applied": true,
+      "forbidden_claims_present": false,
+      "promo_not_raw_screenshot": null
+    }
+  ],
+  "generated_files": [
+    "D:/code/ai插件优化工作流/state/run_events/commercial-2026-04-21-195332-dnnpkaefmlha-v0-2-0-73d443/80_remotion_assets/screenshots/screenshot_1_1280x800.png",
+    "D:/code/ai插件优化工作流/state/run_events/commercial-2026-04-21-195332-dnnpkaefmlha-v0-2-0-73d443/80_remotion_assets/screenshots/screenshot_2_1280x800.png",
+    "D:/code/ai插件优化工作流/state/run_events/commercial-2026-04-21-195332-dnnpkaefmlha-v0-2-0-73d443/80_remotion_assets/screenshots/screenshot_3_1280x800.png",
+    "D:/code/ai插件优化工作流/state/run_events/commercial-2026-04-21-195332-dnnpkaefmlha-v0-2-0-73d443/80_remotion_assets/screenshots/screenshot_4_1280x800.png",
+    "D:/code/ai插件优化工作流/state/run_events/commercial-2026-04-21-195332-dnnpkaefmlha-v0-2-0-73d443/80_remotion_assets/screenshots/screenshot_5_1280x800.png",
+    "D:/code/ai插件优化工作流/state/run_events/commercial-2026-04-21-195332-dnnpkaefmlha-v0-2-0-73d443/80_remotion_assets/promo/small_promo_440x280.png",
+    "D:/code/ai插件优化工作流/state/run_events/commercial-2026-04-21-195332-dnnpkaefmlha-v0-2-0-73d443/80_remotion_assets/promo/marquee_1400x560.png",
+    "D:/code/ai插件优化工作流/state/run_events/commercial-2026-04-21-195332-dnnpkaefmlha-v0-2-0-73d443/80_remotion_assets/landing/hero_1600x900.png",
+    "D:/code/ai插件优化工作流/state/run_events/commercial-2026-04-21-195332-dnnpkaefmlha-v0-2-0-73d443/80_remotion_assets/landing/pricing_1600x900.png"
+  ],
+  "next_step": "Run asset QA and the listing quality gate against the generated still assets."
+}

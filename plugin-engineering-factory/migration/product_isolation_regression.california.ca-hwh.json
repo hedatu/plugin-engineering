@@ -1,0 +1,25 @@
+﻿{
+    "generated_at":  "2026-04-23T09:01:00.4145167+08:00",
+    "leadfill":  {
+                     "productKey":  "leadfill-one-profile",
+                     "planKey":  "lifetime",
+                     "price":  "USD 19.00",
+                     "billingType":  "onetime",
+                     "checkout_enabled":  true,
+                     "monetization_enabled":  true,
+                     "featureKey":  "leadfill_fill_action",
+                     "free_quota":  10,
+                     "website_url":  "https://ca-hwh.915500.xyz/products/leadfill-one-profile"
+                 },
+    "weiwang":  {
+                    "present_in_commercial_hwh_db":  false,
+                    "free_only":  true,
+                    "checkout_enabled":  false,
+                    "monetization_enabled":  false,
+                    "leadfill_entitlement_rows":  0,
+                    "note":  "California commercial HWH staging contains no weiwang product or entitlement rows, so it remains isolated from LeadFill paid access."
+                },
+    "blockers":  [
+
+                 ]
+}

@@ -1,0 +1,189 @@
+{
+  "stage": "STORE_LISTING_RELEASE_PACKAGE_V2",
+  "generated_at": "2026-04-21T06:23:04.824Z",
+  "package_dir": "state/run_events/sandbox-2026-04-19-215222-dnnpkaefmlha-v0-1-2-c64a39/120_store_listing_release_package",
+  "file_count": 31,
+  "self_hash_strategy": "package_manifest.json does not include its own sha256 because the file is self-referential",
+  "files": [
+    {
+      "relative_path": "asset_gallery.html",
+      "sha256": "28047820d8308611e15948a7282a3bac53391d0c9557172a2d5847bd24747a95",
+      "size_bytes": 12708,
+      "category": "gallery"
+    },
+    {
+      "relative_path": "assets/icon/icon128.png",
+      "sha256": "dc18cdf26560d276fccc5d805a6726472b3efb5c62c7428ba140494fc25c9ffb",
+      "size_bytes": 443,
+      "category": "asset_icon"
+    },
+    {
+      "relative_path": "assets/icon/icon16.png",
+      "sha256": "a7afafe65ddf8bfe4277042ea9eff86ff322159510e9ab21c02e25dacc372f13",
+      "size_bytes": 99,
+      "category": "asset_icon"
+    },
+    {
+      "relative_path": "assets/icon/icon48.png",
+      "sha256": "04602d5b8b482a80adde5931aa4cd8cc62438dfdeeabe874c1f2b2261459940e",
+      "size_bytes": 164,
+      "category": "asset_icon"
+    },
+    {
+      "relative_path": "assets/landing/hero_1600x900.png",
+      "sha256": "dbb8c210d890551c545af6f031f84a4768518d5f732d4cce61bb2111781ad3ef",
+      "size_bytes": 502240,
+      "category": "asset_landing"
+    },
+    {
+      "relative_path": "assets/landing/pricing_1600x900.png",
+      "sha256": "39592f46963f81b088ae3ab2d9b10dd2285e9debc028afac7414115c8cf47bfa",
+      "size_bytes": 557772,
+      "category": "asset_landing"
+    },
+    {
+      "relative_path": "assets/promo/marquee_1400x560.png",
+      "sha256": "62f18be6a0c3200fda01d4830f501b6b680184342fe5006c5a0040c2eb49d3a6",
+      "size_bytes": 288561,
+      "category": "asset_promo"
+    },
+    {
+      "relative_path": "assets/promo/small_promo_440x280.png",
+      "sha256": "80918748dcce0152aa161f4af1897f62443e8c5c0a750ea2aac37e4853d2227c",
+      "size_bytes": 59388,
+      "category": "asset_promo"
+    },
+    {
+      "relative_path": "assets/screenshots/screenshot_1_1280x800.png",
+      "sha256": "24952a72ac2f599949d629138132d083a3fb7336b5941f879bebb261b348cc57",
+      "size_bytes": 311667,
+      "category": "asset_screenshot"
+    },
+    {
+      "relative_path": "assets/screenshots/screenshot_2_1280x800.png",
+      "sha256": "ebfaacadf3c80c8ad5bfce495e64a7c44467fe4560e33b9f3f3a10529f1298c3",
+      "size_bytes": 311275,
+      "category": "asset_screenshot"
+    },
+    {
+      "relative_path": "assets/screenshots/screenshot_3_1280x800.png",
+      "sha256": "3a28290b025094f9d96058fa0897f5fb2125ef7be8ab03c8dd7b11dd2038b462",
+      "size_bytes": 318792,
+      "category": "asset_screenshot"
+    },
+    {
+      "relative_path": "assets/screenshots/screenshot_4_1280x800.png",
+      "sha256": "8f16ebea3cdd7443e74b67521789a1c93ae56aef72dcd4a2c72946ba90da47c0",
+      "size_bytes": 319569,
+      "category": "asset_screenshot"
+    },
+    {
+      "relative_path": "assets/screenshots/screenshot_5_1280x800.png",
+      "sha256": "5219f1d0c62ebdf802c9a2cd426bb617c409799c647400c96d33a9b4f0163044",
+      "size_bytes": 314871,
+      "category": "asset_screenshot"
+    },
+    {
+      "relative_path": "copy/changelog.md",
+      "sha256": "f7c5341536079672156e057f0d96384eec95bc6fce4dceaa6d26efec1a8ea46c",
+      "size_bytes": 246,
+      "category": "copy"
+    },
+    {
+      "relative_path": "copy/detailed_description.md",
+      "sha256": "9f08359a44e2aa781f36835545004673e137659767042bf301b040aefedcf0f4",
+      "size_bytes": 718,
+      "category": "copy"
+    },
+    {
+      "relative_path": "copy/paid_features_disclosure.md",
+      "sha256": "88f48c8a0a7183e647bf41e6322ddee0cdecad4260a50446b78ef60fe42e61b2",
+      "size_bytes": 307,
+      "category": "copy"
+    },
+    {
+      "relative_path": "copy/privacy_summary.md",
+      "sha256": "08b5d7909e743a27ee8cd1e54070ebe9e2c10d2f52a9ea329b5c2a1726914f63",
+      "size_bytes": 519,
+      "category": "copy"
+    },
+    {
+      "relative_path": "copy/short_description.txt",
+      "sha256": "ed3933382be698cb0a01578de7c756fe232ed5c46593867554284226e15682d8",
+      "size_bytes": 73,
+      "category": "copy"
+    },
+    {
+      "relative_path": "copy/support_copy.md",
+      "sha256": "119c96954341799c79dce741824e12d5cf43d49dccf872ea53d0bc7d1c021479",
+      "size_bytes": 290,
+      "category": "copy"
+    },
+    {
+      "relative_path": "copy/title.txt",
+      "sha256": "bcc9f19c7f0fe8020bd850443e17d67c216e47e69dfb0e342fedcfdb2c52486a",
+      "size_bytes": 21,
+      "category": "copy"
+    },
+    {
+      "relative_path": "dashboard_upload_checklist.md",
+      "sha256": "f04a15ac19713bbd5571c4db2bd3c1b6d2f994c1153ab7b0bdfedc0868713a75",
+      "size_bytes": 2485,
+      "category": "checklist"
+    },
+    {
+      "relative_path": "review/asset_quality_report.json",
+      "sha256": "e52469d1178382530d742c31a0fe93d2977c353ecc9214a22816ed1d5af4b3d8",
+      "size_bytes": 5055,
+      "category": "review"
+    },
+    {
+      "relative_path": "review/brand_system.json",
+      "sha256": "fea301cc51430f9782d72c15bff0f5a4cb55eeabb6d3b4c64dc8b2d8d4d7c830",
+      "size_bytes": 2153,
+      "category": "review"
+    },
+    {
+      "relative_path": "review/landing_page_package.json",
+      "sha256": "5a31080620bfafe456bd50a72580819685250102ce530d63d260c57296c8d23c",
+      "size_bytes": 1918,
+      "category": "review"
+    },
+    {
+      "relative_path": "review/listing_quality_gate.json",
+      "sha256": "03cd1258cc2466d898dbb2ef427380154f06e5113a1b8cc9d227d27bce0110e6",
+      "size_bytes": 1254,
+      "category": "review"
+    },
+    {
+      "relative_path": "review/monetization_strategy.json",
+      "sha256": "ae35e774c5dc55da938cc44edddc263bbf7e77ac2149d096a7fbbaabfaa0fcb9",
+      "size_bytes": 110,
+      "category": "review"
+    },
+    {
+      "relative_path": "review/premium_packaging_brief.json",
+      "sha256": "b2838eb49ede45399dc9f8eb3efa8a51f5015b62550f28a6cc842772a9dd1558",
+      "size_bytes": 7329,
+      "category": "review"
+    },
+    {
+      "relative_path": "review/product_polish_checklist.json",
+      "sha256": "9fd28118db25d0c4c34c1684a7c2317a24014a46fd50c1171f1876ff81072b80",
+      "size_bytes": 4541,
+      "category": "review"
+    },
+    {
+      "relative_path": "review/screenshot_storyboard.json",
+      "sha256": "c8441b28ec87536664ea1187077f015d37212788aa8f936ca3033e8589c78355",
+      "size_bytes": 4242,
+      "category": "review"
+    },
+    {
+      "relative_path": "store_listing_submission.md",
+      "sha256": "e86fd740a8f9127f6b5f060494e8e93f91958adc207f09a32654764d8f494bd1",
+      "size_bytes": 1815,
+      "category": "submission"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "stage",
+    "status",
+    "run_id",
+    "source_run_id",
+    "target_version",
+    "source_version",
+    "product_name",
+    "product_acceptance_status",
+    "functional_test_coverage_score",
+    "monetization_enabled",
+    "payment_flow_enabled",
+    "license_activation_enabled",
+    "premium_packaging_required",
+    "upload_allowed",
+    "publish_allowed",
+    "next_step",
+    "redaction_checks"
+  ],
+  "properties": {
+    "stage": {
+      "type": "string",
+      "enum": ["COMMERCIAL_RELEASE_REVISION"]
+    },
+    "status": {
+      "type": "string",
+      "enum": ["passed", "failed"]
+    },
+    "run_id": { "type": "string" },
+    "source_run_id": { "type": "string" },
+    "target_version": { "type": "string" },
+    "source_version": { "type": "string" },
+    "product_name": { "type": "string" },
+    "product_acceptance_status": { "type": "string" },
+    "functional_test_coverage_score": { "type": ["number", "null"] },
+    "monetization_enabled": { "type": "boolean" },
+    "payment_flow_enabled": { "type": "boolean" },
+    "license_activation_enabled": { "type": "boolean" },
+    "premium_packaging_required": { "type": "boolean" },
+    "upload_allowed": { "type": "boolean" },
+    "publish_allowed": { "type": "boolean" },
+    "next_step": { "type": "string" },
+    "redaction_checks": { "type": "object" }
+  }
+}

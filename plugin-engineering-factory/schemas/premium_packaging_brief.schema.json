@@ -1,0 +1,146 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "stage",
+    "status",
+    "run_id",
+    "product_name",
+    "product_category",
+    "wedge",
+    "target_user",
+    "one_sentence_value",
+    "pricing_positioning",
+    "trust_positioning",
+    "local_only_claim",
+    "no_login_claim",
+    "no_upload_claim",
+    "pro_value_message",
+    "brand_personality",
+    "visual_style",
+    "screenshot_storyboard",
+    "promo_tile_concept",
+    "marquee_concept",
+    "landing_hero_concept",
+    "short_video_concept",
+    "store_listing_quality_goals",
+    "required_assets",
+    "blocked_claims",
+    "next_step"
+  ],
+  "properties": {
+    "stage": {
+      "type": "string",
+      "enum": ["PREMIUM_PRODUCT_PACKAGING"]
+    },
+    "status": {
+      "type": "string",
+      "enum": ["passed", "skipped", "failed"]
+    },
+    "run_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "product_name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "product_category": {
+      "type": "string",
+      "minLength": 1
+    },
+    "wedge": {
+      "type": "string",
+      "minLength": 1
+    },
+    "target_user": {
+      "type": "string",
+      "minLength": 1
+    },
+    "one_sentence_value": {
+      "type": "string",
+      "minLength": 1
+    },
+    "pricing_positioning": {
+      "type": "string",
+      "minLength": 1
+    },
+    "trust_positioning": {
+      "type": "string",
+      "minLength": 1
+    },
+    "local_only_claim": {
+      "type": "string",
+      "minLength": 1
+    },
+    "no_login_claim": {
+      "type": "string",
+      "minLength": 1
+    },
+    "no_upload_claim": {
+      "type": "string",
+      "minLength": 1
+    },
+    "pro_value_message": {
+      "type": "string",
+      "minLength": 1
+    },
+    "brand_personality": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    },
+    "visual_style": {
+      "type": "object"
+    },
+    "screenshot_storyboard": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object"
+      }
+    },
+    "promo_tile_concept": {
+      "type": "string",
+      "minLength": 1
+    },
+    "marquee_concept": {
+      "type": "string",
+      "minLength": 1
+    },
+    "landing_hero_concept": {
+      "type": "string",
+      "minLength": 1
+    },
+    "short_video_concept": {
+      "type": "string",
+      "minLength": 1
+    },
+    "store_listing_quality_goals": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    },
+    "required_assets": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    },
+    "blocked_claims": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "next_step": {
+      "type": "string",
+      "minLength": 1
+    }
+  }
+}

@@ -1,0 +1,20 @@
+[
+  {
+    "date": "2026-04-16",
+    "sentiment": "positive",
+    "topic": "time_saved",
+    "summary": "Filled the page quickly."
+  },
+  {
+    "date": "2026-04-17",
+    "sentiment": "negative",
+    "topic": "field_matching",
+    "summary": "One field needed manual correction."
+  },
+  {
+    "date": "2026-04-18",
+    "sentiment": "positive",
+    "topic": "local_only",
+    "summary": "Useful because everything stays local."
+  }
+]

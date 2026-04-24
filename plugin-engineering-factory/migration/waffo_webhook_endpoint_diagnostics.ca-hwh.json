@@ -1,0 +1,16 @@
+﻿{
+    "generated_at":  "2026-04-23T09:39:54.8791089+08:00",
+    "endpoint":  "https://ca-hwh-api.915500.xyz/functions/v1/waffo-webhook",
+    "dns_ok":  true,
+    "https_ok":  true,
+    "get_status":  405,
+    "options_status":  200,
+    "unsigned_post_status":  401,
+    "unsigned_post_reaches_function":  true,
+    "expected_invalid_signature":  true,
+    "caddy_route_ok":  true,
+    "edge_function_route_ok":  true,
+    "blockers":  [
+
+                 ]
+}

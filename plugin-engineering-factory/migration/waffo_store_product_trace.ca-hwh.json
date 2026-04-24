@@ -1,0 +1,33 @@
+{
+  "generated_at": "2026-04-23T11:10:34.7509922+08:00",
+  "localOrderId": "ord_1776912964691_ddb727d5",
+  "checkoutSessionId": "cs_6566cb90-062e-0f9d-7863-39203265e517",
+  "checkoutUrl": "https://pancake.waffo.ai/store/\u63d2\u4ef6\u5de5\u5382-gbci3bzh/checkout/cs_6566cb90-062e-0f9d-7863-39203265e517#token=<redacted>",
+  "checkoutUrl_domain": "pancake.waffo.ai",
+  "waffo_environment": "test",
+  "waffo_store_id_redacted": "STO_4XSU...Mxr0",
+  "waffo_product_id_redacted": "PROD_1LTE...eAgR",
+  "waffo_price_id_redacted": null,
+  "productKey": "leadfill-one-profile",
+  "planKey": "lifetime",
+  "source": "web",
+  "installationId_present": true,
+  "userId_present": true,
+  "successUrl": "https://ca-hwh.915500.xyz/checkout/success",
+  "cancelUrl": "https://ca-hwh.915500.xyz/checkout/cancel",
+  "expected_webhook_url": "https://ca-hwh-api.915500.xyz/functions/v1/waffo-webhook",
+  "metadata_complete": true,
+  "possible_mismatch": [
+    "Latest verified checkout was created from source=web, so source=chrome_extension still needs a real plugin-client follow-up.",
+    "The active lifetime plan uses waffo_product_id_test and does not currently store a separate waffo_price_id_test value in the plans table."
+  ],
+  "observed_paid_event": {
+    "event_id": "PAY_0adLohkJYNiExote8KDSWQ",
+    "event_type": "order.completed",
+    "webhook_received": true,
+    "webhook_signature_verified": true,
+    "order_written": true,
+    "payment_written": true,
+    "entitlement_status": "active"
+  }
+}

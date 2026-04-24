@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["stage", "status", "selected", "candidate_name", "wedge_name", "market_test_score", "expected_price", "free_limit", "success_metrics", "kill_criteria", "next_step", "redaction_checks"],
+  "properties": {
+    "stage": { "type": "string", "enum": ["MICRO_MVP_SELECTION"] },
+    "status": { "type": "string", "enum": ["passed", "failed"] },
+    "selected": { "type": "boolean" },
+    "candidate_name": { "type": "string" },
+    "wedge_name": { "type": "string" },
+    "market_test_score": { "type": "number" },
+    "expected_price": { "type": "string" },
+    "free_limit": { "type": "string" },
+    "success_metrics": { "type": "array", "items": { "type": "string" } },
+    "kill_criteria": { "type": "array", "items": { "type": "string" } },
+    "next_step": { "type": "string" },
+    "redaction_checks": { "type": "object" }
+  }
+}

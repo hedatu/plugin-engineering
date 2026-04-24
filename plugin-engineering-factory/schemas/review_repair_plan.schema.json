@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "stage",
+    "status",
+    "run_id",
+    "item_id",
+    "publisher_id",
+    "rejection_reason",
+    "suspected_policy_area",
+    "affected_artifacts",
+    "required_changes",
+    "repair_start_stage",
+    "requires_new_version_bump",
+    "requires_new_upload_approval",
+    "requires_new_publish_approval",
+    "next_step",
+    "redaction_checks"
+  ],
+  "properties": {
+    "stage": {
+      "type": "string",
+      "enum": ["PREPARE_REVIEW_REPAIR"]
+    },
+    "status": {
+      "type": "string",
+      "enum": ["active", "failed"]
+    },
+    "run_id": {
+      "type": "string"
+    },
+    "item_id": {
+      "type": ["string", "null"]
+    },
+    "publisher_id": {
+      "type": ["string", "null"]
+    },
+    "rejection_reason": {
+      "type": "string"
+    },
+    "suspected_policy_area": {
+      "type": "string"
+    },
+    "affected_artifacts": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "required_changes": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "repair_start_stage": {
+      "type": "string"
+    },
+    "requires_new_version_bump": {
+      "type": "boolean"
+    },
+    "requires_new_upload_approval": {
+      "type": "boolean"
+    },
+    "requires_new_publish_approval": {
+      "type": "boolean"
+    },
+    "next_step": {
+      "type": "string"
+    },
+    "redaction_checks": {
+      "type": "object"
+    }
+  }
+}

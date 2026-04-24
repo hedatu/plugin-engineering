@@ -1,0 +1,46 @@
+{
+  "type": "object",
+  "required": [
+    "generated_at",
+    "server",
+    "ram_total_mb",
+    "ram_used_mb",
+    "ram_available_mb",
+    "swap_total_mb",
+    "swap_used_mb",
+    "docker_top_consumers",
+    "overall_assessment",
+    "recommended_action",
+    "blockers"
+  ],
+  "properties": {
+    "generated_at": { "type": "string", "minLength": 1 },
+    "server": { "type": "string", "minLength": 1 },
+    "ram_total_mb": { "type": "integer", "minimum": 0 },
+    "ram_used_mb": { "type": "integer", "minimum": 0 },
+    "ram_available_mb": { "type": "integer", "minimum": 0 },
+    "swap_total_mb": { "type": "integer", "minimum": 0 },
+    "swap_used_mb": { "type": "integer", "minimum": 0 },
+    "docker_top_consumers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["container", "memory_mib"],
+        "properties": {
+          "container": { "type": "string", "minLength": 1 },
+          "memory_mib": { "type": "number", "minimum": 0 }
+        }
+      }
+    },
+    "overall_assessment": { "type": "string", "minLength": 1 },
+    "recommended_action": { "type": "string", "minLength": 1 },
+    "blockers": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "notes": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "stage",
+    "status",
+    "run_id",
+    "live_unavailable",
+    "evidence_items",
+    "next_step",
+    "redaction_checks"
+  ],
+  "properties": {
+    "stage": { "type": "string", "enum": ["SUPPORT_QA_EVIDENCE_PACK"] },
+    "status": { "type": "string", "enum": ["passed", "skipped", "failed"] },
+    "run_id": { "type": "string" },
+    "focus_seed": { "type": "string" },
+    "live_unavailable": { "type": "boolean" },
+    "evidence_items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "evidence_id",
+          "candidate_id",
+          "source_type",
+          "source_url",
+          "captured_at",
+          "text_excerpt",
+          "pain_signal_type",
+          "reliability_weight",
+          "recency_weight",
+          "supports_which_wedge",
+          "limitations"
+        ]
+      }
+    },
+    "next_step": { "type": "string" },
+    "redaction_checks": { "type": "object" }
+  }
+}

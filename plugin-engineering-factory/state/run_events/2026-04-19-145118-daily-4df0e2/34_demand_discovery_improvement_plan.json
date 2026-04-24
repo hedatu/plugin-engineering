@@ -1,0 +1,76 @@
+{
+  "stage": "DEMAND_DISCOVERY_IMPROVEMENT_PLAN",
+  "status": "passed",
+  "run_id": "2026-04-19-145118-daily-4df0e2",
+  "selected_candidate_id": "cand-form-001",
+  "better_sources": [
+    "Real Chrome Web Store reviews sampled from multiple recency windows.",
+    "Support ticket archives or help-center pages with reproducible complaint text.",
+    "GitHub issues only when the project is active and user-facing.",
+    "Reddit or practitioner forums for non-store corroboration."
+  ],
+  "category_strategy": [
+    "Keep Workflow & Planning and Productivity as core families, but rate-limit single_profile_form_fill follow-ons.",
+    "Prefer under-covered wedges where portfolio overlap is below 25."
+  ],
+  "keyword_strategy": [
+    "Anchor queries on the user job first: one profile, visible fields, local-only, recruiter intake, lead form.",
+    "Add failure words: skips phone, misses company, hidden fields, too many templates, overkill."
+  ],
+  "minimum_thresholds": [
+    "At least 5 evidence items for the selected wedge.",
+    "At least 3 distinct source types, with at least 1 non-store source.",
+    "At least 3 pain clusters with 2+ evidence items in the top 2 clusters.",
+    "At least 1 live-source pass before a similar family enters build again."
+  ],
+  "negative_review_mining_strategy": [
+    "Mine 1-star to 3-star reviews for repeated verbs like skip, break, overkill, sync, dashboard.",
+    "Separate missing-feature complaints from trust, privacy, and field-coverage failures."
+  ],
+  "support_site_strategy": [
+    "Prioritize support tickets and FAQs where users describe the exact form or field failure.",
+    "Capture quoted complaint text with dates and URLs, not just paraphrases."
+  ],
+  "github_issue_strategy": [
+    "Use GitHub issues only for active projects with recent user reproduction steps.",
+    "Down-rank stale issues older than 180 days unless the bug remains clearly open."
+  ],
+  "reddit_or_forum_strategy": [
+    "Look for practitioner communities where users discuss repetitive intake or CRM-entry work.",
+    "Treat forum anecdotes as corroboration, not as the primary decision source."
+  ],
+  "recency_strategy": [
+    "Bias toward complaints from the last 90 days.",
+    "If evidence is older than 180 days, require a newer corroborating source before build."
+  ],
+  "anti_copycat_policy": [
+    "Do not green-light a wedge when the differentiation is only minor UI simplification.",
+    "Require a narrower job story or tighter permission posture than the portfolio already has."
+  ],
+  "portfolio_differentiation_strategy": [
+    "Before another single_profile_form_fill build, prove a sharper use case such as recruiter intake forms only or strict no-overwrite behavior.",
+    "Track known bad patterns so rejected or low-utility wedges are not reintroduced as cosmetic variants."
+  ],
+  "next_10_search_queries": [
+    "site:chromewebstore.google.com \"lead form\" \"one profile\" extension review",
+    "site:reddit.com sales form filler chrome extension too many templates",
+    "site:reddit.com recruiter form autofill chrome extension local profile",
+    "site:github.com chrome extension form fill issue phone company fields",
+    "site:*.help* form filler extension sync privacy concern",
+    "site:*.support* lead form extension hidden fields issue",
+    "chrome extension visible fields only autofill review",
+    "chrome extension local profile form fill no account",
+    "lead capture form filler extension company phone skipped",
+    "recruiter intake form autofill chrome extension review"
+  ],
+  "next_step": "improve_discovery_inputs_before_greenlighting_more_same-family_runs",
+  "redaction_checks": {
+    "sanitized_response_bodies": true,
+    "checked_secret_value_count": 0,
+    "secret_values_present_in_artifact": false,
+    "authorization_header_pattern_present": false,
+    "key_material_pattern_present": false,
+    "secret_marker_pattern_present": false,
+    "redaction_guard_triggered": false
+  }
+}

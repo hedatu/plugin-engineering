@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "stage",
+    "status",
+    "run_id",
+    "seed_ids",
+    "query_count",
+    "queries",
+    "redaction_checks"
+  ],
+  "properties": {
+    "stage": { "type": "string", "enum": ["SEED_QUERY_PLAN"] },
+    "status": { "type": "string", "enum": ["passed", "failed"] },
+    "run_id": { "type": "string" },
+    "seed_ids": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "query_count": { "type": "integer" },
+    "queries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "query",
+          "seed_id",
+          "hypothesis",
+          "target_user",
+          "expected_pain",
+          "expected_wedge",
+          "preferred_archetype",
+          "builder_fit_assumption",
+          "compliance_risk_hypothesis",
+          "testability_hypothesis",
+          "skip_if"
+        ]
+      }
+    },
+    "redaction_checks": { "type": "object" }
+  }
+}

@@ -1,0 +1,32 @@
+name: Daily Factory
+
+on:
+  schedule:
+    - cron: "0 1 * * *"
+  workflow_dispatch:
+
+concurrency:
+  group: chrome-extension-factory-${{ github.workflow }}-${{ inputs.run_id || github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  daily:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - id: meta
+        shell: bash
+        run: |
+          RUN_ID="daily-$(date -u +%Y-%m-%d-%H%M%S)-${GITHUB_RUN_ID}"
+          echo "run_id=$RUN_ID" >> "$GITHUB_OUTPUT"
+      - run: xvfb-run -a npm run daily -- --run-id ${{ steps.meta.outputs.run_id }}
+      - uses: actions/upload-artifact@v4
+        with:
+          name: daily-factory-${{ steps.meta.outputs.run_id }}
+          path: runs/${{ steps.meta.outputs.run_id }}

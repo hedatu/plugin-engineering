@@ -1,0 +1,32 @@
+{
+  "case_id": "high_users_low_pain_skip",
+  "expected_build_recommendation": "skip",
+  "notes": "High usage alone should not force a build when pain is weak.",
+  "candidate": {
+    "candidate_id": "bench-high-users-skip",
+    "name": "Popular Browser Helper",
+    "category": "Productivity",
+    "users": 240000,
+    "rating": 4.6,
+    "reviews": 1800,
+    "updated": "2026-04-09",
+    "website_url": "https://fixtures.local/popular-browser-helper",
+    "support_url": "https://fixtures.local/support/popular-browser-helper",
+    "wedge_family": "tab_csv_window_export",
+    "signals": ["popular", "browser", "helper"],
+    "portfolio_overlap_score": 18,
+    "single_purpose_fit_score": 42,
+    "testability_score": 55
+  },
+  "evidence": [
+    {
+      "source_type": "store",
+      "source_url": "https://fixtures.local/store/popular-browser-helper/review-1",
+      "captured_at": "2026-04-07T10:00:00Z",
+      "topic": "nice extension",
+      "quote": "Mostly good. Would be nice to have more polish.",
+      "issue_type": "ux_friction",
+      "sentiment": "weak_signal"
+    }
+  ]
+}

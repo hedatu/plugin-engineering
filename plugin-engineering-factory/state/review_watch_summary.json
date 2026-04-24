@@ -1,0 +1,31 @@
+{
+  "stage": "REVIEW_WATCH_SUMMARY",
+  "status": "passed_with_failures",
+  "checked_at": "2026-04-23T10:56:58.682Z",
+  "total_watches": 2,
+  "checked_count": 1,
+  "skipped_count": 0,
+  "live_checked_count": 0,
+  "preserved_state_count": 1,
+  "changed_count": 0,
+  "pending_count": 1,
+  "approved_count": 1,
+  "rejected_count": 0,
+  "cancelled_count": 0,
+  "failures": [
+    {
+      "run_id": "sandbox-2026-04-19-154400-dnnpkaefmlha-v0-1-1-6218cc",
+      "failure_phase": "credentials_file_read",
+      "failure_reason": "Service-account credentials file could not be read."
+    }
+  ],
+  "next_actions": [
+    {
+      "run_id": "sandbox-2026-04-19-154400-dnnpkaefmlha-v0-1-1-6218cc",
+      "review_state": "PENDING_REVIEW",
+      "status_source": "preserved_last_known_state",
+      "next_step": "wait_for_review_or_manual_cancel",
+      "terminal": false
+    }
+  ]
+}

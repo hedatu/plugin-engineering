@@ -1,0 +1,45 @@
+{
+    "prepared_at":  "2026-04-22T20:04:45.2593738+08:00",
+    "server_id":  "california",
+    "app_paths":  [
+                      "/opt/commercial-extension-factory/apps/factory",
+                      "/opt/commercial-extension-factory/apps/hwh",
+                      "/opt/commercial-extension-factory/apps/plugin-site"
+                  ],
+    "env_example_files":  [
+                              "/opt/commercial-extension-factory/apps/factory/.env.example",
+                              "/opt/commercial-extension-factory/apps/hwh/.env.example",
+                              "/opt/commercial-extension-factory/apps/hwh/.env.production.example",
+                              "/opt/commercial-extension-factory/apps/hwh/.env.staging.example",
+                              "/opt/commercial-extension-factory/apps/plugin-site/.env.example"
+                          ],
+    "public_env_keys":  [
+                            "SITE_URL",
+                            "PUBLIC_SUPABASE_URL",
+                            "PUBLIC_SUPABASE_ANON_KEY",
+                            "PRODUCT_KEY",
+                            "PLAN_KEY"
+                        ],
+    "secret_env_keys":  [
+                            "SUPABASE_SERVICE_ROLE_KEY",
+                            "WAFFO_PRIVATE_KEY",
+                            "WAFFO_WEBHOOK_SECRET",
+                            "SMTP_HOST",
+                            "SMTP_PORT",
+                            "SMTP_USER",
+                            "SMTP_PASSWORD",
+                            "DATABASE_URL"
+                        ],
+    "staging_domain_plan":  [
+                                "ca-pay.915500.xyz",
+                                "ca-pay-api.915500.xyz"
+                            ],
+    "production_binding_enabled":  false,
+    "dns_changed":  false,
+    "waffo_production_webhook_configured":  false,
+    "blockers":  [
+                     "smtp_otp_not_verified_on_california",
+                     "existing_public_ports_on_california_require_audit"
+                 ],
+    "next_step":  "await_user_approval_to_deploy_hwh_staging_to_california"
+}

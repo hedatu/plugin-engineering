@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "stage",
+    "status",
+    "run_id",
+    "product_key",
+    "generated_at",
+    "current_payment_mode",
+    "production_payment_ready",
+    "completed_items",
+    "missing_items",
+    "recommended_order",
+    "blockers",
+    "next_step",
+    "redaction_checks"
+  ],
+  "properties": {
+    "stage": {
+      "type": "string",
+      "enum": ["PRODUCTION_PAYMENT_READINESS"]
+    },
+    "status": {
+      "type": "string",
+      "enum": ["blocked", "passed", "failed"]
+    },
+    "run_id": { "type": "string", "minLength": 1 },
+    "product_key": { "type": "string", "minLength": 1 },
+    "generated_at": { "type": "string", "minLength": 1 },
+    "current_payment_mode": {
+      "type": "string",
+      "enum": ["disabled", "test", "live"]
+    },
+    "production_payment_ready": { "type": "boolean" },
+    "completed_items": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "missing_items": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "recommended_order": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "blockers": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "next_step": { "type": "string", "minLength": 1 },
+    "redaction_checks": { "type": "object" }
+  }
+}

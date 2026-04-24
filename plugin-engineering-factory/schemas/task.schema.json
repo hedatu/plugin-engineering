@@ -1,0 +1,135 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["date", "allowed_categories", "blocked_categories", "thresholds", "builder", "publish", "assets", "brand_rules"],
+  "properties": {
+    "mode": {
+      "type": "string",
+      "enum": ["daily", "test_fixture", "sandbox_validation"]
+    },
+    "run_id": { "type": "string" },
+    "run_slug": { "type": "string" },
+    "allow_build_after_research_resolution": { "type": "boolean" },
+    "allow_auto_build_after_human_review": { "type": "boolean" },
+    "date": { "type": "string" },
+    "allowed_categories": { "type": "array", "items": { "type": "string" } },
+    "blocked_categories": { "type": "array", "items": { "type": "string" } },
+    "thresholds": {
+      "type": "object",
+      "required": ["min_users", "min_reviews", "rating_min", "rating_max", "min_negative_clusters", "min_overall_score"]
+    },
+    "builder": {
+      "type": "object",
+      "required": ["allow_families"]
+    },
+    "research": {
+      "type": "object"
+    },
+    "discovery": {
+      "type": "object",
+      "properties": {
+        "mode": {
+          "type": "string",
+          "enum": ["fixture", "live_queue", "hybrid"]
+        },
+        "max_candidates": { "type": "integer" },
+        "query_limit": { "type": "integer" },
+        "allow_auto_build": { "type": "boolean" },
+        "min_evidence_quality_score": { "type": "number" },
+        "max_portfolio_overlap_score": { "type": "number" },
+        "min_testability_score": { "type": "number" }
+      }
+    },
+    "market_test": {
+      "type": "object",
+      "properties": {
+        "enabled": { "type": "boolean" }
+      }
+    },
+    "monetization": {
+      "type": "object",
+      "properties": {
+        "enabled": { "type": "boolean" },
+        "product_id": { "type": "string" },
+        "pricing_model": { "type": "string" },
+        "free_limit": {
+          "type": "object",
+          "properties": {
+            "amount": { "type": "integer" },
+            "unit": { "type": "string" },
+            "scope": { "type": "string" }
+          }
+        },
+        "price_label": { "type": "string" },
+        "upgrade_url": { "type": "string" },
+        "license_verify_url": { "type": "string" },
+        "license_activate_url": { "type": "string" },
+        "support_email": { "type": "string" },
+        "pro_features": { "type": "array", "items": { "type": "string" } },
+        "free_features": { "type": "array", "items": { "type": "string" } },
+        "local_only_claim": { "type": "boolean" },
+        "payment_provider": {
+          "type": "string",
+          "enum": [
+            "stripe_payment_link",
+            "stripe_checkout",
+            "lemon_squeezy",
+            "extensionpay",
+            "manual_license"
+          ]
+        },
+        "checkout_mode": {
+          "type": "string",
+          "enum": ["disabled", "test", "live"]
+        },
+        "entitlement_cache_ttl_hours": { "type": "integer" },
+        "offline_grace_hours": { "type": "integer" },
+        "privacy_disclosure_required": { "type": "boolean" }
+      }
+    },
+    "monitoring": {
+      "type": "object",
+      "properties": {
+        "enabled": { "type": "boolean" },
+        "required": { "type": "boolean" },
+        "metrics_csv_path": { "type": "string" },
+        "reviews_json_path": { "type": "string" },
+        "support_tickets_json_path": { "type": "string" }
+      }
+    },
+    "browser_smoke": {
+      "type": "object",
+      "properties": {
+        "runtime": {
+          "type": "string",
+          "enum": ["auto", "dedicated_chromium", "ixbrowser"]
+        }
+      }
+    },
+    "publish": {
+      "type": "object",
+      "required": ["review_strategy", "allow_public_release", "default_publish_intent"],
+      "properties": {
+        "review_strategy": { "type": "string" },
+        "allow_public_release": { "type": "boolean" },
+        "default_publish_intent": { "type": "string" },
+        "execution_mode": {
+          "type": "string",
+          "enum": ["planned", "sandbox_validate"]
+        },
+        "publish_validation_phase": {
+          "type": "string",
+          "enum": ["fetch_status_only", "upload_only", "publish_optional"]
+        },
+        "execution_lane": {
+          "type": "string",
+          "enum": ["auto", "manual_new_item_handoff", "existing_item_update_dry_run"]
+        },
+        "publisher_id": { "type": "string" },
+        "existing_item_id": { "type": "string" },
+        "sandbox_item_id": { "type": "string" },
+        "sandbox_publish_enabled": { "type": "boolean" }
+      }
+    }
+  }
+}

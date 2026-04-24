@@ -1,0 +1,83 @@
+{
+  "captured_at": "2026-04-24T09:51:51.707Z",
+  "baseUrl": "http://127.0.0.1:4173",
+  "screenshots": [
+    {
+      "slug": "home",
+      "route": "/",
+      "finalUrl": "http://127.0.0.1:4173/",
+      "status": 200,
+      "file": "D:\\code\\ai插件优化工作流\\docs\\local-redesign-screenshots-2026-04-24\\home.png"
+    },
+    {
+      "slug": "product",
+      "route": "/products/leadfill-one-profile",
+      "finalUrl": "http://127.0.0.1:4173/products/leadfill-one-profile",
+      "status": 200,
+      "file": "D:\\code\\ai插件优化工作流\\docs\\local-redesign-screenshots-2026-04-24\\product.png"
+    },
+    {
+      "slug": "pricing",
+      "route": "/pricing",
+      "finalUrl": "http://127.0.0.1:4173/pricing",
+      "status": 200,
+      "file": "D:\\code\\ai插件优化工作流\\docs\\local-redesign-screenshots-2026-04-24\\pricing.png"
+    },
+    {
+      "slug": "account",
+      "route": "/account",
+      "finalUrl": "http://127.0.0.1:4173/account",
+      "status": 200,
+      "file": "D:\\code\\ai插件优化工作流\\docs\\local-redesign-screenshots-2026-04-24\\account.png"
+    },
+    {
+      "slug": "login",
+      "route": "/login",
+      "finalUrl": "http://127.0.0.1:4173/login",
+      "status": 200,
+      "file": "D:\\code\\ai插件优化工作流\\docs\\local-redesign-screenshots-2026-04-24\\login.png"
+    },
+    {
+      "slug": "privacy",
+      "route": "/privacy",
+      "finalUrl": "http://127.0.0.1:4173/privacy",
+      "status": 200,
+      "file": "D:\\code\\ai插件优化工作流\\docs\\local-redesign-screenshots-2026-04-24\\privacy.png"
+    },
+    {
+      "slug": "refund",
+      "route": "/refund",
+      "finalUrl": "http://127.0.0.1:4173/refund",
+      "status": 200,
+      "file": "D:\\code\\ai插件优化工作流\\docs\\local-redesign-screenshots-2026-04-24\\refund.png"
+    },
+    {
+      "slug": "terms",
+      "route": "/terms",
+      "finalUrl": "http://127.0.0.1:4173/terms",
+      "status": 200,
+      "file": "D:\\code\\ai插件优化工作流\\docs\\local-redesign-screenshots-2026-04-24\\terms.png"
+    },
+    {
+      "slug": "legacy-product-html",
+      "route": "/product.html",
+      "finalUrl": "http://127.0.0.1:4173/products/leadfill-one-profile",
+      "status": 200,
+      "file": "D:\\code\\ai插件优化工作流\\docs\\local-redesign-screenshots-2026-04-24\\legacy-product-html.png"
+    },
+    {
+      "slug": "legacy-pricing-html",
+      "route": "/pricing.html",
+      "finalUrl": "http://127.0.0.1:4173/pricing",
+      "status": 200,
+      "file": "D:\\code\\ai插件优化工作流\\docs\\local-redesign-screenshots-2026-04-24\\legacy-pricing-html.png"
+    },
+    {
+      "slug": "legacy-zh-pricing-html",
+      "route": "/zh-cn/pricing.html",
+      "finalUrl": "http://127.0.0.1:4173/pricing",
+      "status": 200,
+      "file": "D:\\code\\ai插件优化工作流\\docs\\local-redesign-screenshots-2026-04-24\\legacy-zh-pricing-html.png"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "generated_at": "2026-04-23T19:47:00+08:00",
+  "server": "california",
+  "runtime_path": "/opt/commercial-extension-factory/apps/factory",
+  "status": "passed",
+  "credentials_doctor": "passed",
+  "credentials_present": true,
+  "credential_mode": "service_account_file",
+  "token_self_test": "passed",
+  "publish_review_status_live_fetch": "passed",
+  "fetch_status_http_status": 200,
+  "review_state": "STAGED",
+  "schedule_enabled": true,
+  "schedule": "0 */6 * * *",
+  "schedule_command": "npm run review-watch:all",
+  "log_path": "/opt/commercial-extension-factory/logs/review-watch.log",
+  "read_only": true,
+  "upload_publish_disabled": true,
+  "chrome_upload_executed": false,
+  "chrome_publish_executed": false,
+  "blockers": []
+}

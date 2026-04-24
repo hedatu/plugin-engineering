@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "stage",
+    "status",
+    "run_id",
+    "candidate_count",
+    "selected_candidate",
+    "evidence_quality_score",
+    "pain_cluster_quality_score",
+    "opportunity_score_confidence",
+    "portfolio_overlap_risk",
+    "compliance_risk",
+    "feasibility_confidence",
+    "user_need_clarity",
+    "build_recommendation",
+    "biggest_uncertainties",
+    "missing_evidence",
+    "recommended_next_queries",
+    "decision_rationale",
+    "redaction_checks"
+  ],
+  "properties": {
+    "stage": {
+      "type": "string",
+      "enum": ["DISCOVERY_QUALITY_REVIEW"]
+    },
+    "status": {
+      "type": "string",
+      "enum": ["passed", "failed"]
+    },
+    "run_id": { "type": "string" },
+    "candidate_count": { "type": "integer" },
+    "selected_candidate": { "type": "object" },
+    "evidence_quality_score": { "type": "number" },
+    "pain_cluster_quality_score": { "type": "number" },
+    "opportunity_score_confidence": { "type": "number" },
+    "portfolio_overlap_risk": { "type": "number" },
+    "compliance_risk": { "type": "number" },
+    "feasibility_confidence": { "type": "number" },
+    "user_need_clarity": { "type": "number" },
+    "build_recommendation": {
+      "type": "string",
+      "enum": ["build", "research_more", "skip"]
+    },
+    "biggest_uncertainties": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "missing_evidence": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "recommended_next_queries": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "decision_rationale": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "redaction_checks": { "type": "object" }
+  }
+}

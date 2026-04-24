@@ -1,0 +1,42 @@
+{
+  "type": "object",
+  "required": [
+    "generated_at",
+    "status",
+    "plugin_client_used",
+    "source_chrome_extension",
+    "installationId_present",
+    "create_checkout_status",
+    "checkout_session_id",
+    "localOrderId",
+    "webhook_received",
+    "webhook_signature_verified",
+    "entitlement_active_from_webhook",
+    "refresh_entitlement_active",
+    "consume_usage_pro_passed",
+    "ui_pro_active_verified",
+    "success_url_did_not_unlock_locally",
+    "blockers"
+  ],
+  "properties": {
+    "generated_at": { "type": "string", "minLength": 10 },
+    "status": { "type": "string", "minLength": 3 },
+    "plugin_client_used": { "type": "boolean" },
+    "source_chrome_extension": { "type": "boolean" },
+    "installationId_present": { "type": "boolean" },
+    "create_checkout_status": { "type": "string", "minLength": 3 },
+    "checkout_session_id": { "type": "string", "minLength": 3 },
+    "localOrderId": { "type": "string", "minLength": 3 },
+    "webhook_received": { "type": "boolean" },
+    "webhook_signature_verified": { "type": "boolean" },
+    "entitlement_active_from_webhook": { "type": "boolean" },
+    "refresh_entitlement_active": { "type": "boolean" },
+    "consume_usage_pro_passed": { "type": "boolean" },
+    "ui_pro_active_verified": { "type": "boolean" },
+    "success_url_did_not_unlock_locally": { "type": ["boolean", "null"] },
+    "blockers": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  }
+}

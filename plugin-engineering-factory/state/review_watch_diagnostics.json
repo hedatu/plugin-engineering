@@ -1,0 +1,65 @@
+{
+  "stage": "REVIEW_WATCH_DIAGNOSTICS",
+  "status": "warning",
+  "checked_at": "2026-04-21T08:50:28.044Z",
+  "active_watch_count": 2,
+  "active_watches": [
+    {
+      "run_id": "sandbox-2026-04-19-154400-dnnpkaefmlha-v0-1-1-6218cc",
+      "latest_review_state": "MANUAL_CANCEL_RECORDED_UNCONFIRMED",
+      "latest_checked_at": "2026-04-21T08:50:21.767Z",
+      "next_check_after": "2026-04-21T14:50:21.767Z",
+      "status_source": "preserved_last_known_state",
+      "terminal": false
+    },
+    {
+      "run_id": "sandbox-2026-04-19-215222-dnnpkaefmlha-v0-1-2-c64a39",
+      "latest_review_state": "PENDING_REVIEW",
+      "latest_checked_at": "2026-04-21T08:50:21.810Z",
+      "next_check_after": "2026-04-21T14:50:21.810Z",
+      "status_source": "preserved_last_known_state",
+      "terminal": false
+    }
+  ],
+  "latest_watch_summary_exists": true,
+  "latest_review_status_sidecars": [
+    {
+      "run_id": "sandbox-2026-04-19-154400-dnnpkaefmlha-v0-1-1-6218cc",
+      "path": "state/run_events/sandbox-2026-04-19-154400-dnnpkaefmlha-v0-1-1-6218cc/91_review_status.json",
+      "checked_at": "2026-04-21T08:50:21.767Z",
+      "status_source": "preserved_last_known_state",
+      "review_state": "PENDING_REVIEW",
+      "fetch_status_succeeded": false
+    },
+    {
+      "run_id": "sandbox-2026-04-19-215222-dnnpkaefmlha-v0-1-2-c64a39",
+      "path": "state/run_events/sandbox-2026-04-19-215222-dnnpkaefmlha-v0-1-2-c64a39/91_review_status.json",
+      "checked_at": "2026-04-21T08:50:21.810Z",
+      "status_source": "preserved_last_known_state",
+      "review_state": "PENDING_REVIEW",
+      "fetch_status_succeeded": false
+    }
+  ],
+  "github_workflow_file_exists": true,
+  "github_workflow_has_schedule": true,
+  "github_workflow_schedule": [
+    "0 */6 * * *"
+  ],
+  "expected_next_check_utc": "2026-04-21T14:50:21.767Z",
+  "local_credentials_present": false,
+  "proxy_configured": false,
+  "can_live_fetch_status": false,
+  "last_live_fetch_at": "2026-04-19T23:17:43.021Z",
+  "last_status_source": "preserved_last_known_state",
+  "stale_watch_detected": true,
+  "stale_threshold_hours": 8,
+  "diagnostic_findings": [
+    "Local Chrome Web Store credentials are not configured, so live fetchStatus cannot run from this environment.",
+    "The latest observed review status for active watches came from preserved_last_known_state, not live_fetch_status.",
+    "No successful live fetchStatus was recorded within the last 8 hours."
+  ],
+  "required_fixes": [
+    "Provide Chrome Web Store review-watch credentials or rely on GitHub Actions secrets for live polling.",
+    "Run review-watch with valid credentials and verify the scheduled workflow is executing."
+  ]
+}

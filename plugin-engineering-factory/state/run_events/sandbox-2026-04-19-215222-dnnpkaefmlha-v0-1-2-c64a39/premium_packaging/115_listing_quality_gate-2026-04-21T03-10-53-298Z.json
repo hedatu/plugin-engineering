@@ -1,0 +1,45 @@
+{
+  "stage": "LISTING_QUALITY_GATE",
+  "status": "conditional_fail",
+  "run_id": "sandbox-2026-04-19-215222-dnnpkaefmlha-v0-1-2-c64a39",
+  "passed": false,
+  "premium_feel_score": 76,
+  "checks": {
+    "title_clarity": true,
+    "short_description_clarity": true,
+    "detailed_description_clarity": true,
+    "paid_feature_disclosure": true,
+    "privacy_claim_consistency": true,
+    "screenshot_truthfulness": true,
+    "asset_dimension_validity": false,
+    "asset_visual_quality": false,
+    "no_misleading_claims": true,
+    "brand_consistency": true,
+    "support_url_present_or_planned": true,
+    "homepage_url_present_or_planned": true,
+    "pricing_disclosure_if_monetized": true,
+    "policy_risk": true,
+    "premium_feel_inputs_ready": false
+  },
+  "blockers": [
+    "Asset dimensions are missing or invalid.",
+    "Premium Remotion still assets are missing or failed QA."
+  ],
+  "warnings": [
+    "Product polish inputs are still functional rather than premium-grade."
+  ],
+  "recommended_fixes": [
+    "Generate the premium still assets and rerun asset QA.",
+    "Raise the visual polish and premium packaging score above 80 before any publish decision."
+  ],
+  "next_step": "Do not promote or publish until premium assets, QA, and disclosure checks pass.",
+  "redaction_checks": {
+    "sanitized_response_bodies": true,
+    "checked_secret_value_count": 0,
+    "secret_values_present_in_artifact": false,
+    "authorization_header_pattern_present": false,
+    "key_material_pattern_present": false,
+    "secret_marker_pattern_present": false,
+    "redaction_guard_triggered": false
+  }
+}

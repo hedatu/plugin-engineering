@@ -1,0 +1,21 @@
+{
+  "generated_at": "2026-04-22T21:14:46.1861567+08:00",
+  "server_id": "california",
+  "smtp_status": "verified_temporary_relay",
+  "send_otp_status": 200,
+  "email_delivered": true,
+  "verify_otp_status": 200,
+  "session_created": true,
+  "user_id_present": true,
+  "get_entitlement_status": "verified",
+  "register_installation_status": "verified",
+  "consume_usage_free_status": "verified",
+  "quota_exceeded_status": "verified",
+  "details": {
+    "productKey": "leadfill-one-profile",
+    "planKey_before_purchase": "free",
+    "free_remaining_after_first_consume": 9,
+    "quota_error_code": "QUOTA_EXCEEDED"
+  },
+  "blockers": []
+}

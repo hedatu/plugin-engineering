@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "stage",
+    "status",
+    "run_id",
+    "run_dir",
+    "scanned_paths",
+    "patterns_checked",
+    "findings",
+    "checkout_mode",
+    "human_approval_required_for_live",
+    "live_checkout_blocked_without_approval"
+  ],
+  "properties": {
+    "stage": { "type": "string", "enum": ["MONETIZATION_SECURITY_SCAN"] },
+    "status": { "type": "string", "enum": ["passed", "failed", "skipped"] },
+    "run_id": { "type": "string", "minLength": 1 },
+    "run_dir": { "type": "string", "minLength": 1 },
+    "scanned_paths": { "type": "array", "items": { "type": "string" } },
+    "patterns_checked": { "type": "array", "items": { "type": "string" } },
+    "findings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["severity", "path", "reason"],
+        "properties": {
+          "severity": { "type": "string", "minLength": 1 },
+          "path": { "type": "string", "minLength": 1 },
+          "reason": { "type": "string", "minLength": 1 },
+          "sample": { "type": ["string", "null"] }
+        }
+      }
+    },
+    "checkout_mode": { "type": ["string", "null"] },
+    "human_approval_required_for_live": { "type": "boolean" },
+    "live_checkout_blocked_without_approval": { "type": "boolean" },
+    "bundle_scan_status": { "type": ["string", "null"] },
+    "config_scan_status": { "type": ["string", "null"] },
+    "notes": { "type": "array", "items": { "type": "string" } }
+  }
+}

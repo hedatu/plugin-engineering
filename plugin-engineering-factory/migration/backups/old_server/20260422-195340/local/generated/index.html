@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Plugin Catalog Preview</title>
+  <style>:root {
+  --bg: #EEF4F7;
+  --surface: #ffffff;
+  --surface-soft: rgba(255,255,255,0.72);
+  --text: #102233;
+  --muted: #5f7385;
+  --line: rgba(16, 34, 51, 0.1);
+  --primary: #17324D;
+  --secondary: #B9D8E8;
+  --accent: #13836F;
+  --headline: "Segoe UI Variable Display", "Segoe UI", sans-serif;
+  --body: "Segoe UI Variable Text", "Segoe UI", sans-serif;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: var(--body);
+  color: var(--text);
+  background:
+    radial-gradient(circle at top left, rgba(185, 216, 232, 0.8), transparent 38%),
+    linear-gradient(180deg, #f7fbfd 0%, var(--bg) 100%);
+}
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+.site-shell { width: min(1200px, calc(100vw - 32px)); margin: 0 auto; padding: 24px 0 64px; }
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px 22px;
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,0.68);
+  border-radius: 24px;
+  backdrop-filter: blur(14px);
+}
+.brand { font-family: var(--headline); font-weight: 650; letter-spacing: 0.02em; }
+.topnav { display: flex; gap: 18px; color: var(--muted); font-size: 14px; flex-wrap: wrap; }
+.hero {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 28px;
+  align-items: center;
+  padding: 52px 0 32px;
+}
+.compact-hero { padding-bottom: 12px; }
+.eyebrow, .section-label {
+  margin: 0 0 10px;
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+h1, h2, h3, h4 {
+  margin: 0;
+  font-family: var(--headline);
+  line-height: 1.04;
+}
+h1 { font-size: clamp(40px, 5vw, 68px); letter-spacing: -0.04em; }
+h2 { font-size: clamp(28px, 3vw, 44px); letter-spacing: -0.03em; }
+h3 { font-size: 22px; letter-spacing: -0.02em; }
+.lede {
+  margin: 18px 0 22px;
+  max-width: 58ch;
+  font-size: 18px;
+  line-height: 1.7;
+  color: var(--text);
+}
+.badge-row { display: flex; gap: 10px; flex-wrap: wrap; }
+.pill {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  background: rgba(23, 50, 77, 0.08);
+  color: var(--primary);
+  padding: 9px 14px;
+  font-size: 13px;
+  font-weight: 650;
+}
+.hero-actions, .button-row { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 24px; }
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  border-radius: 16px;
+  padding: 0 20px;
+  font-weight: 650;
+  border: 1px solid transparent;
+}
+.button.primary {
+  background: linear-gradient(135deg, var(--primary), #294b6b);
+  color: white;
+  box-shadow: 0 16px 32px rgba(23, 50, 77, 0.16);
+}
+.button.secondary {
+  background: rgba(255,255,255,0.85);
+  border-color: var(--line);
+}
+.button.ghost {
+  background: rgba(19, 131, 111, 0.09);
+  color: var(--accent);
+}
+.button.disabled {
+  opacity: 0.55;
+  pointer-events: none;
+}
+.state-note {
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.7;
+}
+.hero-media img, .panel img {
+  border-radius: 28px;
+  border: 1px solid rgba(16, 34, 51, 0.08);
+  box-shadow: 0 18px 42px rgba(12, 28, 42, 0.12);
+}
+.section { padding: 26px 0; }
+.section-heading { display: flex; flex-direction: column; gap: 10px; margin-bottom: 20px; }
+.grid { display: grid; gap: 22px; }
+.card-grid, .trust-strip, .plan-grid, .faq-list {
+  display: grid;
+  gap: 18px;
+}
+.card-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.card, .trust-card, .plan-card, .faq-item, .screenshot-card {
+  border-radius: 26px;
+  border: 1px solid var(--line);
+  background: var(--surface-soft);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 14px 34px rgba(12, 28, 42, 0.05);
+}
+.benefit-card { padding: 24px; min-height: 132px; }
+.screenshot-grid { display: grid; gap: 22px; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.screenshot-card img { border-radius: 26px 26px 0 0; }
+.screenshot-copy { padding: 18px 20px 22px; }
+.screenshot-copy p { margin: 10px 0 12px; color: var(--muted); line-height: 1.7; }
+.screenshot-copy span { font-size: 13px; color: var(--accent); font-weight: 700; }
+.split {
+  display: grid;
+  gap: 22px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.panel { padding: 18px; }
+.panel-note, .plan-footnote { margin: 14px 0 0; color: var(--muted); line-height: 1.7; }
+.step-list, .plan-card ul, .prose-block ul {
+  margin: 18px 0 0;
+  padding-left: 18px;
+  line-height: 1.8;
+}
+.pricing-section .plan-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.plan-card { padding: 26px; }
+.plan-card-pro {
+  background: linear-gradient(180deg, rgba(23, 50, 77, 0.98), rgba(26, 64, 96, 0.95));
+  color: white;
+}
+.plan-card-pro .plan-footnote,
+.plan-card-pro ul,
+.plan-card-pro p { color: rgba(255,255,255,0.85); }
+.plan-label {
+  margin: 0 0 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--accent);
+}
+.plan-card-pro .plan-label { color: #9ce4d6; }
+.trust-strip { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.trust-card { padding: 24px; }
+.trust-card p, .faq-item p, .prose-block p { color: var(--muted); line-height: 1.8; }
+.faq-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.faq-item { padding: 24px; }
+.text-columns { align-items: start; }
+.prose-block { padding: 24px; }
+.prose-block h3, .prose-block h4 { margin-bottom: 10px; }
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: space-between;
+  border-top: 1px solid var(--line);
+  padding-top: 28px;
+  margin-top: 12px;
+  color: var(--muted);
+}
+.hub-shell {
+  width: min(1180px, calc(100vw - 32px));
+  margin: 0 auto;
+  padding: 32px 0 64px;
+}
+.hub-hero {
+  display: grid;
+  gap: 18px;
+  margin-bottom: 32px;
+  padding: 22px;
+  border-radius: 28px;
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,0.78);
+}
+.hub-grid {
+  display: grid;
+  gap: 22px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+.hub-card {
+  padding: 22px;
+  border-radius: 26px;
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,0.82);
+}
+.hub-card img {
+  width: 68px;
+  height: 68px;
+  border-radius: 18px;
+  margin-bottom: 18px;
+}
+.status-chip {
+  display: inline-flex;
+  margin-bottom: 16px;
+  padding: 7px 12px;
+  border-radius: 999px;
+  background: rgba(23, 50, 77, 0.07);
+  color: var(--primary);
+  font-size: 12px;
+  font-weight: 700;
+}
+code {
+  padding: 2px 6px;
+  border-radius: 8px;
+  background: rgba(16, 34, 51, 0.06);
+}
+@media (max-width: 980px) {
+  .hero, .split, .pricing-section .plan-grid, .trust-strip, .faq-list, .screenshot-grid {
+    grid-template-columns: 1fr;
+  }
+  .card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .topbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+@media (max-width: 640px) {
+  .site-shell, .hub-shell { width: min(100vw - 24px, 100%); }
+  .card-grid { grid-template-columns: 1fr; }
+  h1 { font-size: 38px; }
+  .hero { padding-top: 32px; }
+}</style>
+</head>
+<body>
+  <div class="hub-shell">
+    <section class="hub-hero">
+      <p class="eyebrow">Product Catalog V2</p>
+      <h1>Commercial plugin pages, pricing previews, and payment readiness in one local catalog.</h1>
+      <p class="lede">Every product card pulls from the same catalog contract used by Chrome Web Store assets, landing materials, and future HWH checkout routes.</p>
+    </section>
+    <section class="hub-grid">
+      
+        <article class="hub-card">
+          <span class="status-chip">generated</span>
+          <img src="leadfill-one-profile/assets/icon/icon128.png" alt="LeadFill One Profile icon">
+          <h2>LeadFill One Profile</h2>
+          <p>Save one local profile and fill visible lead form fields on the current page in one click.</p>
+          <p class="state-note">Pricing: $19 lifetime | Payment: product_key_pending</p>
+          <div class="button-row">
+            <a class="button secondary" href="leadfill-one-profile/index.html">View Product</a>
+            <a class="button disabled" href="#pricing-pending" aria-disabled="true">Pricing</a>
+          </div>
+        </article>
+      
+    </section>
+  </div>
+</body>
+</html>

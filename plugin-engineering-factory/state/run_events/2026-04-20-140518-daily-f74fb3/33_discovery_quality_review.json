@@ -1,0 +1,71 @@
+{
+  "stage": "DISCOVERY_QUALITY_REVIEW",
+  "status": "passed",
+  "run_id": "2026-04-20-140518-daily-f74fb3",
+  "candidate_count": 6,
+  "selected_candidate": {
+    "candidate_id": "cand-tab-001",
+    "name": "Window Tabs Exporter",
+    "wedge_family": "tab_csv_window_export",
+    "source_mode": "fixture",
+    "total_score": 75.73,
+    "confidence_score": 77.71
+  },
+  "evidence_quality_score": 74.8,
+  "pain_cluster_quality_score": 100,
+  "opportunity_score_confidence": 77.71,
+  "portfolio_overlap_risk": 74,
+  "compliance_risk": 18,
+  "feasibility_confidence": 84.8,
+  "user_need_clarity": 87.8,
+  "build_recommendation": "skip",
+  "biggest_uncertainties": [
+    "single_purpose_gate: wedge remains too broad or supported by weak pain clusters",
+    "product_acceptance_forecast_gate: product acceptance forecast is weak because pain coverage is thin or too generic",
+    "capability gap: pain description is too generic to map directly into a single-purpose wedge",
+    "privacy concern: cluster lacks repeated independent evidence",
+    "workflow friction: pain description is too generic to map directly into a single-purpose wedge",
+    "reliability break: pain description is too generic to map directly into a single-purpose wedge",
+    "Portfolio overlap remains meaningful for this wedge family.",
+    "No Reddit or practitioner forum evidence yet.",
+    "Discovery still depends on fixture-mode evidence, so freshness is capped.",
+    "At least one top pain cluster is still weak or overly generic.",
+    "Discovery is still fixture-backed, so live corroboration is capped.",
+    "portfolio_overlap_gate"
+  ],
+  "missing_evidence": [
+    "No Reddit or practitioner forum evidence yet.",
+    "Discovery still depends on fixture-mode evidence, so freshness is capped.",
+    "At least one top pain cluster is still weak or overly generic.",
+    "The clearest wedge is still too close to the existing portfolio."
+  ],
+  "recommended_next_queries": [
+    "site:chromewebstore.google.com form filler one profile visible fields review",
+    "site:reddit.com recruiter intake form autofill local-only chrome extension",
+    "site:chromewebstore.google.com current window tab export csv pinned tabs review",
+    "site:github.com browser tab export extension issue current window csv",
+    "site:chromewebstore.google.com gmail snippet quick insert compose review",
+    "site:reddit.com canned reply chrome extension keyboard shortcut pain",
+    "site:chromewebstore.google.com small saas browser extension copy paste workflow review",
+    "site:github.com browser extension one-click data cleanup issue",
+    "site:chromewebstore.google.com browser workflow friction local-only productivity review",
+    "site:chromewebstore.google.com developer utility chrome extension local-only review"
+  ],
+  "decision_rationale": [
+    "The research loop sharpened the wedge from generic tab export into a specific current-window CSV job.",
+    "Evidence quality and testability stayed strong, and wedge clarity improved materially.",
+    "That sharper wedge now overlaps too directly with the existing tab_csv_window_export portfolio, so the candidate should not build.",
+    "Score gap to runner-up is 2.23.",
+    "build_gate=no_go",
+    "research_resolution=skip"
+  ],
+  "redaction_checks": {
+    "sanitized_response_bodies": true,
+    "checked_secret_value_count": 0,
+    "secret_values_present_in_artifact": false,
+    "authorization_header_pattern_present": false,
+    "key_material_pattern_present": false,
+    "secret_marker_pattern_present": false,
+    "redaction_guard_triggered": false
+  }
+}

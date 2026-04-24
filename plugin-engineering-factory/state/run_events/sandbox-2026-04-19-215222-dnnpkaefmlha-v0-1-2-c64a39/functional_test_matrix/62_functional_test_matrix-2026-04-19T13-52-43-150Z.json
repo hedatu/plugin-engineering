@@ -1,0 +1,146 @@
+{
+  "stage": "FUNCTIONAL_TEST_MATRIX",
+  "status": "passed",
+  "run_id": "sandbox-2026-04-19-215222-dnnpkaefmlha-v0-1-2-c64a39",
+  "archetype": "single_profile_form_fill",
+  "wedge": "LeadFill One Profile",
+  "tests": [
+    {
+      "test_name": "empty form",
+      "automated_or_manual": "automated",
+      "current_status": "passed",
+      "evidence_artifact": "runs/sandbox-2026-04-19-215222-dnnpkaefmlha-v0-1-2-c64a39/61_browser_smoke.json",
+      "risk_if_missing": "Users can trigger fill with an empty profile and get no meaningful guidance.",
+      "recommended_next_action": "Keep the empty-form smoke fixture in regression."
+    },
+    {
+      "test_name": "partially filled form",
+      "automated_or_manual": "automated",
+      "current_status": "passed",
+      "evidence_artifact": "runs/sandbox-2026-04-19-215222-dnnpkaefmlha-v0-1-2-c64a39/61_browser_smoke.json",
+      "risk_if_missing": "Real pages often mix pre-filled and empty values; overwrite behavior is unknown.",
+      "recommended_next_action": "Keep the partially-filled regression fixture."
+    },
+    {
+      "test_name": "readonly field",
+      "automated_or_manual": "automated",
+      "current_status": "passed",
+      "evidence_artifact": "runs/sandbox-2026-04-19-215222-dnnpkaefmlha-v0-1-2-c64a39/61_browser_smoke.json",
+      "risk_if_missing": "Readonly or locked CRM fields can throw errors or misleadingly report success.",
+      "recommended_next_action": "Keep the readonly and disabled regression fixture."
+    },
+    {
+      "test_name": "textarea",
+      "automated_or_manual": "automated",
+      "current_status": "passed",
+      "evidence_artifact": "runs/sandbox-2026-04-19-215222-dnnpkaefmlha-v0-1-2-c64a39/61_browser_smoke.json",
+      "risk_if_missing": "Long-form notes fields may not map cleanly even though textarea is queried.",
+      "recommended_next_action": "Keep textarea in the empty-form fixture."
+    },
+    {
+      "test_name": "select",
+      "automated_or_manual": "automated",
+      "current_status": "passed",
+      "evidence_artifact": "runs/sandbox-2026-04-19-215222-dnnpkaefmlha-v0-1-2-c64a39/61_browser_smoke.json",
+      "risk_if_missing": "Many lead forms use selects for country, industry, or source; current package likely cannot fill them.",
+      "recommended_next_action": "Keep the select fixture in smoke regression."
+    },
+    {
+      "test_name": "email field",
+      "automated_or_manual": "automated",
+      "current_status": "passed",
+      "evidence_artifact": "runs/sandbox-2026-04-19-215222-dnnpkaefmlha-v0-1-2-c64a39/61_browser_smoke.json",
+      "risk_if_missing": "Core contact data could fail silently.",
+      "recommended_next_action": "Keep the current browser smoke assertion."
+    },
+    {
+      "test_name": "phone field",
+      "automated_or_manual": "automated",
+      "current_status": "passed",
+      "evidence_artifact": "runs/sandbox-2026-04-19-215222-dnnpkaefmlha-v0-1-2-c64a39/61_browser_smoke.json",
+      "risk_if_missing": "Phone is explicitly mentioned in demand evidence and currently only verified on one fixture.",
+      "recommended_next_action": "Keep the current browser smoke assertion and add alternate label variants."
+    },
+    {
+      "test_name": "name field",
+      "automated_or_manual": "automated",
+      "current_status": "passed",
+      "evidence_artifact": "runs/sandbox-2026-04-19-215222-dnnpkaefmlha-v0-1-2-c64a39/61_browser_smoke.json",
+      "risk_if_missing": "First/last name mapping is central to the wedge value proposition.",
+      "recommended_next_action": "Keep the current browser smoke assertion."
+    },
+    {
+      "test_name": "no matching fields",
+      "automated_or_manual": "automated",
+      "current_status": "passed",
+      "evidence_artifact": "runs/sandbox-2026-04-19-215222-dnnpkaefmlha-v0-1-2-c64a39/61_browser_smoke.json",
+      "risk_if_missing": "The extension may report success while doing nothing useful on unsupported forms.",
+      "recommended_next_action": "Keep the no-match regression fixture."
+    },
+    {
+      "test_name": "activeTab permission path",
+      "automated_or_manual": "automated",
+      "current_status": "passed",
+      "evidence_artifact": "runs/sandbox-2026-04-19-215222-dnnpkaefmlha-v0-1-2-c64a39/61_browser_smoke.json",
+      "risk_if_missing": "Extension action invocation is the only authorized fill trigger path.",
+      "recommended_next_action": "Retain the current smoke coverage."
+    },
+    {
+      "test_name": "local storage only",
+      "automated_or_manual": "automated",
+      "current_status": "passed",
+      "evidence_artifact": "runs/sandbox-2026-04-19-215222-dnnpkaefmlha-v0-1-2-c64a39/workspace/dist/popup.js",
+      "risk_if_missing": "Any remote storage regression would break the privacy promise and review positioning.",
+      "recommended_next_action": "Keep a static test that forbids network calls in popup code."
+    },
+    {
+      "test_name": "popup error display",
+      "automated_or_manual": "automated",
+      "current_status": "passed",
+      "evidence_artifact": "runs/sandbox-2026-04-19-215222-dnnpkaefmlha-v0-1-2-c64a39/61_browser_smoke.json",
+      "risk_if_missing": "Failures become opaque and users cannot tell whether anything happened.",
+      "recommended_next_action": "Keep feedback verification in smoke regression."
+    },
+    {
+      "test_name": "profile save / edit / delete",
+      "automated_or_manual": "automated",
+      "current_status": "passed",
+      "evidence_artifact": "runs/sandbox-2026-04-19-215222-dnnpkaefmlha-v0-1-2-c64a39/61_browser_smoke.json",
+      "risk_if_missing": "Without delete/reset, users cannot recover from bad saved data cleanly.",
+      "recommended_next_action": "Keep popup profile management in smoke regression."
+    },
+    {
+      "test_name": "field overwrite behavior",
+      "automated_or_manual": "automated",
+      "current_status": "passed",
+      "evidence_artifact": "runs/sandbox-2026-04-19-215222-dnnpkaefmlha-v0-1-2-c64a39/61_browser_smoke.json",
+      "risk_if_missing": "Current fill path always writes values and could clobber operator edits.",
+      "recommended_next_action": "Keep the overwrite-default-false regression fixture."
+    },
+    {
+      "test_name": "visual feedback after fill",
+      "automated_or_manual": "automated",
+      "current_status": "passed",
+      "evidence_artifact": "runs/sandbox-2026-04-19-215222-dnnpkaefmlha-v0-1-2-c64a39/61_browser_smoke.json",
+      "risk_if_missing": "Users may not trust the action if the popup does not confirm what happened clearly.",
+      "recommended_next_action": "Keep popup feedback verification in smoke regression."
+    }
+  ],
+  "test_coverage_score": 100,
+  "missing_tests": [],
+  "release_blockers": [],
+  "recommended_next_tests": [
+    "Add label-variant coverage for alternate field descriptors such as mobile, organization, and region.",
+    "Add a multi-step form regression once the single-step smoke suite is stable.",
+    "Add manual tester verification on a real CRM page before another publish cycle."
+  ],
+  "redaction_checks": {
+    "sanitized_response_bodies": true,
+    "checked_secret_value_count": 0,
+    "secret_values_present_in_artifact": false,
+    "authorization_header_pattern_present": false,
+    "key_material_pattern_present": false,
+    "secret_marker_pattern_present": false,
+    "redaction_guard_triggered": false
+  }
+}

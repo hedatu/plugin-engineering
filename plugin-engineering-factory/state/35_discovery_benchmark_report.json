@@ -1,0 +1,101 @@
+{
+  "stage": "DISCOVERY_BENCHMARK",
+  "status": "passed",
+  "generated_at": "2026-04-20T01:12:08.399Z",
+  "total_cases": 6,
+  "passed_cases": 6,
+  "failed_cases": 0,
+  "precision_estimate": 1,
+  "false_positive_cases": [],
+  "false_negative_cases": [],
+  "scoring_drift": [
+    {
+      "case_id": "high_permission_risk_skip",
+      "expected_build_recommendation": "skip",
+      "actual_build_recommendation": "skip",
+      "passed": true,
+      "total_score": 0,
+      "evidence_quality_score": 0,
+      "testability_score": 0,
+      "go_no_go": "no_go",
+      "blockers": [
+        "no_selected_candidate"
+      ],
+      "notes": "Permission and compliance risk should force skip."
+    },
+    {
+      "case_id": "high_users_low_pain_skip",
+      "expected_build_recommendation": "skip",
+      "actual_build_recommendation": "skip",
+      "passed": true,
+      "total_score": 0,
+      "evidence_quality_score": 0,
+      "testability_score": 0,
+      "go_no_go": "no_go",
+      "blockers": [
+        "no_selected_candidate"
+      ],
+      "notes": "High usage alone should not force a build when pain is weak."
+    },
+    {
+      "case_id": "low_testability_skip",
+      "expected_build_recommendation": "skip",
+      "actual_build_recommendation": "skip",
+      "passed": true,
+      "total_score": 0,
+      "evidence_quality_score": 0,
+      "testability_score": 0,
+      "go_no_go": "no_go",
+      "blockers": [
+        "no_selected_candidate"
+      ],
+      "notes": "Low testability should fail the discovery gate."
+    },
+    {
+      "case_id": "portfolio_overlap_skip",
+      "expected_build_recommendation": "skip",
+      "actual_build_recommendation": "skip",
+      "passed": true,
+      "total_score": 0,
+      "evidence_quality_score": 0,
+      "testability_score": 0,
+      "go_no_go": "no_go",
+      "blockers": [
+        "no_selected_candidate"
+      ],
+      "notes": "High overlap with the existing form-fill lane should skip."
+    },
+    {
+      "case_id": "strong_need_good_build",
+      "expected_build_recommendation": "build",
+      "actual_build_recommendation": "build",
+      "passed": true,
+      "total_score": 76.05,
+      "evidence_quality_score": 67.48,
+      "testability_score": 89.25,
+      "go_no_go": "no_go",
+      "blockers": [
+        "single_purpose_gate",
+        "product_acceptance_forecast_gate"
+      ],
+      "notes": "Low-permission, narrow tab export wedge with repeated multi-source pain."
+    },
+    {
+      "case_id": "vague_pain_research_more",
+      "expected_build_recommendation": "research_more",
+      "actual_build_recommendation": "research_more",
+      "passed": true,
+      "total_score": 56.96,
+      "evidence_quality_score": 39.79,
+      "testability_score": 70.7,
+      "go_no_go": "no_go",
+      "blockers": [
+        "evidence_quality_gate",
+        "single_purpose_gate",
+        "product_acceptance_forecast_gate"
+      ],
+      "notes": "Pain exists but is too generic to green-light a build."
+    }
+  ],
+  "recommended_threshold_changes": []
+}

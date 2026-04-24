@@ -1,0 +1,64 @@
+{
+  "stage": "COMMERCIAL_PUBLISH_STRATEGY",
+  "status": "passed",
+  "run_id": "commercial-payment-2026-04-23-202112-leadfill-v0-2-0-ab6a29",
+  "current_staged_run_id": "commercial-2026-04-21-195643-dnnpkaefmlha-v0-2-0-7836c9",
+  "current_staged_version": "0.2.0",
+  "target_commercial_version": "0.2.0",
+  "recommended_option": "submit_commercial_revision",
+  "options": [
+    {
+      "option_id": "publish_current_staged",
+      "title": "A. Publish current STAGED 0.1.2",
+      "summary": "Fastest path, but it ships the technical validation build rather than the commercial packaging and payment-ready revision.",
+      "pros": [
+        "No re-review wait for the current approved package",
+        "Technically proven upload and review path"
+      ],
+      "cons": [
+        "Misses the intended commercial packaging and monetization entry points",
+        "Would publish a version the user explicitly does not want to ship"
+      ]
+    },
+    {
+      "option_id": "submit_commercial_revision",
+      "title": "B. Submit 0.2.0 commercial revision",
+      "summary": "Best match for the current goal: keep 0.1.2 as proof the review path works, then resubmit the commercial candidate.",
+      "pros": [
+        "Keeps the approved STAGED run as evidence the review path works",
+        "Allows payment entry, license activation, premium packaging, and updated listing assets"
+      ],
+      "cons": [
+        "Requires a new review cycle",
+        "Needs human visual review and dashboard sync before any upload approval"
+      ]
+    },
+    {
+      "option_id": "hold_staged_and_market_test",
+      "title": "C. Hold STAGED and market-test first",
+      "summary": "Useful if pricing or commercial positioning still needs more external proof before re-review.",
+      "pros": [
+        "Lets the team test demand using landing and fake-door assets first",
+        "Avoids immediate dashboard churn"
+      ],
+      "cons": [
+        "Delays the commercial Chrome Web Store submission",
+        "Still does not ship the commercial bundle"
+      ]
+    }
+  ],
+  "why": "Because the user wants payment entry, license activation, premium packaging, and store-ready assets before release, the right move is to keep 0.1.2 STAGED as proof and submit 0.2.0 as the commercial candidate.",
+  "requires_re_review": true,
+  "no_auto_cancel": true,
+  "no_auto_publish": true,
+  "next_step": "Finish premium packaging, human visual review, and dashboard listing sync, then decide whether to request sandbox upload approval for 0.2.0.",
+  "redaction_checks": {
+    "sanitized_response_bodies": true,
+    "checked_secret_value_count": 1,
+    "secret_values_present_in_artifact": false,
+    "authorization_header_pattern_present": false,
+    "key_material_pattern_present": false,
+    "secret_marker_pattern_present": false,
+    "redaction_guard_triggered": false
+  }
+}

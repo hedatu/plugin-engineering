@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "stage",
+    "run_id",
+    "closed_at",
+    "final_status",
+    "artifact_manifest",
+    "artifact_hashes",
+    "package_sha256",
+    "publish_execution_sha256",
+    "review_status_sha256",
+    "registry_entry_id",
+    "immutable"
+  ],
+  "properties": {
+    "stage": {
+      "type": "string",
+      "enum": ["CLOSE_RUN"]
+    },
+    "run_id": {
+      "type": "string"
+    },
+    "closed_at": {
+      "type": "string"
+    },
+    "final_status": {
+      "type": "string"
+    },
+    "artifact_manifest": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "artifact_hashes": {
+      "type": "object"
+    },
+    "package_sha256": {
+      "type": "string"
+    },
+    "publish_execution_sha256": {
+      "type": ["string", "null"]
+    },
+    "review_status_sha256": {
+      "type": ["string", "null"]
+    },
+    "registry_entry_id": {
+      "type": ["string", "null"]
+    },
+    "ledger_entry_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "immutable": {
+      "type": "boolean"
+    }
+  }
+}

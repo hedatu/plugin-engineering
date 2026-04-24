@@ -1,0 +1,142 @@
+name: Publish Sandbox
+
+on:
+  workflow_dispatch:
+    inputs:
+      run_id:
+        description: Sandbox validation run id under runs/
+        required: true
+        type: string
+      approval_action:
+        description: Requested sandbox action
+        required: true
+        type: choice
+        options:
+          - fetch_status_only
+          - upload_only
+          - publish_optional
+      dry_run:
+        description: Gate only; do not execute upload or publish
+        required: true
+        default: true
+        type: boolean
+
+concurrency:
+  group: chrome-extension-factory-${{ github.workflow }}-${{ inputs.run_id || github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  publish-sandbox:
+    runs-on: ubuntu-latest
+    env:
+      CHROME_WEB_STORE_PUBLISHER_ID: ${{ secrets.CHROME_WEB_STORE_PUBLISHER_ID }}
+      CHROME_WEB_STORE_SANDBOX_ITEM_ID: ${{ secrets.CHROME_WEB_STORE_SANDBOX_ITEM_ID }}
+      GOOGLE_APPLICATION_CREDENTIALS: ${{ runner.temp }}/service-account.json
+      CWS_HTTPS_PROXY: ${{ secrets.CWS_HTTPS_PROXY }}
+      CWS_HTTP_PROXY: ${{ secrets.CWS_HTTP_PROXY }}
+      CWS_ALLOW_SANDBOX_UPLOAD: ${{ inputs.dry_run && 'false' || (inputs.approval_action != 'fetch_status_only' && 'true' || 'false') }}
+      CWS_ALLOW_SANDBOX_PUBLISH: ${{ inputs.dry_run && 'false' || (inputs.approval_action == 'publish_optional' && 'true' || 'false') }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - name: Write service account
+        shell: bash
+        run: |
+          printf '%s' '${{ secrets.CHROME_WEB_STORE_SERVICE_ACCOUNT_JSON }}' > "$GOOGLE_APPLICATION_CREDENTIALS"
+      - name: Validate sandbox validation run
+        shell: bash
+        run: |
+          node - <<'NODE'
+          const fs = require('fs');
+          const path = require('path');
+          const runContextPath = path.join(process.cwd(), 'runs', process.env.RUN_ID, '00_run_context.json');
+          const sandboxPlanPath = path.join(process.cwd(), 'runs', process.env.RUN_ID, '83_sandbox_validation_plan.json');
+          if (!fs.existsSync(runContextPath)) throw new Error('Missing 00_run_context.json');
+          if (!fs.existsSync(sandboxPlanPath)) throw new Error('Missing 83_sandbox_validation_plan.json');
+          const runContext = JSON.parse(fs.readFileSync(runContextPath, 'utf8'));
+          if ((runContext.run_type || runContext.task_mode) !== 'sandbox_validation') {
+            throw new Error(`run_type=${runContext.run_type || runContext.task_mode}`);
+          }
+          const sandboxItemId = runContext.publish?.sandbox_item_id || process.env.CHROME_WEB_STORE_SANDBOX_ITEM_ID;
+          if (!sandboxItemId || sandboxItemId !== process.env.CHROME_WEB_STORE_SANDBOX_ITEM_ID) {
+            throw new Error(`sandbox_item_id=${sandboxItemId || 'missing'}`);
+          }
+          NODE
+        env:
+          RUN_ID: ${{ inputs.run_id }}
+      - name: Sandbox Preflight
+        run: npm run sandbox:preflight -- --run runs/${{ inputs.run_id }}
+      - name: CI Dry Check
+        shell: bash
+        run: |
+          case "$APPROVAL_ACTION" in
+            upload_only) ACTION="sandbox_upload" ;;
+            publish_optional) ACTION="sandbox_publish" ;;
+            *) ACTION="fetch_status_only" ;;
+          esac
+          npm run ci:publish-sandbox-dry-check -- --run runs/$RUN_ID --action $ACTION
+        env:
+          RUN_ID: ${{ inputs.run_id }}
+          APPROVAL_ACTION: ${{ inputs.approval_action }}
+      - name: Write Workflow Summary
+        shell: bash
+        run: |
+          node - <<'NODE' >> "$GITHUB_STEP_SUMMARY"
+          const fs = require('fs');
+          const path = require('path');
+          const reportPath = path.join(process.cwd(), 'state', 'run_events', process.env.RUN_ID, '85_publish_sandbox_ci_dry_check.json');
+          const report = JSON.parse(fs.readFileSync(reportPath, 'utf8'));
+          console.log(`would_execute: ${report.would_execute}`);
+          console.log(`blocked_reason: ${report.blocked_reason}`);
+          console.log(`next_step: ${report.next_step}`);
+          NODE
+        env:
+          RUN_ID: ${{ inputs.run_id }}
+      - name: Enforce Dry Run
+        if: ${{ inputs.dry_run }}
+        run: echo "dry_run=true; gate checks only."
+      - name: Require Write-Authorized Gate
+        if: ${{ !inputs.dry_run }}
+        shell: bash
+        run: |
+          node - <<'NODE'
+          const fs = require('fs');
+          const path = require('path');
+          const reportPath = path.join(process.cwd(), 'state', 'run_events', process.env.RUN_ID, '85_publish_sandbox_ci_dry_check.json');
+          const report = JSON.parse(fs.readFileSync(reportPath, 'utf8'));
+          if (!report.would_execute) {
+            throw new Error(`would_execute=false blocked_reason=${report.blocked_reason} next_step=${report.next_step}`);
+          }
+          NODE
+        env:
+          RUN_ID: ${{ inputs.run_id }}
+      - name: Require Non-Dry-Run Action
+        if: ${{ !inputs.dry_run }}
+        shell: bash
+        run: |
+          if [ "$APPROVAL_ACTION" = "fetch_status_only" ]; then
+            echo "dry_run=false cannot be used with fetch_status_only." >&2
+            exit 1
+          fi
+        env:
+          APPROVAL_ACTION: ${{ inputs.approval_action }}
+      - name: Execute Sandbox Upload
+        if: ${{ !inputs.dry_run && inputs.approval_action == 'upload_only' }}
+        run: |
+          npm run publish:sandbox-fetch-status -- --run runs/${{ inputs.run_id }} --action-source ci
+          npm run publish:sandbox-upload -- --run runs/${{ inputs.run_id }} --action-source ci
+      - name: Execute Sandbox Publish
+        if: ${{ !inputs.dry_run && inputs.approval_action == 'publish_optional' }}
+        run: |
+          npm run publish:sandbox-fetch-status -- --run runs/${{ inputs.run_id }} --action-source ci
+          npm run publish:sandbox-publish -- --run runs/${{ inputs.run_id }} --action-source ci
+      - uses: actions/upload-artifact@v4
+        with:
+          name: publish-sandbox-${{ inputs.run_id }}
+          path: |
+            runs/${{ inputs.run_id }}
+            state/run_events/${{ inputs.run_id }}

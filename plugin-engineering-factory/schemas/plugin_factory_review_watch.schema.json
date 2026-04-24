@@ -1,0 +1,31 @@
+{
+  "type": "object",
+  "required": [
+    "generated_at",
+    "server",
+    "deployed",
+    "credentials_present",
+    "token_self_test",
+    "fetch_status_succeeded",
+    "upload_publish_disabled",
+    "schedule_enabled",
+    "blockers"
+  ],
+  "properties": {
+    "generated_at": { "type": "string", "minLength": 1 },
+    "server": { "type": "string", "minLength": 1 },
+    "deployed": { "type": "boolean" },
+    "credentials_present": { "type": "boolean" },
+    "token_self_test": { "type": "string", "minLength": 1 },
+    "fetch_status_succeeded": { "type": "boolean" },
+    "upload_publish_disabled": { "type": "boolean" },
+    "schedule_enabled": { "type": "boolean" },
+    "schedule_expression": { "type": ["string", "null"] },
+    "review_state": { "type": ["string", "null"] },
+    "runtime_path": { "type": ["string", "null"] },
+    "blockers": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 }
+    }
+  }
+}

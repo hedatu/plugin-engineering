@@ -1,0 +1,93 @@
+{
+  "type": "object",
+  "required": [
+    "generated_at",
+    "server_id",
+    "endpoint",
+    "capture_started_at",
+    "capture_completed_at",
+    "duration_minutes",
+    "log_sources",
+    "db_before",
+    "db_after",
+    "captured_request_count",
+    "captured_requests",
+    "blockers"
+  ],
+  "properties": {
+    "generated_at": { "type": "string", "minLength": 1 },
+    "server_id": { "type": "string", "minLength": 1 },
+    "endpoint": { "type": "string", "minLength": 1 },
+    "capture_started_at": { "type": "string", "minLength": 1 },
+    "capture_completed_at": { "type": "string", "minLength": 1 },
+    "duration_minutes": { "type": "integer", "minimum": 1 },
+    "log_sources": {
+      "type": "object",
+      "required": ["functions", "caddy_access_logs_configured"],
+      "properties": {
+        "functions": { "type": "string", "minLength": 1 },
+        "caddy_access_logs_configured": { "type": "boolean" },
+        "caddy_note": { "type": ["string", "null"] },
+        "kong_note": { "type": ["string", "null"] }
+      }
+    },
+    "db_before": {
+      "type": "object",
+      "required": ["processed_webhooks", "webhook_events", "orders", "payments", "entitlements"],
+      "properties": {
+        "processed_webhooks": { "type": "integer", "minimum": 0 },
+        "webhook_events": { "type": "integer", "minimum": 0 },
+        "orders": { "type": "integer", "minimum": 0 },
+        "payments": { "type": "integer", "minimum": 0 },
+        "entitlements": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "db_after": {
+      "type": "object",
+      "required": ["processed_webhooks", "webhook_events", "orders", "payments", "entitlements"],
+      "properties": {
+        "processed_webhooks": { "type": "integer", "minimum": 0 },
+        "webhook_events": { "type": "integer", "minimum": 0 },
+        "orders": { "type": "integer", "minimum": 0 },
+        "payments": { "type": "integer", "minimum": 0 },
+        "entitlements": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "captured_request_count": { "type": "integer", "minimum": 0 },
+    "captured_requests": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "timestamp",
+          "method",
+          "status",
+          "signature_header_present",
+          "event_type",
+          "localOrderId",
+          "productKey",
+          "signature_valid",
+          "handled_status"
+        ],
+        "properties": {
+          "timestamp": { "type": "string", "minLength": 1 },
+          "method": { "type": "string", "minLength": 1 },
+          "status": { "type": "string", "minLength": 1 },
+          "signature_header_present": { "type": "boolean" },
+          "event_type": { "type": ["string", "null"] },
+          "event_id": { "type": ["string", "null"] },
+          "localOrderId": { "type": ["string", "null"] },
+          "productKey": { "type": ["string", "null"] },
+          "signature_valid": { "type": ["boolean", "null"] },
+          "handled_status": { "type": "string", "minLength": 1 },
+          "processing_error": { "type": ["string", "null"] },
+          "source_ip": { "type": ["string", "null"] }
+        }
+      }
+    },
+    "blockers": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 }
+    }
+  }
+}

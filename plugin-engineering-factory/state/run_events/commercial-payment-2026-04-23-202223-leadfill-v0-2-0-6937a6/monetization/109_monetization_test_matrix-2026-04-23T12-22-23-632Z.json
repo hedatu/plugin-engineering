@@ -1,0 +1,83 @@
+{
+  "stage": "MONETIZATION_TEST_MATRIX",
+  "status": "failed",
+  "run_id": "commercial-payment-2026-04-23-202223-leadfill-v0-2-0-6937a6",
+  "candidate_name": "LeadFill One Profile",
+  "archetype": "single_profile_form_fill",
+  "payment_provider": "pay_site_supabase_waffo",
+  "checkout_mode": "test",
+  "tests": [
+    {
+      "id": "pay_site_config_present",
+      "name": "pay site public config present",
+      "current_status": "passed",
+      "why_it_matters": "The extension must point at the California primary HWH APIs.",
+      "evidence_artifact": "workspace/dist/pay_site_config.json",
+      "recommended_next_action": "Keep this file public-only and rerun security scan before any upload."
+    },
+    {
+      "id": "email_otp_ui_present",
+      "name": "email OTP UI present",
+      "current_status": "passed",
+      "why_it_matters": "The commercial plugin must let users log in through the HWH email OTP flow.",
+      "evidence_artifact": "workspace/dist/popup.html",
+      "recommended_next_action": "Use real plugin smoke to verify SEND_OTP and VERIFY_OTP before launch."
+    },
+    {
+      "id": "background_message_contract_present",
+      "name": "background message contract present",
+      "current_status": "passed",
+      "why_it_matters": "The extension-side protocol must match the verified HWH handoff.",
+      "evidence_artifact": "workspace/dist/monetization/membershipClient.js",
+      "recommended_next_action": "Do not add service-role or Waffo private keys to this client contract."
+    },
+    {
+      "id": "checkout_source_chrome_extension",
+      "name": "checkout source is chrome_extension",
+      "current_status": "passed",
+      "why_it_matters": "The HWH payment trace must distinguish plugin checkouts from web checkouts.",
+      "evidence_artifact": "workspace/dist/monetization/checkoutFlow.js",
+      "recommended_next_action": "Confirm the backend still receives source=chrome_extension in real plugin smoke."
+    },
+    {
+      "id": "success_url_not_unlock_basis",
+      "name": "successUrl does not unlock locally",
+      "current_status": "passed",
+      "why_it_matters": "Paid access must come only from webhook-derived entitlement.",
+      "evidence_artifact": "workspace/dist/popup.html",
+      "recommended_next_action": "Keep the success page as informational only."
+    },
+    {
+      "id": "consume_usage_before_fill",
+      "name": "CONSUME_USAGE gate exists before fill",
+      "current_status": "passed",
+      "why_it_matters": "Free quota and Pro unlimited behavior must be enforced before the core fill action runs.",
+      "evidence_artifact": "workspace/dist/popup.js",
+      "recommended_next_action": "Run the 10 free fills plus 11th quota exceeded smoke before publish."
+    },
+    {
+      "id": "pro_entitlement_refresh_path",
+      "name": "REFRESH_ENTITLEMENT active path exists",
+      "current_status": "passed",
+      "why_it_matters": "Users must refresh membership after payment rather than relying on successUrl.",
+      "evidence_artifact": "workspace/dist/monetization/membershipClient.js",
+      "recommended_next_action": "Verify active, free, invalid, expired, and revoked states in plugin smoke."
+    },
+    {
+      "id": "auth_tokens_stay_in_background_path",
+      "name": "auth tokens stay in background path",
+      "current_status": "missing",
+      "why_it_matters": "Content scripts and visible UI must not persist raw session tokens.",
+      "evidence_artifact": "workspace/dist/monetization/authFlow.js",
+      "recommended_next_action": "Inspect storage during smoke and verify content script has no token."
+    },
+    {
+      "id": "public_only_no_provider_secret",
+      "name": "public-only payment config",
+      "current_status": "passed",
+      "why_it_matters": "The extension may ship public Supabase config only, never payment or service-role secrets.",
+      "evidence_artifact": "110_monetization_security_scan.json",
+      "recommended_next_action": "Run monetization:security-scan before any upload decision."
+    }
+  ]
+}

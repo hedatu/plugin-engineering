@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "stage",
+    "status",
+    "run_id",
+    "product_key",
+    "reviewed_at",
+    "review_method",
+    "page",
+    "page_quality_score",
+    "checks",
+    "blockers",
+    "warnings",
+    "recommended_fixes",
+    "next_step"
+  ],
+  "properties": {
+    "stage": { "type": "string", "enum": ["PRODUCT_PAGE_QUALITY_REVIEW"] },
+    "status": { "type": "string", "enum": ["passed", "failed"] },
+    "run_id": { "type": "string", "minLength": 1 },
+    "product_key": { "type": "string", "minLength": 1 },
+    "reviewed_at": { "type": "string", "minLength": 1 },
+    "review_method": { "type": "string", "minLength": 1 },
+    "page": { "type": "string", "minLength": 1 },
+    "page_quality_score": { "type": "number", "minimum": 0, "maximum": 100 },
+    "checks": { "type": "object" },
+    "blockers": { "type": "array", "items": { "type": "string" } },
+    "warnings": { "type": "array", "items": { "type": "string" } },
+    "recommended_fixes": { "type": "array", "items": { "type": "string" } },
+    "next_step": { "type": "string", "minLength": 1 },
+    "redaction_checks": { "type": "object" }
+  }
+}

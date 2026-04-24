@@ -1,0 +1,14 @@
+{
+  "generated_at": "2026-04-23T04:38:51.920Z",
+  "server": "california",
+  "deployed": true,
+  "credentials_present": true,
+  "token_self_test": "passed",
+  "fetch_status_succeeded": true,
+  "upload_publish_disabled": true,
+  "schedule_enabled": true,
+  "schedule_expression": "0 */6 * * *",
+  "review_state": "STAGED",
+  "runtime_path": "/opt/commercial-extension-factory/apps/factory",
+  "blockers": []
+}

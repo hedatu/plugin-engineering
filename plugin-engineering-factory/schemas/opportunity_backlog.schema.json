@@ -1,0 +1,102 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "stage",
+    "status",
+    "generated_at",
+    "opportunities"
+  ],
+  "properties": {
+    "stage": {
+      "type": "string",
+      "enum": ["OPPORTUNITY_BACKLOG"]
+    },
+    "status": {
+      "type": "string",
+      "enum": ["passed", "failed"]
+    },
+    "generated_at": { "type": "string" },
+    "opportunities": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "opportunity_id",
+          "discovered_at",
+          "source_run_id",
+          "candidate_id",
+          "candidate_name",
+          "build_recommendation",
+          "status",
+          "decision_reason",
+          "linked_run_ids",
+          "linked_portfolio_items"
+        ],
+        "properties": {
+          "opportunity_id": { "type": "string" },
+          "discovered_at": { "type": "string" },
+          "source_run_id": { "type": ["string", "null"] },
+          "candidate_id": { "type": ["string", "null"] },
+          "candidate_name": { "type": ["string", "null"] },
+          "source_url": { "type": ["string", "null"] },
+          "category": { "type": ["string", "null"] },
+          "users_estimate": { "type": ["number", "integer", "null"] },
+          "rating": { "type": ["number", "null"] },
+          "review_count": { "type": ["number", "integer", "null"] },
+          "latest_update": { "type": ["string", "null"] },
+          "pain_summary": { "type": "string" },
+          "top_pain_clusters": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "evidence_quality_score": { "type": ["number", "integer"] },
+          "testability_score": { "type": ["number", "integer"] },
+          "wedge_clarity_score": { "type": ["number", "integer"] },
+          "portfolio_overlap_score": { "type": ["number", "integer"] },
+          "compliance_risk": { "type": ["number", "integer", "null"] },
+          "build_recommendation": {
+            "type": "string",
+            "enum": ["build", "research_more", "skip", "backlog_waiting"]
+          },
+          "decision_reason": { "type": "string" },
+          "status": {
+            "type": "string",
+            "enum": [
+            "new",
+            "research_more",
+            "build_ready",
+            "human_candidate_review_ready",
+            "skipped",
+              "built",
+              "killed",
+              "backlog_waiting_for_evidence",
+              "backlog_waiting_for_builder",
+              "backlog_waiting_for_policy_review",
+              "skipped_high_overlap",
+              "skipped_high_compliance_risk",
+              "skipped_low_wedge_clarity"
+            ]
+          },
+          "linked_run_ids": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "linked_portfolio_items": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "next_step": { "type": ["string", "null"] },
+          "selected_wedge": { "type": ["string", "null"] },
+          "research_rounds_completed": { "type": ["number", "integer", "null"] },
+          "evidence_requirements": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "status_detail": { "type": ["string", "null"] },
+          "last_updated_at": { "type": ["string", "null"] }
+        }
+      }
+    }
+  }
+}

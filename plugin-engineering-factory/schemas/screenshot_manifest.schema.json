@@ -1,0 +1,99 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "stage",
+    "status",
+    "generated_at",
+    "build_generated_at",
+    "smoke_generated_at",
+    "candidate_id",
+    "archetype",
+    "capture_source",
+    "screenshots"
+  ],
+  "properties": {
+    "stage": {
+      "type": "string",
+      "enum": ["BROWSER_SMOKE_AND_CAPTURE"]
+    },
+    "status": {
+      "type": "string",
+      "enum": ["passed", "failed"]
+    },
+    "generated_at": {
+      "type": "string",
+      "minLength": 1
+    },
+    "build_generated_at": {
+      "type": "string"
+    },
+    "smoke_generated_at": {
+      "type": "string"
+    },
+    "candidate_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "archetype": {
+      "type": "string",
+      "minLength": 1
+    },
+    "capture_source": {
+      "type": "string",
+      "enum": ["browser_smoke_happy_path"]
+    },
+    "screenshots": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "file_name",
+          "path",
+          "step_id",
+          "source_url",
+          "capture_kind",
+          "capture_source",
+          "from_happy_path",
+          "captured_at"
+        ],
+        "properties": {
+          "file_name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "path": {
+            "type": "string",
+            "minLength": 1
+          },
+          "step_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "source_url": {
+            "type": "string",
+            "minLength": 1
+          },
+          "capture_kind": {
+            "type": "string",
+            "enum": ["viewport_png"]
+          },
+          "capture_source": {
+            "type": "string",
+            "enum": ["browser_smoke_happy_path"]
+          },
+          "from_happy_path": {
+            "type": "boolean"
+          },
+          "captured_at": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "failure_reason": {
+      "type": "string"
+    }
+  }
+}

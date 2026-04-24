@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "stage",
+    "status",
+    "run_id",
+    "product_key",
+    "reviewed_at",
+    "review_method",
+    "overall_score",
+    "product_page_quality_score",
+    "checkout_page_quality_score",
+    "design_system_status",
+    "checks",
+    "blockers",
+    "warnings",
+    "web_quality_gate",
+    "next_step"
+  ],
+  "properties": {
+    "stage": { "type": "string", "enum": ["SITE_VISUAL_CONSISTENCY_REPORT"] },
+    "status": { "type": "string", "enum": ["passed", "failed"] },
+    "run_id": { "type": "string", "minLength": 1 },
+    "product_key": { "type": "string", "minLength": 1 },
+    "reviewed_at": { "type": "string", "minLength": 1 },
+    "review_method": { "type": "string", "minLength": 1 },
+    "overall_score": { "type": "number", "minimum": 0, "maximum": 100 },
+    "product_page_quality_score": { "type": "number", "minimum": 0, "maximum": 100 },
+    "checkout_page_quality_score": { "type": "number", "minimum": 0, "maximum": 100 },
+    "design_system_status": { "type": "string" },
+    "checks": { "type": "object" },
+    "blockers": { "type": "array", "items": { "type": "string" } },
+    "warnings": { "type": "array", "items": { "type": "string" } },
+    "web_quality_gate": { "type": "object" },
+    "next_step": { "type": "string", "minLength": 1 },
+    "redaction_checks": { "type": "object" }
+  }
+}

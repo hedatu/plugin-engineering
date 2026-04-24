@@ -1,0 +1,36 @@
+{
+  "generated_at": "2026-04-23T09:15:51.291Z",
+  "provider": "resend",
+  "environment": "california_staging_ca_hwh",
+  "smtp_sender": "no-reply@notify.915500.xyz",
+  "test_mailbox_redacted": "hwh***@deltajohnsons.com",
+  "send_otp_status": "verified",
+  "send_otp_http_status": 200,
+  "email_delivered": true,
+  "email_subject_present": true,
+  "email_link_hosts": [
+    "ca-hwh-api.915500.xyz",
+    "ca-hwh.915500.xyz"
+  ],
+  "email_link_hosts_expected": [
+    "ca-hwh.915500.xyz",
+    "ca-hwh-api.915500.xyz"
+  ],
+  "redirected_to_weiwang": false,
+  "verify_otp_status": "verified",
+  "verify_otp_http_status": 200,
+  "session_created": true,
+  "user_id_redacted": "ec37fe32...5eab",
+  "get_entitlement_status": "verified",
+  "get_entitlement_plan_key": "free",
+  "get_entitlement_feature_enabled": true,
+  "register_installation_status": "verified",
+  "register_installation_registered": true,
+  "installation_id_present": true,
+  "consume_usage_free_status": "verified",
+  "consume_usage_allowed_attempts": 10,
+  "quota_exceeded_status": "verified",
+  "failure_phase": null,
+  "blockers": [],
+  "completed_at": "2026-04-23T09:16:09.096Z"
+}

@@ -1,0 +1,48 @@
+{
+  "generated_at": "2026-04-22T21:14:46.1861567+08:00",
+  "server_id": "california",
+  "products": [
+    {
+      "productKey": "leadfill-one-profile",
+      "slug": "leadfill-one-profile",
+      "name": "LeadFill One Profile",
+      "status": "active",
+      "website_url": "https://ca-pay.915500.xyz/products/leadfill-one-profile",
+      "monetization_enabled": true,
+      "checkout_enabled": true,
+      "free_quota": 10,
+      "featureKey": "leadfill_fill_action",
+      "plans": [
+        {
+          "planKey": "free",
+          "billingType": "free",
+          "price": "USD 0.00",
+          "maxInstallations": 1
+        },
+        {
+          "planKey": "lifetime",
+          "billingType": "onetime",
+          "price": "USD 19.00",
+          "maxInstallations": 3,
+          "waffo_checkout_mode": "test"
+        }
+      ]
+    },
+    {
+      "productKey": "chatgpt2obsidian",
+      "slug": "chatgpt2obsidian",
+      "name": "ChatGPT to Obsidian Exporter",
+      "status": "draft",
+      "monetization_enabled": false,
+      "checkout_enabled": false,
+      "lifecycle": "legacy_test_only",
+      "replacementProductKey": "leadfill-one-profile"
+    }
+  ],
+  "weiwang": {
+    "present_in_california_hwh_db": false,
+    "monetization_enabled": false,
+    "checkout_enabled": false,
+    "note": "No weiwang product rows exist in the California HWH staging database, so it is not part of the paid entitlement path."
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "generated_at": "2026-04-23T11:10:34.7509922+08:00",
+  "local_order_id": "ord_1776912964691_ddb727d5",
+  "session_id": "cs_6566cb90-062e-0f9d-7863-39203265e517",
+  "checkout_url_domain": "pancake.waffo.ai",
+  "productKey": "leadfill-one-profile",
+  "planKey": "lifetime",
+  "source": "web",
+  "installationId_present": true,
+  "userId_present": true,
+  "successUrl": "https://ca-hwh.915500.xyz/checkout/success",
+  "cancelUrl": "https://ca-hwh.915500.xyz/checkout/cancel",
+  "webhook_expected_url": "https://ca-hwh-api.915500.xyz/functions/v1/waffo-webhook",
+  "created_at": "2026-04-23T02:56:04.7004100+00:00",
+  "status": "completed",
+  "metadata_complete": true,
+  "waffo_event_id": "PAY_0adLohkJYNiExote8KDSWQ",
+  "payment_status": "completed",
+  "entitlement_status": "active",
+  "blockers": [
+    "Latest verified California checkout session was created from the site flow with source=web, so source=chrome_extension still needs a real plugin-client follow-up."
+  ]
+}

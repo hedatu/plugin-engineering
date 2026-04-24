@@ -1,0 +1,49 @@
+{
+  "stage": "CHECKOUT_PAGE_QUALITY_REVIEW",
+  "status": "failed",
+  "run_id": "commercial-payment-2026-04-23-203843-leadfill-v0-2-0-b846c2",
+  "product_key": "leadfill-one-profile",
+  "reviewed_at": "2026-04-24T04:32:37.432Z",
+  "review_method": "static_generated_page_review",
+  "pages": [
+    "generated/plugin-pages/leadfill-one-profile/pricing.html",
+    "generated/plugin-pages/leadfill-one-profile/account.html",
+    "generated/plugin-pages/leadfill-one-profile/checkout/success.html",
+    "generated/plugin-pages/leadfill-one-profile/checkout/cancel.html",
+    "generated/plugin-pages/leadfill-one-profile/entitlement.html"
+  ],
+  "page_quality_score": 94,
+  "checks": {
+    "one_product_one_price": true,
+    "free_vs_lifetime_clear": true,
+    "checkout_preflight_explained": true,
+    "webhook_entitlement_explained": false,
+    "success_page_next_steps": true,
+    "cancel_page_retry_path": true,
+    "entitlement_page_states": true,
+    "success_url_does_not_unlock_locally": true,
+    "production_payment_not_overclaimed": true,
+    "no_secret_claim_regression": true,
+    "account_page_is_not_debug_panel_copy": true,
+    "no_legacy_key_copy": true
+  },
+  "blockers": [
+    "webhook_entitlement_explained"
+  ],
+  "warnings": [
+    "checkout_mode_test_must_not_be_presented_as_live"
+  ],
+  "recommended_fixes": [
+    "Regenerate pricing, account, and checkout guidance pages after fixing failed payment truthfulness checks."
+  ],
+  "next_step": "fix_checkout_page_copy_or_structure",
+  "redaction_checks": {
+    "sanitized_response_bodies": true,
+    "checked_secret_value_count": 1,
+    "secret_values_present_in_artifact": false,
+    "authorization_header_pattern_present": false,
+    "key_material_pattern_present": false,
+    "secret_marker_pattern_present": false,
+    "redaction_guard_triggered": false
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "stage": "PREMIUM_WEB_DESIGN_SYSTEM",
+  "status": "passed",
+  "run_id": "commercial-payment-2026-04-23-203843-leadfill-v0-2-0-b846c2",
+  "product_key": "leadfill-one-profile",
+  "generated_at": "2026-04-24T04:32:37.431Z",
+  "design_direction": "premium, modern, clean, focused, productized, trustworthy",
+  "typography": {
+    "headline": "\"Segoe UI Variable Display\", \"Segoe UI\", \"Aptos Display\", sans-serif",
+    "body": "\"Segoe UI Variable Text\", \"Segoe UI\", \"Aptos\", sans-serif",
+    "hierarchy": [
+      "display hero headline with short line length",
+      "section titles at 30-52px",
+      "body copy at 16-21px with generous leading",
+      "caption and status text at 13-14px"
+    ]
+  },
+  "color_system": {
+    "primary": "#17324D",
+    "accent": "#13836F",
+    "warm_accent": "#c39a50",
+    "background": "#f4f0e8",
+    "surface": "#fffdf8",
+    "text": "#102233",
+    "muted": "#60717b"
+  },
+  "spacing_system": {
+    "page_width": "1180px max",
+    "section_spacing": "46px vertical rhythm",
+    "card_padding": "24px to 30px",
+    "button_height": "52px",
+    "hero_spacing": "86px top on desktop"
+  },
+  "components": [
+    "sticky rounded topbar",
+    "premium hero with trust badges and proof metrics",
+    "benefit cards",
+    "four-step flow cards",
+    "feature matrix cards",
+    "two-plan pricing cards",
+    "checkout guidance cards",
+    "success/cancel/entitlement guidance pages",
+    "FAQ cards",
+    "trust strip"
+  ],
+  "copy_rules": [
+    "Lead with user value, not internal implementation.",
+    "Keep Free and Lifetime pricing simple: 10 free fills, $19 lifetime.",
+    "State local-only, no upload, and no cloud sync without overclaiming.",
+    "Do not mention legacy chatgpt2obsidian as a LeadFill config source.",
+    "Do not imply production payment is verified."
+  ],
+  "payment_safety_rules": [
+    "External checkout only.",
+    "successUrl does not unlock locally.",
+    "Active entitlement must come from webhook-confirmed pay-site state.",
+    "No service role key, Waffo private key, merchant secret, or webhook secret in the client."
+  ],
+  "asset_alignment": {
+    "uses_premium_packaging_brand_system": true,
+    "uses_store_release_assets": true,
+    "remotion_assets_path": "state/run_events/commercial-payment-2026-04-23-203843-leadfill-v0-2-0-b846c2/80_remotion_assets"
+  },
+  "localization": {
+    "default_locale": "en",
+    "supported_locales": [
+      "en",
+      "zh-cn",
+      "ja",
+      "es"
+    ],
+    "note": "English stays as the source-of-truth root version while secondary locales reuse the same visual system."
+  },
+  "quality_targets": {
+    "product_page_score_minimum": 88,
+    "checkout_page_score_minimum": 88,
+    "visual_consistency_score_minimum": 90
+  },
+  "blockers": [],
+  "redaction_checks": {
+    "sanitized_response_bodies": true,
+    "checked_secret_value_count": 1,
+    "secret_values_present_in_artifact": false,
+    "authorization_header_pattern_present": false,
+    "key_material_pattern_present": false,
+    "secret_marker_pattern_present": false,
+    "redaction_guard_triggered": false
+  }
+}

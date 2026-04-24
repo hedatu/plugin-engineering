@@ -1,0 +1,111 @@
+{
+  "generated_at": "2026-04-22T21:14:46.1861567+08:00",
+  "server_id": "california",
+  "hostname": "do-mini-sfo3-01",
+  "preflight_passed": true,
+  "compose_projects": [
+    {
+      "name": "supabase-core",
+      "status": "running(4)",
+      "config_files": [
+        "/opt/supabase-core/docker-compose.yml"
+      ],
+      "belongs_to_target_staging_stack": true,
+      "role": "lightweight_supabase_base_for_hwh_staging"
+    }
+  ],
+  "running_containers": [
+    {
+      "name": "supabase-kong",
+      "service": "kong",
+      "image": "kong/kong:3.9.1",
+      "status": "healthy",
+      "host_ports": [
+        "0.0.0.0:8000->8000/tcp"
+      ]
+    },
+    {
+      "name": "supabase-auth",
+      "service": "auth",
+      "image": "supabase/gotrue:v2.186.0",
+      "status": "healthy",
+      "host_ports": []
+    },
+    {
+      "name": "supabase-rest",
+      "service": "rest",
+      "image": "postgrest/postgrest:v14.8",
+      "status": "running",
+      "host_ports": []
+    },
+    {
+      "name": "supabase-db",
+      "service": "db",
+      "image": "supabase/postgres:15.8.1.085",
+      "status": "healthy",
+      "host_ports": [
+        "0.0.0.0:5432->5432/tcp"
+      ]
+    }
+  ],
+  "public_listen_ports": [
+    {
+      "port": 22,
+      "listener": "sshd",
+      "allowed_publicly": true
+    },
+    {
+      "port": 80,
+      "listener": "caddy",
+      "allowed_publicly": true
+    },
+    {
+      "port": 5432,
+      "listener": "docker-proxy -> supabase-db",
+      "allowed_publicly": false,
+      "host_binding_present": true,
+      "blocked_by": [
+        "ufw default deny incoming",
+        "iptables DOCKER-USER drop on eth0"
+      ]
+    },
+    {
+      "port": 8000,
+      "listener": "docker-proxy -> supabase-kong",
+      "allowed_publicly": false,
+      "host_binding_present": true,
+      "blocked_by": [
+        "ufw default deny incoming",
+        "iptables DOCKER-USER drop on eth0"
+      ]
+    }
+  ],
+  "external_reachability": {
+    "port_5432_reachable": false,
+    "port_8000_reachable": false
+  },
+  "docker_user_rules": [
+    "-A DOCKER-USER -i eth0 -p tcp -m tcp --dport 8000 -j DROP",
+    "-A DOCKER-USER -i eth0 -p tcp -m tcp --dport 5432 -j DROP"
+  ],
+  "firewall_status": {
+    "active": true,
+    "default_incoming": "deny",
+    "default_outgoing": "allow",
+    "allowed_public_ports": [
+      "22/tcp",
+      "80/tcp",
+      "443/tcp"
+    ]
+  },
+  "caddy_status": {
+    "active": true,
+    "current_mode": "staging_ready",
+    "default_site_preserved": true
+  },
+  "critical_blockers": [],
+  "warnings": [
+    "Host port bindings for 5432 and 8000 still exist on the server, even though external access is currently blocked.",
+    "California remains a low-memory 1GB droplet and is not production-ready for a full payment stack."
+  ]
+}

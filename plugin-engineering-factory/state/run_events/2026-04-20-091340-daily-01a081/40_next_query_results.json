@@ -1,0 +1,162 @@
+{
+  "stage": "NEXT_QUERY_RESULTS",
+  "status": "skipped",
+  "run_id": "2026-04-20-091340-daily-01a081",
+  "checked_at": "2026-04-20T06:04:27.040Z",
+  "requested_query_count": 10,
+  "executed": false,
+  "live_unavailable": true,
+  "failure_reason": "Run 2026-04-20-091340-daily-01a081 is configured for fixture discovery, so live query execution was skipped.",
+  "query_results": [
+    {
+      "query": "site:chromewebstore.google.com form filler one profile visible fields review",
+      "candidates_found": 0,
+      "strongest_signal": null,
+      "weak_signal_reason": "live_unavailable",
+      "recommended_followup": "Rerun this command on a live-discovery task to execute the query.",
+      "candidate_ids": [],
+      "source_summary": {
+        "source_type": "skipped",
+        "url": null,
+        "status": "skipped",
+        "ok": false
+      }
+    },
+    {
+      "query": "site:reddit.com recruiter intake form autofill local-only chrome extension",
+      "candidates_found": 0,
+      "strongest_signal": null,
+      "weak_signal_reason": "live_unavailable",
+      "recommended_followup": "Rerun this command on a live-discovery task to execute the query.",
+      "candidate_ids": [],
+      "source_summary": {
+        "source_type": "skipped",
+        "url": null,
+        "status": "skipped",
+        "ok": false
+      }
+    },
+    {
+      "query": "site:chromewebstore.google.com current window tab export csv pinned tabs review",
+      "candidates_found": 0,
+      "strongest_signal": null,
+      "weak_signal_reason": "live_unavailable",
+      "recommended_followup": "Rerun this command on a live-discovery task to execute the query.",
+      "candidate_ids": [],
+      "source_summary": {
+        "source_type": "skipped",
+        "url": null,
+        "status": "skipped",
+        "ok": false
+      }
+    },
+    {
+      "query": "site:github.com browser tab export extension issue current window csv",
+      "candidates_found": 0,
+      "strongest_signal": null,
+      "weak_signal_reason": "live_unavailable",
+      "recommended_followup": "Rerun this command on a live-discovery task to execute the query.",
+      "candidate_ids": [],
+      "source_summary": {
+        "source_type": "skipped",
+        "url": null,
+        "status": "skipped",
+        "ok": false
+      }
+    },
+    {
+      "query": "site:chromewebstore.google.com gmail snippet quick insert compose review",
+      "candidates_found": 0,
+      "strongest_signal": null,
+      "weak_signal_reason": "live_unavailable",
+      "recommended_followup": "Rerun this command on a live-discovery task to execute the query.",
+      "candidate_ids": [],
+      "source_summary": {
+        "source_type": "skipped",
+        "url": null,
+        "status": "skipped",
+        "ok": false
+      }
+    },
+    {
+      "query": "site:reddit.com canned reply chrome extension keyboard shortcut pain",
+      "candidates_found": 0,
+      "strongest_signal": null,
+      "weak_signal_reason": "live_unavailable",
+      "recommended_followup": "Rerun this command on a live-discovery task to execute the query.",
+      "candidate_ids": [],
+      "source_summary": {
+        "source_type": "skipped",
+        "url": null,
+        "status": "skipped",
+        "ok": false
+      }
+    },
+    {
+      "query": "site:chromewebstore.google.com small saas browser extension copy paste workflow review",
+      "candidates_found": 0,
+      "strongest_signal": null,
+      "weak_signal_reason": "live_unavailable",
+      "recommended_followup": "Rerun this command on a live-discovery task to execute the query.",
+      "candidate_ids": [],
+      "source_summary": {
+        "source_type": "skipped",
+        "url": null,
+        "status": "skipped",
+        "ok": false
+      }
+    },
+    {
+      "query": "site:github.com browser extension one-click data cleanup issue",
+      "candidates_found": 0,
+      "strongest_signal": null,
+      "weak_signal_reason": "live_unavailable",
+      "recommended_followup": "Rerun this command on a live-discovery task to execute the query.",
+      "candidate_ids": [],
+      "source_summary": {
+        "source_type": "skipped",
+        "url": null,
+        "status": "skipped",
+        "ok": false
+      }
+    },
+    {
+      "query": "site:chromewebstore.google.com browser workflow friction local-only productivity review",
+      "candidates_found": 0,
+      "strongest_signal": null,
+      "weak_signal_reason": "live_unavailable",
+      "recommended_followup": "Rerun this command on a live-discovery task to execute the query.",
+      "candidate_ids": [],
+      "source_summary": {
+        "source_type": "skipped",
+        "url": null,
+        "status": "skipped",
+        "ok": false
+      }
+    },
+    {
+      "query": "site:chromewebstore.google.com developer utility chrome extension local-only review",
+      "candidates_found": 0,
+      "strongest_signal": null,
+      "weak_signal_reason": "live_unavailable",
+      "recommended_followup": "Rerun this command on a live-discovery task to execute the query.",
+      "candidate_ids": [],
+      "source_summary": {
+        "source_type": "skipped",
+        "url": null,
+        "status": "skipped",
+        "ok": false
+      }
+    }
+  ],
+  "next_step": "rerun_with_live_discovery_before_executing_next_queries",
+  "redaction_checks": {
+    "sanitized_response_bodies": true,
+    "checked_secret_value_count": 0,
+    "secret_values_present_in_artifact": false,
+    "authorization_header_pattern_present": false,
+    "key_material_pattern_present": false,
+    "secret_marker_pattern_present": false,
+    "redaction_guard_triggered": false
+  }
+}

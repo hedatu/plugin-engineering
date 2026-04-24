@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["candidate_name", "wedge_name", "approval_status", "approved_by", "approved_at", "build_time_budget_hours", "max_scope", "allowed_price_test", "allowed_payment_mode", "approval_notes"],
+  "properties": {
+    "candidate_name": { "type": "string" },
+    "wedge_name": { "type": "string" },
+    "approval_status": { "type": "string" },
+    "approved_by": { "type": "string" },
+    "approved_at": { "type": "string" },
+    "build_time_budget_hours": { "type": "number" },
+    "max_scope": { "type": ["string", "array"] },
+    "allowed_price_test": { "type": "string" },
+    "allowed_payment_mode": { "type": "string" },
+    "approval_notes": { "type": "string" }
+  }
+}

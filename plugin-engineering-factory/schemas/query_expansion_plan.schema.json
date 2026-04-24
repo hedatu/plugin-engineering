@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "stage",
+    "status",
+    "run_id",
+    "query_count",
+    "queries",
+    "next_step",
+    "redaction_checks"
+  ],
+  "properties": {
+    "stage": { "type": "string", "enum": ["QUERY_EXPANSION_PLAN"] },
+    "status": { "type": "string", "enum": ["passed", "failed"] },
+    "run_id": { "type": "string" },
+    "source_run_id": { "type": ["string", "null"] },
+    "query_count": { "type": "integer", "minimum": 20 },
+    "queries": {
+      "type": "array",
+      "minItems": 20,
+      "items": {
+        "type": "object",
+        "required": [
+          "query",
+          "target_category",
+          "intended_low_overlap_angle",
+          "excluded_overlap_patterns",
+          "preferred_archetype",
+          "expected_pain_signal",
+          "testability_hypothesis",
+          "compliance_risk_hypothesis",
+          "why_this_is_different_from_portfolio"
+        ]
+      }
+    },
+    "next_10_search_queries": { "type": "array", "items": { "type": "object" } },
+    "next_step": { "type": "string" },
+    "redaction_checks": { "type": "object" }
+  }
+}

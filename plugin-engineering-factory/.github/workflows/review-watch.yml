@@ -1,0 +1,187 @@
+name: Review Watch
+
+on:
+  workflow_dispatch:
+    inputs:
+      run_id:
+        description: Optional sandbox validation run id under runs/
+        required: false
+        type: string
+      strict:
+        description: Fail when live review-watch credentials are missing
+        required: false
+        default: false
+        type: boolean
+  schedule:
+    - cron: "0 */6 * * *"
+
+concurrency:
+  group: chrome-extension-factory-review-watch
+  cancel-in-progress: false
+
+jobs:
+  review-watch:
+    runs-on: ubuntu-latest
+    env:
+      CHROME_WEB_STORE_PUBLISHER_ID: ${{ secrets.CHROME_WEB_STORE_PUBLISHER_ID }}
+      CHROME_WEB_STORE_SANDBOX_ITEM_ID: ${{ secrets.CHROME_WEB_STORE_SANDBOX_ITEM_ID }}
+      CHROME_WEB_STORE_SERVICE_ACCOUNT_JSON: ${{ secrets.CHROME_WEB_STORE_SERVICE_ACCOUNT_JSON }}
+      GOOGLE_APPLICATION_CREDENTIALS_PATH: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS_PATH }}
+      CWS_HTTPS_PROXY: ${{ secrets.CWS_HTTPS_PROXY }}
+      CWS_HTTP_PROXY: ${{ secrets.CWS_HTTP_PROXY }}
+      RUN_ID_INPUT: ${{ github.event.inputs.run_id || '' }}
+      STRICT_INPUT: ${{ github.event.inputs.strict || 'false' }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci
+
+      - name: Check review-watch credentials
+        id: credential-check
+        shell: bash
+        run: |
+          missing=()
+          if [ -z "${CHROME_WEB_STORE_PUBLISHER_ID}" ]; then
+            missing+=("CHROME_WEB_STORE_PUBLISHER_ID")
+          fi
+          if [ -z "${CHROME_WEB_STORE_SANDBOX_ITEM_ID}" ]; then
+            missing+=("CHROME_WEB_STORE_SANDBOX_ITEM_ID")
+          fi
+
+          if [ -n "${GOOGLE_APPLICATION_CREDENTIALS_PATH}" ] && [ -f "${GOOGLE_APPLICATION_CREDENTIALS_PATH}" ] && [ ${#missing[@]} -eq 0 ]; then
+            echo "can_fetch=true" >> "$GITHUB_OUTPUT"
+            echo "credential_mode=service_account_file" >> "$GITHUB_OUTPUT"
+            echo "missing=" >> "$GITHUB_OUTPUT"
+          elif [ -n "${CHROME_WEB_STORE_SERVICE_ACCOUNT_JSON}" ] && [ ${#missing[@]} -eq 0 ]; then
+            echo "can_fetch=true" >> "$GITHUB_OUTPUT"
+            echo "credential_mode=service_account_json" >> "$GITHUB_OUTPUT"
+            echo "missing=" >> "$GITHUB_OUTPUT"
+          else
+            echo "can_fetch=false" >> "$GITHUB_OUTPUT"
+            echo "credential_mode=missing" >> "$GITHUB_OUTPUT"
+            if [ -n "${GOOGLE_APPLICATION_CREDENTIALS_PATH}" ] && [ ! -f "${GOOGLE_APPLICATION_CREDENTIALS_PATH}" ]; then
+              missing+=("GOOGLE_APPLICATION_CREDENTIALS_PATH(file_missing)")
+            fi
+            if [ -z "${CHROME_WEB_STORE_SERVICE_ACCOUNT_JSON}" ] && [ -z "${GOOGLE_APPLICATION_CREDENTIALS_PATH}" ]; then
+              missing+=("service_account_secret_or_path")
+            fi
+            echo "missing=$(IFS=,; echo "${missing[*]}")" >> "$GITHUB_OUTPUT"
+            echo "Review watch will preserve last known state because live fetch credentials are not fully configured."
+          fi
+
+      - name: Write service account
+        if: steps.credential-check.outputs.can_fetch == 'true'
+        shell: bash
+        run: |
+          if [ -n "${GOOGLE_APPLICATION_CREDENTIALS_PATH}" ] && [ -f "${GOOGLE_APPLICATION_CREDENTIALS_PATH}" ]; then
+            echo "GOOGLE_APPLICATION_CREDENTIALS=${GOOGLE_APPLICATION_CREDENTIALS_PATH}" >> "$GITHUB_ENV"
+          else
+            credential_path="${RUNNER_TEMP}/cws-service-account.json"
+            printf '%s' "${CHROME_WEB_STORE_SERVICE_ACCOUNT_JSON}" > "$credential_path"
+            echo "GOOGLE_APPLICATION_CREDENTIALS=$credential_path" >> "$GITHUB_ENV"
+          fi
+
+      - name: Validate single sandbox validation run
+        if: env.RUN_ID_INPUT != ''
+        shell: bash
+        run: |
+          node - <<'NODE'
+          const fs = require('fs');
+          const path = require('path');
+          const runId = process.env.RUN_ID_INPUT;
+          const runContextPath = path.join(process.cwd(), 'runs', runId, '00_run_context.json');
+          if (!fs.existsSync(runContextPath)) {
+            throw new Error(`Missing 00_run_context.json for ${runId}`);
+          }
+          const runContext = JSON.parse(fs.readFileSync(runContextPath, 'utf8'));
+          if ((runContext.run_type || runContext.task_mode) !== 'sandbox_validation') {
+            throw new Error(`run_type=${runContext.run_type || runContext.task_mode}`);
+          }
+          NODE
+
+      - name: Execute review watch
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ "${{ steps.credential-check.outputs.can_fetch }}" != "true" ] && [ "${STRICT_INPUT}" = "true" ]; then
+            echo "strict=true requires live review-watch credentials." >&2
+            exit 1
+          fi
+
+          if [ -n "${RUN_ID_INPUT}" ]; then
+            npm run review-watch:all -- --run "runs/${RUN_ID_INPUT}"
+          else
+            npm run review-watch:all
+          fi
+
+      - name: Diagnose review watch
+        if: always()
+        shell: bash
+        run: |
+          npm run review-watch:credentials-doctor
+          npm run review-watch:diagnose
+
+      - name: Write workflow summary
+        if: always()
+        shell: bash
+        run: |
+          node - <<'NODE'
+          const fs = require('fs');
+          const path = require('path');
+          const summaryPath = path.join(process.cwd(), 'state', 'review_watch_summary.json');
+          const diagnosticsPath = path.join(process.cwd(), 'state', 'review_watch_diagnostics.json');
+          const summary = fs.existsSync(summaryPath) ? JSON.parse(fs.readFileSync(summaryPath, 'utf8')) : null;
+          const diagnostics = fs.existsSync(diagnosticsPath) ? JSON.parse(fs.readFileSync(diagnosticsPath, 'utf8')) : null;
+          const lines = [
+            '# Review Watch Summary',
+            '',
+            `- checked_count: ${summary?.checked_count ?? 0}`,
+            `- live_checked_count: ${summary?.live_checked_count ?? 0}`,
+            `- skipped_count: ${summary?.skipped_count ?? 0}`,
+            `- preserved_state_count: ${summary?.preserved_state_count ?? 0}`,
+            `- approved_count: ${summary?.approved_count ?? 0}`,
+            `- pending_count: ${summary?.pending_count ?? 0}`,
+            `- rejected_count: ${summary?.rejected_count ?? 0}`,
+            `- cancelled_count: ${summary?.cancelled_count ?? 0}`,
+            `- credential_check.can_fetch: ${process.env.CREDENTIAL_CAN_FETCH ?? 'unknown'}`,
+            `- credential_check.mode: ${process.env.CREDENTIAL_MODE ?? 'unknown'}`,
+            `- credential_check.missing: ${process.env.CREDENTIAL_MISSING ?? 'none'}`,
+            '',
+            '## Latest States',
+            ''
+          ];
+          for (const action of (summary?.next_actions ?? [])) {
+            lines.push(`- ${action.run_id}: ${action.review_state ?? 'unknown'} via ${action.status_source ?? 'unknown'} -> ${action.next_step ?? 'unknown'}`);
+          }
+          lines.push('', '## Diagnostics', '');
+          for (const finding of (diagnostics?.diagnostic_findings ?? [])) {
+            lines.push(`- ${finding}`);
+          }
+          if ((diagnostics?.required_fixes ?? []).length > 0) {
+            lines.push('', '## Required Fixes', '');
+            for (const fix of diagnostics.required_fixes) {
+              lines.push(`- ${fix}`);
+            }
+          }
+          fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, `${lines.join('\n')}\n`);
+          NODE
+        env:
+          CREDENTIAL_CAN_FETCH: ${{ steps.credential-check.outputs.can_fetch }}
+          CREDENTIAL_MODE: ${{ steps.credential-check.outputs.credential_mode }}
+          CREDENTIAL_MISSING: ${{ steps.credential-check.outputs.missing }}
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: review-watch-${{ github.run_id }}
+          path: |
+            state/review_watch_summary.json
+            state/review_watch_credentials_doctor.json
+            state/review_watch_diagnostics.json
+            state/active_review_watches.json
+            state/run_events/**/91_review_status*.json
+          if-no-files-found: warn

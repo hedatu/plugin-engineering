@@ -1,0 +1,49 @@
+{
+  "stage": "MONETIZATION_STRATEGY",
+  "status": "passed",
+  "run_id": "commercial-payment-2026-04-23-202223-leadfill-v0-2-0-6937a6",
+  "product_id": "leadfill-one-profile",
+  "product_name": "LeadFill One Profile",
+  "pricing_model": "free_trial_then_lifetime",
+  "free_limit": {
+    "amount": 10,
+    "unit": "fills",
+    "scope": "lifetime"
+  },
+  "price_label": "$19 lifetime",
+  "upgrade_url_placeholder": "https://pay.915500.xyz",
+  "license_activation_model": "email OTP login, external HWH checkout, webhook-derived entitlement refresh",
+  "entitlement_model": "HWH get-entitlement and consume-usage checks with webhook-confirmed active entitlement as the only Pro unlock source",
+  "free_features": [
+    "10 free fills",
+    "single local profile",
+    "local-only form data"
+  ],
+  "pro_features": [
+    "unlimited fills",
+    "membership restore",
+    "lifetime access to the current major version"
+  ],
+  "paid_disclosure_copy": [
+    "Free plan includes 10 fills.",
+    "Unlock Lifetime - $19 lifetime.",
+    "Upgrade opens the external HWH checkout in test mode until production payment is explicitly approved.",
+    "Refresh membership after payment; successUrl alone never unlocks Pro locally.",
+    "The extension does not process cards and does not ship payment or service-role secrets."
+  ],
+  "risk_notes": [
+    "Production payment remains not verified; checkout mode must stay test or controlled until explicit approval.",
+    "Paid activation must remain webhook-derived; successUrl is informational only.",
+    "Local-only, no-upload, and no-cloud-sync claims must remain true in the actual bundle."
+  ],
+  "next_step": "Run monetization:security-scan, premium packaging, listing quality gate, and keep production payment disabled until explicit launch approval.",
+  "redaction_checks": {
+    "sanitized_response_bodies": true,
+    "checked_secret_value_count": 1,
+    "secret_values_present_in_artifact": false,
+    "authorization_header_pattern_present": false,
+    "key_material_pattern_present": false,
+    "secret_marker_pattern_present": false,
+    "redaction_guard_triggered": false
+  }
+}

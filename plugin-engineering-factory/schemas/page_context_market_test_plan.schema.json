@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["stage", "status", "candidate_name", "wedge_name", "suggested_price", "free_limit", "mvp_scope", "non_goals", "success_metrics", "kill_criteria", "redaction_checks"],
+  "properties": {
+    "stage": { "type": "string", "enum": ["PAGE_CONTEXT_MARKET_TEST_PLAN"] },
+    "status": { "type": "string", "enum": ["passed", "failed"] },
+    "candidate_name": { "type": "string" },
+    "wedge_name": { "type": "string" },
+    "suggested_price": { "type": "string" },
+    "free_limit": { "type": "string" },
+    "mvp_scope": { "type": "array", "items": { "type": "string" } },
+    "non_goals": { "type": "array", "items": { "type": "string" } },
+    "success_metrics": { "type": "array", "items": { "type": "string" } },
+    "kill_criteria": { "type": "array", "items": { "type": "string" } },
+    "redaction_checks": { "type": "object" }
+  }
+}

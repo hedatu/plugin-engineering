@@ -1,0 +1,165 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "stage",
+    "status",
+    "run_id",
+    "run_type",
+    "source_run_id",
+    "publisher_id",
+    "item_id",
+    "item_name",
+    "promoted_at",
+    "promoted_by",
+    "promotion_note",
+    "source_artifacts",
+    "copied_artifacts",
+    "package_sha256",
+    "manifest_version",
+    "extension_name",
+    "archetype",
+    "wedge",
+    "policy_status",
+    "qa_status",
+    "browser_smoke_status",
+    "screenshot_manifest_status",
+    "listing_package_status",
+    "publish_allowed",
+    "upload_allowed",
+    "production_write",
+    "required_next_action",
+    "safety_checks",
+    "redaction_checks"
+  ],
+  "properties": {
+    "stage": {
+      "type": "string",
+      "enum": [
+        "PROMOTE_TO_SANDBOX_VALIDATION",
+        "SANDBOX_UPLOAD_REVISION",
+        "PRODUCT_REVISION_SANDBOX_VALIDATION",
+        "COMMERCIAL_RELEASE_SANDBOX_VALIDATION"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "enum": ["passed", "failed"]
+    },
+    "run_id": {
+      "type": "string"
+    },
+    "run_type": {
+      "type": "string",
+      "enum": ["sandbox_validation"]
+    },
+    "source_run_id": {
+      "type": "string"
+    },
+    "source_sandbox_run_id": {
+      "type": ["string", "null"]
+    },
+    "source_daily_run_id": {
+      "type": ["string", "null"]
+    },
+    "publisher_id": {
+      "type": "string"
+    },
+    "item_id": {
+      "type": "string"
+    },
+    "item_name": {
+      "type": ["string", "null"]
+    },
+    "promoted_at": {
+      "type": "string"
+    },
+    "promoted_by": {
+      "type": "string"
+    },
+    "promotion_note": {
+      "type": "string"
+    },
+    "source_artifacts": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "copied_artifacts": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "regenerated_artifacts": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "package_sha256": {
+      "type": "string"
+    },
+    "manifest_version": {
+      "type": ["string", "null"]
+    },
+    "current_sandbox_item_version": {
+      "type": ["string", "null"]
+    },
+    "previous_manifest_version": {
+      "type": ["string", "null"]
+    },
+    "target_manifest_version": {
+      "type": ["string", "null"]
+    },
+    "version_bump_strategy": {
+      "type": ["string", "null"]
+    },
+    "revision_reason": {
+      "type": ["string", "null"]
+    },
+    "extension_name": {
+      "type": ["string", "null"]
+    },
+    "archetype": {
+      "type": ["string", "null"]
+    },
+    "wedge": {
+      "type": ["string", "null"]
+    },
+    "policy_status": {
+      "type": ["string", "null"]
+    },
+    "qa_status": {
+      "type": ["string", "null"]
+    },
+    "browser_smoke_status": {
+      "type": ["string", "null"]
+    },
+    "screenshot_manifest_status": {
+      "type": ["string", "null"]
+    },
+    "listing_package_status": {
+      "type": ["string", "null"]
+    },
+    "publish_allowed": {
+      "type": "boolean"
+    },
+    "upload_allowed": {
+      "type": "boolean"
+    },
+    "production_write": {
+      "type": "boolean"
+    },
+    "required_next_action": {
+      "type": "string"
+    },
+    "safety_checks": {
+      "type": "object"
+    },
+    "redaction_checks": {
+      "type": "object"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "stage",
+    "status",
+    "generated_at",
+    "run_id",
+    "candidate_id",
+    "clusters",
+    "redaction_checks"
+  ],
+  "properties": {
+    "stage": { "type": "string", "enum": ["REFINED_PAIN_CLUSTERS"] },
+    "status": { "type": "string", "enum": ["passed", "failed"] },
+    "generated_at": { "type": "string" },
+    "run_id": { "type": "string" },
+    "candidate_id": { "type": "string" },
+    "clusters": { "type": "array", "items": { "type": "object" } },
+    "redaction_checks": { "type": "object" }
+  }
+}

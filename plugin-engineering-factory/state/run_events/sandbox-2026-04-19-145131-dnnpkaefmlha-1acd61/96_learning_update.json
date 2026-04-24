@@ -1,0 +1,20 @@
+{
+  "stage": "MONITOR_POST_RELEASE",
+  "status": "skipped",
+  "run_id": "sandbox-2026-04-19-145131-dnnpkaefmlha-1acd61",
+  "item_id": null,
+  "release_health_summary": "monitoring_disabled",
+  "blacklist_updates": [],
+  "overlap_updates": [],
+  "archetype_priors": {},
+  "scoring_weight_suggestions": [],
+  "reviewer_notes": [
+    "enable monitoring inputs before post-release health tracking"
+  ],
+  "should_pause_similar_builds": false,
+  "should_prioritize_followup": false,
+  "generated_at": "2026-04-19T06:51:50.863Z",
+  "publisher_id": null,
+  "portfolio_registry_path": "D:\\code\\ai插件优化工作流\\state\\portfolio_registry.json",
+  "failure_reason": null
+}

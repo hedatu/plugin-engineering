@@ -1,0 +1,105 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "stage",
+    "status",
+    "run_id",
+    "run_type",
+    "source_sandbox_run_id",
+    "source_daily_run_id",
+    "publisher_id",
+    "item_id",
+    "previous_manifest_version",
+    "current_sandbox_item_version",
+    "target_manifest_version",
+    "version_bump_strategy",
+    "old_package_sha256",
+    "new_package_sha256",
+    "copied_artifacts",
+    "regenerated_artifacts",
+    "approval_invalidated",
+    "upload_allowed",
+    "publish_allowed",
+    "next_step",
+    "safety_checks",
+    "redaction_checks"
+  ],
+  "properties": {
+    "stage": {
+      "type": "string",
+      "enum": ["SANDBOX_UPLOAD_REVISION"]
+    },
+    "status": {
+      "type": "string",
+      "enum": ["passed", "failed"]
+    },
+    "run_id": {
+      "type": "string"
+    },
+    "run_type": {
+      "type": "string",
+      "enum": ["sandbox_validation"]
+    },
+    "source_sandbox_run_id": {
+      "type": "string"
+    },
+    "source_daily_run_id": {
+      "type": ["string", "null"]
+    },
+    "publisher_id": {
+      "type": ["string", "null"]
+    },
+    "item_id": {
+      "type": ["string", "null"]
+    },
+    "previous_manifest_version": {
+      "type": ["string", "null"]
+    },
+    "current_sandbox_item_version": {
+      "type": ["string", "null"]
+    },
+    "target_manifest_version": {
+      "type": ["string", "null"]
+    },
+    "version_bump_strategy": {
+      "type": ["string", "null"]
+    },
+    "old_package_sha256": {
+      "type": "string"
+    },
+    "new_package_sha256": {
+      "type": "string"
+    },
+    "copied_artifacts": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "regenerated_artifacts": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "approval_invalidated": {
+      "type": "boolean"
+    },
+    "upload_allowed": {
+      "type": "boolean"
+    },
+    "publish_allowed": {
+      "type": "boolean"
+    },
+    "next_step": {
+      "type": "string"
+    },
+    "safety_checks": {
+      "type": "object"
+    },
+    "redaction_checks": {
+      "type": "object"
+    }
+  }
+}

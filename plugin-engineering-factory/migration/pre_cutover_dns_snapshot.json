@@ -1,0 +1,71 @@
+{
+  "captured_at": "2026-04-23T18:44:25.4428947+08:00",
+  "target_california_ip": "134.199.226.198",
+  "cloudflare_zone_name": "915500.xyz",
+  "dns_records_before": [
+    {
+      "name": "pay.915500.xyz",
+      "type": "A",
+      "status": "missing"
+    },
+    {
+      "name": "pay-api.915500.xyz",
+      "type": "A",
+      "status": "missing"
+    },
+    {
+      "name": "ca-hwh.915500.xyz",
+      "type": "A",
+      "content": "134.199.226.198",
+      "ttl": 1,
+      "proxied": false
+    },
+    {
+      "name": "ca-hwh-api.915500.xyz",
+      "type": "A",
+      "content": "134.199.226.198",
+      "ttl": 1,
+      "proxied": false
+    }
+  ],
+  "caddy_before": {
+    "host": "do-mini-sfo3-01",
+    "version": "2.6.2",
+    "service_status": "active",
+    "configured_hosts": [
+      ":80",
+      "ca-hwh.915500.xyz",
+      "ca-hwh-api.915500.xyz"
+    ],
+    "pay_hosts_configured": false,
+    "api_reverse_proxy_target": "127.0.0.1:8000",
+    "frontend_root": "/opt/commercial-extension-factory/apps/hwh/dist"
+  },
+  "auth_config_before": {
+    "API_EXTERNAL_URL": "https://ca-hwh-api.915500.xyz",
+    "SITE_URL": "https://ca-hwh.915500.xyz",
+    "SUPABASE_PUBLIC_URL": "https://ca-hwh-api.915500.xyz",
+    "allowed_redirects_include_pay_domains": true,
+    "smtp_host": "smtp.resend.com",
+    "smtp_port": 2587,
+    "smtp_sender": "no-reply@notify.915500.xyz"
+  },
+  "health_before": {
+    "ca_hwh_https_status": 200,
+    "ca_hwh_api_webhook_get_status": 405,
+    "pay_https_status": "not_resolvable_before_cutover",
+    "pay_api_https_status": "not_resolvable_before_cutover",
+    "memory_mb_total": 961,
+    "memory_mb_available": 375,
+    "swap_mb_total": 2047,
+    "swap_mb_used": 269,
+    "disk_root_used_percent": 45
+  },
+  "safety": {
+    "production_payment_enabled": false,
+    "chrome_upload_enabled": false,
+    "chrome_publish_enabled": false,
+    "old_server_services_stopped": false,
+    "old_server_data_deleted": false
+  }
+}

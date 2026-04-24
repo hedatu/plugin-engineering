@@ -1,0 +1,79 @@
+{
+  "stage": "RESEARCH_RESOLUTION_GATE",
+  "status": "passed",
+  "go_no_go": "no_go",
+  "final_recommendation": "skip",
+  "gate_results": {
+    "evidence_quality_gate": {
+      "passed": true,
+      "reason": "evidence_quality_score=74.8",
+      "severity": "blocker"
+    },
+    "single_purpose_gate": {
+      "passed": true,
+      "reason": "wedge_clarity_score=87.8",
+      "severity": "blocker"
+    },
+    "testability_gate": {
+      "passed": true,
+      "reason": "testability_score=89.15",
+      "severity": "blocker"
+    },
+    "permissions_risk_gate": {
+      "passed": true,
+      "reason": "permission_risk=22, compliance_score=82",
+      "severity": "blocker"
+    },
+    "portfolio_overlap_gate": {
+      "passed": false,
+      "reason": "portfolio_overlap_score=74 exceeds 45",
+      "severity": "blocker"
+    },
+    "product_acceptance_forecast_gate": {
+      "passed": true,
+      "reason": "The narrowed wedge now maps to a deterministic, low-permission happy path.",
+      "severity": "blocker"
+    }
+  },
+  "blockers": [
+    "portfolio_overlap_gate"
+  ],
+  "warnings": [
+    "Discovery remains fixture-mode, so differentiation confidence is capped.",
+    "Some refined clusters still rely on single-source evidence."
+  ],
+  "recommended_archetype": "tab_csv_window_export",
+  "expected_test_matrix": [
+    "current window only",
+    "scope excludes other windows",
+    "CSV column stability",
+    "download success state",
+    "clear success feedback"
+  ],
+  "product_acceptance_forecast": {
+    "passed": true,
+    "reason": "The selected wedge is narrow, low-risk, and easy to test.",
+    "remaining_risks": [
+      "Need clear scope language so the product is not mistaken for full-session export.",
+      "Need explicit success feedback to avoid silent-failure perceptions."
+    ]
+  },
+  "required_followup_research": [
+    "Search for a differentiated output format or a different workflow outcome.",
+    "Prefer a candidate outside the existing tab_csv_window_export family."
+  ],
+  "decision_rationale": [
+    "The research loop removed the single-purpose ambiguity that blocked the original build gate.",
+    "The selected wedge now forecasts a passable product acceptance review.",
+    "The remaining blocker is portfolio overlap, not feasibility or testability."
+  ],
+  "redaction_checks": {
+    "sanitized_response_bodies": true,
+    "checked_secret_value_count": 0,
+    "secret_values_present_in_artifact": false,
+    "authorization_header_pattern_present": false,
+    "key_material_pattern_present": false,
+    "secret_marker_pattern_present": false,
+    "redaction_guard_triggered": false
+  }
+}

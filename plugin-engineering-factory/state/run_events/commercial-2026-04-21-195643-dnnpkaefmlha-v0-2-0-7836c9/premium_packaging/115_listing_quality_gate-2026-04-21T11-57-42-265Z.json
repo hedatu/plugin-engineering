@@ -1,0 +1,37 @@
+{
+  "stage": "LISTING_QUALITY_GATE",
+  "status": "passed",
+  "run_id": "commercial-2026-04-21-195643-dnnpkaefmlha-v0-2-0-7836c9",
+  "passed": true,
+  "premium_feel_score": 100,
+  "checks": {
+    "title_clarity": true,
+    "short_description_clarity": true,
+    "detailed_description_clarity": true,
+    "paid_feature_disclosure": true,
+    "privacy_claim_consistency": true,
+    "screenshot_truthfulness": true,
+    "asset_dimension_validity": true,
+    "asset_visual_quality": true,
+    "no_misleading_claims": true,
+    "brand_consistency": true,
+    "support_url_present_or_planned": true,
+    "homepage_url_present_or_planned": true,
+    "pricing_disclosure_if_monetized": true,
+    "policy_risk": true,
+    "premium_feel_inputs_ready": true
+  },
+  "blockers": [],
+  "warnings": [],
+  "recommended_fixes": [],
+  "next_step": "Premium packaging gate passed. The listing package is visually ready for the next human gate.",
+  "redaction_checks": {
+    "sanitized_response_bodies": true,
+    "checked_secret_value_count": 0,
+    "secret_values_present_in_artifact": false,
+    "authorization_header_pattern_present": false,
+    "key_material_pattern_present": false,
+    "secret_marker_pattern_present": false,
+    "redaction_guard_triggered": false
+  }
+}

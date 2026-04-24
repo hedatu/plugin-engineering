@@ -1,0 +1,60 @@
+{
+  "stage": "DISCOVERY_QUALITY_REVIEW",
+  "status": "passed",
+  "run_id": "2026-04-19-145118-daily-4df0e2",
+  "candidate_count": 6,
+  "selected_candidate": {
+    "candidate_id": "cand-form-001",
+    "name": "Lead Form Helper",
+    "wedge_family": "single_profile_form_fill",
+    "overall_score": 84.29,
+    "source_mode": "fixture"
+  },
+  "evidence_quality_score": 58.7,
+  "pain_cluster_quality_score": 76.5,
+  "opportunity_score_confidence": 49.63,
+  "portfolio_overlap_risk": 66.2,
+  "compliance_risk": 44,
+  "feasibility_confidence": 77.8,
+  "user_need_clarity": 86.5,
+  "build_recommendation": "research_more",
+  "biggest_uncertainties": [
+    "Discovery evidence came from fixtures rather than live collection, so freshness and source realism are capped.",
+    "Top-score margin over Window Tabs Exporter is only 1.28 points.",
+    "The portfolio already has multiple single_profile_form_fill runs, so true differentiation remains thin.",
+    "Field-miss pain is clear, but breadth across real lead-form ecosystems is still under-sampled."
+  ],
+  "missing_evidence": [
+    "No live Reddit or forum corroboration for the selected wedge.",
+    "No current live Chrome Web Store review sample beyond fixture data.",
+    "No quantified install or churn trend proving the pain is increasing recently.",
+    "No direct side-by-side differentiation artifact against the existing single_profile_form_fill portfolio."
+  ],
+  "recommended_next_queries": [
+    "site:chromewebstore.google.com \"lead form\" \"one profile\" extension review",
+    "site:reddit.com sales form filler chrome extension too many templates",
+    "site:reddit.com recruiter form autofill chrome extension local profile",
+    "site:github.com chrome extension form fill issue phone company fields",
+    "site:*.help* form filler extension sync privacy concern",
+    "site:*.support* lead form extension hidden fields issue",
+    "chrome extension visible fields only autofill review",
+    "chrome extension local profile form fill no account",
+    "lead capture form filler extension company phone skipped",
+    "recruiter intake form autofill chrome extension review"
+  ],
+  "decision_rationale": [
+    "5 evidence items and 4 pain clusters point to a real one-profile fill wedge.",
+    "Builder support exists and feasibility confidence is 77.8.",
+    "Evidence quality is only 58.7 because the run used fixture-mode discovery.",
+    "Portfolio overlap risk is 66.2, so this wedge needs stronger differentiation proof before more investment."
+  ],
+  "redaction_checks": {
+    "sanitized_response_bodies": true,
+    "checked_secret_value_count": 0,
+    "secret_values_present_in_artifact": false,
+    "authorization_header_pattern_present": false,
+    "key_material_pattern_present": false,
+    "secret_marker_pattern_present": false,
+    "redaction_guard_triggered": false
+  }
+}

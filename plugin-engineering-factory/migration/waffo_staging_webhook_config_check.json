@@ -1,0 +1,28 @@
+{
+  "generated_at": "2026-04-23T11:10:34.7509922+08:00",
+  "product_key": "leadfill-one-profile",
+  "desired_webhook_url": "https://ca-hwh-api.915500.xyz/functions/v1/waffo-webhook",
+  "desired_success_url": "https://ca-hwh.915500.xyz/checkout/success",
+  "desired_cancel_url": "https://ca-hwh.915500.xyz/checkout/cancel",
+  "create_checkout_session_uses_desired_success_cancel": true,
+  "dashboard_webhook_target_directly_verified": false,
+  "dashboard_webhook_target_effectively_verified_by_paid_event": true,
+  "endpoint_receives_waffo_verification_ping": true,
+  "verification_ping_received_at": "2026-04-23T01:26:21.889492+00:00",
+  "verification_ping_store_name": "[TEST] Store",
+  "verification_ping_product_name": "[TEST] Webhook Verification",
+  "actual_leadfill_paid_order_webhook_observed": true,
+  "actual_paid_event_id": "PAY_0adLohkJYNiExote8KDSWQ",
+  "actual_paid_local_order_id": "ord_1776912964691_ddb727d5",
+  "inference_note": "The dashboard UI was not read directly, but a real LeadFill paid order.completed event was received, signature-verified, and processed by https://ca-hwh-api.915500.xyz/functions/v1/waffo-webhook. That proves the effective sandbox webhook target now points to ca-hwh-api for the verified payment path.",
+  "manual_fields_to_confirm": [
+    "Waffo test or sandbox environment is active, not live.",
+    "The LeadFill store or app webhookUrl is https://ca-hwh-api.915500.xyz/functions/v1/waffo-webhook.",
+    "The LeadFill successUrl is https://ca-hwh.915500.xyz/checkout/success.",
+    "The LeadFill cancelUrl is https://ca-hwh.915500.xyz/checkout/cancel.",
+    "The checkout session product or price maps to leadfill-one-profile lifetime USD 19.00 onetime.",
+    "Recent paid order webhook delivery attempts exist for the LeadFill store, not only the generic Waffo webhook verification ping.",
+    "If dashboard supports resend, resend the latest paid order.completed event only when a diagnostic replay is needed."
+  ],
+  "blockers": []
+}

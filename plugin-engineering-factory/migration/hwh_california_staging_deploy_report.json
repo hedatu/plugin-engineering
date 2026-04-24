@@ -1,0 +1,52 @@
+{
+  "generated_at": "2026-04-22T21:14:46.1861567+08:00",
+  "server_id": "california",
+  "deployment_mode": "staging_only",
+  "hwh_staging_deployed": true,
+  "base_runtime": {
+    "supabase_compose_project": "supabase-core",
+    "compose_path": "/opt/supabase-core/docker-compose.yml",
+    "web_root": "/opt/commercial-extension-factory/apps/hwh/dist",
+    "functions_root": "/opt/supabase-core/volumes/functions",
+    "migrations_root": "/opt/commercial-extension-factory/apps/hwh/migrations"
+  },
+  "services_running": [
+    "supabase-auth",
+    "supabase-db",
+    "supabase-rest",
+    "supabase-kong",
+    "supabase-edge-functions",
+    "caddy"
+  ],
+  "staging_public_config": {
+    "site_url": "https://ca-pay.915500.xyz",
+    "api_external_url": "https://ca-pay-api.915500.xyz",
+    "public_supabase_url": "https://ca-pay-api.915500.xyz",
+    "success_url": "https://ca-pay.915500.xyz/checkout/success",
+    "cancel_url": "https://ca-pay.915500.xyz/checkout/cancel"
+  },
+  "smtp_mode": {
+    "status": "verified_temporary_relay",
+    "host": "45.62.xxx.xxx",
+    "port": 2500,
+    "note": "California staging currently relays OTP mail through the old server bridge. This is acceptable for staging verification but not for final cutover."
+  },
+  "leadfill_seeded": true,
+  "create_checkout_session_status": "verified",
+  "checkout_probe": {
+    "status": 200,
+    "session_id": "cs_23d95ec9-103b-3059-b460-56c970690527",
+    "local_order_id": "ord_1776863029773_c07ef4dc"
+  },
+  "production_ready": false,
+  "warnings": [
+    "California remains a 1GB low-memory server.",
+    "Staging DNS is still missing for ca-pay.915500.xyz and ca-pay-api.915500.xyz.",
+    "OTP currently depends on the old server SMTP bridge relay."
+  ],
+  "blockers": [
+    "staging_dns_not_configured",
+    "waffo_webhook_not_verified_on_california",
+    "payment_derived_entitlement_not_verified_on_california"
+  ]
+}

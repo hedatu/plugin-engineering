@@ -1,0 +1,25 @@
+{
+  "generated_at": "2026-04-23T19:47:00+08:00",
+  "status": "passed",
+  "environment": "california_primary_pay",
+  "payment_mode": "test",
+  "production_payment_executed": false,
+  "production_payment_status": "not_verified",
+  "checkout_status": "verified",
+  "checkout_session_id": "cs_88633eed-c8b4-575b-65d9-d0d46e8d8bee",
+  "checkout_url_domain": "pancake.waffo.ai",
+  "checkout_url_environment": "waffo_hosted_test_or_sandbox",
+  "success_url_expected": "https://pay.915500.xyz/checkout/success",
+  "cancel_url_expected": "https://pay.915500.xyz/checkout/cancel",
+  "webhook_target": "https://pay-api.915500.xyz/functions/v1/waffo-webhook",
+  "webhook_target_status": {
+    "get_status": 405,
+    "unsigned_post_status": 401,
+    "unsigned_post_expected_invalid_signature": true,
+    "route_online": true
+  },
+  "success_url_unlocks_locally": false,
+  "entitlement_source_of_truth": "waffo_webhook_only",
+  "paid_test_payment_after_cutover": "not_run_by_design",
+  "blockers": []
+}

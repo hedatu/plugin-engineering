@@ -1,0 +1,31 @@
+{
+  "generated_at": "2026-04-23T11:10:34.7509922+08:00",
+  "status": "code_and_schema_verified",
+  "verified_event_id": "PAY_0adLohkJYNiExote8KDSWQ",
+  "verified_local_order_id": "ord_1776912964691_ddb727d5",
+  "processed_webhooks_upsert_on_conflict": "mode,event_type,event_id",
+  "webhook_events_upsert_on_conflict": "mode,event_type,event_id",
+  "duplicate_already_processed_response": {
+    "http_status": 200,
+    "body": "DUPLICATE_ALREADY_PROCESSED"
+  },
+  "orders_uniqueness_guard": "mode,waffo_order_id",
+  "payments_uniqueness_guard": "mode,waffo_payment_id",
+  "current_db_snapshot": {
+    "processed_webhooks": 2,
+    "webhook_events": 2,
+    "orders": 1,
+    "payments": 1,
+    "entitlements": 1
+  },
+  "resend_simulation_executed": false,
+  "resend_safety_assessment": "A resend of the same Waffo event id should be idempotent because the webhook handler upserts processed_webhooks and webhook_events on mode,event_type,event_id, then returns 200 DUPLICATE_ALREADY_PROCESSED when processed_at is already set. Orders and payments are also protected by unique constraints on mode plus Waffo ids.",
+  "legacy_verification_event": {
+    "event_id": "PAY_2pzJTrg4BWOvw7M2pGkgc7",
+    "event_type": "order.completed",
+    "signature_valid": true,
+    "processing_error": "Unable to resolve billing context for order.completed",
+    "note": "This older generic verification ping was recorded before the paid LeadFill event was successfully processed. It does not block the current paid-order path."
+  },
+  "blockers": []
+}

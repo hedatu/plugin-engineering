@@ -1,0 +1,77 @@
+{
+  "stage": "SCREENSHOT_STORYBOARD",
+  "status": "passed",
+  "run_id": "sandbox-2026-04-19-215222-dnnpkaefmlha-v0-1-2-c64a39",
+  "product_name": "LeadFill One Profile",
+  "storyboard": [
+    {
+      "screenshot_id": "screenshot-1",
+      "title": "Save One Profile Once",
+      "user_question_answered": "What does this extension do in one sentence?",
+      "source_real_screenshot": "D:\\code\\ai插件优化工作流\\runs\\sandbox-2026-04-19-215222-dnnpkaefmlha-v0-1-2-c64a39\\70_listing_assets\\screenshot_1.png",
+      "overlay_headline": "Save one local profile for repeat form work.",
+      "overlay_subcopy": "Keep one reliable set of contact details ready in the popup.",
+      "feature_shown": "Popup profile editor",
+      "trust_signal": "Local storage only",
+      "expected_file": "screenshot_1_1280x800.png",
+      "chrome_store_compliance_notes": "Real popup UI only. Do not show unsupported sync or team features."
+    },
+    {
+      "screenshot_id": "screenshot-2",
+      "title": "Fill The Active Page",
+      "user_question_answered": "How fast is the core action?",
+      "source_real_screenshot": "D:\\code\\ai插件优化工作流\\runs\\sandbox-2026-04-19-215222-dnnpkaefmlha-v0-1-2-c64a39\\70_listing_assets\\screenshot_2.png",
+      "overlay_headline": "Fill the active form in one click.",
+      "overlay_subcopy": "Use the extension action only when you are ready to fill visible fields.",
+      "feature_shown": "One-click active-tab fill",
+      "trust_signal": "User-initiated action",
+      "expected_file": "screenshot_2_1280x800.png",
+      "chrome_store_compliance_notes": "Show a real form page and keep the claim to visible supported fields."
+    },
+    {
+      "screenshot_id": "screenshot-3",
+      "title": "See The Filled Result",
+      "user_question_answered": "What result should I expect after using it?",
+      "source_real_screenshot": "D:\\code\\ai插件优化工作流\\runs\\sandbox-2026-04-19-215222-dnnpkaefmlha-v0-1-2-c64a39\\70_listing_assets\\screenshot_3.png",
+      "overlay_headline": "Get a clean filled result without retyping.",
+      "overlay_subcopy": "The happy path should show real field coverage, not a mock result.",
+      "feature_shown": "Completed fill result",
+      "trust_signal": "Browser-smoke verified happy path",
+      "expected_file": "screenshot_3_1280x800.png",
+      "chrome_store_compliance_notes": "Must stay tied to the actual browser-smoke scenario."
+    },
+    {
+      "screenshot_id": "screenshot-4",
+      "title": "Low-Permission Workflow",
+      "user_question_answered": "Why should I trust the permission footprint?",
+      "source_real_screenshot": "D:\\code\\ai插件优化工作流\\runs\\sandbox-2026-04-19-215222-dnnpkaefmlha-v0-1-2-c64a39\\70_listing_assets\\screenshot_1.png",
+      "overlay_headline": "Minimal permissions. No broad host access.",
+      "overlay_subcopy": "Storage, activeTab, and scripting only for the current supported wedge.",
+      "feature_shown": "Permission posture",
+      "trust_signal": "No host permissions",
+      "expected_file": "screenshot_4_1280x800.png",
+      "chrome_store_compliance_notes": "Do not imply more automation than the current permission set allows."
+    },
+    {
+      "screenshot_id": "screenshot-5",
+      "title": "Trust And Privacy",
+      "user_question_answered": "Why is this safer than a broader workflow tool?",
+      "source_real_screenshot": "D:\\code\\ai插件优化工作流\\runs\\sandbox-2026-04-19-215222-dnnpkaefmlha-v0-1-2-c64a39\\70_listing_assets\\screenshot_1.png",
+      "overlay_headline": "Local-only profile storage. No account required.",
+      "overlay_subcopy": "Privacy language must stay literal and provable in the bundle.",
+      "feature_shown": "Trust positioning",
+      "trust_signal": "No login. No upload.",
+      "expected_file": "screenshot_5_1280x800.png",
+      "chrome_store_compliance_notes": "Only use claims that match the real storage and network behavior."
+    }
+  ],
+  "redaction_checks": {
+    "sanitized_response_bodies": true,
+    "checked_secret_value_count": 0,
+    "secret_values_present_in_artifact": false,
+    "authorization_header_pattern_present": false,
+    "key_material_pattern_present": false,
+    "secret_marker_pattern_present": false,
+    "redaction_guard_triggered": false
+  }
+}

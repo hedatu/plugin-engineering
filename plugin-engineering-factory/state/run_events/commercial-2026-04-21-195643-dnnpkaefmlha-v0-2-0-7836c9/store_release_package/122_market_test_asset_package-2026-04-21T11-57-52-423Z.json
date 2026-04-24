@@ -1,0 +1,51 @@
+{
+  "stage": "MARKET_TEST_ASSET_PACKAGE",
+  "status": "passed",
+  "run_id": "commercial-2026-04-21-195643-dnnpkaefmlha-v0-2-0-7836c9",
+  "product_name": "LeadFill One Profile",
+  "landing_page_path": "landing/leadfill-one-profile",
+  "hero_image": "landing/leadfill-one-profile/assets/hero.png",
+  "pricing_image": "landing/leadfill-one-profile/assets/pricing.png",
+  "fake_door_experiment_path": null,
+  "payment_link_placeholder": "https://example.com/checkout",
+  "upgrade_copy": "Use the external payment page and clear lifetime unlock language.",
+  "suggested_channels": [
+    "Chrome Web Store listing refresh after human visual review",
+    "Landing page with premium hero and pricing image",
+    "Trusted testers or private share before broader public exposure"
+  ],
+  "first_7_day_metrics": [
+    "landing_visits",
+    "installs_or_waitlist_signups",
+    "core_action_completed",
+    "upgrade_clicks"
+  ],
+  "first_14_day_metrics": [
+    "repeat_use",
+    "upgrade_intent",
+    "support_requests",
+    "uninstall_feedback_manual"
+  ],
+  "success_thresholds": [
+    ">= 100 landing or listing visits",
+    ">= 10 installs or waitlist signups",
+    ">= 3 upgrade clicks",
+    ">= 1 payment intent or explicit would-pay signal"
+  ],
+  "kill_thresholds": [
+    "100+ visits and 0 installs or signups",
+    "50+ installs and almost no core action use",
+    "No upgrade clicks after meaningful use",
+    "Policy or review blocker"
+  ],
+  "next_step": "Use the landing package and premium still assets for a manual market test only after human visual review passes.",
+  "redaction_checks": {
+    "sanitized_response_bodies": true,
+    "checked_secret_value_count": 0,
+    "secret_values_present_in_artifact": false,
+    "authorization_header_pattern_present": false,
+    "key_material_pattern_present": false,
+    "secret_marker_pattern_present": false,
+    "redaction_guard_triggered": false
+  }
+}

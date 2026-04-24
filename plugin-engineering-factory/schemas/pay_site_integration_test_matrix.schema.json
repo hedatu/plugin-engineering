@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "stage",
+    "status",
+    "run_id",
+    "candidate_name",
+    "archetype",
+    "product_key",
+    "plan_key",
+    "smtp_blocker_expected",
+    "real_payment_e2e_status",
+    "tests",
+    "redaction_checks"
+  ],
+  "properties": {
+    "stage": { "type": "string", "enum": ["PAY_SITE_INTEGRATION_TEST_MATRIX"] },
+    "status": { "type": "string", "enum": ["passed", "failed", "planned"] },
+    "run_id": { "type": "string" },
+    "candidate_name": { "type": "string" },
+    "archetype": { "type": "string" },
+    "product_key": { "type": "string" },
+    "plan_key": { "type": "string" },
+    "smtp_blocker_expected": { "type": "boolean" },
+    "real_payment_e2e_status": { "type": "string" },
+    "tests": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "current_status", "why_it_matters"],
+        "properties": {
+          "id": { "type": "string" },
+          "name": { "type": "string" },
+          "current_status": { "type": "string" },
+          "why_it_matters": { "type": "string" },
+          "evidence_artifact": { "type": ["string", "null"] },
+          "recommended_next_action": { "type": "string" }
+        }
+      }
+    },
+    "redaction_checks": { "type": "object" }
+  }
+}
+

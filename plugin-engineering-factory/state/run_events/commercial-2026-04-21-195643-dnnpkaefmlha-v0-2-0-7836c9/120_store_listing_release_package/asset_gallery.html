@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>LeadFill One Profile Asset Gallery</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root { color-scheme: light; --bg: #f3f6f8; --surface: #ffffff; --text: #102233; --muted: #5c7085; --line: #d8e2e8; --primary: #17324d; --accent: #13836f; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: "Segoe UI Variable Text", "Segoe UI", sans-serif; background: linear-gradient(180deg, #f7fafc 0%, var(--bg) 100%); color: var(--text); }
+    main { max-width: 1440px; margin: 0 auto; padding: 40px 28px 56px; }
+    h1, h2, h3 { margin: 0; color: var(--primary); }
+    h1 { font-family: "Segoe UI Variable Display", "Segoe UI", sans-serif; font-size: 34px; letter-spacing: -0.02em; }
+    h2 { font-size: 22px; margin-bottom: 18px; }
+    h3 { font-size: 18px; margin-bottom: 10px; }
+    p, li { line-height: 1.55; }
+    .hero { display: grid; grid-template-columns: 2fr 1fr; gap: 20px; align-items: start; margin-bottom: 28px; }
+    .panel { background: rgba(255,255,255,0.96); border: 1px solid var(--line); border-radius: 20px; padding: 22px; box-shadow: 0 12px 34px rgba(23, 50, 77, 0.06); }
+    .hero .panel strong { color: var(--primary); }
+    .stat { font-size: 13px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 8px; }
+    .copy-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; margin: 28px 0; }
+    .gallery-section { margin: 32px 0; }
+    .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 18px; }
+    .asset-card { background: var(--surface); border: 1px solid var(--line); border-radius: 20px; overflow: hidden; box-shadow: 0 10px 28px rgba(16, 34, 51, 0.06); }
+    .asset-frame { padding: 16px; background: linear-gradient(180deg, #ffffff 0%, #eef4f7 100%); }
+    .asset-frame img { width: 100%; display: block; border-radius: 14px; border: 1px solid #d4dde5; background: #fff; }
+    .asset-meta { padding: 18px; }
+    .meta-line { color: var(--muted); font-size: 14px; margin: 4px 0; }
+    .meta-hash { word-break: break-all; }
+    pre { white-space: pre-wrap; word-break: break-word; margin: 0; font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: 13px; background: #0f1720; color: #e8eef3; padding: 16px; border-radius: 16px; }
+    ul { margin: 0; padding-left: 18px; }
+    .claim-list li { margin-bottom: 6px; }
+    @media (max-width: 960px) { .hero, .copy-grid { grid-template-columns: 1fr; } main { padding: 24px 16px 40px; } }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="hero">
+      <div class="panel">
+        <div class="stat">Store Release Package V2</div>
+        <h1>LeadFill One Profile</h1>
+        <p>Save one local profile and fill visible lead form fields on the current page in one click.</p>
+        <ul class="claim-list">
+          <li>Uses local Chrome storage and only acts on the active tab after a user click.</li>
+          <li>No account, login, or workspace setup is required for the core flow.</li>
+          <li>Does not upload profile data or page content to a remote service.</li>
+        </ul>
+      </div>
+      <div class="panel">
+        <div class="stat">Quality Gates</div>
+        <p><strong>Listing quality:</strong> passed</p>
+        <p><strong>Asset QA:</strong> passed</p>
+        <p><strong>Premium feel score:</strong> 100</p>
+        <p><strong>Package root:</strong> .</p>
+      </div>
+    </section>
+    <section class="copy-grid">
+      <div class="panel">
+        <h2>Listing Copy</h2>
+        <p><strong>Title</strong><br/>LeadFill One Profile</p>
+        <p><strong>Short Description</strong><br/>Save one local profile and fill visible form fields on the current page. Includes 10 free fills.</p>
+        <p><strong>Detailed Description</strong></p>
+        <pre>Save one local profile and fill visible lead form fields on the current page in one click.
+Built for: Sales reps, recruiters, and operators repeatedly entering the same contact details into web forms.
+Key workflow: Open popup -&gt; Save one reusable profile locally -&gt; Navigate to a target form -&gt; Click Fill Current Page
+Supports common text, email, phone, textarea, and select fields when labels or descriptors match the saved profile.
+Stores one profile locally in chrome.storage.local. No cloud sync, account, or remote transfer.
+Does not overwrite fields that already contain values unless the user explicitly enables overwrite in the popup.
+Free plan includes 10 fills.
+Unlock Lifetime - $19 lifetime through an external payment page.
+Paste the license key inside the extension to activate or restore Pro access.
+This revision uses placeholder or test payment and license endpoints. It is not configured for live external payments yet.
+Non-goals: No CRM sync; No multi-profile team workspace; No cloud account</pre>
+      </div>
+      <div class="panel">
+        <h2>Trust And Paid Disclosure</h2>
+        <p><strong>Privacy / local-only claims</strong></p>
+        <pre># Privacy Summary
+
+Stores one profile locally in Chrome storage and injects a fill script into the active tab only when the user clicks fill. Upgrade opens an external payment page. The extension does not process card data. License verification requires a network request to the configured external license service. Local-only. No upload. No cloud sync.
+
+## Trust Claims
+
+- Local-only claim: Uses local Chrome storage and only acts on the active tab after a user click.
+- No-login claim: No account, login, or workspace setup is required for the core flow.
+- No-upload claim: Does not upload profile data or page content to a remote service.
+
+These claims must stay consistent with the real bundle, browser smoke, and policy gate.</pre>
+        <p style="margin-top:16px;"><strong>Paid disclosure</strong></p>
+        <pre># Paid Features Disclosure
+
+- Free limit: [object Object]
+- Unlock price: $19 lifetime
+- Upgrade flow: external payment page
+- License flow: manual or lightweight license entry
+- Upgrade link: placeholder only
+
+Paid features must stay clearly disclosed in both the listing and the extension UI.</pre>
+      </div>
+    </section>
+
+    <section class="gallery-section">
+      <h2>Store Screenshots</h2>
+      <div class="gallery-grid">
+        
+    <article class="asset-card">
+      <div class="asset-frame">
+        <img src="assets/screenshots/screenshot_1_1280x800.png" alt="Core Value" />
+      </div>
+      <div class="asset-meta">
+        <h3>Core Value</h3>
+        <p class="meta-line"><strong>File:</strong> assets/screenshots/screenshot_1_1280x800.png</p>
+        <p class="meta-line"><strong>Dimensions:</strong> 1280x800</p>
+        <p class="meta-line meta-hash"><strong>SHA256:</strong> f696ab03ea7439986f1252feef7d0202f8049b6d9c4d6e461dc44f7a7d9b8b48</p>
+        <p>Question: What does this extension do in one sentence?</p>
+<p>Headline: Save one local profile.</p>
+<p>Subcopy: Keep first name, email, phone, country, and notes ready in the popup.</p>
+<p>Trust: Local-only storage</p>
+      </div>
+    </article>
+  
+
+    <article class="asset-card">
+      <div class="asset-frame">
+        <img src="assets/screenshots/screenshot_2_1280x800.png" alt="Real Workflow" />
+      </div>
+      <div class="asset-meta">
+        <h3>Real Workflow</h3>
+        <p class="meta-line"><strong>File:</strong> assets/screenshots/screenshot_2_1280x800.png</p>
+        <p class="meta-line"><strong>Dimensions:</strong> 1280x800</p>
+        <p class="meta-line meta-hash"><strong>SHA256:</strong> ebfaacadf3c80c8ad5bfce495e64a7c44467fe4560e33b9f3f3a10529f1298c3</p>
+        <p>Question: How fast is the core action?</p>
+<p>Headline: Fill the current page in one click.</p>
+<p>Subcopy: Run it from the popup only when you are on a real lead form.</p>
+<p>Trust: User-initiated action</p>
+      </div>
+    </article>
+  
+
+    <article class="asset-card">
+      <div class="asset-frame">
+        <img src="assets/screenshots/screenshot_3_1280x800.png" alt="Clean Result" />
+      </div>
+      <div class="asset-meta">
+        <h3>Clean Result</h3>
+        <p class="meta-line"><strong>File:</strong> assets/screenshots/screenshot_3_1280x800.png</p>
+        <p class="meta-line"><strong>Dimensions:</strong> 1280x800</p>
+        <p class="meta-line meta-hash"><strong>SHA256:</strong> 3a28290b025094f9d96058fa0897f5fb2125ef7be8ab03c8dd7b11dd2038b462</p>
+        <p>Question: What result should I expect after using it?</p>
+<p>Headline: Keep the filled result clean.</p>
+<p>Subcopy: Text, email, phone, textarea, and select fields match the saved profile.</p>
+<p>Trust: Browser-smoke verified happy path</p>
+      </div>
+    </article>
+  
+
+    <article class="asset-card">
+      <div class="asset-frame">
+        <img src="assets/screenshots/screenshot_4_1280x800.png" alt="Smart Safeguards" />
+      </div>
+      <div class="asset-meta">
+        <h3>Smart Safeguards</h3>
+        <p class="meta-line"><strong>File:</strong> assets/screenshots/screenshot_4_1280x800.png</p>
+        <p class="meta-line"><strong>Dimensions:</strong> 1280x800</p>
+        <p class="meta-line meta-hash"><strong>SHA256:</strong> cfbddf613560b894528be523db32d6f4d535a42273648918a040fcfdc119a21f</p>
+        <p>Question: What safeguards keep the fill action controlled?</p>
+<p>Headline: Respect what is already there.</p>
+<p>Subcopy: Readonly and disabled fields are skipped. Existing values stay unchanged by default.</p>
+<p>Trust: No overwrite by default</p>
+      </div>
+    </article>
+  
+
+    <article class="asset-card">
+      <div class="asset-frame">
+        <img src="assets/screenshots/screenshot_5_1280x800.png" alt="Local Trust" />
+      </div>
+      <div class="asset-meta">
+        <h3>Local Trust</h3>
+        <p class="meta-line"><strong>File:</strong> assets/screenshots/screenshot_5_1280x800.png</p>
+        <p class="meta-line"><strong>Dimensions:</strong> 1280x800</p>
+        <p class="meta-line meta-hash"><strong>SHA256:</strong> c444e5dd15b9c9d4ad0fa1dd075fc70260b50d2b4ddfba784b622753a2367f44</p>
+        <p>Question: Why is this safer than a broader workflow tool?</p>
+<p>Headline: Local-only. No account. No cloud sync.</p>
+<p>Subcopy: Profile data stays in Chrome storage and runs only after a user click.</p>
+<p>Trust: No login. No upload.</p>
+      </div>
+    </article>
+  
+      </div>
+    </section>
+  
+
+    <section class="gallery-section">
+      <h2>Promo Assets</h2>
+      <div class="gallery-grid">
+        
+    <article class="asset-card">
+      <div class="asset-frame">
+        <img src="assets/promo/small_promo_440x280.png" alt="small_promo_440x280.png" />
+      </div>
+      <div class="asset-meta">
+        <h3>small_promo_440x280.png</h3>
+        <p class="meta-line"><strong>File:</strong> assets/promo/small_promo_440x280.png</p>
+        <p class="meta-line"><strong>Dimensions:</strong> 440x280</p>
+        <p class="meta-line meta-hash"><strong>SHA256:</strong> ea0e1d195aa381231e2d1c1b7ec1430c60b36ccb4039c0669f227727c54f4b2b</p>
+        <p>Branded promo tile for Chrome Web Store.</p>
+      </div>
+    </article>
+  
+
+    <article class="asset-card">
+      <div class="asset-frame">
+        <img src="assets/promo/marquee_1400x560.png" alt="marquee_1400x560.png" />
+      </div>
+      <div class="asset-meta">
+        <h3>marquee_1400x560.png</h3>
+        <p class="meta-line"><strong>File:</strong> assets/promo/marquee_1400x560.png</p>
+        <p class="meta-line"><strong>Dimensions:</strong> 1400x560</p>
+        <p class="meta-line meta-hash"><strong>SHA256:</strong> 8d5fa57e0d265bad1a46335c1a7f59b41e64c0d76e9150e71241d49af11e1a77</p>
+        <p>Wide marquee for listing or landing support.</p>
+      </div>
+    </article>
+  
+      </div>
+    </section>
+  
+
+    <section class="gallery-section">
+      <h2>Landing Assets</h2>
+      <div class="gallery-grid">
+        
+    <article class="asset-card">
+      <div class="asset-frame">
+        <img src="assets/landing/hero_1600x900.png" alt="hero_1600x900.png" />
+      </div>
+      <div class="asset-meta">
+        <h3>hero_1600x900.png</h3>
+        <p class="meta-line"><strong>File:</strong> assets/landing/hero_1600x900.png</p>
+        <p class="meta-line"><strong>Dimensions:</strong> 1600x900</p>
+        <p class="meta-line meta-hash"><strong>SHA256:</strong> abff0d8b427d9efbe822933d48671adc7bf36bd1099c5a808bfe69b3ecf1ea1a</p>
+        <p>Landing hero image aligned with the premium brand system.</p>
+      </div>
+    </article>
+  
+
+    <article class="asset-card">
+      <div class="asset-frame">
+        <img src="assets/landing/pricing_1600x900.png" alt="pricing_1600x900.png" />
+      </div>
+      <div class="asset-meta">
+        <h3>pricing_1600x900.png</h3>
+        <p class="meta-line"><strong>File:</strong> assets/landing/pricing_1600x900.png</p>
+        <p class="meta-line"><strong>Dimensions:</strong> 1600x900</p>
+        <p class="meta-line meta-hash"><strong>SHA256:</strong> 074f7f2c9542d9a96e380fe1f04ff389d51d8d1ab7b7f950b391717a71f8d64c</p>
+        <p>Pricing or value framing image for landing and market-test use.</p>
+      </div>
+    </article>
+  
+      </div>
+    </section>
+  
+  </main>
+</body>
+</html>

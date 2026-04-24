@@ -1,0 +1,61 @@
+{
+  "stage": "PRODUCT_CREATE_REVISION_PLAN",
+  "status": "passed",
+  "run_id": "sandbox-2026-04-19-154400-dnnpkaefmlha-v0-1-1-6218cc",
+  "source_acceptance_status": "revise",
+  "revision_reason": "Product acceptance returned revise",
+  "product_risks": [
+    "Current fill logic skips select fields, which weakens real-world lead form usefulness.",
+    "Functional coverage is narrow and still anchored to one happy-path fixture.",
+    "Field descriptor matching is heuristic and only proven on a single controlled form.",
+    "Current screenshots are real but still look like validation assets rather than persuasive user-facing proof."
+  ],
+  "required_functionality_fixes": [
+    "support select field matching and filling",
+    "handle readonly fields safely",
+    "handle partially filled forms with explicit overwrite policy",
+    "handle no matching fields with clear user feedback",
+    "add profile save/edit/delete behavior or explicitly scope MVP to save-only",
+    "improve popup status messaging",
+    "document local-only storage behavior"
+  ],
+  "required_test_fixes": [
+    "add empty form browser smoke coverage",
+    "add partially filled form browser smoke coverage",
+    "add readonly field browser smoke coverage",
+    "add select field browser smoke coverage",
+    "add no matching fields browser smoke coverage",
+    "add overwrite-default-false browser smoke coverage",
+    "update functional matrix with the new smoke evidence"
+  ],
+  "required_ux_fixes": [
+    "make overwrite-default-false behavior explicit in the popup",
+    "show filled and skipped counts after a successful fill",
+    "show a clear no matching fields status instead of silent success"
+  ],
+  "required_listing_fixes": [
+    "remove any universal form-fill claim",
+    "state that storage is local-only with no cloud sync",
+    "state that existing values are preserved by default",
+    "align screenshots with supported field types and feedback states"
+  ],
+  "affected_archetype": "single_profile_form_fill",
+  "affected_builder": "singleProfileFormFill",
+  "source_package_sha256": "b86a5114a52056acb11e685f243125f4de34abcd15fb8d37f48c066574719a8d",
+  "requires_new_build": true,
+  "requires_new_version_bump": true,
+  "requires_new_browser_smoke": true,
+  "requires_new_product_acceptance_review": true,
+  "requires_new_upload_approval": true,
+  "requires_new_publish_approval": true,
+  "next_step": "create_product_revision_run_and_rerun_build_qa_smoke",
+  "redaction_checks": {
+    "sanitized_response_bodies": true,
+    "checked_secret_value_count": 0,
+    "secret_values_present_in_artifact": false,
+    "authorization_header_pattern_present": false,
+    "key_material_pattern_present": false,
+    "secret_marker_pattern_present": false,
+    "redaction_guard_triggered": false
+  }
+}

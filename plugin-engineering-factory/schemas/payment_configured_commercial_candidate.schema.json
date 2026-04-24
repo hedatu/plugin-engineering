@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "stage",
+    "status",
+    "run_id",
+    "source_run_id",
+    "target_version",
+    "payment_mode",
+    "site_url",
+    "api_url",
+    "product_key",
+    "plan_key",
+    "feature_key",
+    "source_chrome_extension_status",
+    "payment_e2e_status",
+    "upload_allowed",
+    "publish_allowed",
+    "next_step",
+    "redaction_checks"
+  ],
+  "properties": {
+    "stage": {
+      "type": "string",
+      "enum": ["PAYMENT_CONFIGURED_COMMERCIAL_CANDIDATE"]
+    },
+    "status": {
+      "type": "string",
+      "enum": ["passed", "failed"]
+    },
+    "run_id": { "type": "string", "minLength": 1 },
+    "source_run_id": { "type": "string", "minLength": 1 },
+    "target_version": { "type": "string", "minLength": 1 },
+    "payment_mode": {
+      "type": "string",
+      "enum": ["test", "disabled", "live"]
+    },
+    "site_url": { "type": "string", "minLength": 1 },
+    "api_url": { "type": "string", "minLength": 1 },
+    "product_key": { "type": "string", "minLength": 1 },
+    "plan_key": { "type": "string", "minLength": 1 },
+    "feature_key": { "type": "string", "minLength": 1 },
+    "source_chrome_extension_status": { "type": "string", "minLength": 1 },
+    "payment_e2e_status": { "type": "string", "minLength": 1 },
+    "upload_allowed": { "type": "boolean" },
+    "publish_allowed": { "type": "boolean" },
+    "next_step": { "type": "string", "minLength": 1 },
+    "redaction_checks": { "type": "object" }
+  }
+}

@@ -1,0 +1,14 @@
+[
+  {
+    "date": "2026-04-16",
+    "status": "open",
+    "topic": "field_matching",
+    "summary": "User asked how to remap a field."
+  },
+  {
+    "date": "2026-04-18",
+    "status": "closed",
+    "topic": "permissions",
+    "summary": "Clarified activeTab behavior."
+  }
+]

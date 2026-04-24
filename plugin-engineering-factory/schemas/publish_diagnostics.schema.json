@@ -1,0 +1,132 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "stage",
+    "status",
+    "generated_at",
+    "local_time_iso",
+    "clock_check_performed",
+    "publisher_id",
+    "item_id",
+    "credential_type",
+    "credential_present",
+    "token_source",
+    "env_preflight",
+    "credentials_preflight",
+    "service_account_summary",
+    "network_probe_summary",
+    "token_exchange",
+    "fetch_status",
+    "failure_phase",
+    "diagnostic_hint",
+    "likely_cause",
+    "actionable_hint",
+    "retryable",
+    "network_mode",
+    "proxy_configured",
+    "proxy_source",
+    "proxy_url_redacted",
+    "oauth2_probe_via_proxy",
+    "cws_probe_via_proxy",
+    "failure_reason",
+    "redaction_checks"
+  ],
+  "properties": {
+    "stage": {
+      "type": "string",
+      "enum": ["PUBLISH_DIAGNOSTICS"]
+    },
+    "status": {
+      "type": "string",
+      "enum": ["passed", "failed"]
+    },
+    "generated_at": {
+      "type": "string",
+      "minLength": 1
+    },
+    "local_time_iso": {
+      "type": "string",
+      "minLength": 1
+    },
+    "clock_check_performed": {
+      "type": "boolean"
+    },
+    "clock_sane": {
+      "type": "boolean"
+    },
+    "publisher_id": {
+      "type": ["string", "null"]
+    },
+    "item_id": {
+      "type": ["string", "null"]
+    },
+    "credential_type": {
+      "type": "string"
+    },
+    "credential_present": {
+      "type": "boolean"
+    },
+    "token_source": {
+      "type": "string"
+    },
+    "env_preflight": {
+      "type": "object"
+    },
+    "credentials_preflight": {
+      "type": "object"
+    },
+    "service_account_summary": {
+      "type": "object"
+    },
+    "network_probe_summary": {
+      "type": "object"
+    },
+    "token_exchange": {
+      "type": "object"
+    },
+    "fetch_status": {
+      "type": "object"
+    },
+    "failure_phase": {
+      "type": ["string", "null"],
+      "enum": [null, "env_preflight", "credentials_file_read", "token_exchange", "chrome_webstore_fetch_status", "network_preflight"]
+    },
+    "diagnostic_hint": {
+      "type": ["string", "null"]
+    },
+    "likely_cause": {
+      "type": ["string", "null"]
+    },
+    "actionable_hint": {
+      "type": ["string", "null"]
+    },
+    "retryable": {
+      "type": "boolean"
+    },
+    "network_mode": {
+      "type": "string"
+    },
+    "proxy_configured": {
+      "type": "boolean"
+    },
+    "proxy_source": {
+      "type": ["string", "null"]
+    },
+    "proxy_url_redacted": {
+      "type": ["string", "null"]
+    },
+    "oauth2_probe_via_proxy": {
+      "type": "boolean"
+    },
+    "cws_probe_via_proxy": {
+      "type": "boolean"
+    },
+    "failure_reason": {
+      "type": ["string", "null"]
+    },
+    "redaction_checks": {
+      "type": "object"
+    }
+  }
+}

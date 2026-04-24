@@ -1,0 +1,112 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "stage",
+    "status",
+    "product_name",
+    "short_name",
+    "tagline",
+    "tone_of_voice",
+    "primary_color",
+    "secondary_color",
+    "accent_color",
+    "background_color",
+    "text_color",
+    "typography_recommendation",
+    "icon_direction",
+    "layout_style",
+    "illustration_style",
+    "screenshot_annotation_style",
+    "trust_badges_allowed",
+    "trust_badges_disallowed",
+    "copy_style_rules"
+  ],
+  "properties": {
+    "stage": {
+      "type": "string",
+      "enum": ["BRAND_SYSTEM_GENERATOR"]
+    },
+    "status": {
+      "type": "string",
+      "enum": ["passed", "skipped", "failed"]
+    },
+    "product_name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "short_name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "tagline": {
+      "type": "string",
+      "minLength": 1
+    },
+    "tone_of_voice": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    },
+    "primary_color": {
+      "type": "string",
+      "minLength": 4
+    },
+    "secondary_color": {
+      "type": "string",
+      "minLength": 4
+    },
+    "accent_color": {
+      "type": "string",
+      "minLength": 4
+    },
+    "background_color": {
+      "type": "string",
+      "minLength": 4
+    },
+    "text_color": {
+      "type": "string",
+      "minLength": 4
+    },
+    "typography_recommendation": {
+      "type": "object"
+    },
+    "icon_direction": {
+      "type": "string",
+      "minLength": 1
+    },
+    "layout_style": {
+      "type": "string",
+      "minLength": 1
+    },
+    "illustration_style": {
+      "type": "string",
+      "minLength": 1
+    },
+    "screenshot_annotation_style": {
+      "type": "string",
+      "minLength": 1
+    },
+    "trust_badges_allowed": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "trust_badges_disallowed": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "copy_style_rules": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

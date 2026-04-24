@@ -1,0 +1,11 @@
+runs/**
+!runs/.gitkeep
+node_modules/
+.env
+.env.local
+.env.*
+!.env.example
+config/payment/*.local.json
+*.log
+*.tmp
+docs/chrome-493801-4208a6ac069d.json

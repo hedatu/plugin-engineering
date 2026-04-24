@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "stage",
+    "status",
+    "generated_at",
+    "selected_candidate_id",
+    "selected_reason",
+    "build_recommendation",
+    "candidate",
+    "score"
+  ],
+  "properties": {
+    "stage": { "type": "string", "enum": ["SCORE_OPPORTUNITIES"] },
+    "status": { "type": "string", "enum": ["passed", "no_go"] },
+    "generated_at": { "type": "string" },
+    "selected_candidate_id": { "type": ["string", "null"] },
+    "selected_reason": { "type": "array", "items": { "type": "string" } },
+    "selected_reason_summary": { "type": ["string", "null"] },
+    "build_recommendation": { "type": "string", "enum": ["build", "research_more", "skip"] },
+    "candidate": { "type": ["object", "null"] },
+    "score": { "type": ["object", "null"] }
+  }
+}

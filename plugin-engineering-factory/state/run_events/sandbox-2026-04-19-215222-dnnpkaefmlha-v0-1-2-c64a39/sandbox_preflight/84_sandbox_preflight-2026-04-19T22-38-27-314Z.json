@@ -1,0 +1,40 @@
+{
+  "stage": "SANDBOX_PREFLIGHT",
+  "status": "failed",
+  "run_id": "sandbox-2026-04-19-215222-dnnpkaefmlha-v0-1-2-c64a39",
+  "run_type": "sandbox_validation",
+  "source_run_id": "sandbox-2026-04-19-154400-dnnpkaefmlha-v0-1-1-6218cc",
+  "item_id": "dnnpkaefmlhacigijccbhemgaenjbcpk",
+  "publisher_id": "7462c8f7-9c1a-48ed-9249-894c0317bd46",
+  "package_sha256": "6f28eb50de2150356a4fcdbadff25e33876ca03ff04f665bccb419c7069cc53f",
+  "manifest_version": "0.1.2",
+  "current_sandbox_item_version": "0.1.0",
+  "version_uploadable": true,
+  "immutable_run_verified": true,
+  "promotion_plan_verified": false,
+  "listing_package_verified": true,
+  "browser_smoke_verified": true,
+  "screenshot_manifest_verified": true,
+  "policy_gate_verified": true,
+  "write_approval_present": true,
+  "write_approval_valid": true,
+  "latest_approval_package_sha256": "6f28eb50de2150356a4fcdbadff25e33876ca03ff04f665bccb419c7069cc53f",
+  "current_package_sha256": "6f28eb50de2150356a4fcdbadff25e33876ca03ff04f665bccb419c7069cc53f",
+  "approval_matches_current_package": true,
+  "latest_upload_blocker": null,
+  "upload_allowed": false,
+  "publish_allowed": false,
+  "next_step": "write_approval_required_before_sandbox_upload",
+  "blockers": [
+    "promotion_plan_missing_or_not_in_ledger"
+  ],
+  "redaction_checks": {
+    "sanitized_response_bodies": true,
+    "checked_secret_value_count": 0,
+    "secret_values_present_in_artifact": false,
+    "authorization_header_pattern_present": false,
+    "key_material_pattern_present": false,
+    "secret_marker_pattern_present": false,
+    "redaction_guard_triggered": false
+  }
+}

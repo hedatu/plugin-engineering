@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["stage", "status", "candidate_count", "candidates", "redaction_checks"],
+  "properties": {
+    "stage": { "type": "string", "enum": ["MONEY_MICRO_WEDGE_CANDIDATES"] },
+    "status": { "type": "string", "enum": ["passed", "failed"] },
+    "candidate_count": { "type": "integer" },
+    "candidates": { "type": "array", "items": { "type": "object" } },
+    "redaction_checks": { "type": "object" }
+  }
+}

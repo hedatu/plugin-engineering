@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "stage",
+    "status",
+    "run_id",
+    "total_queries",
+    "total_candidates_found",
+    "top_ranked_opportunities",
+    "skipped_candidates",
+    "research_more_candidates",
+    "build_ready_count",
+    "overlap_summary",
+    "recommended_tomorrow_directions",
+    "human_intervention_recommended",
+    "next_step",
+    "redaction_checks"
+  ],
+  "properties": {
+    "stage": {
+      "type": "string",
+      "enum": ["DISCOVERY_OPS_REPORT"]
+    },
+    "status": {
+      "type": "string",
+      "enum": ["passed", "failed"]
+    },
+    "run_id": { "type": "string" },
+    "total_queries": { "type": "integer" },
+    "total_candidates_found": { "type": "integer" },
+    "top_ranked_opportunities": {
+      "type": "array",
+      "items": { "type": "object" }
+    },
+    "skipped_candidates": {
+      "type": "array",
+      "items": { "type": "object" }
+    },
+    "research_more_candidates": {
+      "type": "array",
+      "items": { "type": "object" }
+    },
+    "build_ready_count": { "type": "integer" },
+    "selected_candidate": { "type": ["object", "null"] },
+    "overlap_summary": {
+      "type": "array",
+      "items": { "type": "object" }
+    },
+    "recommended_tomorrow_directions": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "human_intervention_recommended": { "type": "boolean" },
+    "next_step": { "type": "string" },
+    "redaction_checks": { "type": "object" }
+  }
+}

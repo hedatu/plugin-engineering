@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["stage", "status", "candidate_name", "wedge_name", "storage_fields", "redaction_checks"],
+  "properties": {
+    "stage": { "type": "string", "enum": ["LICENSE_ACTIVATION_SPEC"] },
+    "status": { "type": "string", "enum": ["passed", "failed"] },
+    "candidate_name": { "type": "string" },
+    "wedge_name": { "type": "string" },
+    "storage_fields": { "type": "array", "items": { "type": "string" } },
+    "redaction_checks": { "type": "object" }
+  }
+}

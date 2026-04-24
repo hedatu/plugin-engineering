@@ -1,0 +1,42 @@
+{
+  "stage": "PREPARE_INSTALL_VERIFICATION",
+  "status": "active",
+  "reason": null,
+  "run_id": "sandbox-2026-04-19-215222-dnnpkaefmlha-v0-1-2-c64a39",
+  "item_id": "dnnpkaefmlhacigijccbhemgaenjbcpk",
+  "publisher_id": "7462c8f7-9c1a-48ed-9249-894c0317bd46",
+  "expected_version": "0.1.2",
+  "expected_crx_version": "0.1.2",
+  "trusted_tester_required": true,
+  "install_url": "https://chromewebstore.google.com/detail/dnnpkaefmlhacigijccbhemgaenjbcpk",
+  "verification_steps": [
+    "Use a trusted tester account to install the sandbox extension from the Chrome Web Store.",
+    "Confirm the installed version is 0.1.2.",
+    "Open the controlled form fixture used for the sandbox validation scenario.",
+    "Click the extension action to trigger the saved profile fill flow.",
+    "Verify that text, email, phone, textarea, and select fields are populated with the stored profile values.",
+    "Verify that readonly and disabled fields are skipped and not overwritten.",
+    "Verify that already-filled fields are not overwritten by default.",
+    "Verify that a no matching fields case shows clear popup feedback instead of a silent success.",
+    "Capture a screenshot showing the populated fields and extension state.",
+    "Write state/run_events/<run_id>/93_manual_install_verification.json with the tester result."
+  ],
+  "expected_happy_path": [
+    "LeadFill One Profile installs for the trusted tester without warnings.",
+    "The popup opens and the saved profile is available for the fill action.",
+    "The controlled form fixture fills supported text-like and select fields correctly, skips readonly or disabled fields safely, preserves pre-filled values by default, and shows explicit no-match feedback."
+  ],
+  "screenshots_required": true,
+  "result_artifact_path": "state/run_events/sandbox-2026-04-19-215222-dnnpkaefmlha-v0-1-2-c64a39/93_manual_install_verification.json",
+  "blockers": [],
+  "next_step": "trusted_tester_manual_install_verification_required",
+  "redaction_checks": {
+    "sanitized_response_bodies": true,
+    "checked_secret_value_count": 0,
+    "secret_values_present_in_artifact": false,
+    "authorization_header_pattern_present": false,
+    "key_material_pattern_present": false,
+    "secret_marker_pattern_present": false,
+    "redaction_guard_triggered": false
+  }
+}

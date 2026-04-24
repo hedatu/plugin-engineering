@@ -1,0 +1,80 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "stage",
+    "status",
+    "run_id",
+    "item_id",
+    "publisher_id",
+    "expected_version",
+    "expected_crx_version",
+    "trusted_tester_required",
+    "install_url",
+    "verification_steps",
+    "expected_happy_path",
+    "screenshots_required",
+    "result_artifact_path",
+    "blockers",
+    "next_step",
+    "redaction_checks"
+  ],
+  "properties": {
+    "stage": {
+      "type": "string",
+      "enum": ["PREPARE_INSTALL_VERIFICATION"]
+    },
+    "status": {
+      "type": "string",
+      "enum": ["active", "skipped", "failed"]
+    },
+    "reason": {
+      "type": ["string", "null"]
+    },
+    "run_id": {
+      "type": "string"
+    },
+    "item_id": {
+      "type": ["string", "null"]
+    },
+    "publisher_id": {
+      "type": ["string", "null"]
+    },
+    "expected_version": {
+      "type": ["string", "null"]
+    },
+    "expected_crx_version": {
+      "type": ["string", "null"]
+    },
+    "trusted_tester_required": {
+      "type": "boolean"
+    },
+    "install_url": {
+      "type": ["string", "null"]
+    },
+    "verification_steps": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "expected_happy_path": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "screenshots_required": {
+      "type": "boolean"
+    },
+    "result_artifact_path": {
+      "type": "string"
+    },
+    "blockers": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "next_step": {
+      "type": "string"
+    },
+    "redaction_checks": {
+      "type": "object"
+    }
+  }
+}

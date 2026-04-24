@@ -1,0 +1,39 @@
+{
+  "mode": "daily",
+  "run_id": "2026-04-18-daily-tab-001",
+  "date": "2026-04-18",
+  "allowed_categories": ["Productivity", "Developer Tools"],
+  "blocked_categories": ["Shopping", "Crypto", "VPN", "Security", "Children"],
+  "thresholds": {
+    "min_users": 10000,
+    "min_reviews": 100,
+    "rating_min": 3.8,
+    "rating_max": 4.6,
+    "min_negative_clusters": 3,
+    "min_overall_score": 68
+  },
+  "builder": {
+    "allow_families": ["tab_csv_window_export"]
+  },
+  "monetization": {
+    "enabled": false
+  },
+  "browser_smoke": {
+    "runtime": "dedicated_chromium"
+  },
+  "publish": {
+    "review_strategy": "manual_for_new_item_api_for_existing_item",
+    "allow_public_release": false,
+    "default_publish_intent": "draft_only",
+    "execution_mode": "planned",
+    "publish_validation_phase": "fetch_status_only"
+  },
+  "assets": {
+    "locale": "en-US",
+    "screenshots_target": 3
+  },
+  "brand_rules": {
+    "tone": "clear, practical, non-hype",
+    "forbid_competitor_name_in_title": true
+  }
+}

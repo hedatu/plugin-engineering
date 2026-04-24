@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "stage",
+    "status",
+    "run_id",
+    "seeds",
+    "redaction_checks"
+  ],
+  "properties": {
+    "stage": { "type": "string", "enum": ["SEED_PERFORMANCE_REPORT"] },
+    "status": { "type": "string", "enum": ["passed", "failed"] },
+    "run_id": { "type": "string" },
+    "seeds": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "seed_id",
+          "queries_run",
+          "candidates_found",
+          "candidates_after_dedup",
+          "avg_evidence_quality",
+          "avg_wedge_clarity",
+          "avg_testability",
+          "avg_portfolio_overlap",
+          "compliance_risk_summary",
+          "build_ready_count",
+          "research_more_count",
+          "skip_count",
+          "best_candidate",
+          "recommendation"
+        ],
+        "properties": {
+          "recommendation": {
+            "type": "string",
+            "enum": ["continue_seed", "refine_seed", "pause_seed"]
+          }
+        }
+      }
+    },
+    "redaction_checks": { "type": "object" }
+  }
+}

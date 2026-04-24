@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "stage",
+    "status",
+    "current_thresholds",
+    "observed_candidate_distribution",
+    "false_positive_risk",
+    "false_negative_risk",
+    "suggested_threshold_changes",
+    "should_change_thresholds",
+    "rationale",
+    "redaction_checks"
+  ],
+  "properties": {
+    "stage": { "type": "string", "enum": ["THRESHOLD_CALIBRATION_REVIEW"] },
+    "status": { "type": "string", "enum": ["passed", "failed"] },
+    "should_change_thresholds": { "type": "boolean" },
+    "suggested_threshold_changes": { "type": "array", "items": { "type": "string" } },
+    "redaction_checks": { "type": "object" }
+  }
+}

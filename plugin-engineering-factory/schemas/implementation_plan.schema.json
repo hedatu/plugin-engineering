@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "archetype",
+    "target_manifest_version",
+    "module_plan",
+    "files_to_generate",
+    "permissions",
+    "optional_permissions",
+    "test_matrix",
+    "storage_plan",
+    "qa_checks",
+    "risk_flags"
+  ]
+}
+

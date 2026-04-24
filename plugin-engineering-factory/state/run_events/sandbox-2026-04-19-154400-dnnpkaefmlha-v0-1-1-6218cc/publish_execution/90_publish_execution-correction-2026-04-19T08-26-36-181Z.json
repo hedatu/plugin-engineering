@@ -1,0 +1,25 @@
+{
+  "stage": "PUBLISH_EXECUTION_ARTIFACT_CORRECTION",
+  "correction_reason": "crx_version_field_normalization",
+  "corrected_at": "2026-04-19T08:26:36.181Z",
+  "run_id": "sandbox-2026-04-19-154400-dnnpkaefmlha-v0-1-1-6218cc",
+  "publish_validation_phase": "upload_only",
+  "original_crx_version": "0.1.0",
+  "corrected_crx_version": "0.1.1",
+  "upload_response_crx_version": "0.1.1",
+  "uploaded_crx_version": "0.1.1",
+  "current_sandbox_item_version": "0.1.0",
+  "manifest_version": "0.1.1",
+  "upload_state": "SUCCEEDED",
+  "version_consistency_check": {
+    "performed": true,
+    "upload_state": "SUCCEEDED",
+    "manifest_version": "0.1.1",
+    "upload_response_crx_version": "0.1.1",
+    "passed": true,
+    "failure_reason": null
+  },
+  "source_sidecar_path": "state/run_events/sandbox-2026-04-19-154400-dnnpkaefmlha-v0-1-1-6218cc/publish_execution/90_publish_execution-2026-04-19T07-52-12-640Z.json",
+  "latest_pointer_before_path": "state/run_events/sandbox-2026-04-19-154400-dnnpkaefmlha-v0-1-1-6218cc/90_publish_execution.json",
+  "latest_pointer_before_publish_validation_phase": "fetch_status_only"
+}

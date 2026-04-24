@@ -1,0 +1,218 @@
+{
+  "stage": "FUNCTIONAL_TEST_MATRIX",
+  "status": "passed",
+  "run_id": "commercial-payment-2026-04-23-203843-leadfill-v0-2-0-b846c2",
+  "archetype": "single_profile_form_fill",
+  "wedge": "LeadFill One Profile",
+  "tests": [
+    {
+      "test_name": "empty form",
+      "automated_or_manual": "automated",
+      "current_status": "passed",
+      "evidence_artifact": "runs/commercial-payment-2026-04-23-203843-leadfill-v0-2-0-b846c2/61_browser_smoke.json",
+      "risk_if_missing": "Users can trigger fill with an empty profile and get no meaningful guidance.",
+      "recommended_next_action": "Keep the empty-form smoke fixture in regression."
+    },
+    {
+      "test_name": "partially filled form",
+      "automated_or_manual": "automated",
+      "current_status": "passed",
+      "evidence_artifact": "runs/commercial-payment-2026-04-23-203843-leadfill-v0-2-0-b846c2/61_browser_smoke.json",
+      "risk_if_missing": "Real pages often mix pre-filled and empty values; overwrite behavior is unknown.",
+      "recommended_next_action": "Keep the partially-filled regression fixture."
+    },
+    {
+      "test_name": "readonly field",
+      "automated_or_manual": "automated",
+      "current_status": "passed",
+      "evidence_artifact": "runs/commercial-payment-2026-04-23-203843-leadfill-v0-2-0-b846c2/61_browser_smoke.json",
+      "risk_if_missing": "Readonly or locked CRM fields can throw errors or misleadingly report success.",
+      "recommended_next_action": "Keep the readonly and disabled regression fixture."
+    },
+    {
+      "test_name": "textarea",
+      "automated_or_manual": "automated",
+      "current_status": "passed",
+      "evidence_artifact": "runs/commercial-payment-2026-04-23-203843-leadfill-v0-2-0-b846c2/61_browser_smoke.json",
+      "risk_if_missing": "Long-form notes fields may not map cleanly even though textarea is queried.",
+      "recommended_next_action": "Keep textarea in the empty-form fixture."
+    },
+    {
+      "test_name": "select",
+      "automated_or_manual": "automated",
+      "current_status": "passed",
+      "evidence_artifact": "runs/commercial-payment-2026-04-23-203843-leadfill-v0-2-0-b846c2/61_browser_smoke.json",
+      "risk_if_missing": "Many lead forms use selects for country, industry, or source; current package likely cannot fill them.",
+      "recommended_next_action": "Keep the select fixture in smoke regression."
+    },
+    {
+      "test_name": "email field",
+      "automated_or_manual": "automated",
+      "current_status": "passed",
+      "evidence_artifact": "runs/commercial-payment-2026-04-23-203843-leadfill-v0-2-0-b846c2/61_browser_smoke.json",
+      "risk_if_missing": "Core contact data could fail silently.",
+      "recommended_next_action": "Keep the current browser smoke assertion."
+    },
+    {
+      "test_name": "phone field",
+      "automated_or_manual": "automated",
+      "current_status": "passed",
+      "evidence_artifact": "runs/commercial-payment-2026-04-23-203843-leadfill-v0-2-0-b846c2/61_browser_smoke.json",
+      "risk_if_missing": "Phone is explicitly mentioned in demand evidence and currently only verified on one fixture.",
+      "recommended_next_action": "Keep the current browser smoke assertion and add alternate label variants."
+    },
+    {
+      "test_name": "name field",
+      "automated_or_manual": "automated",
+      "current_status": "passed",
+      "evidence_artifact": "runs/commercial-payment-2026-04-23-203843-leadfill-v0-2-0-b846c2/61_browser_smoke.json",
+      "risk_if_missing": "First/last name mapping is central to the wedge value proposition.",
+      "recommended_next_action": "Keep the current browser smoke assertion."
+    },
+    {
+      "test_name": "no matching fields",
+      "automated_or_manual": "automated",
+      "current_status": "passed",
+      "evidence_artifact": "runs/commercial-payment-2026-04-23-203843-leadfill-v0-2-0-b846c2/61_browser_smoke.json",
+      "risk_if_missing": "The extension may report success while doing nothing useful on unsupported forms.",
+      "recommended_next_action": "Keep the no-match regression fixture."
+    },
+    {
+      "test_name": "activeTab permission path",
+      "automated_or_manual": "automated",
+      "current_status": "passed",
+      "evidence_artifact": "runs/commercial-payment-2026-04-23-203843-leadfill-v0-2-0-b846c2/61_browser_smoke.json",
+      "risk_if_missing": "Extension action invocation is the only authorized fill trigger path.",
+      "recommended_next_action": "Retain the current smoke coverage."
+    },
+    {
+      "test_name": "local storage only",
+      "automated_or_manual": "automated",
+      "current_status": "passed",
+      "evidence_artifact": "runs/commercial-payment-2026-04-23-203843-leadfill-v0-2-0-b846c2/workspace/dist/popup.js",
+      "risk_if_missing": "Any remote storage regression would break the privacy promise and review positioning.",
+      "recommended_next_action": "Keep a static test that forbids network calls in popup code."
+    },
+    {
+      "test_name": "popup error display",
+      "automated_or_manual": "automated",
+      "current_status": "passed",
+      "evidence_artifact": "runs/commercial-payment-2026-04-23-203843-leadfill-v0-2-0-b846c2/61_browser_smoke.json",
+      "risk_if_missing": "Failures become opaque and users cannot tell whether anything happened.",
+      "recommended_next_action": "Keep feedback verification in smoke regression."
+    },
+    {
+      "test_name": "profile save / edit / delete",
+      "automated_or_manual": "automated",
+      "current_status": "passed",
+      "evidence_artifact": "runs/commercial-payment-2026-04-23-203843-leadfill-v0-2-0-b846c2/61_browser_smoke.json",
+      "risk_if_missing": "Without delete/reset, users cannot recover from bad saved data cleanly.",
+      "recommended_next_action": "Keep popup profile management in smoke regression."
+    },
+    {
+      "test_name": "field overwrite behavior",
+      "automated_or_manual": "automated",
+      "current_status": "passed",
+      "evidence_artifact": "runs/commercial-payment-2026-04-23-203843-leadfill-v0-2-0-b846c2/61_browser_smoke.json",
+      "risk_if_missing": "Current fill path always writes values and could clobber operator edits.",
+      "recommended_next_action": "Keep the overwrite-default-false regression fixture."
+    },
+    {
+      "test_name": "visual feedback after fill",
+      "automated_or_manual": "automated",
+      "current_status": "passed",
+      "evidence_artifact": "runs/commercial-payment-2026-04-23-203843-leadfill-v0-2-0-b846c2/61_browser_smoke.json",
+      "risk_if_missing": "Users may not trust the action if the popup does not confirm what happened clearly.",
+      "recommended_next_action": "Keep popup feedback verification in smoke regression."
+    },
+    {
+      "test_name": "email OTP login UI and protocol",
+      "automated_or_manual": "automated",
+      "current_status": "passed",
+      "evidence_artifact": "109_monetization_test_matrix.json",
+      "risk_if_missing": "The commercial plugin could not complete the verified HWH email OTP auth path.",
+      "recommended_next_action": "Keep SEND_OTP and VERIFY_OTP exposed only through the background membership runtime."
+    },
+    {
+      "test_name": "source=chrome_extension checkout metadata",
+      "automated_or_manual": "automated",
+      "current_status": "passed",
+      "evidence_artifact": "109_monetization_test_matrix.json",
+      "risk_if_missing": "HWH could misclassify plugin checkout sessions or miss installation metadata.",
+      "recommended_next_action": "Keep CREATE_CHECKOUT sending source=chrome_extension plus installationId."
+    },
+    {
+      "test_name": "successUrl is not a local unlock basis",
+      "automated_or_manual": "automated",
+      "current_status": "passed",
+      "evidence_artifact": "109_monetization_test_matrix.json",
+      "risk_if_missing": "A redirect-only success page could be abused to unlock Pro without a verified webhook.",
+      "recommended_next_action": "Keep Pro activation tied to webhook-derived entitlement refresh only."
+    },
+    {
+      "test_name": "webhook-derived entitlement refresh",
+      "automated_or_manual": "automated",
+      "current_status": "passed",
+      "evidence_artifact": "109_monetization_test_matrix.json",
+      "risk_if_missing": "Paid users could fail to see active membership after the webhook writes entitlement.",
+      "recommended_next_action": "Keep REFRESH_ENTITLEMENT as the user-visible post-payment recovery path."
+    },
+    {
+      "test_name": "CONSUME_USAGE gate before fill",
+      "automated_or_manual": "automated",
+      "current_status": "passed",
+      "evidence_artifact": "109_monetization_test_matrix.json",
+      "risk_if_missing": "The core fill action could bypass free quota or Pro entitlement checks.",
+      "recommended_next_action": "Keep guardPaidFeatureUsage before every fill execution path."
+    },
+    {
+      "test_name": "free quota and quota exceeded path",
+      "automated_or_manual": "automated",
+      "current_status": "passed",
+      "evidence_artifact": "109_monetization_test_matrix.json",
+      "risk_if_missing": "Free users could exceed the 10-fill limit or fail to understand the remaining quota.",
+      "recommended_next_action": "Keep the 10-fill meter and 11th QUOTA_EXCEEDED smoke in the HWH handoff."
+    },
+    {
+      "test_name": "background session token boundary",
+      "automated_or_manual": "automated",
+      "current_status": "passed",
+      "evidence_artifact": "109_monetization_test_matrix.json",
+      "risk_if_missing": "Auth tokens could leak into visible UI or content script code.",
+      "recommended_next_action": "Keep session handling in the background membership runtime."
+    },
+    {
+      "test_name": "public-only payment config",
+      "automated_or_manual": "automated",
+      "current_status": "passed",
+      "evidence_artifact": "110_monetization_security_scan.json",
+      "risk_if_missing": "The extension could ship service-role, Waffo, merchant, or webhook secrets.",
+      "recommended_next_action": "Run monetization:security-scan before any upload approval."
+    },
+    {
+      "test_name": "test mode checkout guard",
+      "automated_or_manual": "automated",
+      "current_status": "passed",
+      "evidence_artifact": "109_monetization_test_matrix.json",
+      "risk_if_missing": "The candidate could imply production payment is enabled before live payment approval.",
+      "recommended_next_action": "Keep production payment blocked until explicit live checkout verification."
+    }
+  ],
+  "test_coverage_score": 100,
+  "missing_tests": [],
+  "release_blockers": [],
+  "recommended_next_tests": [
+    "Keep the source=chrome_extension HWH smoke artifact linked to this candidate before any upload decision.",
+    "Repeat manual visual review of the membership panel and payment CTA.",
+    "Do not switch checkoutMode to live until production payment is explicitly approved."
+  ],
+  "redaction_checks": {
+    "sanitized_response_bodies": true,
+    "checked_secret_value_count": 1,
+    "secret_values_present_in_artifact": false,
+    "authorization_header_pattern_present": false,
+    "key_material_pattern_present": false,
+    "secret_marker_pattern_present": false,
+    "redaction_guard_triggered": false
+  }
+}
