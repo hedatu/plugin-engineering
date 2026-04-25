@@ -1,4 +1,5 @@
 import { Link, NavLink, Outlet, useLocation } from 'react-router-dom'
+import { BrandMark } from './BrandMark'
 import { getDefaultPricingPath } from '../content/productCatalog'
 import { env } from '../lib/env'
 
@@ -29,10 +30,10 @@ export function Shell() {
     <div className="app-shell">
       <header className="site-header">
         <NavLink to="/" className="brand-link">
-          <span className="brand-mark">LF</span>
+          <BrandMark size="md" />
           <span className="brand-stack">
-            <strong>LeadFill One Profile</strong>
-            <small>Local-first Chrome form filler</small>
+            <strong>LeadFill</strong>
+            <small>One Profile</small>
           </span>
         </NavLink>
 

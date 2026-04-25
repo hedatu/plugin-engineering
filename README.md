@@ -1,6 +1,6 @@
 # 插件工程 / Plugin Engineering
 
-This private repository now acts as a consolidated archive for the current LeadFill One Profile commercial launch work and the broader Chrome extension engineering workflow that produced it.
+This repository acts as a consolidated archive for the current LeadFill One Profile commercial launch work and the broader Chrome extension engineering workflow that produced it.
 
 Current mainline:
 
@@ -35,7 +35,7 @@ This directory is a merged snapshot of the Chrome Extension Opportunity Factory 
 - run artifacts for the commercial LeadFill candidate and related workflow history
 - Remotion asset-generation source
 
-This is preserved here so the product implementation and the factory-side planning, packaging, and release evidence live in one private repository.
+This is preserved here so the product implementation and the factory-side planning, packaging, and release evidence live in one engineering repository.
 
 ### 3. `supplemental_docs/`
 

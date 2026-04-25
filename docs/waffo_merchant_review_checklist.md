@@ -10,6 +10,8 @@ Support email: `support@915500.xyz`
 - The site reads like a real plugin product site, not a test shell.
 - The product page explains the real use case: filling repetitive lead forms from one local profile.
 - The site does not mention `chatgpt2obsidian`.
+- `Add to Chrome` is only shown when a published Chrome Web Store URL exists.
+- If the store listing is not yet published, the site shows `Chrome Web Store link pending` instead of a guessed public link.
 
 ## Pricing clarity
 
@@ -18,6 +20,7 @@ Support email: `support@915500.xyz`
 - The difference between free and paid access is clear.
 - The site does not imply subscription billing when the offer is lifetime unlock.
 - The site does not falsely imply that production payment is already enabled beyond the current mode.
+- The pricing page states that the success page does not unlock Pro locally.
 
 ## Merchant trust and policy pages
 
@@ -25,6 +28,7 @@ Support email: `support@915500.xyz`
 - `Privacy` page exists and clearly explains the local-only data boundary.
 - `Terms` page exists and clearly explains free and paid access, license scope, and contact.
 - Support email is visible in legal pages.
+- Refund copy states that entitlement may be downgraded or revoked after refund processing.
 
 ## Checkout and entitlement clarity
 

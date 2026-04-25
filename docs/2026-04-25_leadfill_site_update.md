@@ -90,6 +90,29 @@ The following checks were run successfully before packaging this update:
 - `npm run typecheck`
 - `npm run build:web`
 
+## 2026-04-25 QA follow-up
+
+- Fixed Chrome Web Store CTA rules so the site no longer guesses a public store URL from extension ID alone.
+- Added explicit product-catalog metadata for `chromeWebStoreStatus`.
+- Standardized the unpublished CTA label to `Chrome Web Store link pending`.
+- Tightened pricing copy so the cards read more directly as:
+  - `Free: 10 free fills`
+  - `Lifetime: $19 one-time`
+- Updated the merchant review checklist to include store-link gating and refund-entitlement wording checks.
+- Updated the root `README.md` to use public-safe wording instead of describing this as a private repository.
+
+## 2026-04-25 Round 3 web polish
+
+- Added a minimal LeadFill brand mark and SVG favicon.
+- Reduced primary-visual exposure of `pay.915500.xyz`; host display now stays in low-priority footer placement.
+- Reworked the home page into a cleaner product-first landing page with clearer section hierarchy.
+- Simplified pricing into a faster read with stronger emphasis on:
+  - `10 free fills`
+  - `$19 one-time`
+  - `No subscription`
+- Restyled account, login, success, and cancel screens to feel like product pages rather than utility/debug surfaces.
+- Refreshed the website screenshot set for the current release candidate.
+
 ## Constraints still in force
 
 - No Chrome upload

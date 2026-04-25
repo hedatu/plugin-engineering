@@ -1,11 +1,12 @@
 import { useEffect, useMemo, useState } from 'react'
 import { Link, Navigate, useParams, useSearchParams } from 'react-router-dom'
 import { useAuth } from '../auth/AuthProvider'
+import { BrandMark } from '../components/BrandMark'
 import {
-  formatPlanHeadline,
   getFreePlan,
   getPaidPlan,
   getPlanBullets,
+  leadfillSupportEmail,
 } from '../content/leadfill'
 import {
   buildCheckoutStartPath,
@@ -91,7 +92,10 @@ export function PricingPage() {
   return (
     <section className="page-grid">
       <div className="page-heading compact-heading">
-        <p className="eyebrow">Pricing</p>
+        <div className="brand-inline">
+          <BrandMark size="sm" />
+          <p className="eyebrow">Pricing</p>
+        </div>
         <h1>Simple pricing for LeadFill One Profile</h1>
         <p className="muted">
           Start with 10 free fills. Unlock lifetime access when LeadFill becomes part of your
@@ -101,15 +105,15 @@ export function PricingPage() {
           <span>10 free fills</span>
           <span>$19 one-time</span>
           <span>Local-only</span>
-          {checkoutMode === 'test' ? <span>Internal checkout mode: test</span> : null}
+          <span>No subscription</span>
         </div>
       </div>
 
       <div className="compare-grid">
         <article className="soft-card pricing-card">
           <p className="plan-tag">Free</p>
-          <h2>$0</h2>
-          <p className="muted">A small free tier to confirm the product is useful before you pay.</p>
+          <h2>10 free fills</h2>
+          <p className="muted">Use the free tier first, then decide later if the lifetime unlock is worth it.</p>
           <ul className="compact-list">
             {getPlanBullets(freePlan).map((item) => (
               <li key={item}>{item}</li>
@@ -122,7 +126,7 @@ export function PricingPage() {
 
         <article className="surface-card pricing-card pricing-card-strong">
           <p className="plan-tag">Lifetime Unlock</p>
-          <h2>{formatPlanHeadline(paidPlan)}</h2>
+          <h2>$19 one-time</h2>
           <p className="muted">Unlimited fills with one payment. No subscription and no recurring bill.</p>
           <ul className="compact-list">
             {getPlanBullets(paidPlan).map((item) => (
@@ -156,6 +160,9 @@ export function PricingPage() {
             Sign in with email, start checkout from this pricing page, complete payment on the
             hosted checkout page, then return to the extension or account page.
           </p>
+          <p className="muted">
+            Payment is handled securely. Need help before buying? Contact {leadfillSupportEmail}.
+          </p>
         </section>
 
         <section className="soft-card">
@@ -171,6 +178,10 @@ export function PricingPage() {
           </div>
         </section>
       </div>
+
+      {checkoutMode === 'test' ? (
+        <p className="muted">Current checkout path remains in internal test mode.</p>
+      ) : null}
     </section>
   )
 }

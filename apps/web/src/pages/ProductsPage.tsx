@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+import { BrandMark } from '../components/BrandMark'
 import { formatPlanHeadline, getPaidPlan } from '../content/leadfill'
 import {
   fallbackProductsWithPlans,
@@ -34,11 +35,14 @@ export function ProductsPage() {
   return (
     <section className="page-grid">
       <div className="page-heading compact-heading">
-        <p className="eyebrow">Products</p>
-        <h1>Focused plugin products, each with a dedicated detail page and pricing page.</h1>
+        <div className="brand-inline">
+          <BrandMark size="sm" />
+          <p className="eyebrow">Products</p>
+        </div>
+        <h1>Focused plugin products with clean product pages and pricing pages.</h1>
         <p className="muted">
-          The current launch is intentionally narrow. LeadFill has its own product page, pricing
-          page, account view, and checkout entry, all tied to the same catalog record.
+          The current release candidate is intentionally narrow. LeadFill has its own product page,
+          pricing page, account view, and checkout entry, all tied to the same catalog record.
         </p>
       </div>
 
@@ -50,7 +54,7 @@ export function ProductsPage() {
           return (
             <article key={product.product_key} className="catalog-card">
               <div className="catalog-title-row">
-                <div className="catalog-icon" aria-hidden="true">LF</div>
+                <BrandMark size="md" className="catalog-icon" />
                 <div className="stack-tight">
                   <p className="eyebrow">Chrome extension</p>
                   <h2>{product.name}</h2>
@@ -76,7 +80,7 @@ export function ProductsPage() {
                   </a>
                 ) : (
                   <span className="button subtle disabled" aria-disabled="true">
-                    Pending review
+                    Chrome Web Store link pending
                   </span>
                 )}
               </div>

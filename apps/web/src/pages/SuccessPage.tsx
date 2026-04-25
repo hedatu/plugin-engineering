@@ -1,7 +1,9 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { Link, useSearchParams } from 'react-router-dom'
 import type { EntitlementResponse } from '@membership/extension-sdk'
+import { BrandMark } from '../components/BrandMark'
 import { getDefaultProductPath } from '../content/productCatalog'
+import { leadfillSupportEmail } from '../content/leadfill'
 import { fetchEntitlement } from '../lib/api'
 import { env } from '../lib/env'
 
@@ -64,7 +66,11 @@ export function SuccessPage() {
 
   return (
     <section className="page-grid narrow-page">
-      <div className="surface-card status-card status-minimal">
+      <div className="surface-card status-card status-minimal status-shell">
+        <div className="brand-inline centered-inline">
+          <BrandMark size="sm" />
+          <p className="eyebrow">LeadFill</p>
+        </div>
         <p className="eyebrow">Payment received</p>
         <h1>Payment received</h1>
         <p className="muted">
@@ -76,6 +82,9 @@ export function SuccessPage() {
         </div>
         <p className="muted">
           This page does not unlock Pro locally.
+        </p>
+        <p className="muted">
+          Need help? Contact {leadfillSupportEmail}.
         </p>
         <div className="action-row">
           <Link className="button primary" to={`/account?productKey=${productKey}`}>Open account</Link>

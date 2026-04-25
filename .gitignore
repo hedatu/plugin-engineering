@@ -19,3 +19,4 @@ supabase/WAFFO_PRIVATE_KEY.txt
 secrets/
 extensions/main-extension/.output/
 .tmp-waffo-sdk/
+.tmp-web-preview.log

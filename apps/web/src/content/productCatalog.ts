@@ -11,6 +11,7 @@ const leadfillProductMetadata = {
   localOnly: true,
   noUpload: true,
   noCloudSync: true,
+  chromeWebStoreStatus: 'pending',
   chromeWebStoreUrl: null,
 } as const
 
@@ -150,7 +151,18 @@ export function buildCheckoutStartPath(input: {
   return `/checkout/start?${params.toString()}`
 }
 
+export function getProductChromeStoreStatus(product?: Pick<ProductRecord, 'metadata'> | null) {
+  return typeof product?.metadata?.chromeWebStoreStatus === 'string'
+    ? product.metadata.chromeWebStoreStatus
+    : 'pending'
+}
+
 export function getProductChromeStoreUrl(product?: Pick<ProductRecord, 'chrome_extension_id' | 'website_url' | 'metadata'> | null) {
+  const status = getProductChromeStoreStatus(product)
+  if (status !== 'published') {
+    return null
+  }
+
   const metadataUrl = typeof product?.metadata?.chromeWebStoreUrl === 'string'
     ? product.metadata.chromeWebStoreUrl
     : null
@@ -161,10 +173,6 @@ export function getProductChromeStoreUrl(product?: Pick<ProductRecord, 'chrome_e
 
   if (product?.website_url && product.website_url.includes('chromewebstore.google.com')) {
     return product.website_url
-  }
-
-  if (product?.chrome_extension_id) {
-    return `https://chromewebstore.google.com/detail/${product.chrome_extension_id}`
   }
 
   return null

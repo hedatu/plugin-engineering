@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { BrandMark } from './BrandMark'
 import {
   formatPlanHeadline,
   getFreePlan,
@@ -11,6 +12,7 @@ import {
   leadfillLimits,
   leadfillSteps,
   leadfillSupportBoundaries,
+  leadfillSupportEmail,
   leadfillTrustPoints,
 } from '../content/leadfill'
 import {
@@ -40,7 +42,10 @@ export function ProductLanding({
     <section className="page-grid">
       <section className="hero-layout">
         <div className="hero-copy">
-          <p className="eyebrow">{product.name}</p>
+          <div className="brand-inline">
+            <BrandMark size="sm" />
+            <p className="eyebrow">{product.name}</p>
+          </div>
           <h1>Fill repetitive lead forms from one local profile.</h1>
           <p className="hero-support hero-primary-copy">
             Save one browser-local profile and use it to fill common text, email, phone, textarea,
@@ -68,14 +73,20 @@ export function ProductLanding({
         </div>
 
         <div className="visual-stack">
-          <figure className="visual-frame">
+          <figure className="visual-frame hero-shot">
             <img src="/images/leadfill/hero.png" alt="LeadFill extension popup beside a lead form" />
           </figure>
-          <div className="mini-card">
-            <p className="eyebrow">What the product does</p>
-            <p className="muted">
-              One saved profile, one fill action, one focused workflow for repetitive lead forms.
-            </p>
+          <div className="mini-card mini-card-inline">
+            <div>
+              <p className="eyebrow">What the product does</p>
+              <p className="muted">
+                One saved profile, one fill action, one focused workflow for repetitive lead forms.
+              </p>
+            </div>
+            <div className="mini-stat-row">
+              <span>10 free fills</span>
+              <span>$19 lifetime</span>
+            </div>
           </div>
         </div>
       </section>
@@ -85,8 +96,8 @@ export function ProductLanding({
           <section className="content-section">
             <div className="section-heading left-aligned">
               <div>
-                <p className="eyebrow">Core benefits</p>
-                <h2>Built to be clear in five seconds</h2>
+                <p className="eyebrow">Why LeadFill</p>
+                <h2>Focused enough to understand immediately.</h2>
               </div>
             </div>
             <div className="benefit-grid">
@@ -103,7 +114,7 @@ export function ProductLanding({
             <div className="section-heading left-aligned">
               <div>
                 <p className="eyebrow">How it works</p>
-                <h2>Simple enough to explain in four steps</h2>
+                <h2>One profile in the browser, then a short repeatable flow.</h2>
               </div>
             </div>
             <div className="timeline-grid">
@@ -120,8 +131,8 @@ export function ProductLanding({
           <section className="content-section">
             <div className="section-heading left-aligned">
               <div>
-                <p className="eyebrow">Free vs lifetime</p>
-                <h2>Start free. Pay once if it proves useful.</h2>
+                <p className="eyebrow">Pricing snapshot</p>
+                <h2>Try it first. Upgrade only when it earns a place in your workflow.</h2>
               </div>
             </div>
             <div className="compare-grid">
@@ -151,7 +162,7 @@ export function ProductLanding({
             <div className="section-heading left-aligned">
               <div>
                 <p className="eyebrow">FAQ</p>
-                <h2>Short answers before you install or upgrade</h2>
+                <h2>Short answers before you install or upgrade.</h2>
               </div>
             </div>
             <div className="faq-list">
@@ -189,9 +200,9 @@ export function ProductLanding({
 
           <section className="content-section">
             <div className="split-grid">
-              <article className="soft-card">
+              <article className="soft-card detail-summary-card">
                 <p className="eyebrow">Who it is for</p>
-                <h2>Useful when the same form work keeps coming back</h2>
+                <h2>Useful when the same form work keeps coming back.</h2>
                 <ul className="compact-list">
                   {leadfillAudience.map((item) => (
                     <li key={item}>{item}</li>
@@ -199,9 +210,9 @@ export function ProductLanding({
                 </ul>
               </article>
 
-              <article className="soft-card">
+              <article className="soft-card detail-summary-card">
                 <p className="eyebrow">Free vs Pro</p>
-                <h2>Simple commercial model</h2>
+                <h2>Simple commercial model.</h2>
                 <ul className="compact-list">
                   <li>Free: 10 fills</li>
                   <li>Lifetime: $19 one-time, unlimited fills</li>
@@ -223,7 +234,7 @@ export function ProductLanding({
             <div className="section-heading left-aligned">
               <div>
                 <p className="eyebrow">Core features</p>
-                <h2>Only real capabilities, no inflated promises</h2>
+                <h2>Only real capabilities, no inflated promises.</h2>
               </div>
             </div>
             <div className="benefit-grid">
@@ -240,7 +251,7 @@ export function ProductLanding({
             <div className="section-heading left-aligned">
               <div>
                 <p className="eyebrow">How it works</p>
-                <h2>From saved profile to filled page</h2>
+                <h2>From saved profile to filled page.</h2>
               </div>
             </div>
             <div className="timeline-grid">
@@ -258,7 +269,7 @@ export function ProductLanding({
             <div className="split-grid">
               <article className="soft-card">
                 <p className="eyebrow">Support and boundaries</p>
-                <h2>What LeadFill supports today</h2>
+                <h2>What LeadFill supports today.</h2>
                 <ul className="compact-list">
                   {leadfillSupportBoundaries.map((item) => (
                     <li key={item}>{item}</li>
@@ -268,7 +279,7 @@ export function ProductLanding({
 
               <article className="soft-card">
                 <p className="eyebrow">Boundaries</p>
-                <h2>What to expect</h2>
+                <h2>What to expect.</h2>
                 <ul className="compact-list">
                   {leadfillLimits.map((item) => (
                     <li key={item}>{item}</li>
@@ -282,7 +293,7 @@ export function ProductLanding({
             <div className="section-heading left-aligned">
               <div>
                 <p className="eyebrow">FAQ</p>
-                <h2>Questions people ask before buying</h2>
+                <h2>Questions people ask before buying.</h2>
               </div>
             </div>
             <div className="faq-list">
@@ -305,6 +316,7 @@ export function ProductLanding({
             Keep the saved profile in Chrome, use free fills first, and open pricing only when you
             want unlimited usage.
           </p>
+          <p className="muted cta-support">Support: {leadfillSupportEmail}</p>
         </div>
         <div className="action-row">
           {chromeStoreUrl ? (

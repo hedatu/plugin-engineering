@@ -1,16 +1,23 @@
 import { Link } from 'react-router-dom'
+import { BrandMark } from '../components/BrandMark'
+import { leadfillSupportEmail } from '../content/leadfill'
 import { getDefaultPricingPath, getDefaultProductPath } from '../content/productCatalog'
 
 export function CancelPage() {
   return (
     <section className="page-grid narrow-page">
-      <div className="surface-card status-card status-minimal">
+      <div className="surface-card status-card status-minimal status-shell">
+        <div className="brand-inline centered-inline">
+          <BrandMark size="sm" />
+          <p className="eyebrow">LeadFill</p>
+        </div>
         <p className="eyebrow">Checkout cancelled</p>
         <h1>No payment was completed.</h1>
         <p className="muted">
           You can continue with the free plan or try again later. Paid access only changes after a
           verified payment event reaches the backend.
         </p>
+        <p className="muted">Need help? Contact {leadfillSupportEmail}.</p>
         <div className="action-row">
           <Link className="button primary" to={getDefaultPricingPath()}>Back to pricing</Link>
           <Link className="button subtle" to={getDefaultProductPath()}>Back to product</Link>

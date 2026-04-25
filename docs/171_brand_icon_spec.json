@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "date": "2026-04-25",
+  "product": "LeadFill One Profile",
+  "brand_name": "LeadFill",
+  "asset_paths": {
+    "mark_svg": "apps/web/public/brand/leadfill-mark.svg",
+    "favicon_svg": "apps/web/public/favicon.svg",
+    "react_component": "apps/web/src/components/BrandMark.tsx"
+  },
+  "intent": {
+    "style": [
+      "minimal",
+      "professional",
+      "restrained",
+      "product-led"
+    ],
+    "avoid": [
+      "cartoon styling",
+      "heavy gradients",
+      "complex logo geometry",
+      "decorative icon clutter"
+    ]
+  },
+  "construction": {
+    "base_shape": "rounded square container",
+    "primary_form": "vertical fill bar to suggest profile-to-form action",
+    "secondary_form": "two horizontal strokes to suggest structured form fields",
+    "accent_form": "small circle to suggest a confirmed fill action"
+  },
+  "palette": {
+    "background": "#F7F8F5",
+    "border": "#D9DED5",
+    "primary_dark": "#161F2F",
+    "accent_green": "#185F53",
+    "secondary_text": "#667085"
+  },
+  "usage": {
+    "header_brand": "icon plus LeadFill wordmark",
+    "favicon": true,
+    "product_page_brand_marker": true,
+    "status_page_marker": true
+  },
+  "rules": [
+    "Do not rotate or distort the mark.",
+    "Do not apply multi-color gradients.",
+    "Do not add shadows inside the SVG.",
+    "Do not replace the neutral background with saturated fills."
+  ]
+}

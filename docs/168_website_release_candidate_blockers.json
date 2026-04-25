@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "date": "2026-04-25",
+  "scope": "LeadFill website release candidate QA",
+  "qa_passed": true,
+  "fixed_during_qa": [
+    {
+      "id": "chrome_web_store_link_logic",
+      "status": "fixed",
+      "summary": "Stopped generating a guessed public Chrome Web Store URL from extension ID alone and gated Add to Chrome on published status plus real URL."
+    },
+    {
+      "id": "pricing_copy_precision",
+      "status": "fixed",
+      "summary": "Pricing copy now clearly states 10 free fills, $19 one-time, and no subscription."
+    },
+    {
+      "id": "readme_public_safe_wording",
+      "status": "fixed",
+      "summary": "Root README wording no longer describes the repo as a private repository."
+    }
+  ],
+  "blockers": [],
+  "warnings": [
+    {
+      "id": "security_scan_review_level_references",
+      "severity": "low",
+      "summary": "Security scan still reports review-level keyword references in docs, examples, archived factory material, and templates, but no high-severity secret exposure was found."
+    },
+    {
+      "id": "local_preview_auth_limit",
+      "severity": "low",
+      "summary": "Local browser QA used placeholder public Supabase values, so checkout-start auth redirect was validated by code and smoke rather than a live local login session."
+    }
+  ],
+  "security_scan": {
+    "command": "npm run security:scan",
+    "high_findings": 0,
+    "review_findings": 132,
+    "has_secret_blocker": false
+  },
+  "waffo_review": {
+    "has_blocker": false,
+    "notes": [
+      "Pricing is clear.",
+      "Legal pages are present and formal.",
+      "Support email is present.",
+      "Success page does not locally unlock Pro.",
+      "Store CTA now respects unpublished state."
+    ]
+  },
+  "operational_constraints": {
+    "chrome_upload_publish_executed": false,
+    "production_payment_executed": false
+  }
+}

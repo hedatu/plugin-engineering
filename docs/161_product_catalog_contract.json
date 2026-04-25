@@ -14,8 +14,9 @@
       "accountPath": "/account?productKey=leadfill-one-profile",
       "checkoutStartPath": "/checkout/start",
       "checkoutMode": "test",
+      "chromeWebStoreStatus": "pending",
       "chromeWebStoreUrl": null,
-      "chromeWebStoreFallbackLabel": "Pending review"
+      "chromeWebStoreFallbackLabel": "Chrome Web Store link pending"
     }
   ],
   "rules": {

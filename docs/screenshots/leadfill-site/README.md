@@ -1,6 +1,6 @@
 # LeadFill Site Screenshots
 
-Captured on `2026-04-25` from local preview after the latest LeadFill product-site rewrite.
+Captured on `2026-04-25` from local preview after the Round 3 web polish pass.
 
 ## Pages
 
@@ -30,6 +30,8 @@ Captured on `2026-04-25` from local preview after the latest LeadFill product-si
 ## Notes
 
 - Screenshots were captured from the current LeadFill single-product site flow.
+- The current set reflects the quieter Round 3 visual system and new LeadFill brand mark.
 - Checkout remains test/internal only in the current project state.
 - Success page does not locally unlock Pro.
 - Webhook-confirmed entitlement remains the source of truth.
+- Supplemental `round3-*.png` files are review captures kept alongside the canonical numbered screenshots.

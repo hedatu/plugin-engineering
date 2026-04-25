@@ -1,6 +1,8 @@
 import { FormEvent, useState } from 'react'
 import { useNavigate, useSearchParams } from 'react-router-dom'
 import { useAuth } from '../auth/AuthProvider'
+import { BrandMark } from '../components/BrandMark'
+import { leadfillSupportEmail } from '../content/leadfill'
 
 export function LoginPage() {
   const navigate = useNavigate()
@@ -44,7 +46,10 @@ export function LoginPage() {
   return (
     <section className="page-grid">
       <div className="page-heading compact-heading">
-        <p className="eyebrow">Email OTP</p>
+        <div className="brand-inline">
+          <BrandMark size="sm" />
+          <p className="eyebrow">Email OTP</p>
+        </div>
         <h1>Sign in to your LeadFill account.</h1>
         <p className="muted">
           Use the same email from checkout to restore a purchase, refresh membership, and manage
@@ -53,7 +58,7 @@ export function LoginPage() {
       </div>
 
       <div className="login-layout">
-        <div className="card form-card">
+        <div className="surface-card form-card">
           <form className="stack" onSubmit={onSendOtp}>
             <label className="field">
               <span>Email</span>
@@ -88,13 +93,14 @@ export function LoginPage() {
           {status ? <p className="inline-status">{status}</p> : null}
         </div>
 
-        <div className="card note-card">
+        <div className="soft-card">
           <p className="eyebrow">After sign in</p>
           <h2>Use Account or the extension to refresh membership.</h2>
           <p className="muted">
             Checkout does not unlock LeadFill locally on the success page. Sign in with the same
             email, then refresh membership from Account or from the extension.
           </p>
+          <p className="muted">Support: {leadfillSupportEmail}</p>
           <div className="session-box">
             <h3>Current session</h3>
             <p className="muted">Signed in user: {user?.email ?? 'Not signed in'}</p>

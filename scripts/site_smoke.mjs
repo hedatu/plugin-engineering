@@ -21,6 +21,8 @@ const accountPage = await read('apps/web/src/pages/AccountPage.tsx');
 const popupApp = await read('extensions/main-extension/src/popup/App.tsx');
 const optionsApp = await read('extensions/main-extension/src/options/App.tsx');
 const runtimeFile = await read('extensions/main-extension/src/shared/runtime.ts');
+const productCatalog = await read('apps/web/src/content/productCatalog.ts');
+const productsPage = await read('apps/web/src/pages/ProductsPage.tsx');
 
 const requiredRoutes = [
   "path: 'products'",
@@ -43,12 +45,30 @@ if (!pricingPage.includes('buildCheckoutStartPath({')) {
   fail('site: pricing page is not routing through /checkout/start');
 }
 
+if (!pricingPage.includes('10 free fills')) {
+  fail('site: pricing page must clearly show the free plan fill allowance');
+}
+
+if (!pricingPage.includes('$19 one-time')) {
+  fail('site: pricing page must clearly show the lifetime one-time price');
+}
+
+if (!pricingPage.includes('No subscription')) {
+  fail('site: pricing page must clearly state that the paid plan is not a subscription');
+}
+
 if (!checkoutStartPage.includes('createCheckoutSession')) {
   fail('site: /checkout/start is not creating checkout sessions');
 }
 
 if (!checkoutStartPage.includes('successUrl') || !checkoutStartPage.includes('cancelUrl')) {
   fail('site: /checkout/start must pass successUrl and cancelUrl');
+}
+
+for (const requiredField of ['productKey', 'planKey', 'source', 'installationId', 'extensionId']) {
+  if (!checkoutStartPage.includes(requiredField)) {
+    fail(`site: /checkout/start must handle ${requiredField}`);
+  }
 }
 
 if (!successPage.includes('does not unlock Pro locally') && !successPage.includes('backend verifies')) {
@@ -61,6 +81,18 @@ if (!cancelPage.includes('Paid') && !cancelPage.includes('verified payment event
 
 if (!accountPage.includes('productKey')) {
   fail('site: account page must remain product-scoped');
+}
+
+if (!productCatalog.includes("chromeWebStoreStatus: 'pending'")) {
+  fail('site: product catalog fallback metadata must declare chromeWebStoreStatus');
+}
+
+if (productCatalog.includes('chromewebstore.google.com/detail/${product.chrome_extension_id}')) {
+  fail('site: product catalog must not guess a public Chrome Web Store URL from extension ID alone');
+}
+
+if (!productsPage.includes('Chrome Web Store link pending')) {
+  fail('site: products page must use the pending Chrome Web Store label when unpublished');
 }
 
 const requiredPricingPortal = '/products/leadfill-one-profile/pricing';
