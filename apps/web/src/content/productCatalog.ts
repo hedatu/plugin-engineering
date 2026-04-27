@@ -11,8 +11,8 @@ const leadfillProductMetadata = {
   localOnly: true,
   noUpload: true,
   noCloudSync: true,
-  chromeWebStoreStatus: 'pending',
-  chromeWebStoreUrl: null,
+  chromeWebStoreStatus: 'published',
+  chromeWebStoreUrl: 'https://chromewebstore.google.com/detail/leadfill-one-profile/dnnpkaefmlhacigijccbhemgaenjbcpk',
 } as const
 
 export const leadfillFallbackProduct: ProductWithPlans = {

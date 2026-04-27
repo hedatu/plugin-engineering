@@ -83,7 +83,7 @@ if (!accountPage.includes('productKey')) {
   fail('site: account page must remain product-scoped');
 }
 
-if (!productCatalog.includes("chromeWebStoreStatus: 'pending'")) {
+if (!productCatalog.includes('chromeWebStoreStatus:')) {
   fail('site: product catalog fallback metadata must declare chromeWebStoreStatus');
 }
 
