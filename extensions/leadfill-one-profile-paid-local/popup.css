@@ -1,0 +1,146 @@
+:root {
+  color-scheme: light;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #f8f4ed;
+  color: #3b2616;
+}
+
+.app {
+  width: 360px;
+  padding: 16px;
+}
+
+h1 {
+  margin: 0 0 8px;
+  font-size: 20px;
+}
+
+.subhead,
+.local-note {
+  margin: 0 0 12px;
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.local-note {
+  color: #6f4f34;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 12px;
+}
+
+.full {
+  grid-column: 1 / -1;
+}
+
+input,
+textarea {
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 4px;
+  border: 1px solid #d5c2ae;
+  border-radius: 8px;
+  padding: 9px 10px;
+  font-size: 13px;
+  resize: vertical;
+}
+
+.toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 14px 0;
+}
+
+.toggle input {
+  width: auto;
+  margin: 0;
+}
+
+.toggle span {
+  font-size: 12px;
+}
+
+.actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.full-width {
+  grid-column: 1 / -1;
+}
+
+button {
+  border: 0;
+  border-radius: 10px;
+  background: #9d5f2b;
+  color: #fff;
+  padding: 10px 8px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+button.secondary {
+  background: #caa27a;
+  color: #3b2616;
+}
+
+#status {
+  min-height: 32px;
+  margin: 12px 0 0;
+  font-size: 12px;
+  color: #6f4f34;
+  line-height: 1.4;
+}
+
+
+.monetization-card {
+  margin: 14px 0;
+  padding: 12px;
+  border: 1px solid rgba(25, 42, 62, 0.12);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.82);
+}
+
+.monetization-line {
+  margin: 0 0 8px;
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.monetization-label {
+  font-weight: 700;
+}
+
+.monetization-trust {
+  color: #4f5e71;
+}
+
+.membership-auth-grid {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px;
+  margin: 8px 0 12px;
+}
+
+.membership-auth-grid .full {
+  grid-column: 1 / -1;
+}
+
+.membership-auth-grid button {
+  align-self: end;
+}
+
+.monetization-actions {
+  display: grid;
+  gap: 8px;
+}

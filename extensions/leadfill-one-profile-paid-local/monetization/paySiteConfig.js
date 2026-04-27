@@ -60,7 +60,7 @@ export function normalizeRuntimeConfig({ monetization = {}, paySite = {} }) {
     productKey: paySite.productKey ?? monetization.product_key ?? monetization.product_id ?? "product_key_pending",
     planKey: paySite.planKey ?? monetization.plan_key ?? "one_time_test",
     freeLimit,
-    priceLabel: monetization.price_label ?? "$19 lifetime",
+    priceLabel: monetization.price_label ?? "paid plans",
     productName: monetization.product_name ?? paySite.productName ?? "LeadFill One Profile",
     upgradeUrl: paySite.upgradeUrl ?? monetization.upgrade_url ?? null,
     upgradeUrlMode: paySite.upgradeUrlMode ?? monetization.upgrade_url_mode ?? "website_product_pricing_page",

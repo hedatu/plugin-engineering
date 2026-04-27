@@ -31,7 +31,7 @@ function membershipCopy(config, entitlementState, usageState, authState) {
     return "Pro is unlocked. Membership is active after webhook-confirmed entitlement.";
   }
   if (!authState.loggedIn) {
-    return `Free plan includes ${config.freeLimit.amount} ${config.freeLimit.unit}. Upgrade opens the product pricing page.`;
+    return `Free plan includes ${config.freeLimit.amount} ${config.freeLimit.unit}. Upgrade opens the LeadFill pricing page.`;
   }
   return `Free plan includes ${config.freeLimit.amount} ${config.freeLimit.unit}. Upgrade on the external secure payment page, then refresh membership here.`;
 }
@@ -180,7 +180,6 @@ export async function createPaySiteRuntime({
     const productKey = config.productKey ?? "leadfill-one-profile";
     const planKey = config.planKey ?? "lifetime";
     const baseUrl = config.upgradeUrl
-      ?? config.monetization?.upgrade_url
       ?? `${config.siteUrl.replace(/\/$/, "")}/products/${encodeURIComponent(productKey)}/pricing`;
     const url = new URL(baseUrl, config.siteUrl);
     if (url.pathname === "/" || !url.pathname) {
@@ -206,7 +205,7 @@ export async function createPaySiteRuntime({
     const authState = await refreshUi().catch(() => ({}));
     const pricingUrl = buildUpgradePricingUrl(authState);
     await chrome.tabs.create({ url: pricingUrl });
-    setText(statusNode, "Pricing opened. Complete checkout on the website, then refresh membership here.");
+    setText(statusNode, "LeadFill pricing opened. Complete checkout on the website, then refresh membership here.");
     return {
       ok: true,
       opened: true,
@@ -236,7 +235,7 @@ export async function createPaySiteRuntime({
     await refreshUi();
     if (result.allowed === false) {
       const message = result.errorCode === "QUOTA_EXCEEDED"
-        ? `Free limit reached. Unlock Lifetime - ${config.priceLabel}.`
+        ? "Free limit reached. Open upgrade plans to continue."
         : result.errorCode === "FEATURE_NOT_ENABLED"
           ? "This plan does not include that feature."
           : "Usage blocked.";

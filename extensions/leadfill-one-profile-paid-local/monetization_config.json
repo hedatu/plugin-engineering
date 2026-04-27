@@ -1,0 +1,62 @@
+{
+  "product_id": "leadfill-one-profile",
+  "product_key": "leadfill-one-profile",
+  "plan_key": "lifetime",
+  "product_name": "LeadFill One Profile",
+  "extension_id": "dnnpkaefmlhacigijccbhemgaenjbcpk",
+  "pricing_model": "free_trial_then_paid_upgrade",
+  "free_limit": {
+    "amount": 10,
+    "unit": "fills",
+    "scope": "lifetime"
+  },
+  "price_label": "paid plans",
+  "upgrade_url": "https://pay.915500.xyz/products/leadfill-one-profile/pricing",
+  "upgrade_url_mode": "website_product_pricing_page",
+  "extension_upgrade_contract": "extension_opens_site_pricing_then_site_creates_checkout",
+  "license_verify_url": "https://pay-api.915500.xyz/functions/v1/get-entitlement",
+  "license_activate_url": "https://pay-api.915500.xyz/auth/v1/verify",
+  "support_email": "support@915500.xyz",
+  "pro_features": [
+    "unlimited fills with an active paid plan",
+    "membership restore",
+    "lifetime access to the current major version"
+  ],
+  "free_features": [
+    "10 free fills",
+    "single local profile",
+    "local-only form data"
+  ],
+  "local_only_claim": true,
+  "payment_provider": "pay_site_supabase_waffo",
+  "checkout_mode": "test",
+  "entitlement_cache_ttl_hours": 24,
+  "offline_grace_hours": 72,
+  "privacy_disclosure_required": true,
+  "smtp_login_blocker_expected": false,
+  "smtp_status": "verified_independent",
+  "otp_status": "verified",
+  "source_chrome_extension_status": "verified",
+  "production_payment_status": "not_verified",
+  "webhook_unlock_only": true,
+  "degraded_free_usage_fallback": true,
+  "default_feature_key": "leadfill_fill_action",
+  "site_url": "https://pay.915500.xyz",
+  "public_supabase_url": "https://pay-api.915500.xyz",
+  "public_supabase_anon_key_present": true,
+  "pay_site": {
+    "siteUrl": "https://pay.915500.xyz",
+    "publicSupabaseUrl": "https://pay-api.915500.xyz",
+    "publicSupabaseAnonKey": "<inject from apps/web/.env.production.local or deployment env>",
+    "productKey": "leadfill-one-profile",
+    "planKey": "lifetime",
+    "chromeExtensionId": "dnnpkaefmlhacigijccbhemgaenjbcpk",
+    "checkoutSuccessUrl": "https://pay.915500.xyz/checkout/success",
+    "checkoutCancelUrl": "https://pay.915500.xyz/checkout/cancel",
+    "checkoutMode": "test",
+    "authMode": "email_otp",
+    "membershipProvider": "pay_site_supabase_waffo",
+    "productKeyPending": false,
+    "testOnlyProductMapping": false
+  }
+}

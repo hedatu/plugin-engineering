@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "LeadFill One Profile",
+  "version": "0.2.1",
+  "description": "Save one local profile and fill visible form fields on the current page.",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
+  "action": {
+    "default_title": "LeadFill One Profile",
+    "default_popup": "popup.html"
+  },
+  "commands": {
+    "_execute_action": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+Y"
+      }
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "host_permissions": [
+    "https://pay-api.915500.xyz/*",
+    "https://pay.915500.xyz/*"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  }
+}

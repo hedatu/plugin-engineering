@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>LeadFill One Profile Privacy</title>
+  </head>
+  <body>
+    <main>
+      <h1>LeadFill One Profile Privacy</h1>
+      <p>The extension stores one local profile in Chrome storage so the user can fill matching visible fields on the current page.</p>
+      <p>No remote sync, analytics, or third-party requests are used.</p>
+      <p>By default the extension does not overwrite fields that already contain values unless the user explicitly enables overwrite in the popup.</p>
+      <p>The extension only injects a fill script into the active tab when the user clicks Fill Current Page.</p>
+          <p>The extension enforces a free limit of 10 fills before showing an upgrade prompt.</p>
+      <p>Form data stays local to the extension and current tab. No upload of form content and no cloud sync are used.</p>
+      <p>Email login, checkout, entitlement refresh, and usage metering are routed through the background service worker with public pay-site config only.</p>
+      <p>The extension never stores payment provider secrets, service-role keys, or merchant secrets.</p>
+      <p>successUrl does not unlock Pro locally. Only webhook-confirmed active entitlement unlocks Pro.</p>
+      <p>Local-only form data. No upload of form content. Payment handled on external secure page. Membership unlocks after webhook-confirmed entitlement.</p>
+    </main>
+  </body>
+</html>

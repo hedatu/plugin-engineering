@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>LeadFill One Profile</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main class="app">
+      <h1>LeadFill One Profile</h1>
+      <p class="subhead">Save one local profile and fill visible lead form fields on the current page in one click.</p>
+      <p class="local-note">Local-only profile storage. No sync, no account, no hidden data transfer.</p>
+      <label>First name <input id="firstName" type="text" autocomplete="given-name" /></label>
+      <label>Last name <input id="lastName" type="text" autocomplete="family-name" /></label>
+      <label class="full">Email <input id="email" type="email" autocomplete="email" /></label>
+      <label>Company <input id="company" type="text" autocomplete="organization" /></label>
+      <label>Phone <input id="phone" type="tel" autocomplete="tel" /></label>
+      <label>Country <input id="country" type="text" autocomplete="country-name" /></label>
+      <label class="full">Notes <textarea id="notes" rows="3" placeholder="Optional notes for textarea matching"></textarea></label>
+      <label class="toggle">
+        <input id="overwriteExisting" type="checkbox" />
+        <span>Overwrite fields that already have values</span>
+      </label>
+      <div class="actions">
+        <button id="save-profile" type="button">Save Profile</button>
+        <button id="delete-profile" type="button" class="secondary">Delete Profile</button>
+        <button id="fill-page" type="button" class="primary full-width">Fill Current Page</button>
+      </div>
+      <section class="monetization-card" aria-label="Membership">
+        <p id="plan-badge" class="monetization-line monetization-label">Plan: Free</p>
+        <p id="free-limit-copy" class="monetization-line">10 free fills</p>
+        <p id="usage-remaining" class="monetization-line">10 free actions left</p>
+        <p id="monetization-message" class="monetization-line">Login with email, then upgrade on the external secure payment page.</p>
+        <p id="monetization-trust" class="monetization-line monetization-trust">Local-only form data. No upload of form content. Payment handled on external secure page. Membership unlocks after webhook-confirmed entitlement.</p>
+        <div class="membership-auth-grid">
+          <label class="full">Email <input id="auth-email" type="email" placeholder="you@example.com" autocomplete="email" /></label>
+          <button id="send-otp-button" type="button" class="secondary">Send code</button>
+          <label class="full">Code <input id="auth-code" type="text" placeholder="123456" inputmode="numeric" /></label>
+          <button id="verify-otp-button" type="button" class="secondary">Verify</button>
+        </div>
+        <p id="auth-state-copy" class="monetization-line">Login with email</p>
+        <p id="member-email" class="monetization-line">Not signed in</p>
+        <p id="config-state-copy" class="monetization-line monetization-trust">Membership unlocks after webhook-confirmed entitlement.</p>
+        <div class="monetization-actions">
+          <button id="upgrade-button" type="button" class="secondary">View Upgrade Plans</button>
+          <button id="refresh-membership-button" type="button" class="secondary">I've paid / Refresh membership</button>
+          <button id="open-license-page" type="button" class="secondary">Open Membership Page</button>
+          <button id="restore-license-button" type="button" class="secondary">Restore Membership</button>
+          <button id="sign-out-button" type="button" class="secondary">Sign out</button>
+        </div>
+      </section>
+
+      <p id="status" aria-live="polite">Ready. Existing page values stay unchanged by default.</p>
+    </main>
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>

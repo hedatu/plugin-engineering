@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>LeadFill One Profile Membership</title>
+    <style>
+      :root { color-scheme: light; font-family: "Segoe UI", sans-serif; }
+      body { margin: 0; background: #f5f2ec; color: #213244; }
+      main { max-width: 720px; margin: 0 auto; padding: 28px 20px 40px; }
+      .card { background: #fff; border-radius: 18px; padding: 20px; box-shadow: 0 12px 32px rgba(20, 30, 45, 0.08); }
+      h1 { margin: 0 0 8px; }
+      p { line-height: 1.55; }
+      .grid { display: grid; gap: 12px; }
+      label { display: block; font-size: 13px; }
+      input { width: 100%; box-sizing: border-box; margin-top: 6px; padding: 10px 12px; border-radius: 10px; border: 1px solid #cfd8df; }
+      button { border: 0; border-radius: 10px; padding: 10px 14px; background: #1f5f9b; color: #fff; cursor: pointer; }
+      .secondary { background: #d8e3ed; color: #213244; }
+      .actions { display: grid; gap: 8px; margin-top: 12px; }
+      .muted { color: #576675; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="card">
+        <h1>LeadFill One Profile Membership</h1>
+        <p class="muted">Login with email, pay on the external secure page, then refresh membership. successUrl does not unlock locally.</p>
+        <div class="grid">
+          <label>Email <input id="auth-email" type="email" placeholder="you@example.com" autocomplete="email" /></label>
+          <button id="send-otp-button" type="button" class="secondary">Send code</button>
+          <label>Code <input id="auth-code" type="text" placeholder="123456" inputmode="numeric" /></label>
+          <button id="verify-otp-button" type="button" class="secondary">Verify</button>
+        </div>
+        <p id="auth-state-copy">Login with email</p>
+        <p id="member-email" class="muted">Not signed in</p>
+        <p id="plan-badge">Plan: Free</p>
+        <p id="free-limit-copy">10 free fills</p>
+        <p id="usage-remaining">10 free actions left</p>
+        <p id="monetization-message">Payment handled on external secure page.</p>
+        <p id="monetization-trust" class="muted">Local-only form data. No upload of form content. Payment handled on external secure page. Membership unlocks after webhook-confirmed entitlement.</p>
+        <p id="config-state-copy" class="muted">Membership unlocks after webhook-confirmed entitlement.</p>
+        <div class="actions">
+          <button id="upgrade-button" type="button">View Upgrade Plans</button>
+          <button id="refresh-membership-button" type="button" class="secondary">I've paid / Refresh membership</button>
+          <button id="restore-license-button" type="button" class="secondary">Restore Membership</button>
+          <button id="sign-out-button" type="button" class="secondary">Sign out</button>
+        </div>
+        <p id="status" class="muted">Ready.</p>
+      </div>
+    </main>
+    <script type="module" src="licensePage.js"></script>
+  </body>
+</html>
