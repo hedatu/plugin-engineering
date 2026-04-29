@@ -4,6 +4,17 @@
 
 The website is now structured as a plugin product center, not a generic membership hub.
 
+## Production Source Of Truth
+
+`pay.915500.xyz` is built from `apps/web`.
+
+- Source directory: `apps/web`
+- Build command: `npm run build:web`
+- Build output: `apps/web/dist`
+- Deploy command: `npm run deploy:pay-site:web`
+
+Historical generated static pages are retained as audit evidence only and must not be used as the future production source for `pay.915500.xyz`.
+
 ## Route Model
 
 - `/products`

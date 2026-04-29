@@ -15,6 +15,7 @@
     "site:smoke": "node scripts/site_smoke.mjs",
     "security:scan": "node scripts/secret_scan.mjs . > secret_scan_output.json",
     "catalog:validate": "node scripts/catalog_validate.mjs",
+    "deploy:pay-site:web": "powershell -ExecutionPolicy Bypass -File scripts/deploy-pay-site-apps-web.ps1",
     "dev:web": "npm run dev --workspace @membership/web",
     "dev:extension": "npm run dev --workspace @membership/main-extension",
     "typecheck": "npm run typecheck --workspace @membership/extension-sdk && npm run typecheck --workspace @membership/web && npm run typecheck --workspace @membership/main-extension",

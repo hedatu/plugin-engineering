@@ -35,3 +35,4 @@ Checked these live routes on `https://pay.915500.xyz`; all returned HTTP 200 and
 
 - GA4 may still show "no data received" for a short period after first install.
 - This change does not alter checkout, webhook, entitlement, Chrome upload/publish, or production payment behavior.
+- Forward deployment policy: future `pay.915500.xyz` deployments must be built from `apps/web` and deployed from `apps/web/dist`; the static marketplace deployment used during this GA4 patch is retained only as current-server history and rollback evidence.

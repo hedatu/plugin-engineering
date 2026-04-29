@@ -2,14 +2,15 @@
 
 ## Current Sequence
 
-1. Product page is prepared for LeadFill.
-2. Pricing page is prepared for LeadFill.
+1. Product page is prepared in `apps/web`.
+2. Pricing page is prepared in `apps/web`.
 3. Extension Upgrade button points to the LeadFill pricing page.
 4. Website `/checkout/start` creates hosted checkout server-side.
 5. Payment success returns to the website success page.
 6. Webhook verifies payment and writes entitlement.
 7. Account page and extension refresh entitlement.
 8. Extension consumes usage against refreshed entitlement state.
+9. `pay.915500.xyz` is deployed from `apps/web/dist` after `npm run build:web`.
 
 ## Non-Negotiable Rules
 
@@ -17,6 +18,7 @@
 - no local success-page unlock
 - no secret in extension or frontend
 - webhook remains source of truth
+- no production deployment from historical `generated/plugin-pages` output
 
 ## Current Release Posture
 
