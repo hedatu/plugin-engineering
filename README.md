@@ -15,7 +15,7 @@ Current mainline:
 
 The root directories hold the concrete product implementation and payment-site stack:
 
-- `apps/` web app source. `pay.915500.xyz` is now defined to deploy from `apps/web` via `npm run build:web` and `npm run deploy:pay-site:web`.
+- `apps/` web app source retained for membership-site experiments, but it is not the current production website source.
 - `extensions/` Chrome extension source
 - `packages/` shared packages
 - `supabase/` schema, migrations, edge functions, and config
@@ -26,10 +26,11 @@ This is the codebase for the current single-product commercial launch path.
 
 Production website source of truth:
 
-- source: `apps/web`
-- build output: `apps/web/dist`
-- policy: `docs/173_pay_site_apps_web_deployment_policy.md`
-- deprecated for production deploys: historical static pages under `plugin-engineering-factory/generated/plugin-pages` or old migration tarballs
+- current source: `plugin-engineering-factory/src/site/pluginPages.mjs`
+- current output: `plugin-engineering-factory/generated/plugin-pages/leadfill-one-profile`
+- live host: `https://pay.915500.xyz`
+- policy note: `docs/173_pay_site_apps_web_deployment_policy.md`
+- status: restored to the previous bilingual HWH Extensions static marketplace after rejecting the `apps/web` SPA deployment
 
 ### 2. `plugin-engineering-factory/`
 

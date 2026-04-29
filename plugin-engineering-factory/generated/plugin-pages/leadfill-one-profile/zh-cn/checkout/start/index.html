@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>All Extensions | HWH Extensions</title>
+  <title>付款入口准备中 | HWH 插件商城</title>
   <link rel="stylesheet" href="/styles.css">
   <style>
 :root {
@@ -1099,19 +1099,19 @@ body.status-cn {
     gtag('config', 'G-V93ET05FSR');
   </script>
 </head>
-<body class="market-cn">
+<body class="status-cn">
   <header class="cn-nav">
-    <a class="cn-brand" href="/index.html"><span class="cn-brand-mark">H</span>HWH Extensions</a>
+    <a class="cn-brand" href="../../index.html"><span class="cn-brand-mark">H</span>HWH 插件商城</a>
     <nav class="cn-nav-links">
-      <a class="" href="/index.html">Explore</a>
-      <a class="active" href="/product.html">Products</a>
-      <a class="" href="/account.html">Account</a>
+      <a class="" href="../../index.html">探索</a>
+      <a class="active" href="../../product.html">产品</a>
+      <a class="" href="../../account.html">账户</a>
     </nav>
     <div class="cn-actions">
-      <label class="cn-mini-search"><span>⌕</span><input data-market-search type="search" placeholder="Search extensions..."></label>
-      <a class="cn-signin" href="/account.html" data-account-action>Sign in</a>
-      <a class="cn-signin" href="https://chromewebstore.google.com/detail/leadfill-one-profile/dnnpkaefmlhacigijccbhemgaenjbcpk">Install</a>
-      <div class="locale-switcher" aria-label="Language switcher"><a class="locale-link active" href="/product.html" lang="en">English</a><a class="locale-link" href="zh-cn/product.html" lang="en">简体中文</a></div>
+      <label class="cn-mini-search"><span>⌕</span><input data-market-search type="search" placeholder="搜索插件..."></label>
+      <a class="cn-signin" href="../../account.html" data-account-action>登录</a>
+      <a class="cn-signin" href="https://chromewebstore.google.com/detail/leadfill-one-profile/dnnpkaefmlhacigijccbhemgaenjbcpk">安装</a>
+      
     </div>
   </header>
   <script>
@@ -1148,11 +1148,11 @@ body.status-cn {
     const identity = readJson(identityKey);
     const email = session?.email || identity?.email || decodeURIComponent(readCookie(cookieKey) || "");
     if (session?.accessToken || session?.refreshToken || email) {
-      accountLink.textContent = "My account";
+      accountLink.textContent = "我的账户";
       accountLink.classList.add("is-authenticated");
-      accountLink.title = email || "Signed-in account";
+      accountLink.title = email || "已登录账户";
     } else {
-      accountLink.textContent = "Sign in";
+      accountLink.textContent = "登录";
       accountLink.classList.remove("is-authenticated");
       accountLink.removeAttribute("title");
     }
@@ -1161,161 +1161,15 @@ body.status-cn {
   updateAccountNav();
 })();
   </script>
-  <main class="cn-shell">
-    <section class="cn-products-page-head">
-      <h1>All extensions</h1>
-    </section>
-    <section>
-      <div class="cn-card-grid" data-market-grid>
-    
-      <article class="cn-extension-card" data-card-search="ChatGPT Obsidian Local Exporter Export ChatGPT, Gemini, Grok, Doubao, and other AI conversations into Obsidian-friendly Markdown. Knowledge management" data-card-category="Knowledge management">
-        <div class="cn-card-top">
-          <div class="cn-plugin-icon cn-icon-purple">
-            <img src="/assets/external/chatgpt-obsidian-icon-128.png" alt="ChatGPT Obsidian Local Exporter icon">
-          </div>
-          <span class="cn-card-badge">Knowledge management</span>
-        </div>
-        <h3>ChatGPT Obsidian Local Exporter</h3>
-        <p>Export ChatGPT, Gemini, Grok, Doubao, and other AI conversations into Obsidian-friendly Markdown.</p>
-        <div class="cn-card-foot">
-          <span>Pending launch · Google review</span>
-          <a class="cn-outline-button" href="/chatgpt-obsidian-local-exporter.html">View details</a>
-        </div>
-      </article>
-    
-      <article class="cn-extension-card" data-card-search="LeadFill One Profile Save one local profile and fill common lead-form fields like name, email, phone, and notes in one click. Productivity" data-card-category="Productivity">
-        <div class="cn-card-top">
-          <div class="cn-plugin-icon ">
-            <img src="/assets/icon/icon128.png" alt="LeadFill One Profile icon">
-          </div>
-          <span class="cn-card-badge">Productivity</span>
-        </div>
-        <h3>LeadFill One Profile</h3>
-        <p>Save one local profile and fill common lead-form fields like name, email, phone, and notes in one click.</p>
-        <div class="cn-card-foot">
-          <span>10 free fills</span>
-          <a class="cn-outline-button" href="/leadfill.html">View details</a>
-        </div>
-      </article>
-    
-      <article class="cn-extension-card" data-card-search="FocusFlow Reduce distracting pages and help the browser enter focus mode. Focus" data-card-category="Focus">
-        <div class="cn-card-top">
-          <div class="cn-plugin-icon cn-icon-green">
-            <span>F</span>
-          </div>
-          <span class="cn-card-badge">Focus</span>
-        </div>
-        <h3>FocusFlow</h3>
-        <p>Reduce distracting pages and help the browser enter focus mode.</p>
-        <div class="cn-card-foot">
-          <span>Coming soon</span>
-          <span>Coming soon</span>
-        </div>
-      </article>
-    
-      <article class="cn-extension-card" data-card-search="PrivacyShield A lightweight privacy browsing helper for a future product line. Privacy" data-card-category="Privacy">
-        <div class="cn-card-top">
-          <div class="cn-plugin-icon cn-icon-red">
-            <span>P</span>
-          </div>
-          <span class="cn-card-badge">Privacy</span>
-        </div>
-        <h3>PrivacyShield</h3>
-        <p>A lightweight privacy browsing helper for a future product line.</p>
-        <div class="cn-card-foot">
-          <span>Coming soon</span>
-          <span>Coming soon</span>
-        </div>
-      </article>
-    
-      <article class="cn-extension-card" data-card-search="SnapCode Organize webpage code snippets so saving and reuse stay clean. Developer" data-card-category="Developer">
-        <div class="cn-card-top">
-          <div class="cn-plugin-icon cn-icon-purple">
-            <span>S</span>
-          </div>
-          <span class="cn-card-badge">Developer</span>
-        </div>
-        <h3>SnapCode</h3>
-        <p>Organize webpage code snippets so saving and reuse stay clean.</p>
-        <div class="cn-card-foot">
-          <span>Coming soon</span>
-          <span>Coming soon</span>
-        </div>
-      </article>
-    
-      <article class="cn-extension-card" data-card-search="LingoSync Lightweight translation and terminology help for web reading. Tools" data-card-category="Tools">
-        <div class="cn-card-top">
-          <div class="cn-plugin-icon cn-icon-yellow">
-            <span>L</span>
-          </div>
-          <span class="cn-card-badge">Tools</span>
-        </div>
-        <h3>LingoSync</h3>
-        <p>Lightweight translation and terminology help for web reading.</p>
-        <div class="cn-card-foot">
-          <span>Coming soon</span>
-          <span>Coming soon</span>
-        </div>
-      </article>
-    
-      <article class="cn-extension-card" data-card-search="MemSaver Manage low-frequency tabs and browser resource usage. System" data-card-category="System">
-        <div class="cn-card-top">
-          <div class="cn-plugin-icon cn-icon-cyan">
-            <span>M</span>
-          </div>
-          <span class="cn-card-badge">System</span>
-        </div>
-        <h3>MemSaver</h3>
-        <p>Manage low-frequency tabs and browser resource usage.</p>
-        <div class="cn-card-foot">
-          <span>Coming soon</span>
-          <span>Coming soon</span>
-        </div>
-      </article>
-    
-  </div>
+  <main class="cn-status-main">
+    <section class="cn-status-card">
+      <h1>付款入口准备中</h1>
+      <p>当前页面已经连接到商城价格入口。对应商品付款链接确认后，这里会进入安全结账页面。</p>
+      <div class="cn-action-row" style="justify-content:center">
+        <a class="cn-primary-button" href="../../product.html">查看全部插件</a>
+        <a class="cn-outline-button" href="../../account.html">打开账户</a>
+      </div>
     </section>
   </main>
-  <footer class="cn-footer">
-    <strong>HWH Extensions</strong>
-    <nav>
-      <a href="/privacy.html">Privacy</a>
-      <a href="/terms.html">Terms</a>
-      <a href="/account.html">Account</a>
-    </nav>
-    <span>© 2026 HWH Extensions.</span>
-  </footer>
-  <script>
-(() => {
-  const inputs = Array.from(document.querySelectorAll("[data-market-search]"));
-  const cards = Array.from(document.querySelectorAll("[data-card-search]"));
-  if (!inputs.length || !cards.length) return;
-  const params = new URLSearchParams(window.location.search);
-  const selectedCategory = params.get("category") || "";
-  const chips = Array.from(document.querySelectorAll(".cn-chip-row a"));
-  chips.forEach((chip) => {
-    const url = new URL(chip.href, window.location.href);
-    const chipCategory = url.searchParams.get("category") || "";
-    if (chipCategory === selectedCategory) chip.classList.add("active");
-  });
-  const apply = (value) => {
-    const query = value.trim().toLowerCase();
-    cards.forEach((card) => {
-      const haystack = (card.getAttribute("data-card-search") || "").toLowerCase();
-      const category = card.getAttribute("data-card-category") || "";
-      const matchesQuery = !query || haystack.includes(query);
-      const matchesCategory = !selectedCategory || category === selectedCategory;
-      card.style.display = matchesQuery && matchesCategory ? "" : "none";
-    });
-  };
-  inputs.forEach((input) => {
-    input.addEventListener("input", () => {
-      inputs.forEach((other) => { if (other !== input) other.value = input.value; });
-      apply(input.value);
-    });
-  });
-  apply("");
-})();
-</script>
 </body>
 </html>

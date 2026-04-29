@@ -4,37 +4,1172 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Payment received | LeadFill One Profile</title>
-  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="/styles.css">
+  <style>
+:root {
+  --market-bg: #f8f8fa;
+  --market-surface: rgba(255, 255, 255, 0.82);
+  --market-surface-solid: #ffffff;
+  --market-text: #111318;
+  --market-muted: #636674;
+  --market-soft: #eef0f5;
+  --market-line: rgba(20, 24, 32, 0.10);
+  --market-blue: #173bd0;
+  --market-blue-soft: #dee4ff;
+  --market-shadow: 0 22px 50px rgba(28, 34, 48, 0.08), 0 6px 16px rgba(28, 34, 48, 0.04);
+  --market-radius: 24px;
+  --market-radius-sm: 14px;
+}
+* { box-sizing: border-box; }
+body.market-cn,
+body.detail-cn,
+body.pricing-cn,
+body.account-cn,
+body.status-cn {
+  margin: 0;
+  background: var(--market-bg);
+  color: var(--market-text);
+  font-family: Inter, ui-sans-serif, "PingFang SC", "Noto Sans SC", "Microsoft YaHei", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+.cn-nav {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  height: 78px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 64px;
+  background: rgba(45, 48, 57, 0.92);
+  color: #fff;
+  border-bottom: 0;
+  box-shadow: 0 12px 34px rgba(11, 14, 22, 0.18);
+  backdrop-filter: blur(18px);
+}
+.cn-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: inherit;
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+.cn-brand-mark {
+  width: 32px;
+  height: 32px;
+  border-radius: 11px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  letter-spacing: -0.03em;
+  color: #fff;
+  background: linear-gradient(135deg, #1741f2, #6f7cff);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.35);
+}
+.cn-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 42px;
+}
+.cn-nav-links a,
+.cn-actions a,
+.cn-footer a {
+  color: inherit;
+  text-decoration: none;
+}
+.cn-nav-links a {
+  color: rgba(255,255,255,0.58);
+  font-size: 20px;
+  font-weight: 700;
+}
+.cn-nav-links a.active {
+  color: #7d8dff;
+  border-bottom: 3px solid #6f61ff;
+  padding-bottom: 8px;
+}
+.cn-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.cn-mini-search {
+  min-width: 280px;
+  height: 56px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 24px;
+  color: #6f7484;
+  background: rgba(255,255,255,0.94);
+  font-weight: 500;
+}
+.cn-mini-search input,
+.cn-search-hero input {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: #222631;
+  font: inherit;
+}
+.cn-mini-search input::placeholder,
+.cn-search-hero input::placeholder {
+  color: #656b7a;
+}
+.cn-signin {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 24px;
+  border-radius: 10px;
+  background: var(--market-blue);
+  color: #fff !important;
+  font-size: 17px;
+  font-weight: 800;
+}
+.cn-signin.is-authenticated {
+  background: #fff;
+  color: #151922 !important;
+  border: 1px solid rgba(20,24,32,0.12);
+}
+.cn-shell {
+  width: min(100% - 128px, 1280px);
+  margin: 0 auto;
+}
+.cn-market-hero {
+  padding: 94px 0 78px;
+  text-align: center;
+}
+.cn-market-hero h1 {
+  margin: 0 0 24px;
+  font-size: clamp(44px, 5vw, 72px);
+  line-height: 1.05;
+  letter-spacing: -0.055em;
+}
+.cn-market-hero p {
+  max-width: 760px;
+  margin: 0 auto 54px;
+  color: #5f626d;
+  font-size: clamp(24px, 2.5vw, 36px);
+  line-height: 1.28;
+  letter-spacing: -0.025em;
+}
+.cn-search-hero {
+  width: min(760px, 100%);
+  min-height: 76px;
+  margin: 0 auto;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 0 34px;
+  color: #646a7c;
+  background: #f1f2f5;
+  box-shadow: 0 14px 34px rgba(30, 36, 52, 0.06);
+  font-size: 22px;
+  font-weight: 700;
+  text-align: left;
+}
+.cn-chip-row {
+  margin-top: 34px;
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+.cn-chip-row span,
+.cn-chip-row a,
+.cn-card-badge {
+  border-radius: 999px;
+  padding: 8px 18px;
+  color: #171923;
+  background: #dedfe4;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+.cn-chip-row a,
+.cn-card-badge {
+  text-decoration: none;
+}
+.cn-chip-row a.active {
+  color: #fff;
+  background: var(--market-blue);
+}
+.cn-section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 24px;
+  margin-bottom: 34px;
+}
+.cn-section-head h2 {
+  margin: 0;
+  font-size: 34px;
+  line-height: 1.2;
+  letter-spacing: -0.035em;
+}
+.cn-section-head a {
+  color: var(--market-blue);
+  font-size: 20px;
+  font-weight: 800;
+  text-decoration: none;
+}
+.cn-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 26px;
+  padding-bottom: 92px;
+}
+.cn-products-page-head {
+  padding: 86px 0 38px;
+}
+.cn-products-page-head h1 {
+  margin: 0 0 18px;
+  font-size: clamp(44px, 5vw, 68px);
+  line-height: 1.04;
+  letter-spacing: -0.055em;
+}
+.cn-products-page-head p {
+  max-width: 760px;
+  margin: 0;
+  color: #596071;
+  font-size: 24px;
+  line-height: 1.45;
+}
+.cn-extension-card {
+  min-height: 292px;
+  display: flex;
+  flex-direction: column;
+  padding: 28px;
+  border-radius: 18px;
+  background: rgba(255,255,255,0.78);
+  border: 1px solid rgba(255,255,255,0.7);
+  box-shadow: 0 18px 40px rgba(30, 36, 52, 0.055);
+  transition: transform .22s ease, box-shadow .22s ease, background .22s ease;
+}
+.cn-extension-card:hover {
+  transform: translateY(-4px);
+  background: #fff;
+  box-shadow: var(--market-shadow);
+}
+.cn-card-top {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  margin-bottom: 22px;
+}
+.cn-plugin-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 19px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  color: var(--market-blue);
+  background: linear-gradient(135deg, #e6edff, #f6f8ff);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.8);
+}
+.cn-plugin-icon img { width: 42px; height: 42px; }
+.cn-plugin-icon span { font-size: 24px; font-weight: 900; }
+.cn-icon-green { background: linear-gradient(135deg, #ddfae9, #f1fff6); color: #15934f; }
+.cn-icon-red { background: linear-gradient(135deg, #ffe9e4, #fff5f2); color: #a7411c; }
+.cn-icon-purple { background: linear-gradient(135deg, #f2e3ff, #fff5ff); color: #7d32c8; }
+.cn-icon-yellow { background: linear-gradient(135deg, #fff8c8, #fffbea); color: #b06b00; }
+.cn-icon-cyan { background: linear-gradient(135deg, #dcfbff, #f2fdff); color: #0c8ba3; }
+.cn-extension-card h3 {
+  margin: 0 0 10px;
+  font-size: 25px;
+  letter-spacing: -0.025em;
+}
+.cn-extension-card p {
+  margin: 0;
+  color: #555a67;
+  font-size: 18px;
+  line-height: 1.55;
+}
+.cn-card-foot {
+  margin-top: auto;
+  padding-top: 24px;
+  border-top: 1px solid rgba(20, 24, 32, 0.10);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+.cn-card-foot span {
+  color: #667087;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+.cn-outline-button,
+.cn-primary-button,
+.cn-plain-button {
+  min-height: 52px;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 24px;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 850;
+}
+.cn-primary-button {
+  color: #fff;
+  background: var(--market-blue);
+  box-shadow: 0 10px 22px rgba(23,59,208,0.22);
+}
+.cn-primary-button[aria-disabled="true"] {
+  background: #8d94a5;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+.cn-outline-button {
+  color: #111318;
+  background: rgba(255,255,255,0.55);
+  border: 1px solid rgba(20,24,32,0.14);
+}
+.cn-plain-button {
+  color: var(--market-blue);
+  background: transparent;
+  padding-inline: 0;
+}
+.cn-footer {
+  min-height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 0 64px;
+  color: #7a8090;
+  background: #080c16;
+}
+.cn-footer strong { color: #fff; font-size: 18px; }
+.cn-footer nav { display: flex; gap: 30px; flex-wrap: wrap; }
+.cn-detail-main {
+  width: min(100% - 128px, 1180px);
+  margin: 0 auto;
+  padding: 82px 0 100px;
+}
+.cn-product-head {
+  display: grid;
+  grid-template-columns: 136px 1fr;
+  gap: 30px;
+  align-items: center;
+  margin-bottom: 72px;
+}
+.cn-product-big-icon {
+  width: 126px;
+  height: 126px;
+  border-radius: 24px;
+  background: #fff;
+  box-shadow: var(--market-shadow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cn-product-big-icon img { width: 76px; height: 76px; }
+.cn-product-head h1 {
+  margin: 0 0 10px;
+  font-size: 46px;
+  line-height: 1.1;
+  letter-spacing: -0.05em;
+}
+.cn-product-head p {
+  margin: 0 0 22px;
+  max-width: 720px;
+  color: #343844;
+  font-size: 19px;
+  line-height: 1.55;
+}
+.cn-product-head .cn-muted-note {
+  margin-top: 14px;
+  margin-bottom: 0;
+  color: #667087;
+  font-size: 15px;
+}
+.cn-meta-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  color: #596071;
+  font-size: 15px;
+  margin-bottom: 22px;
+}
+.cn-stars { color: var(--market-blue); letter-spacing: 2px; }
+.cn-action-row { display: flex; gap: 16px; flex-wrap: wrap; }
+.cn-hero-shot {
+  border-radius: 24px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: var(--market-shadow);
+  margin-bottom: 26px;
+}
+.cn-hero-shot img {
+  display: block;
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+.cn-bento {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 26px;
+  margin-bottom: 74px;
+}
+.cn-panel {
+  padding: 30px;
+  border-radius: var(--market-radius);
+  background: var(--market-surface-solid);
+  box-shadow: var(--market-shadow);
+}
+.cn-panel h2,
+.cn-panel h3 {
+  margin: 0 0 14px;
+  letter-spacing: -0.03em;
+}
+.cn-panel h2 { font-size: 28px; }
+.cn-panel h3 { font-size: 21px; }
+.cn-panel p,
+.cn-check-list {
+  color: #535866;
+  font-size: 16px;
+  line-height: 1.7;
+}
+.cn-panel img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 14px;
+  margin-top: 20px;
+}
+.cn-check-list {
+  display: grid;
+  gap: 14px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.cn-check-list li {
+  position: relative;
+  padding-left: 30px;
+}
+.cn-check-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 7px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--market-blue);
+  box-shadow: inset 0 0 0 4px #dfe5ff;
+}
+.cn-feature-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 26px;
+  margin-bottom: 74px;
+}
+.cn-feature-row article {
+  padding: 30px;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 16px 34px rgba(30,36,52,0.05);
+}
+.cn-dot-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--market-blue-soft);
+  margin-bottom: 22px;
+}
+.cn-faq-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+.cn-faq-grid article {
+  padding: 22px;
+  border-radius: 16px;
+  background: rgba(255,255,255,0.72);
+  border: 1px solid rgba(20,24,32,0.08);
+}
+.cn-detail-accordion {
+  display: grid;
+  gap: 14px;
+  margin: 0 0 74px;
+}
+.cn-detail-accordion details {
+  border-radius: 18px;
+  background: rgba(255,255,255,0.82);
+  border: 1px solid rgba(20,24,32,0.08);
+  box-shadow: 0 10px 26px rgba(30,36,52,0.04);
+  overflow: hidden;
+}
+.cn-detail-accordion summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 24px 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+  font-size: 22px;
+  font-weight: 900;
+  letter-spacing: -0.025em;
+}
+.cn-detail-accordion summary::-webkit-details-marker {
+  display: none;
+}
+.cn-detail-accordion summary::after {
+  content: "+";
+  color: var(--market-blue);
+  font-size: 26px;
+}
+.cn-detail-accordion details[open] summary::after {
+  content: "−";
+}
+.cn-detail-accordion .cn-accordion-body {
+  padding: 0 28px 26px;
+  color: #535866;
+  font-size: 17px;
+  line-height: 1.75;
+}
+.cn-pricing-main {
+  width: min(100% - 128px, 1280px);
+  margin: 0 auto;
+  padding: 86px 0 100px;
+}
+.cn-checkout-head {
+  margin-bottom: 54px;
+}
+.cn-checkout-head h1 {
+  margin: 0 0 18px;
+  max-width: 780px;
+  font-size: clamp(46px, 5vw, 70px);
+  line-height: 1.04;
+  letter-spacing: -0.055em;
+}
+.cn-checkout-head p {
+  margin: 0;
+  max-width: 760px;
+  color: #3f4452;
+  font-size: 25px;
+  line-height: 1.45;
+}
+.cn-checkout-layout {
+  display: grid;
+  grid-template-columns: 1.45fr 0.95fr;
+  gap: 28px;
+  align-items: start;
+}
+.cn-plan-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 26px;
+  margin-bottom: 26px;
+}
+.cn-pricing-three {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 26px;
+  align-items: stretch;
+}
+.cn-pricing-three[role="radiogroup"] {
+  margin-bottom: 22px;
+}
+.cn-price-original {
+  color: #8a91a1;
+  font-size: 19px;
+  text-decoration: line-through;
+  margin-left: 8px;
+}
+.cn-plan-note {
+  min-height: 48px;
+  color: #535866;
+  font-size: 16px;
+  line-height: 1.55;
+  margin: -10px 0 22px;
+}
+.cn-plan-button {
+  width: 100%;
+  margin-top: 24px;
+}
+.cn-selected-plan {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 22px;
+  margin: 26px 0 18px;
+  padding: 22px 24px;
+  border-radius: 22px;
+  background: rgba(255,255,255,0.74);
+  border: 1px solid rgba(20,24,32,0.09);
+  box-shadow: 0 14px 34px rgba(28,34,48,0.05);
+}
+.cn-selected-plan span {
+  display: block;
+  margin-bottom: 6px;
+  color: #717786;
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 0.10em;
+}
+.cn-selected-plan strong {
+  display: block;
+  color: #111318;
+  font-size: 22px;
+  letter-spacing: -0.03em;
+}
+.cn-plan-card,
+.cn-payment-card,
+.cn-summary-card {
+  border-radius: 24px;
+  background: #fff;
+  box-shadow: var(--market-shadow);
+}
+.cn-plan-card {
+  position: relative;
+  min-height: 380px;
+  padding: 30px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease, background 160ms ease;
+}
+.cn-plan-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(23,59,208,0.30);
+}
+.cn-plan-card:focus-visible {
+  outline: 4px solid rgba(23,59,208,0.18);
+  outline-offset: 4px;
+}
+.cn-plan-card.is-selected {
+  border-color: var(--market-blue);
+  box-shadow: 0 24px 54px rgba(23,59,208,0.12), 0 6px 16px rgba(28,34,48,0.05);
+}
+.cn-recommend {
+  position: absolute;
+  right: 24px;
+  top: -15px;
+  border-radius: 999px;
+  padding: 7px 18px;
+  background: var(--market-blue);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+}
+.cn-plan-title {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 24px;
+}
+.cn-plan-title h2 { margin: 0; font-size: 28px; }
+.cn-radio {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 3px solid #c6cad8;
+}
+.cn-radio.active {
+  border-color: var(--market-blue);
+  box-shadow: inset 0 0 0 6px #fff;
+  background: var(--market-blue);
+}
+.cn-price {
+  margin-bottom: 26px;
+}
+.cn-price strong {
+  font-size: 54px;
+  letter-spacing: -0.05em;
+}
+.cn-price span {
+  color: #2f3542;
+  font-size: 20px;
+}
+.cn-summary-card {
+  padding: 32px;
+  background: #f1f2f5;
+  border: 1px solid rgba(20,24,32,0.09);
+}
+.cn-summary-card h3 { margin: 0 0 24px; font-size: 26px; }
+.cn-summary-row,
+.cn-summary-total {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 18px 0;
+  border-bottom: 1px solid rgba(20,24,32,0.08);
+  color: #394050;
+  font-size: 18px;
+}
+.cn-summary-total {
+  border-bottom: 0;
+  color: #111318;
+  font-weight: 850;
+}
+.cn-summary-total strong {
+  color: var(--market-blue);
+  font-size: 44px;
+  letter-spacing: -0.04em;
+}
+.cn-payment-card {
+  padding: 34px;
+}
+.cn-payment-card h2 { margin: 0 0 28px; font-size: 28px; }
+.cn-field {
+  padding: 18px 20px;
+  border: 1px solid #bfc5d2;
+  border-radius: 12px;
+  margin-bottom: 18px;
+}
+.cn-field label {
+  display: block;
+  color: #202534;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  margin-bottom: 10px;
+}
+.cn-field div {
+  color: #717786;
+  font-size: 18px;
+}
+.cn-payment-note {
+  color: #606779;
+  font-size: 14px;
+  line-height: 1.6;
+  text-align: center;
+}
+.cn-account-main {
+  width: min(100% - 128px, 1120px);
+  margin: 0 auto;
+  padding: 86px 0 100px;
+}
+.cn-account-hero {
+  text-align: center;
+  margin-bottom: 48px;
+}
+.cn-account-hero h1 {
+  margin: 0 0 16px;
+  font-size: 52px;
+  letter-spacing: -0.055em;
+}
+.cn-account-hero p {
+  max-width: 640px;
+  margin: 0 auto 26px;
+  color: #535866;
+  font-size: 20px;
+  line-height: 1.6;
+}
+.cn-account-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+.cn-account-card {
+  padding: 30px;
+  border-radius: 22px;
+  background: #fff;
+  box-shadow: 0 16px 34px rgba(30,36,52,0.055);
+}
+.cn-account-card span {
+  color: #7b8292;
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 0.11em;
+}
+.cn-account-card h2 {
+  margin: 14px 0 10px;
+  font-size: 28px;
+  letter-spacing: -0.035em;
+}
+.cn-account-card p {
+  margin: 0;
+  color: #535866;
+  font-size: 16px;
+  line-height: 1.7;
+}
+.cn-account-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 24px;
+  align-items: start;
+}
+.cn-account-stack {
+  display: grid;
+  gap: 18px;
+}
+.cn-login-panel {
+  padding: 34px;
+  border-radius: 26px;
+  background: #fff;
+  box-shadow: var(--market-shadow);
+  min-height: 430px;
+}
+.cn-login-panel > span {
+  color: #7b8292;
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 0.11em;
+}
+.cn-login-panel h2 {
+  margin: 14px 0 10px;
+  font-size: 32px;
+  letter-spacing: -0.04em;
+}
+.cn-login-panel p {
+  margin: 0 0 22px;
+  color: #535866;
+  font-size: 16px;
+  line-height: 1.7;
+}
+.cn-signed-in-panel {
+  margin-top: 26px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(20,24,32,0.10);
+}
+.cn-login-form[hidden],
+.cn-signed-in-panel[hidden] {
+  display: none !important;
+}
+.cn-signed-in-panel h3 {
+  margin: 6px 0 20px;
+  font-size: 22px;
+  letter-spacing: -0.03em;
+  word-break: break-word;
+}
+.cn-account-status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 18px;
+  padding: 9px 12px;
+  border-radius: 999px;
+  background: rgba(23,59,208,0.08);
+  color: var(--market-blue);
+  font-size: 13px;
+  font-weight: 900;
+}
+.cn-account-status-pill::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: currentColor;
+}
+.cn-login-form {
+  display: grid;
+  gap: 14px;
+}
+.cn-login-form label {
+  display: grid;
+  gap: 8px;
+  color: #535866;
+  font-size: 14px;
+  font-weight: 800;
+}
+.cn-login-form input {
+  width: 100%;
+  height: 52px;
+  border: 1px solid var(--market-line);
+  border-radius: 14px;
+  padding: 0 16px;
+  color: var(--market-text);
+  background: #f7f8fb;
+  font: inherit;
+}
+.cn-login-form input:focus {
+  outline: 2px solid rgba(23, 59, 208, 0.18);
+  border-color: rgba(23, 59, 208, 0.42);
+}
+.cn-form-message {
+  min-height: 22px;
+  margin: 4px 0 0 !important;
+  color: #535866;
+  font-size: 14px !important;
+}
+.cn-membership-section {
+  margin-top: 28px;
+  padding: 34px;
+  border-radius: 28px;
+  background: rgba(255,255,255,0.78);
+  border: 1px solid rgba(20,24,32,0.08);
+  box-shadow: var(--market-shadow);
+}
+.cn-membership-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+.cn-membership-head span,
+.cn-benefit-card-top span {
+  color: #7b8292;
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 0.11em;
+}
+.cn-membership-head h2 {
+  margin: 10px 0 10px;
+  font-size: 34px;
+  letter-spacing: -0.045em;
+}
+.cn-membership-head p {
+  max-width: 720px;
+  margin: 0;
+  color: #535866;
+  font-size: 16px;
+  line-height: 1.7;
+}
+.cn-product-switcher {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 0 0 22px;
+  padding: 8px;
+  border-radius: 16px;
+  background: #f2f4f8;
+  border: 1px solid rgba(20,24,32,0.08);
+}
+.cn-product-switcher button {
+  min-height: 44px;
+  padding: 0 18px;
+  border-radius: 12px;
+  border: 0;
+  background: transparent;
+  color: #4b5262;
+  font: inherit;
+  font-weight: 850;
+  cursor: pointer;
+}
+.cn-product-switcher button.active {
+  background: #fff;
+  color: var(--market-blue);
+  box-shadow: 0 8px 18px rgba(30,36,52,0.08);
+}
+.cn-membership-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+.cn-benefit-card {
+  min-height: 300px;
+  padding: 26px;
+  border-radius: 22px;
+  background: #fff;
+  border: 1px solid rgba(20,24,32,0.08);
+  box-shadow: 0 14px 30px rgba(30,36,52,0.045);
+}
+.cn-benefit-card.is-current {
+  border-color: rgba(23,59,208,0.38);
+  box-shadow: 0 18px 40px rgba(23,59,208,0.10);
+}
+.cn-benefit-card.is-locked {
+  background: linear-gradient(180deg, #fff, #f7f8fc);
+}
+.cn-benefit-card-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.cn-benefit-card-top strong {
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(23,59,208,0.08);
+  color: var(--market-blue);
+  font-size: 14px;
+}
+.cn-benefit-card h3 {
+  margin: 0 0 18px;
+  font-size: 24px;
+  letter-spacing: -0.035em;
+}
+.cn-benefit-card p {
+  color: #535866;
+  font-size: 16px;
+  line-height: 1.75;
+}
+.cn-status-main {
+  min-height: calc(100vh - 198px);
+  display: grid;
+  place-items: center;
+  padding: 70px 24px;
+}
+.cn-status-card {
+  width: min(680px, 100%);
+  padding: 48px;
+  border-radius: 28px;
+  background: #fff;
+  box-shadow: var(--market-shadow);
+  text-align: center;
+}
+.cn-status-card h1 {
+  margin: 0 0 14px;
+  font-size: 42px;
+  letter-spacing: -0.045em;
+}
+.cn-status-card p {
+  margin: 0 auto 28px;
+  color: #535866;
+  font-size: 18px;
+  line-height: 1.7;
+}
+.cn-legal-main {
+  width: min(100% - 128px, 880px);
+  margin: 0 auto;
+  padding: 76px 0 100px;
+}
+.cn-legal-article {
+  padding: 46px;
+  border-radius: 26px;
+  background: #fff;
+  box-shadow: var(--market-shadow);
+}
+.cn-legal-article h1 {
+  margin: 0 0 14px;
+  font-size: 48px;
+  letter-spacing: -0.05em;
+}
+.cn-legal-article h2 {
+  margin: 34px 0 12px;
+  font-size: 24px;
+}
+.cn-legal-article p,
+.cn-legal-article li {
+  color: #535866;
+  font-size: 17px;
+  line-height: 1.8;
+}
+.cn-legal-article ul {
+  padding-left: 20px;
+}
+@media (max-width: 920px) {
+  .cn-nav { height: auto; padding: 20px 24px; flex-wrap: wrap; gap: 18px; }
+  .cn-nav-links { order: 3; width: 100%; gap: 18px; overflow-x: auto; }
+  .cn-actions { margin-left: auto; }
+  .cn-mini-search { display: none; }
+  .cn-shell,
+  .cn-detail-main,
+  .cn-pricing-main,
+  .cn-account-main,
+  .cn-legal-main { width: min(100% - 32px, 100%); }
+  .cn-card-grid,
+  .cn-feature-row,
+  .cn-faq-grid,
+  .cn-plan-grid,
+  .cn-pricing-three,
+  .cn-membership-grid,
+  .cn-account-grid,
+  .cn-account-layout,
+  .cn-checkout-layout,
+  .cn-bento,
+  .cn-product-head { grid-template-columns: 1fr; }
+  .cn-membership-head { flex-direction: column; }
+  .cn-selected-plan { flex-direction: column; align-items: stretch; }
+  .cn-selected-plan .cn-primary-button { width: 100%; }
+  .cn-market-hero { padding: 64px 0 52px; }
+  .cn-hero-shot img { height: 320px; }
+  .cn-footer { padding: 34px 24px; flex-direction: column; align-items: flex-start; }
+}
+</style>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-V93ET05FSR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-V93ET05FSR');
+  </script>
 </head>
-<body>
-  <div class="site-shell">
-    <header class="topbar">
-      <a class="brand" href="../index.html"><span class="brand-mark"></span>LeadFill One</a>
-      <nav class="topnav">
-        <a href="../index.html">Home</a>
-        <a href="../product.html">Product</a>
-        <a href="../pricing.html">Pricing</a>
-        <a href="../account.html">Account</a>
-        <div class="locale-switcher" aria-label="Language switcher"><a class="locale-link active" href="success.html" lang="en">English</a><a class="locale-link" href="../zh-cn/checkout/success.html" lang="zh-CN">简体中文</a><a class="locale-link" href="../ja/checkout/success.html" lang="ja">日本語</a><a class="locale-link" href="../es/checkout/success.html" lang="es">Español</a></div>
-      </nav>
-    </header>
-    <main class="guidance-page">
-      <section class="guidance-card">
-        <p class="eyebrow">Checkout success</p>
-        <h1>Payment received</h1>
-        <p class="lede">Return to LeadFill, sign in with email OTP if needed, then refresh membership so the extension can read the latest entitlement.</p>
-        <ul class="step-list"><li>Go back to the extension popup.</li><li>Use the same email if a login step appears.</li><li>Click Refresh membership.</li><li>Wait until the plan shows active before expecting unlimited fills.</li></ul>
-        <div class="status-banner">
-          <span>Membership rule</span>
-          <strong>Webhook-confirmed entitlement</strong>
-        </div>
-        <p class="fine-print">successUrl does not unlock locally. The server entitlement must be active first.</p>
-        <div class="guidance-actions">
-          <a class="button primary" href="../account.html">Go to account</a>
-          <a class="button secondary" href="../pricing.html">Review pricing</a>
-        </div>
-      </section>
-    </main>
-  </div>
+<body class="status-cn">
+  <header class="cn-nav">
+    <a class="cn-brand" href="../index.html"><span class="cn-brand-mark">H</span>HWH Extensions</a>
+    <nav class="cn-nav-links">
+      <a class="" href="../index.html">Explore</a>
+      <a class="active" href="../product.html">Products</a>
+      <a class="" href="../account.html">Account</a>
+    </nav>
+    <div class="cn-actions">
+      <label class="cn-mini-search"><span>⌕</span><input data-market-search type="search" placeholder="Search extensions..."></label>
+      <a class="cn-signin" href="../account.html" data-account-action>Sign in</a>
+      <a class="cn-signin" href="https://chromewebstore.google.com/detail/leadfill-one-profile/dnnpkaefmlhacigijccbhemgaenjbcpk">Install</a>
+      <div class="locale-switcher" aria-label="Language switcher"><a class="locale-link active" href="success.html" lang="en">English</a><a class="locale-link" href="../zh-cn/checkout/success.html" lang="en">简体中文</a></div>
+    </div>
+  </header>
+  <script>
+(() => {
+  const sessionKey = "plugin_engineering_account_session";
+  const identityKey = "plugin_engineering_account_identity";
+  const cookieKey = "hwh_account_email";
+  const accountLink = document.querySelector("[data-account-action]");
+  if (!accountLink) return;
+  const readJson = (key) => {
+    try { return JSON.parse(localStorage.getItem(key) || "null"); } catch { return null; }
+  };
+  const readCookie = (key) => {
+    return document.cookie.split("; ").find((row) => row.startsWith(key + "="))?.split("=")[1] || "";
+  };
+  const captureAuthHash = () => {
+    if (!window.location.hash || !window.location.hash.includes("access_token")) return;
+    const params = new URLSearchParams(window.location.hash.slice(1));
+    const accessToken = params.get("access_token");
+    const refreshToken = params.get("refresh_token");
+    if (!accessToken) return;
+    const saved = {
+      accessToken,
+      refreshToken,
+      email: readJson(identityKey)?.email || ""
+    };
+    localStorage.setItem(sessionKey, JSON.stringify(saved));
+    localStorage.setItem(identityKey, JSON.stringify({ email: saved.email, signedInAt: new Date().toISOString() }));
+    history.replaceState(null, "", window.location.pathname + window.location.search);
+  };
+  const updateAccountNav = () => {
+    captureAuthHash();
+    const session = readJson(sessionKey);
+    const identity = readJson(identityKey);
+    const email = session?.email || identity?.email || decodeURIComponent(readCookie(cookieKey) || "");
+    if (session?.accessToken || session?.refreshToken || email) {
+      accountLink.textContent = "My account";
+      accountLink.classList.add("is-authenticated");
+      accountLink.title = email || "Signed-in account";
+    } else {
+      accountLink.textContent = "Sign in";
+      accountLink.classList.remove("is-authenticated");
+      accountLink.removeAttribute("title");
+    }
+  };
+  window.addEventListener("plugin-account-session-changed", updateAccountNav);
+  updateAccountNav();
+})();
+  </script>
+  <main class="cn-status-main">
+    <section class="cn-status-card">
+      <h1>Payment received</h1>
+      <p>请回到插件或Account页Refresh membership状态。付费权限会在后台确认后生效。</p>
+      <div class="cn-action-row" style="justify-content:center">
+        <a class="cn-primary-button" href="../account.html">打开Account</a>
+        <a class="cn-outline-button" href="../pricing.html">Back to pricing</a>
+      </div>
+    </section>
+  </main>
 </body>
 </html>

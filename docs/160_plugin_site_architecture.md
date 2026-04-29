@@ -6,14 +6,14 @@ The website is now structured as a plugin product center, not a generic membersh
 
 ## Production Source Of Truth
 
-`pay.915500.xyz` is built from `apps/web`.
+`pay.915500.xyz` is currently built from the restored bilingual static HWH Extensions marketplace.
 
-- Source directory: `apps/web`
-- Build command: `npm run build:web`
-- Build output: `apps/web/dist`
-- Deploy command: `npm run deploy:pay-site:web`
+- Source generator: `plugin-engineering-factory/src/site/pluginPages.mjs`
+- Generated output: `plugin-engineering-factory/generated/plugin-pages/leadfill-one-profile`
+- Live server directory: `/opt/commercial-extension-factory/apps/hwh/dist`
+- Current production posture: previous static bilingual marketplace, not the `apps/web` SPA
 
-Historical generated static pages are retained as audit evidence only and must not be used as the future production source for `pay.915500.xyz`.
+The `apps/web` SPA remains in the repository as implementation work, but it is not the accepted production presentation for the current website.
 
 ## Route Model
 
@@ -34,10 +34,7 @@ Historical generated static pages are retained as audit evidence only and must n
 
 ## Product Catalog Source
 
-The site resolves products from:
-
-1. Supabase `products` and `plans` when available
-2. local fallback product catalog when remote data is unavailable
+The current static marketplace renders the visible product catalog from the generator-local catalog. Product pages and pricing pages are generated as static HTML in English and Chinese.
 
 ## Checkout Architecture
 

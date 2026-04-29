@@ -1,7 +1,7 @@
 {
   "stage": "MULTILINGUAL_SITE_PAGES",
   "status": "passed",
-  "generated_at": "2026-04-24T04:33:09.845Z",
+  "generated_at": "2026-04-29T07:11:49.739Z",
   "default_locale": "en",
   "supported_locales": [
     {
@@ -13,16 +13,6 @@
       "code": "zh-cn",
       "label": "简体中文",
       "html_lang": "zh-CN"
-    },
-    {
-      "code": "ja",
-      "label": "日本語",
-      "html_lang": "ja"
-    },
-    {
-      "code": "es",
-      "label": "Español",
-      "html_lang": "es"
     }
   ],
   "localized_pages": {
@@ -32,40 +22,15 @@
       "pricing": "generated/plugin-pages/leadfill-one-profile/zh-cn/pricing.html",
       "account": "generated/plugin-pages/leadfill-one-profile/zh-cn/account.html",
       "entitlement": "generated/plugin-pages/leadfill-one-profile/zh-cn/entitlement.html",
-      "refund": "generated/plugin-pages/leadfill-one-profile/zh-cn/refund.html",
       "privacy": "generated/plugin-pages/leadfill-one-profile/zh-cn/privacy.html",
       "terms": "generated/plugin-pages/leadfill-one-profile/zh-cn/terms.html",
       "success": "generated/plugin-pages/leadfill-one-profile/zh-cn/checkout/success.html",
       "cancel": "generated/plugin-pages/leadfill-one-profile/zh-cn/checkout/cancel.html"
-    },
-    "ja": {
-      "index": "generated/plugin-pages/leadfill-one-profile/ja/index.html",
-      "product": "generated/plugin-pages/leadfill-one-profile/ja/product.html",
-      "pricing": "generated/plugin-pages/leadfill-one-profile/ja/pricing.html",
-      "account": "generated/plugin-pages/leadfill-one-profile/ja/account.html",
-      "entitlement": "generated/plugin-pages/leadfill-one-profile/ja/entitlement.html",
-      "refund": "generated/plugin-pages/leadfill-one-profile/ja/refund.html",
-      "privacy": "generated/plugin-pages/leadfill-one-profile/ja/privacy.html",
-      "terms": "generated/plugin-pages/leadfill-one-profile/ja/terms.html",
-      "success": "generated/plugin-pages/leadfill-one-profile/ja/checkout/success.html",
-      "cancel": "generated/plugin-pages/leadfill-one-profile/ja/checkout/cancel.html"
-    },
-    "es": {
-      "index": "generated/plugin-pages/leadfill-one-profile/es/index.html",
-      "product": "generated/plugin-pages/leadfill-one-profile/es/product.html",
-      "pricing": "generated/plugin-pages/leadfill-one-profile/es/pricing.html",
-      "account": "generated/plugin-pages/leadfill-one-profile/es/account.html",
-      "entitlement": "generated/plugin-pages/leadfill-one-profile/es/entitlement.html",
-      "refund": "generated/plugin-pages/leadfill-one-profile/es/refund.html",
-      "privacy": "generated/plugin-pages/leadfill-one-profile/es/privacy.html",
-      "terms": "generated/plugin-pages/leadfill-one-profile/es/terms.html",
-      "success": "generated/plugin-pages/leadfill-one-profile/es/checkout/success.html",
-      "cancel": "generated/plugin-pages/leadfill-one-profile/es/checkout/cancel.html"
     }
   },
   "notes": [
     "English remains the default source-of-truth version.",
-    "Localized pages mirror the product-first information architecture.",
+    "Chinese copy is shortened for a more product-first presentation.",
     "Human language review is still recommended before public launch."
   ]
 }

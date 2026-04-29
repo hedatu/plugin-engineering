@@ -1,57 +1,43 @@
-# Pay Site Deployment Policy
+# Pay Site Deployment Policy Correction
 
 Date: 2026-04-29
 
-## Decision
+## Corrected Decision
 
-`pay.915500.xyz` must be built and deployed from `apps/web`.
+`pay.915500.xyz` must remain on the previous bilingual HWH Extensions static marketplace until the user explicitly approves another website source.
 
-The production source of truth is:
+The current accepted production source is:
 
-- source: `apps/web`
-- build command: `npm run build:web`
-- build output: `apps/web/dist`
-- deploy command: `npm run deploy:pay-site:web`
+- source generator: `plugin-engineering-factory/src/site/pluginPages.mjs`
+- generated output: `plugin-engineering-factory/generated/plugin-pages/leadfill-one-profile`
 - live host: `pay.915500.xyz`
 - server target directory: `/opt/commercial-extension-factory/apps/hwh/dist`
+- GA4 measurement ID: `G-V93ET05FSR`
 
-The remote directory name still contains `hwh` for historical reasons. It is the serving directory in the Caddy config, not the source-of-truth app name.
+The attempted `apps/web` SPA deployment was rejected because it changed the accepted website design and content. It was rolled back on the server.
 
-## Deprecated Production Source
+## Current Deployment Flow
 
-Do not use these as the future production source for `pay.915500.xyz`:
+1. Update the static marketplace generator only when the requested change belongs to the current website.
+2. Regenerate the static pages.
+3. Confirm English and Chinese pages still use the previous marketplace presentation.
+4. Confirm GA4 remains installed.
+5. Backup `/opt/commercial-extension-factory/apps/hwh/dist`.
+6. Deploy the generated static output to `/opt/commercial-extension-factory/apps/hwh/dist`.
+7. Verify live English and Chinese routes.
+8. Commit and push the matching source and generated output.
 
-- `generated/plugin-pages/leadfill-one-profile`
-- `plugin-engineering-factory/generated/plugin-pages`
-- old static marketplace tarballs under `migration/`
+## Not Current Production Source
 
-Those files remain valid as history, screenshots, migration evidence, or temporary rollback references, but they are no longer the deployment source of truth.
+The following must not be deployed to `pay.915500.xyz` without a new explicit approval:
 
-## Required Deployment Flow
+- `apps/web`
+- `apps/web/dist`
+- React SPA builds that replace the static marketplace layout
 
-1. Change website source under `apps/web`.
-2. Run `npm run build:web`.
-3. Run `npm run site:smoke`.
-4. Run `npm run security:scan`.
-5. Deploy with `npm run deploy:pay-site:web`.
-6. Verify live routes on `https://pay.915500.xyz`.
-7. Commit and push the source change plus any deployment report.
+## Safety Boundaries
 
-## Deployment Safeguards
-
-The deploy script must:
-
-- build `apps/web` before packaging
-- require `apps/web/dist/index.html`
-- require GA4 measurement ID `G-V93ET05FSR` in the built HTML
-- upload only the built `apps/web/dist` output
-- create a timestamped server backup before replacing production files
-- use `rsync --delete` so production matches the build output
-- avoid printing secrets
-
-## Current Boundaries
-
-This deployment policy does not authorize:
+This correction does not authorize:
 
 - Chrome Web Store upload
 - Chrome Web Store publish
