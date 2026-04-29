@@ -1,0 +1,34 @@
+{
+  "run_id": "srt-to-markdown-article-2026-04-29-v0-1-0",
+  "stage": "BUILD_EXTENSION",
+  "status": "passed",
+  "product_key": "srt-to-markdown-article",
+  "product_name": "SRT to Markdown Article",
+  "manifest_version": "0.1.0",
+  "workspace_path": "runs/srt-to-markdown-article-2026-04-29-v0-1-0/workspace",
+  "package_zip": "runs/srt-to-markdown-article-2026-04-29-v0-1-0/package/srt-to-markdown-article-v0.1.0.zip",
+  "package_sha256": "CF483C84E99528C30EDBA045632DA05EBE65EAE5D8C8F653AA5C140EF615CB35",
+  "core_features": [
+    "Upload local SRT file",
+    "Optional local video preview",
+    "Render article draft Markdown",
+    "Render Obsidian note Markdown",
+    "Render timestamped notes",
+    "Copy Markdown",
+    "Download .md",
+    "English and Chinese UI",
+    "10 free conversions",
+    "Upgrade button to HWH website pricing page"
+  ],
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [],
+  "local_only": true,
+  "cloud_upload": false,
+  "contains_payment_secret": false,
+  "website_changed": false,
+  "chrome_upload_executed": false,
+  "chrome_publish_executed": false,
+  "production_payment_executed": false
+}

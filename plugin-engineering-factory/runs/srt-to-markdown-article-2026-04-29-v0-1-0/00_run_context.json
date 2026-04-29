@@ -1,0 +1,20 @@
+{
+  "run_id": "srt-to-markdown-article-2026-04-29-v0-1-0",
+  "stage": "PLUGIN_PROTOTYPE_BUILD",
+  "status": "in_progress",
+  "created_at": "2026-04-29T00:00:00.000Z",
+  "product_key": "srt-to-markdown-article",
+  "product_name": "SRT to Markdown Article",
+  "version": "0.1.0",
+  "scope": "Build a local installable Chrome MV3 prototype. Do not add website pages, do not upload, do not publish, do not enable production payment.",
+  "source_design": "docs/srt_to_markdown_article_plugin_design_2026-04-29.md",
+  "security_boundaries": [
+    "storage permission only",
+    "no host permissions",
+    "no video transcription",
+    "no subtitle upload",
+    "no service role key",
+    "no Waffo private key",
+    "upgrade opens website pricing page only"
+  ]
+}

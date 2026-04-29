@@ -1,0 +1,15 @@
+1
+00:00:01,000 --> 00:00:03,200
+Welcome to this product demo.
+
+2
+00:00:03,800 --> 00:00:06,200
+Today we will turn subtitles into a Markdown article.
+
+3
+00:00:08,600 --> 00:00:11,000
+The file stays local in your browser.
+
+4
+00:00:11,400 --> 00:00:14,000
+You can copy the result or download a Markdown file.

@@ -1,0 +1,38 @@
+{
+  "stage": "IMPLEMENTATION_PLAN",
+  "status": "passed",
+  "product_key": "srt-to-markdown-article",
+  "workspace": "runs/srt-to-markdown-article-2026-04-29-v0-1-0/workspace",
+  "files": [
+    "manifest.json",
+    "popup.html",
+    "popup.css",
+    "popup.js",
+    "converter.html",
+    "converter.css",
+    "converter.js",
+    "options.html",
+    "options.css",
+    "options.js",
+    "src/i18n.js",
+    "src/storage.js",
+    "src/srtParser.js",
+    "src/markdownRenderer.js",
+    "src/quotaStore.js",
+    "src/entitlementClient.js",
+    "src/upgradeUrl.js",
+    "src/download.js",
+    "tests/parser_renderer.test.mjs",
+    "tests/browser-smoke.mjs",
+    "tests/qa.mjs"
+  ],
+  "permissions": [
+    "storage"
+  ],
+  "test_plan": [
+    "unit parser tests with English, Chinese, malformed, duplicate subtitle cases",
+    "renderer tests for article, Obsidian, timestamped modes",
+    "browser smoke tests through converter.html",
+    "QA checks for manifest permissions and forbidden secret markers"
+  ]
+}

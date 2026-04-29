@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SRT to Markdown Article Converter</title>
+  <link rel="stylesheet" href="converter.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="popup.html">
+      <span class="brand-mark">MD</span>
+      <span data-i18n="productName">SRT to Markdown Article</span>
+    </a>
+    <div class="topbar-actions">
+      <select id="languageSelect" aria-label="Language">
+        <option value="en">English</option>
+        <option value="zh">中文</option>
+      </select>
+      <button id="upgradeButton" class="ghost" type="button" data-i18n="upgrade">Upgrade</button>
+    </div>
+  </header>
+
+  <main class="page-shell">
+    <section class="hero">
+      <p class="eyebrow" data-i18n="localOnly">Local-only. No upload.</p>
+      <h1 data-i18n="converterTitle">Convert SRT to Markdown</h1>
+      <p data-i18n="converterSubtitle">Upload an SRT file, clean the transcript, and export a Markdown article draft.</p>
+      <div class="quota-pill"><span data-i18n="freeUses">Free conversions left</span><strong id="quotaValue">10</strong></div>
+    </section>
+
+    <section class="workspace-grid">
+      <section class="panel">
+        <h2 data-i18n="srtFile">SRT subtitle file</h2>
+        <label class="dropzone">
+          <input id="srtInput" type="file" accept=".srt,text/plain">
+          <span id="srtFileName">Drop or choose .srt</span>
+        </label>
+
+        <h2 data-i18n="videoFile">Optional video preview</h2>
+        <label class="dropzone muted">
+          <input id="videoInput" type="file" accept="video/*">
+          <span id="videoFileName" data-i18n="videoHelp">Video stays local and is only used for preview or filename context.</span>
+        </label>
+        <video id="videoPreview" controls hidden></video>
+      </section>
+
+      <section class="panel">
+        <h2 data-i18n="settings">Settings</h2>
+        <label class="field">
+          <span data-i18n="outputType">Output type</span>
+          <select id="outputType">
+            <option value="article" data-i18n="articleDraft">Article draft</option>
+            <option value="obsidian" data-i18n="obsidianNote">Obsidian note</option>
+            <option value="timestamped" data-i18n="timestampedNotes">Timestamped notes</option>
+          </select>
+        </label>
+        <label class="field">
+          <span data-i18n="paragraphDensity">Paragraph density</span>
+          <select id="paragraphDensity">
+            <option value="compact" data-i18n="compact">Compact</option>
+            <option value="balanced" selected data-i18n="balanced">Balanced</option>
+            <option value="spacious" data-i18n="spacious">Spacious</option>
+          </select>
+        </label>
+        <label class="check-row">
+          <input id="keepTimestamps" type="checkbox">
+          <span data-i18n="keepTimestamps">Keep section timestamps</span>
+        </label>
+        <label class="check-row">
+          <input id="includeFrontmatter" type="checkbox">
+          <span data-i18n="includeFrontmatter">Add Markdown frontmatter</span>
+        </label>
+        <button id="convertButton" class="primary wide" type="button" data-i18n="convert">Convert to Markdown</button>
+        <p id="status" class="status" data-i18n="ready">Ready.</p>
+      </section>
+    </section>
+
+    <section id="paywall" class="paywall" hidden>
+      <div>
+        <h2 data-i18n="paywallTitle">Free conversions used</h2>
+        <p data-i18n="paywallBody">You have used your 10 free conversions. Upgrade for unlimited local subtitle-to-Markdown conversion.</p>
+      </div>
+      <button id="paywallUpgrade" class="primary" type="button" data-i18n="openPricing">Open pricing</button>
+    </section>
+
+    <section class="preview-panel">
+      <div class="preview-head">
+        <h2 data-i18n="preview">Markdown preview</h2>
+        <div class="preview-actions">
+          <button id="copyButton" class="ghost" type="button" data-i18n="copy">Copy Markdown</button>
+          <button id="downloadButton" class="ghost" type="button" data-i18n="download">Download .md</button>
+        </div>
+      </div>
+      <textarea id="markdownOutput" spellcheck="false" data-i18n-title="preview" placeholder="Upload an SRT file and convert it to preview Markdown here."></textarea>
+    </section>
+  </main>
+
+  <script type="module" src="converter.js"></script>
+</body>
+</html>

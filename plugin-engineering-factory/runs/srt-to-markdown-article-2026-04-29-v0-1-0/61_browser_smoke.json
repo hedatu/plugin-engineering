@@ -1,0 +1,43 @@
+{
+  "run_id": "srt-to-markdown-article-2026-04-29-v0-1-0",
+  "stage": "BROWSER_SMOKE_AND_CAPTURE",
+  "status": "passed",
+  "browser": "local Chromium-compatible browser via Playwright",
+  "cases": [
+    {
+      "name": "english article",
+      "status": "passed",
+      "fixture": "workspace/tests/fixtures-simple.srt",
+      "output_type": "article",
+      "expected_text_found": "The file stays local",
+      "markdown_length": 309,
+      "status_text": "Parsed 4 captions into 6 Markdown sections. Free conversion used. 9 left."
+    },
+    {
+      "name": "chinese obsidian",
+      "status": "passed",
+      "fixture": "workspace/tests/fixtures-chinese.srt",
+      "output_type": "obsidian",
+      "expected_text_found": "本地完成",
+      "markdown_length": 156,
+      "status_text": "Parsed 3 captions into 3 Markdown sections. Free conversion used. 9 left."
+    },
+    {
+      "name": "timestamped duplicate cleanup",
+      "status": "passed",
+      "fixture": "workspace/tests/fixtures-duplicates.srt",
+      "output_type": "timestamped",
+      "expected_text_found": "Unique line after duplicate",
+      "markdown_length": 146,
+      "status_text": "Parsed 2 captions into 3 Markdown sections. Free conversion used. 9 left."
+    }
+  ],
+  "screenshots": [
+    "test-output/screenshots/01-popup.png",
+    "test-output/screenshots/02-converter-initial.png",
+    "test-output/screenshots/03-converter-english-result.png",
+    "test-output/screenshots/04-converter-chinese-result.png",
+    "test-output/screenshots/05-paywall-after-10-free.png",
+    "test-output/screenshots/06-options.png"
+  ]
+}

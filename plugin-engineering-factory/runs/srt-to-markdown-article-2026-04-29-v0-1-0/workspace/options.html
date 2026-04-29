@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SRT to Markdown Settings</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <main class="options-shell">
+    <h1 data-i18n="optionsTitle">SRT to Markdown settings</h1>
+    <label>
+      <span data-i18n="language">Language</span>
+      <select id="languageSelect">
+        <option value="en">English</option>
+        <option value="zh">中文</option>
+      </select>
+    </label>
+    <button id="saveButton" type="button" data-i18n="saveSettings">Save settings</button>
+    <p id="status"></p>
+  </main>
+  <script type="module" src="options.js"></script>
+</body>
+</html>

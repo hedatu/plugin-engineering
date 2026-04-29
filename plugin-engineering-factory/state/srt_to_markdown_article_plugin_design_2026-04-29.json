@@ -1,0 +1,148 @@
+{
+  "stage": "PLUGIN_PRODUCT_DESIGN_DRAFT",
+  "status": "passed",
+  "generated_at": "2026-04-29T00:00:00.000Z",
+  "product_key": "srt-to-markdown-article",
+  "name": "SRT to Markdown Article",
+  "zh_name": "字幕转 Markdown 文章",
+  "one_sentence_value": "Convert local SRT subtitle files into clean Markdown article drafts.",
+  "source": {
+    "type": "manual_skill_to_extension_idea",
+    "user_request": "用户输入视频和srt字幕可以输出成为markdown格式的文章",
+    "design_decision": "MVP accepts SRT as the required input and optional video only for local preview or metadata; no ASR, no video transcoding, no upload."
+  },
+  "target_users": [
+    "video note takers",
+    "course content organizers",
+    "podcast and interview editors",
+    "Obsidian and Notion knowledge-base users",
+    "self-media operators turning captions into article drafts"
+  ],
+  "mvp_scope": {
+    "required_inputs": [
+      ".srt subtitle file"
+    ],
+    "optional_inputs": [
+      "local video file for preview, filename, and duration only"
+    ],
+    "outputs": [
+      "Markdown article draft",
+      "Obsidian note",
+      "timestamped notes"
+    ],
+    "core_features": [
+      "SRT parsing",
+      "caption cleanup",
+      "paragraph merging",
+      "Markdown preview",
+      "copy Markdown",
+      "download .md",
+      "10 free conversions",
+      "upgrade button to HWH plugin pricing page",
+      "English and Chinese UI"
+    ],
+    "out_of_scope_v1": [
+      "video transcription",
+      "audio extraction",
+      "ASR",
+      "cloud upload",
+      "AI rewriting with embedded API keys",
+      "team workspace",
+      "automatic publishing"
+    ]
+  },
+  "chrome_extension_fit": {
+    "fit": "good_if_srt_first",
+    "reasoning": [
+      "The required file input is user-selected and can be processed locally.",
+      "The extension can ship with minimal permissions.",
+      "The output is directly useful as a Markdown file.",
+      "Full video-to-text processing should stay out of the MVP."
+    ]
+  },
+  "permissions": {
+    "mvp": [
+      "storage"
+    ],
+    "avoid_in_mvp": [
+      "host_permissions",
+      "activeTab",
+      "scripting",
+      "downloads",
+      "identity"
+    ],
+    "notes": "Download can use Blob plus an anchor click; user-selected files do not require broad file permissions."
+  },
+  "privacy_model": {
+    "local_only": true,
+    "uploads_subtitles": false,
+    "uploads_video": false,
+    "cloud_sync": false,
+    "stores_raw_files": false,
+    "stores": [
+      "free conversion count",
+      "UI language",
+      "output template preference",
+      "cached entitlement state"
+    ]
+  },
+  "monetization": {
+    "free_plan": {
+      "limit": "10 conversions",
+      "features": [
+        "single SRT conversion",
+        "basic Markdown output",
+        "local processing"
+      ]
+    },
+    "pro_plan": {
+      "suggested_price": "$19 lifetime",
+      "features": [
+        "unlimited conversions",
+        "longer subtitles",
+        "multiple Markdown templates",
+        "Obsidian frontmatter",
+        "timestamped notes"
+      ]
+    },
+    "payment_model": "external_checkout_plus_webhook_entitlement",
+    "security_rules": [
+      "extension upgrade URL points to website pricing page",
+      "no direct Waffo bare link",
+      "no service role key in extension",
+      "no Waffo private key in extension",
+      "success page does not locally activate Pro",
+      "webhook remains the source of truth"
+    ]
+  },
+  "suggested_routes": {
+    "product_page": "/products/srt-to-markdown-article",
+    "pricing_page": "/products/srt-to-markdown-article/pricing",
+    "upgrade_url_template": "https://pay.915500.xyz/products/srt-to-markdown-article/pricing?source=chrome_extension&installationId=<installationId>&extensionId=<extensionId>"
+  },
+  "implementation_modules": [
+    "popup",
+    "converter_page",
+    "srtParser",
+    "paragraphBuilder",
+    "markdownRenderer",
+    "quotaStore",
+    "entitlementClient",
+    "upgradeUrl",
+    "download"
+  ],
+  "acceptance_criteria": [
+    "standard SRT parses successfully",
+    "malformed SRT returns useful validation errors",
+    "Markdown preview is generated",
+    "copy action works",
+    "download .md works",
+    "free quota decrements after conversion",
+    "11th conversion shows paywall",
+    "upgrade URL points to HWH pricing page",
+    "no host permissions",
+    "no secret markers in source or dist",
+    "English and Chinese UI available"
+  ],
+  "recommended_next_step": "Build a local installable prototype before adding it to the public marketplace or configuring payment."
+}

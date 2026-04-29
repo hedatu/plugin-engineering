@@ -1,0 +1,120 @@
+:root {
+  color-scheme: light;
+  --bg: #f5f3ee;
+  --card: rgba(255, 255, 255, 0.88);
+  --text: #171717;
+  --muted: #68645f;
+  --line: rgba(23, 23, 23, 0.12);
+  --accent: #1f6f5b;
+  --accent-dark: #155444;
+  --shadow: 0 18px 50px rgba(28, 26, 22, 0.12);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  width: 340px;
+  margin: 0;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: radial-gradient(circle at top left, #ffffff 0, var(--bg) 42%, #ebe5da 100%);
+  color: var(--text);
+}
+
+.popup-shell {
+  padding: 18px;
+}
+
+.brand-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-row strong,
+.brand-row span {
+  display: block;
+}
+
+.brand-row span,
+.hero-card p,
+.status-card span,
+.status-card small {
+  color: var(--muted);
+}
+
+.brand-mark {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 14px;
+  background: var(--text);
+  color: white;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+}
+
+.hero-card,
+.status-card {
+  margin-top: 18px;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background: var(--card);
+  box-shadow: var(--shadow);
+}
+
+.hero-card h1 {
+  margin: 0;
+  font-size: 26px;
+  line-height: 1.06;
+  letter-spacing: -0.055em;
+}
+
+.hero-card p {
+  margin: 12px 0 0;
+  line-height: 1.6;
+}
+
+.status-card {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 4px 12px;
+  align-items: end;
+}
+
+.status-card strong {
+  font-size: 34px;
+  line-height: 1;
+}
+
+.actions {
+  display: grid;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+button {
+  height: 44px;
+  border: 0;
+  border-radius: 999px;
+  font: inherit;
+  font-weight: 750;
+  cursor: pointer;
+}
+
+button.primary {
+  background: var(--accent);
+  color: white;
+}
+
+button.primary:hover {
+  background: var(--accent-dark);
+}
+
+button.secondary {
+  background: white;
+  color: var(--text);
+  border: 1px solid var(--line);
+}
