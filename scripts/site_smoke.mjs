@@ -91,8 +91,12 @@ if (productCatalog.includes('chromewebstore.google.com/detail/${product.chrome_e
   fail('site: product catalog must not guess a public Chrome Web Store URL from extension ID alone');
 }
 
-if (!productsPage.includes('Chrome Web Store link pending')) {
+if (!productsPage.includes('getProductStoreCtaLabel') || !productCatalog.includes('Chrome Web Store link pending')) {
   fail('site: products page must use the pending Chrome Web Store label when unpublished');
+}
+
+if (!productCatalog.includes('pending_review') || !productCatalog.includes('chatgpt-obsidian-local-exporter')) {
+  fail('site: ChatGPT Obsidian product must stay pending review until Google approval');
 }
 
 const requiredPricingPortal = '/products/leadfill-one-profile/pricing';

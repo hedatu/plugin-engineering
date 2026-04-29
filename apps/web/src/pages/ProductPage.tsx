@@ -1,9 +1,13 @@
 import { useEffect, useState } from 'react'
 import { Navigate, useParams } from 'react-router-dom'
 import { ProductLanding } from '../components/ProductLanding'
-import { leadfillFallbackProduct } from '../content/productCatalog'
+import { fallbackProductsWithPlans, leadfillFallbackProduct } from '../content/productCatalog'
 import type { ProductWithPlans } from '../lib/catalog'
 import { getProductWithPlansBySlug } from '../lib/catalog'
+
+function getFallbackProductBySlug(slug?: string) {
+  return fallbackProductsWithPlans.find((product) => product.slug === slug) ?? null
+}
 
 export function ProductPage() {
   const { slug } = useParams()
@@ -27,7 +31,9 @@ export function ProductPage() {
         }
 
         if (!result) {
-          setNotFound(true)
+          const fallbackProduct = getFallbackProductBySlug(slug)
+          setProduct(fallbackProduct)
+          setNotFound(!fallbackProduct)
           return
         }
 
@@ -41,7 +47,7 @@ export function ProductPage() {
 
         console.warn(error)
         setNotFound(false)
-        setProduct(slug === leadfillFallbackProduct.slug ? leadfillFallbackProduct : null)
+        setProduct(getFallbackProductBySlug(slug))
       })
 
     return () => {

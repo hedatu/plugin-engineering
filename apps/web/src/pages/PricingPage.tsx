@@ -3,6 +3,7 @@ import { Link, Navigate, useParams, useSearchParams } from 'react-router-dom'
 import { useAuth } from '../auth/AuthProvider'
 import { BrandMark } from '../components/BrandMark'
 import {
+  formatPlanHeadline,
   getFreePlan,
   getPaidPlan,
   getPlanBullets,
@@ -13,10 +14,17 @@ import {
   getDefaultPricingPath,
   getProductCheckoutMode,
   getProductPath,
+  isProductPendingReview,
+  fallbackProductsWithPlans,
   leadfillFallbackProduct,
+  leadfillProductKey,
 } from '../content/productCatalog'
 import type { ProductWithPlans } from '../lib/catalog'
 import { getProductWithPlansBySlug } from '../lib/catalog'
+
+function getFallbackProductBySlug(slug?: string) {
+  return fallbackProductsWithPlans.find((product) => product.slug === slug) ?? null
+}
 
 export function PricingPage() {
   const { slug } = useParams()
@@ -51,8 +59,9 @@ export function PricingPage() {
           return
         }
 
-        if (slug === leadfillFallbackProduct.slug) {
-          setProduct(leadfillFallbackProduct)
+        const fallbackProduct = getFallbackProductBySlug(slug)
+        if (fallbackProduct) {
+          setProduct(fallbackProduct)
           setNotFound(false)
           return
         }
@@ -62,8 +71,9 @@ export function PricingPage() {
       .catch((fetchError) => {
         if (active) {
           console.warn(fetchError)
-          if (slug === leadfillFallbackProduct.slug) {
-            setProduct(leadfillFallbackProduct)
+          const fallbackProduct = getFallbackProductBySlug(slug)
+          if (fallbackProduct) {
+            setProduct(fallbackProduct)
             setNotFound(false)
           } else {
             setNotFound(true)
@@ -78,8 +88,12 @@ export function PricingPage() {
 
   const freePlan = useMemo(() => getFreePlan(product), [product])
   const paidPlan = useMemo(() => getPaidPlan(product), [product])
+  const paidPlans = useMemo(() => product?.plans.filter((plan) => plan.billing_type !== 'free') ?? [], [product])
   const productPath = getProductPath(product)
   const checkoutMode = getProductCheckoutMode(product)
+  const pendingReview = isProductPendingReview(product)
+  const isLeadFill = product?.product_key === leadfillProductKey
+  const pricingPlans = isLeadFill ? (paidPlan ? [paidPlan] : []) : paidPlans
 
   if (!slug) {
     return <Navigate to={getDefaultPricingPath()} replace />
@@ -96,60 +110,73 @@ export function PricingPage() {
           <BrandMark size="sm" />
           <p className="eyebrow">Pricing</p>
         </div>
-        <h1>Simple pricing for LeadFill One Profile</h1>
+        <h1>{isLeadFill ? 'Simple pricing for LeadFill One Profile' : `${product.name} pricing`}</h1>
         <p className="muted">
-          Start with 10 free fills. Unlock lifetime access when LeadFill becomes part of your
-          workflow.
+          {pendingReview
+            ? 'This plugin is waiting for Google review. Plans are visible now, but checkout will open after approval.'
+            : 'Start with 10 free fills. Unlock lifetime access when LeadFill becomes part of your workflow.'}
         </p>
         <div className="hero-meta">
-          <span>10 free fills</span>
-          <span>$19 one-time</span>
-          <span>Local-only</span>
-          <span>No subscription</span>
+          {pendingReview ? <span>Pending launch</span> : <span>10 free fills</span>}
+          <span>{isLeadFill ? '$19 one-time' : 'Monthly / annual / lifetime'}</span>
+          <span>Local-first</span>
+          <span>{pendingReview ? 'Checkout paused' : 'No subscription'}</span>
         </div>
       </div>
 
       <div className="compare-grid">
-        <article className="soft-card pricing-card">
-          <p className="plan-tag">Free</p>
-          <h2>10 free fills</h2>
-          <p className="muted">Use the free tier first, then decide later if the lifetime unlock is worth it.</p>
-          <ul className="compact-list">
-            {getPlanBullets(freePlan).map((item) => (
-              <li key={item}>{item}</li>
-            ))}
-          </ul>
-          <div className="pricing-actions">
-            <Link className="button subtle" to={productPath}>View product</Link>
-          </div>
-        </article>
+        {isLeadFill ? (
+          <article className="soft-card pricing-card">
+            <p className="plan-tag">Free</p>
+            <h2>10 free fills</h2>
+            <p className="muted">Use the free tier first, then decide later if the lifetime unlock is worth it.</p>
+            <ul className="compact-list">
+              {getPlanBullets(freePlan).map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+            <div className="pricing-actions">
+              <Link className="button subtle" to={productPath}>View product</Link>
+            </div>
+          </article>
+        ) : null}
 
-        <article className="surface-card pricing-card pricing-card-strong">
-          <p className="plan-tag">Lifetime Unlock</p>
-          <h2>$19 one-time</h2>
-          <p className="muted">Unlimited fills with one payment. No subscription and no recurring bill.</p>
-          <ul className="compact-list">
-            {getPlanBullets(paidPlan).map((item) => (
-              <li key={item}>{item}</li>
-            ))}
-          </ul>
-          <div className="pricing-actions">
-            {paidPlan ? (
-              <Link
-                className="button primary"
-                to={buildCheckoutStartPath({
-                  productKey: product.product_key,
-                  planKey: paidPlan.plan_key,
-                  source,
-                  installationId,
-                  extensionId,
-                })}
-              >
-                {user ? 'Continue to secure checkout' : 'Sign in and continue'}
-              </Link>
-            ) : null}
-          </div>
-        </article>
+        {pricingPlans.map((plan) => (
+          <article key={plan.id} className="surface-card pricing-card pricing-card-strong">
+            <p className="plan-tag">{plan.name}</p>
+            <h2>{plan.amount === 39.9 ? '$39.90 lifetime' : plan.amount === 29 ? '$29 annual' : plan.amount === 9 ? '$9 monthly' : formatPlanHeadline(plan)}</h2>
+            <p className="muted">
+              {pendingReview
+                ? 'Purchase opens after Google approves the Chrome Web Store listing.'
+                : 'Unlimited fills with one payment. No subscription and no recurring bill.'}
+            </p>
+            <ul className="compact-list">
+              {(isLeadFill ? getPlanBullets(plan) : ['Markdown export', 'Local archive workflow', 'Multi-platform support', 'No cloud sync']).map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+            <div className="pricing-actions">
+              {pendingReview || checkoutMode === 'disabled' ? (
+                <span className="button primary disabled" aria-disabled="true">
+                  Pending Google review
+                </span>
+              ) : (
+                <Link
+                  className="button primary"
+                  to={buildCheckoutStartPath({
+                    productKey: product.product_key,
+                    planKey: plan.plan_key,
+                    source,
+                    installationId,
+                    extensionId,
+                  })}
+                >
+                  {user ? 'Continue to secure checkout' : 'Sign in and continue'}
+                </Link>
+              )}
+            </div>
+          </article>
+        ))}
       </div>
 
       <div className="note-grid">

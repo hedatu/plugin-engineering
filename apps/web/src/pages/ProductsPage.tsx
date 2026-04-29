@@ -5,6 +5,8 @@ import { formatPlanHeadline, getPaidPlan } from '../content/leadfill'
 import {
   fallbackProductsWithPlans,
   getProductChromeStoreUrl,
+  getProductStoreCtaLabel,
+  isProductPendingReview,
   getProductPath,
   getProductPricingPath,
 } from '../content/productCatalog'
@@ -50,6 +52,7 @@ export function ProductsPage() {
         {products.map((product) => {
           const paidPlan = getPaidPlan(product)
           const chromeStoreUrl = getProductChromeStoreUrl(product)
+          const pendingReview = isProductPendingReview(product)
 
           return (
             <article key={product.product_key} className="catalog-card">
@@ -62,7 +65,7 @@ export function ProductsPage() {
               </div>
               <p className="muted">{product.description}</p>
               <div className="hero-meta">
-                <span>{product.product_key === 'leadfill-one-profile' ? '10 free fills' : 'Free trial'}</span>
+                <span>{pendingReview ? 'Pending launch' : product.product_key === 'leadfill-one-profile' ? '10 free fills' : 'Free trial'}</span>
                 <span>{formatPlanHeadline(paidPlan)}</span>
                 <span>Local-only</span>
                 <span>No upload</span>
@@ -80,7 +83,7 @@ export function ProductsPage() {
                   </a>
                 ) : (
                   <span className="button subtle disabled" aria-disabled="true">
-                    Chrome Web Store link pending
+                    {getProductStoreCtaLabel(product)}
                   </span>
                 )}
               </div>

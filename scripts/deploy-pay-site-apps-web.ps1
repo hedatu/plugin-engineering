@@ -19,6 +19,17 @@ $backupDir = "$RemoteBackups/apps-web-dist-pre-deploy-$stamp"
 
 Push-Location $repoRoot
 try {
+  $requiredEnv = @("PUBLIC_SUPABASE_URL", "PUBLIC_SUPABASE_ANON_KEY", "SITE_URL")
+  $envFile = Join-Path $repoRoot "apps\web\.env.production.local"
+  $envFileContent = if (Test-Path $envFile) { Get-Content -Raw $envFile } else { "" }
+  foreach ($key in $requiredEnv) {
+    $processValue = [Environment]::GetEnvironmentVariable($key)
+    $envFileHasValue = $envFileContent -match "(?m)^$key=.+"
+    if ([string]::IsNullOrWhiteSpace($processValue) -and -not $envFileHasValue) {
+      throw "Missing required public web build variable: $key"
+    }
+  }
+
   npm run build:web
 
   $indexPath = Join-Path $webDist "index.html"

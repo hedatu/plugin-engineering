@@ -96,7 +96,37 @@ export async function listPublicPlans(productKey?: string) {
 }
 
 export async function listProductsWithPlans() {
-  const [products, plans] = await Promise.all([listProducts(), listPublicPlans()])
+  const [remoteProducts, remotePlans] = await Promise.all([listProducts(), listPublicPlans()])
+  const productsByKey = new Map(remoteProducts.map((product) => [product.product_key, product]))
+  for (const fallbackProduct of fallbackProductsWithPlans) {
+    const remoteProduct = productsByKey.get(fallbackProduct.product_key)
+    if (remoteProduct) {
+      productsByKey.set(fallbackProduct.product_key, {
+        ...remoteProduct,
+        chrome_extension_id: remoteProduct.chrome_extension_id ?? fallbackProduct.chrome_extension_id,
+        metadata: {
+          ...fallbackProduct.metadata,
+          ...remoteProduct.metadata,
+        },
+      })
+    } else {
+      productsByKey.set(fallbackProduct.product_key, fallbackProduct)
+    }
+  }
+
+  const fallbackOrder = new Map(fallbackProductsWithPlans.map((product, index) => [product.product_key, index]))
+  const products = Array.from(productsByKey.values()).sort((left, right) => {
+    const leftOrder = fallbackOrder.get(left.product_key) ?? 999
+    const rightOrder = fallbackOrder.get(right.product_key) ?? 999
+    return leftOrder - rightOrder
+  })
+  const productKeys = new Set(products.map((product) => product.product_key))
+  const planKeys = new Set(remotePlans.map((plan) => `${plan.products?.product_key ?? plan.product_id}:${plan.plan_key}`))
+  const fallbackPlans = fallbackPlanRecords.filter((plan) => {
+    const productKey = plan.products?.product_key
+    return productKey && productKeys.has(productKey) && !planKeys.has(`${productKey}:${plan.plan_key}`)
+  })
+  const plans = [...remotePlans, ...fallbackPlans]
   const plansByProductId = new Map<string, PlanRecord[]>()
 
   for (const plan of plans) {

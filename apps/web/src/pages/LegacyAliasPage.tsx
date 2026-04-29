@@ -1,5 +1,11 @@
 import { Link, Navigate, useLocation } from 'react-router-dom'
-import { getDefaultPricingPath, getDefaultProductPath } from '../content/productCatalog'
+import {
+  getDefaultPricingPath,
+  getDefaultProductPath,
+  getProductPathBySlug,
+  getProductPricingPathBySlug,
+  obsidianProductSlug,
+} from '../content/productCatalog'
 
 const localePrefixes = new Set(['en', 'es', 'ja', 'zh-cn'])
 
@@ -21,6 +27,8 @@ const canonicalPaths = new Set([
 
 const directAliases: Record<string, string> = {
   '/account.html': '/account',
+  '/chatgpt-obsidian-local-exporter.html': getProductPathBySlug(obsidianProductSlug),
+  '/chatgpt-obsidian-local-exporter-pricing.html': getProductPricingPathBySlug(obsidianProductSlug),
   '/checkout/cancel.html': '/checkout/cancel',
   '/checkout/success.html': '/checkout/success',
   '/entitlement': '/account?productKey=leadfill-one-profile',

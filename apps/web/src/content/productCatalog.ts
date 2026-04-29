@@ -5,6 +5,8 @@ export const leadfillProductSlug = 'leadfill-one-profile'
 export const leadfillDefaultPlanKey = 'lifetime'
 export const leadfillFeatureKey = 'leadfill_fill_action'
 export const defaultCheckoutMode = 'test'
+export const obsidianProductKey = 'chatgpt-obsidian-local-exporter'
+export const obsidianProductSlug = 'chatgpt-obsidian-local-exporter'
 
 const leadfillProductMetadata = {
   checkoutMode: defaultCheckoutMode,
@@ -13,6 +15,15 @@ const leadfillProductMetadata = {
   noCloudSync: true,
   chromeWebStoreStatus: 'published',
   chromeWebStoreUrl: 'https://chromewebstore.google.com/detail/leadfill-one-profile/dnnpkaefmlhacigijccbhemgaenjbcpk',
+} as const
+
+const obsidianProductMetadata = {
+  checkoutMode: 'disabled',
+  localOnly: true,
+  noUpload: true,
+  noCloudSync: true,
+  launchStatus: 'pending_review',
+  chromeWebStoreStatus: 'pending_review',
 } as const
 
 export const leadfillFallbackProduct: ProductWithPlans = {
@@ -78,7 +89,89 @@ export const leadfillFallbackProduct: ProductWithPlans = {
   ],
 }
 
-export const fallbackProductsWithPlans = [leadfillFallbackProduct]
+export const obsidianFallbackProduct: ProductWithPlans = {
+  id: 'obsidian-fallback',
+  product_key: obsidianProductKey,
+  slug: obsidianProductSlug,
+  name: 'ChatGPT Obsidian Local Exporter',
+  description: 'Export AI conversations into Obsidian-friendly Markdown for local archives.',
+  website_url: null,
+  chrome_extension_id: null,
+  metadata: { ...obsidianProductMetadata },
+  plans: [
+    {
+      id: 'obsidian-monthly',
+      product_id: 'obsidian-fallback',
+      plan_key: 'monthly',
+      name: 'Monthly',
+      description: 'Monthly access after Chrome Web Store approval.',
+      billing_type: 'monthly',
+      currency: 'USD',
+      amount: 9,
+      features: {
+        markdown_export: true,
+        local_archive: true,
+        multi_platform_support: true,
+      },
+      max_installations: 1,
+      sort_order: 0,
+      products: {
+        id: 'obsidian-fallback',
+        product_key: obsidianProductKey,
+        name: 'ChatGPT Obsidian Local Exporter',
+        slug: obsidianProductSlug,
+      },
+    },
+    {
+      id: 'obsidian-yearly',
+      product_id: 'obsidian-fallback',
+      plan_key: 'annual',
+      name: 'Annual',
+      description: 'Discounted annual access after Chrome Web Store approval.',
+      billing_type: 'yearly',
+      currency: 'USD',
+      amount: 29,
+      features: {
+        markdown_export: true,
+        local_archive: true,
+        multi_platform_support: true,
+      },
+      max_installations: 2,
+      sort_order: 1,
+      products: {
+        id: 'obsidian-fallback',
+        product_key: obsidianProductKey,
+        name: 'ChatGPT Obsidian Local Exporter',
+        slug: obsidianProductSlug,
+      },
+    },
+    {
+      id: 'obsidian-lifetime',
+      product_id: 'obsidian-fallback',
+      plan_key: 'lifetime',
+      name: 'Lifetime',
+      description: 'Lifetime access after Chrome Web Store approval.',
+      billing_type: 'lifetime',
+      currency: 'USD',
+      amount: 39.9,
+      features: {
+        markdown_export: true,
+        local_archive: true,
+        multi_platform_support: true,
+      },
+      max_installations: 3,
+      sort_order: 2,
+      products: {
+        id: 'obsidian-fallback',
+        product_key: obsidianProductKey,
+        name: 'ChatGPT Obsidian Local Exporter',
+        slug: obsidianProductSlug,
+      },
+    },
+  ],
+}
+
+export const fallbackProductsWithPlans = [obsidianFallbackProduct, leadfillFallbackProduct]
 
 export const fallbackProductRecords: ProductRecord[] = fallbackProductsWithPlans.map((product) => ({
   id: product.id,
@@ -155,6 +248,28 @@ export function getProductChromeStoreStatus(product?: Pick<ProductRecord, 'metad
   return typeof product?.metadata?.chromeWebStoreStatus === 'string'
     ? product.metadata.chromeWebStoreStatus
     : 'pending'
+}
+
+export function getProductLaunchStatus(product?: Pick<ProductRecord, 'metadata'> | null) {
+  return typeof product?.metadata?.launchStatus === 'string'
+    ? product.metadata.launchStatus
+    : getProductChromeStoreStatus(product)
+}
+
+export function isProductPendingReview(product?: Pick<ProductRecord, 'metadata'> | null) {
+  return getProductLaunchStatus(product) === 'pending_review'
+}
+
+export function getProductStoreCtaLabel(product?: Pick<ProductRecord, 'metadata'> | null) {
+  if (getProductChromeStoreStatus(product) === 'published') {
+    return 'Add to Chrome'
+  }
+
+  if (isProductPendingReview(product)) {
+    return 'Pending Google review'
+  }
+
+  return 'Chrome Web Store link pending'
 }
 
 export function getProductChromeStoreUrl(product?: Pick<ProductRecord, 'chrome_extension_id' | 'website_url' | 'metadata'> | null) {

@@ -32,8 +32,8 @@ export function Shell() {
         <NavLink to="/" className="brand-link">
           <BrandMark size="md" />
           <span className="brand-stack">
-            <strong>LeadFill</strong>
-            <small>One Profile</small>
+            <strong>HWH Extensions</strong>
+            <small>Plugin marketplace</small>
           </span>
         </NavLink>
 
@@ -50,8 +50,8 @@ export function Shell() {
             ))}
           </nav>
 
-          <NavLink className="button primary header-cta" to={getDefaultPricingPath()}>
-            Unlock Lifetime
+          <NavLink className="button primary header-cta" to="/products">
+            View plugins
           </NavLink>
         </div>
       </header>
@@ -62,9 +62,9 @@ export function Shell() {
 
       <footer className="site-footer">
         <div>
-          <p className="eyebrow">LeadFill</p>
+          <p className="eyebrow">HWH Extensions</p>
           <p className="footer-copy">
-            LeadFill One Profile is a focused Chrome extension for repetitive lead forms.
+            A focused plugin marketplace for small Chrome extensions with clear product pages and account-based membership.
           </p>
         </div>
 
