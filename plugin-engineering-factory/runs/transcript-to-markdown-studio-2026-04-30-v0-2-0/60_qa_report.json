@@ -1,0 +1,56 @@
+{
+  "run_id": "transcript-to-markdown-studio-2026-04-30-v0-2-0",
+  "stage": "RUN_QA",
+  "status": "passed",
+  "command": "npm test",
+  "repeat_runs": 4,
+  "node_unit_tests": {
+    "status": "passed",
+    "passed": 11,
+    "failed": 0,
+    "covered_cases": [
+      "Chrome extension context storage/runtime",
+      "SRT and VTT timestamp formats",
+      "format detection by extension and MIME type",
+      "SRT to article Markdown",
+      "VTT to blog outline Markdown",
+      "TXT to meeting minutes Markdown",
+      "multi-file merge across SRT/VTT/TXT",
+      "consecutive duplicate cleanup",
+      "malformed block tolerance",
+      "paragraph density differences",
+      "upgrade URL points to website pricing page and is not a fixed Waffo checkout link"
+    ]
+  },
+  "browser_smoke": {
+    "status": "passed",
+    "cases_passed": 5,
+    "cases_failed": 0
+  },
+  "quota_paywall_smoke": {
+    "status": "passed",
+    "free_conversions_allowed": 10,
+    "eleventh_attempt_blocks_with_paywall": true
+  },
+  "static_qa": {
+    "status": "passed",
+    "manifest_version": "0.2.0",
+    "permissions": [
+      "storage"
+    ],
+    "host_permissions": [],
+    "required_files_checked": 7
+  },
+  "security_checks": {
+    "status": "passed",
+    "no_backend_admin_credentials": true,
+    "no_payment_private_credentials": true,
+    "no_provider_secret_credentials": true,
+    "no_webhook_signing_credentials": true,
+    "no_host_permissions": true,
+    "no_network_upload_path": true
+  },
+  "chrome_upload_executed": false,
+  "chrome_publish_executed": false,
+  "production_payment_executed": false
+}

@@ -1,0 +1,89 @@
+{
+  "run_id": "transcript-to-markdown-studio-2026-04-30-v0-2-0",
+  "stage": "RUN_QA",
+  "status": "passed",
+  "matrix": [
+    {
+      "area": "Transcript parsing",
+      "checks": [
+        "SRT standard blocks",
+        "VTT header and cue settings",
+        "TXT paragraph and line chunks",
+        "comma and dot timestamp formats",
+        "short VTT timestamp format",
+        "malformed block skip without failing valid captions"
+      ],
+      "status": "passed"
+    },
+    {
+      "area": "Multi-file merge",
+      "checks": [
+        "SRT + VTT + TXT merge",
+        "source list retained",
+        "per-file ordering retained",
+        "source boundary paragraph split"
+      ],
+      "status": "passed"
+    },
+    {
+      "area": "Markdown rendering",
+      "checks": [
+        "article draft output",
+        "Obsidian note output",
+        "timestamped note output",
+        "blog outline output",
+        "meeting minutes output",
+        "paragraph density changes",
+        "consecutive duplicate cleanup"
+      ],
+      "status": "passed"
+    },
+    {
+      "area": "Localization",
+      "checks": [
+        "English UI",
+        "Chinese UI",
+        "language preference stored locally"
+      ],
+      "status": "passed"
+    },
+    {
+      "area": "Usage gating",
+      "checks": [
+        "10 free conversions allowed",
+        "remaining quota displayed",
+        "11th conversion blocked",
+        "paywall displayed after free quota"
+      ],
+      "status": "passed"
+    },
+    {
+      "area": "Upgrade path",
+      "checks": [
+        "Upgrade URL points to HWH website product pricing page",
+        "productKey=transcript-to-markdown-studio",
+        "planKey=lifetime",
+        "source=chrome_extension",
+        "installationId included",
+        "extensionId included from chrome.runtime.id in extension context",
+        "no fixed Waffo checkout URL inside extension"
+      ],
+      "status": "passed"
+    },
+    {
+      "area": "Permission and privacy",
+      "checks": [
+        "MV3 manifest",
+        "storage permission only",
+        "no host permissions",
+        "local file processing",
+        "optional video preview stays local",
+        "no ASR",
+        "no image OCR",
+        "no service role or payment private credentials"
+      ],
+      "status": "passed"
+    }
+  ],
+  "blockers": []
+}

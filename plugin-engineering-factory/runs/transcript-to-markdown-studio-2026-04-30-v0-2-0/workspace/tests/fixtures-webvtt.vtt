@@ -1,0 +1,10 @@
+WEBVTT
+
+00:00:00.500 --> 00:00:02.000
+Welcome to the VTT demo.
+
+00:00:03.000 --> 00:00:05.500 align:start position:0%
+This transcript can become a Markdown outline.
+
+00:00:07.000 --> 00:00:09.000
+The conversion stays local.

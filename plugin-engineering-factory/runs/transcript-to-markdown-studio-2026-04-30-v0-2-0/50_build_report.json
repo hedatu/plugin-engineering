@@ -1,0 +1,41 @@
+{
+  "run_id": "transcript-to-markdown-studio-2026-04-30-v0-2-0",
+  "stage": "BUILD_EXTENSION",
+  "status": "passed",
+  "source_run_id": "srt-to-markdown-article-2026-04-29-v0-1-0",
+  "product_key": "transcript-to-markdown-studio",
+  "product_name": "Transcript to Markdown Studio",
+  "manifest_version": "0.2.0",
+  "workspace_path": "runs/transcript-to-markdown-studio-2026-04-30-v0-2-0/workspace",
+  "package_zip": "runs/transcript-to-markdown-studio-2026-04-30-v0-2-0/package/transcript-to-markdown-studio-v0.2.0.zip",
+  "package_sha256": "2E9B2CE4EF24F17531E330E57537505A813B21A0C6AE20FF4D97615A2D5A6DCC",
+  "core_features": [
+    "Upload local SRT files",
+    "Upload local VTT files",
+    "Upload local TXT files",
+    "Merge multiple transcript files into one Markdown document",
+    "Optional local video preview",
+    "Render article draft Markdown",
+    "Render Obsidian note Markdown",
+    "Render timestamped notes",
+    "Render blog outline",
+    "Render meeting minutes",
+    "Copy Markdown",
+    "Download .md",
+    "English and Chinese UI",
+    "10 free conversions",
+    "Upgrade button to HWH website pricing page"
+  ],
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [],
+  "local_only": true,
+  "cloud_upload": false,
+  "image_ocr_included": false,
+  "contains_payment_secret": false,
+  "website_changed": false,
+  "chrome_upload_executed": false,
+  "chrome_publish_executed": false,
+  "production_payment_executed": false
+}

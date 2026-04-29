@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Transcript to Markdown Studio</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <main class="popup-shell">
+    <div class="brand-row">
+      <div class="brand-mark">MD</div>
+      <div>
+        <strong data-i18n="productName">Transcript to Markdown Studio</strong>
+        <span data-i18n="localOnly">Local-only. No upload.</span>
+      </div>
+    </div>
+
+    <section class="hero-card">
+      <h1 data-i18n="popupTitle">Turn transcripts into Markdown articles.</h1>
+      <p data-i18n="popupSubtitle">Local-only conversion for SRT, VTT, and TXT files. No upload.</p>
+    </section>
+
+    <section class="status-card">
+      <span data-i18n="freeUses">Free conversions left</span>
+      <strong id="quotaValue">10</strong>
+      <small id="planStatus">Free</small>
+    </section>
+
+    <div class="actions">
+      <button id="openConverter" class="primary" type="button" data-i18n="openConverter">Open Converter</button>
+      <button id="upgrade" class="secondary" type="button" data-i18n="upgrade">Upgrade</button>
+    </div>
+  </main>
+  <script type="module" src="popup.js"></script>
+</body>
+</html>

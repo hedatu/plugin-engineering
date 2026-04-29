@@ -1,0 +1,11 @@
+1
+00:00:00,000 --> 00:00:01,000
+Repeated line
+
+2
+00:00:01,100 --> 00:00:02,000
+Repeated line
+
+3
+00:00:02,200 --> 00:00:04,000
+Unique line after duplicate.

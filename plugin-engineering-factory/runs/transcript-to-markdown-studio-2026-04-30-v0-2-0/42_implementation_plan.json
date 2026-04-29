@@ -1,0 +1,43 @@
+{
+  "stage": "IMPLEMENTATION_PLAN",
+  "status": "passed",
+  "product_key": "transcript-to-markdown-studio",
+  "workspace": "runs/transcript-to-markdown-studio-2026-04-30-v0-2-0/workspace",
+  "files": [
+    "manifest.json",
+    "popup.html",
+    "popup.css",
+    "popup.js",
+    "converter.html",
+    "converter.css",
+    "converter.js",
+    "options.html",
+    "options.css",
+    "options.js",
+    "src/i18n.js",
+    "src/storage.js",
+    "src/srtParser.js",
+    "src/markdownRenderer.js",
+    "src/quotaStore.js",
+    "src/entitlementClient.js",
+    "src/upgradeUrl.js",
+    "src/download.js",
+    "tests/parser_renderer.test.mjs",
+    "tests/browser-smoke.mjs",
+    "tests/quota-paywall-smoke.mjs",
+    "tests/upgrade_url.test.mjs",
+    "tests/chrome_extension_context.test.mjs",
+    "tests/qa.mjs"
+  ],
+  "permissions": [
+    "storage"
+  ],
+  "test_plan": [
+    "unit parser tests for SRT, VTT, TXT, malformed blocks, duplicate captions, and multi-file merge",
+    "renderer tests for article, Obsidian, timestamped, blog-outline, and meeting-minutes modes",
+    "browser smoke tests through converter.html for SRT, VTT, TXT, and multi-file merge",
+    "quota smoke test for 10 free conversions and 11th-attempt paywall",
+    "upgrade URL test for website pricing page, productKey, planKey, source, installationId, extensionId, and no fixed Waffo checkout URL",
+    "QA checks for manifest permissions and forbidden secret markers"
+  ]
+}

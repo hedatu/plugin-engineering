@@ -1,0 +1,62 @@
+{
+  "run_id": "transcript-to-markdown-studio-2026-04-30-v0-2-0",
+  "stage": "BROWSER_SMOKE_AND_CAPTURE",
+  "status": "passed",
+  "browser": "local Chromium-compatible browser via Playwright",
+  "cases": [
+    {
+      "name": "english srt article",
+      "status": "passed",
+      "fixture": "workspace/tests/fixtures-simple.srt",
+      "output_type": "article",
+      "expected_text_found": "The file stays local",
+      "markdown_length": 311
+    },
+    {
+      "name": "webvtt blog outline",
+      "status": "passed",
+      "fixture": "workspace/tests/fixtures-webvtt.vtt",
+      "output_type": "blog-outline",
+      "expected_text_found": "## Working title",
+      "markdown_length": 438
+    },
+    {
+      "name": "txt meeting minutes",
+      "status": "passed",
+      "fixture": "workspace/tests/fixtures-plain.txt",
+      "output_type": "meeting-minutes",
+      "expected_text_found": "## Action items",
+      "markdown_length": 407
+    },
+    {
+      "name": "multi file obsidian merge",
+      "status": "passed",
+      "fixtures": [
+        "workspace/tests/fixtures-simple.srt",
+        "workspace/tests/fixtures-webvtt.vtt",
+        "workspace/tests/fixtures-plain.txt"
+      ],
+      "output_type": "obsidian",
+      "expected_text_found": "The final note should include decisions",
+      "markdown_length": 614
+    },
+    {
+      "name": "timestamped duplicate cleanup",
+      "status": "passed",
+      "fixture": "workspace/tests/fixtures-duplicates.srt",
+      "output_type": "timestamped",
+      "expected_text_found": "Unique line after duplicate",
+      "markdown_length": 148
+    }
+  ],
+  "screenshots": [
+    "test-output/screenshots/01-popup.png",
+    "test-output/screenshots/02-converter-initial.png",
+    "test-output/screenshots/03-srt-article-result.png",
+    "test-output/screenshots/04-vtt-blog-outline-result.png",
+    "test-output/screenshots/05-txt-meeting-minutes-result.png",
+    "test-output/screenshots/06-chinese-multi-file-merge.png",
+    "test-output/screenshots/07-paywall-after-10-free.png",
+    "test-output/screenshots/08-options.png"
+  ]
+}

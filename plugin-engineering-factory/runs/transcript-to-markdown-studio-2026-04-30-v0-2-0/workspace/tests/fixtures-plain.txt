@@ -1,0 +1,5 @@
+This is a plain transcript exported from a meeting tool.
+
+It already has cleaned text but needs Markdown structure.
+
+The final note should include decisions and action items.
